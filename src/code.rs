@@ -19,6 +19,19 @@ pub enum Error {
     InvalidSubcategory,
 }
 
+impl Display for Error {
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+        match self {
+            Self::MissingVolume => f.write_str("missing volume"),
+            Self::InvalidVolume(e) => write!(f, "invalid volume: {e}"),
+            Self::MissingSubcategory => f.write_str("missing subcategory"),
+            Self::InvalidSubcategory => f.write_str("invalid subcategory"),
+        }
+    }
+}
+
+impl core::error::Error for Error {}
+
 impl FromStr for Code {
     type Err = Error;
 

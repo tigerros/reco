@@ -29,6 +29,14 @@ impl From<Volume> for char {
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub struct Error;
 
+impl Display for Error {
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+        f.write_str("invalid volume, expected A-E")
+    }
+}
+
+impl core::error::Error for Error {}
+
 impl TryFrom<char> for Volume {
     type Error = Error;
 
