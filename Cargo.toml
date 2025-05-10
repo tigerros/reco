@@ -6,3 +6,18 @@ description = "reserved for Rust Encyclopaedia of Chess Openings"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
+shakmaty = { workspace = true }
+deranged = { workspace = true }
+serde = { workspace = true, features = ["derive"], optional = true }
+
+[features]
+serde = ["dep:serde", "deranged/serde"]
+
+[workspace]
+resolver = "3"
+members = ["updater"]
+
+[workspace.dependencies]
+shakmaty = { version = "0.27.3", default-features = false }
+deranged = { version = "0.4.0", default-features = false }
+serde = { version = "1", default-features = false }

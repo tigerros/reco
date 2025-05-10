@@ -1,0 +1,15 @@
+[package]
+name = "updater"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shakmaty = { workspace = true }
+deranged = { workspace = true }
+anyhow = { version = "1", default-features = false, features = ["std"] }
+zip = { version = "2" }
+dotenvy = { version = "0.15.7", default-features = false }
+ureq = { version = "3", default-features = false, features = ["rustls", "json"] }
+http = { version = "1", default-features = false, features = ["std"] }
+serde_json = { version = "1", default-features = false, features = ["std"] }
+csv = { version = "1", default-features = false }
