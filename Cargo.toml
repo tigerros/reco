@@ -3,6 +3,9 @@ name = "reco"
 version = "0.0.0"
 edition = "2024"
 description = "An ECO (Encyclopaedia of Chess Openings) crate"
+categories = ["data-structures", "game-development", "no-std", "no-std::no-alloc", "api-bindings"]
+keywords = ["chess", "eco", "dataset", "lichess"]
+repository = "https://github.com/tigerros/reco"
 license = "GPL-3"
 rust-version = "1.85.1"
 

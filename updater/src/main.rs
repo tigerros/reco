@@ -48,11 +48,11 @@ fn main() {
 
         for uci in &uci {
             let r#move = uci.to_move(&p).unwrap();
-            p = p.play(&r#move).unwrap();
+            p = p.play(r#move).unwrap();
             moves.push(r#move);
         }
 
-        let setup = p.into_setup(EnPassantMode::Always);
+        let setup = p.to_setup(EnPassantMode::Legal);
         let file_path = format!("src/{}/{code}.rs", code.volume);
 
         let file = files.entry(file_path).or_insert_with(|| {
