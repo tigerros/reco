@@ -30,7 +30,6 @@ fn main() {
         .flexible(false)
         .from_reader(all_tsv);
 
-    let first = true;
     let mut codes = Vec::new();
     let mut files = HashMap::new();
 
@@ -73,7 +72,7 @@ use deranged::RangedU8;"#
         let identifier = full_name_raw.to_shouty_snake_case();
         let volume = code.volume;
         let subcategory = code.subcategory;
-        let variation_joined = variation.join(", ");
+        let variation_joined = variation.iter().map(|v| format!("\"{v}\"")).collect::<Vec<_>>().join(", ");
         let (by_role_bitboard, by_color_bitboard) = setup.board.into_bitboards();
         let promoted = setup.promoted.0;
         let pockets = setup.pockets;
@@ -132,10 +131,6 @@ pub const {identifier}: Opening<'static, &str, &str> = Opening {{
 
         file.push_str(&s);
         codes.push(code);
-
-        if first {
-            break;
-        }
     }
 
     for volume in Volume::ALL {
