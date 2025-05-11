@@ -1,7 +1,7 @@
+use crate::{Subcategory, Volume, volume};
 use core::fmt::{Display, Formatter};
 use core::str::FromStr;
 use deranged::RangedU8;
-use crate::{volume, Subcategory, Volume};
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
@@ -38,17 +38,17 @@ impl FromStr for Code {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let mut chars = s.chars();
 
-        let volume = Volume::try_from(
-            chars.next().ok_or(Error::MissingVolume)?
-        )
+        let volume = Volume::try_from(chars.next().ok_or(Error::MissingVolume)?)
             .map_err(Error::InvalidVolume)?;
 
-        let digit_one = chars.next()
+        let digit_one = chars
+            .next()
             .ok_or(Error::MissingSubcategory)?
             .to_digit(10)
             .ok_or(Error::InvalidSubcategory)?;
 
-        let digit_two = chars.next()
+        let digit_two = chars
+            .next()
             .ok_or(Error::MissingSubcategory)?
             .to_digit(10)
             .ok_or(Error::InvalidSubcategory)?;
@@ -56,7 +56,7 @@ impl FromStr for Code {
         Ok(Self {
             volume,
             // CLIPPY: Both numbers are 0-9. They can't be larger than 99 in this calculation.
-            subcategory: RangedU8::new((digit_one * 10 + digit_two) as u8).unwrap()
+            subcategory: RangedU8::new((digit_one * 10 + digit_two) as u8).unwrap(),
         })
     }
 }
@@ -64,7 +64,7 @@ impl FromStr for Code {
 impl Display for Code {
     fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
         self.volume.fmt(f)?;
-        
+
         // Maybe faster than write!(f, "{:02}", self.subcategory.get())
         // but I haven't checked
         let subcategory = self.subcategory.get();

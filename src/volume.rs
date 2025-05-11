@@ -1,6 +1,5 @@
 use core::fmt::{Display, Formatter, Write};
 use core::str::FromStr;
-use serde::Serializer;
 
 /// The A-E volume of an opening.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -11,7 +10,11 @@ pub enum Volume {
     B,
     C,
     D,
-    E
+    E,
+}
+
+impl Volume {
+    pub const ALL: [Volume; 5] = [Volume::A, Volume::B, Volume::C, Volume::D, Volume::E];
 }
 
 impl From<Volume> for char {
@@ -21,7 +24,7 @@ impl From<Volume> for char {
             Volume::B => 'B',
             Volume::C => 'C',
             Volume::D => 'D',
-            Volume::E => 'E'
+            Volume::E => 'E',
         }
     }
 }
@@ -51,7 +54,7 @@ impl TryFrom<char> for Volume {
             'C' => Volume::C,
             'D' => Volume::D,
             'E' => Volume::E,
-            _ => return Err(Error)
+            _ => return Err(Error),
         };
 
         Ok(volume)
@@ -84,7 +87,7 @@ impl FromStr for Volume {
             "C" => Volume::C,
             "D" => Volume::D,
             "E" => Volume::E,
-            _ => return Err(Error)
+            _ => return Err(Error),
         };
 
         Ok(volume)

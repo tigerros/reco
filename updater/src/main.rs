@@ -1,16 +1,218 @@
-use std::io::Cursor;
-use std::time::Duration;
+#![forbid(unsafe_code)]
+
+mod constants;
+mod sans_pgn_visitor;
+
+use crate::sans_pgn_visitor::SansPgnVisitor;
+use heck::ToShoutySnakeCase;
 use http::header;
+use reco::Volume;
 use serde_json::Value;
+use shakmaty::san::SanPlus;
+use shakmaty::uci::UciMove;
+use shakmaty::{ByColor, ByRole, Chess, EnPassantMode, Position};
+use std::fs::{File, exists, read_dir, remove_dir_all, remove_file, write};
+use std::io::{Cursor, Write};
+use std::num::NonZeroU32;
+use std::str::FromStr;
+use std::time::Duration;
 use ureq::Agent;
 use zip::ZipArchive;
 
-const OWNER: &str = "lichess-org";
-const REPO: &str = "chess-openings";
-const WORKFLOW: &str = "lint.yml";
+fn main() {
+    let mut archive = ZipArchive::new(Cursor::new(get_archive())).unwrap();
+    let all_tsv = archive.by_name("all.tsv").unwrap();
 
-fn main() -> anyhow::Result<()> {
-    let token = format!("Bearer {}", dotenvy::var("GITHUB_TOKEN")?);
+    let mut reader = csv::ReaderBuilder::new()
+        .has_headers(true)
+        .delimiter(b'\t')
+        .flexible(false)
+        .from_reader(all_tsv);
+
+    for volume in Volume::ALL {
+        for entry in read_dir(format!("src/{volume}")).unwrap() {
+            let entry = entry.unwrap();
+
+            if entry.path().is_file() {
+                remove_file(entry.path()).unwrap();
+            } else if entry.path().is_dir() {
+                remove_dir_all(entry.path()).unwrap();
+            }
+        }
+    }
+
+    let first = true;
+    let mut codes = Vec::new();
+
+    for record in reader.records() {
+        let record = record.unwrap();
+        let code_raw = &record[0];
+        let full_name_raw = &record[1];
+        //let sans_raw = &record[2];
+        let uci_raw = &record[3];
+        //let epd_raw = &record[4];
+
+        let code = reco::Code::from_str(code_raw).unwrap();
+        let (name, variation) = get_name_and_variation(full_name_raw);
+        //let sans = get_sans(sans_raw)?;
+        let uci = get_uci(uci_raw);
+        //let epd = Epd::from_str(epd_raw)?;
+        let mut moves = Vec::new();
+        let mut p = Chess::new();
+
+        for uci in &uci {
+            let r#move = uci.to_move(&p).unwrap();
+            p = p.play(&r#move).unwrap();
+            moves.push(r#move);
+        }
+
+        let setup = p.into_setup(EnPassantMode::Always);
+        let file_path = format!("src/{}/{code}.rs", code.volume);
+
+        if !exists(&file_path).unwrap() {
+            write(
+                &file_path,
+                "use shakmaty::Move::*;
+use shakmaty::Role::*;
+use shakmaty::Square::*;
+use shakmaty::Color::*;
+use shakmaty::bitboard::Bitboard;
+use shakmaty::board::Board;
+use shakmaty::{ByRole, ByColor, Setup};
+use core::num::NonZeroU32;",
+            )
+            .unwrap();
+        }
+
+        let identifier = full_name_raw.to_shouty_snake_case();
+        let volume = code.volume;
+        let subcategory = code.subcategory;
+        let variation_joined = variation.join(", ");
+        let (by_role_bitboard, by_color_bitboard) = setup.board.into_bitboards();
+        let promoted = setup.promoted.0;
+        let pockets = setup.pockets;
+        let turn = setup.turn;
+        let castling_rights = setup.castling_rights.0;
+        let ep_square = setup.ep_square;
+        let remaining_checks = setup.remaining_checks;
+        let halfmoves = setup.halfmoves;
+        let fullmoves = setup.fullmoves;
+
+        let s = format!(
+            r#"
+
+const {identifier}: crate::Opening<'static> = crate::Opening {{
+    code: crate::Code {{
+        volume: crate::Volume::{volume},
+        subcategory: deranged::RangedU8::new_static::<{subcategory}>(),
+    }},
+    name: "{name}",
+    variation: &[{variation_joined}],
+    moves: &{moves:#?},
+    setup: &Setup {{
+        board: Board::from_bitboards(
+            ByRole {{
+                pawn: Bitboard({}),
+                knight: Bitboard({}),
+                bishop: Bitboard({}),
+                rook: Bitboard({}),
+                queen: Bitboard({}),
+                king: Bitboard({})
+            }},
+            ByColor {{
+                black: Bitboard({}),
+                white: Bitboard({})
+            }}
+        ),
+        promoted: Bitboard({promoted}),
+        pockets: {pockets:#?},
+        turn: {turn:#?},
+        castling_rights: Bitboard({castling_rights}),
+        ep_square: {ep_square:#?},
+        remaining_checks: {remaining_checks:#?},
+        halfmoves: {halfmoves},
+        fullmoves: if let Some(fullmoves) = NonZeroU32::new({fullmoves}) {{ fullmoves }} else {{ panic!("fullmoves is zero") }},
+    }},
+}};"#,
+            by_role_bitboard.pawn.0,
+            by_role_bitboard.knight.0,
+            by_role_bitboard.bishop.0,
+            by_role_bitboard.rook.0,
+            by_role_bitboard.queen.0,
+            by_role_bitboard.king.0,
+            by_color_bitboard.black.0,
+            by_color_bitboard.white.0
+        );
+
+        let mut file = File::options()
+            .create(true)
+            .write(true)
+            .append(true)
+            .open(file_path)
+            .unwrap();
+
+        file.write_all(s.as_bytes()).unwrap();
+        codes.push(code);
+
+        if first {
+            break;
+        }
+    }
+
+    for volume in Volume::ALL {
+        write(
+            format!("src/{volume}/mod.rs"),
+            codes
+                .iter()
+                .filter_map(|c| {
+                    if c.volume == volume {
+                        Some(format!("pub mod {c};"))
+                    } else {
+                        None
+                    }
+                })
+                .collect::<Vec<_>>()
+                .join("\n"),
+        )
+        .unwrap();
+    }
+}
+
+fn get_name_and_variation(full_name: &str) -> (&str, Vec<&str>) {
+    let full_name_split = full_name.split(':').collect::<Vec<_>>();
+    let name = full_name_split[0];
+
+    if full_name_split.len() == 1 {
+        return (name, Vec::new());
+    }
+
+    let variation = full_name_split[1].split(',').collect::<Vec<_>>();
+
+    (name, variation)
+}
+
+fn get_sans(raw: &str) -> Vec<SanPlus> {
+    let mut reader = pgn_reader::BufferedReader::new_cursor(raw.as_bytes());
+    let mut visitor = SansPgnVisitor(Vec::new());
+    reader.read_game(&mut visitor).unwrap();
+
+    visitor.0
+}
+
+fn get_uci(raw: &str) -> Vec<UciMove> {
+    raw.split(' ')
+        .filter_map(|s| {
+            if s.is_empty() {
+                None
+            } else {
+                Some(UciMove::from_str(s).unwrap())
+            }
+        })
+        .collect::<Vec<_>>()
+}
+
+fn get_archive() -> Vec<u8> {
+    let token = format!("Bearer {}", dotenvy::var("GITHUB_TOKEN").unwrap());
 
     let agent: Agent = Agent::config_builder()
         .timeout_global(Some(Duration::from_secs(5)))
@@ -19,49 +221,48 @@ fn main() -> anyhow::Result<()> {
         .into();
 
     let runs_url = format!(
-        "https://api.github.com/repos/{OWNER}/{REPO}/actions/workflows/{WORKFLOW}/runs?per_page=1",
+        "https://api.github.com/repos/{}/{}/actions/workflows/{}/runs?per_page=1",
+        constants::OWNER,
+        constants::REPO,
+        constants::WORKFLOW
     );
 
     let runs_res: Value = agent
         .get(runs_url)
         .header(header::AUTHORIZATION, &token)
-        .call()?
+        .call()
+        .unwrap()
         .into_body()
-        .read_json()?;
+        .read_json()
+        .unwrap();
 
-    let artifacts_url = runs_res["workflow_runs"][0]["artifacts_url"].as_str().unwrap();
+    let artifacts_url = runs_res["workflow_runs"][0]["artifacts_url"]
+        .as_str()
+        .unwrap();
 
     let artifacts_res: Value = agent
         .get(artifacts_url)
         .header(header::AUTHORIZATION, &token)
-        .call()?
+        .call()
+        .unwrap()
         .into_body()
-        .read_json()?;
+        .read_json()
+        .unwrap();
 
-    let archive_download_url = artifacts_res["artifacts"][0]["archive_download_url"].as_str().unwrap();
+    let archive_download_url = artifacts_res["artifacts"][0]["archive_download_url"]
+        .as_str()
+        .unwrap();
 
     let archive_res = agent
         .get(archive_download_url)
         .header(header::AUTHORIZATION, &token)
-        .call()?
+        .call()
+        .unwrap()
         .into_body()
         .into_with_config()
         .limit(u64::MAX)
-        .read_to_vec()?;
+        .read_to_vec()
+        .unwrap();
 
-    let mut archive = ZipArchive::new(Cursor::new(archive_res))?;
-    let data = archive.by_name("all.tsv")?;
-    let mut reader = csv::ReaderBuilder::new()
-        .has_headers(true)
-        .delimiter(b'\t')
-        .flexible(false)
-        .from_reader(data);
-    
-    for result in reader.records() {
-        let record = result?;
-        
-        
-    }
-
-    Ok(())
+    archive_res
 }

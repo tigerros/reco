@@ -1,7 +1,5 @@
-use shakmaty::Move;
-use shakmaty::san::SanPlus;
-use shakmaty::uci::UciMove;
 use crate::Code;
+use shakmaty::{Move, Setup};
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub struct Opening<'a> {
@@ -13,6 +11,5 @@ pub struct Opening<'a> {
     /// This is an array because there may be multiple variation layers.
     pub variation: &'a [&'a str],
     pub moves: &'a [Move],
-    pub sans: &'a [SanPlus],
-    pub uci: &'a [UciMove],
+    pub setup: &'a Setup,
 }
