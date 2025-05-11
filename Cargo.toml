@@ -19,6 +19,6 @@ resolver = "3"
 members = ["updater"]
 
 [workspace.dependencies]
-shakmaty = { git = "https://github.com/tigerros/shakmaty/tree/dev2", default-features = false }
+shakmaty = { git = "https://github.com/tigerros/shakmaty", branch = "dev2", default-features = false }
 deranged = { version = "0.4.0", default-features = false }
 serde = { version = "1", default-features = false }
