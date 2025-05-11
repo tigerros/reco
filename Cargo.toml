@@ -16,6 +16,7 @@ shakmaty = { workspace = true }
 
 [features]
 serde = ["dep:serde", "deranged/serde"]
+alloc = ["serde?/alloc", "deranged/alloc"]
 
 [workspace]
 resolver = "3"

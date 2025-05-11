@@ -47,41 +47,41 @@
     clippy::unreadable_literal,
     reason = "triggers only on the generated bitboards"
 )]
+extern crate alloc;
 
-#[expect(
-    non_snake_case,
-    reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-)]
-mod A;
-#[expect(
-    non_snake_case,
-    reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-)]
-mod B;
-#[expect(
-    non_snake_case,
-    reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-)]
-mod C;
-#[expect(
-    non_snake_case,
-    reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-)]
-mod D;
-#[expect(
-    non_snake_case,
-    reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-)]
-mod E;
+// #[expect(
+//     non_snake_case,
+//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
+// )]
+// mod A;
+// #[expect(
+//     non_snake_case,
+//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
+// )]
+// mod B;
+// #[expect(
+//     non_snake_case,
+//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
+// )]
+// mod C;
+// #[expect(
+//     non_snake_case,
+//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
+// )]
+// mod D;
+// #[expect(
+//     non_snake_case,
+//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
+// )]
+// mod E;
+// pub use A::*;
+// pub use B::*;
+// pub use C::*;
+// pub use D::*;
+// pub use E::*;
 pub mod code;
 mod opening;
 pub mod volume;
-
-pub use A::*;
-pub use B::*;
-pub use C::*;
-pub use D::*;
-pub use E::*;
 pub use code::Code;
 pub use opening::Opening;
 pub use volume::Volume;

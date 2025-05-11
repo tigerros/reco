@@ -8,8 +8,8 @@ use reco::Volume;
 use serde_json::Value;
 use shakmaty::uci::UciMove;
 use shakmaty::{Chess, EnPassantMode, Position};
-use std::collections::HashMap;
-use std::fs::{read_dir, remove_dir_all, remove_file, write};
+use std::collections::{HashMap, HashSet};
+use std::fs::{create_dir_all, read_dir, remove_dir_all, remove_file, write};
 use std::io::Cursor;
 use std::str::FromStr;
 use std::time::Duration;
@@ -30,7 +30,7 @@ fn main() {
         .flexible(false)
         .from_reader(all_tsv);
 
-    let mut codes = Vec::new();
+    let mut codes = HashSet::new();
     let mut files = HashMap::new();
 
     for record in reader.records() {
@@ -55,10 +55,13 @@ fn main() {
         let file_path = format!("src/{}/{code}.rs", code.volume);
 
         let file = files.entry(file_path).or_insert_with(|| {
-            r#"use shakmaty::Move::*;
+            r#"#[expect(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use shakmaty::Move::*;
+#[expect(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
 use shakmaty::Role::{Pawn, Knight, Bishop, Rook, Queen, King};
 #[expect(clippy::enum_glob_use, reason = "there's 64 variants in this enum, importing them all is stupid")]
 use shakmaty::Square::*;
+#[expect(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
 use shakmaty::Color::{Black, White};
 use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
@@ -72,7 +75,11 @@ use deranged::RangedU8;"#
         let identifier = full_name_raw.to_shouty_snake_case();
         let volume = code.volume;
         let subcategory = code.subcategory;
-        let variation_joined = variation.iter().map(|v| format!("\"{v}\"")).collect::<Vec<_>>().join(", ");
+        let variation_joined = variation
+            .iter()
+            .map(|v| format!("\"{}\"", v.trim()))
+            .collect::<Vec<_>>()
+            .join(", ");
         let (by_role_bitboard, by_color_bitboard) = setup.board.into_bitboards();
         let promoted = setup.promoted.0;
         let pockets = setup.pockets;
@@ -130,11 +137,14 @@ pub const {identifier}: Opening<'static, &str, &str> = Opening {{
         );
 
         file.push_str(&s);
-        codes.push(code);
+        codes.insert(code);
     }
 
     for volume in Volume::ALL {
-        for entry in read_dir(format!("src/{volume}")).unwrap() {
+        let dir = format!("src/{volume}");
+        create_dir_all(&dir).unwrap();
+
+        for entry in read_dir(dir).unwrap() {
             let entry = entry.unwrap();
 
             if entry.path().is_file() {

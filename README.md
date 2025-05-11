@@ -10,6 +10,7 @@ Specifically, this crate contains:
 `#![no_std]` and no-alloc compatible.
 
 ## Features
+- `alloc`: adds the `OpeningOwned` struct, which is an owned version of the `Opening` struct.
 - `serde`: enables serde support for all types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
 
 ## Sourcing
