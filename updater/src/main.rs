@@ -8,7 +8,8 @@ use reco::Volume;
 use serde_json::Value;
 use shakmaty::uci::UciMove;
 use shakmaty::{Chess, EnPassantMode, Position};
-use std::fs::{File, exists, read_dir, remove_dir_all, remove_file, write};
+use std::collections::HashMap;
+use std::fs::{read_dir, remove_dir_all, remove_file, write};
 use std::io::{Cursor, Write};
 use std::str::FromStr;
 use std::time::Duration;
@@ -16,7 +17,11 @@ use ureq::Agent;
 use zip::ZipArchive;
 
 fn main() {
-    let mut archive = ZipArchive::new(Cursor::new(get_archive())).unwrap();
+    println!("commit anything in the volume directories before running this script");
+    println!("only commit results if this script prints out \"success\"");
+
+    let (archive, commit_sha) = get_archive_and_commit();
+    let mut archive = ZipArchive::new(Cursor::new(archive)).unwrap();
     let all_tsv = archive.by_name("all.tsv").unwrap();
 
     let mut reader = csv::ReaderBuilder::new()
@@ -25,34 +30,19 @@ fn main() {
         .flexible(false)
         .from_reader(all_tsv);
 
-    for volume in Volume::ALL {
-        for entry in read_dir(format!("src/{volume}")).unwrap() {
-            let entry = entry.unwrap();
-
-            if entry.path().is_file() {
-                remove_file(entry.path()).unwrap();
-            } else if entry.path().is_dir() {
-                remove_dir_all(entry.path()).unwrap();
-            }
-        }
-    }
-
     let first = true;
     let mut codes = Vec::new();
+    let mut files = HashMap::new();
 
     for record in reader.records() {
         let record = record.unwrap();
         let code_raw = &record[0];
         let full_name_raw = &record[1];
-        //let sans_raw = &record[2];
         let uci_raw = &record[3];
-        //let epd_raw = &record[4];
 
         let code = reco::Code::from_str(code_raw).unwrap();
         let (name, variation) = get_name_and_variation(full_name_raw);
-        //let sans = get_sans(sans_raw)?;
         let uci = get_uci(uci_raw);
-        //let epd = Epd::from_str(epd_raw)?;
         let mut moves = Vec::new();
         let mut p = Chess::new();
 
@@ -65,20 +55,17 @@ fn main() {
         let setup = p.into_setup(EnPassantMode::Always);
         let file_path = format!("src/{}/{code}.rs", code.volume);
 
-        if !exists(&file_path).unwrap() {
-            write(
-                &file_path,
-                "use shakmaty::Move::*;
+        let file = files.entry(file_path).or_insert_with(|| {
+            "use shakmaty::Move::*;
 use shakmaty::Role::*;
 use shakmaty::Square::*;
 use shakmaty::Color::*;
 use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByRole, ByColor, Setup};
-use core::num::NonZeroU32;",
-            )
-            .unwrap();
-        }
+use core::num::NonZeroU32;"
+                .to_owned()
+        });
 
         let identifier = full_name_raw.to_shouty_snake_case();
         let volume = code.volume;
@@ -140,18 +127,28 @@ const {identifier}: crate::Opening<'static> = crate::Opening {{
             by_color_bitboard.white.0
         );
 
-        let mut file = File::options()
-            .create(true)
-            .append(true)
-            .open(file_path)
-            .unwrap();
-
-        file.write_all(s.as_bytes()).unwrap();
+        file.push_str(&s);
         codes.push(code);
 
         if first {
             break;
         }
+    }
+
+    for volume in Volume::ALL {
+        for entry in read_dir(format!("src/{volume}")).unwrap() {
+            let entry = entry.unwrap();
+
+            if entry.path().is_file() {
+                remove_file(entry.path()).unwrap();
+            } else if entry.path().is_dir() {
+                remove_dir_all(entry.path()).unwrap();
+            }
+        }
+    }
+
+    for (file_path, file) in files {
+        write(file_path, file).unwrap();
     }
 
     for volume in Volume::ALL {
@@ -171,6 +168,10 @@ const {identifier}: crate::Opening<'static> = crate::Opening {{
         )
         .unwrap();
     }
+
+    write("commit-run-source.txt", commit_sha).unwrap();
+
+    println!("success");
 }
 
 fn get_name_and_variation(full_name: &str) -> (&str, Vec<&str>) {
@@ -198,7 +199,7 @@ fn get_uci(raw: &str) -> Vec<UciMove> {
         .collect::<Vec<_>>()
 }
 
-fn get_archive() -> Vec<u8> {
+fn get_archive_and_commit() -> (Vec<u8>, String) {
     let token = format!("Bearer {}", dotenvy::var("GITHUB_TOKEN").unwrap());
 
     let agent: Agent = Agent::config_builder()
@@ -208,10 +209,11 @@ fn get_archive() -> Vec<u8> {
         .into();
 
     let runs_url = format!(
-        "https://api.github.com/repos/{}/{}/actions/workflows/{}/runs?per_page=1",
+        "https://api.github.com/repos/{}/{}/actions/workflows/{}/runs?branch={}",
         constants::OWNER,
         constants::REPO,
-        constants::WORKFLOW
+        constants::WORKFLOW,
+        constants::BRANCH,
     );
 
     let runs_res: Value = agent
@@ -223,22 +225,39 @@ fn get_archive() -> Vec<u8> {
         .read_json()
         .unwrap();
 
-    let artifacts_url = runs_res["workflow_runs"][0]["artifacts_url"]
-        .as_str()
-        .unwrap();
+    let mut archive_download_url_and_commit_sha = None::<(String, String)>;
 
-    let artifacts_res: Value = agent
-        .get(artifacts_url)
-        .header(header::AUTHORIZATION, &token)
-        .call()
-        .unwrap()
-        .into_body()
-        .read_json()
-        .unwrap();
+    for run in runs_res["workflow_runs"].as_array().unwrap() {
+        if !(run["name"] == "Lint") || !(run["conclusion"] == "success") {
+            continue;
+        }
 
-    let archive_download_url = artifacts_res["artifacts"][0]["archive_download_url"]
-        .as_str()
-        .unwrap();
+        let artifacts_url = run["artifacts_url"].as_str().unwrap();
+
+        let artifacts_res: Value = agent
+            .get(artifacts_url)
+            .header(header::AUTHORIZATION, &token)
+            .call()
+            .unwrap()
+            .into_body()
+            .read_json()
+            .unwrap();
+
+        if let Some(artifact) = artifacts_res["artifacts"].as_array().unwrap().first() {
+            archive_download_url_and_commit_sha = Some((
+                artifact["archive_download_url"]
+                    .as_str()
+                    .unwrap()
+                    .to_owned(),
+                run["head_sha"].as_str().unwrap().to_owned(),
+            ));
+            break;
+        };
+    }
+
+    let Some((archive_download_url, commit_sha)) = archive_download_url_and_commit_sha else {
+        panic!("no artifact found");
+    };
 
     let archive_res = agent
         .get(archive_download_url)
@@ -251,5 +270,5 @@ fn get_archive() -> Vec<u8> {
         .read_to_vec()
         .unwrap();
 
-    archive_res
+    (archive_res, commit_sha)
 }
