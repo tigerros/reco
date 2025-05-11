@@ -2,13 +2,14 @@
 name = "reco"
 version = "0.0.0"
 edition = "2024"
-description = "reserved for Rust Encyclopaedia of Chess Openings"
-license = "MIT OR Apache-2.0"
+description = "An ECO (Encyclopaedia of Chess Openings) crate"
+license = "GPL-3"
+rust-version = "1.85.1"
 
 [dependencies]
-shakmaty = { workspace = true }
 deranged = { workspace = true }
 serde = { workspace = true, features = ["derive"], optional = true }
+shakmaty = { workspace = true }
 
 [features]
 serde = ["dep:serde", "deranged/serde"]

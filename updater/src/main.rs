@@ -1,19 +1,15 @@
 #![forbid(unsafe_code)]
 
 mod constants;
-mod sans_pgn_visitor;
 
-use crate::sans_pgn_visitor::SansPgnVisitor;
 use heck::ToShoutySnakeCase;
 use http::header;
 use reco::Volume;
 use serde_json::Value;
-use shakmaty::san::SanPlus;
 use shakmaty::uci::UciMove;
-use shakmaty::{ByColor, ByRole, Chess, EnPassantMode, Position};
+use shakmaty::{Chess, EnPassantMode, Position};
 use std::fs::{File, exists, read_dir, remove_dir_all, remove_file, write};
 use std::io::{Cursor, Write};
-use std::num::NonZeroU32;
 use std::str::FromStr;
 use std::time::Duration;
 use ureq::Agent;
@@ -146,7 +142,6 @@ const {identifier}: crate::Opening<'static> = crate::Opening {{
 
         let mut file = File::options()
             .create(true)
-            .write(true)
             .append(true)
             .open(file_path)
             .unwrap();
@@ -189,14 +184,6 @@ fn get_name_and_variation(full_name: &str) -> (&str, Vec<&str>) {
     let variation = full_name_split[1].split(',').collect::<Vec<_>>();
 
     (name, variation)
-}
-
-fn get_sans(raw: &str) -> Vec<SanPlus> {
-    let mut reader = pgn_reader::BufferedReader::new_cursor(raw.as_bytes());
-    let mut visitor = SansPgnVisitor(Vec::new());
-    reader.read_game(&mut visitor).unwrap();
-
-    visitor.0
 }
 
 fn get_uci(raw: &str) -> Vec<UciMove> {

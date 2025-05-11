@@ -55,7 +55,13 @@ impl FromStr for Code {
 
         Ok(Self {
             volume,
-            // CLIPPY: Both numbers are 0-9. They can't be larger than 99 in this calculation.
+            #[expect(
+                clippy::unwrap_used,
+                clippy::arithmetic_side_effects,
+                clippy::cast_possible_truncation,
+                clippy::as_conversions,
+                reason = "both numbers are 0-9. They can't be larger than 99 in this calculation"
+            )]
             subcategory: RangedU8::new((digit_one * 10 + digit_two) as u8).unwrap(),
         })
     }

@@ -14,7 +14,7 @@ pub enum Volume {
 }
 
 impl Volume {
-    pub const ALL: [Volume; 5] = [Volume::A, Volume::B, Volume::C, Volume::D, Volume::E];
+    pub const ALL: [Self; 5] = [Self::A, Self::B, Self::C, Self::D, Self::E];
 }
 
 impl From<Volume> for char {
@@ -49,11 +49,11 @@ impl TryFrom<char> for Volume {
     /// See [`Volume::from_str`].
     fn try_from(c: char) -> Result<Self, Self::Error> {
         let volume = match c {
-            'A' => Volume::A,
-            'B' => Volume::B,
-            'C' => Volume::C,
-            'D' => Volume::D,
-            'E' => Volume::E,
+            'A' => Self::A,
+            'B' => Self::B,
+            'C' => Self::C,
+            'D' => Self::D,
+            'E' => Self::E,
             _ => return Err(Error),
         };
 
@@ -82,11 +82,11 @@ impl FromStr for Volume {
     /// ```
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         let volume = match s {
-            "A" => Volume::A,
-            "B" => Volume::B,
-            "C" => Volume::C,
-            "D" => Volume::D,
-            "E" => Volume::E,
+            "A" => Self::A,
+            "B" => Self::B,
+            "C" => Self::C,
+            "D" => Self::D,
+            "E" => Self::E,
             _ => return Err(Error),
         };
 
