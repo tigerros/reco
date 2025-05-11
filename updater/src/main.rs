@@ -10,7 +10,7 @@ use shakmaty::uci::UciMove;
 use shakmaty::{Chess, EnPassantMode, Position};
 use std::collections::HashMap;
 use std::fs::{read_dir, remove_dir_all, remove_file, write};
-use std::io::{Cursor, Write};
+use std::io::Cursor;
 use std::str::FromStr;
 use std::time::Duration;
 use ureq::Agent;
@@ -56,14 +56,17 @@ fn main() {
         let file_path = format!("src/{}/{code}.rs", code.volume);
 
         let file = files.entry(file_path).or_insert_with(|| {
-            "use shakmaty::Move::*;
-use shakmaty::Role::*;
+            r#"use shakmaty::Move::*;
+use shakmaty::Role::{Pawn, Knight, Bishop, Rook, Queen, King};
+#[expect(clippy::enum_glob_use, reason = "there's 64 variants in this enum, importing them all is stupid")]
 use shakmaty::Square::*;
-use shakmaty::Color::*;
+use shakmaty::Color::{Black, White};
 use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByRole, ByColor, Setup};
-use core::num::NonZeroU32;"
+use core::num::NonZeroU32;
+use crate::{Opening, Code, Volume};
+use deranged::RangedU8;"#
                 .to_owned()
         });
 
@@ -84,10 +87,10 @@ use core::num::NonZeroU32;"
         let s = format!(
             r#"
 
-const {identifier}: crate::Opening<'static> = crate::Opening {{
-    code: crate::Code {{
-        volume: crate::Volume::{volume},
-        subcategory: deranged::RangedU8::new_static::<{subcategory}>(),
+pub const {identifier}: Opening<'static, &str, &str> = Opening {{
+    code: Code {{
+        volume: Volume::{volume},
+        subcategory: RangedU8::new_static::<{subcategory}>(),
     }},
     name: "{name}",
     variation: &[{variation_joined}],

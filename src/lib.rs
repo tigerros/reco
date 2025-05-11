@@ -1,9 +1,5 @@
 #![no_std]
 #![forbid(unsafe_code)]
-#![allow(
-    clippy::must_use_candidate,
-    reason = "triggers too much, kind of pointless"
-)]
 #![warn(
     clippy::pedantic,
     clippy::nursery,
@@ -42,6 +38,14 @@
     clippy::panic_in_result_fn,
     clippy::indexing_slicing,
     clippy::string_slice
+)]
+#![allow(
+    clippy::must_use_candidate,
+    reason = "triggers too much, kind of pointless"
+)]
+#![allow(
+    clippy::unreadable_literal,
+    reason = "triggers only on the generated bitboards"
 )]
 
 #[expect(
