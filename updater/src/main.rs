@@ -61,7 +61,10 @@ fn main() {
         });
     }
 
-    remove_dir_all("src/openings").unwrap();
+    // Delete previous data
+    if exists("src/openings").unwrap() {
+        remove_dir_all("src/openings").unwrap();
+    }
 
     // Creates a directory for each opening and a module file, where the opening is stored.
     for opening in &openings {
