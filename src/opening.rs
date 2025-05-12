@@ -1,6 +1,10 @@
-use alloc::string::String;
-use alloc::vec::Vec;
 use crate::Code;
+#[cfg(feature = "alloc")]
+extern crate alloc;
+#[cfg(feature = "alloc")]
+use alloc::string::String;
+#[cfg(feature = "alloc")]
+use alloc::vec::Vec;
 use shakmaty::{Move, Setup};
 
 /// An entry in the opening book.
@@ -9,7 +13,10 @@ use shakmaty::{Move, Setup};
 /// You can enable the `alloc` feature for an `OpeningOwned` struct.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-pub struct Opening<'a, Variation> where Variation: AsRef<str> {
+pub struct Opening<'a, Variation>
+where
+    Variation: AsRef<str>,
+{
     pub code: Code,
     /// The top-level name of the opening.
     pub name: &'a str,
@@ -20,7 +27,8 @@ pub struct Opening<'a, Variation> where Variation: AsRef<str> {
     pub setup: &'a Setup,
 }
 
-/// See [`Opening`].
+#[cfg(feature = "alloc")]
+/// Owned version of [`Opening`].
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct OpeningOwned {
@@ -38,6 +46,7 @@ pub struct OpeningOwned {
 
 #[cfg(feature = "alloc")]
 impl<'a> From<&'a OpeningOwned> for Opening<'a, String> {
+    /// Simply borrows each field of the [`OpeningOwned`].
     fn from(value: &'a OpeningOwned) -> Self {
         Self {
             code: value.code,

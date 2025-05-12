@@ -2,15 +2,15 @@
 
 mod constants;
 
-use heck::ToShoutySnakeCase;
+use heck::{ToShoutySnekCase, ToSnekCase};
 use http::header;
-use reco::Volume;
+use reco::OpeningOwned;
 use serde_json::Value;
 use shakmaty::uci::UciMove;
 use shakmaty::{Chess, EnPassantMode, Position};
-use std::collections::{HashMap, HashSet};
-use std::fs::{create_dir_all, read_dir, remove_dir_all, remove_file, write};
-use std::io::Cursor;
+use std::fs::{File, create_dir_all, exists, remove_dir_all, write};
+use std::io::{Cursor, Write};
+use std::iter;
 use std::str::FromStr;
 use std::time::Duration;
 use ureq::Agent;
@@ -30,8 +30,7 @@ fn main() {
         .flexible(false)
         .from_reader(all_tsv);
 
-    let mut codes = HashSet::new();
-    let mut files = HashMap::new();
+    let mut openings = Vec::new();
 
     for record in reader.records() {
         let record = record.unwrap();
@@ -52,48 +51,148 @@ fn main() {
         }
 
         let setup = p.to_setup(EnPassantMode::Legal);
-        let file_path = format!("src/{}/{code}.rs", code.volume);
 
-        let file = files.entry(file_path).or_insert_with(|| {
-            r#"#[expect(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
-use shakmaty::Move::*;
-#[expect(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
-use shakmaty::Role::{Pawn, Knight, Bishop, Rook, Queen, King};
-#[expect(clippy::enum_glob_use, reason = "there's 64 variants in this enum, importing them all is stupid")]
-use shakmaty::Square::*;
-#[expect(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
-use shakmaty::Color::{Black, White};
-use shakmaty::bitboard::Bitboard;
-use shakmaty::board::Board;
-use shakmaty::{ByRole, ByColor, Setup};
-use core::num::NonZeroU32;
-use crate::{Opening, Code, Volume};
-use deranged::RangedU8;"#
-                .to_owned()
+        openings.push(OpeningOwned {
+            code,
+            name,
+            variation,
+            moves,
+            setup,
         });
+    }
 
-        let identifier = full_name_raw.to_shouty_snake_case();
-        let volume = code.volume;
-        let subcategory = code.subcategory;
-        let variation_joined = variation
-            .iter()
-            .map(|v| format!("\"{}\"", v.trim()))
-            .collect::<Vec<_>>()
-            .join(", ");
-        let (by_role_bitboard, by_color_bitboard) = setup.board.into_bitboards();
-        let promoted = setup.promoted.0;
-        let pockets = setup.pockets;
-        let turn = setup.turn;
-        let castling_rights = setup.castling_rights.0;
-        let ep_square = setup.ep_square;
-        let remaining_checks = setup.remaining_checks;
-        let halfmoves = setup.halfmoves;
-        let fullmoves = setup.fullmoves;
+    remove_dir_all("src/openings").unwrap();
 
-        let s = format!(
-            r#"
+    // Creates a directory for each opening and a module file, where the opening is stored.
+    for opening in &openings {
+        let directory_path = format!(
+            "src/openings/{}",
+            iter::once(&opening.name)
+                .chain(&opening.variation)
+                .map(|s| s.to_snek_case())
+                .collect::<Vec<_>>()
+                .join("/")
+        );
 
-pub const {identifier}: Opening<'static, &str, &str> = Opening {{
+        if !exists(&directory_path).unwrap() {
+            create_dir_all(&directory_path).unwrap();
+        }
+
+        let file_path = format!("{directory_path}/mod.rs");
+
+        if !exists(&file_path).unwrap() {
+            write(&file_path, constants::OPENING_FILE_INIT).unwrap();
+        }
+
+        let mut file = File::options()
+            .write(true)
+            .append(true)
+            .open(file_path)
+            .unwrap();
+
+        file.write_all(get_opening_constant_string(opening).as_bytes())
+            .unwrap();
+    }
+
+    // Each opening adds itself to the module file to the parent.
+    // Example:
+    // sicilian/
+    // > mod.rs
+    // > najdorf/...
+    //
+    // If this loop encounters "sicilian", nothing happens (empty variation).
+    // But when it encounters "sicilian: najdorf", it will append
+    // `pub mod najdorf; pub use najdorf::NAJDORF;` to `sicilian/mod.rs`.
+    // Unfortunately it will be written after the `sicilian::SICILIAN` constant item.
+    // I don't see it as a huge problem because the files are generated anyway,
+    // and doing it another way would probably make this script more complex.
+    for opening in &mut openings {
+        // Removed because we want to work with the parent opening
+        let Some(last_variation) = opening.variation.pop() else {
+            continue;
+        };
+
+        let parent_mod_path = format!(
+            "src/openings/{}/{}/mod.rs",
+            opening.name.to_snek_case(),
+            opening
+                .variation
+                .iter()
+                .map(|s| s.to_snek_case())
+                .collect::<Vec<_>>()
+                .join("/")
+        );
+
+        let mut parent_mod = File::options().append(true).open(parent_mod_path).unwrap();
+
+        let mod_and_use = format!(
+            "pub mod {0};\npub use {0}::{1}",
+            last_variation.to_snek_case(),
+            last_variation.TO_SHOUTY_SNEK_CASE()
+        );
+
+        parent_mod.write_all(mod_and_use.as_bytes()).unwrap();
+    }
+
+    let top_level_opening_mods_and_uses = openings
+        .iter()
+        .filter_map(|opening| {
+            if opening.variation.is_empty() {
+                None
+            } else {
+                Some(format!(
+                    "pub mod {0};\npub use {0}::{1};\n",
+                    opening.name.to_snek_case(),
+                    opening.name.TO_SHOUTY_SNEK_CASE()
+                ))
+            }
+        })
+        .collect::<String>();
+
+    write(
+        "src/openings/mod.rs",
+        top_level_opening_mods_and_uses.as_bytes(),
+    )
+    .unwrap();
+    write("commit-run-source.txt", commit_sha).unwrap();
+
+    println!("success");
+}
+
+/// Returns an item which is a constant of the given opening.
+///
+/// Uses the last variation layer for the constant identifier, or the opening name if the
+/// variation is unspecified.
+fn get_opening_constant_string(opening: &OpeningOwned) -> String {
+    let name = &opening.name;
+    let moves = &opening.moves;
+    let identifier = opening
+        .variation
+        .last()
+        .unwrap_or(&opening.name)
+        .TO_SHOUTY_SNEK_CASE();
+    let volume = opening.code.volume;
+    let subcategory = opening.code.subcategory;
+    let variation_joined = opening
+        .variation
+        .iter()
+        .map(|v| format!("\"{}\"", v.trim()))
+        .collect::<Vec<_>>()
+        .join(", ");
+    let (by_role_bitboard, by_color_bitboard) = opening.setup.board.clone().into_bitboards();
+    let promoted = opening.setup.promoted.0;
+    let pockets = opening.setup.pockets;
+    let turn = opening.setup.turn;
+    let castling_rights = opening.setup.castling_rights.0;
+    let ep_square = opening.setup.ep_square;
+    let remaining_checks = opening.setup.remaining_checks;
+    let halfmoves = opening.setup.halfmoves;
+    let fullmoves = opening.setup.fullmoves;
+
+    format!(
+        r#"
+
+pub const {identifier}: Opening<'static, &str> = Opening {{
     code: Code {{
         volume: Volume::{volume},
         subcategory: RangedU8::new_static::<{subcategory}>(),
@@ -126,73 +225,31 @@ pub const {identifier}: Opening<'static, &str, &str> = Opening {{
         fullmoves: if let Some(fullmoves) = NonZeroU32::new({fullmoves}) {{ fullmoves }} else {{ panic!("fullmoves is zero") }},
     }},
 }};"#,
-            by_role_bitboard.pawn.0,
-            by_role_bitboard.knight.0,
-            by_role_bitboard.bishop.0,
-            by_role_bitboard.rook.0,
-            by_role_bitboard.queen.0,
-            by_role_bitboard.king.0,
-            by_color_bitboard.black.0,
-            by_color_bitboard.white.0
-        );
-
-        file.push_str(&s);
-        codes.insert(code);
-    }
-
-    for volume in Volume::ALL {
-        let dir = format!("src/{volume}");
-        create_dir_all(&dir).unwrap();
-
-        for entry in read_dir(dir).unwrap() {
-            let entry = entry.unwrap();
-
-            if entry.path().is_file() {
-                remove_file(entry.path()).unwrap();
-            } else if entry.path().is_dir() {
-                remove_dir_all(entry.path()).unwrap();
-            }
-        }
-    }
-
-    for (file_path, file) in files {
-        write(file_path, file).unwrap();
-    }
-
-    for volume in Volume::ALL {
-        write(
-            format!("src/{volume}/mod.rs"),
-            codes
-                .iter()
-                .filter_map(|c| {
-                    if c.volume == volume {
-                        Some(format!("pub mod {c};"))
-                    } else {
-                        None
-                    }
-                })
-                .collect::<Vec<_>>()
-                .join("\n"),
-        )
-        .unwrap();
-    }
-
-    write("commit-run-source.txt", commit_sha).unwrap();
-
-    println!("success");
+        by_role_bitboard.pawn.0,
+        by_role_bitboard.knight.0,
+        by_role_bitboard.bishop.0,
+        by_role_bitboard.rook.0,
+        by_role_bitboard.queen.0,
+        by_role_bitboard.king.0,
+        by_color_bitboard.black.0,
+        by_color_bitboard.white.0
+    )
 }
 
-fn get_name_and_variation(full_name: &str) -> (&str, Vec<&str>) {
+fn get_name_and_variation(full_name: &str) -> (String, Vec<String>) {
     let full_name_split = full_name.split(':').collect::<Vec<_>>();
     let name = full_name_split[0];
 
     if full_name_split.len() == 1 {
-        return (name, Vec::new());
+        return (name.to_owned(), Vec::new());
     }
 
-    let variation = full_name_split[1].split(',').collect::<Vec<_>>();
+    let variation = full_name_split[1]
+        .split(',')
+        .map(str::to_owned)
+        .collect::<Vec<_>>();
 
-    (name, variation)
+    (name.to_owned(), variation)
 }
 
 fn get_uci(raw: &str) -> Vec<UciMove> {
@@ -236,7 +293,7 @@ fn get_archive_and_commit() -> (Vec<u8>, String) {
     let mut archive_download_url_and_commit_sha = None::<(String, String)>;
 
     for run in runs_res["workflow_runs"].as_array().unwrap() {
-        if !(run["name"] == "Lint") || !(run["conclusion"] == "success") {
+        if run["name"] != "Lint" || run["conclusion"] != "success" || run["event"] != "push" {
             continue;
         }
 

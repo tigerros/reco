@@ -47,7 +47,6 @@
     clippy::unreadable_literal,
     reason = "triggers only on the generated bitboards"
 )]
-extern crate alloc;
 
 // #[expect(
 //     non_snake_case,
@@ -83,7 +82,7 @@ pub mod code;
 mod opening;
 pub mod volume;
 pub use code::Code;
-pub use opening::Opening;
+pub use opening::{Opening, OpeningOwned};
 pub use volume::Volume;
 
 /// The 0-99 subcategory of an opening.
