@@ -143,18 +143,13 @@ pub const ALEKHINE_CHATARD_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod maroczy_variation;
-pub use maroczy_variation::MAROCZY_VARIATION;
-
-pub mod spielmann_variation;
-pub use spielmann_variation::SPIELMANN_VARIATION;
-
-pub mod albin_chatard_gambit;
-pub use albin_chatard_gambit::ALBIN_CHATARD_GAMBIT;
-
-pub mod teichmann_variation;
-pub use teichmann_variation::TEICHMANN_VARIATION;
-
 pub mod breyer_variation;
 pub use breyer_variation::BREYER_VARIATION;
+pub mod maroczy_variation;
+pub use maroczy_variation::MAROCZY_VARIATION;
+pub mod spielmann_variation;
+pub use spielmann_variation::SPIELMANN_VARIATION;
+pub mod teichmann_variation;
+pub use teichmann_variation::TEICHMANN_VARIATION;
+pub mod albin_chatard_gambit;
+pub use albin_chatard_gambit::ALBIN_CHATARD_GAMBIT;

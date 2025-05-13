@@ -80,6 +80,5 @@ pub const POLISH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod spassky_gambit_accepted;
 pub use spassky_gambit_accepted::SPASSKY_GAMBIT_ACCEPTED;

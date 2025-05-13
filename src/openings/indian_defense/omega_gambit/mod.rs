@@ -87,6 +87,5 @@ pub const OMEGA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod arafat_gambit;
 pub use arafat_gambit::ARAFAT_GAMBIT;

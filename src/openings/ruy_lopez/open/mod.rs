@@ -652,69 +652,47 @@ pub const OPEN: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-
-pub mod tarrasch_trap;
-pub use tarrasch_trap::TARRASCH_TRAP;
-
-pub mod st_petersburg_variation;
-pub use st_petersburg_variation::ST_PETERSBURG_VARIATION;
-
-pub mod harksen_gambit;
-pub use harksen_gambit::HARKSEN_GAMBIT;
-
-pub mod schlechter_defense;
-pub use schlechter_defense::SCHLECHTER_DEFENSE;
-
-pub mod friess_attack;
-pub use friess_attack::FRIESS_ATTACK;
-
-pub mod bernstein_variation;
-pub use bernstein_variation::BERNSTEIN_VARIATION;
-
-pub mod skipworth_gambit;
-pub use skipworth_gambit::SKIPWORTH_GAMBIT;
-
-pub mod knorre_variation;
-pub use knorre_variation::KNORRE_VARIATION;
-
-pub mod richter_variation;
-pub use richter_variation::RICHTER_VARIATION;
-
-pub mod berlin_variation;
-pub use berlin_variation::BERLIN_VARIATION;
-
 pub mod motzko_attack;
 pub use motzko_attack::MOTZKO_ATTACK;
-
-pub mod karpov_gambit;
-pub use karpov_gambit::KARPOV_GAMBIT;
-
 pub mod riga_variation;
 pub use riga_variation::RIGA_VARIATION;
-
-pub mod berger_variation;
-pub use berger_variation::BERGER_VARIATION;
-
-pub mod dilworth_variation;
-pub use dilworth_variation::DILWORTH_VARIATION;
-
-pub mod zukertort_variation;
-pub use zukertort_variation::ZUKERTORT_VARIATION;
-
 pub mod classical_defense;
 pub use classical_defense::CLASSICAL_DEFENSE;
-
-pub mod italian_variation;
-pub use italian_variation::ITALIAN_VARIATION;
-
 pub mod howell_attack;
 pub use howell_attack::HOWELL_ATTACK;
-
-pub mod breslau_variation;
-pub use breslau_variation::BRESLAU_VARIATION;
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
+pub mod schlechter_defense;
+pub use schlechter_defense::SCHLECHTER_DEFENSE;
+pub mod bernstein_variation;
+pub use bernstein_variation::BERNSTEIN_VARIATION;
+pub mod harksen_gambit;
+pub use harksen_gambit::HARKSEN_GAMBIT;
+pub mod berlin_variation;
+pub use berlin_variation::BERLIN_VARIATION;
+pub mod dilworth_variation;
+pub use dilworth_variation::DILWORTH_VARIATION;
+pub mod berger_variation;
+pub use berger_variation::BERGER_VARIATION;
+pub mod zukertort_variation;
+pub use zukertort_variation::ZUKERTORT_VARIATION;
+pub mod skipworth_gambit;
+pub use skipworth_gambit::SKIPWORTH_GAMBIT;
+pub mod knorre_variation;
+pub use knorre_variation::KNORRE_VARIATION;
+pub mod karpov_gambit;
+pub use karpov_gambit::KARPOV_GAMBIT;
+pub mod st_petersburg_variation;
+pub use st_petersburg_variation::ST_PETERSBURG_VARIATION;
+pub mod tarrasch_trap;
+pub use tarrasch_trap::TARRASCH_TRAP;
+pub mod friess_attack;
+pub use friess_attack::FRIESS_ATTACK;
 pub mod malkin_variation;
 pub use malkin_variation::MALKIN_VARIATION;
+pub mod italian_variation;
+pub use italian_variation::ITALIAN_VARIATION;
+pub mod breslau_variation;
+pub use breslau_variation::BRESLAU_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod richter_variation;
+pub use richter_variation::RICHTER_VARIATION;

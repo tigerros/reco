@@ -197,9 +197,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-
 pub mod bulla_attack;
 pub use bulla_attack::BULLA_ATTACK;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;

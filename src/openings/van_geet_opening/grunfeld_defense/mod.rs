@@ -108,6 +108,5 @@ pub const GRUNFELD_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod steiner_gambit;
 pub use steiner_gambit::STEINER_GAMBIT;

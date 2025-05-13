@@ -122,9 +122,7 @@ pub const RAGOZIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
-
 pub mod vienna_variation;
 pub use vienna_variation::VIENNA_VARIATION;

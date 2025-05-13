@@ -211,21 +211,15 @@ pub const THREE_KNIGHTS_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod burille_variation;
-pub use burille_variation::BURILLE_VARIATION;
-
 pub mod hungarian_attack;
 pub use hungarian_attack::HUNGARIAN_ATTACK;
-
-pub mod hungarian_variation;
-pub use hungarian_variation::HUNGARIAN_VARIATION;
-
 pub mod petrosian_system;
 pub use petrosian_system::PETROSIAN_SYSTEM;
-
-pub mod paris_variation;
-pub use paris_variation::PARIS_VARIATION;
-
 pub mod vienna_variation;
 pub use vienna_variation::VIENNA_VARIATION;
+pub mod burille_variation;
+pub use burille_variation::BURILLE_VARIATION;
+pub mod hungarian_variation;
+pub use hungarian_variation::HUNGARIAN_VARIATION;
+pub mod paris_variation;
+pub use paris_variation::PARIS_VARIATION;

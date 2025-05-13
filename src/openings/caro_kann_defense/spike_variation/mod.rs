@@ -87,6 +87,5 @@ pub const SPIKE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod scorpion_grob_gambit;
 pub use scorpion_grob_gambit::SCORPION_GROB_GAMBIT;

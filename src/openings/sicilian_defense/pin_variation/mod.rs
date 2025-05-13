@@ -136,9 +136,7 @@ pub const PIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod koch_variation;
 pub use koch_variation::KOCH_VARIATION;
-
 pub mod jaffe_variation;
 pub use jaffe_variation::JAFFE_VARIATION;

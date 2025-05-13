@@ -115,36 +115,25 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod alekhine_variation;
-pub use alekhine_variation::ALEKHINE_VARIATION;
-
-pub mod schmid_variation;
-pub use schmid_variation::SCHMID_VARIATION;
-
-pub mod larsen_variation;
-pub use larsen_variation::LARSEN_VARIATION;
-
-pub mod flohr_variation;
-pub use flohr_variation::FLOHR_VARIATION;
-
-pub mod larsen_haakert_variation;
-pub use larsen_haakert_variation::LARSEN_HAAKERT_VARIATION;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-
-pub mod vitolins_attack;
-pub use vitolins_attack::VITOLINS_ATTACK;
-
-pub mod keres_variation;
-pub use keres_variation::KERES_VARIATION;
-
-pub mod alburt_variation;
-pub use alburt_variation::ALBURT_VARIATION;
-
 pub mod alekhine_gambit;
 pub use alekhine_gambit::ALEKHINE_GAMBIT;
-
+pub mod flohr_variation;
+pub use flohr_variation::FLOHR_VARIATION;
+pub mod schmid_variation;
+pub use schmid_variation::SCHMID_VARIATION;
+pub mod keres_variation;
+pub use keres_variation::KERES_VARIATION;
+pub mod vitolins_attack;
+pub use vitolins_attack::VITOLINS_ATTACK;
+pub mod larsen_haakert_variation;
+pub use larsen_haakert_variation::LARSEN_HAAKERT_VARIATION;
+pub mod alburt_variation;
+pub use alburt_variation::ALBURT_VARIATION;
+pub mod alekhine_variation;
+pub use alekhine_variation::ALEKHINE_VARIATION;
 pub mod panov_variation;
 pub use panov_variation::PANOV_VARIATION;
+pub mod larsen_variation;
+pub use larsen_variation::LARSEN_VARIATION;

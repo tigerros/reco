@@ -71,6 +71,6 @@ pub const VANT_KRUIJS_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod bouncing_bishop_variation;
+pub mod keoni_hiva_gambit;
 pub use bouncing_bishop_variation::BOUNCING_BISHOP_VARIATION;

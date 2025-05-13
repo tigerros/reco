@@ -101,6 +101,5 @@ pub const FRITZ_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod romford_countergambit;
 pub use romford_countergambit::ROMFORD_COUNTERGAMBIT;

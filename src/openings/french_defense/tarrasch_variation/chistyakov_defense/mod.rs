@@ -122,6 +122,5 @@ pub const CHISTYAKOV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod modern_line;
 pub use modern_line::MODERN_LINE;

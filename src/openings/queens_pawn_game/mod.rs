@@ -302,63 +302,45 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-
-pub mod krause_variation;
-pub use krause_variation::KRAUSE_VARIATION;
-
-pub mod zukertort_variation;
-pub use zukertort_variation::ZUKERTORT_VARIATION;
-
-pub mod accelerated_london_system;
-pub use accelerated_london_system::ACCELERATED_LONDON_SYSTEM;
-
-pub mod chigorin_variation;
-pub use chigorin_variation::CHIGORIN_VARIATION;
-
-pub mod levitsky_attack;
-pub use levitsky_attack::LEVITSKY_ATTACK;
-
-pub mod anti_torre;
-pub use anti_torre::ANTI_TORRE;
-
-pub mod anglo_slav_opening;
-pub use anglo_slav_opening::ANGLO_SLAV_OPENING;
-
-pub mod barry_attack;
-pub use barry_attack::BARRY_ATTACK;
-
-pub mod stonewall_attack;
-pub use stonewall_attack::STONEWALL_ATTACK;
-
-pub mod liedmann_gambit;
-pub use liedmann_gambit::LIEDMANN_GAMBIT;
-
-pub mod chandler_gambit;
-pub use chandler_gambit::CHANDLER_GAMBIT;
-
-pub mod zilbermints_countergambit;
-pub use zilbermints_countergambit::ZILBERMINTS_COUNTERGAMBIT;
-
-pub mod modern_defense;
-pub use modern_defense::MODERN_DEFENSE;
-
-pub mod hubsch_gambit;
-pub use hubsch_gambit::HUBSCH_GAMBIT;
-
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
-
-pub mod zurich_gambit;
-pub use zurich_gambit::ZURICH_GAMBIT;
-
-pub mod colle_system;
-pub use colle_system::COLLE_SYSTEM;
-
-pub mod london_system;
-pub use london_system::LONDON_SYSTEM;
-
 pub mod mason_attack;
 pub use mason_attack::MASON_ATTACK;
-
+pub mod veresov;
+pub mod zilbermints_countergambit;
+pub use zilbermints_countergambit::ZILBERMINTS_COUNTERGAMBIT;
+pub mod anti_torre;
+pub use anti_torre::ANTI_TORRE;
+pub mod krause_variation;
+pub use krause_variation::KRAUSE_VARIATION;
+pub mod zurich_gambit;
+pub use zurich_gambit::ZURICH_GAMBIT;
+pub mod liedmann_gambit;
+pub use liedmann_gambit::LIEDMANN_GAMBIT;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
+pub mod stonewall_attack;
+pub use stonewall_attack::STONEWALL_ATTACK;
+pub mod levitsky_attack;
+pub use levitsky_attack::LEVITSKY_ATTACK;
+pub mod anglo_slav_opening;
+pub use anglo_slav_opening::ANGLO_SLAV_OPENING;
+pub mod colle_system;
+pub use colle_system::COLLE_SYSTEM;
+pub mod accelerated_london_system;
+pub use accelerated_london_system::ACCELERATED_LONDON_SYSTEM;
+pub mod hubsch_gambit;
+pub use hubsch_gambit::HUBSCH_GAMBIT;
+pub mod barry_attack;
+pub use barry_attack::BARRY_ATTACK;
+pub mod london_system;
+pub use london_system::LONDON_SYSTEM;
 pub mod torre_attack;
 pub use torre_attack::TORRE_ATTACK;
+pub mod modern_defense;
+pub use modern_defense::MODERN_DEFENSE;
+pub mod zukertort_variation;
+pub use zukertort_variation::ZUKERTORT_VARIATION;
+pub mod chigorin_variation;
+pub mod veresov_attack;
+pub use chigorin_variation::CHIGORIN_VARIATION;
+pub mod chandler_gambit;
+pub use chandler_gambit::CHANDLER_GAMBIT;

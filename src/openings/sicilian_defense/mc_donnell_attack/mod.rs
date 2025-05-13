@@ -87,6 +87,5 @@ pub const MC_DONNELL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod tal_gambit;
 pub use tal_gambit::TAL_GAMBIT;

@@ -94,6 +94,5 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod big_center_variation;
 pub use big_center_variation::BIG_CENTER_VARIATION;

@@ -273,9 +273,7 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-
-pub mod mujannah_formation;
-pub use mujannah_formation::MUJANNAH_FORMATION;
-
 pub mod schmid_variation;
 pub use schmid_variation::SCHMID_VARIATION;
+pub mod mujannah_formation;
+pub use mujannah_formation::MUJANNAH_FORMATION;

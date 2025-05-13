@@ -143,6 +143,5 @@ pub const DAMIANO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod chigorin_gambit;
 pub use chigorin_gambit::CHIGORIN_GAMBIT;

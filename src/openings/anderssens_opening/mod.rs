@@ -71,6 +71,5 @@ pub const ANDERSSENS_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod polish_gambit;
 pub use polish_gambit::POLISH_GAMBIT;

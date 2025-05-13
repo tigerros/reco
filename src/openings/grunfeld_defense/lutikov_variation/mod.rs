@@ -115,6 +115,5 @@ pub const LUTIKOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod murrey_attack;
 pub use murrey_attack::MURREY_ATTACK;

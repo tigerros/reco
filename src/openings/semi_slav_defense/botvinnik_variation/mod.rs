@@ -302,15 +302,11 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod alatortsev_system;
-pub use alatortsev_system::ALATORTSEV_SYSTEM;
-
-pub mod lilienthal_variation;
-pub use lilienthal_variation::LILIENTHAL_VARIATION;
-
 pub mod szabo_variation;
 pub use szabo_variation::SZABO_VARIATION;
-
 pub mod ekstrom_variation;
 pub use ekstrom_variation::EKSTROM_VARIATION;
+pub mod lilienthal_variation;
+pub use lilienthal_variation::LILIENTHAL_VARIATION;
+pub mod alatortsev_system;
+pub use alatortsev_system::ALATORTSEV_SYSTEM;

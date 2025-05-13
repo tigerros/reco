@@ -438,9 +438,7 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-
 pub mod pawn_grab_line;
 pub use pawn_grab_line::PAWN_GRAB_LINE;
-
 pub mod kramniks_line;
 pub use kramniks_line::KRAMNIKS_LINE;

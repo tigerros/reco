@@ -80,15 +80,11 @@ pub const FROMS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod langheld_gambit;
-pub use langheld_gambit::LANGHELD_GAMBIT;
-
-pub mod lipke_variation;
-pub use lipke_variation::LIPKE_VARIATION;
-
-pub mod bahr_gambit;
-pub use bahr_gambit::BAHR_GAMBIT;
-
 pub mod lasker_variation;
 pub use lasker_variation::LASKER_VARIATION;
+pub mod lipke_variation;
+pub use lipke_variation::LIPKE_VARIATION;
+pub mod langheld_gambit;
+pub use langheld_gambit::LANGHELD_GAMBIT;
+pub mod bahr_gambit;
+pub use bahr_gambit::BAHR_GAMBIT;

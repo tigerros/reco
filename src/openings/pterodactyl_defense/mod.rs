@@ -136,3 +136,10 @@ pub const PTERODACTYL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod austrian;
+pub mod central;
+pub mod eastern;
+pub mod fianchetto;
+pub mod queen_pterodactyl;
+pub mod sicilian;
+pub mod western;

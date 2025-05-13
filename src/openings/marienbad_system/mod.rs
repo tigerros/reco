@@ -122,6 +122,5 @@ pub const MARIENBAD_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod berg_variation;
 pub use berg_variation::BERG_VARIATION;

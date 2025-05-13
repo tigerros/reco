@@ -94,6 +94,5 @@ pub const SLAV_INDIAN: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod kudischewitsch_gambit;
 pub use kudischewitsch_gambit::KUDISCHEWITSCH_GAMBIT;

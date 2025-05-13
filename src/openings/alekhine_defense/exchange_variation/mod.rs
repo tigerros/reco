@@ -129,9 +129,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod voronezh_variation;
 pub use voronezh_variation::VORONEZH_VARIATION;
-
 pub mod karpov_variation;
 pub use karpov_variation::KARPOV_VARIATION;

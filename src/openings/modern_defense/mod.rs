@@ -228,69 +228,51 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-
-pub mod fianchetto_gambit;
-pub use fianchetto_gambit::FIANCHETTO_GAMBIT;
-
-pub mod pterodactyl_variation;
-pub use pterodactyl_variation::PTERODACTYL_VARIATION;
-
-pub mod three_pawns_attack;
-pub use three_pawns_attack::THREE_PAWNS_ATTACK;
-
-pub mod modern_pterodactyl;
-pub use modern_pterodactyl::MODERN_PTERODACTYL;
-
-pub mod standard_defense;
-pub use standard_defense::STANDARD_DEFENSE;
-
-pub mod bishop_attack;
-pub use bishop_attack::BISHOP_ATTACK;
-
-pub mod pseudo_austrian_attack;
-pub use pseudo_austrian_attack::PSEUDO_AUSTRIAN_ATTACK;
-
-pub mod gurgenidze_defense;
-pub use gurgenidze_defense::GURGENIDZE_DEFENSE;
-
-pub mod beefeater_variation;
-pub use beefeater_variation::BEEFEATER_VARIATION;
-
-pub mod anti_modern;
-pub use anti_modern::ANTI_MODERN;
-
-pub mod standard_line;
-pub use standard_line::STANDARD_LINE;
-
-pub mod dunworthy_variation;
-pub use dunworthy_variation::DUNWORTHY_VARIATION;
-
-pub mod westermann_gambit;
-pub use westermann_gambit::WESTERMANN_GAMBIT;
-
 pub mod kotov_variation;
 pub use kotov_variation::KOTOV_VARIATION;
-
-pub mod wind_gambit;
-pub use wind_gambit::WIND_GAMBIT;
-
-pub mod two_knights_variation;
-pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
-
-pub mod norwegian_defense;
-pub use norwegian_defense::NORWEGIAN_DEFENSE;
-
-pub mod gellers_system;
-pub use gellers_system::GELLERS_SYSTEM;
-
-pub mod neo_modern_defense;
-pub use neo_modern_defense::NEO_MODERN_DEFENSE;
-
+pub mod dunworthy_variation;
+pub mod semi_averbakh_variation;
+pub use dunworthy_variation::DUNWORTHY_VARIATION;
 pub mod averbakh_system;
 pub use averbakh_system::AVERBAKH_SYSTEM;
-
-pub mod randspringer_variation;
-pub use randspringer_variation::RANDSPRINGER_VARIATION;
-
+pub mod neo_modern_defense;
+pub use neo_modern_defense::NEO_MODERN_DEFENSE;
+pub mod pseudo_austrian_attack;
+pub use pseudo_austrian_attack::PSEUDO_AUSTRIAN_ATTACK;
 pub mod masur_gambit;
 pub use masur_gambit::MASUR_GAMBIT;
+pub mod mongredien_defense;
+pub mod randspringer_variation;
+pub use randspringer_variation::RANDSPRINGER_VARIATION;
+pub mod two_knights_variation;
+pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
+pub mod norwegian_defense;
+pub use norwegian_defense::NORWEGIAN_DEFENSE;
+pub mod standard_line;
+pub use standard_line::STANDARD_LINE;
+pub mod bishop_attack;
+pub use bishop_attack::BISHOP_ATTACK;
+pub mod modern_pterodactyl;
+pub use modern_pterodactyl::MODERN_PTERODACTYL;
+pub mod wind_gambit;
+pub use wind_gambit::WIND_GAMBIT;
+pub mod averbakh_variation;
+pub mod beefeater_variation;
+pub use beefeater_variation::BEEFEATER_VARIATION;
+pub mod standard_defense;
+pub use standard_defense::STANDARD_DEFENSE;
+pub mod lizard_defense;
+pub mod three_pawns_attack;
+pub use three_pawns_attack::THREE_PAWNS_ATTACK;
+pub mod anti_modern;
+pub use anti_modern::ANTI_MODERN;
+pub mod westermann_gambit;
+pub use westermann_gambit::WESTERMANN_GAMBIT;
+pub mod gellers_system;
+pub use gellers_system::GELLERS_SYSTEM;
+pub mod pterodactyl_variation;
+pub use pterodactyl_variation::PTERODACTYL_VARIATION;
+pub mod fianchetto_gambit;
+pub use fianchetto_gambit::FIANCHETTO_GAMBIT;
+pub mod gurgenidze_defense;
+pub use gurgenidze_defense::GURGENIDZE_DEFENSE;

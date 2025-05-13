@@ -108,6 +108,5 @@ pub const PFEIFFER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod sleipnir_countergambit;
 pub use sleipnir_countergambit::SLEIPNIR_COUNTERGAMBIT;

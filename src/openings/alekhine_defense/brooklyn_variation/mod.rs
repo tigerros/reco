@@ -94,6 +94,5 @@ pub const BROOKLYN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod everglades_variation;
 pub use everglades_variation::EVERGLADES_VARIATION;

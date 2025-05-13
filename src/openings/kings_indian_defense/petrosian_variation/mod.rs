@@ -151,12 +151,9 @@ pub const PETROSIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod keres_defense;
 pub use keres_defense::KERES_DEFENSE;
-
-pub mod normal_defense;
-pub use normal_defense::NORMAL_DEFENSE;
-
 pub mod stein_defense;
 pub use stein_defense::STEIN_DEFENSE;
+pub mod normal_defense;
+pub use normal_defense::NORMAL_DEFENSE;

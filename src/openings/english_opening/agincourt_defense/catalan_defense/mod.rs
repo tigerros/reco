@@ -205,6 +205,5 @@ pub const CATALAN_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod semi_slav_defense;
 pub use semi_slav_defense::SEMI_SLAV_DEFENSE;

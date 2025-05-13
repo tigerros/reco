@@ -136,6 +136,5 @@ pub const ULVESTAD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod kurkin_gambit;
 pub use kurkin_gambit::KURKIN_GAMBIT;

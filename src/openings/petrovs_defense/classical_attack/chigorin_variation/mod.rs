@@ -165,9 +165,7 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
 pub mod browne_attack;
 pub use browne_attack::BROWNE_ATTACK;
+pub mod main_line;
+pub use main_line::MAIN_LINE;

@@ -169,30 +169,21 @@ pub const BLACKMAR_DIEMER_GAMBIT: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod diemer_rosenberg_attack;
 pub use diemer_rosenberg_attack::DIEMER_ROSENBERG_ATTACK;
-
 pub mod rasa_studier_gambit;
 pub use rasa_studier_gambit::RASA_STUDIER_GAMBIT;
-
-pub mod lemberger_countergambit;
-pub use lemberger_countergambit::LEMBERGER_COUNTERGAMBIT;
-
-pub mod reversed_albin_countergambit;
-pub use reversed_albin_countergambit::REVERSED_ALBIN_COUNTERGAMBIT;
-
 pub mod blackmar_gambit;
 pub use blackmar_gambit::BLACKMAR_GAMBIT;
-
-pub mod fritz_attack;
-pub use fritz_attack::FRITZ_ATTACK;
-
-pub mod netherlands_variation;
-pub use netherlands_variation::NETHERLANDS_VARIATION;
-
-pub mod zeller_defense;
-pub use zeller_defense::ZELLER_DEFENSE;
-
+pub mod lemberger_countergambit;
+pub use lemberger_countergambit::LEMBERGER_COUNTERGAMBIT;
 pub mod von_popiel_gambit;
 pub use von_popiel_gambit::VON_POPIEL_GAMBIT;
+pub mod reversed_albin_countergambit;
+pub use reversed_albin_countergambit::REVERSED_ALBIN_COUNTERGAMBIT;
+pub mod fritz_attack;
+pub use fritz_attack::FRITZ_ATTACK;
+pub mod zeller_defense;
+pub use zeller_defense::ZELLER_DEFENSE;
+pub mod netherlands_variation;
+pub use netherlands_variation::NETHERLANDS_VARIATION;

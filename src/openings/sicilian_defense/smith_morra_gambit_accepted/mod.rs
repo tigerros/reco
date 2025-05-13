@@ -108,48 +108,33 @@ pub const SMITH_MORRA_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod paulsen_formation;
-pub use paulsen_formation::PAULSEN_FORMATION;
-
-pub mod scheveningen_formation;
-pub use scheveningen_formation::SCHEVENINGEN_FORMATION;
-
-pub mod pin_defense;
-pub use pin_defense::PIN_DEFENSE;
-
 pub mod morphy_defense;
 pub use morphy_defense::MORPHY_DEFENSE;
-
-pub mod siberian_variation;
-pub use siberian_variation::SIBERIAN_VARIATION;
-
-pub mod larsen_defense;
-pub use larsen_defense::LARSEN_DEFENSE;
-
 pub mod kan_formation;
 pub use kan_formation::KAN_FORMATION;
-
-pub mod morphy_defense_deferred;
-pub use morphy_defense_deferred::MORPHY_DEFENSE_DEFERRED;
-
-pub mod fianchetto_defense;
-pub use fianchetto_defense::FIANCHETTO_DEFENSE;
-
-pub mod taimanov_formation;
-pub use taimanov_formation::TAIMANOV_FORMATION;
-
-pub mod finegold_defense;
-pub use finegold_defense::FINEGOLD_DEFENSE;
-
-pub mod sozin_formation;
-pub use sozin_formation::SOZIN_FORMATION;
-
-pub mod danish_variation;
-pub use danish_variation::DANISH_VARIATION;
-
-pub mod classical_formation;
-pub use classical_formation::CLASSICAL_FORMATION;
-
 pub mod chicago_defense;
 pub use chicago_defense::CHICAGO_DEFENSE;
+pub mod fianchetto_defense;
+pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod finegold_defense;
+pub use finegold_defense::FINEGOLD_DEFENSE;
+pub mod morphy_defense_deferred;
+pub use morphy_defense_deferred::MORPHY_DEFENSE_DEFERRED;
+pub mod pin_defense;
+pub use pin_defense::PIN_DEFENSE;
+pub mod siberian_variation;
+pub use siberian_variation::SIBERIAN_VARIATION;
+pub mod larsen_defense;
+pub use larsen_defense::LARSEN_DEFENSE;
+pub mod taimanov_formation;
+pub use taimanov_formation::TAIMANOV_FORMATION;
+pub mod danish_variation;
+pub use danish_variation::DANISH_VARIATION;
+pub mod classical_formation;
+pub use classical_formation::CLASSICAL_FORMATION;
+pub mod sozin_formation;
+pub use sozin_formation::SOZIN_FORMATION;
+pub mod paulsen_formation;
+pub use paulsen_formation::PAULSEN_FORMATION;
+pub mod scheveningen_formation;
+pub use scheveningen_formation::SCHEVENINGEN_FORMATION;

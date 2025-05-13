@@ -108,24 +108,17 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod konikowski_gambit;
-pub use konikowski_gambit::KONIKOWSKI_GAMBIT;
-
-pub mod cordel_gambit;
-pub use cordel_gambit::CORDEL_GAMBIT;
-
-pub mod spanish_wing_gambit;
-pub use spanish_wing_gambit::SPANISH_WING_GAMBIT;
-
-pub mod modern_main_line;
-pub use modern_main_line::MODERN_MAIN_LINE;
-
-pub mod central_variation;
-pub use central_variation::CENTRAL_VARIATION;
-
-pub mod charousek_variation;
-pub use charousek_variation::CHAROUSEK_VARIATION;
-
 pub mod zukertort_gambit;
 pub use zukertort_gambit::ZUKERTORT_GAMBIT;
+pub mod cordel_gambit;
+pub use cordel_gambit::CORDEL_GAMBIT;
+pub mod modern_main_line;
+pub use modern_main_line::MODERN_MAIN_LINE;
+pub mod spanish_wing_gambit;
+pub use spanish_wing_gambit::SPANISH_WING_GAMBIT;
+pub mod konikowski_gambit;
+pub use konikowski_gambit::KONIKOWSKI_GAMBIT;
+pub mod central_variation;
+pub use central_variation::CENTRAL_VARIATION;
+pub mod charousek_variation;
+pub use charousek_variation::CHAROUSEK_VARIATION;

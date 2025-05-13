@@ -80,12 +80,9 @@ pub const ANGLO_SCANDINAVIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod schulz_gambit;
-pub use schulz_gambit::SCHULZ_GAMBIT;
-
-pub mod lohn_gambit;
-pub use lohn_gambit::LOHN_GAMBIT;
-
 pub mod malvinas_variation;
 pub use malvinas_variation::MALVINAS_VARIATION;
+pub mod lohn_gambit;
+pub use lohn_gambit::LOHN_GAMBIT;
+pub mod schulz_gambit;
+pub use schulz_gambit::SCHULZ_GAMBIT;

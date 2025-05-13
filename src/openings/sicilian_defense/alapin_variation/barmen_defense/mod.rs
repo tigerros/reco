@@ -108,15 +108,11 @@ pub const BARMEN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod modern_line;
-pub use modern_line::MODERN_LINE;
-
 pub mod endgame_variation;
 pub use endgame_variation::ENDGAME_VARIATION;
-
 pub mod central_exchange;
 pub use central_exchange::CENTRAL_EXCHANGE;
-
 pub mod milner_barry_attack;
 pub use milner_barry_attack::MILNER_BARRY_ATTACK;
+pub mod modern_line;
+pub use modern_line::MODERN_LINE;

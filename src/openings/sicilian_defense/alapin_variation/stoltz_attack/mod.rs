@@ -143,6 +143,5 @@ pub const STOLTZ_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod ivanchuk_line;
 pub use ivanchuk_line::IVANCHUK_LINE;

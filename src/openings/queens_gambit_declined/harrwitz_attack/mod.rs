@@ -542,15 +542,11 @@ pub const HARRWITZ_ATTACK: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-
-pub mod fianchetto_defense;
-pub use fianchetto_defense::FIANCHETTO_DEFENSE;
-
-pub mod two_knights_defense;
-pub use two_knights_defense::TWO_KNIGHTS_DEFENSE;
-
 pub mod orthodox_defense;
 pub use orthodox_defense::ORTHODOX_DEFENSE;
-
+pub mod fianchetto_defense;
+pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod two_knights_defense;
+pub use two_knights_defense::TWO_KNIGHTS_DEFENSE;
 pub mod main_line;
 pub use main_line::MAIN_LINE;

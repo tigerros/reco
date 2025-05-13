@@ -129,6 +129,5 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod icelandic_defense;
 pub use icelandic_defense::ICELANDIC_DEFENSE;

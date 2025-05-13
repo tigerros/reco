@@ -512,12 +512,9 @@ pub const STONEWALL_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
-
-pub mod botvinnik_variation;
-pub use botvinnik_variation::BOTVINNIK_VARIATION;
-
 pub mod chekhover_variation;
 pub use chekhover_variation::CHEKHOVER_VARIATION;
+pub mod botvinnik_variation;
+pub use botvinnik_variation::BOTVINNIK_VARIATION;

@@ -122,12 +122,9 @@ pub const ANDERSSEN_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod goteborg_system;
-pub use goteborg_system::GOTEBORG_SYSTEM;
-
-pub mod collijn_variation;
-pub use collijn_variation::COLLIJN_VARIATION;
-
 pub mod orthodox_attack;
 pub use orthodox_attack::ORTHODOX_ATTACK;
+pub mod collijn_variation;
+pub use collijn_variation::COLLIJN_VARIATION;
+pub mod goteborg_system;
+pub use goteborg_system::GOTEBORG_SYSTEM;

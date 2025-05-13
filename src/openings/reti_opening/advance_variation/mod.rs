@@ -94,6 +94,5 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod michel_gambit;
 pub use michel_gambit::MICHEL_GAMBIT;

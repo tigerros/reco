@@ -137,15 +137,11 @@ pub const SEMI_CLASSICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod hollywood_variation;
-pub use hollywood_variation::HOLLYWOOD_VARIATION;
-
-pub mod queenside_storm_line;
-pub use queenside_storm_line::QUEENSIDE_STORM_LINE;
-
 pub mod benoni_variation;
 pub use benoni_variation::BENONI_VARIATION;
-
+pub mod queenside_storm_line;
+pub use queenside_storm_line::QUEENSIDE_STORM_LINE;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod hollywood_variation;
+pub use hollywood_variation::HOLLYWOOD_VARIATION;

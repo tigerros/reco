@@ -150,6 +150,5 @@ pub const MARSHALL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod chinese_gambit;
 pub use chinese_gambit::CHINESE_GAMBIT;

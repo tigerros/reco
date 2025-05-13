@@ -87,6 +87,5 @@ pub const KREJCIK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod krejcik_gambit;
 pub use krejcik_gambit::KREJCIK_GAMBIT;

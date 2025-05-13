@@ -87,9 +87,7 @@ pub const ACCELERATED_LONDON_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod steinitz_countergambit_accepted;
-pub use steinitz_countergambit_accepted::STEINITZ_COUNTERGAMBIT_ACCEPTED;
-
 pub mod steinitz_countergambit;
 pub use steinitz_countergambit::STEINITZ_COUNTERGAMBIT;
+pub mod steinitz_countergambit_accepted;
+pub use steinitz_countergambit_accepted::STEINITZ_COUNTERGAMBIT_ACCEPTED;

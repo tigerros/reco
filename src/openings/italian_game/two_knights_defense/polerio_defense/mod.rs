@@ -136,21 +136,15 @@ pub const POLERIO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod bogoljubow_variation;
-pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
-
-pub mod yankovich_variation;
-pub use yankovich_variation::YANKOVICH_VARIATION;
-
-pub mod kieseritzky_variation;
-pub use kieseritzky_variation::KIESERITZKY_VARIATION;
-
-pub mod bishop_check_line;
-pub use bishop_check_line::BISHOP_CHECK_LINE;
-
 pub mod goring_variation;
 pub use goring_variation::GORING_VARIATION;
-
 pub mod suhle_defense;
 pub use suhle_defense::SUHLE_DEFENSE;
+pub mod kieseritzky_variation;
+pub use kieseritzky_variation::KIESERITZKY_VARIATION;
+pub mod bishop_check_line;
+pub use bishop_check_line::BISHOP_CHECK_LINE;
+pub mod yankovich_variation;
+pub use yankovich_variation::YANKOVICH_VARIATION;
+pub mod bogoljubow_variation;
+pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;

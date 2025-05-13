@@ -101,27 +101,19 @@ pub const STANLEY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod monster_declined;
-pub use monster_declined::MONSTER_DECLINED;
-
-pub mod alekhine_variation;
-pub use alekhine_variation::ALEKHINE_VARIATION;
-
-pub mod three_knights_variation;
-pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
-
-pub mod eifel_gambit;
-pub use eifel_gambit::EIFEL_GAMBIT;
-
-pub mod meitner_mieses_gambit;
-pub use meitner_mieses_gambit::MEITNER_MIESES_GAMBIT;
-
-pub mod bronstein_gambit;
-pub use bronstein_gambit::BRONSTEIN_GAMBIT;
-
 pub mod reversed_spanish;
 pub use reversed_spanish::REVERSED_SPANISH;
-
+pub mod alekhine_variation;
+pub use alekhine_variation::ALEKHINE_VARIATION;
+pub mod monster_declined;
+pub use monster_declined::MONSTER_DECLINED;
+pub mod eifel_gambit;
+pub use eifel_gambit::EIFEL_GAMBIT;
+pub mod meitner_mieses_gambit;
+pub use meitner_mieses_gambit::MEITNER_MIESES_GAMBIT;
+pub mod bronstein_gambit;
+pub use bronstein_gambit::BRONSTEIN_GAMBIT;
+pub mod three_knights_variation;
+pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
 pub mod frankenstein_dracula_variation;
 pub use frankenstein_dracula_variation::FRANKENSTEIN_DRACULA_VARIATION;

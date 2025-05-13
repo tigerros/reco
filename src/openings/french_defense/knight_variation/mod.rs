@@ -87,6 +87,5 @@ pub const KNIGHT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod franco_hiva_gambit;
 pub use franco_hiva_gambit::FRANCO_HIVA_GAMBIT;

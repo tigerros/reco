@@ -115,6 +115,5 @@ pub const LANC_ARNOLD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod schippler_gambit;
 pub use schippler_gambit::SCHIPPLER_GAMBIT;

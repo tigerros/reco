@@ -190,6 +190,5 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod traditional_system;
 pub use traditional_system::TRADITIONAL_SYSTEM;

@@ -136,6 +136,5 @@ pub const ANDERSSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod cordel_line;
 pub use cordel_line::CORDEL_LINE;

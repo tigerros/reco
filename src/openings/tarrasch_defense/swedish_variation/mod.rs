@@ -150,6 +150,5 @@ pub const SWEDISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod central_break;
 pub use central_break::CENTRAL_BREAK;

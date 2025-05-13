@@ -115,15 +115,11 @@ pub const SCOTCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod oxford_gambit;
 pub use oxford_gambit::OXFORD_GAMBIT;
-
-pub mod belgrade_gambit;
-pub use belgrade_gambit::BELGRADE_GAMBIT;
-
 pub mod krause_gambit;
 pub use krause_gambit::KRAUSE_GAMBIT;
-
 pub mod schmid_defense;
 pub use schmid_defense::SCHMID_DEFENSE;
+pub mod belgrade_gambit;
+pub use belgrade_gambit::BELGRADE_GAMBIT;

@@ -101,24 +101,17 @@ pub const VIENNA_GAMBIT_WITH_MAX_LANGE_DEFENSE: [Opening<'static, &str>; 1] = [O
         },
     },
 }];
-
 pub mod pierce_gambit;
 pub use pierce_gambit::PIERCE_GAMBIT;
-
-pub mod cunningham_defense;
-pub use cunningham_defense::CUNNINGHAM_DEFENSE;
-
-pub mod steinitz_gambit;
-pub use steinitz_gambit::STEINITZ_GAMBIT;
-
-pub mod quelle_gambit;
-pub use quelle_gambit::QUELLE_GAMBIT;
-
-pub mod hamppe_muzio_gambit;
-pub use hamppe_muzio_gambit::HAMPPE_MUZIO_GAMBIT;
-
-pub mod hamppe_allgaier_gambit;
-pub use hamppe_allgaier_gambit::HAMPPE_ALLGAIER_GAMBIT;
-
 pub mod knight_variation;
 pub use knight_variation::KNIGHT_VARIATION;
+pub mod quelle_gambit;
+pub use quelle_gambit::QUELLE_GAMBIT;
+pub mod hamppe_allgaier_gambit;
+pub use hamppe_allgaier_gambit::HAMPPE_ALLGAIER_GAMBIT;
+pub mod steinitz_gambit;
+pub use steinitz_gambit::STEINITZ_GAMBIT;
+pub mod hamppe_muzio_gambit;
+pub use hamppe_muzio_gambit::HAMPPE_MUZIO_GAMBIT;
+pub mod cunningham_defense;
+pub use cunningham_defense::CUNNINGHAM_DEFENSE;

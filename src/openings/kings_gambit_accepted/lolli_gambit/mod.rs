@@ -129,6 +129,5 @@ pub const LOLLI_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod young_variation;
 pub use young_variation::YOUNG_VARIATION;

@@ -108,9 +108,7 @@ pub const MINDENO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod retreat_line;
-pub use retreat_line::RETREAT_LINE;
-
 pub mod exchange_line;
 pub use exchange_line::EXCHANGE_LINE;
+pub mod retreat_line;
+pub use retreat_line::RETREAT_LINE;

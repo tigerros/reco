@@ -155,15 +155,11 @@ pub const ACCELERATED_PANOV_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod open_variation;
-pub use open_variation::OPEN_VARIATION;
-
-pub mod pseudo_scandinavian;
-pub use pseudo_scandinavian::PSEUDO_SCANDINAVIAN;
-
 pub mod van_weersel_attack;
 pub use van_weersel_attack::VAN_WEERSEL_ATTACK;
-
+pub mod open_variation;
+pub use open_variation::OPEN_VARIATION;
+pub mod pseudo_scandinavian;
+pub use pseudo_scandinavian::PSEUDO_SCANDINAVIAN;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;

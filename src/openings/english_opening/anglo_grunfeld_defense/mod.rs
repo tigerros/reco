@@ -94,6 +94,5 @@ pub const ANGLO_GRUNFELD_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod korchnoi_variation;
 pub use korchnoi_variation::KORCHNOI_VARIATION;

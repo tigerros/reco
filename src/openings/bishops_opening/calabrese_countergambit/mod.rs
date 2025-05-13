@@ -94,6 +94,5 @@ pub const CALABRESE_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod jaenisch_variation;
 pub use jaenisch_variation::JAENISCH_VARIATION;

@@ -115,24 +115,17 @@ pub const SCOTCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod kingside_variation;
-pub use kingside_variation::KINGSIDE_VARIATION;
-
-pub mod cochrane_anderssen_variation;
-pub use cochrane_anderssen_variation::COCHRANE_ANDERSSEN_VARIATION;
-
-pub mod london_defense;
-pub use london_defense::LONDON_DEFENSE;
-
-pub mod sarratt_variation;
-pub use sarratt_variation::SARRATT_VARIATION;
-
 pub mod goring_gambit_declined;
 pub use goring_gambit_declined::GORING_GAMBIT_DECLINED;
-
 pub mod dubois_reti_defense;
 pub use dubois_reti_defense::DUBOIS_RETI_DEFENSE;
-
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
+pub mod cochrane_anderssen_variation;
+pub use cochrane_anderssen_variation::COCHRANE_ANDERSSEN_VARIATION;
+pub mod sarratt_variation;
+pub use sarratt_variation::SARRATT_VARIATION;
+pub mod kingside_variation;
+pub use kingside_variation::KINGSIDE_VARIATION;
+pub mod london_defense;
+pub use london_defense::LONDON_DEFENSE;

@@ -151,6 +151,5 @@ pub const ANTI_TARTAKOWER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod petrosian_variation;
 pub use petrosian_variation::PETROSIAN_VARIATION;

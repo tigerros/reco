@@ -281,6 +281,5 @@ pub const BOLESLAVSKY_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod louma_variation;
 pub use louma_variation::LOUMA_VARIATION;

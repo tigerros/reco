@@ -397,6 +397,5 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-
 pub mod paulsen_variation;
 pub use paulsen_variation::PAULSEN_VARIATION;

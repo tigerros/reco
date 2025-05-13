@@ -1520,15 +1520,11 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
         },
     },
 ];
-
-pub mod with_ne4;
-pub use with_ne4::WITH_NE4;
-
-pub mod fischer_variation;
-pub use fischer_variation::FISCHER_VARIATION;
-
-pub mod american_variation;
-pub use american_variation::AMERICAN_VARIATION;
-
 pub mod romanishin_psakhis_variation;
 pub use romanishin_psakhis_variation::ROMANISHIN_PSAKHIS_VARIATION;
+pub mod fischer_variation;
+pub use fischer_variation::FISCHER_VARIATION;
+pub mod american_variation;
+pub use american_variation::AMERICAN_VARIATION;
+pub mod with_ne4;
+pub use with_ne4::WITH_NE4;

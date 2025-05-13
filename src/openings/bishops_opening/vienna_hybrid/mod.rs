@@ -115,9 +115,7 @@ pub const VIENNA_HYBRID: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod hromadka_variation;
 pub use hromadka_variation::HROMADKA_VARIATION;
-
 pub mod spielmann_attack;
 pub use spielmann_attack::SPIELMANN_ATTACK;

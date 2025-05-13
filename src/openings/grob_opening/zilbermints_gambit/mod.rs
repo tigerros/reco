@@ -101,9 +101,7 @@ pub const ZILBERMINTS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod schiller_defense;
 pub use schiller_defense::SCHILLER_DEFENSE;
-
 pub mod zilbermints_hartlaub_gambit;
 pub use zilbermints_hartlaub_gambit::ZILBERMINTS_HARTLAUB_GAMBIT;

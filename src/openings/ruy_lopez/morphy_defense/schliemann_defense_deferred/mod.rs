@@ -122,6 +122,5 @@ pub const SCHLIEMANN_DEFENSE_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod jaenisch_gambit_deferred;
 pub use jaenisch_gambit_deferred::JAENISCH_GAMBIT_DEFERRED;

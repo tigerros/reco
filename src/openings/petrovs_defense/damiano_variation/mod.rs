@@ -108,6 +108,5 @@ pub const DAMIANO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod kholmov_gambit;
 pub use kholmov_gambit::KHOLMOV_GAMBIT;

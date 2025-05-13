@@ -270,18 +270,13 @@ pub const GLIGORIC_SYSTEM: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod bronstein_variation;
-pub use bronstein_variation::BRONSTEIN_VARIATION;
-
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-
 pub mod bernstein_defense;
 pub use bernstein_defense::BERNSTEIN_DEFENSE;
-
-pub mod keres_variation;
-pub use keres_variation::KERES_VARIATION;
-
+pub mod bronstein_variation;
+pub use bronstein_variation::BRONSTEIN_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod smyslov_variation;
 pub use smyslov_variation::SMYSLOV_VARIATION;
+pub mod keres_variation;
+pub use keres_variation::KERES_VARIATION;

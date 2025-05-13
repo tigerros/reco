@@ -150,6 +150,5 @@ pub const WIESBADEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod sharp_line;
 pub use sharp_line::SHARP_LINE;

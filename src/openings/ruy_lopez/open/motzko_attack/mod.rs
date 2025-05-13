@@ -193,6 +193,5 @@ pub const MOTZKO_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod nenarokov_variation;
 pub use nenarokov_variation::NENAROKOV_VARIATION;

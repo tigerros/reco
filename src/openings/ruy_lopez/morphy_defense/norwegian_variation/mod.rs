@@ -136,6 +136,5 @@ pub const NORWEGIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod nightingale_gambit;
 pub use nightingale_gambit::NIGHTINGALE_GAMBIT;

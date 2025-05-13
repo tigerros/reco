@@ -129,9 +129,7 @@ pub const PSEUDO_TARRASCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod primitive_pillsbury_variation;
-pub use primitive_pillsbury_variation::PRIMITIVE_PILLSBURY_VARIATION;
-
 pub mod canal_variation;
 pub use canal_variation::CANAL_VARIATION;
+pub mod primitive_pillsbury_variation;
+pub use primitive_pillsbury_variation::PRIMITIVE_PILLSBURY_VARIATION;

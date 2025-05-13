@@ -152,12 +152,9 @@ pub const ILYIN_ZHENEVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod alatortsev_lisitsyn_line;
 pub use alatortsev_lisitsyn_line::ALATORTSEV_LISITSYN_LINE;
-
-pub mod winter_variation;
-pub use winter_variation::WINTER_VARIATION;
-
 pub mod modern_main_line;
 pub use modern_main_line::MODERN_MAIN_LINE;
+pub mod winter_variation;
+pub use winter_variation::WINTER_VARIATION;

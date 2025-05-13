@@ -115,9 +115,7 @@ pub const ALEKHINE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod abonyi_variation;
 pub use abonyi_variation::ABONYI_VARIATION;
-
 pub mod tartakower_defense;
 pub use tartakower_defense::TARTAKOWER_DEFENSE;

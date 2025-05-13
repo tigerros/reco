@@ -108,12 +108,9 @@ pub const PHILIDOR_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod zukertort_variation;
 pub use zukertort_variation::ZUKERTORT_VARIATION;
-
 pub mod berger_variation;
 pub use berger_variation::BERGER_VARIATION;
-
 pub mod del_rio_attack;
 pub use del_rio_attack::DEL_RIO_ATTACK;

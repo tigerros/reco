@@ -115,9 +115,7 @@ pub const URUSOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod panov_variation;
-pub use panov_variation::PANOV_VARIATION;
-
 pub mod keidansky_gambit;
 pub use keidansky_gambit::KEIDANSKY_GAMBIT;
+pub mod panov_variation;
+pub use panov_variation::PANOV_VARIATION;

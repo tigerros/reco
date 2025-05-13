@@ -115,9 +115,7 @@ pub const LENINGRAD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod benoni_defense;
-pub use benoni_defense::BENONI_DEFENSE;
-
 pub mod averbakh_gambit;
 pub use averbakh_gambit::AVERBAKH_GAMBIT;
+pub mod benoni_defense;
+pub use benoni_defense::BENONI_DEFENSE;

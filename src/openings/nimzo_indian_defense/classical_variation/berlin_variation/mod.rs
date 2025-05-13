@@ -122,12 +122,9 @@ pub const BERLIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod steiner_variation;
-pub use steiner_variation::STEINER_VARIATION;
-
 pub mod pirc_variation;
 pub use pirc_variation::PIRC_VARIATION;
-
+pub mod steiner_variation;
+pub use steiner_variation::STEINER_VARIATION;
 pub mod macieja_system;
 pub use macieja_system::MACIEJA_SYSTEM;

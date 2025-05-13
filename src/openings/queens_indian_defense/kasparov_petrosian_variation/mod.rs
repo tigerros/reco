@@ -129,36 +129,25 @@ pub const KASPAROV_PETROSIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod kasparov_attack;
 pub use kasparov_attack::KASPAROV_ATTACK;
-
 pub mod petrosian_attack;
 pub use petrosian_attack::PETROSIAN_ATTACK;
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-
-pub mod hedgehog_variation;
-pub use hedgehog_variation::HEDGEHOG_VARIATION;
-
-pub mod romanishin_attack;
-pub use romanishin_attack::ROMANISHIN_ATTACK;
-
-pub mod marco_defense;
-pub use marco_defense::MARCO_DEFENSE;
-
 pub mod rashkovsky_attack;
 pub use rashkovsky_attack::RASHKOVSKY_ATTACK;
-
-pub mod andersson_variation;
-pub use andersson_variation::ANDERSSON_VARIATION;
-
-pub mod polovodin_gambit;
-pub use polovodin_gambit::POLOVODIN_GAMBIT;
-
+pub mod romanishin_attack;
+pub use romanishin_attack::ROMANISHIN_ATTACK;
+pub mod marco_defense;
+pub use marco_defense::MARCO_DEFENSE;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
+pub mod polovodin_gambit;
+pub use polovodin_gambit::POLOVODIN_GAMBIT;
+pub mod hedgehog_variation;
+pub use hedgehog_variation::HEDGEHOG_VARIATION;
+pub mod andersson_variation;
+pub use andersson_variation::ANDERSSON_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;

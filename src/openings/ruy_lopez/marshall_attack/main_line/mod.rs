@@ -215,6 +215,5 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod spassky_variation;
 pub use spassky_variation::SPASSKY_VARIATION;

@@ -144,6 +144,5 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod burgess_line;
 pub use burgess_line::BURGESS_LINE;

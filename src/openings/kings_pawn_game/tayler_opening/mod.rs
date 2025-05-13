@@ -190,9 +190,7 @@ pub const TAYLER_OPENING: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod basman_gambit;
 pub use basman_gambit::BASMAN_GAMBIT;
-
 pub mod inverted_hanham;
 pub use inverted_hanham::INVERTED_HANHAM;

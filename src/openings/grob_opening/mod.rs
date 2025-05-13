@@ -71,30 +71,22 @@ pub const GROB_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod grob_gambit;
-pub use grob_gambit::GROB_GAMBIT;
-
-pub mod london_defense;
-pub use london_defense::LONDON_DEFENSE;
-
-pub mod alessi_gambit;
-pub use alessi_gambit::ALESSI_GAMBIT;
-
 pub mod spike_attack;
 pub use spike_attack::SPIKE_ATTACK;
-
 pub mod keene_defense;
 pub use keene_defense::KEENE_DEFENSE;
-
-pub mod double_grob;
-pub use double_grob::DOUBLE_GROB;
-
-pub mod zilbermints_gambit;
-pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
-
-pub mod grob_gambit_declined;
-pub use grob_gambit_declined::GROB_GAMBIT_DECLINED;
-
+pub mod grob_gambit;
+pub mod spike;
+pub use grob_gambit::GROB_GAMBIT;
 pub mod romford_countergambit;
 pub use romford_countergambit::ROMFORD_COUNTERGAMBIT;
+pub mod grob_gambit_declined;
+pub use grob_gambit_declined::GROB_GAMBIT_DECLINED;
+pub mod london_defense;
+pub use london_defense::LONDON_DEFENSE;
+pub mod zilbermints_gambit;
+pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
+pub mod alessi_gambit;
+pub use alessi_gambit::ALESSI_GAMBIT;
+pub mod double_grob;
+pub use double_grob::DOUBLE_GROB;

@@ -1112,9 +1112,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
         },
     },
 ];
-
-pub mod siesta_variation;
-pub use siesta_variation::SIESTA_VARIATION;
-
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod siesta_variation;
+pub use siesta_variation::SIESTA_VARIATION;

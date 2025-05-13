@@ -115,6 +115,5 @@ pub const VON_POPIEL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod zilbermints_variation;
 pub use zilbermints_variation::ZILBERMINTS_VARIATION;

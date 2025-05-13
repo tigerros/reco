@@ -129,6 +129,5 @@ pub const BELGRADE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod modern_defense;
 pub use modern_defense::MODERN_DEFENSE;

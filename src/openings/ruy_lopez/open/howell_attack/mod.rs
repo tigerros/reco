@@ -346,6 +346,5 @@ pub const HOWELL_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod ekstrom_variation;
 pub use ekstrom_variation::EKSTROM_VARIATION;

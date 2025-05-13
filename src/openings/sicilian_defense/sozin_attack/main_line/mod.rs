@@ -157,6 +157,5 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod sherbakov_variation;
 pub use sherbakov_variation::SHERBAKOV_VARIATION;

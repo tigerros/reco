@@ -87,6 +87,5 @@ pub const KREJCIK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod tate_gambit;
 pub use tate_gambit::TATE_GAMBIT;

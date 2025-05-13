@@ -662,96 +662,66 @@ pub const CLOSED: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-
-pub mod lutikov_variation;
-pub use lutikov_variation::LUTIKOV_VARIATION;
-
-pub mod pilnik_variation;
-pub use pilnik_variation::PILNIK_VARIATION;
-
-pub mod kecskemet_variation;
-pub use kecskemet_variation::KECSKEMET_VARIATION;
-
-pub mod kholmov_variation;
-pub use kholmov_variation::KHOLMOV_VARIATION;
-
-pub mod karpov_variation;
-pub use karpov_variation::KARPOV_VARIATION;
-
 pub mod leonhardt_variation;
 pub use leonhardt_variation::LEONHARDT_VARIATION;
-
-pub mod borisenko_variation;
-pub use borisenko_variation::BORISENKO_VARIATION;
-
-pub mod balla_variation;
-pub use balla_variation::BALLA_VARIATION;
-
-pub mod yates_variation;
-pub use yates_variation::YATES_VARIATION;
-
-pub mod keres_defense;
-pub use keres_defense::KERES_DEFENSE;
-
-pub mod bogoljubow_variation;
-pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
-
-pub mod basque_gambit;
-pub use basque_gambit::BASQUE_GAMBIT;
-
-pub mod martinez_variation;
-pub use martinez_variation::MARTINEZ_VARIATION;
-
-pub mod zaitsev_system;
-pub use zaitsev_system::ZAITSEV_SYSTEM;
-
-pub mod smyslov_defense;
-pub use smyslov_defense::SMYSLOV_DEFENSE;
-
-pub mod worrall_attack;
-pub use worrall_attack::WORRALL_ATTACK;
-
 pub mod anti_marshall;
 pub use anti_marshall::ANTI_MARSHALL;
-
-pub mod breyer;
-pub use breyer::BREYER;
-
-pub mod trajkovic_counterattack;
-pub use trajkovic_counterattack::TRAJKOVIC_COUNTERATTACK;
-
-pub mod delayed_exchange;
-pub use delayed_exchange::DELAYED_EXCHANGE;
-
-pub mod suetin_variation;
-pub use suetin_variation::SUETIN_VARIATION;
-
-pub mod averbakh_variation;
-pub use averbakh_variation::AVERBAKH_VARIATION;
-
-pub mod rossolimo_defense;
-pub use rossolimo_defense::ROSSOLIMO_DEFENSE;
-
-pub mod alekhine_gambit;
-pub use alekhine_gambit::ALEKHINE_GAMBIT;
-
-pub mod chigorin_defense;
-pub use chigorin_defense::CHIGORIN_DEFENSE;
-
-pub mod smyslov_breyer_zaitsev_hybrid;
-pub use smyslov_breyer_zaitsev_hybrid::SMYSLOV_BREYER_ZAITSEV_HYBRID;
-
-pub mod rosen_attack;
-pub use rosen_attack::ROSEN_ATTACK;
-
+pub mod balla_variation;
+pub use balla_variation::BALLA_VARIATION;
+pub mod keres_defense;
+pub use keres_defense::KERES_DEFENSE;
+pub mod basque_gambit;
+pub use basque_gambit::BASQUE_GAMBIT;
 pub mod flohr_system;
 pub use flohr_system::FLOHR_SYSTEM;
-
-pub mod center_attack;
-pub use center_attack::CENTER_ATTACK;
-
-pub mod breyer_defense;
-pub use breyer_defense::BREYER_DEFENSE;
-
+pub mod suetin_variation;
+pub use suetin_variation::SUETIN_VARIATION;
+pub mod yates_variation;
+pub use yates_variation::YATES_VARIATION;
+pub mod breyer;
+pub use breyer::BREYER;
+pub mod martinez_variation;
+pub use martinez_variation::MARTINEZ_VARIATION;
+pub mod bogoljubow_variation;
+pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
+pub mod zaitsev_system;
+pub use zaitsev_system::ZAITSEV_SYSTEM;
+pub mod alekhine_gambit;
+pub use alekhine_gambit::ALEKHINE_GAMBIT;
+pub mod pilnik_variation;
+pub use pilnik_variation::PILNIK_VARIATION;
+pub mod averbakh_variation;
+pub use averbakh_variation::AVERBAKH_VARIATION;
+pub mod worrall_attack;
+pub use worrall_attack::WORRALL_ATTACK;
+pub mod rossolimo_defense;
+pub use rossolimo_defense::ROSSOLIMO_DEFENSE;
+pub mod smyslov_defense;
+pub use smyslov_defense::SMYSLOV_DEFENSE;
+pub mod karpov_variation;
+pub use karpov_variation::KARPOV_VARIATION;
+pub mod delayed_exchange;
+pub use delayed_exchange::DELAYED_EXCHANGE;
 pub mod morphy_attack;
 pub use morphy_attack::MORPHY_ATTACK;
+pub mod breyer_defense;
+pub use breyer_defense::BREYER_DEFENSE;
+pub mod kecskemet_variation;
+pub use kecskemet_variation::KECSKEMET_VARIATION;
+pub mod chigorin;
+pub mod smyslov_breyer_zaitsev_hybrid;
+pub use smyslov_breyer_zaitsev_hybrid::SMYSLOV_BREYER_ZAITSEV_HYBRID;
+pub mod chigorin_defense;
+pub use chigorin_defense::CHIGORIN_DEFENSE;
+pub mod kholmov_variation;
+pub use kholmov_variation::KHOLMOV_VARIATION;
+pub mod lutikov_variation;
+pub use lutikov_variation::LUTIKOV_VARIATION;
+pub mod center_attack;
+pub use center_attack::CENTER_ATTACK;
+pub mod trajkovic_counterattack;
+pub use trajkovic_counterattack::TRAJKOVIC_COUNTERATTACK;
+pub mod borisenko_variation;
+pub use borisenko_variation::BORISENKO_VARIATION;
+pub mod rosen_attack;
+pub use rosen_attack::ROSEN_ATTACK;

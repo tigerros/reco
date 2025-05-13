@@ -173,9 +173,7 @@ pub const BAYONET_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod sokolovs_line;
 pub use sokolovs_line::SOKOLOVS_LINE;
-
 pub mod yepishins_line;
 pub use yepishins_line::YEPISHINS_LINE;

@@ -80,24 +80,17 @@ pub const OWEN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod wind_gambit;
-pub use wind_gambit::WIND_GAMBIT;
-
-pub mod guatemala_defense;
-pub use guatemala_defense::GUATEMALA_DEFENSE;
-
-pub mod smith_gambit;
-pub use smith_gambit::SMITH_GAMBIT;
-
-pub mod unicorn_variation;
-pub use unicorn_variation::UNICORN_VARIATION;
-
-pub mod naselwaus_gambit;
-pub use naselwaus_gambit::NASELWAUS_GAMBIT;
-
-pub mod hekili_loa_gambit;
-pub use hekili_loa_gambit::HEKILI_LOA_GAMBIT;
-
 pub mod matovinsky_gambit;
 pub use matovinsky_gambit::MATOVINSKY_GAMBIT;
+pub mod guatemala_defense;
+pub use guatemala_defense::GUATEMALA_DEFENSE;
+pub mod wind_gambit;
+pub use wind_gambit::WIND_GAMBIT;
+pub mod unicorn_variation;
+pub use unicorn_variation::UNICORN_VARIATION;
+pub mod hekili_loa_gambit;
+pub use hekili_loa_gambit::HEKILI_LOA_GAMBIT;
+pub mod smith_gambit;
+pub use smith_gambit::SMITH_GAMBIT;
+pub mod naselwaus_gambit;
+pub use naselwaus_gambit::NASELWAUS_GAMBIT;

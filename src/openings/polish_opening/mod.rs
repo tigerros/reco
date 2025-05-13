@@ -71,66 +71,45 @@ pub const POLISH_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod schuehler_gambit;
 pub use schuehler_gambit::SCHUEHLER_GAMBIT;
-
-pub mod birmingham_gambit;
-pub use birmingham_gambit::BIRMINGHAM_GAMBIT;
-
-pub mod dutch_defense;
-pub use dutch_defense::DUTCH_DEFENSE;
-
-pub mod wolferts_gambit;
-pub use wolferts_gambit::WOLFERTS_GAMBIT;
-
-pub mod queenside_defense;
-pub use queenside_defense::QUEENSIDE_DEFENSE;
-
-pub mod outflank_variation;
-pub use outflank_variation::OUTFLANK_VARIATION;
-
-pub mod baltic_defense;
-pub use baltic_defense::BALTIC_DEFENSE;
-
 pub mod bugayev_attack;
 pub use bugayev_attack::BUGAYEV_ATTACK;
-
 pub mod schiffler_sokolsky_variation;
 pub use schiffler_sokolsky_variation::SCHIFFLER_SOKOLSKY_VARIATION;
-
-pub mod zukertort_system;
-pub use zukertort_system::ZUKERTORT_SYSTEM;
-
-pub mod karniewski_variation;
-pub use karniewski_variation::KARNIEWSKI_VARIATION;
-
-pub mod myers_variation;
-pub use myers_variation::MYERS_VARIATION;
-
-pub mod czech_defense;
-pub use czech_defense::CZECH_DEFENSE;
-
-pub mod tartakower_gambit;
-pub use tartakower_gambit::TARTAKOWER_GAMBIT;
-
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
-
+pub mod baltic_defense;
+pub use baltic_defense::BALTIC_DEFENSE;
 pub mod german_defense;
 pub use german_defense::GERMAN_DEFENSE;
-
-pub mod kings_indian_variation;
-pub use kings_indian_variation::KINGS_INDIAN_VARIATION;
-
-pub mod grigorian_variation;
-pub use grigorian_variation::GRIGORIAN_VARIATION;
-
-pub mod bugayev_advance_variation;
-pub use bugayev_advance_variation::BUGAYEV_ADVANCE_VARIATION;
-
-pub mod rooks_swap_line;
-pub use rooks_swap_line::ROOKS_SWAP_LINE;
-
+pub mod wolferts_gambit;
+pub use wolferts_gambit::WOLFERTS_GAMBIT;
+pub mod karniewski_variation;
+pub use karniewski_variation::KARNIEWSKI_VARIATION;
+pub mod outflank_variation;
+pub use outflank_variation::OUTFLANK_VARIATION;
+pub mod dutch_defense;
+pub use dutch_defense::DUTCH_DEFENSE;
+pub mod zukertort_system;
+pub use zukertort_system::ZUKERTORT_SYSTEM;
+pub mod queenside_defense;
+pub use queenside_defense::QUEENSIDE_DEFENSE;
 pub mod queens_indian_variation;
 pub use queens_indian_variation::QUEENS_INDIAN_VARIATION;
+pub mod kings_indian_variation;
+pub use kings_indian_variation::KINGS_INDIAN_VARIATION;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
+pub mod tartakower_gambit;
+pub use tartakower_gambit::TARTAKOWER_GAMBIT;
+pub mod bugayev_advance_variation;
+pub use bugayev_advance_variation::BUGAYEV_ADVANCE_VARIATION;
+pub mod rooks_swap_line;
+pub use rooks_swap_line::ROOKS_SWAP_LINE;
+pub mod myers_variation;
+pub use myers_variation::MYERS_VARIATION;
+pub mod grigorian_variation;
+pub use grigorian_variation::GRIGORIAN_VARIATION;
+pub mod czech_defense;
+pub use czech_defense::CZECH_DEFENSE;
+pub mod birmingham_gambit;
+pub use birmingham_gambit::BIRMINGHAM_GAMBIT;

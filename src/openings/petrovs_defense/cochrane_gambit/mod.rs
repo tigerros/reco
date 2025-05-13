@@ -115,9 +115,7 @@ pub const COCHRANE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod bishop_check_line;
 pub use bishop_check_line::BISHOP_CHECK_LINE;
-
 pub mod center_variation;
 pub use center_variation::CENTER_VARIATION;

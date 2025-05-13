@@ -108,9 +108,7 @@ pub const FISCHER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod schulder_gambit;
 pub use schulder_gambit::SCHULDER_GAMBIT;
-
 pub mod spanish_variation;
 pub use spanish_variation::SPANISH_VARIATION;

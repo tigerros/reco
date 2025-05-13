@@ -101,6 +101,5 @@ pub const MORPHY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod andreaschek_gambit;
 pub use andreaschek_gambit::ANDREASCHEK_GAMBIT;

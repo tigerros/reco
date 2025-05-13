@@ -108,12 +108,9 @@ pub const EL_COLUMPIO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
-
-pub mod el_columpio_gambit;
-pub use el_columpio_gambit::EL_COLUMPIO_GAMBIT;
-
 pub mod pin_variation;
 pub use pin_variation::PIN_VARIATION;
+pub mod el_columpio_gambit;
+pub use el_columpio_gambit::EL_COLUMPIO_GAMBIT;

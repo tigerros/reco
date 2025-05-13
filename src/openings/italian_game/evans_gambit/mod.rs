@@ -391,105 +391,71 @@ pub const EVANS_GAMBIT: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-
-pub mod fontaine_countergambit;
-pub use fontaine_countergambit::FONTAINE_COUNTERGAMBIT;
-
-pub mod bronstein_defense;
-pub use bronstein_defense::BRONSTEIN_DEFENSE;
-
-pub mod mc_donnell_defense;
-pub use mc_donnell_defense::MC_DONNELL_DEFENSE;
-
-pub mod johner_defense;
-pub use johner_defense::JOHNER_DEFENSE;
-
-pub mod levenfish_variation;
-pub use levenfish_variation::LEVENFISH_VARIATION;
-
-pub mod richardson_attack;
-pub use richardson_attack::RICHARDSON_ATTACK;
-
-pub mod waller_attack;
-pub use waller_attack::WALLER_ATTACK;
-
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-
-pub mod tartakower_attack;
-pub use tartakower_attack::TARTAKOWER_ATTACK;
-
-pub mod compromised_defense;
-pub use compromised_defense::COMPROMISED_DEFENSE;
-
-pub mod stone_ware_variation;
-pub use stone_ware_variation::STONE_WARE_VARIATION;
-
-pub mod slow_variation;
-pub use slow_variation::SLOW_VARIATION;
-
-pub mod harding_variation;
-pub use harding_variation::HARDING_VARIATION;
-
-pub mod lasker_defense;
-pub use lasker_defense::LASKER_DEFENSE;
-
-pub mod leonhardt_countergambit;
-pub use leonhardt_countergambit::LEONHARDT_COUNTERGAMBIT;
-
-pub mod pierce_defense;
-pub use pierce_defense::PIERCE_DEFENSE;
-
-pub mod mortimer_evans_gambit;
-pub use mortimer_evans_gambit::MORTIMER_EVANS_GAMBIT;
-
-pub mod sanders_alapin_variation;
-pub use sanders_alapin_variation::SANDERS_ALAPIN_VARIATION;
-
-pub mod mayet_defense;
-pub use mayet_defense::MAYET_DEFENSE;
-
-pub mod anderssen_variation;
-pub use anderssen_variation::ANDERSSEN_VARIATION;
-
-pub mod alapin_steinitz_variation;
-pub use alapin_steinitz_variation::ALAPIN_STEINITZ_VARIATION;
-
-pub mod fraser_attack;
-pub use fraser_attack::FRASER_ATTACK;
-
-pub mod ulvestad_variation;
-pub use ulvestad_variation::ULVESTAD_VARIATION;
-
-pub mod dufresne_defense;
-pub use dufresne_defense::DUFRESNE_DEFENSE;
-
-pub mod sokolsky_variation;
-pub use sokolsky_variation::SOKOLSKY_VARIATION;
-
-pub mod paulsen_variation;
-pub use paulsen_variation::PAULSEN_VARIATION;
-
-pub mod laroche_variation;
-pub use laroche_variation::LAROCHE_VARIATION;
-
-pub mod hein_countergambit;
-pub use hein_countergambit::HEIN_COUNTERGAMBIT;
-
 pub mod anderssen_defense;
 pub use anderssen_defense::ANDERSSEN_DEFENSE;
-
+pub mod paulsen_variation;
+pub use paulsen_variation::PAULSEN_VARIATION;
 pub mod fraser_mortimer_attack;
 pub use fraser_mortimer_attack::FRASER_MORTIMER_ATTACK;
-
+pub mod tartakower_attack;
+pub use tartakower_attack::TARTAKOWER_ATTACK;
+pub mod leonhardt_countergambit;
+pub use leonhardt_countergambit::LEONHARDT_COUNTERGAMBIT;
+pub mod mayet_defense;
+pub use mayet_defense::MAYET_DEFENSE;
+pub mod slow_variation;
+pub use slow_variation::SLOW_VARIATION;
+pub mod waller_attack;
+pub use waller_attack::WALLER_ATTACK;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod alapin_steinitz_variation;
+pub use alapin_steinitz_variation::ALAPIN_STEINITZ_VARIATION;
+pub mod levenfish_variation;
+pub use levenfish_variation::LEVENFISH_VARIATION;
 pub mod goring_attack;
 pub use goring_attack::GORING_ATTACK;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-
+pub mod bronstein_defense;
+pub use bronstein_defense::BRONSTEIN_DEFENSE;
+pub mod lasker_defense;
+pub use lasker_defense::LASKER_DEFENSE;
 pub mod morphy_attack;
 pub use morphy_attack::MORPHY_ATTACK;
-
+pub mod mc_donnell_defense;
+pub use mc_donnell_defense::MC_DONNELL_DEFENSE;
+pub mod laroche_variation;
+pub use laroche_variation::LAROCHE_VARIATION;
+pub mod ulvestad_variation;
+pub use ulvestad_variation::ULVESTAD_VARIATION;
+pub mod sokolsky_variation;
+pub use sokolsky_variation::SOKOLSKY_VARIATION;
+pub mod hein_countergambit;
+pub use hein_countergambit::HEIN_COUNTERGAMBIT;
+pub mod johner_defense;
+pub use johner_defense::JOHNER_DEFENSE;
+pub mod stone_ware_variation;
+pub use stone_ware_variation::STONE_WARE_VARIATION;
+pub mod harding_variation;
+pub use harding_variation::HARDING_VARIATION;
+pub mod compromised_defense;
+pub use compromised_defense::COMPROMISED_DEFENSE;
+pub mod fraser_attack;
+pub use fraser_attack::FRASER_ATTACK;
+pub mod pierce_defense;
+pub use pierce_defense::PIERCE_DEFENSE;
+pub mod sanders_alapin_variation;
+pub use sanders_alapin_variation::SANDERS_ALAPIN_VARIATION;
+pub mod richardson_attack;
+pub use richardson_attack::RICHARDSON_ATTACK;
+pub mod anderssen_variation;
+pub use anderssen_variation::ANDERSSEN_VARIATION;
+pub mod dufresne_defense;
+pub use dufresne_defense::DUFRESNE_DEFENSE;
+pub mod mortimer_evans_gambit;
+pub use mortimer_evans_gambit::MORTIMER_EVANS_GAMBIT;
 pub mod mieses_defense;
 pub use mieses_defense::MIESES_DEFENSE;
+pub mod fontaine_countergambit;
+pub use fontaine_countergambit::FONTAINE_COUNTERGAMBIT;

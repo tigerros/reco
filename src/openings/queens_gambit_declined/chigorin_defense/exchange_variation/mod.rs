@@ -108,6 +108,5 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod costas_line;
 pub use costas_line::COSTAS_LINE;

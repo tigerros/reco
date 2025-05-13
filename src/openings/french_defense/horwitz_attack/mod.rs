@@ -87,6 +87,5 @@ pub const HORWITZ_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod papa_ticulat_gambit;
 pub use papa_ticulat_gambit::PAPA_TICULAT_GAMBIT;

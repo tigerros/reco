@@ -94,9 +94,7 @@ pub const KINGS_INDIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod schiffler_attack;
-pub use schiffler_attack::SCHIFFLER_ATTACK;
-
 pub mod sokolsky_attack;
 pub use sokolsky_attack::SOKOLSKY_ATTACK;
+pub mod schiffler_attack;
+pub use schiffler_attack::SCHIFFLER_ATTACK;

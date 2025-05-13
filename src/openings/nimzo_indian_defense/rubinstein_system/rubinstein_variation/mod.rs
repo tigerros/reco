@@ -129,9 +129,7 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod sherbakov_attack;
 pub use sherbakov_attack::SHERBAKOV_ATTACK;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;

@@ -108,27 +108,19 @@ pub const SCHLIEMANN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-
 pub mod jaenisch_gambit_accepted;
 pub use jaenisch_gambit_accepted::JAENISCH_GAMBIT_ACCEPTED;
-
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-
-pub mod mohring_variation;
-pub use mohring_variation::MOHRING_VARIATION;
-
-pub mod dyckhoff_variation;
-pub use dyckhoff_variation::DYCKHOFF_VARIATION;
-
-pub mod tartakower_variation;
-pub use tartakower_variation::TARTAKOWER_VARIATION;
-
-pub mod schonemann_attack;
-pub use schonemann_attack::SCHONEMANN_ATTACK;
-
 pub mod kostic_defense;
 pub use kostic_defense::KOSTIC_DEFENSE;
+pub mod tartakower_variation;
+pub use tartakower_variation::TARTAKOWER_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod dyckhoff_variation;
+pub use dyckhoff_variation::DYCKHOFF_VARIATION;
+pub mod mohring_variation;
+pub use mohring_variation::MOHRING_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod schonemann_attack;
+pub use schonemann_attack::SCHONEMANN_ATTACK;

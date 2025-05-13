@@ -267,6 +267,5 @@ pub const BRENTANO_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod caro_variation;
 pub use caro_variation::CARO_VARIATION;

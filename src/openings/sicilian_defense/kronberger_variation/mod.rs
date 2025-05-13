@@ -87,6 +87,5 @@ pub const KRONBERGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod nemeth_gambit;
 pub use nemeth_gambit::NEMETH_GAMBIT;

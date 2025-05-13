@@ -71,63 +71,43 @@ pub const BIRD_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod lasker_gambit;
-pub use lasker_gambit::LASKER_GAMBIT;
-
-pub mod platz_gambit;
-pub use platz_gambit::PLATZ_GAMBIT;
-
 pub mod horsefly_defense;
 pub use horsefly_defense::HORSEFLY_DEFENSE;
-
-pub mod mujannah;
-pub use mujannah::MUJANNAH;
-
-pub mod swiss_gambit;
-pub use swiss_gambit::SWISS_GAMBIT;
-
-pub mod hobbs_gambit;
-pub use hobbs_gambit::HOBBS_GAMBIT;
-
-pub mod sturm_gambit;
-pub use sturm_gambit::STURM_GAMBIT;
-
-pub mod myers_defense;
-pub use myers_defense::MYERS_DEFENSE;
-
-pub mod lasker_variation;
-pub use lasker_variation::LASKER_VARIATION;
-
-pub mod williams_zilbermints_gambit;
-pub use williams_zilbermints_gambit::WILLIAMS_ZILBERMINTS_GAMBIT;
-
-pub mod wagner_zwitersch_gambit;
-pub use wagner_zwitersch_gambit::WAGNER_ZWITERSCH_GAMBIT;
-
 pub mod schlechter_gambit;
 pub use schlechter_gambit::SCHLECHTER_GAMBIT;
-
 pub mod williams_gambit;
 pub use williams_gambit::WILLIAMS_GAMBIT;
-
-pub mod hobbs_zilbermints_gambit;
-pub use hobbs_zilbermints_gambit::HOBBS_ZILBERMINTS_GAMBIT;
-
+pub mod sturm_gambit;
+pub use sturm_gambit::STURM_GAMBIT;
+pub mod mujannah;
+pub use mujannah::MUJANNAH;
 pub mod batavo_polish_attack;
 pub use batavo_polish_attack::BATAVO_POLISH_ATTACK;
-
+pub mod lasker_gambit;
+pub use lasker_gambit::LASKER_GAMBIT;
 pub mod siegener_gambit;
 pub use siegener_gambit::SIEGENER_GAMBIT;
-
-pub mod double_duck_formation;
-pub use double_duck_formation::DOUBLE_DUCK_FORMATION;
-
+pub mod wagner_zwitersch_gambit;
+pub use wagner_zwitersch_gambit::WAGNER_ZWITERSCH_GAMBIT;
 pub mod froms_gambit;
 pub use froms_gambit::FROMS_GAMBIT;
-
-pub mod dutch_variation;
-pub use dutch_variation::DUTCH_VARIATION;
-
+pub mod double_duck_formation;
+pub use double_duck_formation::DOUBLE_DUCK_FORMATION;
+pub mod myers_defense;
+pub use myers_defense::MYERS_DEFENSE;
 pub mod thomas_gambit;
 pub use thomas_gambit::THOMAS_GAMBIT;
+pub mod swiss_gambit;
+pub use swiss_gambit::SWISS_GAMBIT;
+pub mod hobbs_gambit;
+pub use hobbs_gambit::HOBBS_GAMBIT;
+pub mod platz_gambit;
+pub use platz_gambit::PLATZ_GAMBIT;
+pub mod lasker_variation;
+pub use lasker_variation::LASKER_VARIATION;
+pub mod dutch_variation;
+pub use dutch_variation::DUTCH_VARIATION;
+pub mod williams_zilbermints_gambit;
+pub use williams_zilbermints_gambit::WILLIAMS_ZILBERMINTS_GAMBIT;
+pub mod hobbs_zilbermints_gambit;
+pub use hobbs_zilbermints_gambit::HOBBS_ZILBERMINTS_GAMBIT;

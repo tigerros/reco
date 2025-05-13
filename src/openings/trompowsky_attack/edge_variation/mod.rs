@@ -101,6 +101,5 @@ pub const EDGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod hergert_gambit;
 pub use hergert_gambit::HERGERT_GAMBIT;

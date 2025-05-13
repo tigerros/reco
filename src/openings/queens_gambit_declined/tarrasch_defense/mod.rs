@@ -122,12 +122,9 @@ pub const TARRASCH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod pseudo_tarrasch_bishop_attack;
-pub use pseudo_tarrasch_bishop_attack::PSEUDO_TARRASCH_BISHOP_ATTACK;
-
-pub mod pseudo_tarrasch;
-pub use pseudo_tarrasch::PSEUDO_TARRASCH;
-
 pub mod stoltz_variation;
 pub use stoltz_variation::STOLTZ_VARIATION;
+pub mod pseudo_tarrasch;
+pub use pseudo_tarrasch::PSEUDO_TARRASCH;
+pub mod pseudo_tarrasch_bishop_attack;
+pub use pseudo_tarrasch_bishop_attack::PSEUDO_TARRASCH_BISHOP_ATTACK;

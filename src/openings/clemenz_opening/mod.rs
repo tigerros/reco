@@ -71,6 +71,5 @@ pub const CLEMENZ_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod spike_lee_gambit;
 pub use spike_lee_gambit::SPIKE_LEE_GAMBIT;

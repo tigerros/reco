@@ -547,12 +547,9 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-
-pub mod tarrasch_variation;
-pub use tarrasch_variation::TARRASCH_VARIATION;
-
 pub mod blake_variation;
 pub use blake_variation::BLAKE_VARIATION;
-
+pub mod tarrasch_variation;
+pub use tarrasch_variation::TARRASCH_VARIATION;
 pub mod metger_unpin;
 pub use metger_unpin::METGER_UNPIN;

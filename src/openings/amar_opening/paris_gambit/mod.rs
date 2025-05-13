@@ -101,6 +101,5 @@ pub const PARIS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod gent_gambit;
 pub use gent_gambit::GENT_GAMBIT;

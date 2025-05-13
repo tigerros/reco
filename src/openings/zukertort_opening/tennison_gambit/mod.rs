@@ -87,6 +87,5 @@ pub const TENNISON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod briggs_trap;
 pub use briggs_trap::BRIGGS_TRAP;

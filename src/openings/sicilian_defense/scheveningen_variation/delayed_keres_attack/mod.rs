@@ -157,6 +157,5 @@ pub const DELAYED_KERES_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod perenyi_gambit;
 pub use perenyi_gambit::PERENYI_GAMBIT;

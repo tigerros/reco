@@ -288,9 +288,7 @@ pub const OPOCENSKY_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod modern_line;
 pub use modern_line::MODERN_LINE;
-
 pub mod traditional_line;
 pub use traditional_line::TRADITIONAL_LINE;

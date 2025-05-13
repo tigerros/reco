@@ -157,6 +157,5 @@ pub const CENTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod mikhalchishin_line;
 pub use mikhalchishin_line::MIKHALCHISHIN_LINE;

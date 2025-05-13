@@ -122,6 +122,5 @@ pub const SUTTLES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod tal_gambit;
 pub use tal_gambit::TAL_GAMBIT;

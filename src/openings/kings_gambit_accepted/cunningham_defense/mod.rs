@@ -108,9 +108,7 @@ pub const CUNNINGHAM_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod bertin_gambit;
-pub use bertin_gambit::BERTIN_GAMBIT;
-
 pub mod mc_cormick_defense;
 pub use mc_cormick_defense::MC_CORMICK_DEFENSE;
+pub mod bertin_gambit;
+pub use bertin_gambit::BERTIN_GAMBIT;

@@ -87,9 +87,7 @@ pub const KINGS_PAWN_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod speers;
 pub use speers::SPEERS;
-
 pub mod van_hooydoon_gambit;
 pub use van_hooydoon_gambit::VAN_HOOYDOON_GAMBIT;

@@ -101,18 +101,13 @@ pub const MOSCOW_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod moscow_gambit;
 pub use moscow_gambit::MOSCOW_GAMBIT;
-
-pub mod sokolsky_variation;
-pub use sokolsky_variation::SOKOLSKY_VARIATION;
-
-pub mod haag_gambit;
-pub use haag_gambit::HAAG_GAMBIT;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-
+pub mod sokolsky_variation;
+pub use sokolsky_variation::SOKOLSKY_VARIATION;
+pub mod haag_gambit;
+pub use haag_gambit::HAAG_GAMBIT;
 pub mod dorfman_gambit;
 pub use dorfman_gambit::DORFMAN_GAMBIT;

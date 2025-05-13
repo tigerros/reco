@@ -87,27 +87,19 @@ pub const WING_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod nanu_gambit;
-pub use nanu_gambit::NANU_GAMBIT;
-
-pub mod marshall_variation;
-pub use marshall_variation::MARSHALL_VARIATION;
-
-pub mod santasiere_variation;
-pub use santasiere_variation::SANTASIERE_VARIATION;
-
-pub mod romanian_defense;
-pub use romanian_defense::ROMANIAN_DEFENSE;
-
 pub mod carlsbad_variation;
 pub use carlsbad_variation::CARLSBAD_VARIATION;
-
+pub mod santasiere_variation;
+pub use santasiere_variation::SANTASIERE_VARIATION;
+pub mod nanu_gambit;
+pub use nanu_gambit::NANU_GAMBIT;
 pub mod abrahams_variation;
 pub use abrahams_variation::ABRAHAMS_VARIATION;
-
-pub mod deferred_variation;
-pub use deferred_variation::DEFERRED_VARIATION;
-
 pub mod marienbad_variation;
 pub use marienbad_variation::MARIENBAD_VARIATION;
+pub mod romanian_defense;
+pub use romanian_defense::ROMANIAN_DEFENSE;
+pub mod deferred_variation;
+pub use deferred_variation::DEFERRED_VARIATION;
+pub mod marshall_variation;
+pub use marshall_variation::MARSHALL_VARIATION;

@@ -87,6 +87,5 @@ pub const BREYER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod stein_attack;
 pub use stein_attack::STEIN_ATTACK;

@@ -255,6 +255,5 @@ pub const NEO_ORTHODOX_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;

@@ -137,9 +137,7 @@ pub const WORRALL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod delayed_castling_line;
 pub use delayed_castling_line::DELAYED_CASTLING_LINE;
-
 pub mod castling_line;
 pub use castling_line::CASTLING_LINE;

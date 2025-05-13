@@ -101,6 +101,5 @@ pub const TARTAKOWER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod weiss_defense;
 pub use weiss_defense::WEISS_DEFENSE;

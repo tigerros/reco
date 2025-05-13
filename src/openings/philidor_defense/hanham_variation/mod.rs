@@ -108,18 +108,13 @@ pub const HANHAM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod delmar_variation;
-pub use delmar_variation::DELMAR_VARIATION;
-
-pub mod krause_variation;
-pub use krause_variation::KRAUSE_VARIATION;
-
 pub mod steiner_variation;
 pub use steiner_variation::STEINER_VARIATION;
-
 pub mod schlechter_variation;
 pub use schlechter_variation::SCHLECHTER_VARIATION;
-
+pub mod krause_variation;
+pub use krause_variation::KRAUSE_VARIATION;
+pub mod delmar_variation;
+pub use delmar_variation::DELMAR_VARIATION;
 pub mod sharp_variation;
 pub use sharp_variation::SHARP_VARIATION;

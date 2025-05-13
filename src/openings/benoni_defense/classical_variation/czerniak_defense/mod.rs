@@ -521,6 +521,5 @@ pub const CZERNIAK_DEFENSE: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-
 pub mod tal_line;
 pub use tal_line::TAL_LINE;

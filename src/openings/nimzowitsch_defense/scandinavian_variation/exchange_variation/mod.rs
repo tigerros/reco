@@ -108,6 +108,5 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod marshall_gambit;
 pub use marshall_gambit::MARSHALL_GAMBIT;

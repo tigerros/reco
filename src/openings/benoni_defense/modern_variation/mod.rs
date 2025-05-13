@@ -108,6 +108,5 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod snake_variation;
 pub use snake_variation::SNAKE_VARIATION;

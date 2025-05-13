@@ -115,6 +115,5 @@ pub const TWO_KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod suttles_variation;
 pub use suttles_variation::SUTTLES_VARIATION;

@@ -164,6 +164,5 @@ pub const POLUGAEVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod simagin_line;
 pub use simagin_line::SIMAGIN_LINE;

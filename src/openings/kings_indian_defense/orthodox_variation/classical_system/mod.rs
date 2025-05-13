@@ -173,15 +173,11 @@ pub const CLASSICAL_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod traditional_line;
-pub use traditional_line::TRADITIONAL_LINE;
-
-pub mod benko_attack;
-pub use benko_attack::BENKO_ATTACK;
-
 pub mod neo_classical_line;
 pub use neo_classical_line::NEO_CLASSICAL_LINE;
-
+pub mod benko_attack;
+pub use benko_attack::BENKO_ATTACK;
 pub mod kozul_gambit;
 pub use kozul_gambit::KOZUL_GAMBIT;
+pub mod traditional_line;
+pub use traditional_line::TRADITIONAL_LINE;

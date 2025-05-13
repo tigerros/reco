@@ -173,6 +173,5 @@ pub const YATES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod short_attack;
 pub use short_attack::SHORT_ATTACK;

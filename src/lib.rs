@@ -1,3 +1,4 @@
+// TODO: split openings into separate crate (better compilation performance)
 #![no_std]
 #![forbid(unsafe_code)]
 #![warn(
@@ -50,6 +51,7 @@
 
 pub mod code;
 mod opening;
+#[cfg(feature = "openings")]
 pub mod openings;
 pub mod volume;
 pub use code::Code;
@@ -58,5 +60,5 @@ pub use opening::Opening;
 pub use opening::OpeningOwned;
 pub use volume::Volume;
 
-/// The 0-99 subcategory of an opening.
-pub type Subcategory = deranged::RangedU8<0, 99>;
+/// The 0-99 category of an opening.
+pub type Category = deranged::RangedU8<0, 99>;

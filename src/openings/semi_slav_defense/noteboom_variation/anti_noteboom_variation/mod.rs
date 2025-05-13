@@ -129,6 +129,5 @@ pub const ANTI_NOTEBOOM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod belyavsky_line;
 pub use belyavsky_line::BELYAVSKY_LINE;

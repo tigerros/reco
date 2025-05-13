@@ -214,6 +214,5 @@ pub const BERNSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod mar_del_plata_gambit;
 pub use mar_del_plata_gambit::MAR_DEL_PLATA_GAMBIT;

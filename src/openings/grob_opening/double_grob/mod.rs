@@ -80,6 +80,5 @@ pub const DOUBLE_GROB: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod coca_cola_gambit;
 pub use coca_cola_gambit::COCA_COLA_GAMBIT;

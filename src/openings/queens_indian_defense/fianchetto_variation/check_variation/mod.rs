@@ -136,9 +136,7 @@ pub const CHECK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod modern_line;
 pub use modern_line::MODERN_LINE;
-
 pub mod intermezzo_line;
 pub use intermezzo_line::INTERMEZZO_LINE;

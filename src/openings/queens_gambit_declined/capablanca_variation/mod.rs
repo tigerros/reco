@@ -239,6 +239,5 @@ pub const CAPABLANCA_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod anti_cambridge_springs_variation;
 pub use anti_cambridge_springs_variation::ANTI_CAMBRIDGE_SPRINGS_VARIATION;

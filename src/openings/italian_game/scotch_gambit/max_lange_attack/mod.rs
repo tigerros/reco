@@ -254,9 +254,7 @@ pub const MAX_LANGE_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod long_variation;
-pub use long_variation::LONG_VARIATION;
-
 pub mod spielmann_defense;
 pub use spielmann_defense::SPIELMANN_DEFENSE;
+pub mod long_variation;
+pub use long_variation::LONG_VARIATION;

@@ -622,6 +622,5 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-
 pub mod kantscher_line;
 pub use kantscher_line::KANTSCHER_LINE;

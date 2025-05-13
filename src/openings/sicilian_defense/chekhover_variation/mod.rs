@@ -115,6 +115,5 @@ pub const CHEKHOVER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod zaitsev_defense;
 pub use zaitsev_defense::ZAITSEV_DEFENSE;

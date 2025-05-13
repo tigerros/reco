@@ -87,6 +87,5 @@ pub const LA_BOURDONNAIS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod reuter_gambit;
 pub use reuter_gambit::REUTER_GAMBIT;

@@ -122,6 +122,5 @@ pub const SCHILLER_PYTEL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;

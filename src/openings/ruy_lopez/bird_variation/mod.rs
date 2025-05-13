@@ -108,6 +108,5 @@ pub const BIRD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod paulsen_variation;
 pub use paulsen_variation::PAULSEN_VARIATION;

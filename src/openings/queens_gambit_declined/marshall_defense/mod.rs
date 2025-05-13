@@ -94,6 +94,5 @@ pub const MARSHALL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod tan_gambit;
 pub use tan_gambit::TAN_GAMBIT;

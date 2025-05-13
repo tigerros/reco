@@ -226,6 +226,5 @@ pub const ROMANISHIN_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod english_hybrid;
 pub use english_hybrid::ENGLISH_HYBRID;

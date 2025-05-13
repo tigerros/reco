@@ -129,6 +129,5 @@ pub const KRAUSE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod leonhardt_defense;
 pub use leonhardt_defense::LEONHARDT_DEFENSE;

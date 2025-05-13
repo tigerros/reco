@@ -94,138 +94,99 @@ pub const KINGS_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod double_muzio_gambit;
-pub use double_muzio_gambit::DOUBLE_MUZIO_GAMBIT;
-
 pub mod abbazia_defense;
 pub use abbazia_defense::ABBAZIA_DEFENSE;
-
-pub mod mayet_gambit;
-pub use mayet_gambit::MAYET_GAMBIT;
-
-pub mod mc_donnell_gambit;
-pub use mc_donnell_gambit::MC_DONNELL_GAMBIT;
-
-pub mod modern_defense;
-pub use modern_defense::MODERN_DEFENSE;
-
-pub mod australian_gambit;
-pub use australian_gambit::AUSTRALIAN_GAMBIT;
-
 pub mod orsini_gambit;
 pub use orsini_gambit::ORSINI_GAMBIT;
-
-pub mod traditional_variation;
-pub use traditional_variation::TRADITIONAL_VARIATION;
-
-pub mod dodo_variation;
-pub use dodo_variation::DODO_VARIATION;
-
-pub mod sorensen_gambit;
-pub use sorensen_gambit::SORENSEN_GAMBIT;
-
-pub mod middleton_countergambit;
-pub use middleton_countergambit::MIDDLETON_COUNTERGAMBIT;
-
+pub mod mc_donnell_gambit;
+pub use mc_donnell_gambit::MC_DONNELL_GAMBIT;
 pub mod ghulam_kassim_gambit;
 pub use ghulam_kassim_gambit::GHULAM_KASSIM_GAMBIT;
-
-pub mod silberschmidt_gambit;
-pub use silberschmidt_gambit::SILBERSCHMIDT_GAMBIT;
-
-pub mod gaga_gambit;
-pub use gaga_gambit::GAGA_GAMBIT;
-
-pub mod eisenberg_variation;
-pub use eisenberg_variation::EISENBERG_VARIATION;
-
-pub mod gianutio_countergambit;
-pub use gianutio_countergambit::GIANUTIO_COUNTERGAMBIT;
-
-pub mod lolli_gambit;
-pub use lolli_gambit::LOLLI_GAMBIT;
-
-pub mod kieseritzky_gambit;
-pub use kieseritzky_gambit::KIESERITZKY_GAMBIT;
-
-pub mod paris_gambit;
-pub use paris_gambit::PARIS_GAMBIT;
-
-pub mod greco_gambit;
-pub use greco_gambit::GRECO_GAMBIT;
-
-pub mod tumbleweed;
-pub use tumbleweed::TUMBLEWEED;
-
-pub mod villemson_gambit;
-pub use villemson_gambit::VILLEMSON_GAMBIT;
-
-pub mod salvio_gambit;
-pub use salvio_gambit::SALVIO_GAMBIT;
-
-pub mod rosentreter_gambit;
-pub use rosentreter_gambit::ROSENTRETER_GAMBIT;
-
-pub mod schallopp_defense;
-pub use schallopp_defense::SCHALLOPP_DEFENSE;
-
-pub mod basman_gambit;
-pub use basman_gambit::BASMAN_GAMBIT;
-
-pub mod becker_defense;
-pub use becker_defense::BECKER_DEFENSE;
-
-pub mod stamma_gambit;
-pub use stamma_gambit::STAMMA_GAMBIT;
-
-pub mod quaade_gambit;
-pub use quaade_gambit::QUAADE_GAMBIT;
-
-pub mod blachly_gambit;
-pub use blachly_gambit::BLACHLY_GAMBIT;
-
-pub mod fischer_defense;
-pub use fischer_defense::FISCHER_DEFENSE;
-
-pub mod wagenbach_defense;
-pub use wagenbach_defense::WAGENBACH_DEFENSE;
-
-pub mod cunningham_defense;
-pub use cunningham_defense::CUNNINGHAM_DEFENSE;
-
-pub mod breyer_gambit;
-pub use breyer_gambit::BREYER_GAMBIT;
-
-pub mod allgaier_gambit;
-pub use allgaier_gambit::ALLGAIER_GAMBIT;
-
-pub mod mac_leod_defense;
-pub use mac_leod_defense::MAC_LEOD_DEFENSE;
-
-pub mod bonsch_osmolovsky_variation;
-pub use bonsch_osmolovsky_variation::BONSCH_OSMOLOVSKY_VARIATION;
-
-pub mod bishops_gambit;
-pub use bishops_gambit::BISHOPS_GAMBIT;
-
 pub mod kings_knights_gambit;
 pub use kings_knights_gambit::KINGS_KNIGHTS_GAMBIT;
-
 pub mod kotov_gambit;
 pub use kotov_gambit::KOTOV_GAMBIT;
-
-pub mod mason_keres_gambit;
-pub use mason_keres_gambit::MASON_KERES_GAMBIT;
-
+pub mod tumbleweed;
+pub use tumbleweed::TUMBLEWEED;
 pub mod hanstein_gambit;
 pub use hanstein_gambit::HANSTEIN_GAMBIT;
-
-pub mod tartakower_gambit;
-pub use tartakower_gambit::TARTAKOWER_GAMBIT;
-
-pub mod philidor_gambit;
-pub use philidor_gambit::PHILIDOR_GAMBIT;
-
+pub mod mayet_gambit;
+pub use mayet_gambit::MAYET_GAMBIT;
+pub mod becker_defense;
+pub mod muzio_gambit_accepted;
+pub use becker_defense::BECKER_DEFENSE;
+pub mod silberschmidt_gambit;
+pub use silberschmidt_gambit::SILBERSCHMIDT_GAMBIT;
+pub mod dodo_variation;
+pub use dodo_variation::DODO_VARIATION;
+pub mod middleton_countergambit;
+pub use middleton_countergambit::MIDDLETON_COUNTERGAMBIT;
+pub mod bishops_gambit;
+pub use bishops_gambit::BISHOPS_GAMBIT;
+pub mod paris_gambit;
+pub use paris_gambit::PARIS_GAMBIT;
+pub mod traditional_variation;
+pub use traditional_variation::TRADITIONAL_VARIATION;
+pub mod greco_gambit;
+pub use greco_gambit::GRECO_GAMBIT;
+pub mod wagenbach_defense;
+pub use wagenbach_defense::WAGENBACH_DEFENSE;
+pub mod muzio_gambit;
+pub mod salvio_gambit;
+pub use salvio_gambit::SALVIO_GAMBIT;
 pub mod carrera_gambit;
 pub use carrera_gambit::CARRERA_GAMBIT;
+pub mod breyer_gambit;
+pub use breyer_gambit::BREYER_GAMBIT;
+pub mod villemson_gambit;
+pub use villemson_gambit::VILLEMSON_GAMBIT;
+pub mod bonsch_osmolovsky_variation;
+pub use bonsch_osmolovsky_variation::BONSCH_OSMOLOVSKY_VARIATION;
+pub mod basman_gambit;
+pub mod lopez_gianutio_countergambit;
+pub use basman_gambit::BASMAN_GAMBIT;
+pub mod modern_defense;
+pub use modern_defense::MODERN_DEFENSE;
+pub mod blachly_gambit;
+pub use blachly_gambit::BLACHLY_GAMBIT;
+pub mod allgaier_gambit;
+pub use allgaier_gambit::ALLGAIER_GAMBIT;
+pub mod rosentreter_gambit;
+pub use rosentreter_gambit::ROSENTRETER_GAMBIT;
+pub mod tartakower_gambit;
+pub use tartakower_gambit::TARTAKOWER_GAMBIT;
+pub mod kieseritzky_gambit;
+pub use kieseritzky_gambit::KIESERITZKY_GAMBIT;
+pub mod philidor_gambit;
+pub use philidor_gambit::PHILIDOR_GAMBIT;
+pub mod lolli_gambit;
+pub use lolli_gambit::LOLLI_GAMBIT;
+pub mod double_muzio_gambit;
+pub use double_muzio_gambit::DOUBLE_MUZIO_GAMBIT;
+pub mod allgaier;
+pub mod gaga_gambit;
+pub use gaga_gambit::GAGA_GAMBIT;
+pub mod mason_keres_gambit;
+pub use mason_keres_gambit::MASON_KERES_GAMBIT;
+pub mod stamma_gambit;
+pub use stamma_gambit::STAMMA_GAMBIT;
+pub mod schallopp_defense;
+pub use schallopp_defense::SCHALLOPP_DEFENSE;
+pub mod australian_gambit;
+pub use australian_gambit::AUSTRALIAN_GAMBIT;
+pub mod gianutio_countergambit;
+pub mod kieseritzky;
+pub use gianutio_countergambit::GIANUTIO_COUNTERGAMBIT;
+pub mod fischer_defense;
+pub use fischer_defense::FISCHER_DEFENSE;
+pub mod sorensen_gambit;
+pub use sorensen_gambit::SORENSEN_GAMBIT;
+pub mod quaade_gambit;
+pub mod schurig_gambit;
+pub use quaade_gambit::QUAADE_GAMBIT;
+pub mod mac_leod_defense;
+pub use mac_leod_defense::MAC_LEOD_DEFENSE;
+pub mod eisenberg_variation;
+pub use eisenberg_variation::EISENBERG_VARIATION;
+pub mod cunningham_defense;
+pub use cunningham_defense::CUNNINGHAM_DEFENSE;

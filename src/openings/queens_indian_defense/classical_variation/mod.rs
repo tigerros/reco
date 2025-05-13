@@ -137,15 +137,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod tiviakov_defense;
 pub use tiviakov_defense::TIVIAKOV_DEFENSE;
-
-pub mod traditional_variation;
-pub use traditional_variation::TRADITIONAL_VARIATION;
-
-pub mod taimanov_gambit;
-pub use taimanov_gambit::TAIMANOV_GAMBIT;
-
 pub mod polugaevsky_gambit;
 pub use polugaevsky_gambit::POLUGAEVSKY_GAMBIT;
+pub mod traditional_variation;
+pub use traditional_variation::TRADITIONAL_VARIATION;
+pub mod taimanov_gambit;
+pub use taimanov_gambit::TAIMANOV_GAMBIT;

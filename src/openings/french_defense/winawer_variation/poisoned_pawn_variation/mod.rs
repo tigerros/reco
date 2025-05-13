@@ -164,9 +164,7 @@ pub const POISONED_PAWN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-
 pub mod paoli_variation;
 pub use paoli_variation::PAOLI_VARIATION;

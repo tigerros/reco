@@ -94,6 +94,5 @@ pub const DAMIANO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod damiano_gambit;
 pub use damiano_gambit::DAMIANO_GAMBIT;

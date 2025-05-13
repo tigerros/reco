@@ -166,33 +166,23 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
-pub mod bogoljubow_variation;
-pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
-
-pub mod endgame_variation;
-pub use endgame_variation::ENDGAME_VARIATION;
-
 pub mod spassky_variation;
 pub use spassky_variation::SPASSKY_VARIATION;
-
-pub mod carlsbad_variation;
-pub use carlsbad_variation::CARLSBAD_VARIATION;
-
-pub mod petursson_variation;
-pub use petursson_variation::PETURSSON_VARIATION;
-
-pub mod chandler_variation;
-pub use chandler_variation::CHANDLER_VARIATION;
-
-pub mod reti_variation;
-pub use reti_variation::RETI_VARIATION;
-
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
-
+pub mod endgame_variation;
+pub use endgame_variation::ENDGAME_VARIATION;
+pub mod bogoljubow_variation;
+pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
+pub mod carlsbad_variation;
+pub use carlsbad_variation::CARLSBAD_VARIATION;
+pub mod petursson_variation;
+pub use petursson_variation::PETURSSON_VARIATION;
 pub mod classical_tarrasch_gambit;
 pub use classical_tarrasch_gambit::CLASSICAL_TARRASCH_GAMBIT;
+pub mod chandler_variation;
+pub use chandler_variation::CHANDLER_VARIATION;
+pub mod reti_variation;
+pub use reti_variation::RETI_VARIATION;

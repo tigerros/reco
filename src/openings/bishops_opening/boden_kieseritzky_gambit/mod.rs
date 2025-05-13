@@ -115,6 +115,5 @@ pub const BODEN_KIESERITZKY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod lichtenhein_defense;
 pub use lichtenhein_defense::LICHTENHEIN_DEFENSE;

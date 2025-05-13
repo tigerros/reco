@@ -80,12 +80,9 @@ pub const MIKENAS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod cannstatter_variation;
-pub use cannstatter_variation::CANNSTATTER_VARIATION;
-
 pub mod pozarek_gambit;
 pub use pozarek_gambit::POZAREK_GAMBIT;
-
 pub mod lithuanian_variation;
 pub use lithuanian_variation::LITHUANIAN_VARIATION;
+pub mod cannstatter_variation;
+pub use cannstatter_variation::CANNSTATTER_VARIATION;

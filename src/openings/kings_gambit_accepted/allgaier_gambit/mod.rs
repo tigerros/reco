@@ -129,9 +129,7 @@ pub const ALLGAIER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod urusov_attack;
 pub use urusov_attack::URUSOV_ATTACK;
-
 pub mod thorold_attack;
 pub use thorold_attack::THOROLD_ATTACK;

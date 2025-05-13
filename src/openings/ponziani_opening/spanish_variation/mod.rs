@@ -115,3 +115,4 @@ pub const SPANISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod harrwitz_attack;

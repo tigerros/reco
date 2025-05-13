@@ -108,6 +108,6 @@ pub const SPANISH_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
+pub mod harding_countergambit;
 pub mod harding_gambit;
 pub use harding_gambit::HARDING_GAMBIT;

@@ -101,6 +101,5 @@ pub const GRAND_PRIX_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod schofman_variation;
 pub use schofman_variation::SCHOFMAN_VARIATION;

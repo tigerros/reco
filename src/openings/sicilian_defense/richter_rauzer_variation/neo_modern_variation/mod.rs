@@ -332,9 +332,7 @@ pub const NEO_MODERN_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod nyezhmetdinov_attack;
 pub use nyezhmetdinov_attack::NYEZHMETDINOV_ATTACK;
-
 pub mod early_deviations;
 pub use early_deviations::EARLY_DEVIATIONS;

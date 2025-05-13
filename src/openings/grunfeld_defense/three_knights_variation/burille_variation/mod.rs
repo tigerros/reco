@@ -129,6 +129,5 @@ pub const BURILLE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod reversed_tarrasch;
 pub use reversed_tarrasch::REVERSED_TARRASCH;

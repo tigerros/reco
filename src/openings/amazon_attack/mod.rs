@@ -87,6 +87,5 @@ pub const AMAZON_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod siberian_attack;
 pub use siberian_attack::SIBERIAN_ATTACK;

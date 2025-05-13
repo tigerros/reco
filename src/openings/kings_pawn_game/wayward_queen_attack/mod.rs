@@ -87,9 +87,7 @@ pub const WAYWARD_QUEEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod kiddie_countergambit;
-pub use kiddie_countergambit::KIDDIE_COUNTERGAMBIT;
-
 pub mod mellon_gambit;
 pub use mellon_gambit::MELLON_GAMBIT;
+pub mod kiddie_countergambit;
+pub use kiddie_countergambit::KIDDIE_COUNTERGAMBIT;

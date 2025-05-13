@@ -94,6 +94,5 @@ pub const NORWEGIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod norwegian_gambit;
 pub use norwegian_gambit::NORWEGIAN_GAMBIT;

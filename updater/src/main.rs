@@ -32,10 +32,13 @@ fn main() {
         .from_reader(all_tsv);
 
     // The key is the full identifier of the opening.
+    // A `None` value means the identifier is not the name of an opening.
+    // For example, pterodactlyl_defense::western is only a group of openings.
+    // That identifier would be `None`.
     // The first value is the original full name of the opening.
     // The second value are all the "silent variations", those being different entries but having the
     // same identifier. Each item is already a string of a const expression.
-    let mut openings = HashMap::<Vec<String>, (String, Vec<String>)>::new();
+    let mut identifiers = HashMap::<Vec<String>, Option<(String, Vec<String>)>>::new();
 
     for record in reader.records() {
         let record = record.unwrap();
@@ -71,18 +74,36 @@ fn main() {
             }
         }
 
-        let (full_name, silent_variations) = openings
-            .entry(identifier)
-            .or_insert_with(|| (String::new(), Vec::new()));
+        // Insert an identifier for each possible variation
+        // For example, if identifier is `a, b, c`, this will insert
+        // `a`, `a, b` and `a, b, c` into identifiers.
+        for i in 1..=identifier.len() {
+            let _ = identifiers.entry(identifier[0..i].to_vec()).or_insert(None);
+        }
 
-        *full_name = full_name_raw.to_owned();
-        silent_variations.push(get_opening_constant_expression_string(&OpeningOwned {
-            code,
-            name,
-            variation,
-            moves,
-            setup,
-        }));
+        let value = identifiers.get_mut(&identifier).unwrap();
+
+        if let Some((full_name, silent_variations)) = value {
+            *full_name = full_name_raw.to_owned();
+            silent_variations.push(get_opening_constant_expression_string(&OpeningOwned {
+                code,
+                name,
+                variation,
+                moves,
+                setup,
+            }));
+        } else {
+            *value = Some((
+                full_name_raw.to_owned(),
+                vec![get_opening_constant_expression_string(&OpeningOwned {
+                    code,
+                    name,
+                    variation,
+                    moves,
+                    setup,
+                })],
+            ));
+        }
     }
 
     // Delete previous data
@@ -91,7 +112,10 @@ fn main() {
     }
 
     // Creates a directory for each opening and a module file, where the opening is stored.
-    for (identifier, (full_name, silent_variations)) in &openings {
+    for (identifier, (full_name, silent_variations)) in identifiers
+        .iter()
+        .filter_map(|(identifier, opening)| opening.as_ref().map(|opening| (identifier, opening)))
+    {
         let directory_path = format!(
             "src/openings/{}",
             identifier
@@ -111,17 +135,13 @@ fn main() {
             write(&file_path, constants::OPENING_FILE_INIT).unwrap();
         }
 
-        let mut file = File::options()
-            .write(true)
-            .append(true)
-            .open(file_path)
-            .unwrap();
+        let mut file = File::options().append(true).open(file_path).unwrap();
 
         file.write_all(
             get_opening_constant_item_string(
                 identifier.last().unwrap(),
                 full_name,
-                &silent_variations,
+                silent_variations,
             )
             .as_bytes(),
         )
@@ -140,15 +160,19 @@ fn main() {
     // Unfortunately it will be written after the `sicilian::SICILIAN` constant item.
     // I don't see it as a huge problem because the files are generated anyway,
     // and doing it another way would probably make this script more complex.
-    for (identifier, _) in &openings {
+    for (identifier, opening) in &identifiers {
         let mut identifier = identifier.clone();
         // Removed because we want to work with the parent identifier
         let Some(last_variation) = identifier.pop() else {
             continue;
         };
 
-        let parent_mod_path = format!(
-            "src/openings/{}/mod.rs",
+        if identifier.is_empty() {
+            continue;
+        }
+
+        let parent_directory_path = format!(
+            "src/openings/{}",
             identifier
                 .iter()
                 .map(|s| s.to_snek_case())
@@ -156,35 +180,77 @@ fn main() {
                 .join("/")
         );
 
+        if !exists(&parent_directory_path).unwrap() {
+            create_dir_all(&parent_directory_path).unwrap();
+        }
+
+        let parent_mod_path = format!("{parent_directory_path}/mod.rs");
+
         let mut parent_mod = File::options()
             .create(true)
             .append(true)
             .open(&parent_mod_path)
-            .unwrap();
+            .unwrap_or_else(|_| panic!("{parent_mod_path} should exist"));
 
-        let mod_and_use = format!(
-            "\n\npub mod {0};\npub use {0}::{1};",
-            last_variation.to_snek_case(),
-            last_variation.TO_SHOUTY_SNEK_CASE()
-        );
+        let r#use = if opening.is_some() {
+            format!(
+                "pub use {}::{};\n",
+                last_variation.to_snek_case(),
+                last_variation.TO_SHOUTY_SNEK_CASE()
+            )
+        } else {
+            String::new()
+        };
+
+        let mod_and_use = format!("pub mod {};\n{}", last_variation.to_snek_case(), r#use);
 
         parent_mod.write_all(mod_and_use.as_bytes()).unwrap();
     }
 
-    let top_level_opening_mods_and_uses = openings
+    let top_level_opening_mods_and_uses = identifiers
         .iter()
-        .filter_map(|(identifier, _)| {
+        .filter_map(|(identifier, opening)| {
             if identifier.len() > 1 {
                 None
             } else {
+                let r#use = if opening.is_some() {
+                    format!(
+                        "pub use {}::{};\n",
+                        identifier[0].to_snek_case(),
+                        identifier[0].TO_SHOUTY_SNEK_CASE()
+                    )
+                } else {
+                    String::new()
+                };
+
                 Some(format!(
-                    "pub mod {0};\npub use {0}::{1};\n",
+                    "pub mod {};\n{}",
                     identifier[0].to_snek_case(),
-                    identifier[0].TO_SHOUTY_SNEK_CASE()
+                    r#use
                 ))
             }
         })
         .collect::<String>();
+
+    let all_openings = identifiers
+        .iter_mut()
+        .filter_map(|(identifier, opening)| {
+            if opening.is_none() {
+                return None;
+            }
+
+            let mut identifier = identifier.clone();
+
+            for part in identifier.iter_mut() {
+                *part = part.to_snek_case();
+            }
+
+            *identifier.last_mut().unwrap() = identifier.last().unwrap().TO_SHOUTY_SNEK_CASE();
+            identifier[0] = format!("&{}", identifier[0]);
+            Some(identifier.join("::"))
+        })
+        .collect::<Vec<_>>()
+        .join(",\n");
 
     write(
         "src/openings/mod.rs",
@@ -193,7 +259,11 @@ fn main() {
                 clippy::allow_attributes,\
                 reason = \"this module is generated, the allows don't know if they are going to be fulfilled\"\
             )]\
-            {top_level_opening_mods_and_uses}",
+            use crate::Opening;\
+            {top_level_opening_mods_and_uses}\
+            #[cfg(feature = \"openings-concat\")]\
+            /// This is a static and not a constant because it's huge.\n
+            pub static ALL: &[Opening<'static, &str>] = constcat::concat_slices!([Opening<'static, &str>]: {all_openings});",
         ).as_bytes()
     )
     .unwrap();

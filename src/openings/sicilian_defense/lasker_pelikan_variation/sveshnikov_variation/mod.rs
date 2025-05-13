@@ -358,12 +358,9 @@ pub const SVESHNIKOV_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod chelyabinsk_variation;
 pub use chelyabinsk_variation::CHELYABINSK_VARIATION;
-
 pub mod peresypkins_sacrifice;
 pub use peresypkins_sacrifice::PERESYPKINS_SACRIFICE;
-
 pub mod novosibirsk_variation;
 pub use novosibirsk_variation::NOVOSIBIRSK_VARIATION;

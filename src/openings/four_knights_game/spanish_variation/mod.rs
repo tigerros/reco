@@ -227,42 +227,29 @@ pub const SPANISH_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod nimzowitsch_variation;
-pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
-
-pub mod janowski_variation;
-pub use janowski_variation::JANOWSKI_VARIATION;
-
-pub mod gunsberg_counterattack;
-pub use gunsberg_counterattack::GUNSBERG_COUNTERATTACK;
-
-pub mod alatortsev_variation;
-pub use alatortsev_variation::ALATORTSEV_VARIATION;
-
 pub mod svenonius_variation;
 pub use svenonius_variation::SVENONIUS_VARIATION;
-
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-
-pub mod double_spanish;
-pub use double_spanish::DOUBLE_SPANISH;
-
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
-
 pub mod bardeleben_variation;
 pub use bardeleben_variation::BARDELEBEN_VARIATION;
-
-pub mod spielmann_variation;
-pub use spielmann_variation::SPIELMANN_VARIATION;
-
 pub mod rubinstein_variation_accepted;
 pub use rubinstein_variation_accepted::RUBINSTEIN_VARIATION_ACCEPTED;
-
+pub mod spielmann_variation;
+pub use spielmann_variation::SPIELMANN_VARIATION;
+pub mod double_spanish;
+pub use double_spanish::DOUBLE_SPANISH;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod nimzowitsch_variation;
+pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
+pub mod janowski_variation;
+pub use janowski_variation::JANOWSKI_VARIATION;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod ranken_variation;
 pub use ranken_variation::RANKEN_VARIATION;
+pub mod gunsberg_counterattack;
+pub use gunsberg_counterattack::GUNSBERG_COUNTERATTACK;
+pub mod alatortsev_variation;
+pub use alatortsev_variation::ALATORTSEV_VARIATION;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;

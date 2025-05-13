@@ -283,9 +283,7 @@ pub const ALEKHINE_SYSTEM: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod smyslov_variation;
 pub use smyslov_variation::SMYSLOV_VARIATION;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;

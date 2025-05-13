@@ -101,6 +101,5 @@ pub const LONDON_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod poisoned_pawn_variation;
 pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;

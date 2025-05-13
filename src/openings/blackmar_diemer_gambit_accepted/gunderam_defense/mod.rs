@@ -136,6 +136,5 @@ pub const GUNDERAM_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod stader_variation;
 pub use stader_variation::STADER_VARIATION;

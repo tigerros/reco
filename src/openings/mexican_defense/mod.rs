@@ -94,6 +94,5 @@ pub const MEXICAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod horsefly_gambit;
 pub use horsefly_gambit::HORSEFLY_GAMBIT;

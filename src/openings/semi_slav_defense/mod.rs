@@ -122,57 +122,40 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
-
-pub mod marshall_gambit;
-pub use marshall_gambit::MARSHALL_GAMBIT;
-
-pub mod semi_meran_variation;
-pub use semi_meran_variation::SEMI_MERAN_VARIATION;
-
-pub mod meran_variation;
-pub use meran_variation::MERAN_VARIATION;
-
 pub mod stonewall_defense;
 pub use stonewall_defense::STONEWALL_DEFENSE;
-
-pub mod chigorin_defense;
-pub use chigorin_defense::CHIGORIN_DEFENSE;
-
-pub mod noteboom_variation;
-pub use noteboom_variation::NOTEBOOM_VARIATION;
-
-pub mod gunderam_gambit;
-pub use gunderam_gambit::GUNDERAM_GAMBIT;
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
-pub mod quiet_variation;
-pub use quiet_variation::QUIET_VARIATION;
-
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
-
-pub mod rubinstein_system;
-pub use rubinstein_system::RUBINSTEIN_SYSTEM;
-
-pub mod botvinnik_variation;
-pub use botvinnik_variation::BOTVINNIK_VARIATION;
-
-pub mod anti_moscow_gambit;
-pub use anti_moscow_gambit::ANTI_MOSCOW_GAMBIT;
-
 pub mod romih_variation;
 pub use romih_variation::ROMIH_VARIATION;
-
-pub mod stoltz_variation;
-pub use stoltz_variation::STOLTZ_VARIATION;
-
+pub mod botvinnik_variation;
+pub use botvinnik_variation::BOTVINNIK_VARIATION;
+pub mod quiet_variation;
+pub use quiet_variation::QUIET_VARIATION;
+pub mod chigorin_defense;
+pub use chigorin_defense::CHIGORIN_DEFENSE;
+pub mod rubinstein_system;
+pub use rubinstein_system::RUBINSTEIN_SYSTEM;
+pub mod noteboom_variation;
+pub use noteboom_variation::NOTEBOOM_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod semi_meran_variation;
+pub use semi_meran_variation::SEMI_MERAN_VARIATION;
 pub mod accelerated_move_order;
 pub use accelerated_move_order::ACCELERATED_MOVE_ORDER;
-
+pub mod gunderam_gambit;
+pub use gunderam_gambit::GUNDERAM_GAMBIT;
+pub mod stoltz_variation;
+pub use stoltz_variation::STOLTZ_VARIATION;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod anti_noteboom;
+pub mod meran_variation;
+pub use meran_variation::MERAN_VARIATION;
+pub mod anti_moscow_gambit;
+pub use anti_moscow_gambit::ANTI_MOSCOW_GAMBIT;
+pub mod marshall_gambit;
+pub use marshall_gambit::MARSHALL_GAMBIT;
 pub mod accelerated_meran_variation;
 pub use accelerated_meran_variation::ACCELERATED_MERAN_VARIATION;

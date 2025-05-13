@@ -87,6 +87,5 @@ pub const BANZAI_LEONG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod pinova_gambit;
 pub use pinova_gambit::PINOVA_GAMBIT;

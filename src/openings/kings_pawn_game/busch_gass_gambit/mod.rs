@@ -94,6 +94,5 @@ pub const BUSCH_GASS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod chiodini_gambit;
 pub use chiodini_gambit::CHIODINI_GAMBIT;

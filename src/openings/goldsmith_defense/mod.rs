@@ -80,6 +80,5 @@ pub const GOLDSMITH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod picklepuss_defense;
 pub use picklepuss_defense::PICKLEPUSS_DEFENSE;

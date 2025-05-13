@@ -87,9 +87,7 @@ pub const LABAHN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod polish_variation;
-pub use polish_variation::POLISH_VARIATION;
-
 pub mod double_gambit;
 pub use double_gambit::DOUBLE_GAMBIT;
+pub mod polish_variation;
+pub use polish_variation::POLISH_VARIATION;

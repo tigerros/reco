@@ -87,18 +87,13 @@ pub const TROMPOWSKY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod poisoned_pawn_variation;
-pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;
-
-pub mod borg_variation;
-pub use borg_variation::BORG_VARIATION;
-
 pub mod raptor_variation;
 pub use raptor_variation::RAPTOR_VARIATION;
-
-pub mod edge_variation;
-pub use edge_variation::EDGE_VARIATION;
-
+pub mod poisoned_pawn_variation;
+pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;
 pub mod classical_defense;
 pub use classical_defense::CLASSICAL_DEFENSE;
+pub mod borg_variation;
+pub use borg_variation::BORG_VARIATION;
+pub mod edge_variation;
+pub use edge_variation::EDGE_VARIATION;

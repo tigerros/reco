@@ -204,6 +204,5 @@ pub const LEWIS_COUNTERGAMBIT: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod walker_variation;
 pub use walker_variation::WALKER_VARIATION;

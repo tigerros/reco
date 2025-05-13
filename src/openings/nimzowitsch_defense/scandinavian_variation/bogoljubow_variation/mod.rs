@@ -183,21 +183,15 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod richter_gambit;
-pub use richter_gambit::RICHTER_GAMBIT;
-
-pub mod heinola_deppe_gambit;
-pub use heinola_deppe_gambit::HEINOLA_DEPPE_GAMBIT;
-
-pub mod brandics_gambit;
-pub use brandics_gambit::BRANDICS_GAMBIT;
-
 pub mod nimzowitsch_gambit;
 pub use nimzowitsch_gambit::NIMZOWITSCH_GAMBIT;
-
-pub mod vehre_variation;
-pub use vehre_variation::VEHRE_VARIATION;
-
+pub mod heinola_deppe_gambit;
+pub use heinola_deppe_gambit::HEINOLA_DEPPE_GAMBIT;
 pub mod erben_gambit;
 pub use erben_gambit::ERBEN_GAMBIT;
+pub mod vehre_variation;
+pub use vehre_variation::VEHRE_VARIATION;
+pub mod brandics_gambit;
+pub use brandics_gambit::BRANDICS_GAMBIT;
+pub mod richter_gambit;
+pub use richter_gambit::RICHTER_GAMBIT;

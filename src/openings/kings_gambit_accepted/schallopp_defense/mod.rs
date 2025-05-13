@@ -108,6 +108,5 @@ pub const SCHALLOPP_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod tashkent_attack;
 pub use tashkent_attack::TASHKENT_ATTACK;

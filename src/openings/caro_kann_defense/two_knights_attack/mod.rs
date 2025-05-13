@@ -101,6 +101,5 @@ pub const TWO_KNIGHTS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod mindeno_variation;
 pub use mindeno_variation::MINDENO_VARIATION;

@@ -243,114 +243,77 @@ pub const ZUKERTORT_OPENING: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-
-pub mod shabalov_gambit;
-pub use shabalov_gambit::SHABALOV_GAMBIT;
-
-pub mod quiet_system;
-pub use quiet_system::QUIET_SYSTEM;
-
-pub mod black_mustang_defense;
-pub use black_mustang_defense::BLACK_MUSTANG_DEFENSE;
-
-pub mod polish_defense;
-pub use polish_defense::POLISH_DEFENSE;
-
-pub mod lisitsyn_gambit_deferred;
-pub use lisitsyn_gambit_deferred::LISITSYN_GAMBIT_DEFERRED;
-
-pub mod ross_gambit;
-pub use ross_gambit::ROSS_GAMBIT;
-
-pub mod queenside_fianchetto_variation;
-pub use queenside_fianchetto_variation::QUEENSIDE_FIANCHETTO_VARIATION;
-
-pub mod lisitsyn_gambit;
-pub use lisitsyn_gambit::LISITSYN_GAMBIT;
-
-pub mod wade_defense;
-pub use wade_defense::WADE_DEFENSE;
-
-pub mod dutch_variation;
-pub use dutch_variation::DUTCH_VARIATION;
-
-pub mod drunken_cavalry_variation;
-pub use drunken_cavalry_variation::DRUNKEN_CAVALRY_VARIATION;
-
-pub mod arctic_defense;
-pub use arctic_defense::ARCTIC_DEFENSE;
-
-pub mod slav_invitation;
-pub use slav_invitation::SLAV_INVITATION;
-
-pub mod reversed_mexican_defense;
-pub use reversed_mexican_defense::REVERSED_MEXICAN_DEFENSE;
-
-pub mod myers_polish_attack;
-pub use myers_polish_attack::MYERS_POLISH_ATTACK;
-
-pub mod kingside_fianchetto;
-pub use kingside_fianchetto::KINGSIDE_FIANCHETTO;
-
-pub mod the_potato;
-pub use the_potato::THE_POTATO;
-
-pub mod reversed_grunfeld;
-pub use reversed_grunfeld::REVERSED_GRUNFELD;
-
-pub mod old_indian_attack;
-pub use old_indian_attack::OLD_INDIAN_ATTACK;
-
-pub mod nimzo_larsen_variation;
-pub use nimzo_larsen_variation::NIMZO_LARSEN_VARIATION;
-
-pub mod regina_nu_gambit;
-pub use regina_nu_gambit::REGINA_NU_GAMBIT;
-
-pub mod queens_gambit_invitation;
-pub use queens_gambit_invitation::QUEENS_GAMBIT_INVITATION;
-
-pub mod santasieres_folly;
-pub use santasieres_folly::SANTASIERES_FOLLY;
-
-pub mod double_fianchetto_attack;
-pub use double_fianchetto_attack::DOUBLE_FIANCHETTO_ATTACK;
-
-pub mod ampel_variation;
-pub use ampel_variation::AMPEL_VARIATION;
-
-pub mod lemberger_gambit;
-pub use lemberger_gambit::LEMBERGER_GAMBIT;
-
-pub mod the_walrus;
-pub use the_walrus::THE_WALRUS;
-
 pub mod herrstrom_gambit;
 pub use herrstrom_gambit::HERRSTROM_GAMBIT;
-
-pub mod basman_defense;
-pub use basman_defense::BASMAN_DEFENSE;
-
-pub mod sicilian_invitation;
-pub use sicilian_invitation::SICILIAN_INVITATION;
-
-pub mod pachman_gambit;
-pub use pachman_gambit::PACHMAN_GAMBIT;
-
-pub mod tennison_gambit;
-pub use tennison_gambit::TENNISON_GAMBIT;
-
-pub mod vos_gambit;
-pub use vos_gambit::VOS_GAMBIT;
-
+pub mod wade_defense;
+pub use wade_defense::WADE_DEFENSE;
+pub mod quiet_system;
+pub use quiet_system::QUIET_SYSTEM;
 pub mod pirc_invitation;
 pub use pirc_invitation::PIRC_INVITATION;
-
+pub mod kingside_fianchetto;
+pub use kingside_fianchetto::KINGSIDE_FIANCHETTO;
+pub mod vos_gambit;
+pub use vos_gambit::VOS_GAMBIT;
+pub mod slav_invitation;
+pub use slav_invitation::SLAV_INVITATION;
 pub mod ware_defense;
 pub use ware_defense::WARE_DEFENSE;
-
-pub mod st_george_defense;
-pub use st_george_defense::ST_GEORGE_DEFENSE;
-
+pub mod polish_defense;
+pub use polish_defense::POLISH_DEFENSE;
+pub mod the_walrus;
+pub use the_walrus::THE_WALRUS;
 pub mod speelsmet_gambit;
 pub use speelsmet_gambit::SPEELSMET_GAMBIT;
+pub mod pachman_gambit;
+pub use pachman_gambit::PACHMAN_GAMBIT;
+pub mod old_indian_attack;
+pub use old_indian_attack::OLD_INDIAN_ATTACK;
+pub mod myers_polish_attack;
+pub use myers_polish_attack::MYERS_POLISH_ATTACK;
+pub mod lemberger_gambit;
+pub use lemberger_gambit::LEMBERGER_GAMBIT;
+pub mod lisitsyn_gambit;
+pub use lisitsyn_gambit::LISITSYN_GAMBIT;
+pub mod tennison_gambit;
+pub use tennison_gambit::TENNISON_GAMBIT;
+pub mod drunken_cavalry_variation;
+pub use drunken_cavalry_variation::DRUNKEN_CAVALRY_VARIATION;
+pub mod ross_gambit;
+pub use ross_gambit::ROSS_GAMBIT;
+pub mod reversed_grunfeld;
+pub use reversed_grunfeld::REVERSED_GRUNFELD;
+pub mod nimzo_larsen_variation;
+pub use nimzo_larsen_variation::NIMZO_LARSEN_VARIATION;
+pub mod ampel_variation;
+pub use ampel_variation::AMPEL_VARIATION;
+pub mod regina_nu_gambit;
+pub use regina_nu_gambit::REGINA_NU_GAMBIT;
+pub mod shabalov_gambit;
+pub use shabalov_gambit::SHABALOV_GAMBIT;
+pub mod lisitsyn_gambit_deferred;
+pub use lisitsyn_gambit_deferred::LISITSYN_GAMBIT_DEFERRED;
+pub mod st_george_defense;
+pub use st_george_defense::ST_GEORGE_DEFENSE;
+pub mod double_fianchetto_attack;
+pub use double_fianchetto_attack::DOUBLE_FIANCHETTO_ATTACK;
+pub mod queens_gambit_invitation;
+pub use queens_gambit_invitation::QUEENS_GAMBIT_INVITATION;
+pub mod reversed_mexican_defense;
+pub use reversed_mexican_defense::REVERSED_MEXICAN_DEFENSE;
+pub mod queenside_fianchetto_variation;
+pub use queenside_fianchetto_variation::QUEENSIDE_FIANCHETTO_VARIATION;
+pub mod arctic_defense;
+pub use arctic_defense::ARCTIC_DEFENSE;
+pub mod the_potato;
+pub use the_potato::THE_POTATO;
+pub mod dutch_variation;
+pub use dutch_variation::DUTCH_VARIATION;
+pub mod santasieres_folly;
+pub use santasieres_folly::SANTASIERES_FOLLY;
+pub mod black_mustang_defense;
+pub use black_mustang_defense::BLACK_MUSTANG_DEFENSE;
+pub mod basman_defense;
+pub use basman_defense::BASMAN_DEFENSE;
+pub mod sicilian_invitation;
+pub use sicilian_invitation::SICILIAN_INVITATION;

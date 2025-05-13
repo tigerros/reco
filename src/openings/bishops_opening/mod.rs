@@ -87,84 +87,57 @@ pub const BISHOPS_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod pratt_variation;
-pub use pratt_variation::PRATT_VARIATION;
-
-pub mod pachman_gambit;
-pub use pachman_gambit::PACHMAN_GAMBIT;
-
-pub mod philidor_variation;
-pub use philidor_variation::PHILIDOR_VARIATION;
-
-pub mod kitchener_folly;
-pub use kitchener_folly::KITCHENER_FOLLY;
-
-pub mod berlin_defense;
-pub use berlin_defense::BERLIN_DEFENSE;
-
 pub mod horwitz_gambit;
 pub use horwitz_gambit::HORWITZ_GAMBIT;
-
-pub mod vienna_hybrid;
-pub use vienna_hybrid::VIENNA_HYBRID;
-
-pub mod lisitsyn_variation;
-pub use lisitsyn_variation::LISITSYN_VARIATION;
-
-pub mod lewis_countergambit;
-pub use lewis_countergambit::LEWIS_COUNTERGAMBIT;
-
-pub mod anderssen_gambit;
-pub use anderssen_gambit::ANDERSSEN_GAMBIT;
-
-pub mod calabrese_countergambit;
-pub use calabrese_countergambit::CALABRESE_COUNTERGAMBIT;
-
-pub mod thorold_gambit;
-pub use thorold_gambit::THOROLD_GAMBIT;
-
-pub mod warsaw_gambit;
-pub use warsaw_gambit::WARSAW_GAMBIT;
-
-pub mod urusov_gambit;
-pub use urusov_gambit::URUSOV_GAMBIT;
-
-pub mod boden_kieseritzky_gambit;
-pub use boden_kieseritzky_gambit::BODEN_KIESERITZKY_GAMBIT;
-
-pub mod philidor_counterattack;
-pub use philidor_counterattack::PHILIDOR_COUNTERATTACK;
-
-pub mod krejcik_gambit;
-pub use krejcik_gambit::KREJCIK_GAMBIT;
-
-pub mod del_rio_variation;
-pub use del_rio_variation::DEL_RIO_VARIATION;
-
-pub mod lewis_gambit;
-pub use lewis_gambit::LEWIS_GAMBIT;
-
-pub mod ponziani_gambit;
-pub use ponziani_gambit::PONZIANI_GAMBIT;
-
-pub mod khan_gambit;
-pub use khan_gambit::KHAN_GAMBIT;
-
-pub mod boi_variation;
-pub use boi_variation::BOI_VARIATION;
-
-pub mod lopez_variation;
-pub use lopez_variation::LOPEZ_VARIATION;
-
 pub mod stein_gambit;
 pub use stein_gambit::STEIN_GAMBIT;
-
+pub mod lewis_gambit;
+pub use lewis_gambit::LEWIS_GAMBIT;
+pub mod thorold_gambit;
+pub use thorold_gambit::THOROLD_GAMBIT;
+pub mod pachman_gambit;
+pub use pachman_gambit::PACHMAN_GAMBIT;
 pub mod mc_donnell_gambit;
 pub use mc_donnell_gambit::MC_DONNELL_GAMBIT;
-
-pub mod four_pawns_gambit;
-pub use four_pawns_gambit::FOUR_PAWNS_GAMBIT;
-
+pub mod boi_variation;
+pub use boi_variation::BOI_VARIATION;
+pub mod lisitsyn_variation;
+pub use lisitsyn_variation::LISITSYN_VARIATION;
+pub mod philidor_variation;
+pub use philidor_variation::PHILIDOR_VARIATION;
+pub mod warsaw_gambit;
+pub use warsaw_gambit::WARSAW_GAMBIT;
+pub mod berlin_defense;
+pub use berlin_defense::BERLIN_DEFENSE;
+pub mod lewis_countergambit;
+pub use lewis_countergambit::LEWIS_COUNTERGAMBIT;
+pub mod philidor_counterattack;
+pub use philidor_counterattack::PHILIDOR_COUNTERATTACK;
+pub mod urusov_gambit;
+pub use urusov_gambit::URUSOV_GAMBIT;
+pub mod ponziani_gambit;
+pub use ponziani_gambit::PONZIANI_GAMBIT;
+pub mod boden_kieseritzky_gambit;
+pub use boden_kieseritzky_gambit::BODEN_KIESERITZKY_GAMBIT;
 pub mod lopez_gambit;
 pub use lopez_gambit::LOPEZ_GAMBIT;
+pub mod pratt_variation;
+pub use pratt_variation::PRATT_VARIATION;
+pub mod del_rio_variation;
+pub use del_rio_variation::DEL_RIO_VARIATION;
+pub mod calabrese_countergambit;
+pub use calabrese_countergambit::CALABRESE_COUNTERGAMBIT;
+pub mod khan_gambit;
+pub use khan_gambit::KHAN_GAMBIT;
+pub mod lopez_variation;
+pub use lopez_variation::LOPEZ_VARIATION;
+pub mod vienna_hybrid;
+pub use vienna_hybrid::VIENNA_HYBRID;
+pub mod krejcik_gambit;
+pub use krejcik_gambit::KREJCIK_GAMBIT;
+pub mod four_pawns_gambit;
+pub use four_pawns_gambit::FOUR_PAWNS_GAMBIT;
+pub mod anderssen_gambit;
+pub use anderssen_gambit::ANDERSSEN_GAMBIT;
+pub mod kitchener_folly;
+pub use kitchener_folly::KITCHENER_FOLLY;

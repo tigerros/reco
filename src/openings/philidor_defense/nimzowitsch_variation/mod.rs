@@ -197,12 +197,9 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod rellstab_variation;
-pub use rellstab_variation::RELLSTAB_VARIATION;
-
-pub mod klein_variation;
-pub use klein_variation::KLEIN_VARIATION;
-
 pub mod sokolsky_variation;
 pub use sokolsky_variation::SOKOLSKY_VARIATION;
+pub mod rellstab_variation;
+pub use rellstab_variation::RELLSTAB_VARIATION;
+pub mod klein_variation;
+pub use klein_variation::KLEIN_VARIATION;

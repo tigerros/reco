@@ -80,6 +80,5 @@ pub const ARCTIC_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod drunken_knight_variation;
 pub use drunken_knight_variation::DRUNKEN_KNIGHT_VARIATION;

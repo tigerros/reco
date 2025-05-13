@@ -144,9 +144,7 @@ pub const BENONI_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;

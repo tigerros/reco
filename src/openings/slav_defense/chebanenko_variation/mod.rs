@@ -122,6 +122,5 @@ pub const CHEBANENKO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod advance_system;
 pub use advance_system::ADVANCE_SYSTEM;

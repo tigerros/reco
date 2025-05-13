@@ -108,21 +108,15 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod fort_knox_variation;
-pub use fort_knox_variation::FORT_KNOX_VARIATION;
-
-pub mod blackburne_defense;
-pub use blackburne_defense::BLACKBURNE_DEFENSE;
-
-pub mod capablanca_line;
-pub use capablanca_line::CAPABLANCA_LINE;
-
-pub mod kasparov_attack;
-pub use kasparov_attack::KASPAROV_ATTACK;
-
-pub mod ellis_gambit;
-pub use ellis_gambit::ELLIS_GAMBIT;
-
 pub mod maric_variation;
 pub use maric_variation::MARIC_VARIATION;
+pub mod ellis_gambit;
+pub use ellis_gambit::ELLIS_GAMBIT;
+pub mod kasparov_attack;
+pub use kasparov_attack::KASPAROV_ATTACK;
+pub mod blackburne_defense;
+pub use blackburne_defense::BLACKBURNE_DEFENSE;
+pub mod fort_knox_variation;
+pub use fort_knox_variation::FORT_KNOX_VARIATION;
+pub mod capablanca_line;
+pub use capablanca_line::CAPABLANCA_LINE;

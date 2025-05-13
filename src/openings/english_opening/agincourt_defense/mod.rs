@@ -207,27 +207,19 @@ pub const AGINCOURT_DEFENSE: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-
-pub mod wimpy_system;
-pub use wimpy_system::WIMPY_SYSTEM;
-
 pub mod kurajica_defense;
 pub use kurajica_defense::KURAJICA_DEFENSE;
-
-pub mod catalan_defense_accepted;
-pub use catalan_defense_accepted::CATALAN_DEFENSE_ACCEPTED;
-
-pub mod catalan_defense;
-pub use catalan_defense::CATALAN_DEFENSE;
-
 pub mod bogoljubow_defense;
 pub use bogoljubow_defense::BOGOLJUBOW_DEFENSE;
-
-pub mod neo_catalan_declined;
-pub use neo_catalan_declined::NEO_CATALAN_DECLINED;
-
+pub mod catalan_defense_accepted;
+pub use catalan_defense_accepted::CATALAN_DEFENSE_ACCEPTED;
+pub mod catalan_defense;
+pub use catalan_defense::CATALAN_DEFENSE;
+pub mod wimpy_system;
+pub use wimpy_system::WIMPY_SYSTEM;
 pub mod tarrasch_defense;
 pub use tarrasch_defense::TARRASCH_DEFENSE;
-
 pub mod keres_defense;
 pub use keres_defense::KERES_DEFENSE;
+pub mod neo_catalan_declined;
+pub use neo_catalan_declined::NEO_CATALAN_DECLINED;

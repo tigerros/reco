@@ -108,6 +108,5 @@ pub const WINAWER_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod anti_winawer_gambit;
 pub use anti_winawer_gambit::ANTI_WINAWER_GAMBIT;

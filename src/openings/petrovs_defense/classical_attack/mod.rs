@@ -129,39 +129,27 @@ pub const CLASSICAL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod jaenisch_variation;
-pub use jaenisch_variation::JAENISCH_VARIATION;
-
-pub mod mason_showalter_variation;
-pub use mason_showalter_variation::MASON_SHOWALTER_VARIATION;
-
-pub mod tarrasch_variation;
-pub use tarrasch_variation::TARRASCH_VARIATION;
-
 pub mod closed_variation;
 pub use closed_variation::CLOSED_VARIATION;
-
-pub mod maroczy_variation;
-pub use maroczy_variation::MAROCZY_VARIATION;
-
-pub mod marshall_trap;
-pub use marshall_trap::MARSHALL_TRAP;
-
-pub mod marshall_variation;
-pub use marshall_variation::MARSHALL_VARIATION;
-
-pub mod chigorin_variation;
-pub use chigorin_variation::CHIGORIN_VARIATION;
-
 pub mod krause_variation;
 pub use krause_variation::KRAUSE_VARIATION;
-
-pub mod staunton_variation;
-pub use staunton_variation::STAUNTON_VARIATION;
-
+pub mod marshall_variation;
+pub use marshall_variation::MARSHALL_VARIATION;
+pub mod tarrasch_variation;
+pub use tarrasch_variation::TARRASCH_VARIATION;
+pub mod jaenisch_variation;
+pub use jaenisch_variation::JAENISCH_VARIATION;
+pub mod mason_showalter_variation;
+pub use mason_showalter_variation::MASON_SHOWALTER_VARIATION;
 pub mod mason_variation;
 pub use mason_variation::MASON_VARIATION;
-
+pub mod staunton_variation;
+pub use staunton_variation::STAUNTON_VARIATION;
 pub mod berger_variation;
 pub use berger_variation::BERGER_VARIATION;
+pub mod marshall_trap;
+pub use marshall_trap::MARSHALL_TRAP;
+pub mod maroczy_variation;
+pub use maroczy_variation::MAROCZY_VARIATION;
+pub mod chigorin_variation;
+pub use chigorin_variation::CHIGORIN_VARIATION;

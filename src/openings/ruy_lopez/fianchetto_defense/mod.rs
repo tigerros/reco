@@ -108,6 +108,5 @@ pub const FIANCHETTO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod kevitz_gambit;
 pub use kevitz_gambit::KEVITZ_GAMBIT;

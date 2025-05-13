@@ -108,6 +108,5 @@ pub const GRUNFELD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;

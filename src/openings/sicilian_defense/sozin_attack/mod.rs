@@ -143,15 +143,11 @@ pub const SOZIN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod leonhardt_variation;
-pub use leonhardt_variation::LEONHARDT_VARIATION;
-
-pub mod flank_variation;
-pub use flank_variation::FLANK_VARIATION;
-
 pub mod fischer_variation;
 pub use fischer_variation::FISCHER_VARIATION;
-
+pub mod flank_variation;
+pub use flank_variation::FLANK_VARIATION;
+pub mod leonhardt_variation;
+pub use leonhardt_variation::LEONHARDT_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;

@@ -143,6 +143,5 @@ pub const BOTVINNIK_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod prickly_pawn_pass_system;
 pub use prickly_pawn_pass_system::PRICKLY_PAWN_PASS_SYSTEM;

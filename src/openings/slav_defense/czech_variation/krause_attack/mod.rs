@@ -143,6 +143,5 @@ pub const KRAUSE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod fazekas_gambit;
 pub use fazekas_gambit::FAZEKAS_GAMBIT;

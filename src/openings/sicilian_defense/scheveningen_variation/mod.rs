@@ -136,30 +136,22 @@ pub const SCHEVENINGEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
-
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-
-pub mod delayed_keres_attack;
-pub use delayed_keres_attack::DELAYED_KERES_ATTACK;
-
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
-
-pub mod keres_attack;
-pub use keres_attack::KERES_ATTACK;
-
-pub mod tal_variation;
-pub use tal_variation::TAL_VARIATION;
-
-pub mod matanovic_attack;
-pub use matanovic_attack::MATANOVIC_ATTACK;
-
-pub mod classical_main_line;
-pub use classical_main_line::CLASSICAL_MAIN_LINE;
-
 pub mod vitolins_variation;
 pub use vitolins_variation::VITOLINS_VARIATION;
+pub mod matanovic_attack;
+pub use matanovic_attack::MATANOVIC_ATTACK;
+pub mod keres_attack;
+pub use keres_attack::KERES_ATTACK;
+pub mod delayed_keres_attack;
+pub use delayed_keres_attack::DELAYED_KERES_ATTACK;
+pub mod english_attack;
+pub mod tal_variation;
+pub use tal_variation::TAL_VARIATION;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
+pub mod classical_main_line;
+pub use classical_main_line::CLASSICAL_MAIN_LINE;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;

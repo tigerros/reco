@@ -150,6 +150,5 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod cozio_attack;
 pub use cozio_attack::COZIO_ATTACK;

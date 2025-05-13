@@ -136,12 +136,9 @@ pub const WING_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod spraggett_attack;
-pub use spraggett_attack::SPRAGGETT_ATTACK;
-
-pub mod christiansens_dream;
-pub use christiansens_dream::CHRISTIANSENS_DREAM;
-
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod spraggett_attack;
+pub use spraggett_attack::SPRAGGETT_ATTACK;
+pub mod christiansens_dream;
+pub use christiansens_dream::CHRISTIANSENS_DREAM;

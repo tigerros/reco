@@ -94,6 +94,5 @@ pub const KINGS_INDIAN_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod double_fianchetto;
 pub use double_fianchetto::DOUBLE_FIANCHETTO;

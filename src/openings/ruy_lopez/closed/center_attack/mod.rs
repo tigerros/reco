@@ -137,6 +137,5 @@ pub const CENTER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod basque_gambit;
 pub use basque_gambit::BASQUE_GAMBIT;

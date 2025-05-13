@@ -101,6 +101,5 @@ pub const LOPEZ_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod lopez_gambit;
 pub use lopez_gambit::LOPEZ_GAMBIT;

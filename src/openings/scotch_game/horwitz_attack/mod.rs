@@ -129,6 +129,5 @@ pub const HORWITZ_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod blackburne_variation;
 pub use blackburne_variation::BLACKBURNE_VARIATION;

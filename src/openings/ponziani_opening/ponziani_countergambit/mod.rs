@@ -108,6 +108,5 @@ pub const PONZIANI_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod schmidt_attack;
 pub use schmidt_attack::SCHMIDT_ATTACK;

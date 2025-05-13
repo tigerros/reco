@@ -101,9 +101,7 @@ pub const BISHOP_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod monkeys_bum;
-pub use monkeys_bum::MONKEYS_BUM;
-
 pub mod bucker_gambit;
 pub use bucker_gambit::BUCKER_GAMBIT;
+pub mod monkeys_bum;
+pub use monkeys_bum::MONKEYS_BUM;

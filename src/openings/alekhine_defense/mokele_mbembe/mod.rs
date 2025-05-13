@@ -94,9 +94,7 @@ pub const MOKELE_MBEMBE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod modern_line;
 pub use modern_line::MODERN_LINE;
-
 pub mod vavra_defense;
 pub use vavra_defense::VAVRA_DEFENSE;

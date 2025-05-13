@@ -261,39 +261,27 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod bronstein_defense;
-pub use bronstein_defense::BRONSTEIN_DEFENSE;
-
-pub mod panno_main_line;
-pub use panno_main_line::PANNO_MAIN_LINE;
-
-pub mod yates_defense;
-pub use yates_defense::YATES_DEFENSE;
-
-pub mod bobotsov_korchnoi_petrosian_variation;
-pub use bobotsov_korchnoi_petrosian_variation::BOBOTSOV_KORCHNOI_PETROSIAN_VARIATION;
-
-pub mod panno_formation;
-pub use panno_formation::PANNO_FORMATION;
-
-pub mod ruban_variation;
-pub use ruban_variation::RUBAN_VARIATION;
-
-pub mod orthodox_variation;
-pub use orthodox_variation::ORTHODOX_VARIATION;
-
-pub mod samisch_gambit;
-pub use samisch_gambit::SAMISCH_GAMBIT;
-
-pub mod double_fianchetto;
-pub use double_fianchetto::DOUBLE_FIANCHETTO;
-
 pub mod normal_defense;
 pub use normal_defense::NORMAL_DEFENSE;
-
-pub mod closed_variation;
-pub use closed_variation::CLOSED_VARIATION;
-
+pub mod double_fianchetto;
+pub use double_fianchetto::DOUBLE_FIANCHETTO;
+pub mod bobotsov_korchnoi_petrosian_variation;
+pub use bobotsov_korchnoi_petrosian_variation::BOBOTSOV_KORCHNOI_PETROSIAN_VARIATION;
+pub mod ruban_variation;
+pub use ruban_variation::RUBAN_VARIATION;
 pub mod byrne_defense;
 pub use byrne_defense::BYRNE_DEFENSE;
+pub mod orthodox_variation;
+pub use orthodox_variation::ORTHODOX_VARIATION;
+pub mod yates_defense;
+pub use yates_defense::YATES_DEFENSE;
+pub mod panno_main_line;
+pub use panno_main_line::PANNO_MAIN_LINE;
+pub mod panno_formation;
+pub use panno_formation::PANNO_FORMATION;
+pub mod samisch_gambit;
+pub use samisch_gambit::SAMISCH_GAMBIT;
+pub mod bronstein_defense;
+pub use bronstein_defense::BRONSTEIN_DEFENSE;
+pub mod closed_variation;
+pub use closed_variation::CLOSED_VARIATION;

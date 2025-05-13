@@ -136,9 +136,7 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-
 pub mod de_riviere_variation;
 pub use de_riviere_variation::DE_RIVIERE_VARIATION;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;

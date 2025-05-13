@@ -94,6 +94,5 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod pseudo_catalan;
 pub use pseudo_catalan::PSEUDO_CATALAN;

@@ -108,9 +108,7 @@ pub const COZIO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod paulsen_variation;
-pub use paulsen_variation::PAULSEN_VARIATION;
-
 pub mod tartakower_gambit;
 pub use tartakower_gambit::TARTAKOWER_GAMBIT;
+pub mod paulsen_variation;
+pub use paulsen_variation::PAULSEN_VARIATION;

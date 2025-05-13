@@ -383,69 +383,50 @@ pub const TWO_KNIGHTS_DEFENSE: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-
-pub mod pincus_variation;
-pub use pincus_variation::PINCUS_VARIATION;
-
-pub mod ulvestad_variation;
-pub use ulvestad_variation::ULVESTAD_VARIATION;
-
-pub mod traxler_counterattack;
-pub use traxler_counterattack::TRAXLER_COUNTERATTACK;
-
-pub mod fried_liver_attack;
-pub use fried_liver_attack::FRIED_LIVER_ATTACK;
-
-pub mod ponziani_steinitz_gambit;
-pub use ponziani_steinitz_gambit::PONZIANI_STEINITZ_GAMBIT;
-
-pub mod paoli_variation;
-pub use paoli_variation::PAOLI_VARIATION;
-
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-
-pub mod open_variation;
-pub use open_variation::OPEN_VARIATION;
-
-pub mod maroczy_variation;
-pub use maroczy_variation::MAROCZY_VARIATION;
-
-pub mod max_lange_attack;
-pub use max_lange_attack::MAX_LANGE_ATTACK;
-
-pub mod modern_bishops_opening;
-pub use modern_bishops_opening::MODERN_BISHOPS_OPENING;
-
-pub mod fritz_variation;
-pub use fritz_variation::FRITZ_VARIATION;
-
-pub mod lolli_attack;
-pub use lolli_attack::LOLLI_ATTACK;
-
-pub mod keidansky_variation;
-pub use keidansky_variation::KEIDANSKY_VARIATION;
-
-pub mod perreux_variation;
-pub use perreux_variation::PERREUX_VARIATION;
-
-pub mod knight_attack;
-pub use knight_attack::KNIGHT_ATTACK;
-
-pub mod colman_variation;
-pub use colman_variation::COLMAN_VARIATION;
-
-pub mod blackburne_variation;
-pub use blackburne_variation::BLACKBURNE_VARIATION;
-
-pub mod yurdansky_attack;
-pub use yurdansky_attack::YURDANSKY_ATTACK;
-
-pub mod knorre_variation;
-pub use knorre_variation::KNORRE_VARIATION;
-
 pub mod kloss_gambit;
 pub use kloss_gambit::KLOSS_GAMBIT;
-
+pub mod ulvestad_variation;
+pub use ulvestad_variation::ULVESTAD_VARIATION;
+pub mod traxler_variation;
+pub mod yurdansky_attack;
+pub use yurdansky_attack::YURDANSKY_ATTACK;
+pub mod blackburne_variation;
+pub use blackburne_variation::BLACKBURNE_VARIATION;
+pub mod pincus_variation;
+pub use pincus_variation::PINCUS_VARIATION;
+pub mod keidansky_variation;
+pub use keidansky_variation::KEIDANSKY_VARIATION;
+pub mod colman_variation;
+pub use colman_variation::COLMAN_VARIATION;
+pub mod knight_attack;
+pub use knight_attack::KNIGHT_ATTACK;
+pub mod open_variation;
+pub use open_variation::OPEN_VARIATION;
+pub mod maroczy_variation;
+pub use maroczy_variation::MAROCZY_VARIATION;
+pub mod modern_bishops_opening;
+pub use modern_bishops_opening::MODERN_BISHOPS_OPENING;
+pub mod fried_liver_attack;
+pub use fried_liver_attack::FRIED_LIVER_ATTACK;
+pub mod lolli_attack;
+pub use lolli_attack::LOLLI_ATTACK;
+pub mod ponziani_steinitz_gambit;
+pub use ponziani_steinitz_gambit::PONZIANI_STEINITZ_GAMBIT;
+pub mod paoli_variation;
+pub use paoli_variation::PAOLI_VARIATION;
+pub mod fritz;
+pub mod knorre_variation;
+pub use knorre_variation::KNORRE_VARIATION;
+pub mod traxler_counterattack;
+pub use traxler_counterattack::TRAXLER_COUNTERATTACK;
 pub mod polerio_defense;
 pub use polerio_defense::POLERIO_DEFENSE;
+pub mod fegatello_attack;
+pub mod max_lange_attack;
+pub use max_lange_attack::MAX_LANGE_ATTACK;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod fritz_variation;
+pub use fritz_variation::FRITZ_VARIATION;
+pub mod perreux_variation;
+pub use perreux_variation::PERREUX_VARIATION;

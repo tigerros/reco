@@ -129,6 +129,5 @@ pub const PRINS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod venice_attack;
 pub use venice_attack::VENICE_ATTACK;

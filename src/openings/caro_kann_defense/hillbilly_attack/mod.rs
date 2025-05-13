@@ -87,6 +87,5 @@ pub const HILLBILLY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod schaeffer_gambit;
 pub use schaeffer_gambit::SCHAEFFER_GAMBIT;

@@ -141,54 +141,37 @@ pub const NIMZOWITSCH_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod scandinavian_variation;
-pub use scandinavian_variation::SCANDINAVIAN_VARIATION;
-
-pub mod breyer_variation;
-pub use breyer_variation::BREYER_VARIATION;
-
-pub mod kennedy_variation;
-pub use kennedy_variation::KENNEDY_VARIATION;
-
-pub mod pseudo_spanish_variation;
-pub use pseudo_spanish_variation::PSEUDO_SPANISH_VARIATION;
-
-pub mod wheeler_gambit;
-pub use wheeler_gambit::WHEELER_GAMBIT;
-
-pub mod declined_variation;
-pub use declined_variation::DECLINED_VARIATION;
-
 pub mod franco_nimzowitsch_variation;
 pub use franco_nimzowitsch_variation::FRANCO_NIMZOWITSCH_VARIATION;
-
-pub mod pirc_connection;
-pub use pirc_connection::PIRC_CONNECTION;
-
-pub mod neo_mongoloid_defense;
-pub use neo_mongoloid_defense::NEO_MONGOLOID_DEFENSE;
-
 pub mod woodchuck_variation;
 pub use woodchuck_variation::WOODCHUCK_VARIATION;
-
-pub mod french_connection;
-pub use french_connection::FRENCH_CONNECTION;
-
-pub mod hornung_gambit;
-pub use hornung_gambit::HORNUNG_GAMBIT;
-
-pub mod mikenas_variation;
-pub use mikenas_variation::MIKENAS_VARIATION;
-
-pub mod colorado_countergambit;
-pub use colorado_countergambit::COLORADO_COUNTERGAMBIT;
-
 pub mod el_columpio_defense;
 pub use el_columpio_defense::EL_COLUMPIO_DEFENSE;
-
-pub mod williams_variation;
-pub use williams_variation::WILLIAMS_VARIATION;
-
+pub mod colorado_countergambit;
+pub use colorado_countergambit::COLORADO_COUNTERGAMBIT;
+pub mod hornung_gambit;
+pub use hornung_gambit::HORNUNG_GAMBIT;
+pub mod neo_mongoloid_defense;
+pub use neo_mongoloid_defense::NEO_MONGOLOID_DEFENSE;
+pub mod scandinavian_variation;
+pub use scandinavian_variation::SCANDINAVIAN_VARIATION;
+pub mod french_connection;
+pub use french_connection::FRENCH_CONNECTION;
 pub mod colorado_countergambit_accepted;
 pub use colorado_countergambit_accepted::COLORADO_COUNTERGAMBIT_ACCEPTED;
+pub mod pseudo_spanish_variation;
+pub use pseudo_spanish_variation::PSEUDO_SPANISH_VARIATION;
+pub mod pirc_connection;
+pub use pirc_connection::PIRC_CONNECTION;
+pub mod declined_variation;
+pub use declined_variation::DECLINED_VARIATION;
+pub mod wheeler_gambit;
+pub use wheeler_gambit::WHEELER_GAMBIT;
+pub mod mikenas_variation;
+pub use mikenas_variation::MIKENAS_VARIATION;
+pub mod kennedy_variation;
+pub use kennedy_variation::KENNEDY_VARIATION;
+pub mod williams_variation;
+pub use williams_variation::WILLIAMS_VARIATION;
+pub mod breyer_variation;
+pub use breyer_variation::BREYER_VARIATION;

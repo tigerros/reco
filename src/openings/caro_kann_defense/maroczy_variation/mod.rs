@@ -101,6 +101,5 @@ pub const MAROCZY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod maroczy_gambit;
 pub use maroczy_gambit::MAROCZY_GAMBIT;

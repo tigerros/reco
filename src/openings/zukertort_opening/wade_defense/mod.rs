@@ -94,6 +94,5 @@ pub const WADE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod chigorin_plan;
 pub use chigorin_plan::CHIGORIN_PLAN;

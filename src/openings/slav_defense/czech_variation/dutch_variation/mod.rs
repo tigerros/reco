@@ -165,6 +165,5 @@ pub const DUTCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod samisch_variation;
 pub use samisch_variation::SAMISCH_VARIATION;

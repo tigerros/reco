@@ -162,6 +162,5 @@ pub const ZILBERMINTS_BENONI_GAMBIT: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod tamarkin_countergambit;
 pub use tamarkin_countergambit::TAMARKIN_COUNTERGAMBIT;

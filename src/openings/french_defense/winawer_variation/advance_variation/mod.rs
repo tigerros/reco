@@ -936,6 +936,5 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 8] = [
         },
     },
 ];
-
 pub mod moscow_variation;
 pub use moscow_variation::MOSCOW_VARIATION;

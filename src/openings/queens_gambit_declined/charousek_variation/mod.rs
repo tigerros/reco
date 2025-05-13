@@ -108,6 +108,5 @@ pub const CHAROUSEK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod miladinovic_gambit;
 pub use miladinovic_gambit::MILADINOVIC_GAMBIT;

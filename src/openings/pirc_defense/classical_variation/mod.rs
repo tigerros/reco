@@ -211,9 +211,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod schlechter_variation;
 pub use schlechter_variation::SCHLECHTER_VARIATION;
-
 pub mod quiet_system;
 pub use quiet_system::QUIET_SYSTEM;

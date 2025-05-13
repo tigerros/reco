@@ -115,6 +115,5 @@ pub const KNIGHT_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod normal_variation;
 pub use normal_variation::NORMAL_VARIATION;

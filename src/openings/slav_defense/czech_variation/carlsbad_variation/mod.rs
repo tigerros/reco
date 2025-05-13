@@ -178,6 +178,5 @@ pub const CARLSBAD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod morozevich_variation;
 pub use morozevich_variation::MOROZEVICH_VARIATION;

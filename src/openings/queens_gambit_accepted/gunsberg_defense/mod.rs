@@ -108,6 +108,5 @@ pub const GUNSBERG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod prianishenmo_gambit;
 pub use prianishenmo_gambit::PRIANISHENMO_GAMBIT;

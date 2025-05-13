@@ -239,6 +239,5 @@ pub const KASPAROV_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod botvinnik_attack;
 pub use botvinnik_attack::BOTVINNIK_ATTACK;

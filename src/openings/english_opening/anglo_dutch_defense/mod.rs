@@ -80,6 +80,5 @@ pub const ANGLO_DUTCH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod hickmann_gambit;
 pub use hickmann_gambit::HICKMANN_GAMBIT;

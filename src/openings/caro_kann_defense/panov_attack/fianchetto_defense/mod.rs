@@ -136,6 +136,5 @@ pub const FIANCHETTO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod fianchetto_gambit;
 pub use fianchetto_gambit::FIANCHETTO_GAMBIT;

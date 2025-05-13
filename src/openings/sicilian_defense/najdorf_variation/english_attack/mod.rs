@@ -143,6 +143,5 @@ pub const ENGLISH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod anti_english;
 pub use anti_english::ANTI_ENGLISH;

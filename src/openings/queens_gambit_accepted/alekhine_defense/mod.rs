@@ -108,12 +108,9 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod borisenko_furman_variation;
 pub use borisenko_furman_variation::BORISENKO_FURMAN_VARIATION;
-
 pub mod alatortsev_variation;
 pub use alatortsev_variation::ALATORTSEV_VARIATION;
-
 pub mod haberditz_variation;
 pub use haberditz_variation::HABERDITZ_VARIATION;

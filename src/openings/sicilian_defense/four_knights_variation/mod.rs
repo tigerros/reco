@@ -136,9 +136,7 @@ pub const FOUR_KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod cobra_variation;
 pub use cobra_variation::COBRA_VARIATION;
-
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;

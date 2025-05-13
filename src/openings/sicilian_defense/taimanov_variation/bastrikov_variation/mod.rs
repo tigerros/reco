@@ -267,9 +267,7 @@ pub const BASTRIKOV_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod ponomariov_gambit;
-pub use ponomariov_gambit::PONOMARIOV_GAMBIT;
-
 pub mod english_attack;
 pub use english_attack::ENGLISH_ATTACK;
+pub mod ponomariov_gambit;
+pub use ponomariov_gambit::PONOMARIOV_GAMBIT;

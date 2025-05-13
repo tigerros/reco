@@ -583,21 +583,15 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-
-pub mod with_a5;
-pub use with_a5::WITH_A5;
-
-pub mod with_a6;
-pub use with_a6::WITH_A6;
-
-pub mod albin_variation;
-pub use albin_variation::ALBIN_VARIATION;
-
-pub mod with_d6;
-pub use with_d6::WITH_D6;
-
-pub mod with_h6;
-pub use with_h6::WITH_H6;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod with_a5;
+pub use with_a5::WITH_A5;
+pub mod with_d6;
+pub use with_d6::WITH_D6;
+pub mod albin_variation;
+pub use albin_variation::ALBIN_VARIATION;
+pub mod with_h6;
+pub use with_h6::WITH_H6;
+pub mod with_a6;
+pub use with_a6::WITH_A6;

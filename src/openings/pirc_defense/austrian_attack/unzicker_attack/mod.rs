@@ -137,6 +137,5 @@ pub const UNZICKER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod bronstein_variation;
 pub use bronstein_variation::BRONSTEIN_VARIATION;

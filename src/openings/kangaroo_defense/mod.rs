@@ -94,3 +94,4 @@ pub const KANGAROO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod keres_defense;

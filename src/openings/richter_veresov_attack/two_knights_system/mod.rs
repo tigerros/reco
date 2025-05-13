@@ -115,6 +115,5 @@ pub const TWO_KNIGHTS_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod grunfeld_defense;
 pub use grunfeld_defense::GRUNFELD_DEFENSE;

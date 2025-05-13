@@ -141,72 +141,49 @@ pub const SCANDINAVIAN_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod zilbermints_gambit;
 pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
-
 pub mod richter_variation;
 pub use richter_variation::RICHTER_VARIATION;
-
-pub mod portuguese_gambit;
-pub use portuguese_gambit::PORTUGUESE_GAMBIT;
-
-pub mod kloosterboer_gambit;
-pub use kloosterboer_gambit::KLOOSTERBOER_GAMBIT;
-
-pub mod gubinsky_melts_defense;
-pub use gubinsky_melts_defense::GUBINSKY_MELTS_DEFENSE;
-
 pub mod lasker_variation;
 pub use lasker_variation::LASKER_VARIATION;
-
-pub mod boehnke_gambit;
-pub use boehnke_gambit::BOEHNKE_GAMBIT;
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
-pub mod bronstein_variation;
-pub use bronstein_variation::BRONSTEIN_VARIATION;
-
-pub mod icelandic_palme_gambit;
-pub use icelandic_palme_gambit::ICELANDIC_PALME_GAMBIT;
-
-pub mod kiel_variation;
-pub use kiel_variation::KIEL_VARIATION;
-
-pub mod kadas_gambit;
-pub use kadas_gambit::KADAS_GAMBIT;
-
-pub mod mieses_kotroc_variation;
-pub use mieses_kotroc_variation::MIESES_KOTROC_VARIATION;
-
-pub mod anderssen_counterattack;
-pub use anderssen_counterattack::ANDERSSEN_COUNTERATTACK;
-
-pub mod panov_transfer;
-pub use panov_transfer::PANOV_TRANSFER;
-
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
-
-pub mod grunfeld_variation;
-pub use grunfeld_variation::GRUNFELD_VARIATION;
-
-pub mod valencian_variation;
-pub use valencian_variation::VALENCIAN_VARIATION;
-
-pub mod blackburne_gambit;
-pub use blackburne_gambit::BLACKBURNE_GAMBIT;
-
+pub mod kloosterboer_gambit;
+pub use kloosterboer_gambit::KLOOSTERBOER_GAMBIT;
 pub mod blackburne_kloosterboer_gambit;
 pub use blackburne_kloosterboer_gambit::BLACKBURNE_KLOOSTERBOER_GAMBIT;
-
-pub mod schiller_pytel_variation;
-pub use schiller_pytel_variation::SCHILLER_PYTEL_VARIATION;
-
-pub mod marshall_variation;
-pub use marshall_variation::MARSHALL_VARIATION;
-
+pub mod panov_transfer;
+pub use panov_transfer::PANOV_TRANSFER;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
+pub mod kadas_gambit;
+pub use kadas_gambit::KADAS_GAMBIT;
+pub mod anderssen_counterattack;
+pub use anderssen_counterattack::ANDERSSEN_COUNTERATTACK;
+pub mod gubinsky_melts_defense;
+pub use gubinsky_melts_defense::GUBINSKY_MELTS_DEFENSE;
+pub mod grunfeld_variation;
+pub use grunfeld_variation::GRUNFELD_VARIATION;
+pub mod bronstein_variation;
+pub use bronstein_variation::BRONSTEIN_VARIATION;
+pub mod mieses_kotroc_variation;
+pub use mieses_kotroc_variation::MIESES_KOTROC_VARIATION;
+pub mod icelandic_palme_gambit;
+pub use icelandic_palme_gambit::ICELANDIC_PALME_GAMBIT;
+pub mod marshall_variation;
+pub use marshall_variation::MARSHALL_VARIATION;
+pub mod blackburne_gambit;
+pub use blackburne_gambit::BLACKBURNE_GAMBIT;
+pub mod schiller_pytel_variation;
+pub use schiller_pytel_variation::SCHILLER_PYTEL_VARIATION;
+pub mod valencian_variation;
+pub use valencian_variation::VALENCIAN_VARIATION;
+pub mod kiel_variation;
+pub use kiel_variation::KIEL_VARIATION;
+pub mod boehnke_gambit;
+pub use boehnke_gambit::BOEHNKE_GAMBIT;
+pub mod portuguese_gambit;
+pub use portuguese_gambit::PORTUGUESE_GAMBIT;

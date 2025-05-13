@@ -87,9 +87,7 @@ pub const PORTUGUESE_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod portuguese_gambit;
-pub use portuguese_gambit::PORTUGUESE_GAMBIT;
-
 pub mod miguel_gambit;
 pub use miguel_gambit::MIGUEL_GAMBIT;
+pub mod portuguese_gambit;
+pub use portuguese_gambit::PORTUGUESE_GAMBIT;

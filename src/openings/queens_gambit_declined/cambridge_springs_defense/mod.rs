@@ -281,18 +281,13 @@ pub const CAMBRIDGE_SPRINGS_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-
-pub mod capablanca_variation;
-pub use capablanca_variation::CAPABLANCA_VARIATION;
-
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
-
-pub mod yugoslav_variation;
-pub use yugoslav_variation::YUGOSLAV_VARIATION;
-
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod capablanca_variation;
+pub use capablanca_variation::CAPABLANCA_VARIATION;
 pub mod argentine_variation;
 pub use argentine_variation::ARGENTINE_VARIATION;
+pub mod yugoslav_variation;
+pub use yugoslav_variation::YUGOSLAV_VARIATION;

@@ -94,6 +94,5 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod greco_gambit;
 pub use greco_gambit::GRECO_GAMBIT;

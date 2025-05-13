@@ -187,6 +187,5 @@ pub const BERNSTEIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod exchange_line;
 pub use exchange_line::EXCHANGE_LINE;

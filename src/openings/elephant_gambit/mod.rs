@@ -94,12 +94,9 @@ pub const ELEPHANT_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod maroczy_gambit;
-pub use maroczy_gambit::MAROCZY_GAMBIT;
-
 pub mod paulsen_countergambit;
 pub use paulsen_countergambit::PAULSEN_COUNTERGAMBIT;
-
 pub mod wasp_variation;
 pub use wasp_variation::WASP_VARIATION;
+pub mod maroczy_gambit;
+pub use maroczy_gambit::MAROCZY_GAMBIT;

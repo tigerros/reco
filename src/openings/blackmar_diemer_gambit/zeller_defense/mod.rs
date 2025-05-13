@@ -108,6 +108,5 @@ pub const ZELLER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod soller_attack;
 pub use soller_attack::SOLLER_ATTACK;

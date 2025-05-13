@@ -108,30 +108,21 @@ pub const BOGO_INDIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod nimzowitsch_variation;
-pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
-
-pub mod wade_smyslov_variation;
-pub use wade_smyslov_variation::WADE_SMYSLOV_VARIATION;
-
-pub mod vitolins_variation;
-pub use vitolins_variation::VITOLINS_VARIATION;
-
-pub mod retreat_variation;
-pub use retreat_variation::RETREAT_VARIATION;
-
-pub mod grunfeld_variation;
-pub use grunfeld_variation::GRUNFELD_VARIATION;
-
-pub mod haiti_variation;
-pub use haiti_variation::HAITI_VARIATION;
-
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-
 pub mod new_england_variation;
 pub use new_england_variation::NEW_ENGLAND_VARIATION;
-
+pub mod haiti_variation;
+pub use haiti_variation::HAITI_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod grunfeld_variation;
+pub use grunfeld_variation::GRUNFELD_VARIATION;
+pub mod retreat_variation;
+pub use retreat_variation::RETREAT_VARIATION;
+pub mod nimzowitsch_variation;
+pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
+pub mod wade_smyslov_variation;
+pub use wade_smyslov_variation::WADE_SMYSLOV_VARIATION;
 pub mod monticelli_trap;
 pub use monticelli_trap::MONTICELLI_TRAP;
+pub mod vitolins_variation;
+pub use vitolins_variation::VITOLINS_VARIATION;

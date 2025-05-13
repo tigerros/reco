@@ -226,18 +226,13 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
-pub mod canal_variation;
-pub use canal_variation::CANAL_VARIATION;
-
 pub mod lucchini_gambit;
 pub use lucchini_gambit::LUCCHINI_GAMBIT;
-
 pub mod dubois_variation;
 pub use dubois_variation::DUBOIS_VARIATION;
-
+pub mod canal_variation;
+pub use canal_variation::CANAL_VARIATION;
 pub mod normal;
 pub use normal::NORMAL;
-
 pub mod italian_four_knights_variation;
 pub use italian_four_knights_variation::ITALIAN_FOUR_KNIGHTS_VARIATION;

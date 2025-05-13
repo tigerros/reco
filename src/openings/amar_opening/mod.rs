@@ -71,6 +71,5 @@ pub const AMAR_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod paris_gambit;
 pub use paris_gambit::PARIS_GAMBIT;

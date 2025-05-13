@@ -129,6 +129,5 @@ pub const PHILIDOR_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod schultz_variation;
 pub use schultz_variation::SCHULTZ_VARIATION;

@@ -101,6 +101,5 @@ pub const MIESES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod erben_gambit;
 pub use erben_gambit::ERBEN_GAMBIT;

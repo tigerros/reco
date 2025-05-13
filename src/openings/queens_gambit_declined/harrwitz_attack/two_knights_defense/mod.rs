@@ -144,6 +144,5 @@ pub const TWO_KNIGHTS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod blockade_line;
 pub use blockade_line::BLOCKADE_LINE;

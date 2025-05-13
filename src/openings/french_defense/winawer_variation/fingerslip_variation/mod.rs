@@ -115,12 +115,9 @@ pub const FINGERSLIP_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod kunin_double_gambit;
-pub use kunin_double_gambit::KUNIN_DOUBLE_GAMBIT;
-
-pub mod schwarzs_line;
-pub use schwarzs_line::SCHWARZS_LINE;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod kunin_double_gambit;
+pub use kunin_double_gambit::KUNIN_DOUBLE_GAMBIT;
+pub mod schwarzs_line;
+pub use schwarzs_line::SCHWARZS_LINE;

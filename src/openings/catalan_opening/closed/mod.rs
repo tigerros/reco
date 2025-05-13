@@ -1308,18 +1308,13 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
         },
     },
 ];
-
-pub mod botvinnik_variation;
-pub use botvinnik_variation::BOTVINNIK_VARIATION;
-
-pub mod sokolsky_variation;
-pub use sokolsky_variation::SOKOLSKY_VARIATION;
-
-pub mod zagoryansky_variation;
-pub use zagoryansky_variation::ZAGORYANSKY_VARIATION;
-
-pub mod spassky_gambit;
-pub use spassky_gambit::SPASSKY_GAMBIT;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod zagoryansky_variation;
+pub use zagoryansky_variation::ZAGORYANSKY_VARIATION;
+pub mod botvinnik_variation;
+pub use botvinnik_variation::BOTVINNIK_VARIATION;
+pub mod sokolsky_variation;
+pub use sokolsky_variation::SOKOLSKY_VARIATION;
+pub mod spassky_gambit;
+pub use spassky_gambit::SPASSKY_GAMBIT;

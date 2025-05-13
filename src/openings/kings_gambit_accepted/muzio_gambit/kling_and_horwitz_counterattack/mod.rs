@@ -1,18 +1,31 @@
-#[allow(unused_imports, clippy::enum_glob_use, reason = "because the code is generated, we don't know if it's going to be used")]
-use shakmaty::Move::*;
-#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
-use shakmaty::Role::{Pawn, Knight, Bishop, Rook, Queen, King};
-#[allow(clippy::enum_glob_use, reason = "there's 64 variants in this enum, importing them all is stupid")]
-use shakmaty::Square::*;
-#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use crate::{Code, Opening, Volume};
+use core::num::NonZeroU32;
+use core::panic;
+use deranged::RangedU8;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
 use shakmaty::Color::{Black, White};
+#[allow(
+    unused_imports,
+    clippy::enum_glob_use,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
+use shakmaty::Move::*;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
+use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
+#[allow(
+    clippy::enum_glob_use,
+    reason = "there's 64 variants in this enum, importing them all is stupid"
+)]
+use shakmaty::Square::*;
 use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
-use shakmaty::{ByRole, ByColor, Setup};
-use core::num::NonZeroU32;
-use crate::{Opening, Code, Volume};
-use deranged::RangedU8;
-use core::panic;
+use shakmaty::{ByColor, ByRole, Setup};
 
 /// King's Gambit Accepted: Muzio Gambit, Kling and Horwitz Counterattack.
 pub const KLING_AND_HORWITZ_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
@@ -23,76 +36,71 @@ pub const KLING_AND_HORWITZ_COUNTERATTACK: [Opening<'static, &str>; 1] = [Openin
     name: "King's Gambit Accepted",
     variation: &["Muzio Gambit", "Kling and Horwitz Counterattack"],
     moves: &[
-    Normal {
-        role: Pawn,
-        from: E2,
-        capture: None,
-        to: E4,
-        promotion: None,
-    },
-    Normal {
-        role: Pawn,
-        from: E7,
-        capture: None,
-        to: E5,
-        promotion: None,
-    },
-    Normal {
-        role: Pawn,
-        from: F2,
-        capture: None,
-        to: F4,
-        promotion: None,
-    },
-    Normal {
-        role: Pawn,
-        from: E5,
-        capture: Some(
-            Pawn,
-        ),
-        to: F4,
-        promotion: None,
-    },
-    Normal {
-        role: Knight,
-        from: G1,
-        capture: None,
-        to: F3,
-        promotion: None,
-    },
-    Normal {
-        role: Pawn,
-        from: G7,
-        capture: None,
-        to: G5,
-        promotion: None,
-    },
-    Normal {
-        role: Bishop,
-        from: F1,
-        capture: None,
-        to: C4,
-        promotion: None,
-    },
-    Normal {
-        role: Pawn,
-        from: G5,
-        capture: None,
-        to: G4,
-        promotion: None,
-    },
-    Castle {
-        king: E1,
-        rook: H1,
-    },
-    Normal {
-        role: Queen,
-        from: D8,
-        capture: None,
-        to: E7,
-        promotion: None,
-    },
-],
+        Normal {
+            role: Pawn,
+            from: E2,
+            capture: None,
+            to: E4,
+            promotion: None,
+        },
+        Normal {
+            role: Pawn,
+            from: E7,
+            capture: None,
+            to: E5,
+            promotion: None,
+        },
+        Normal {
+            role: Pawn,
+            from: F2,
+            capture: None,
+            to: F4,
+            promotion: None,
+        },
+        Normal {
+            role: Pawn,
+            from: E5,
+            capture: Some(Pawn),
+            to: F4,
+            promotion: None,
+        },
+        Normal {
+            role: Knight,
+            from: G1,
+            capture: None,
+            to: F3,
+            promotion: None,
+        },
+        Normal {
+            role: Pawn,
+            from: G7,
+            capture: None,
+            to: G5,
+            promotion: None,
+        },
+        Normal {
+            role: Bishop,
+            from: F1,
+            capture: None,
+            to: C4,
+            promotion: None,
+        },
+        Normal {
+            role: Pawn,
+            from: G5,
+            capture: None,
+            to: G4,
+            promotion: None,
+        },
+        Castle { king: E1, rook: H1 },
+        Normal {
+            role: Queen,
+            from: D8,
+            capture: None,
+            to: E7,
+            promotion: None,
+        },
+    ],
     setup: &Setup {
         board: Board::from_bitboards(
             ByRole {
@@ -101,12 +109,12 @@ pub const KLING_AND_HORWITZ_COUNTERATTACK: [Opening<'static, &str>; 1] = [Openin
                 bishop: Bitboard(2594073385432514564),
                 rook: Bitboard(9295429630892703777),
                 queen: Bitboard(4503599627370504),
-                king: Bitboard(1152921504606847040)
+                king: Bitboard(1152921504606847040),
             },
             ByColor {
                 black: Bitboard(17851987449530548224),
-                white: Bitboard(337694575)
-            }
+                white: Bitboard(337694575),
+            },
         ),
         promoted: Bitboard(0),
         pockets: None,
@@ -115,6 +123,10 @@ pub const KLING_AND_HORWITZ_COUNTERATTACK: [Opening<'static, &str>; 1] = [Openin
         ep_square: None,
         remaining_checks: None,
         halfmoves: 2,
-        fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) { fullmoves } else { panic!("fullmoves is zero") },
+        fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            fullmoves
+        } else {
+            panic!("fullmoves is zero")
+        },
     },
 }];

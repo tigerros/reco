@@ -640,57 +640,39 @@ pub const NAJDORF_VARIATION: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-
-pub mod amsterdam_variation;
-pub use amsterdam_variation::AMSTERDAM_VARIATION;
-
-pub mod dekker_gambit;
-pub use dekker_gambit::DEKKER_GAMBIT;
-
 pub mod opocensky_variation;
 pub use opocensky_variation::OPOCENSKY_VARIATION;
-
-pub mod poisoned_pawn_variation;
-pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;
-
-pub mod ivkov_variation;
-pub use ivkov_variation::IVKOV_VARIATION;
-
-pub mod freak_attack;
-pub use freak_attack::FREAK_ATTACK;
-
-pub mod english_attack;
-pub use english_attack::ENGLISH_ATTACK;
-
-pub mod browne_variation;
-pub use browne_variation::BROWNE_VARIATION;
-
-pub mod poisoned_pawn_accepted;
-pub use poisoned_pawn_accepted::POISONED_PAWN_ACCEPTED;
-
-pub mod neo_classical_defense;
-pub use neo_classical_defense::NEO_CLASSICAL_DEFENSE;
-
-pub mod lipnitsky_attack;
-pub use lipnitsky_attack::LIPNITSKY_ATTACK;
-
-pub mod adams_attack;
-pub use adams_attack::ADAMS_ATTACK;
-
-pub mod scheveningen_variation;
-pub use scheveningen_variation::SCHEVENINGEN_VARIATION;
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
-pub mod polugaevsky_variation;
-pub use polugaevsky_variation::POLUGAEVSKY_VARIATION;
-
 pub mod goteborg_variation;
 pub use goteborg_variation::GOTEBORG_VARIATION;
-
 pub mod zagreb_variation;
 pub use zagreb_variation::ZAGREB_VARIATION;
-
+pub mod lipnitsky_attack;
+pub use lipnitsky_attack::LIPNITSKY_ATTACK;
+pub mod browne_variation;
+pub use browne_variation::BROWNE_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod traditional_line;
 pub use traditional_line::TRADITIONAL_LINE;
+pub mod amsterdam_variation;
+pub use amsterdam_variation::AMSTERDAM_VARIATION;
+pub mod adams_attack;
+pub use adams_attack::ADAMS_ATTACK;
+pub mod scheveningen_variation;
+pub use scheveningen_variation::SCHEVENINGEN_VARIATION;
+pub mod dekker_gambit;
+pub use dekker_gambit::DEKKER_GAMBIT;
+pub mod poisoned_pawn_accepted;
+pub use poisoned_pawn_accepted::POISONED_PAWN_ACCEPTED;
+pub mod poisoned_pawn_variation;
+pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;
+pub mod polugaevsky_variation;
+pub use polugaevsky_variation::POLUGAEVSKY_VARIATION;
+pub mod neo_classical_defense;
+pub use neo_classical_defense::NEO_CLASSICAL_DEFENSE;
+pub mod english_attack;
+pub use english_attack::ENGLISH_ATTACK;
+pub mod freak_attack;
+pub use freak_attack::FREAK_ATTACK;
+pub mod ivkov_variation;
+pub use ivkov_variation::IVKOV_VARIATION;

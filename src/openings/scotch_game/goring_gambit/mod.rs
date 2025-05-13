@@ -115,12 +115,9 @@ pub const GORING_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
-pub mod bardeleben_variation;
-pub use bardeleben_variation::BARDELEBEN_VARIATION;
-
 pub mod double_pawn_sacrifice;
 pub use double_pawn_sacrifice::DOUBLE_PAWN_SACRIFICE;
+pub mod bardeleben_variation;
+pub use bardeleben_variation::BARDELEBEN_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;

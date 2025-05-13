@@ -333,27 +333,19 @@ pub const SEMI_TARRASCH_DEFENSE: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
-
-pub mod levenfish_variation;
-pub use levenfish_variation::LEVENFISH_VARIATION;
-
-pub mod krause_variation;
-pub use krause_variation::KRAUSE_VARIATION;
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
 pub mod pillsbury_variation;
 pub use pillsbury_variation::PILLSBURY_VARIATION;
-
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
+pub mod krause_variation;
+pub use krause_variation::KRAUSE_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
-
+pub mod levenfish_variation;
+pub use levenfish_variation::LEVENFISH_VARIATION;
 pub mod san_sebastian_variation;
 pub use san_sebastian_variation::SAN_SEBASTIAN_VARIATION;
-
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod kmoch_variation;
 pub use kmoch_variation::KMOCH_VARIATION;

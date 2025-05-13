@@ -122,6 +122,5 @@ pub const VIENNA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod quiet_variation;
 pub use quiet_variation::QUIET_VARIATION;

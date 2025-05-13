@@ -690,36 +690,25 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-
-pub mod zollner_gambit;
-pub use zollner_gambit::ZOLLNER_GAMBIT;
-
-pub mod bernard_defense;
-pub use bernard_defense::BERNARD_DEFENSE;
-
-pub mod grigoriev_variation;
-pub use grigoriev_variation::GRIGORIEV_VARIATION;
-
-pub mod maroczy_line;
-pub use maroczy_line::MAROCZY_LINE;
-
-pub mod battery_variation;
-pub use battery_variation::BATTERY_VARIATION;
-
-pub mod alekhine_line;
-pub use alekhine_line::ALEKHINE_LINE;
-
-pub mod spielmann_variation;
-pub use spielmann_variation::SPIELMANN_VARIATION;
-
-pub mod tartakower_line;
-pub use tartakower_line::TARTAKOWER_LINE;
-
-pub mod amsterdam_variation;
-pub use amsterdam_variation::AMSTERDAM_VARIATION;
-
 pub mod normal_line;
 pub use normal_line::NORMAL_LINE;
-
+pub mod bernard_defense;
+pub use bernard_defense::BERNARD_DEFENSE;
+pub mod spielmann_variation;
+pub use spielmann_variation::SPIELMANN_VARIATION;
+pub mod maroczy_line;
+pub use maroczy_line::MAROCZY_LINE;
 pub mod stockholm_attack;
 pub use stockholm_attack::STOCKHOLM_ATTACK;
+pub mod battery_variation;
+pub use battery_variation::BATTERY_VARIATION;
+pub mod grigoriev_variation;
+pub use grigoriev_variation::GRIGORIEV_VARIATION;
+pub mod zollner_gambit;
+pub use zollner_gambit::ZOLLNER_GAMBIT;
+pub mod tartakower_line;
+pub use tartakower_line::TARTAKOWER_LINE;
+pub mod amsterdam_variation;
+pub use amsterdam_variation::AMSTERDAM_VARIATION;
+pub mod alekhine_line;
+pub use alekhine_line::ALEKHINE_LINE;

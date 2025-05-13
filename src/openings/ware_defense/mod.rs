@@ -80,6 +80,5 @@ pub const WARE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod snagglepuss_defense;
 pub use snagglepuss_defense::SNAGGLEPUSS_DEFENSE;

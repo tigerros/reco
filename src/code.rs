@@ -1,4 +1,4 @@
-use crate::{Subcategory, Volume, volume};
+use crate::{Category, Volume, volume};
 use core::fmt::{Display, Formatter};
 use core::str::FromStr;
 use deranged::RangedU8;
@@ -8,7 +8,7 @@ use deranged::RangedU8;
 /// The A00-E99 code of an opening.
 pub struct Code {
     pub volume: Volume,
-    pub subcategory: Subcategory,
+    pub subcategory: Category,
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]

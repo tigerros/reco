@@ -80,12 +80,9 @@ pub const BORG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod borg_gambit;
 pub use borg_gambit::BORG_GAMBIT;
-
-pub mod troon_gambit;
-pub use troon_gambit::TROON_GAMBIT;
-
 pub mod zilbermints_gambit;
 pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
+pub mod troon_gambit;
+pub use troon_gambit::TROON_GAMBIT;

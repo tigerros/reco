@@ -101,6 +101,5 @@ pub const HALASZ_MC_DONNELL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod crocodile_variation;
 pub use crocodile_variation::CROCODILE_VARIATION;

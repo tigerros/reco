@@ -165,15 +165,11 @@ pub const DOUBLE_MUZIO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod bello_gambit;
-pub use bello_gambit::BELLO_GAMBIT;
-
-pub mod young_gambit;
-pub use young_gambit::YOUNG_GAMBIT;
-
 pub mod baldwin_gambit;
 pub use baldwin_gambit::BALDWIN_GAMBIT;
-
 pub mod paulsen_defense;
 pub use paulsen_defense::PAULSEN_DEFENSE;
+pub mod young_gambit;
+pub use young_gambit::YOUNG_GAMBIT;
+pub mod bello_gambit;
+pub use bello_gambit::BELLO_GAMBIT;

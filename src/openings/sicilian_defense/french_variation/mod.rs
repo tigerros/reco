@@ -94,12 +94,9 @@ pub const FRENCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod normal;
-pub use normal::NORMAL;
-
-pub mod open;
-pub use open::OPEN;
-
 pub mod westerinen_attack;
 pub use westerinen_attack::WESTERINEN_ATTACK;
+pub mod normal;
+pub use normal::NORMAL;
+pub mod open;
+pub use open::OPEN;

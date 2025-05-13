@@ -303,6 +303,5 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod hastings_defense;
 pub use hastings_defense::HASTINGS_DEFENSE;

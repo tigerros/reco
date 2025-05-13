@@ -108,9 +108,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod leonhardt_gambit;
-pub use leonhardt_gambit::LEONHARDT_GAMBIT;
-
 pub mod mieses_variation;
 pub use mieses_variation::MIESES_VARIATION;
+pub mod leonhardt_gambit;
+pub use leonhardt_gambit::LEONHARDT_GAMBIT;

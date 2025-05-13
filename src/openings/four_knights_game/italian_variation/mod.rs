@@ -211,6 +211,5 @@ pub const ITALIAN_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod noa_gambit;
 pub use noa_gambit::NOA_GAMBIT;

@@ -211,9 +211,7 @@ pub const PAULSEN_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod mariotti_gambit;
 pub use mariotti_gambit::MARIOTTI_GAMBIT;
-
 pub mod pollock_gambit;
 pub use pollock_gambit::POLLOCK_GAMBIT;

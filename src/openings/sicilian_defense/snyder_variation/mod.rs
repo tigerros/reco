@@ -87,6 +87,5 @@ pub const SNYDER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod queen_fianchetto_variation;
 pub use queen_fianchetto_variation::QUEEN_FIANCHETTO_VARIATION;

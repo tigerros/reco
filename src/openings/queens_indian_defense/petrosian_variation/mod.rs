@@ -115,6 +115,5 @@ pub const PETROSIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod farago_defense;
 pub use farago_defense::FARAGO_DEFENSE;

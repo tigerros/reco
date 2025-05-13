@@ -68,6 +68,6 @@ impl<'a> From<&'a OpeningOwned> for Opening<'a, String> {
 // #[cfg(test)]
 // mod tests {
 //     use super::*;
-//     
-//     
+//
+//
 // }

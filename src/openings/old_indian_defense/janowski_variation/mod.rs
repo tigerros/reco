@@ -108,12 +108,9 @@ pub const JANOWSKI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod grinberg_gambit;
 pub use grinberg_gambit::GRINBERG_GAMBIT;
-
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
-
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;

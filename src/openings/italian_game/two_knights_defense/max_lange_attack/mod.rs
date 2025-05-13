@@ -137,15 +137,11 @@ pub const MAX_LANGE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod krause_variation;
-pub use krause_variation::KRAUSE_VARIATION;
-
-pub mod berger_variation;
-pub use berger_variation::BERGER_VARIATION;
-
-pub mod loman_defense;
-pub use loman_defense::LOMAN_DEFENSE;
-
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod loman_defense;
+pub use loman_defense::LOMAN_DEFENSE;
+pub mod berger_variation;
+pub use berger_variation::BERGER_VARIATION;
+pub mod krause_variation;
+pub use krause_variation::KRAUSE_VARIATION;

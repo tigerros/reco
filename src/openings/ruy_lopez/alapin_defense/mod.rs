@@ -108,6 +108,5 @@ pub const ALAPIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod alapin_gambit;
 pub use alapin_gambit::ALAPIN_GAMBIT;

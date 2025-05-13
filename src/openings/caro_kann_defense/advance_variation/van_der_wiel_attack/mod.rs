@@ -246,6 +246,5 @@ pub const VAN_DER_WIEL_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod dreyev_defense;
 pub use dreyev_defense::DREYEV_DEFENSE;

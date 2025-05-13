@@ -151,6 +151,5 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod flohr_line;
 pub use flohr_line::FLOHR_LINE;

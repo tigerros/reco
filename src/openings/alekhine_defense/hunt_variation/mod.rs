@@ -129,12 +129,9 @@ pub const HUNT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod matsukevich_gambit;
-pub use matsukevich_gambit::MATSUKEVICH_GAMBIT;
-
-pub mod lasker_simul_gambit;
-pub use lasker_simul_gambit::LASKER_SIMUL_GAMBIT;
-
 pub mod mikenas_gambit;
 pub use mikenas_gambit::MIKENAS_GAMBIT;
+pub mod matsukevich_gambit;
+pub use matsukevich_gambit::MATSUKEVICH_GAMBIT;
+pub mod lasker_simul_gambit;
+pub use lasker_simul_gambit::LASKER_SIMUL_GAMBIT;

@@ -179,6 +179,5 @@ pub const BERNSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod luther_line;
 pub use luther_line::LUTHER_LINE;

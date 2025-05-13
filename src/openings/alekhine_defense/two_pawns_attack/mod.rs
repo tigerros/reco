@@ -101,12 +101,9 @@ pub const TWO_PAWNS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod mikenas_variation;
-pub use mikenas_variation::MIKENAS_VARIATION;
-
 pub mod lasker_variation;
 pub use lasker_variation::LASKER_VARIATION;
-
+pub mod mikenas_variation;
+pub use mikenas_variation::MIKENAS_VARIATION;
 pub mod tate_variation;
 pub use tate_variation::TATE_VARIATION;

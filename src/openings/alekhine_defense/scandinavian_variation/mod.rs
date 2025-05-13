@@ -94,9 +94,7 @@ pub const SCANDINAVIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod geschev_gambit;
 pub use geschev_gambit::GESCHEV_GAMBIT;
-
 pub mod myers_gambit;
 pub use myers_gambit::MYERS_GAMBIT;

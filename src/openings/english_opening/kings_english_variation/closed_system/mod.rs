@@ -129,6 +129,5 @@ pub const CLOSED_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod full_symmetry;
 pub use full_symmetry::FULL_SYMMETRY;

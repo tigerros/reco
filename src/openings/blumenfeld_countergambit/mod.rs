@@ -122,9 +122,7 @@ pub const BLUMENFELD_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod duz_khotimirsky_variation;
-pub use duz_khotimirsky_variation::DUZ_KHOTIMIRSKY_VARIATION;
-
 pub mod spielmann_variation;
 pub use spielmann_variation::SPIELMANN_VARIATION;
+pub mod duz_khotimirsky_variation;
+pub use duz_khotimirsky_variation::DUZ_KHOTIMIRSKY_VARIATION;

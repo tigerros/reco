@@ -136,6 +136,5 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod armenian_line;
 pub use armenian_line::ARMENIAN_LINE;

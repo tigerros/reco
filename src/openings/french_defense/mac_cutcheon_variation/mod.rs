@@ -122,39 +122,27 @@ pub const MAC_CUTCHEON_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod lasker_variation;
-pub use lasker_variation::LASKER_VARIATION;
-
-pub mod wolf_gambit;
-pub use wolf_gambit::WOLF_GAMBIT;
-
-pub mod grigoriev_variation;
-pub use grigoriev_variation::GRIGORIEV_VARIATION;
-
-pub mod tartakower_variation;
-pub use tartakower_variation::TARTAKOWER_VARIATION;
-
-pub mod janowski_variation;
-pub use janowski_variation::JANOWSKI_VARIATION;
-
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-
-pub mod duras_variation;
-pub use duras_variation::DURAS_VARIATION;
-
-pub mod bernstein_variation;
-pub use bernstein_variation::BERNSTEIN_VARIATION;
-
-pub mod dr_olland_variation;
-pub use dr_olland_variation::DR_OLLAND_VARIATION;
-
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
-
-pub mod chigorin_variation;
-pub use chigorin_variation::CHIGORIN_VARIATION;
-
+pub mod duras_variation;
+pub use duras_variation::DURAS_VARIATION;
+pub mod bernstein_variation;
+pub use bernstein_variation::BERNSTEIN_VARIATION;
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
+pub mod lasker_variation;
+pub use lasker_variation::LASKER_VARIATION;
+pub mod grigoriev_variation;
+pub use grigoriev_variation::GRIGORIEV_VARIATION;
+pub mod chigorin_variation;
+pub use chigorin_variation::CHIGORIN_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod wolf_gambit;
+pub use wolf_gambit::WOLF_GAMBIT;
+pub mod dr_olland_variation;
+pub use dr_olland_variation::DR_OLLAND_VARIATION;
+pub mod tartakower_variation;
+pub use tartakower_variation::TARTAKOWER_VARIATION;
+pub mod janowski_variation;
+pub use janowski_variation::JANOWSKI_VARIATION;

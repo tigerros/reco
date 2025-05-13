@@ -190,48 +190,34 @@ pub const ANGLO_INDIAN_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-
 pub mod anglo_grunfeld_variation;
 pub use anglo_grunfeld_variation::ANGLO_GRUNFELD_VARIATION;
-
-pub mod queens_indian_formation;
-pub use queens_indian_formation::QUEENS_INDIAN_FORMATION;
-
-pub mod queens_indian_variation;
-pub use queens_indian_variation::QUEENS_INDIAN_VARIATION;
-
 pub mod kings_indian_formation;
 pub use kings_indian_formation::KINGS_INDIAN_FORMATION;
-
-pub mod grunfeld_formation;
-pub use grunfeld_formation::GRUNFELD_FORMATION;
-
-pub mod slav_formation;
-pub use slav_formation::SLAV_FORMATION;
-
-pub mod hedgehog_system;
-pub use hedgehog_system::HEDGEHOG_SYSTEM;
-
-pub mod scandinavian_defense;
-pub use scandinavian_defense::SCANDINAVIAN_DEFENSE;
-
-pub mod queens_knight_variation;
-pub use queens_knight_variation::QUEENS_KNIGHT_VARIATION;
-
-pub mod romanishin_variation;
-pub use romanishin_variation::ROMANISHIN_VARIATION;
-
-pub mod zvjaginsev_krasenkow_attack;
-pub use zvjaginsev_krasenkow_attack::ZVJAGINSEV_KRASENKOW_ATTACK;
-
+pub mod queens_indian_variation;
+pub use queens_indian_variation::QUEENS_INDIAN_VARIATION;
 pub mod anti_anti_grunfeld;
 pub use anti_anti_grunfeld::ANTI_ANTI_GRUNFELD;
-
-pub mod old_indian_formation;
-pub use old_indian_formation::OLD_INDIAN_FORMATION;
-
+pub mod grunfeld_formation;
+pub use grunfeld_formation::GRUNFELD_FORMATION;
 pub mod nimzo_english;
 pub use nimzo_english::NIMZO_ENGLISH;
-
+pub mod romanishin_variation;
+pub use romanishin_variation::ROMANISHIN_VARIATION;
+pub mod flohr_mikenas_carls_variation;
+pub mod slav_formation;
+pub use slav_formation::SLAV_FORMATION;
+pub mod queens_knight_variation;
+pub use queens_knight_variation::QUEENS_KNIGHT_VARIATION;
+pub mod scandinavian_defense;
+pub use scandinavian_defense::SCANDINAVIAN_DEFENSE;
+pub mod hedgehog_system;
+pub use hedgehog_system::HEDGEHOG_SYSTEM;
 pub mod kings_knight_variation;
 pub use kings_knight_variation::KINGS_KNIGHT_VARIATION;
+pub mod queens_indian_formation;
+pub use queens_indian_formation::QUEENS_INDIAN_FORMATION;
+pub mod zvjaginsev_krasenkow_attack;
+pub use zvjaginsev_krasenkow_attack::ZVJAGINSEV_KRASENKOW_ATTACK;
+pub mod old_indian_formation;
+pub use old_indian_formation::OLD_INDIAN_FORMATION;

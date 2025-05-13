@@ -462,12 +462,9 @@ pub const NOA_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-
-pub mod botvinnik_variation;
-pub use botvinnik_variation::BOTVINNIK_VARIATION;
-
 pub mod san_remo_variation;
 pub use san_remo_variation::SAN_REMO_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod botvinnik_variation;
+pub use botvinnik_variation::BOTVINNIK_VARIATION;

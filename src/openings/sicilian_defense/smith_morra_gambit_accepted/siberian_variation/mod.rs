@@ -150,6 +150,5 @@ pub const SIBERIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod siberian_trap;
 pub use siberian_trap::SIBERIAN_TRAP;

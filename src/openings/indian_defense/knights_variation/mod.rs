@@ -87,6 +87,5 @@ pub const KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod alburt_miles_variation;
 pub use alburt_miles_variation::ALBURT_MILES_VARIATION;

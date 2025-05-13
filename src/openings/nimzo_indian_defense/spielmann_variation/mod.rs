@@ -115,12 +115,9 @@ pub const SPIELMANN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod carlsbad_variation;
-pub use carlsbad_variation::CARLSBAD_VARIATION;
-
-pub mod romanovsky_gambit;
-pub use romanovsky_gambit::ROMANOVSKY_GAMBIT;
-
 pub mod stahlberg_variation;
 pub use stahlberg_variation::STAHLBERG_VARIATION;
+pub mod carlsbad_variation;
+pub use carlsbad_variation::CARLSBAD_VARIATION;
+pub mod romanovsky_gambit;
+pub use romanovsky_gambit::ROMANOVSKY_GAMBIT;

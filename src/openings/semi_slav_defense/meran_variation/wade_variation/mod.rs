@@ -178,9 +178,7 @@ pub const WADE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
-pub mod larsen_variation;
-pub use larsen_variation::LARSEN_VARIATION;
-
 pub mod kaidanov_gambit;
 pub use kaidanov_gambit::KAIDANOV_GAMBIT;
+pub mod larsen_variation;
+pub use larsen_variation::LARSEN_VARIATION;

@@ -94,6 +94,5 @@ pub const BENONI_INDIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod kingside_move_order;
 pub use kingside_move_order::KINGSIDE_MOVE_ORDER;

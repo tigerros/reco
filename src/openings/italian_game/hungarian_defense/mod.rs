@@ -108,6 +108,5 @@ pub const HUNGARIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-
 pub mod tartakower_variation;
 pub use tartakower_variation::TARTAKOWER_VARIATION;
