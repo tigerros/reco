@@ -11,7 +11,5 @@ jobs:
         with:
           tool: cargo-hack
 
-      - name: Make stockfish executable
-        run: chmod +x resources/stockfish-ubuntu-x86-64-avx2
       - name: Test
         run: cargo hack test --feature-powerset --workspace --all-targets -q
