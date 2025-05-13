@@ -1,0 +1,16 @@
+
+
+pub mod horny_defense;
+pub use horny_defense::HORNY_DEFENSE;
+
+pub mod cook_variation;
+pub use cook_variation::COOK_VARIATION;
+
+pub mod schlechter_defense;
+pub use schlechter_defense::SCHLECHTER_DEFENSE;
+
+pub mod blackburne_gambit;
+pub use blackburne_gambit::BLACKBURNE_GAMBIT;
+
+pub mod urusov_attack;
+pub use urusov_attack::URUSOV_ATTACK;

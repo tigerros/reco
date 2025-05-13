@@ -2,23 +2,24 @@
 
 mod constants;
 
+use deunicode::deunicode;
 use heck::{ToShoutySnekCase, ToSnekCase};
 use http::header;
 use reco::OpeningOwned;
 use serde_json::Value;
 use shakmaty::uci::UciMove;
 use shakmaty::{Chess, EnPassantMode, Position};
+use std::collections::HashMap;
 use std::fs::{File, create_dir_all, exists, remove_dir_all, write};
 use std::io::{Cursor, Write};
-use std::iter;
 use std::str::FromStr;
 use std::time::Duration;
 use ureq::Agent;
 use zip::ZipArchive;
 
 fn main() {
-    println!("commit anything in the volume directories before running this script");
-    println!("only commit results if this script prints out \"success\"");
+    println!("commit anything in the openings directory before running this script");
+    println!("only commit results if this script prints out \"success\" and reco compiles");
 
     let (archive, commit_sha) = get_archive_and_commit();
     let mut archive = ZipArchive::new(Cursor::new(archive)).unwrap();
@@ -30,7 +31,11 @@ fn main() {
         .flexible(false)
         .from_reader(all_tsv);
 
-    let mut openings = Vec::new();
+    // The key is the full identifier of the opening.
+    // The first value is the original full name of the opening.
+    // The second value are all the "silent variations", those being different entries but having the
+    // same identifier. Each item is already a string of a const expression.
+    let mut openings = HashMap::<Vec<String>, (String, Vec<String>)>::new();
 
     for record in reader.records() {
         let record = record.unwrap();
@@ -52,13 +57,32 @@ fn main() {
 
         let setup = p.to_setup(EnPassantMode::Legal);
 
-        openings.push(OpeningOwned {
+        let mut identifier = variation.clone();
+        identifier.insert(0, name.clone());
+
+        for part in identifier.iter_mut() {
+            *part = deunicode(part);
+            // Queen's Gambit should be converted to QUEENS_GAMBIT, not QUEEN_S_GAMBIT
+            *part = part.replace('\'', "");
+            *part = part.trim().to_owned();
+
+            if part.starts_with(char::is_numeric) {
+                part.insert(0, 'N');
+            }
+        }
+
+        let (full_name, silent_variations) = openings
+            .entry(identifier)
+            .or_insert_with(|| (String::new(), Vec::new()));
+
+        *full_name = full_name_raw.to_owned();
+        silent_variations.push(get_opening_constant_expression_string(&OpeningOwned {
             code,
             name,
             variation,
             moves,
             setup,
-        });
+        }));
     }
 
     // Delete previous data
@@ -67,11 +91,11 @@ fn main() {
     }
 
     // Creates a directory for each opening and a module file, where the opening is stored.
-    for opening in &openings {
+    for (identifier, (full_name, silent_variations)) in &openings {
         let directory_path = format!(
             "src/openings/{}",
-            iter::once(&opening.name)
-                .chain(&opening.variation)
+            identifier
+                .iter()
                 .map(|s| s.to_snek_case())
                 .collect::<Vec<_>>()
                 .join("/")
@@ -93,8 +117,15 @@ fn main() {
             .open(file_path)
             .unwrap();
 
-        file.write_all(get_opening_constant_string(opening).as_bytes())
-            .unwrap();
+        file.write_all(
+            get_opening_constant_item_string(
+                identifier.last().unwrap(),
+                full_name,
+                &silent_variations,
+            )
+            .as_bytes(),
+        )
+        .unwrap();
     }
 
     // Each opening adds itself to the module file to the parent.
@@ -109,27 +140,30 @@ fn main() {
     // Unfortunately it will be written after the `sicilian::SICILIAN` constant item.
     // I don't see it as a huge problem because the files are generated anyway,
     // and doing it another way would probably make this script more complex.
-    for opening in &mut openings {
-        // Removed because we want to work with the parent opening
-        let Some(last_variation) = opening.variation.pop() else {
+    for (identifier, _) in &openings {
+        let mut identifier = identifier.clone();
+        // Removed because we want to work with the parent identifier
+        let Some(last_variation) = identifier.pop() else {
             continue;
         };
 
         let parent_mod_path = format!(
-            "src/openings/{}/{}/mod.rs",
-            opening.name.to_snek_case(),
-            opening
-                .variation
+            "src/openings/{}/mod.rs",
+            identifier
                 .iter()
                 .map(|s| s.to_snek_case())
                 .collect::<Vec<_>>()
                 .join("/")
         );
 
-        let mut parent_mod = File::options().append(true).open(parent_mod_path).unwrap();
+        let mut parent_mod = File::options()
+            .create(true)
+            .append(true)
+            .open(&parent_mod_path)
+            .unwrap();
 
         let mod_and_use = format!(
-            "pub mod {0};\npub use {0}::{1}",
+            "\n\npub mod {0};\npub use {0}::{1};",
             last_variation.to_snek_case(),
             last_variation.TO_SHOUTY_SNEK_CASE()
         );
@@ -139,14 +173,14 @@ fn main() {
 
     let top_level_opening_mods_and_uses = openings
         .iter()
-        .filter_map(|opening| {
-            if opening.variation.is_empty() {
+        .filter_map(|(identifier, _)| {
+            if identifier.len() > 1 {
                 None
             } else {
                 Some(format!(
                     "pub mod {0};\npub use {0}::{1};\n",
-                    opening.name.to_snek_case(),
-                    opening.name.TO_SHOUTY_SNEK_CASE()
+                    identifier[0].to_snek_case(),
+                    identifier[0].TO_SHOUTY_SNEK_CASE()
                 ))
             }
         })
@@ -154,7 +188,13 @@ fn main() {
 
     write(
         "src/openings/mod.rs",
-        top_level_opening_mods_and_uses.as_bytes(),
+        format!(
+            "#![allow(\
+                clippy::allow_attributes,\
+                reason = \"this module is generated, the allows don't know if they are going to be fulfilled\"\
+            )]\
+            {top_level_opening_mods_and_uses}",
+        ).as_bytes()
     )
     .unwrap();
     write("commit-run-source.txt", commit_sha).unwrap();
@@ -162,18 +202,29 @@ fn main() {
     println!("success");
 }
 
-/// Returns an item which is a constant of the given opening.
+/// Returns a string of a constant item declaration of an array of the `silent_variations`.
+///
+/// `identifier` is converted to SHOUTY_SNEK_CASE.
+fn get_opening_constant_item_string(
+    identifier: &str,
+    full_name: &str,
+    silent_variations: &[String],
+) -> String {
+    format!(
+        "\n\n/// {full_name}.\npub const {}: [Opening<'static, &str>; {}] = [{}];",
+        identifier.TO_SHOUTY_SNEK_CASE(),
+        silent_variations.len(),
+        silent_variations.join(", ")
+    )
+}
+
+/// Returns a string of a const expression which represents the given opening.
 ///
 /// Uses the last variation layer for the constant identifier, or the opening name if the
 /// variation is unspecified.
-fn get_opening_constant_string(opening: &OpeningOwned) -> String {
+fn get_opening_constant_expression_string(opening: &OpeningOwned) -> String {
     let name = &opening.name;
     let moves = &opening.moves;
-    let identifier = opening
-        .variation
-        .last()
-        .unwrap_or(&opening.name)
-        .TO_SHOUTY_SNEK_CASE();
     let volume = opening.code.volume;
     let subcategory = opening.code.subcategory;
     let variation_joined = opening
@@ -193,9 +244,7 @@ fn get_opening_constant_string(opening: &OpeningOwned) -> String {
     let fullmoves = opening.setup.fullmoves;
 
     format!(
-        r#"
-
-pub const {identifier}: Opening<'static, &str> = Opening {{
+        r#"Opening {{
     code: Code {{
         volume: Volume::{volume},
         subcategory: RangedU8::new_static::<{subcategory}>(),
@@ -227,7 +276,7 @@ pub const {identifier}: Opening<'static, &str> = Opening {{
         halfmoves: {halfmoves},
         fullmoves: if let Some(fullmoves) = NonZeroU32::new({fullmoves}) {{ fullmoves }} else {{ panic!("fullmoves is zero") }},
     }},
-}};"#,
+}}"#,
         by_role_bitboard.pawn.0,
         by_role_bitboard.knight.0,
         by_role_bitboard.bishop.0,

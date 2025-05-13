@@ -12,25 +12,32 @@ use shakmaty::{Move, Setup};
 /// Fields are borrowed in order to be compatible with constants.
 /// You can enable the `alloc` feature for an `OpeningOwned` struct.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct Opening<'a, Variation>
 where
     Variation: AsRef<str>,
 {
+    /// The ECO code of the opening.
+    ///
+    /// The C95 in `Ruy Lopez: Closed, Breyer`.
     pub code: Code,
     /// The top-level name of the opening.
+    ///
+    /// The `"Ruy Lopez"` in `Ruy Lopez: Closed, Breyer`.
     pub name: &'a str,
     /// The variation of the opening.
     /// Each item represents an extra layer of specificity.
+    ///
+    /// The `["Closed", "Breyer"]` in `Ruy Lopez: Closed, Breyer`.
     pub variation: &'a [Variation],
+    /// The moves of this opening.
     pub moves: &'a [Move],
+    /// The position that occurs after the last move in [`Self.moves`](Self#structfield.moves) is played.
     pub setup: &'a Setup,
 }
 
 #[cfg(feature = "alloc")]
 /// Owned version of [`Opening`].
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct OpeningOwned {
     /// See [`Opening.code`](Opening#structfield.code).
     pub code: Code,
@@ -57,3 +64,10 @@ impl<'a> From<&'a OpeningOwned> for Opening<'a, String> {
         }
     }
 }
+
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
+//     
+//     
+// }

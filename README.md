@@ -11,7 +11,7 @@ Specifically, this crate contains:
 
 ## Features
 - `alloc`: adds the `OpeningOwned` struct, which is an owned version of the `Opening` struct.
-- `serde`: enables serde support for all types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
+- `serde`: enables serde support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
 
 ## Sourcing
 The ECO entries are sourced using the (unpublished) `updater` crate (see the [repository](https://github.com/tigerros/reco)).

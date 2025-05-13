@@ -48,41 +48,14 @@
     reason = "triggers only on the generated bitboards"
 )]
 
-// #[expect(
-//     non_snake_case,
-//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-// )]
-// mod A;
-// #[expect(
-//     non_snake_case,
-//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-// )]
-// mod B;
-// #[expect(
-//     non_snake_case,
-//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-// )]
-// mod C;
-// #[expect(
-//     non_snake_case,
-//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-// )]
-// mod D;
-// #[expect(
-//     non_snake_case,
-//     reason = "ECO volumes are capitalized, and by being a single letter it would be confusing"
-// )]
-// mod E;
-// pub use A::*;
-// pub use B::*;
-// pub use C::*;
-// pub use D::*;
-// pub use E::*;
 pub mod code;
 mod opening;
+pub mod openings;
 pub mod volume;
 pub use code::Code;
-pub use opening::{Opening, OpeningOwned};
+pub use opening::Opening;
+#[cfg(feature = "alloc")]
+pub use opening::OpeningOwned;
 pub use volume::Volume;
 
 /// The 0-99 subcategory of an opening.
