@@ -1,0 +1,10 @@
+pub mod alekhine_system;
+pub use alekhine_system::ALEKHINE_SYSTEM;
+pub mod greco_variation;
+pub use greco_variation::GRECO_VARIATION;
+pub mod modern_defense;
+pub use modern_defense::MODERN_DEFENSE;
+pub mod rubinstein_defense;
+pub use rubinstein_defense::RUBINSTEIN_DEFENSE;
+pub mod mc_donnell_defense;
+pub use mc_donnell_defense::MC_DONNELL_DEFENSE;

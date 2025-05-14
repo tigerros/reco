@@ -1,0 +1,16 @@
+[package]
+name = "reco-book"
+version = "0.1.0"
+edition = "2024"
+description = "The ECO (Encyclopaedia of Chess Openings) book"
+categories = ["data-structures", "game-development", "no-std", "no-std::no-alloc", "api-bindings"]
+keywords = ["chess", "eco", "dataset", "lichess"]
+repository = "https://github.com/tigerros/reco"
+license = "GPL-3"
+rust-version = "1.85.1"
+
+[dependencies]
+constcat = "0.6.0"
+deranged = { workspace = true }
+reco-core = { workspace = true }
+shakmaty = { workspace = true }
