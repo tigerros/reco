@@ -1,5 +1,6 @@
 /// Where the script should generate the opening files.
-pub const GEN_DIR: &str = "crates/reco-book/src/generated";
+pub const GEN_DIR: &str = "crates/book/src/generated";
+pub const COMMIT_SOURCE_OUT: &str = "crates/book/commit-source.txt";
 pub const OWNER: &str = "lichess-org";
 pub const REPO: &str = "chess-openings";
 pub const BRANCH: &str = "master";

@@ -2,7 +2,7 @@
 
 mod constants;
 
-use crate::constants::{BRANCH, GEN_DIR, OWNER, REPO, WORKFLOW};
+use crate::constants::{BRANCH, COMMIT_SOURCE_OUT, GEN_DIR, OWNER, REPO, WORKFLOW};
 use deunicode::deunicode;
 use heck::{ToShoutySnekCase, ToSnekCase};
 use http::header;
@@ -271,7 +271,7 @@ fn main() {
         ).as_bytes()
     )
     .unwrap();
-    write("book-commit-source.txt", commit_sha).unwrap();
+    write(COMMIT_SOURCE_OUT, commit_sha).unwrap();
 
     println!("success");
 }
