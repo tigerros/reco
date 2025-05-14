@@ -145,7 +145,7 @@ pub const MILNER_BARRY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
 }];
 pub mod hector_variation;
 pub use hector_variation::HECTOR_VARIATION;
-pub mod sorensen_variation;
-pub use sorensen_variation::SORENSEN_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod sorensen_variation;
+pub use sorensen_variation::SORENSEN_VARIATION;

@@ -101,108 +101,6 @@ pub const RIO_DE_JANEIRO_VARIATION: [Opening<'static, &str>; 2] = [
                 to: E7,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(67272588287600384),
-                    knight: Bitboard(4398317043714),
-                    bishop: Bitboard(292733984369016836),
-                    rook: Bitboard(9295429630892703777),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606847040),
-                },
-                ByColor {
-                    black: Bitboard(11384822850050326528),
-                    white: Bitboard(8726308719),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703744),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<67>(),
-        },
-        name: "Ruy Lopez",
-        variation: &["Berlin Defense", "Rio de Janeiro Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F1,
-                capture: None,
-                to: B5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Castle { king: E1, rook: H1 },
-            Normal {
-                role: Knight,
-                from: F6,
-                capture: Some(Pawn),
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: E7,
-                promotion: None,
-            },
             Normal {
                 role: Queen,
                 from: D1,
@@ -333,6 +231,108 @@ pub const RIO_DE_JANEIRO_VARIATION: [Opening<'static, &str>; 2] = [
             remaining_checks: None,
             halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(14) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<67>(),
+        },
+        name: "Ruy Lopez",
+        variation: &["Berlin Defense", "Rio de Janeiro Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F1,
+                capture: None,
+                to: B5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Castle { king: E1, rook: H1 },
+            Normal {
+                role: Knight,
+                from: F6,
+                capture: Some(Pawn),
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: E7,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(67272588287600384),
+                    knight: Bitboard(4398317043714),
+                    bishop: Bitboard(292733984369016836),
+                    rook: Bitboard(9295429630892703777),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606847040),
+                },
+                ByColor {
+                    black: Bitboard(11384822850050326528),
+                    white: Bitboard(8726308719),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703744),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

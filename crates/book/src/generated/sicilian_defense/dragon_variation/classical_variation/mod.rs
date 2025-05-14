@@ -243,20 +243,34 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
                 to: E2,
                 promotion: None,
             },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: D4,
+                capture: None,
+                to: B3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(50463185936901888),
-                    knight: Bitboard(144150372582424576),
+                    knight: Bitboard(39582418993152),
                     bishop: Bitboard(306244774662246400),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11525670220580519936),
-                    white: Bitboard(404027289),
+                    black: Bitboard(11381559430551175168),
+                    white: Bitboard(269940633),
                 },
             ),
             promoted: Bitboard(0),
@@ -265,8 +279,8 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 5,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -508,34 +522,20 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
                 to: E2,
                 promotion: None,
             },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: D4,
-                capture: None,
-                to: B3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(50463185936901888),
-                    knight: Bitboard(39582418993152),
+                    knight: Bitboard(144150372582424576),
                     bishop: Bitboard(306244774662246400),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11381559430551175168),
-                    white: Bitboard(269940633),
+                    black: Bitboard(11525670220580519936),
+                    white: Bitboard(404027289),
                 },
             ),
             promoted: Bitboard(0),
@@ -544,8 +544,8 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 5,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -692,23 +692,23 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
 ];
 pub mod alekhine_line;
 pub use alekhine_line::ALEKHINE_LINE;
-pub mod zollner_gambit;
-pub use zollner_gambit::ZOLLNER_GAMBIT;
-pub mod bernard_defense;
-pub use bernard_defense::BERNARD_DEFENSE;
-pub mod battery_variation;
-pub use battery_variation::BATTERY_VARIATION;
-pub mod maroczy_line;
-pub use maroczy_line::MAROCZY_LINE;
-pub mod tartakower_line;
-pub use tartakower_line::TARTAKOWER_LINE;
 pub mod amsterdam_variation;
 pub use amsterdam_variation::AMSTERDAM_VARIATION;
-pub mod stockholm_attack;
-pub use stockholm_attack::STOCKHOLM_ATTACK;
+pub mod battery_variation;
+pub use battery_variation::BATTERY_VARIATION;
+pub mod bernard_defense;
+pub use bernard_defense::BERNARD_DEFENSE;
 pub mod grigoriev_variation;
 pub use grigoriev_variation::GRIGORIEV_VARIATION;
-pub mod spielmann_variation;
-pub use spielmann_variation::SPIELMANN_VARIATION;
+pub mod maroczy_line;
+pub use maroczy_line::MAROCZY_LINE;
 pub mod normal_line;
 pub use normal_line::NORMAL_LINE;
+pub mod spielmann_variation;
+pub use spielmann_variation::SPIELMANN_VARIATION;
+pub mod stockholm_attack;
+pub use stockholm_attack::STOCKHOLM_ATTACK;
+pub mod tartakower_line;
+pub use tartakower_line::TARTAKOWER_LINE;
+pub mod zollner_gambit;
+pub use zollner_gambit::ZOLLNER_GAMBIT;

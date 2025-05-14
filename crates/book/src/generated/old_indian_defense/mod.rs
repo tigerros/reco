@@ -155,18 +155,18 @@ pub const OLD_INDIAN_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
+pub mod aged_gibbon_gambit;
+pub use aged_gibbon_gambit::AGED_GIBBON_GAMBIT;
 pub mod czech_variation;
 pub mod duz_khotimirsky_variation;
 pub use duz_khotimirsky_variation::DUZ_KHOTIMIRSKY_VARIATION;
-pub mod ukrainian_variation;
-pub use ukrainian_variation::UKRAINIAN_VARIATION;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
-pub mod aged_gibbon_gambit;
-pub use aged_gibbon_gambit::AGED_GIBBON_GAMBIT;
-pub mod tartakower_indian;
-pub use tartakower_indian::TARTAKOWER_INDIAN;
 pub mod janowski_variation;
 pub use janowski_variation::JANOWSKI_VARIATION;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod tartakower_indian;
+pub use tartakower_indian::TARTAKOWER_INDIAN;
 pub mod two_knights_variation;
 pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
+pub mod ukrainian_variation;
+pub use ukrainian_variation::UKRAINIAN_VARIATION;

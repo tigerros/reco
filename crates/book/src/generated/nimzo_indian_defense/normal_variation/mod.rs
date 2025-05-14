@@ -213,17 +213,17 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
+pub mod bernstein_defense;
+pub use bernstein_defense::BERNSTEIN_DEFENSE;
+pub mod botvinnik_system;
+pub use botvinnik_system::BOTVINNIK_SYSTEM;
 pub mod classical_defense;
 pub use classical_defense::CLASSICAL_DEFENSE;
 pub mod gligoric_system;
 pub use gligoric_system::GLIGORIC_SYSTEM;
-pub mod samisch_deferred;
-pub use samisch_deferred::SAMISCH_DEFERRED;
-pub mod botvinnik_system;
-pub use botvinnik_system::BOTVINNIK_SYSTEM;
-pub mod bernstein_defense;
-pub use bernstein_defense::BERNSTEIN_DEFENSE;
-pub mod schlechter_defense;
-pub use schlechter_defense::SCHLECHTER_DEFENSE;
 pub mod ragozin_variation;
 pub use ragozin_variation::RAGOZIN_VARIATION;
+pub mod samisch_deferred;
+pub use samisch_deferred::SAMISCH_DEFERRED;
+pub mod schlechter_defense;
+pub use schlechter_defense::SCHLECHTER_DEFENSE;

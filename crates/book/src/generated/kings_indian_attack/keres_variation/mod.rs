@@ -65,20 +65,34 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
                 to: G4,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: F1,
+                capture: None,
+                to: G2,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: D7,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(69524353611513600),
-                    knight: Bitboard(4755801206505340930),
-                    bishop: Bitboard(2305843010287435812),
+                    knight: Bitboard(4613937818243170306),
+                    bishop: Bitboard(2305843010287452164),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18155980458200924160),
-                    white: Bitboard(6340543),
+                    black: Bitboard(18014117069938753536),
+                    white: Bitboard(6356895),
                 },
             ),
             promoted: Bitboard(0),
@@ -87,8 +101,8 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -131,34 +145,20 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
                 to: G4,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: F1,
-                capture: None,
-                to: G2,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: D7,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(69524353611513600),
-                    knight: Bitboard(4613937818243170306),
-                    bishop: Bitboard(2305843010287452164),
+                    knight: Bitboard(4755801206505340930),
+                    bishop: Bitboard(2305843010287435812),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18014117069938753536),
-                    white: Bitboard(6356895),
+                    black: Bitboard(18155980458200924160),
+                    white: Bitboard(6340543),
                 },
             ),
             promoted: Bitboard(0),
@@ -167,8 +167,8 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

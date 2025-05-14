@@ -101,11 +101,11 @@ pub const NYEZHMETDINOV_ROSSOLIMO_ATTACK: [Opening<'static, &str>; 1] = [Opening
         },
     },
 }];
-pub mod san_francisco_gambit;
-pub use san_francisco_gambit::SAN_FRANCISCO_GAMBIT;
+pub mod brooklyn_retreat_defense;
+pub use brooklyn_retreat_defense::BROOKLYN_RETREAT_DEFENSE;
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod gurgenidze_variation;
 pub use gurgenidze_variation::GURGENIDZE_VARIATION;
-pub mod brooklyn_retreat_defense;
-pub use brooklyn_retreat_defense::BROOKLYN_RETREAT_DEFENSE;
+pub mod san_francisco_gambit;
+pub use san_francisco_gambit::SAN_FRANCISCO_GAMBIT;

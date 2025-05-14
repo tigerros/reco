@@ -79,86 +79,6 @@ pub const CLOSED_VARIATION: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(65038346568656640),
-                    knight: Bitboard(144150372447946816),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(13828073991782268928),
-                    white: Bitboard(402714621),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<5>(),
-        },
-        name: "French Defense",
-        variation: &["Tarrasch Variation", "Closed Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: D2,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: E4,
@@ -225,6 +145,86 @@ pub const CLOSED_VARIATION: [Opening<'static, &str>; 2] = [
             remaining_checks: None,
             halfmoves: 1,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<5>(),
+        },
+        name: "French Defense",
+        variation: &["Tarrasch Variation", "Closed Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: D2,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(65038346568656640),
+                    knight: Bitboard(144150372447946816),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(13828073991782268928),
+                    white: Bitboard(402714621),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

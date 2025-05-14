@@ -73,6 +73,243 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
                 promotion: None,
             },
             Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: F6,
+                capture: None,
+                to: D7,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: F2,
+                capture: None,
+                to: F4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(63912532829587200),
+                    knight: Bitboard(146366987891900416),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(13829164724496891904),
+                    white: Bitboard(69392975805),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<11>(),
+        },
+        name: "French Defense",
+        variation: &["Steinitz Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: F6,
+                capture: None,
+                to: D7,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: F2,
+                capture: None,
+                to: F4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D4,
+                capture: Some(Pawn),
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(63912532695369472),
+                    knight: Bitboard(2256197860458560),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(13685053917287677952),
+                    white: Bitboard(86436530173),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<11>(),
+        },
+        name: "French Defense",
+        variation: &["Steinitz Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+            Normal {
                 role: Pawn,
                 from: A7,
                 capture: None,
@@ -107,12 +344,19 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
                 to: D7,
                 promotion: None,
             },
+            Normal {
+                role: Knight,
+                from: C3,
+                capture: None,
+                to: E2,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(64758039554615040),
-                    knight: Bitboard(146366987891900416),
+                    knight: Bitboard(146366987891642368),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
@@ -120,16 +364,16 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
                 },
                 ByColor {
                     black: Bitboard(13830010231758782464),
-                    white: Bitboard(68856113085),
+                    white: Bitboard(68855855037),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
+            halfmoves: 2,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
@@ -330,255 +574,11 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
                 to: D7,
                 promotion: None,
             },
-            Normal {
-                role: Knight,
-                from: C3,
-                capture: None,
-                to: E2,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(64758039554615040),
-                    knight: Bitboard(146366987891642368),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(13830010231758782464),
-                    white: Bitboard(68855855037),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<11>(),
-        },
-        name: "French Defense",
-        variation: &["Steinitz Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: F6,
-                capture: None,
-                to: D7,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: F2,
-                capture: None,
-                to: F4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D4,
-                capture: Some(Pawn),
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(63912532695369472),
-                    knight: Bitboard(2256197860458560),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(13685053917287677952),
-                    white: Bitboard(86436530173),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<11>(),
-        },
-        name: "French Defense",
-        variation: &["Steinitz Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: F6,
-                capture: None,
-                to: D7,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: F2,
-                capture: None,
-                to: F4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(63912532829587200),
                     knight: Bitboard(146366987891900416),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -586,13 +586,13 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13829164724496891904),
-                    white: Bitboard(69392975805),
+                    black: Bitboard(13830010231758782464),
+                    white: Bitboard(68856113085),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
@@ -607,9 +607,9 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
 ];
 pub mod boleslavsky_variation;
 pub use boleslavsky_variation::BOLESLAVSKY_VARIATION;
+pub mod bradford_attack_variation;
+pub use bradford_attack_variation::BRADFORD_ATTACK_VARIATION;
 pub mod brodsky_jones_variation;
 pub use brodsky_jones_variation::BRODSKY_JONES_VARIATION;
 pub mod gledhill_attack;
 pub use gledhill_attack::GLEDHILL_ATTACK;
-pub mod bradford_attack_variation;
-pub use bradford_attack_variation::BRADFORD_ATTACK_VARIATION;

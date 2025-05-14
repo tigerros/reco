@@ -72,30 +72,37 @@ pub const THREE_KNIGHTS_OPENING: [Opening<'static, &str>; 2] = [
                 to: C3,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: B4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588421820160),
                     knight: Bitboard(4611690416476258304),
-                    bishop: Bitboard(2594073385365405732),
+                    bishop: Bitboard(288230376185266212),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18297848277795602432),
+                    black: Bitboard(15992005268615462912),
                     white: Bitboard(270856125),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 4,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -145,37 +152,30 @@ pub const THREE_KNIGHTS_OPENING: [Opening<'static, &str>; 2] = [
                 to: C3,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: B4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588421820160),
                     knight: Bitboard(4611690416476258304),
-                    bishop: Bitboard(288230376185266212),
+                    bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(15992005268615462912),
+                    black: Bitboard(18297848277795602432),
                     white: Bitboard(270856125),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 4,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -183,11 +183,11 @@ pub const THREE_KNIGHTS_OPENING: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod steinitz_rosenthal_variation;
-pub use steinitz_rosenthal_variation::STEINITZ_ROSENTHAL_VARIATION;
-pub mod steinitz_defense;
-pub use steinitz_defense::STEINITZ_DEFENSE;
 pub mod schlechter_variation;
 pub use schlechter_variation::SCHLECHTER_VARIATION;
+pub mod steinitz_defense;
+pub use steinitz_defense::STEINITZ_DEFENSE;
+pub mod steinitz_rosenthal_variation;
+pub use steinitz_rosenthal_variation::STEINITZ_ROSENTHAL_VARIATION;
 pub mod winawer_defense;
 pub use winawer_defense::WINAWER_DEFENSE;

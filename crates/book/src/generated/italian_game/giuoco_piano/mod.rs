@@ -108,21 +108,21 @@ pub const GIUOCO_PIANO: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod rosentreter_variation;
-pub use rosentreter_variation::ROSENTRETER_VARIATION;
-pub mod therkatz_herzog_variation;
-pub use therkatz_herzog_variation::THERKATZ_HERZOG_VARIATION;
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod holzhausen_attack;
-pub use holzhausen_attack::HOLZHAUSEN_ATTACK;
-pub mod krause_variation;
-pub use krause_variation::KRAUSE_VARIATION;
 pub mod aitken_variation;
 pub use aitken_variation::AITKEN_VARIATION;
+pub mod bernstein_variation;
+pub use bernstein_variation::BERNSTEIN_VARIATION;
 pub mod cracow_variation;
 pub use cracow_variation::CRACOW_VARIATION;
 pub mod grecos_attack;
 pub use grecos_attack::GRECOS_ATTACK;
-pub mod bernstein_variation;
-pub use bernstein_variation::BERNSTEIN_VARIATION;
+pub mod holzhausen_attack;
+pub use holzhausen_attack::HOLZHAUSEN_ATTACK;
+pub mod krause_variation;
+pub use krause_variation::KRAUSE_VARIATION;
+pub mod rosentreter_variation;
+pub use rosentreter_variation::ROSENTRETER_VARIATION;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod therkatz_herzog_variation;
+pub use therkatz_herzog_variation::THERKATZ_HERZOG_VARIATION;

@@ -93,12 +93,19 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 2] = [
                 to: H4,
                 promotion: None,
             },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272519702341376),
-                    knight: Bitboard(4611690416608116738),
+                    knight: Bitboard(4611690416608378880),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(2147483656),
@@ -106,16 +113,16 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 2] = [
                 },
                 ByColor {
                     black: Bitboard(17721387458920185856),
-                    white: Bitboard(402712511),
+                    white: Bitboard(402974653),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
+            halfmoves: 2,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
@@ -187,19 +194,12 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 2] = [
                 to: H4,
                 promotion: None,
             },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272519702341376),
-                    knight: Bitboard(4611690416608378880),
+                    knight: Bitboard(4611690416608116738),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(2147483656),
@@ -207,16 +207,16 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 2] = [
                 },
                 ByColor {
                     black: Bitboard(17721387458920185856),
-                    white: Bitboard(402974653),
+                    white: Bitboard(402712511),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
+            halfmoves: 1,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {

@@ -268,11 +268,11 @@ pub const LASKER_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod teichmann_variation;
-pub use teichmann_variation::TEICHMANN_VARIATION;
+pub mod bernstein_variation;
+pub use bernstein_variation::BERNSTEIN_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod russian_variation;
 pub use russian_variation::RUSSIAN_VARIATION;
-pub mod bernstein_variation;
-pub use bernstein_variation::BERNSTEIN_VARIATION;
+pub mod teichmann_variation;
+pub use teichmann_variation::TEICHMANN_VARIATION;

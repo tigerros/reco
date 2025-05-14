@@ -549,7 +549,7 @@ pub const BREYER_DEFENSE: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod zaitsev_hybrid;
-pub use zaitsev_hybrid::ZAITSEV_HYBRID;
 pub mod quiet_variation;
 pub use quiet_variation::QUIET_VARIATION;
+pub mod zaitsev_hybrid;
+pub use zaitsev_hybrid::ZAITSEV_HYBRID;

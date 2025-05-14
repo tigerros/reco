@@ -143,30 +143,38 @@ pub const LARSEN_VARIATION: [Opening<'static, &str>; 2] = [
                 to: D7,
                 promotion: None,
             },
+            Castle { king: E1, rook: H1 },
+            Normal {
+                role: Pawn,
+                from: B7,
+                capture: None,
+                to: B6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(51580289885200640),
+                    pawn: Bitboard(51019538955034880),
                     knight: Bitboard(144115188075859968),
                     bishop: Bitboard(306244774728302596),
-                    rook: Bitboard(2377900603251622017),
+                    rook: Bitboard(2377900603251621921),
                     queen: Bitboard(2251799813685256),
-                    king: Bitboard(4611686018427387920),
+                    king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(7493778673711972352),
-                    white: Bitboard(470086045),
+                    black: Bitboard(7493217922781806592),
+                    white: Bitboard(470085997),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: White,
-            castling_rights: Bitboard(129),
+            castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 5,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -287,38 +295,30 @@ pub const LARSEN_VARIATION: [Opening<'static, &str>; 2] = [
                 to: D7,
                 promotion: None,
             },
-            Castle { king: E1, rook: H1 },
-            Normal {
-                role: Pawn,
-                from: B7,
-                capture: None,
-                to: B6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(51019538955034880),
+                    pawn: Bitboard(51580289885200640),
                     knight: Bitboard(144115188075859968),
                     bishop: Bitboard(306244774728302596),
-                    rook: Bitboard(2377900603251621921),
+                    rook: Bitboard(2377900603251622017),
                     queen: Bitboard(2251799813685256),
-                    king: Bitboard(4611686018427387968),
+                    king: Bitboard(4611686018427387920),
                 },
                 ByColor {
-                    black: Bitboard(7493217922781806592),
-                    white: Bitboard(470085997),
+                    black: Bitboard(7493778673711972352),
+                    white: Bitboard(470086045),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: White,
-            castling_rights: Bitboard(0),
+            castling_rights: Bitboard(129),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
+            halfmoves: 5,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

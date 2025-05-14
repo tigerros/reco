@@ -136,11 +136,11 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod mieses_line;
-pub use mieses_line::MIESES_LINE;
-pub mod czerniak_line;
-pub use czerniak_line::CZERNIAK_LINE;
-pub mod reifir_spielmann_line;
-pub use reifir_spielmann_line::REIFIR_SPIELMANN_LINE;
 pub mod carlsbad_line;
 pub use carlsbad_line::CARLSBAD_LINE;
+pub mod czerniak_line;
+pub use czerniak_line::CZERNIAK_LINE;
+pub mod mieses_line;
+pub use mieses_line::MIESES_LINE;
+pub mod reifir_spielmann_line;
+pub use reifir_spielmann_line::REIFIR_SPIELMANN_LINE;

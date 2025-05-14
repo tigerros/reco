@@ -51,20 +51,34 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
                 to: D6,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69533115609050880),
-                    knight: Bitboard(4755801206503243842),
+                    pawn: Bitboard(69533115743266560),
+                    knight: Bitboard(144150372447944770),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18444219595012177920),
-                    white: Bitboard(268496895),
+                    black: Bitboard(13832568760956878848),
+                    white: Bitboard(402712575),
                 },
             ),
             promoted: Bitboard(0),
@@ -73,8 +87,8 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -162,34 +176,20 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
                 to: D6,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69533115743266560),
-                    knight: Bitboard(144150372447944770),
+                    pawn: Bitboard(69533115609050880),
+                    knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13832568760956878848),
-                    white: Bitboard(402712575),
+                    black: Bitboard(18444219595012177920),
+                    white: Bitboard(268496895),
                 },
             ),
             promoted: Bitboard(0),
@@ -198,8 +198,8 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -287,21 +287,21 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod sveshnikov_system;
-pub use sveshnikov_system::SVESHNIKOV_SYSTEM;
 pub mod austrian_attack;
 pub use austrian_attack::AUSTRIAN_ATTACK;
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-pub mod chinese_variation;
-pub use chinese_variation::CHINESE_VARIATION;
 pub mod bayonet_attack;
 pub use bayonet_attack::BAYONET_ATTACK;
 pub mod byrne_variation;
 pub use byrne_variation::BYRNE_VARIATION;
+pub mod chinese_variation;
+pub use chinese_variation::CHINESE_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod kholmov_system;
+pub use kholmov_system::KHOLMOV_SYSTEM;
 pub mod n150_attack;
 pub use n150_attack::N150_ATTACK;
 pub mod roscher_gambit;
 pub use roscher_gambit::ROSCHER_GAMBIT;
-pub mod kholmov_system;
-pub use kholmov_system::KHOLMOV_SYSTEM;
+pub mod sveshnikov_system;
+pub use sveshnikov_system::SVESHNIKOV_SYSTEM;

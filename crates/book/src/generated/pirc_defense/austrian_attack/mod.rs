@@ -86,30 +86,45 @@ pub const AUSTRIAN_ATTACK: [Opening<'static, &str>; 2] = [
                 to: F4,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: G7,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+            Castle { king: E8, rook: H8 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(51589086514824960),
-                    knight: Bitboard(144150372448206912),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
+                    knight: Bitboard(144150372450304000),
+                    bishop: Bitboard(306244774661193764),
+                    rook: Bitboard(2377900603251622017),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    king: Bitboard(4611686018427387920),
                 },
                 ByColor {
-                    black: Bitboard(13814624731191574528),
-                    white: Bitboard(939837437),
+                    black: Bitboard(8068031606666821632),
+                    white: Bitboard(941934525),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
+            turn: White,
+            castling_rights: Bitboard(129),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -173,45 +188,30 @@ pub const AUSTRIAN_ATTACK: [Opening<'static, &str>; 2] = [
                 to: F4,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: G7,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-            Castle { king: E8, rook: H8 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(51589086514824960),
-                    knight: Bitboard(144150372450304000),
-                    bishop: Bitboard(306244774661193764),
-                    rook: Bitboard(2377900603251622017),
+                    knight: Bitboard(144150372448206912),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(4611686018427387920),
+                    king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(8068031606666821632),
-                    white: Bitboard(941934525),
+                    black: Bitboard(13814624731191574528),
+                    white: Bitboard(939837437),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
-            castling_rights: Bitboard(129),
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -219,13 +219,13 @@ pub const AUSTRIAN_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod unzicker_attack;
-pub use unzicker_attack::UNZICKER_ATTACK;
 pub mod dragon_formation;
 pub use dragon_formation::DRAGON_FORMATION;
-pub mod weiss_variation;
-pub use weiss_variation::WEISS_VARIATION;
 pub mod kurajica_variation;
 pub use kurajica_variation::KURAJICA_VARIATION;
 pub mod ljubojevic_variation;
 pub use ljubojevic_variation::LJUBOJEVIC_VARIATION;
+pub mod unzicker_attack;
+pub use unzicker_attack::UNZICKER_ATTACK;
+pub mod weiss_variation;
+pub use weiss_variation::WEISS_VARIATION;

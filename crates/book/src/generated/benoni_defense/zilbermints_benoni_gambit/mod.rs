@@ -52,65 +52,6 @@ pub const ZILBERMINTS_BENONI_GAMBIT: [Opening<'static, &str>; 2] = [
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: B2,
-                capture: None,
-                to: B4,
-                promotion: None,
-            },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(70650236502078720),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18445336716005867520),
-                    white: Bitboard(167835135),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::A,
-            category: RangedU8::new_static::<43>(),
-        },
-        name: "Benoni Defense",
-        variation: &["Zilbermints-Benoni Gambit"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
-            Normal {
                 role: Knight,
                 from: G1,
                 capture: None,
@@ -155,6 +96,65 @@ pub const ZILBERMINTS_BENONI_GAMBIT: [Opening<'static, &str>; 2] = [
             remaining_checks: None,
             halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::A,
+            category: RangedU8::new_static::<43>(),
+        },
+        name: "Benoni Defense",
+        variation: &["Zilbermints-Benoni Gambit"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: B2,
+                capture: None,
+                to: B4,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(70650236502078720),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18445336716005867520),
+                    white: Bitboard(167835135),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

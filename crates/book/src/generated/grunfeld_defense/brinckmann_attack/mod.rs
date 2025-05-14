@@ -117,7 +117,7 @@ pub const BRINCKMANN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
 }];
 pub mod grunfeld_gambit;
 pub use grunfeld_gambit::GRUNFELD_GAMBIT;
-pub mod reshevsky_gambit;
-pub use reshevsky_gambit::RESHEVSKY_GAMBIT;
 pub mod grunfeld_gambit_accepted;
 pub use grunfeld_gambit_accepted::GRUNFELD_GAMBIT_ACCEPTED;
+pub mod reshevsky_gambit;
+pub use reshevsky_gambit::RESHEVSKY_GAMBIT;

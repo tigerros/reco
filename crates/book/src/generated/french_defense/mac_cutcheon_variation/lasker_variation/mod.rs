@@ -121,20 +121,48 @@ pub const LASKER_VARIATION: [Opening<'static, &str>; 2] = [
                 to: C3,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: B2,
+                capture: Some(Bishop),
+                to: C3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: F6,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: D1,
+                capture: None,
+                to: G4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: G7,
+                capture: None,
+                to: G6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(29150355489089280),
-                    knight: Bitboard(144150372447944768),
-                    bishop: Bitboard(288230376151975968),
+                    pawn: Bitboard(11206325724046592),
+                    knight: Bitboard(144115188344291392),
+                    bishop: Bitboard(288230376151713824),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
+                    queen: Bitboard(576460753377165312),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11486342923038228480),
-                    white: Bitboard(68853755897),
+                    black: Bitboard(11468363709169008640),
+                    white: Bitboard(69927759345),
                 },
             ),
             promoted: Bitboard(0),
@@ -144,7 +172,7 @@ pub const LASKER_VARIATION: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -243,48 +271,20 @@ pub const LASKER_VARIATION: [Opening<'static, &str>; 2] = [
                 to: C3,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: B2,
-                capture: Some(Bishop),
-                to: C3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: F6,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Queen,
-                from: D1,
-                capture: None,
-                to: G4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: G7,
-                capture: None,
-                to: G6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(11206325724046592),
-                    knight: Bitboard(144115188344291392),
-                    bishop: Bitboard(288230376151713824),
+                    pawn: Bitboard(29150355489089280),
+                    knight: Bitboard(144150372447944768),
+                    bishop: Bitboard(288230376151975968),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460753377165312),
+                    queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11468363709169008640),
-                    white: Bitboard(69927759345),
+                    black: Bitboard(11486342923038228480),
+                    white: Bitboard(68853755897),
                 },
             ),
             promoted: Bitboard(0),
@@ -294,7 +294,7 @@ pub const LASKER_VARIATION: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

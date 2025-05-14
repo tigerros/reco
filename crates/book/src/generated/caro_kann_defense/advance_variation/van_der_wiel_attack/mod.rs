@@ -86,93 +86,6 @@ pub const VAN_DER_WIEL_ATTACK: [Opening<'static, &str>; 2] = [
                 to: C3,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(68402920600692480),
-                    knight: Bitboard(4755801206503505984),
-                    bishop: Bitboard(2305843146652647460),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18154859092705804288),
-                    white: Bitboard(68854015997),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::B,
-            category: RangedU8::new_static::<12>(),
-        },
-        name: "Caro-Kann Defense",
-        variation: &["Advance Variation", "Van der Wiel Attack"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: C8,
-                capture: None,
-                to: F5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: E7,
@@ -239,6 +152,93 @@ pub const VAN_DER_WIEL_ATTACK: [Opening<'static, &str>; 2] = [
             remaining_checks: None,
             halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::B,
+            category: RangedU8::new_static::<12>(),
+        },
+        name: "Caro-Kann Defense",
+        variation: &["Advance Variation", "Van der Wiel Attack"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: C8,
+                capture: None,
+                to: F5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(68402920600692480),
+                    knight: Bitboard(4755801206503505984),
+                    bishop: Bitboard(2305843146652647460),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18154859092705804288),
+                    white: Bitboard(68854015997),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

@@ -59,121 +59,6 @@ pub const OPOCENSKY_VARIATION: [Opening<'static, &str>; 2] = [
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C5,
-                capture: Some(Pawn),
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: F3,
-                capture: Some(Pawn),
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: A7,
-                capture: None,
-                to: A6,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F1,
-                capture: None,
-                to: E2,
-                promotion: None,
-            },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(68126840237123328),
-                    knight: Bitboard(144150372582424576),
-                    bishop: Bitboard(2594073385365409796),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(13831162485584953344),
-                    white: Bitboard(402978717),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::B,
-            category: RangedU8::new_static::<92>(),
-        },
-        name: "Sicilian Defense",
-        variation: &["Najdorf Variation", "Opocensky Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-            Normal {
                 role: Knight,
                 from: G8,
                 capture: None,
@@ -281,6 +166,121 @@ pub const OPOCENSKY_VARIATION: [Opening<'static, &str>; 2] = [
             remaining_checks: None,
             halfmoves: 3,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::B,
+            category: RangedU8::new_static::<92>(),
+        },
+        name: "Sicilian Defense",
+        variation: &["Najdorf Variation", "Opocensky Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C5,
+                capture: Some(Pawn),
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: F3,
+                capture: Some(Pawn),
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: A7,
+                capture: None,
+                to: A6,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F1,
+                capture: None,
+                to: E2,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(68126840237123328),
+                    knight: Bitboard(144150372582424576),
+                    bishop: Bitboard(2594073385365409796),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(13831162485584953344),
+                    white: Bitboard(402978717),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

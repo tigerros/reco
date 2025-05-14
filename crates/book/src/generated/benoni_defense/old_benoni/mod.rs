@@ -51,11 +51,25 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
                 to: C5,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D4,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(70650236468524800),
+                    pawn: Bitboard(68407266973382400),
                     knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -63,8 +77,8 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18445336716005867520),
-                    white: Bitboard(134281215),
+                    black: Bitboard(18443093712285204480),
+                    white: Bitboard(34359801855),
                 },
             ),
             promoted: Bitboard(0),
@@ -74,7 +88,7 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -162,25 +176,11 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
                 to: C5,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D4,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(68407266973382400),
+                    pawn: Bitboard(70650236468524800),
                     knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -188,8 +188,8 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18443093712285204480),
-                    white: Bitboard(34359801855),
+                    black: Bitboard(18445336716005867520),
+                    white: Bitboard(134281215),
                 },
             ),
             promoted: Bitboard(0),
@@ -199,7 +199,7 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

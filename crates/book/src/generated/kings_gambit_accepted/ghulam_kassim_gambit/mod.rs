@@ -100,20 +100,34 @@ pub const GHULAM_KASSIM_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: D4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: G4,
+                capture: Some(Knight),
+                to: F3,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: D1,
+                capture: Some(Pawn),
+                to: F3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(49258122937681664),
-                    knight: Bitboard(4755801206505340930),
+                    pawn: Bitboard(49258121863939840),
+                    knight: Bitboard(4755801206503243778),
                     bishop: Bitboard(2594073385432514564),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
+                    queen: Bitboard(576460752305520640),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18423944602206601216),
-                    white: Bitboard(471910303),
+                    black: Bitboard(18423944601132859392),
+                    white: Bitboard(471910295),
                 },
             ),
             promoted: Bitboard(0),
@@ -123,7 +137,7 @@ pub const GHULAM_KASSIM_GAMBIT: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -201,34 +215,20 @@ pub const GHULAM_KASSIM_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: D4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: G4,
-                capture: Some(Knight),
-                to: F3,
-                promotion: None,
-            },
-            Normal {
-                role: Queen,
-                from: D1,
-                capture: Some(Pawn),
-                to: F3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(49258121863939840),
-                    knight: Bitboard(4755801206503243778),
+                    pawn: Bitboard(49258122937681664),
+                    knight: Bitboard(4755801206505340930),
                     bishop: Bitboard(2594073385432514564),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752305520640),
+                    queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18423944601132859392),
-                    white: Bitboard(471910295),
+                    black: Bitboard(18423944602206601216),
+                    white: Bitboard(471910303),
                 },
             ),
             promoted: Bitboard(0),
@@ -238,7 +238,7 @@ pub const GHULAM_KASSIM_GAMBIT: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

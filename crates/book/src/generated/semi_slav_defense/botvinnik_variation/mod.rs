@@ -114,20 +114,62 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
                 to: E4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: B7,
+                capture: None,
+                to: B5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: H7,
+                capture: None,
+                to: H6,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: G5,
+                capture: None,
+                to: H4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: G7,
+                capture: None,
+                to: G5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: F3,
+                capture: Some(Pawn),
+                to: G5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63916810415694592),
-                    knight: Bitboard(144150372450304000),
-                    bishop: Bitboard(2594073660243312672),
+                    pawn: Bitboard(9451479463158528),
+                    knight: Bitboard(144150647326113792),
+                    bishop: Bitboard(2594073387512889376),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13826952455629307904),
-                    white: Bitboard(275282977721),
+                    black: Bitboard(13772487056225730560),
+                    white: Bitboard(345879405497),
                 },
             ),
             promoted: Bitboard(0),
@@ -137,7 +179,7 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -229,62 +271,20 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
                 to: E4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: B7,
-                capture: None,
-                to: B5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: H7,
-                capture: None,
-                to: H6,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: G5,
-                capture: None,
-                to: H4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: G7,
-                capture: None,
-                to: G5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: F3,
-                capture: Some(Pawn),
-                to: G5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(9451479463158528),
-                    knight: Bitboard(144150647326113792),
-                    bishop: Bitboard(2594073387512889376),
+                    pawn: Bitboard(63916810415694592),
+                    knight: Bitboard(144150372450304000),
+                    bishop: Bitboard(2594073660243312672),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13772487056225730560),
-                    white: Bitboard(345879405497),
+                    black: Bitboard(13826952455629307904),
+                    white: Bitboard(275282977721),
                 },
             ),
             promoted: Bitboard(0),
@@ -294,7 +294,7 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -302,11 +302,11 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod szabo_variation;
-pub use szabo_variation::SZABO_VARIATION;
-pub mod lilienthal_variation;
-pub use lilienthal_variation::LILIENTHAL_VARIATION;
 pub mod alatortsev_system;
 pub use alatortsev_system::ALATORTSEV_SYSTEM;
 pub mod ekstrom_variation;
 pub use ekstrom_variation::EKSTROM_VARIATION;
+pub mod lilienthal_variation;
+pub use lilienthal_variation::LILIENTHAL_VARIATION;
+pub mod szabo_variation;
+pub use szabo_variation::SZABO_VARIATION;

@@ -72,11 +72,18 @@ pub const MODERN_ATTACK: [Opening<'static, &str>; 2] = [
                 to: D4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: E5,
+                capture: Some(Pawn),
+                to: D4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588556035840),
+                    pawn: Bitboard(67272519836559104),
                     knight: Bitboard(144150372450041858),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -84,18 +91,18 @@ pub const MODERN_ATTACK: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13830308233769648128),
-                    white: Bitboard(404809663),
+                    black: Bitboard(13830308165184389120),
+                    white: Bitboard(270591935),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -145,18 +152,11 @@ pub const MODERN_ATTACK: [Opening<'static, &str>; 2] = [
                 to: D4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: E5,
-                capture: Some(Pawn),
-                to: D4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272519836559104),
+                    pawn: Bitboard(67272588556035840),
                     knight: Bitboard(144150372450041858),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -164,18 +164,18 @@ pub const MODERN_ATTACK: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13830308165184389120),
-                    white: Bitboard(270591935),
+                    black: Bitboard(13830308233769648128),
+                    white: Bitboard(404809663),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -183,19 +183,19 @@ pub const MODERN_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod center_variation;
-pub use center_variation::CENTER_VARIATION;
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod trifunovic_variation;
-pub use trifunovic_variation::TRIFUNOVIC_VARIATION;
-pub mod center_attack;
-pub use center_attack::CENTER_ATTACK;
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
 pub mod bardeleben_variation;
 pub use bardeleben_variation::BARDELEBEN_VARIATION;
+pub mod center_attack;
+pub use center_attack::CENTER_ATTACK;
+pub mod center_variation;
+pub use center_variation::CENTER_VARIATION;
 pub mod murrey_variation;
 pub use murrey_variation::MURREY_VARIATION;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
 pub mod tal_gambit;
 pub use tal_gambit::TAL_GAMBIT;
+pub mod trifunovic_variation;
+pub use trifunovic_variation::TRIFUNOVIC_VARIATION;

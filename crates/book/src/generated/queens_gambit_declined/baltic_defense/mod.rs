@@ -94,13 +94,13 @@ pub const BALTIC_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod pseudo_slav;
-pub use pseudo_slav::PSEUDO_SLAV;
 pub mod argentinian_gambit;
 pub use argentinian_gambit::ARGENTINIAN_GAMBIT;
+pub mod pseudo_chigorin;
+pub use pseudo_chigorin::PSEUDO_CHIGORIN;
+pub mod pseudo_slav;
+pub use pseudo_slav::PSEUDO_SLAV;
 pub mod queen_attack;
 pub use queen_attack::QUEEN_ATTACK;
 pub mod queen_attack_deferred;
 pub use queen_attack_deferred::QUEEN_ATTACK_DEFERRED;
-pub mod pseudo_chigorin;
-pub use pseudo_chigorin::PSEUDO_CHIGORIN;

@@ -153,107 +153,6 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: G2,
-                capture: None,
-                to: G3,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F1,
-                capture: None,
-                to: G2,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: E7,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(65038346371511040),
-                    knight: Bitboard(144150372450041858),
-                    bishop: Bitboard(292733975779098628),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(11526734582195945472),
-                    white: Bitboard(207680415),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::E,
-            category: RangedU8::new_static::<6>(),
-        },
-        name: "Catalan Opening",
-        variation: &["Closed"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C2,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E6,
-                promotion: None,
-            },
-            Normal {
                 role: Knight,
                 from: G1,
                 capture: None,
@@ -510,6 +409,107 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
     Opening {
         code: Code {
             volume: Volume::E,
+            category: RangedU8::new_static::<6>(),
+        },
+        name: "Catalan Opening",
+        variation: &["Closed"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C2,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: G2,
+                capture: None,
+                to: G3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F1,
+                capture: None,
+                to: G2,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: E7,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(65038346371511040),
+                    knight: Bitboard(144150372450041858),
+                    bishop: Bitboard(292733975779098628),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(11526734582195945472),
+                    white: Bitboard(207680415),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::E,
             category: RangedU8::new_static::<7>(),
         },
         name: "Catalan Opening",
@@ -704,20 +704,62 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
                 to: C2,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: C1,
+                capture: None,
+                to: F4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: B7,
+                capture: None,
+                to: B6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: D2,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: C8,
+                capture: None,
+                to: B7,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65038346371511040),
-                    knight: Bitboard(2286984187871234),
-                    bishop: Bitboard(292733975779098628),
+                    pawn: Bitboard(63356093849445120),
+                    knight: Bitboard(2286984187873280),
+                    bishop: Bitboard(5066550117679104),
                     rook: Bitboard(2377900603251621921),
                     queen: Bitboard(576460752303424512),
                     king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(7926106680113233920),
-                    white: Bitboard(207681383),
+                    black: Bitboard(7636757001124446208),
+                    white: Bitboard(1012985697),
                 },
             ),
             promoted: Bitboard(0),
@@ -726,8 +768,146 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 7,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::E,
+            category: RangedU8::new_static::<8>(),
+        },
+        name: "Catalan Opening",
+        variation: &["Closed"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C2,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: G2,
+                capture: None,
+                to: G3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F1,
+                capture: None,
+                to: G2,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: E7,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+            Castle { king: E8, rook: H8 },
+            Castle { king: E1, rook: H1 },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: D7,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: D1,
+                capture: None,
+                to: C2,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: B2,
+                capture: None,
+                to: B3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: B7,
+                capture: None,
+                to: B6,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(63356093581144320),
+                    knight: Bitboard(2286984187871234),
+                    bishop: Bitboard(292733975779098628),
+                    rook: Bitboard(2377900603251621921),
+                    queen: Bitboard(576460752303424512),
+                    king: Bitboard(4611686018427387968),
+                },
+                ByColor {
+                    black: Bitboard(7924424427322736640),
+                    white: Bitboard(207811943),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(0),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -952,32 +1132,11 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
                 to: C2,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: B2,
-                capture: None,
-                to: B3,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: B7,
-                capture: None,
-                to: B6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63356093581144320),
+                    pawn: Bitboard(65038346371511040),
                     knight: Bitboard(2286984187871234),
                     bishop: Bitboard(292733975779098628),
                     rook: Bitboard(2377900603251621921),
@@ -985,18 +1144,18 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
                     king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(7924424427322736640),
-                    white: Bitboard(207811943),
+                    black: Bitboard(7926106680113233920),
+                    white: Bitboard(207681383),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+            halfmoves: 7,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -1148,168 +1307,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             },
         },
     },
-    Opening {
-        code: Code {
-            volume: Volume::E,
-            category: RangedU8::new_static::<8>(),
-        },
-        name: "Catalan Opening",
-        variation: &["Closed"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C2,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: G2,
-                capture: None,
-                to: G3,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F1,
-                capture: None,
-                to: G2,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: E7,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-            Castle { king: E8, rook: H8 },
-            Castle { king: E1, rook: H1 },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: D7,
-                promotion: None,
-            },
-            Normal {
-                role: Queen,
-                from: D1,
-                capture: None,
-                to: C2,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: C1,
-                capture: None,
-                to: F4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: B7,
-                capture: None,
-                to: B6,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: D2,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: C8,
-                capture: None,
-                to: B7,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(63356093849445120),
-                    knight: Bitboard(2286984187873280),
-                    bishop: Bitboard(5066550117679104),
-                    rook: Bitboard(2377900603251621921),
-                    queen: Bitboard(576460752303424512),
-                    king: Bitboard(4611686018427387968),
-                },
-                ByColor {
-                    black: Bitboard(7636757001124446208),
-                    white: Bitboard(1012985697),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(0),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
 ];
-pub mod zagoryansky_variation;
-pub use zagoryansky_variation::ZAGORYANSKY_VARIATION;
 pub mod botvinnik_variation;
 pub use botvinnik_variation::BOTVINNIK_VARIATION;
 pub mod main_line;
@@ -1318,3 +1316,5 @@ pub mod sokolsky_variation;
 pub use sokolsky_variation::SOKOLSKY_VARIATION;
 pub mod spassky_gambit;
 pub use spassky_gambit::SPASSKY_GAMBIT;
+pub mod zagoryansky_variation;
+pub use zagoryansky_variation::ZAGORYANSKY_VARIATION;

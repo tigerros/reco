@@ -72,79 +72,6 @@ pub const RAPPORT_JOBAVA_SYSTEM: [Opening<'static, &str>; 3] = [
                 to: F4,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(69524353741551360),
-                    knight: Bitboard(144150372448206912),
-                    bishop: Bitboard(2594073385902276640),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(13832559999223595008),
-                    white: Bitboard(671414265),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::D,
-            category: RangedU8::new_static::<1>(),
-        },
-        name: "Rapport-Jobava System",
-        variation: &[],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: C1,
-                capture: None,
-                to: F4,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: E7,
@@ -256,6 +183,79 @@ pub const RAPPORT_JOBAVA_SYSTEM: [Opening<'static, &str>; 3] = [
             remaining_checks: None,
             halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::D,
+            category: RangedU8::new_static::<1>(),
+        },
+        name: "Rapport-Jobava System",
+        variation: &[],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: C1,
+                capture: None,
+                to: F4,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(69524353741551360),
+                    knight: Bitboard(144150372448206912),
+                    bishop: Bitboard(2594073385902276640),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(13832559999223595008),
+                    white: Bitboard(671414265),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

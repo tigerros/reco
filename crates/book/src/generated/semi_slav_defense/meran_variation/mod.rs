@@ -285,11 +285,25 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
                 to: A6,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: E3,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C6,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63073493252629248),
+                    pawn: Bitboard(63069112653374208),
                     knight: Bitboard(2286984188133376),
                     bishop: Bitboard(2594073385365929988),
                     rook: Bitboard(9295429630892703873),
@@ -297,8 +311,8 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13684245750471458816),
-                    white: Bitboard(138208157),
+                    black: Bitboard(13684241369604816896),
+                    white: Bitboard(405595037),
                 },
             ),
             promoted: Bitboard(0),
@@ -308,7 +322,7 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -435,25 +449,11 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
                 to: A6,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: E3,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C6,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63069112653374208),
+                    pawn: Bitboard(63073493252629248),
                     knight: Bitboard(2286984188133376),
                     bishop: Bitboard(2594073385365929988),
                     rook: Bitboard(9295429630892703873),
@@ -461,8 +461,8 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13684241369604816896),
-                    white: Bitboard(405595037),
+                    black: Bitboard(13684245750471458816),
+                    white: Bitboard(138208157),
                 },
             ),
             promoted: Bitboard(0),
@@ -472,7 +472,7 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -480,23 +480,23 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod rabinovich_variation;
-pub use rabinovich_variation::RABINOVICH_VARIATION;
-pub mod wade_variation;
-pub use wade_variation::WADE_VARIATION;
-pub mod old_variation;
-pub use old_variation::OLD_VARIATION;
-pub mod lundin_variation;
-pub use lundin_variation::LUNDIN_VARIATION;
-pub mod reynolds_variation;
-pub use reynolds_variation::REYNOLDS_VARIATION;
-pub mod stahlberg_variation;
-pub use stahlberg_variation::STAHLBERG_VARIATION;
-pub mod sozin_variation;
-pub use sozin_variation::SOZIN_VARIATION;
 pub mod blumenfeld_variation;
 pub use blumenfeld_variation::BLUMENFELD_VARIATION;
+pub mod lundin_variation;
+pub use lundin_variation::LUNDIN_VARIATION;
+pub mod old_variation;
+pub use old_variation::OLD_VARIATION;
 pub mod pirc_variation;
 pub use pirc_variation::PIRC_VARIATION;
+pub mod rabinovich_variation;
+pub use rabinovich_variation::RABINOVICH_VARIATION;
 pub mod rellstab_attack;
 pub use rellstab_attack::RELLSTAB_ATTACK;
+pub mod reynolds_variation;
+pub use reynolds_variation::REYNOLDS_VARIATION;
+pub mod sozin_variation;
+pub use sozin_variation::SOZIN_VARIATION;
+pub mod stahlberg_variation;
+pub use stahlberg_variation::STAHLBERG_VARIATION;
+pub mod wade_variation;
+pub use wade_variation::WADE_VARIATION;

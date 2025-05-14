@@ -65,20 +65,34 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
                 to: C6,
                 promotion: None,
             },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D5,
+                capture: Some(Pawn),
+                to: C4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69524353808659200),
-                    knight: Bitboard(4611690416473899074),
+                    pawn: Bitboard(69524319448920832),
+                    knight: Bitboard(4611690416474161216),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18300100043249549312),
-                    white: Bitboard(201389055),
+                    black: Bitboard(18300100008956919808),
+                    white: Bitboard(134542333),
                 },
             ),
             promoted: Bitboard(0),
@@ -87,8 +101,8 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -204,34 +218,20 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
                 to: C6,
                 promotion: None,
             },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D5,
-                capture: Some(Pawn),
-                to: C4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69524319448920832),
-                    knight: Bitboard(4611690416474161216),
+                    pawn: Bitboard(69524353808659200),
+                    knight: Bitboard(4611690416473899074),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18300100008956919808),
-                    white: Bitboard(134542333),
+                    black: Bitboard(18300100043249549312),
+                    white: Bitboard(201389055),
                 },
             ),
             promoted: Bitboard(0),
@@ -240,8 +240,8 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -249,15 +249,15 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
         },
     },
 ];
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod janowski_variation;
+pub use janowski_variation::JANOWSKI_VARIATION;
 pub mod lazard_gambit;
 pub use lazard_gambit::LAZARD_GAMBIT;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-pub mod janowski_variation;
-pub use janowski_variation::JANOWSKI_VARIATION;
 pub mod modern_gambit;
 pub use modern_gambit::MODERN_GAMBIT;
 pub mod tartakower_gambit;
 pub use tartakower_gambit::TARTAKOWER_GAMBIT;
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;

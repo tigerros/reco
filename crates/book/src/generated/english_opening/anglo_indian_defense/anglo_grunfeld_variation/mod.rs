@@ -86,11 +86,18 @@ pub const ANGLO_GRUNFELD_VARIATION: [Opening<'static, &str>; 4] = [
                 to: F3,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: G7,
+                capture: None,
+                to: G6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69524319247596288),
+                    pawn: Bitboard(51580289482291968),
                     knight: Bitboard(144115222437953536),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -98,18 +105,18 @@ pub const ANGLO_GRUNFELD_VARIATION: [Opening<'static, &str>; 4] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13832524814851506176),
+                    black: Bitboard(13814580785086201856),
                     white: Bitboard(2423741),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -173,18 +180,11 @@ pub const ANGLO_GRUNFELD_VARIATION: [Opening<'static, &str>; 4] = [
                 to: F3,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: G7,
-                capture: None,
-                to: G6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(51580289482291968),
+                    pawn: Bitboard(69524319247596288),
                     knight: Bitboard(144115222437953536),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -192,18 +192,18 @@ pub const ANGLO_GRUNFELD_VARIATION: [Opening<'static, &str>; 4] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13814580785086201856),
+                    black: Bitboard(13832524814851506176),
                     white: Bitboard(2423741),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

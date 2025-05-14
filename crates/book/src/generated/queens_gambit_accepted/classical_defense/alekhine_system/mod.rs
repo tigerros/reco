@@ -122,11 +122,18 @@ pub const ALEKHINE_SYSTEM: [Opening<'static, &str>; 2] = [
                 to: E2,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: B7,
+                capture: None,
+                to: B5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63632053749474048),
+                    pawn: Bitboard(63069112385987328),
                     knight: Bitboard(144150372450041858),
                     bishop: Bitboard(2594073385432514564),
                     rook: Bitboard(9295429630892703777),
@@ -134,18 +141,18 @@ pub const ALEKHINE_SYSTEM: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(13826667699230474240),
+                    black: Bitboard(13826104757866987520),
                     white: Bitboard(204534631),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -245,18 +252,11 @@ pub const ALEKHINE_SYSTEM: [Opening<'static, &str>; 2] = [
                 to: E2,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: B7,
-                capture: None,
-                to: B5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63069112385987328),
+                    pawn: Bitboard(63632053749474048),
                     knight: Bitboard(144150372450041858),
                     bishop: Bitboard(2594073385432514564),
                     rook: Bitboard(9295429630892703777),
@@ -264,18 +264,18 @@ pub const ALEKHINE_SYSTEM: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(13826104757866987520),
+                    black: Bitboard(13826667699230474240),
                     white: Bitboard(204534631),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -283,7 +283,7 @@ pub const ALEKHINE_SYSTEM: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod smyslov_variation;
-pub use smyslov_variation::SMYSLOV_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod smyslov_variation;
+pub use smyslov_variation::SMYSLOV_VARIATION;

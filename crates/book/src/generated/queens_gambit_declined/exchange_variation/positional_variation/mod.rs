@@ -100,11 +100,18 @@ pub const POSITIONAL_VARIATION: [Opening<'static, &str>; 2] = [
                 to: G5,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65020754114179840),
+                    pawn: Bitboard(63899252253848320),
                     knight: Bitboard(144150372448206912),
                     bishop: Bitboard(2594073660243312672),
                     rook: Bitboard(9295429630892703873),
@@ -112,18 +119,18 @@ pub const POSITIONAL_VARIATION: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13828056399596224512),
+                    black: Bitboard(13826934897735892992),
                     white: Bitboard(275012449273),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -201,18 +208,11 @@ pub const POSITIONAL_VARIATION: [Opening<'static, &str>; 2] = [
                 to: G5,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63899252253848320),
+                    pawn: Bitboard(65020754114179840),
                     knight: Bitboard(144150372448206912),
                     bishop: Bitboard(2594073660243312672),
                     rook: Bitboard(9295429630892703873),
@@ -220,18 +220,18 @@ pub const POSITIONAL_VARIATION: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13826934897735892992),
+                    black: Bitboard(13828056399596224512),
                     white: Bitboard(275012449273),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

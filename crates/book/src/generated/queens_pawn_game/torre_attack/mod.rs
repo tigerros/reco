@@ -103,7 +103,7 @@ pub const TORRE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
 }];
 pub mod breyer_variation;
 pub use breyer_variation::BREYER_VARIATION;
-pub mod grunfeld_variation;
-pub use grunfeld_variation::GRUNFELD_VARIATION;
 pub mod gossip_variation;
 pub use gossip_variation::GOSSIP_VARIATION;
+pub mod grunfeld_variation;
+pub use grunfeld_variation::GRUNFELD_VARIATION;

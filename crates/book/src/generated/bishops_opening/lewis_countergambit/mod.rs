@@ -79,20 +79,34 @@ pub const LEWIS_COUNTERGAMBIT: [Opening<'static, &str>; 2] = [
                 to: D5,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: C4,
+                capture: Some(Pawn),
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65020822968134400),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(288230393398689796),
+                    pawn: Bitboard(65020788608396032),
+                    knight: Bitboard(144150372447944770),
+                    bishop: Bitboard(288230427691319300),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(16133864310337175552),
-                    white: Bitboard(335866847),
+                    black: Bitboard(11522213441922138112),
+                    white: Bitboard(34628496351),
                 },
             ),
             promoted: Bitboard(0),
@@ -101,8 +115,8 @@ pub const LEWIS_COUNTERGAMBIT: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -159,34 +173,20 @@ pub const LEWIS_COUNTERGAMBIT: [Opening<'static, &str>; 2] = [
                 to: D5,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: C4,
-                capture: Some(Pawn),
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65020788608396032),
-                    knight: Bitboard(144150372447944770),
-                    bishop: Bitboard(288230427691319300),
+                    pawn: Bitboard(65020822968134400),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(288230393398689796),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11522213441922138112),
-                    white: Bitboard(34628496351),
+                    black: Bitboard(16133864310337175552),
+                    white: Bitboard(335866847),
                 },
             ),
             promoted: Bitboard(0),
@@ -195,8 +195,8 @@ pub const LEWIS_COUNTERGAMBIT: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

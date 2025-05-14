@@ -116,20 +116,34 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
                 to: B2,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: D2,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65038346301400320),
-                    knight: Bitboard(2286984187871234),
+                    pawn: Bitboard(63916844441068800),
+                    knight: Bitboard(2286984187873280),
                     bishop: Bitboard(288239172245258752),
                     rook: Bitboard(2377900603251621921),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(7921611876578885632),
-                    white: Bitboard(138078059),
+                    black: Bitboard(7920490374718554112),
+                    white: Bitboard(138080105),
                 },
             ),
             promoted: Bitboard(0),
@@ -138,8 +152,8 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
             castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -357,34 +371,20 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
                 to: B2,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: D2,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63916844441068800),
-                    knight: Bitboard(2286984187873280),
+                    pawn: Bitboard(65038346301400320),
+                    knight: Bitboard(2286984187871234),
                     bishop: Bitboard(288239172245258752),
                     rook: Bitboard(2377900603251621921),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(7920490374718554112),
-                    white: Bitboard(138080105),
+                    black: Bitboard(7921611876578885632),
+                    white: Bitboard(138078059),
                 },
             ),
             promoted: Bitboard(0),
@@ -393,8 +393,8 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
             castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

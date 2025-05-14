@@ -232,11 +232,11 @@ pub const CHAROUSEK_GAMBIT: [Opening<'static, &str>; 2] = [
         },
     },
 ];
+pub mod keres_variation;
+pub use keres_variation::KERES_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod morphy_defense;
 pub use morphy_defense::MORPHY_DEFENSE;
 pub mod old_line;
 pub use old_line::OLD_LINE;
-pub mod keres_variation;
-pub use keres_variation::KERES_VARIATION;

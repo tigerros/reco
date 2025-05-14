@@ -65,11 +65,18 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69524353607331584),
+                    pawn: Bitboard(69524353741547264),
                     knight: Bitboard(144150372447944770),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -78,16 +85,16 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
                 },
                 ByColor {
                     black: Bitboard(13832559964863856640),
-                    white: Bitboard(34359799807),
+                    white: Bitboard(34494015487),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
+            halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
@@ -131,18 +138,11 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69524353741547264),
+                    pawn: Bitboard(69524353607331584),
                     knight: Bitboard(144150372447944770),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -151,16 +151,16 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
                 },
                 ByColor {
                     black: Bitboard(13832559964863856640),
-                    white: Bitboard(34494015487),
+                    white: Bitboard(34359799807),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
+            halfmoves: 1,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
@@ -169,7 +169,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod wing_gambit;
-pub use wing_gambit::WING_GAMBIT;
 pub mod gipslis_variation;
 pub use gipslis_variation::GIPSLIS_VARIATION;
+pub mod wing_gambit;
+pub use wing_gambit::WING_GAMBIT;

@@ -93,11 +93,18 @@ pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
                 to: B6,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: A2,
+                capture: None,
+                to: A4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588455374080),
+                    pawn: Bitboard(67272588472151040),
                     knight: Bitboard(4611690416475996162),
                     bishop: Bitboard(288232575242076164),
                     rook: Bitboard(9295429630892703873),
@@ -106,16 +113,16 @@ pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
                 },
                 ByColor {
                     black: Bitboard(15992007467605164032),
-                    white: Bitboard(371256735),
+                    white: Bitboard(388033695),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
+            halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
@@ -187,18 +194,11 @@ pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
                 to: B6,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: A2,
-                capture: None,
-                to: A4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588472151040),
+                    pawn: Bitboard(67272588455374080),
                     knight: Bitboard(4611690416475996162),
                     bishop: Bitboard(288232575242076164),
                     rook: Bitboard(9295429630892703873),
@@ -207,16 +207,16 @@ pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
                 },
                 ByColor {
                     black: Bitboard(15992007467605164032),
-                    white: Bitboard(388033695),
+                    white: Bitboard(371256735),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
+            halfmoves: 1,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
@@ -225,6 +225,8 @@ pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
         },
     },
 ];
+pub mod cordel_variation;
+pub use cordel_variation::CORDEL_VARIATION;
 pub mod hicken_variation;
 pub use hicken_variation::HICKEN_VARIATION;
 pub mod hirschbach_variation;
@@ -237,5 +239,3 @@ pub mod showalter_variation;
 pub use showalter_variation::SHOWALTER_VARIATION;
 pub mod vasquez_variation;
 pub use vasquez_variation::VASQUEZ_VARIATION;
-pub mod cordel_variation;
-pub use cordel_variation::CORDEL_VARIATION;

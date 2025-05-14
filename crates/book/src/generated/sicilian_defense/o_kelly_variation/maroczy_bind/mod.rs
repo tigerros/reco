@@ -101,9 +101,9 @@ pub const MAROCZY_BIND: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod robatsch_line;
-pub use robatsch_line::ROBATSCH_LINE;
-pub mod paulsen_line;
-pub use paulsen_line::PAULSEN_LINE;
 pub mod geller_line;
 pub use geller_line::GELLER_LINE;
+pub mod paulsen_line;
+pub use paulsen_line::PAULSEN_LINE;
+pub mod robatsch_line;
+pub use robatsch_line::ROBATSCH_LINE;

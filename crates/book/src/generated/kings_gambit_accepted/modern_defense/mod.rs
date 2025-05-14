@@ -79,11 +79,18 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: D5,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: Some(Pawn),
+                to: D5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65020754785259264),
+                    pawn: Bitboard(65020754516823808),
                     knight: Bitboard(4755801206505340930),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -91,13 +98,13 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18439707234188394496),
-                    white: Bitboard(270585791),
+                    black: Bitboard(18439707199828656128),
+                    white: Bitboard(34361888703),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
@@ -159,18 +166,11 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: D5,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: Some(Pawn),
-                to: D5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65020754516823808),
+                    pawn: Bitboard(65020754785259264),
                     knight: Bitboard(4755801206505340930),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -178,13 +178,13 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18439707199828656128),
-                    white: Bitboard(34361888703),
+                    black: Bitboard(18439707234188394496),
+                    white: Bitboard(270585791),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,

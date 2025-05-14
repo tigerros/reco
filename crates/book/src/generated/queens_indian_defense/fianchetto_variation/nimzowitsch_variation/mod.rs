@@ -122,9 +122,9 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod quiet_line;
-pub use quiet_line::QUIET_LINE;
 pub mod nimzowitsch_attack;
 pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
+pub mod quiet_line;
+pub use quiet_line::QUIET_LINE;
 pub mod timmans_line;
 pub use timmans_line::TIMMANS_LINE;

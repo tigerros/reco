@@ -65,72 +65,6 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
                 to: C5,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(67272588958682880),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(288230393331580964),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(16136116075791122432),
-                    white: Bitboard(805359615),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<30>(),
-        },
-        name: "King's Gambit Declined",
-        variation: &["Classical Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: F2,
-                capture: None,
-                to: F4,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
             Normal {
                 role: Knight,
                 from: G1,
@@ -182,12 +116,78 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             },
         },
     },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<30>(),
+        },
+        name: "King's Gambit Declined",
+        variation: &["Classical Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: F2,
+                capture: None,
+                to: F4,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(67272588958682880),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(288230393331580964),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(16136116075791122432),
+                    white: Bitboard(805359615),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
 ];
-pub mod rubinstein_countergambit;
-pub use rubinstein_countergambit::RUBINSTEIN_COUNTERGAMBIT;
-pub mod rotlewi_countergambit;
-pub use rotlewi_countergambit::ROTLEWI_COUNTERGAMBIT;
-pub mod walthoffen_attack;
-pub use walthoffen_attack::WALTHOFFEN_ATTACK;
 pub mod euwe_attack;
 pub use euwe_attack::EUWE_ATTACK;
+pub mod rotlewi_countergambit;
+pub use rotlewi_countergambit::ROTLEWI_COUNTERGAMBIT;
+pub mod rubinstein_countergambit;
+pub use rubinstein_countergambit::RUBINSTEIN_COUNTERGAMBIT;
+pub mod walthoffen_attack;
+pub use walthoffen_attack::WALTHOFFEN_ATTACK;

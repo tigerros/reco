@@ -72,20 +72,34 @@ pub const OPEN: [Opening<'static, &str>; 4] = [
                 to: D4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: C5,
+                capture: Some(Pawn),
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: F3,
+                capture: Some(Pawn),
+                to: D4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(70650236736956160),
-                    knight: Bitboard(4611690416475996162),
+                    pawn: Bitboard(70650219422869248),
+                    knight: Bitboard(4611690416608116738),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18301225925976522752),
-                    white: Bitboard(404809663),
+                    black: Bitboard(18301225908796653568),
+                    white: Bitboard(402712511),
                 },
             ),
             promoted: Bitboard(0),
@@ -95,7 +109,7 @@ pub const OPEN: [Opening<'static, &str>; 4] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -225,34 +239,20 @@ pub const OPEN: [Opening<'static, &str>; 4] = [
                 to: D4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: C5,
-                capture: Some(Pawn),
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: F3,
-                capture: Some(Pawn),
-                to: D4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(70650219422869248),
-                    knight: Bitboard(4611690416608116738),
+                    pawn: Bitboard(70650236736956160),
+                    knight: Bitboard(4611690416475996162),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18301225908796653568),
-                    white: Bitboard(402712511),
+                    black: Bitboard(18301225925976522752),
+                    white: Bitboard(404809663),
                 },
             ),
             promoted: Bitboard(0),
@@ -262,7 +262,7 @@ pub const OPEN: [Opening<'static, &str>; 4] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

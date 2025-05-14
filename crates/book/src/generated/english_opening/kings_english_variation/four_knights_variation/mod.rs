@@ -79,86 +79,6 @@ pub const FOUR_KNIGHTS_VARIATION: [Opening<'static, &str>; 2] = [
                 to: C6,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(67272588220496640),
-                    knight: Bitboard(39582420959232),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(13686197443740303360),
-                    white: Bitboard(69532605),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 4,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::A,
-            category: RangedU8::new_static::<28>(),
-        },
-        name: "English Opening",
-        variation: &["King's English Variation", "Four Knights Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: C2,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: D2,
@@ -259,14 +179,94 @@ pub const FOUR_KNIGHTS_VARIATION: [Opening<'static, &str>; 2] = [
             },
         },
     },
+    Opening {
+        code: Code {
+            volume: Volume::A,
+            category: RangedU8::new_static::<28>(),
+        },
+        name: "English Opening",
+        variation: &["King's English Variation", "Four Knights Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: C2,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(67272588220496640),
+                    knight: Bitboard(39582420959232),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(13686197443740303360),
+                    white: Bitboard(69532605),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 4,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
 ];
-pub mod korchnoi_line;
-pub use korchnoi_line::KORCHNOI_LINE;
-pub mod flexible_line;
-pub use flexible_line::FLEXIBLE_LINE;
-pub mod fianchetto_line;
-pub use fianchetto_line::FIANCHETTO_LINE;
-pub mod quiet_line;
-pub use quiet_line::QUIET_LINE;
 pub mod bradley_beach_variation;
 pub use bradley_beach_variation::BRADLEY_BEACH_VARIATION;
+pub mod fianchetto_line;
+pub use fianchetto_line::FIANCHETTO_LINE;
+pub mod flexible_line;
+pub use flexible_line::FLEXIBLE_LINE;
+pub mod korchnoi_line;
+pub use korchnoi_line::KORCHNOI_LINE;
+pub mod quiet_line;
+pub use quiet_line::QUIET_LINE;

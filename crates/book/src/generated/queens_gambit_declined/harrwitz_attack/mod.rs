@@ -187,30 +187,88 @@ pub const HARRWITZ_ATTACK: [Opening<'static, &str>; 4] = [
                 to: F4,
                 promotion: None,
             },
+            Castle { king: E8, rook: H8 },
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D4,
+                capture: Some(Pawn),
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: E7,
+                capture: Some(Pawn),
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: D1,
+                capture: None,
+                to: C2,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: A2,
+                capture: None,
+                to: A3,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: D8,
+                capture: None,
+                to: A5,
+                promotion: None,
+            },
+            Castle { king: E1, rook: A1 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65038346367333120),
-                    knight: Bitboard(144150372450304000),
-                    bishop: Bitboard(292733976315953184),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    pawn: Bitboard(63912446327382528),
+                    knight: Bitboard(39582420959232),
+                    bishop: Bitboard(288230393868451872),
+                    rook: Bitboard(2377900603251622024),
+                    queen: Bitboard(4294968320),
+                    king: Bitboard(4611686018427387908),
                 },
                 ByColor {
-                    black: Bitboard(11526734582195945472),
-                    white: Bitboard(740619193),
+                    black: Bitboard(7341769047983259648),
+                    white: Bitboard(607512236),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
+            castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -453,88 +511,30 @@ pub const HARRWITZ_ATTACK: [Opening<'static, &str>; 4] = [
                 to: F4,
                 promotion: None,
             },
-            Castle { king: E8, rook: H8 },
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E3,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D4,
-                capture: Some(Pawn),
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: E7,
-                capture: Some(Pawn),
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Queen,
-                from: D1,
-                capture: None,
-                to: C2,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: A2,
-                capture: None,
-                to: A3,
-                promotion: None,
-            },
-            Normal {
-                role: Queen,
-                from: D8,
-                capture: None,
-                to: A5,
-                promotion: None,
-            },
-            Castle { king: E1, rook: A1 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63912446327382528),
-                    knight: Bitboard(39582420959232),
-                    bishop: Bitboard(288230393868451872),
-                    rook: Bitboard(2377900603251622024),
-                    queen: Bitboard(4294968320),
-                    king: Bitboard(4611686018427387908),
+                    pawn: Bitboard(65038346367333120),
+                    knight: Bitboard(144150372450304000),
+                    bishop: Bitboard(292733976315953184),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(7341769047983259648),
-                    white: Bitboard(607512236),
+                    black: Bitboard(11526734582195945472),
+                    white: Bitboard(740619193),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(0),
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -544,9 +544,9 @@ pub const HARRWITZ_ATTACK: [Opening<'static, &str>; 4] = [
 ];
 pub mod fianchetto_defense;
 pub use fianchetto_defense::FIANCHETTO_DEFENSE;
-pub mod orthodox_defense;
-pub use orthodox_defense::ORTHODOX_DEFENSE;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod orthodox_defense;
+pub use orthodox_defense::ORTHODOX_DEFENSE;
 pub mod two_knights_defense;
 pub use two_knights_defense::TWO_KNIGHTS_DEFENSE;

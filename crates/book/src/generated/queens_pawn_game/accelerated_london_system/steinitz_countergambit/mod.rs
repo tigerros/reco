@@ -94,7 +94,7 @@ pub const STEINITZ_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod morris_countergambit_accepted;
-pub use morris_countergambit_accepted::MORRIS_COUNTERGAMBIT_ACCEPTED;
 pub mod morris_countergambit;
 pub use morris_countergambit::MORRIS_COUNTERGAMBIT;
+pub mod morris_countergambit_accepted;
+pub use morris_countergambit_accepted::MORRIS_COUNTERGAMBIT_ACCEPTED;

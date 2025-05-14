@@ -87,9 +87,9 @@ pub const GIBBINS_WEIDENHAGEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod stummer_gambit;
-pub use stummer_gambit::STUMMER_GAMBIT;
-pub mod oshima_defense;
-pub use oshima_defense::OSHIMA_DEFENSE;
 pub mod maltese_falcon;
 pub use maltese_falcon::MALTESE_FALCON;
+pub mod oshima_defense;
+pub use oshima_defense::OSHIMA_DEFENSE;
+pub mod stummer_gambit;
+pub use stummer_gambit::STUMMER_GAMBIT;

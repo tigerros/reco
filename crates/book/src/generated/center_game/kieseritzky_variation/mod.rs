@@ -72,20 +72,34 @@ pub const KIESERITZKY_VARIATION: [Opening<'static, &str>; 3] = [
                 to: F3,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F1,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272519836559104),
+                    pawn: Bitboard(66146637109585664),
                     knight: Bitboard(4755801206505340930),
-                    bishop: Bitboard(2594073385365405732),
+                    bishop: Bitboard(2594073385432514564),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18441958999239688192),
-                    white: Bitboard(270591935),
+                    black: Bitboard(18440833116512714752),
+                    white: Bitboard(337700767),
                 },
             ),
             promoted: Bitboard(0),
@@ -95,7 +109,7 @@ pub const KIESERITZKY_VARIATION: [Opening<'static, &str>; 3] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -225,34 +239,20 @@ pub const KIESERITZKY_VARIATION: [Opening<'static, &str>; 3] = [
                 to: F3,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F1,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(66146637109585664),
+                    pawn: Bitboard(67272519836559104),
                     knight: Bitboard(4755801206505340930),
-                    bishop: Bitboard(2594073385432514564),
+                    bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18440833116512714752),
-                    white: Bitboard(337700767),
+                    black: Bitboard(18441958999239688192),
+                    white: Bitboard(270591935),
                 },
             ),
             promoted: Bitboard(0),
@@ -262,7 +262,7 @@ pub const KIESERITZKY_VARIATION: [Opening<'static, &str>; 3] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

@@ -58,65 +58,6 @@ pub const WILLIAMS_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: E4,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(69524354412629760),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18444210833278894080),
-                    white: Bitboard(805359615),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::A,
-            category: RangedU8::new_static::<3>(),
-        },
-        name: "Bird Opening",
-        variation: &["Williams Gambit"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: F2,
-                capture: None,
-                to: F4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: D5,
@@ -169,6 +110,65 @@ pub const WILLIAMS_GAMBIT: [Opening<'static, &str>; 2] = [
             remaining_checks: None,
             halfmoves: 3,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::A,
+            category: RangedU8::new_static::<3>(),
+        },
+        name: "Bird Opening",
+        variation: &["Williams Gambit"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: F2,
+                capture: None,
+                to: F4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(69524354412629760),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18444210833278894080),
+                    white: Bitboard(805359615),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

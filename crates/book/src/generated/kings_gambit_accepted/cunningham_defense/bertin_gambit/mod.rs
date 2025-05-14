@@ -100,30 +100,52 @@ pub const BERTIN_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: G3,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: F4,
+                capture: Some(Pawn),
+                to: G3,
+                promotion: None,
+            },
+            Castle { king: E1, rook: H1 },
+            Normal {
+                role: Pawn,
+                from: G3,
+                capture: Some(Pawn),
+                to: H2,
+                promotion: None,
+            },
+            Normal {
+                role: King,
+                from: G1,
+                capture: None,
+                to: H1,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272520243384064),
+                    pawn: Bitboard(67272519702318848),
                     knight: Bitboard(4755801206505340930),
                     bishop: Bitboard(288230378366304260),
-                    rook: Bitboard(9295429630892703873),
+                    rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    king: Bitboard(1152921504606847104),
                 },
                 ByColor {
-                    black: Bitboard(16136115992576131072),
-                    white: Bitboard(341872543),
+                    black: Bitboard(16136115992039292928),
+                    white: Bitboard(337645487),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
+            castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -201,52 +223,30 @@ pub const BERTIN_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: G3,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: F4,
-                capture: Some(Pawn),
-                to: G3,
-                promotion: None,
-            },
-            Castle { king: E1, rook: H1 },
-            Normal {
-                role: Pawn,
-                from: G3,
-                capture: Some(Pawn),
-                to: H2,
-                promotion: None,
-            },
-            Normal {
-                role: King,
-                from: G1,
-                capture: None,
-                to: H1,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272519702318848),
+                    pawn: Bitboard(67272520243384064),
                     knight: Bitboard(4755801206505340930),
                     bishop: Bitboard(288230378366304260),
-                    rook: Bitboard(9295429630892703777),
+                    rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606847104),
+                    king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(16136115992039292928),
-                    white: Bitboard(337645487),
+                    black: Bitboard(16136115992576131072),
+                    white: Bitboard(341872543),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(9295429630892703744),
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

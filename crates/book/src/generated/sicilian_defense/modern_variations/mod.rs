@@ -94,13 +94,13 @@ pub const MODERN_VARIATIONS: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod tartakower;
-pub use tartakower::TARTAKOWER;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod anti_qxd4_move_order_accepted;
-pub use anti_qxd4_move_order_accepted::ANTI_QXD4_MOVE_ORDER_ACCEPTED;
 pub mod anti_qxd4_move_order;
 pub use anti_qxd4_move_order::ANTI_QXD4_MOVE_ORDER;
+pub mod anti_qxd4_move_order_accepted;
+pub use anti_qxd4_move_order_accepted::ANTI_QXD4_MOVE_ORDER_ACCEPTED;
 pub mod ginsberg_gambit;
 pub use ginsberg_gambit::GINSBERG_GAMBIT;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod tartakower;
+pub use tartakower::TARTAKOWER;

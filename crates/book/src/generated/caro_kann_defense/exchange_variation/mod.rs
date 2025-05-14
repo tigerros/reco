@@ -72,79 +72,6 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 2] = [
                 to: D5,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(68402851881215744),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18443089297058824192),
-                    white: Bitboard(34494015487),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::B,
-            category: RangedU8::new_static::<13>(),
-        },
-        name: "Caro-Kann Defense",
-        variation: &["Exchange Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: Some(Pawn),
-                to: D5,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: C6,
@@ -196,8 +123,81 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 2] = [
             },
         },
     },
+    Opening {
+        code: Code {
+            volume: Volume::B,
+            category: RangedU8::new_static::<13>(),
+        },
+        name: "Caro-Kann Defense",
+        variation: &["Exchange Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: Some(Pawn),
+                to: D5,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(68402851881215744),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18443089297058824192),
+                    white: Bitboard(34494015487),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
 ];
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod bulla_attack;
 pub use bulla_attack::BULLA_ATTACK;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;

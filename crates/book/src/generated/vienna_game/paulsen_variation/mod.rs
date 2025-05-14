@@ -72,79 +72,6 @@ pub const PAULSEN_VARIATION: [Opening<'static, &str>; 2] = [
                 to: G3,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(67272588425998080),
-                    knight: Bitboard(4611690416474161216),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18297848277795602432),
-                    white: Bitboard(272936957),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<25>(),
-        },
-        name: "Vienna Game",
-        variation: &["Paulsen Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: G2,
-                capture: None,
-                to: G3,
-                promotion: None,
-            },
             Normal {
                 role: Knight,
                 from: G8,
@@ -210,8 +137,81 @@ pub const PAULSEN_VARIATION: [Opening<'static, &str>; 2] = [
             },
         },
     },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<25>(),
+        },
+        name: "Vienna Game",
+        variation: &["Paulsen Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: G2,
+                capture: None,
+                to: G3,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(67272588425998080),
+                    knight: Bitboard(4611690416474161216),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18297848277795602432),
+                    white: Bitboard(272936957),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
 ];
-pub mod pollock_gambit;
-pub use pollock_gambit::POLLOCK_GAMBIT;
 pub mod mariotti_gambit;
 pub use mariotti_gambit::MARIOTTI_GAMBIT;
+pub mod pollock_gambit;
+pub use pollock_gambit::POLLOCK_GAMBIT;

@@ -108,19 +108,19 @@ pub const PORTUGUESE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod melbourne_shuffle_variation;
-pub use melbourne_shuffle_variation::MELBOURNE_SHUFFLE_VARIATION;
-pub mod wuss_variation;
-pub use wuss_variation::WUSS_VARIATION;
-pub mod elbow_variation;
-pub use elbow_variation::ELBOW_VARIATION;
+pub mod banker_variation;
+pub use banker_variation::BANKER_VARIATION;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
 pub mod correspondence_refutation;
 pub use correspondence_refutation::CORRESPONDENCE_REFUTATION;
-pub mod lusophobe_variation;
-pub use lusophobe_variation::LUSOPHOBE_VARIATION;
-pub mod banker_variation;
-pub use banker_variation::BANKER_VARIATION;
+pub mod elbow_variation;
+pub use elbow_variation::ELBOW_VARIATION;
 pub mod jadoul_variation;
 pub use jadoul_variation::JADOUL_VARIATION;
+pub mod lusophobe_variation;
+pub use lusophobe_variation::LUSOPHOBE_VARIATION;
+pub mod melbourne_shuffle_variation;
+pub use melbourne_shuffle_variation::MELBOURNE_SHUFFLE_VARIATION;
+pub mod wuss_variation;
+pub use wuss_variation::WUSS_VARIATION;

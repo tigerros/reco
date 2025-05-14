@@ -79,20 +79,34 @@ pub const STAFFORD_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: C6,
                 promotion: None,
             },
+            Normal {
+                role: Knight,
+                from: E5,
+                capture: Some(Knight),
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: Some(Knight),
+                to: C6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272519702343424),
-                    knight: Bitboard(39651138076674),
+                    pawn: Bitboard(65025117935169280),
+                    knight: Bitboard(35184372088834),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13686197375020826624),
-                    white: Bitboard(68987973567),
+                    black: Bitboard(13683945575207141376),
+                    white: Bitboard(268496831),
                 },
             ),
             promoted: Bitboard(0),
@@ -101,8 +115,8 @@ pub const STAFFORD_GAMBIT: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -159,34 +173,20 @@ pub const STAFFORD_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: C6,
                 promotion: None,
             },
-            Normal {
-                role: Knight,
-                from: E5,
-                capture: Some(Knight),
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: Some(Knight),
-                to: C6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65025117935169280),
-                    knight: Bitboard(35184372088834),
+                    pawn: Bitboard(67272519702343424),
+                    knight: Bitboard(39651138076674),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13683945575207141376),
-                    white: Bitboard(268496831),
+                    black: Bitboard(13686197375020826624),
+                    white: Bitboard(68987973567),
                 },
             ),
             promoted: Bitboard(0),
@@ -195,8 +195,8 @@ pub const STAFFORD_GAMBIT: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

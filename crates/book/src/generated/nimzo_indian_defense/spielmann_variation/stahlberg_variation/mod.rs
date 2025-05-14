@@ -135,30 +135,51 @@ pub const STAHLBERG_VARIATION: [Opening<'static, &str>; 2] = [
                 to: C5,
                 promotion: None,
             },
+            Normal {
+                role: Queen,
+                from: B3,
+                capture: None,
+                to: C2,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: F7,
+                capture: None,
+                to: F5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: G2,
+                capture: None,
+                to: G3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(66164211780219648),
+                    pawn: Bitboard(57157149968610048),
                     knight: Bitboard(4415228739584),
                     bishop: Bitboard(288230376185268256),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303554560),
+                    queen: Bitboard(576460752303424512),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11379210890927669248),
-                    white: Bitboard(69663665),
+                    black: Bitboard(11370203829111881728),
+                    white: Bitboard(73711537),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -271,51 +292,30 @@ pub const STAHLBERG_VARIATION: [Opening<'static, &str>; 2] = [
                 to: C5,
                 promotion: None,
             },
-            Normal {
-                role: Queen,
-                from: B3,
-                capture: None,
-                to: C2,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: F7,
-                capture: None,
-                to: F5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: G2,
-                capture: None,
-                to: G3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(57157149968610048),
+                    pawn: Bitboard(66164211780219648),
                     knight: Bitboard(4415228739584),
                     bishop: Bitboard(288230376185268256),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303424512),
+                    queen: Bitboard(576460752303554560),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11370203829111881728),
-                    white: Bitboard(73711537),
+                    black: Bitboard(11379210890927669248),
+                    white: Bitboard(69663665),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

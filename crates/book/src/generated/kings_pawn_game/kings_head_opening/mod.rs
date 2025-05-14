@@ -58,65 +58,6 @@ pub const KINGS_HEAD_OPENING: [Opening<'static, &str>; 2] = [
                 to: F3,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(67272588423909120),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18441959067824947200),
-                    white: Bitboard(270585855),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<20>(),
-        },
-        name: "King's Pawn Game",
-        variation: &["King's Head Opening"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: F2,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
             Normal {
                 role: Knight,
                 from: G8,
@@ -155,6 +96,65 @@ pub const KINGS_HEAD_OPENING: [Opening<'static, &str>; 2] = [
             remaining_checks: None,
             halfmoves: 2,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<20>(),
+        },
+        name: "King's Pawn Game",
+        variation: &["King's Head Opening"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: F2,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(67272588423909120),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18441959067824947200),
+                    white: Bitboard(270585855),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

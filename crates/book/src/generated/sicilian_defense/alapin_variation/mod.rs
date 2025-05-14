@@ -87,11 +87,11 @@ pub const ALAPIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod stoltz_attack;
-pub use stoltz_attack::STOLTZ_ATTACK;
+pub mod barmen_defense;
+pub use barmen_defense::BARMEN_DEFENSE;
 pub mod sherzer_variation;
 pub use sherzer_variation::SHERZER_VARIATION;
 pub mod smith_morra_declined;
 pub use smith_morra_declined::SMITH_MORRA_DECLINED;
-pub mod barmen_defense;
-pub use barmen_defense::BARMEN_DEFENSE;
+pub mod stoltz_attack;
+pub use stoltz_attack::STOLTZ_ATTACK;

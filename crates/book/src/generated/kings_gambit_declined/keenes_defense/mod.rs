@@ -65,11 +65,18 @@ pub const KEENES_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: H4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: G2,
+                capture: None,
+                to: G3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588958682880),
+                    pawn: Bitboard(67272588962860800),
                     knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -78,16 +85,16 @@ pub const KEENES_DEFENSE: [Opening<'static, &str>; 2] = [
                 },
                 ByColor {
                     black: Bitboard(17865498317669007360),
-                    white: Bitboard(805359615),
+                    white: Bitboard(809537535),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
+            halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
@@ -131,18 +138,11 @@ pub const KEENES_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: H4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: G2,
-                capture: None,
-                to: G3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588962860800),
+                    pawn: Bitboard(67272588958682880),
                     knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -151,16 +151,16 @@ pub const KEENES_DEFENSE: [Opening<'static, &str>; 2] = [
                 },
                 ByColor {
                     black: Bitboard(17865498317669007360),
-                    white: Bitboard(809537535),
+                    white: Bitboard(805359615),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
+            halfmoves: 1,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {

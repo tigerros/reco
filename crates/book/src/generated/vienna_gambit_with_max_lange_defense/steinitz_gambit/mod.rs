@@ -115,13 +115,13 @@ pub const STEINITZ_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod sorensen_defense;
-pub use sorensen_defense::SORENSEN_DEFENSE;
+pub mod fraser_minckwitz_defense;
+pub use fraser_minckwitz_defense::FRASER_MINCKWITZ_DEFENSE;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod paulsen_defense;
 pub use paulsen_defense::PAULSEN_DEFENSE;
+pub mod sorensen_defense;
+pub use sorensen_defense::SORENSEN_DEFENSE;
 pub mod zukertort_defense;
 pub use zukertort_defense::ZUKERTORT_DEFENSE;
-pub mod fraser_minckwitz_defense;
-pub use fraser_minckwitz_defense::FRASER_MINCKWITZ_DEFENSE;

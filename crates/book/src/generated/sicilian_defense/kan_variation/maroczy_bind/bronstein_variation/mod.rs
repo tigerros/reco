@@ -135,29 +135,36 @@ pub const BRONSTEIN_VARIATION: [Opening<'static, &str>; 2] = [
                 to: C6,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: D3,
+                capture: None,
+                to: C2,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(65883836583568128),
                     knight: Bitboard(39582553079808),
-                    bishop: Bitboard(288230376185790468),
+                    bishop: Bitboard(288230376185267204),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
                     black: Bitboard(11378965682654806016),
-                    white: Bitboard(470606749),
+                    white: Bitboard(470083485),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 5,
+            halfmoves: 6,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
@@ -271,36 +278,29 @@ pub const BRONSTEIN_VARIATION: [Opening<'static, &str>; 2] = [
                 to: C6,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: D3,
-                capture: None,
-                to: C2,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(65883836583568128),
                     knight: Bitboard(39582553079808),
-                    bishop: Bitboard(288230376185267204),
+                    bishop: Bitboard(288230376185790468),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
                     black: Bitboard(11378965682654806016),
-                    white: Bitboard(470083485),
+                    white: Bitboard(470606749),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 6,
+            halfmoves: 5,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {

@@ -93,30 +93,39 @@ pub const DOUBLE_SPANISH: [Opening<'static, &str>; 2] = [
                 to: B4,
                 promotion: None,
             },
+            Castle { king: E1, rook: H1 },
+            Castle { king: E8, rook: H8 },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588421820160),
+                    pawn: Bitboard(67272588422342400),
                     knight: Bitboard(39582420959232),
                     bishop: Bitboard(288230384775200772),
-                    rook: Bitboard(9295429630892703873),
+                    rook: Bitboard(2377900603251621921),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(11380354434560163840),
-                    white: Bitboard(8860790685),
+                    black: Bitboard(7921589920739622912),
+                    white: Bitboard(8861312877),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
+            turn: Black,
+            castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 6,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -187,39 +196,30 @@ pub const DOUBLE_SPANISH: [Opening<'static, &str>; 2] = [
                 to: B4,
                 promotion: None,
             },
-            Castle { king: E1, rook: H1 },
-            Castle { king: E8, rook: H8 },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588422342400),
+                    pawn: Bitboard(67272588421820160),
                     knight: Bitboard(39582420959232),
                     bishop: Bitboard(288230384775200772),
-                    rook: Bitboard(2377900603251621921),
+                    rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(4611686018427387968),
+                    king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(7921589920739622912),
-                    white: Bitboard(8861312877),
+                    black: Bitboard(11380354434560163840),
+                    white: Bitboard(8860790685),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(0),
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            halfmoves: 6,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

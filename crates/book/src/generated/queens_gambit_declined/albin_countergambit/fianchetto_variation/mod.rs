@@ -129,9 +129,9 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod bg4_line;
-pub use bg4_line::BG4_LINE;
-pub mod bf5_line;
-pub use bf5_line::BF5_LINE;
 pub mod be6_line;
 pub use be6_line::BE6_LINE;
+pub mod bf5_line;
+pub use bf5_line::BF5_LINE;
+pub mod bg4_line;
+pub use bg4_line::BG4_LINE;

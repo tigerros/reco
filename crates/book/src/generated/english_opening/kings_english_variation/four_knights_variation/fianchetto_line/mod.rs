@@ -202,30 +202,46 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 4] = [
                 to: C6,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D3,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: E7,
+                promotion: None,
+            },
+            Castle { king: E1, rook: H1 },
+            Castle { king: E8, rook: H8 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65020788343880448),
+                    pawn: Bitboard(65020788344402688),
                     knight: Bitboard(4432408346626),
-                    bishop: Bitboard(2594073385365422084),
-                    rook: Bitboard(9295429630892703873),
+                    bishop: Bitboard(292733975779098628),
+                    rook: Bitboard(2377900603251621921),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(13683910493914267648),
-                    white: Bitboard(6355871),
+                    black: Bitboard(7923806570507403264),
+                    white: Bitboard(6878063),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: White,
-            castling_rights: Bitboard(9295429630892703873),
+            castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -433,46 +449,30 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 4] = [
                 to: C6,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D3,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: E7,
-                promotion: None,
-            },
-            Castle { king: E1, rook: H1 },
-            Castle { king: E8, rook: H8 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65020788344402688),
+                    pawn: Bitboard(65020788343880448),
                     knight: Bitboard(4432408346626),
-                    bishop: Bitboard(292733975779098628),
-                    rook: Bitboard(2377900603251621921),
+                    bishop: Bitboard(2594073385365422084),
+                    rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(4611686018427387968),
+                    king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(7923806570507403264),
-                    white: Bitboard(6878063),
+                    black: Bitboard(13683910493914267648),
+                    white: Bitboard(6355871),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: White,
-            castling_rights: Bitboard(0),
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -480,9 +480,9 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod with_bc5;
-pub use with_bc5::WITH_BC5;
 pub mod delayed_nc6;
 pub use delayed_nc6::DELAYED_NC6;
+pub mod with_bc5;
+pub use with_bc5::WITH_BC5;
 pub mod with_nb6;
 pub use with_nb6::WITH_NB6;

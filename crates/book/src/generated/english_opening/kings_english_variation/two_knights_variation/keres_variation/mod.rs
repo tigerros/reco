@@ -77,6 +77,20 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
                 promotion: None,
             },
             Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F1,
+                capture: None,
+                to: G2,
+                promotion: None,
+            },
+            Normal {
                 role: Pawn,
                 from: C7,
                 capture: None,
@@ -89,14 +103,14 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
                 ByRole {
                     pawn: Bitboard(66151086364343040),
                     knight: Bitboard(144150372448206912),
-                    bishop: Bitboard(2594073385365405732),
+                    bishop: Bitboard(288230393331597316),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13829186731909316608),
-                    white: Bitboard(71613437),
+                    black: Bitboard(11523343739875491840),
+                    white: Bitboard(71629789),
                 },
             ),
             promoted: Bitboard(0),
@@ -106,7 +120,7 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -161,20 +175,6 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
                 promotion: None,
             },
             Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F1,
-                capture: None,
-                to: G2,
-                promotion: None,
-            },
-            Normal {
                 role: Pawn,
                 from: C7,
                 capture: None,
@@ -187,14 +187,14 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
                 ByRole {
                     pawn: Bitboard(66151086364343040),
                     knight: Bitboard(144150372448206912),
-                    bishop: Bitboard(288230393331597316),
+                    bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11523343739875491840),
-                    white: Bitboard(71629789),
+                    black: Bitboard(13829186731909316608),
+                    white: Bitboard(71613437),
                 },
             ),
             promoted: Bitboard(0),
@@ -204,7 +204,7 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

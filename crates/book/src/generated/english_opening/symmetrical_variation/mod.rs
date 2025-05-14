@@ -51,58 +51,6 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
                 to: C5,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(70650236401416960),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18445336716005867520),
-                    white: Bitboard(67173375),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::A,
-            category: RangedU8::new_static::<30>(),
-        },
-        name: "English Opening",
-        variation: &["Symmetrical Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: C2,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
             Normal {
                 role: Knight,
                 from: G1,
@@ -133,6 +81,58 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::A,
+            category: RangedU8::new_static::<30>(),
+        },
+        name: "English Opening",
+        variation: &["Symmetrical Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: C2,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(70650236401416960),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18445336716005867520),
+                    white: Bitboard(67173375),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                 fullmoves
             } else {
@@ -329,36 +329,36 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod ultra_symmetrical_variation;
-pub use ultra_symmetrical_variation::ULTRA_SYMMETRICAL_VARIATION;
-pub mod full_symmetry_line;
-pub use full_symmetry_line::FULL_SYMMETRY_LINE;
-pub mod normal_variation;
-pub mod three_knights;
-pub use normal_variation::NORMAL_VARIATION;
 pub mod anti_benoni_variation;
 pub use anti_benoni_variation::ANTI_BENONI_VARIATION;
 pub mod botvinnik_system;
 pub use botvinnik_system::BOTVINNIK_SYSTEM;
-pub mod napolitano_gambit;
-pub use napolitano_gambit::NAPOLITANO_GAMBIT;
-pub mod two_knights_variation;
-pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
 pub mod botvinnik_system_reversed;
-pub mod three_knights_variation;
-pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
 pub mod double_fianchetto;
 pub use double_fianchetto::DOUBLE_FIANCHETTO;
-pub mod four_knights_variation;
-pub use four_knights_variation::FOUR_KNIGHTS_VARIATION;
-pub mod mecking_variation;
-pub mod two_knights;
-pub use mecking_variation::MECKING_VARIATION;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod duchamp_variation;
 pub use duchamp_variation::DUCHAMP_VARIATION;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod four_knights_variation;
+pub use four_knights_variation::FOUR_KNIGHTS_VARIATION;
+pub mod full_symmetry_line;
+pub use full_symmetry_line::FULL_SYMMETRY_LINE;
 pub mod hedgehog_defense;
 pub use hedgehog_defense::HEDGEHOG_DEFENSE;
+pub mod mecking_variation;
+pub use mecking_variation::MECKING_VARIATION;
+pub mod napolitano_gambit;
+pub use napolitano_gambit::NAPOLITANO_GAMBIT;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod three_knights;
+pub mod three_knights_variation;
+pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
+pub mod two_knights;
+pub mod two_knights_variation;
+pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
+pub mod ultra_symmetrical_variation;
+pub use ultra_symmetrical_variation::ULTRA_SYMMETRICAL_VARIATION;

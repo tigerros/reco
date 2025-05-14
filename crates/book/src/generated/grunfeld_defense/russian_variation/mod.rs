@@ -254,21 +254,21 @@ pub const RUSSIAN_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod yugoslav_variation;
-pub use yugoslav_variation::YUGOSLAV_VARIATION;
 pub mod accelerated_variation;
 pub use accelerated_variation::ACCELERATED_VARIATION;
-pub mod levenfish_variation;
-pub use levenfish_variation::LEVENFISH_VARIATION;
-pub mod keres_variation;
-pub use keres_variation::KERES_VARIATION;
-pub mod prins_variation;
-pub use prins_variation::PRINS_VARIATION;
 pub mod byrne_variation;
 pub use byrne_variation::BYRNE_VARIATION;
-pub mod szabo_variation;
-pub use szabo_variation::SZABO_VARIATION;
-pub mod smyslov_variation;
-pub use smyslov_variation::SMYSLOV_VARIATION;
 pub mod hungarian_variation;
 pub use hungarian_variation::HUNGARIAN_VARIATION;
+pub mod keres_variation;
+pub use keres_variation::KERES_VARIATION;
+pub mod levenfish_variation;
+pub use levenfish_variation::LEVENFISH_VARIATION;
+pub mod prins_variation;
+pub use prins_variation::PRINS_VARIATION;
+pub mod smyslov_variation;
+pub use smyslov_variation::SMYSLOV_VARIATION;
+pub mod szabo_variation;
+pub use szabo_variation::SZABO_VARIATION;
+pub mod yugoslav_variation;
+pub use yugoslav_variation::YUGOSLAV_VARIATION;

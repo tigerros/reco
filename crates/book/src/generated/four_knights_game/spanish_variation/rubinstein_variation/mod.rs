@@ -93,29 +93,36 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 3] = [
                 to: D4,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: B5,
+                capture: None,
+                to: E2,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588421820160),
                     knight: Bitboard(35184508665856),
-                    bishop: Bitboard(2594073393955340292),
+                    bishop: Bitboard(2594073385365409796),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
                     black: Bitboard(13686193045828009984),
-                    white: Bitboard(8860790685),
+                    white: Bitboard(270860189),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 6,
+            halfmoves: 7,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
@@ -187,36 +194,29 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 3] = [
                 to: D4,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: B5,
-                capture: None,
-                to: E2,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588421820160),
                     knight: Bitboard(35184508665856),
-                    bishop: Bitboard(2594073385365409796),
+                    bishop: Bitboard(2594073393955340292),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
                     black: Bitboard(13686193045828009984),
-                    white: Bitboard(270860189),
+                    white: Bitboard(8860790685),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 7,
+            halfmoves: 6,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
@@ -340,11 +340,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod marshall_variation;
-pub use marshall_variation::MARSHALL_VARIATION;
+pub mod henneberger_variation;
+pub use henneberger_variation::HENNEBERGER_VARIATION;
 pub mod maroczy_variation;
 pub use maroczy_variation::MAROCZY_VARIATION;
 pub mod marshall_gambit;
 pub use marshall_gambit::MARSHALL_GAMBIT;
-pub mod henneberger_variation;
-pub use henneberger_variation::HENNEBERGER_VARIATION;
+pub mod marshall_variation;
+pub use marshall_variation::MARSHALL_VARIATION;

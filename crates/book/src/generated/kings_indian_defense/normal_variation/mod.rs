@@ -86,11 +86,18 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
                 to: E4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(53832089765733120),
+                    pawn: Bitboard(51589086045070080),
                     knight: Bitboard(144150372448206912),
                     bishop: Bitboard(306244774661193764),
                     rook: Bitboard(9295429630892703873),
@@ -98,18 +105,18 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11529039124208025600),
+                    black: Bitboard(11526796120487362560),
                     white: Bitboard(470082557),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -173,18 +180,11 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
                 to: E4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(51589086045070080),
+                    pawn: Bitboard(53832089765733120),
                     knight: Bitboard(144150372448206912),
                     bishop: Bitboard(306244774661193764),
                     rook: Bitboard(9295429630892703873),
@@ -192,18 +192,18 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11526796120487362560),
+                    black: Bitboard(11529039124208025600),
                     white: Bitboard(470082557),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -211,11 +211,11 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod standard_development;
-pub use standard_development::STANDARD_DEVELOPMENT;
 pub mod deferred_fianchetto;
 pub use deferred_fianchetto::DEFERRED_FIANCHETTO;
 pub mod kings_knight_variation;
 pub use kings_knight_variation::KINGS_KNIGHT_VARIATION;
 pub mod rare_defenses;
 pub use rare_defenses::RARE_DEFENSES;
+pub mod standard_development;
+pub use standard_development::STANDARD_DEVELOPMENT;

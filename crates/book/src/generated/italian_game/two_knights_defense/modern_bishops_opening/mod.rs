@@ -86,30 +86,37 @@ pub const MODERN_BISHOPS_OPENING: [Opening<'static, &str>; 2] = [
                 to: D3,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: E7,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588422342400),
                     knight: Bitboard(39582420697090),
-                    bishop: Bitboard(2594073385432514564),
+                    bishop: Bitboard(292733975846191108),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13686197443740303360),
+                    black: Bitboard(11384858034153979904),
                     white: Bitboard(338225055),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -173,37 +180,30 @@ pub const MODERN_BISHOPS_OPENING: [Opening<'static, &str>; 2] = [
                 to: D3,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: E7,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588422342400),
                     knight: Bitboard(39582420697090),
-                    bishop: Bitboard(292733975846191108),
+                    bishop: Bitboard(2594073385432514564),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11384858034153979904),
+                    black: Bitboard(13686197443740303360),
                     white: Bitboard(338225055),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

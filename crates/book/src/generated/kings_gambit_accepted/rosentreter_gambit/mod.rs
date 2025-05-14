@@ -117,7 +117,7 @@ pub const ROSENTRETER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
 }];
 pub mod bird_gambit;
 pub use bird_gambit::BIRD_GAMBIT;
-pub mod testa_variation;
-pub use testa_variation::TESTA_VARIATION;
 pub mod sorensen_gambit;
 pub use sorensen_gambit::SORENSEN_GAMBIT;
+pub mod testa_variation;
+pub use testa_variation::TESTA_VARIATION;

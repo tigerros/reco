@@ -122,10 +122,10 @@ pub const ACCELERATED_DRAGON: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod maroczy_bind;
-pub use maroczy_bind::MAROCZY_BIND;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod maroczy_bind;
+pub use maroczy_bind::MAROCZY_BIND;
 pub mod modern_bc4_variation;
 pub use modern_bc4_variation::MODERN_BC4_VARIATION;
 pub mod modern_variation;

@@ -126,20 +126,34 @@ pub const HECTOR_VARIATION: [Opening<'static, &str>; 2] = [
                 promotion: None,
             },
             Castle { king: E1, rook: H1 },
+            Normal {
+                role: Bishop,
+                from: C8,
+                capture: None,
+                to: D7,
+                promotion: None,
+            },
+            Normal {
+                role: Rook,
+                from: F1,
+                capture: None,
+                to: E1,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(63912515113116416),
                     knight: Bitboard(4611690416475996162),
-                    bishop: Bitboard(2594073385365929988),
-                    rook: Bitboard(9295429630892703777),
+                    bishop: Bitboard(2308094809027903492),
+                    rook: Bitboard(9295429630892703761),
                     queen: Bitboard(2199023255560),
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(17718029582755430400),
-                    white: Bitboard(68722418543),
+                    black: Bitboard(17432051006417403904),
+                    white: Bitboard(68722418527),
                 },
             ),
             promoted: Bitboard(0),
@@ -148,8 +162,8 @@ pub const HECTOR_VARIATION: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -253,34 +267,20 @@ pub const HECTOR_VARIATION: [Opening<'static, &str>; 2] = [
                 promotion: None,
             },
             Castle { king: E1, rook: H1 },
-            Normal {
-                role: Bishop,
-                from: C8,
-                capture: None,
-                to: D7,
-                promotion: None,
-            },
-            Normal {
-                role: Rook,
-                from: F1,
-                capture: None,
-                to: E1,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(63912515113116416),
                     knight: Bitboard(4611690416475996162),
-                    bishop: Bitboard(2308094809027903492),
-                    rook: Bitboard(9295429630892703761),
+                    bishop: Bitboard(2594073385365929988),
+                    rook: Bitboard(9295429630892703777),
                     queen: Bitboard(2199023255560),
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(17432051006417403904),
-                    white: Bitboard(68722418527),
+                    black: Bitboard(17718029582755430400),
+                    white: Bitboard(68722418543),
                 },
             ),
             promoted: Bitboard(0),
@@ -289,8 +289,8 @@ pub const HECTOR_VARIATION: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

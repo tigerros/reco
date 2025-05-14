@@ -107,30 +107,51 @@ pub const BRENTANO_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: D5,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: C1,
+                capture: Some(Pawn),
+                to: F4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(47006359496969984),
-                    knight: Bitboard(4755801275222720514),
-                    bishop: Bitboard(2594073385365405732),
+                    pawn: Bitboard(47006359094314752),
+                    knight: Bitboard(144150441167421442),
+                    bishop: Bitboard(2594073385902276640),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18421692836752654336),
-                    white: Bitboard(71135416255),
+                    black: Bitboard(13810042002160484352),
+                    white: Bitboard(71806502843),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -215,51 +236,30 @@ pub const BRENTANO_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: D5,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: C1,
-                capture: Some(Pawn),
-                to: F4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(47006359094314752),
-                    knight: Bitboard(144150441167421442),
-                    bishop: Bitboard(2594073385902276640),
+                    pawn: Bitboard(47006359496969984),
+                    knight: Bitboard(4755801275222720514),
+                    bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13810042002160484352),
-                    white: Bitboard(71806502843),
+                    black: Bitboard(18421692836752654336),
+                    white: Bitboard(71135416255),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

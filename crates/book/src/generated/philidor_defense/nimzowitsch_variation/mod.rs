@@ -79,11 +79,18 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D4,
+                capture: Some(Pawn),
+                to: E5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65029584835372800),
+                    pawn: Bitboard(65029584701155072),
                     knight: Bitboard(144150372450041858),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -91,17 +98,17 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13828065230048985088),
-                    white: Bitboard(404809663),
+                    black: Bitboard(13828065161329508352),
+                    white: Bitboard(68990068671),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
+            halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
@@ -159,18 +166,11 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D4,
-                capture: Some(Pawn),
-                to: E5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65029584701155072),
+                    pawn: Bitboard(65029584835372800),
                     knight: Bitboard(144150372450041858),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -178,17 +178,17 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13828065161329508352),
-                    white: Bitboard(68990068671),
+                    black: Bitboard(13828065230048985088),
+                    white: Bitboard(404809663),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
+            halfmoves: 1,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
@@ -197,9 +197,9 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
+pub mod klein_variation;
+pub use klein_variation::KLEIN_VARIATION;
 pub mod rellstab_variation;
 pub use rellstab_variation::RELLSTAB_VARIATION;
 pub mod sokolsky_variation;
 pub use sokolsky_variation::SOKOLSKY_VARIATION;
-pub mod klein_variation;
-pub use klein_variation::KLEIN_VARIATION;

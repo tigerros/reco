@@ -136,9 +136,9 @@ pub const TEICHMANN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
 pub mod ciesielski_variation;
 pub use ciesielski_variation::CIESIELSKI_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
 pub mod seidel_hall_attack;
 pub use seidel_hall_attack::SEIDEL_HALL_ATTACK;

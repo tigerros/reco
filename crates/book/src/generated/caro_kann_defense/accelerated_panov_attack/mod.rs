@@ -58,65 +58,6 @@ pub const ACCELERATED_PANOV_ATTACK: [Opening<'static, &str>; 2] = [
                 to: C4,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(70654617536490240),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18445341096872509440),
-                    white: Bitboard(335604735),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::B,
-            category: RangedU8::new_static::<10>(),
-        },
-        name: "Caro-Kann Defense",
-        variation: &["Accelerated Panov Attack"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C7,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C2,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: D7,
@@ -154,12 +95,71 @@ pub const ACCELERATED_PANOV_ATTACK: [Opening<'static, &str>; 2] = [
             },
         },
     },
+    Opening {
+        code: Code {
+            volume: Volume::B,
+            category: RangedU8::new_static::<10>(),
+        },
+        name: "Caro-Kann Defense",
+        variation: &["Accelerated Panov Attack"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C7,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C2,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(70654617536490240),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18445341096872509440),
+                    white: Bitboard(335604735),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
 ];
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
-pub mod pseudo_scandinavian;
-pub use pseudo_scandinavian::PSEUDO_SCANDINAVIAN;
 pub mod open_variation;
 pub use open_variation::OPEN_VARIATION;
+pub mod pseudo_scandinavian;
+pub use pseudo_scandinavian::PSEUDO_SCANDINAVIAN;
 pub mod van_weersel_attack;
 pub use van_weersel_attack::VAN_WEERSEL_ATTACK;

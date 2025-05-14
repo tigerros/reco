@@ -150,20 +150,34 @@ pub const HOWELL_ATTACK: [Opening<'static, &str>; 2] = [
                 to: E2,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: E7,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C2,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(64177505870866176),
+                    pawn: Bitboard(64177505937974016),
                     knight: Bitboard(4398317043714),
-                    bishop: Bitboard(2305860601399869444),
+                    bishop: Bitboard(4521191813545988),
                     rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303427584),
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(13394854324668989440),
-                    white: Bitboard(68721768295),
+                    black: Bitboard(11093514915082665984),
+                    white: Bitboard(68788876135),
                 },
             ),
             promoted: Bitboard(0),
@@ -172,8 +186,8 @@ pub const HOWELL_ATTACK: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -301,34 +315,20 @@ pub const HOWELL_ATTACK: [Opening<'static, &str>; 2] = [
                 to: E2,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: E7,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C2,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(64177505937974016),
+                    pawn: Bitboard(64177505870866176),
                     knight: Bitboard(4398317043714),
-                    bishop: Bitboard(4521191813545988),
+                    bishop: Bitboard(2305860601399869444),
                     rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303427584),
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(11093514915082665984),
-                    white: Bitboard(68788876135),
+                    black: Bitboard(13394854324668989440),
+                    white: Bitboard(68721768295),
                 },
             ),
             promoted: Bitboard(0),
@@ -337,8 +337,8 @@ pub const HOWELL_ATTACK: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

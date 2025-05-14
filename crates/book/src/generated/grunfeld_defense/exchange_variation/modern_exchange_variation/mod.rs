@@ -52,10 +52,10 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: C2,
+                role: Knight,
+                from: G1,
                 capture: None,
-                to: C4,
+                to: F3,
                 promotion: None,
             },
             Normal {
@@ -63,6 +63,20 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
                 from: G7,
                 capture: None,
                 to: G6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C2,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: G7,
                 promotion: None,
             },
             Normal {
@@ -115,43 +129,43 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
                 promotion: None,
             },
             Normal {
-                role: Bishop,
-                from: F8,
+                role: Pawn,
+                from: C7,
                 capture: None,
-                to: G7,
+                to: C5,
                 promotion: None,
             },
             Normal {
-                role: Knight,
-                from: G1,
+                role: Rook,
+                from: A1,
                 capture: None,
-                to: F3,
+                to: B1,
                 promotion: None,
             },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(51580289885200640),
+                    pawn: Bitboard(50454407158227200),
                     knight: Bitboard(144115188077953024),
                     bishop: Bitboard(306244774661193764),
-                    rook: Bitboard(9295429630892703873),
+                    rook: Bitboard(9295429630892703874),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11526752140022251520),
-                    white: Bitboard(405070269),
+                    black: Bitboard(11525626257295278080),
+                    white: Bitboard(405070270),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
+            castling_rights: Bitboard(9295429630892703872),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -317,20 +331,6 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
                 promotion: None,
             },
             Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: G7,
-                capture: None,
-                to: G6,
-                promotion: None,
-            },
-            Normal {
                 role: Pawn,
                 from: C2,
                 capture: None,
@@ -338,10 +338,10 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
                 promotion: None,
             },
             Normal {
-                role: Bishop,
-                from: F8,
+                role: Pawn,
+                from: G7,
                 capture: None,
-                to: G7,
+                to: G6,
                 promotion: None,
             },
             Normal {
@@ -394,43 +394,43 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: C7,
+                role: Bishop,
+                from: F8,
                 capture: None,
-                to: C5,
+                to: G7,
                 promotion: None,
             },
             Normal {
-                role: Rook,
-                from: A1,
+                role: Knight,
+                from: G1,
                 capture: None,
-                to: B1,
+                to: F3,
                 promotion: None,
             },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(50454407158227200),
+                    pawn: Bitboard(51580289885200640),
                     knight: Bitboard(144115188077953024),
                     bishop: Bitboard(306244774661193764),
-                    rook: Bitboard(9295429630892703874),
+                    rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11525626257295278080),
-                    white: Bitboard(405070270),
+                    black: Bitboard(11526752140022251520),
+                    white: Bitboard(405070269),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(9295429630892703872),
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -438,7 +438,7 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod pawn_grab_line;
-pub use pawn_grab_line::PAWN_GRAB_LINE;
 pub mod kramniks_line;
 pub use kramniks_line::KRAMNIKS_LINE;
+pub mod pawn_grab_line;
+pub use pawn_grab_line::PAWN_GRAB_LINE;

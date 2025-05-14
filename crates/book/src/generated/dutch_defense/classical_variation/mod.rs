@@ -152,20 +152,34 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
                 to: G2,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(58283050009670400),
-                    knight: Bitboard(144150372447944770),
+                    pawn: Bitboard(56031284555723520),
+                    knight: Bitboard(144150372450041858),
                     bishop: Bitboard(2594073385365422084),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13821318695420428288),
-                    white: Bitboard(205583327),
+                    black: Bitboard(13819066929966481408),
+                    white: Bitboard(207680415),
                 },
             ),
             promoted: Bitboard(0),
@@ -175,7 +189,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -239,34 +253,20 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
                 to: G2,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(56031284555723520),
-                    knight: Bitboard(144150372450041858),
+                    pawn: Bitboard(58283050009670400),
+                    knight: Bitboard(144150372447944770),
                     bishop: Bitboard(2594073385365422084),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13819066929966481408),
-                    white: Bitboard(207680415),
+                    black: Bitboard(13821318695420428288),
+                    white: Bitboard(205583327),
                 },
             ),
             promoted: Bitboard(0),
@@ -276,7 +276,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -592,9 +592,9 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
 ];
 pub mod blackburne_attack;
 pub use blackburne_attack::BLACKBURNE_ATTACK;
+pub mod buenos_aires_variation;
+pub use buenos_aires_variation::BUENOS_AIRES_VARIATION;
 pub mod huisl_variation;
 pub use huisl_variation::HUISL_VARIATION;
 pub mod ilyin_zhenevsky_variation;
 pub use ilyin_zhenevsky_variation::ILYIN_ZHENEVSKY_VARIATION;
-pub mod buenos_aires_variation;
-pub use buenos_aires_variation::BUENOS_AIRES_VARIATION;

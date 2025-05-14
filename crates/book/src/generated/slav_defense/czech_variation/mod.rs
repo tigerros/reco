@@ -136,16 +136,16 @@ pub const CZECH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod bled_attack;
+pub use bled_attack::BLED_ATTACK;
 pub mod carlsbad_variation;
 pub use carlsbad_variation::CARLSBAD_VARIATION;
+pub mod classical_system;
+pub use classical_system::CLASSICAL_SYSTEM;
 pub mod dutch_variation;
 pub use dutch_variation::DUTCH_VARIATION;
 pub mod krause_attack;
 pub use krause_attack::KRAUSE_ATTACK;
-pub mod bled_attack;
-pub use bled_attack::BLED_ATTACK;
-pub mod classical_system;
-pub use classical_system::CLASSICAL_SYSTEM;
 pub mod lasker_variation;
 pub use lasker_variation::LASKER_VARIATION;
 pub mod wiesbaden_variation;

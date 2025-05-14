@@ -121,11 +121,18 @@ pub const CAMBRIDGE_SPRINGS_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: A5,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: C4,
+                capture: Some(Pawn),
+                to: D5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63916844508046080),
+                    pawn: Bitboard(63916844440937216),
                     knight: Bitboard(2286984188133376),
                     bishop: Bitboard(2594073660243312672),
                     rook: Bitboard(9295429630892703873),
@@ -133,17 +140,17 @@ pub const CAMBRIDGE_SPRINGS_DEFENSE: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13108628353651310592),
-                    white: Bitboard(275082699705),
+                    black: Bitboard(13108628319291572224),
+                    white: Bitboard(309375329209),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
+            halfmoves: 0,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
@@ -243,18 +250,11 @@ pub const CAMBRIDGE_SPRINGS_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: A5,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: C4,
-                capture: Some(Pawn),
-                to: D5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63916844440937216),
+                    pawn: Bitboard(63916844508046080),
                     knight: Bitboard(2286984188133376),
                     bishop: Bitboard(2594073660243312672),
                     rook: Bitboard(9295429630892703873),
@@ -262,17 +262,17 @@ pub const CAMBRIDGE_SPRINGS_DEFENSE: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13108628319291572224),
-                    white: Bitboard(309375329209),
+                    black: Bitboard(13108628353651310592),
+                    white: Bitboard(275082699705),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
+            halfmoves: 1,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
@@ -281,13 +281,13 @@ pub const CAMBRIDGE_SPRINGS_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod yugoslav_variation;
-pub use yugoslav_variation::YUGOSLAV_VARIATION;
-pub mod capablanca_variation;
-pub use capablanca_variation::CAPABLANCA_VARIATION;
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod argentine_variation;
 pub use argentine_variation::ARGENTINE_VARIATION;
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
+pub mod capablanca_variation;
+pub use capablanca_variation::CAPABLANCA_VARIATION;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod yugoslav_variation;
+pub use yugoslav_variation::YUGOSLAV_VARIATION;

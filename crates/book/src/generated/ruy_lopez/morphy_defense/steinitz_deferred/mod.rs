@@ -101,20 +101,48 @@ pub const STEINITZ_DEFERRED: [Opening<'static, &str>; 2] = [
                 to: D6,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: A4,
+                capture: Some(Knight),
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: B7,
+                capture: Some(Bishop),
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: F6,
+                capture: Some(Pawn),
+                to: E4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(64749209236074240),
-                    knight: Bitboard(39582420697090),
-                    bishop: Bitboard(2594073385382182916),
+                    pawn: Bitboard(64190657194944256),
+                    knight: Bitboard(270532610),
+                    bishop: Bitboard(2594073385365405700),
                     rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(13683674064554557440),
-                    white: Bitboard(287371119),
+                    black: Bitboard(13683075930497482752),
+                    white: Bitboard(136374127),
                 },
             ),
             promoted: Bitboard(0),
@@ -124,7 +152,7 @@ pub const STEINITZ_DEFERRED: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -203,48 +231,20 @@ pub const STEINITZ_DEFERRED: [Opening<'static, &str>; 2] = [
                 to: D6,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: A4,
-                capture: Some(Knight),
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: B7,
-                capture: Some(Bishop),
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: F6,
-                capture: Some(Pawn),
-                to: E4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(64190657194944256),
-                    knight: Bitboard(270532610),
-                    bishop: Bitboard(2594073385365405700),
+                    pawn: Bitboard(64749209236074240),
+                    knight: Bitboard(39582420697090),
+                    bishop: Bitboard(2594073385382182916),
                     rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(13683075930497482752),
-                    white: Bitboard(136374127),
+                    black: Bitboard(13683674064554557440),
+                    white: Bitboard(287371119),
                 },
             ),
             promoted: Bitboard(0),
@@ -254,7 +254,7 @@ pub const STEINITZ_DEFERRED: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

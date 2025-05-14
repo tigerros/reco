@@ -124,11 +124,18 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
                 to: C3,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69524353741551360),
+                    pawn: Bitboard(65038346300225280),
                     knight: Bitboard(4755801206503505984),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -136,18 +143,18 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18444210833278894080),
+                    black: Bitboard(18439724825837568000),
                     white: Bitboard(134543357),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -183,18 +190,11 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
                 to: C3,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65038346300225280),
+                    pawn: Bitboard(69524353741551360),
                     knight: Bitboard(4755801206503505984),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -202,18 +202,18 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18439724825837568000),
+                    black: Bitboard(18444210833278894080),
                     white: Bitboard(134543357),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -287,15 +287,15 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod fianchetto_defense;
-pub use fianchetto_defense::FIANCHETTO_DEFENSE;
 pub mod alburt_defense;
 pub use alburt_defense::ALBURT_DEFENSE;
-pub mod shaviliuk_gambit;
-pub use shaviliuk_gambit::SHAVILIUK_GAMBIT;
-pub mod irish_gambit;
-pub use irish_gambit::IRISH_GAMBIT;
 pub mod anti_veresov;
 pub use anti_veresov::ANTI_VERESOV;
+pub mod fianchetto_defense;
+pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod irish_gambit;
+pub use irish_gambit::IRISH_GAMBIT;
+pub mod shaviliuk_gambit;
+pub use shaviliuk_gambit::SHAVILIUK_GAMBIT;
 pub mod shropshire_defense;
 pub use shropshire_defense::SHROPSHIRE_DEFENSE;

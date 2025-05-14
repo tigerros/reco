@@ -66,108 +66,6 @@ pub const MAX_LANGE_ATTACK: [Opening<'static, &str>; 2] = [
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E5,
-                capture: Some(Pawn),
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F1,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Castle { king: E1, rook: H1 },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: C5,
-                promotion: None,
-            },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(67272519836559104),
-                    knight: Bitboard(39582420697090),
-                    bishop: Bitboard(288230393398689796),
-                    rook: Bitboard(9295429630892703777),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606847040),
-                },
-                ByColor {
-                    black: Bitboard(11380354383121219584),
-                    white: Bitboard(337700719),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703744),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 4,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<56>(),
-        },
-        name: "Italian Game",
-        variation: &["Scotch Gambit", "Max Lange Attack"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
                 role: Bishop,
                 from: F1,
                 capture: None,
@@ -247,6 +145,108 @@ pub const MAX_LANGE_ATTACK: [Opening<'static, &str>; 2] = [
             remaining_checks: None,
             halfmoves: 2,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<56>(),
+        },
+        name: "Italian Game",
+        variation: &["Scotch Gambit", "Max Lange Attack"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E5,
+                capture: Some(Pawn),
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F1,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Castle { king: E1, rook: H1 },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: C5,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(67272519836559104),
+                    knight: Bitboard(39582420697090),
+                    bishop: Bitboard(288230393398689796),
+                    rook: Bitboard(9295429630892703777),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606847040),
+                },
+                ByColor {
+                    black: Bitboard(11380354383121219584),
+                    white: Bitboard(337700719),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703744),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 4,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

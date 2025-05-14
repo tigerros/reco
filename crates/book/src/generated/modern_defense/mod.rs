@@ -131,58 +131,6 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 3] = [
                 to: G6,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(53832089564409600),
-                    knight: Bitboard(4755801206503243842),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18428518568967536640),
-                    white: Bitboard(268496895),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::B,
-            category: RangedU8::new_static::<6>(),
-        },
-        name: "Modern Defense",
-        variation: &[],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: G7,
-                capture: None,
-                to: G6,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: D2,
@@ -227,52 +175,104 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 3] = [
             },
         },
     },
+    Opening {
+        code: Code {
+            volume: Volume::B,
+            category: RangedU8::new_static::<6>(),
+        },
+        name: "Modern Defense",
+        variation: &[],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: G7,
+                capture: None,
+                to: G6,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(53832089564409600),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18428518568967536640),
+                    white: Bitboard(268496895),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
 ];
-pub mod westermann_gambit;
-pub use westermann_gambit::WESTERMANN_GAMBIT;
-pub mod standard_line;
-pub use standard_line::STANDARD_LINE;
-pub mod pseudo_austrian_attack;
-pub use pseudo_austrian_attack::PSEUDO_AUSTRIAN_ATTACK;
-pub mod gellers_system;
-pub use gellers_system::GELLERS_SYSTEM;
-pub mod bishop_attack;
-pub use bishop_attack::BISHOP_ATTACK;
-pub mod lizard_defense;
-pub mod randspringer_variation;
-pub use randspringer_variation::RANDSPRINGER_VARIATION;
-pub mod gurgenidze_defense;
-pub use gurgenidze_defense::GURGENIDZE_DEFENSE;
-pub mod two_knights_variation;
-pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
-pub mod modern_pterodactyl;
-pub use modern_pterodactyl::MODERN_PTERODACTYL;
-pub mod kotov_variation;
-pub use kotov_variation::KOTOV_VARIATION;
-pub mod norwegian_defense;
-pub use norwegian_defense::NORWEGIAN_DEFENSE;
-pub mod averbakh_system;
-pub use averbakh_system::AVERBAKH_SYSTEM;
-pub mod mongredien_defense;
-pub mod pterodactyl_variation;
-pub mod semi_averbakh_variation;
-pub use pterodactyl_variation::PTERODACTYL_VARIATION;
-pub mod dunworthy_variation;
-pub use dunworthy_variation::DUNWORTHY_VARIATION;
-pub mod beefeater_variation;
-pub use beefeater_variation::BEEFEATER_VARIATION;
-pub mod neo_modern_defense;
-pub use neo_modern_defense::NEO_MODERN_DEFENSE;
 pub mod anti_modern;
 pub use anti_modern::ANTI_MODERN;
-pub mod masur_gambit;
-pub use masur_gambit::MASUR_GAMBIT;
+pub mod averbakh_system;
+pub use averbakh_system::AVERBAKH_SYSTEM;
+pub mod averbakh_variation;
+pub mod beefeater_variation;
+pub use beefeater_variation::BEEFEATER_VARIATION;
+pub mod bishop_attack;
+pub use bishop_attack::BISHOP_ATTACK;
+pub mod dunworthy_variation;
+pub use dunworthy_variation::DUNWORTHY_VARIATION;
 pub mod fianchetto_gambit;
 pub use fianchetto_gambit::FIANCHETTO_GAMBIT;
-pub mod averbakh_variation;
-pub mod wind_gambit;
-pub use wind_gambit::WIND_GAMBIT;
-pub mod three_pawns_attack;
-pub use three_pawns_attack::THREE_PAWNS_ATTACK;
+pub mod gellers_system;
+pub use gellers_system::GELLERS_SYSTEM;
+pub mod gurgenidze_defense;
+pub use gurgenidze_defense::GURGENIDZE_DEFENSE;
+pub mod kotov_variation;
+pub use kotov_variation::KOTOV_VARIATION;
+pub mod lizard_defense;
+pub mod masur_gambit;
+pub use masur_gambit::MASUR_GAMBIT;
+pub mod modern_pterodactyl;
+pub use modern_pterodactyl::MODERN_PTERODACTYL;
+pub mod mongredien_defense;
+pub mod neo_modern_defense;
+pub use neo_modern_defense::NEO_MODERN_DEFENSE;
+pub mod norwegian_defense;
+pub use norwegian_defense::NORWEGIAN_DEFENSE;
+pub mod pseudo_austrian_attack;
+pub use pseudo_austrian_attack::PSEUDO_AUSTRIAN_ATTACK;
+pub mod pterodactyl_variation;
+pub use pterodactyl_variation::PTERODACTYL_VARIATION;
+pub mod randspringer_variation;
+pub use randspringer_variation::RANDSPRINGER_VARIATION;
+pub mod semi_averbakh_variation;
 pub mod standard_defense;
 pub use standard_defense::STANDARD_DEFENSE;
+pub mod standard_line;
+pub use standard_line::STANDARD_LINE;
+pub mod three_pawns_attack;
+pub use three_pawns_attack::THREE_PAWNS_ATTACK;
+pub mod two_knights_variation;
+pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
+pub mod westermann_gambit;
+pub use westermann_gambit::WESTERMANN_GAMBIT;
+pub mod wind_gambit;
+pub use wind_gambit::WIND_GAMBIT;

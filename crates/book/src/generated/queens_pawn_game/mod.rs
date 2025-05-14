@@ -146,20 +146,34 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
                 to: D5,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69524353741551360),
-                    knight: Bitboard(4755801206503243842),
+                    pawn: Bitboard(69524353742595840),
+                    knight: Bitboard(144150372447944770),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18444210833278894080),
-                    white: Bitboard(134281215),
+                    black: Bitboard(13832559999223595008),
+                    white: Bitboard(135325695),
                 },
             ),
             promoted: Bitboard(0),
@@ -168,8 +182,8 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -257,34 +271,20 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
                 to: D5,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69524353742595840),
-                    knight: Bitboard(144150372447944770),
+                    pawn: Bitboard(69524353741551360),
+                    knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13832559999223595008),
-                    white: Bitboard(135325695),
+                    black: Bitboard(18444210833278894080),
+                    white: Bitboard(134281215),
                 },
             ),
             promoted: Bitboard(0),
@@ -293,8 +293,8 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -302,45 +302,45 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-pub mod mason_attack;
-pub use mason_attack::MASON_ATTACK;
+pub mod accelerated_london_system;
+pub use accelerated_london_system::ACCELERATED_LONDON_SYSTEM;
 pub mod anglo_slav_opening;
-pub mod veresov_attack;
 pub use anglo_slav_opening::ANGLO_SLAV_OPENING;
-pub mod zukertort_variation;
-pub use zukertort_variation::ZUKERTORT_VARIATION;
-pub mod stonewall_attack;
-pub use stonewall_attack::STONEWALL_ATTACK;
 pub mod anti_torre;
 pub use anti_torre::ANTI_TORRE;
-pub mod modern_defense;
-pub use modern_defense::MODERN_DEFENSE;
-pub mod torre_attack;
-pub use torre_attack::TORRE_ATTACK;
+pub mod barry_attack;
+pub use barry_attack::BARRY_ATTACK;
 pub mod chandler_gambit;
 pub use chandler_gambit::CHANDLER_GAMBIT;
+pub mod chigorin_variation;
+pub use chigorin_variation::CHIGORIN_VARIATION;
 pub mod colle_system;
 pub use colle_system::COLLE_SYSTEM;
 pub mod hubsch_gambit;
 pub use hubsch_gambit::HUBSCH_GAMBIT;
-pub mod zurich_gambit;
-pub use zurich_gambit::ZURICH_GAMBIT;
-pub mod chigorin_variation;
-pub use chigorin_variation::CHIGORIN_VARIATION;
-pub mod zilbermints_countergambit;
-pub use zilbermints_countergambit::ZILBERMINTS_COUNTERGAMBIT;
 pub mod krause_variation;
 pub use krause_variation::KRAUSE_VARIATION;
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
-pub mod barry_attack;
-pub use barry_attack::BARRY_ATTACK;
-pub mod accelerated_london_system;
-pub use accelerated_london_system::ACCELERATED_LONDON_SYSTEM;
+pub mod levitsky_attack;
+pub use levitsky_attack::LEVITSKY_ATTACK;
 pub mod liedmann_gambit;
 pub use liedmann_gambit::LIEDMANN_GAMBIT;
 pub mod london_system;
-pub mod veresov;
 pub use london_system::LONDON_SYSTEM;
-pub mod levitsky_attack;
-pub use levitsky_attack::LEVITSKY_ATTACK;
+pub mod mason_attack;
+pub use mason_attack::MASON_ATTACK;
+pub mod modern_defense;
+pub use modern_defense::MODERN_DEFENSE;
+pub mod stonewall_attack;
+pub use stonewall_attack::STONEWALL_ATTACK;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
+pub mod torre_attack;
+pub use torre_attack::TORRE_ATTACK;
+pub mod veresov;
+pub mod veresov_attack;
+pub mod zilbermints_countergambit;
+pub use zilbermints_countergambit::ZILBERMINTS_COUNTERGAMBIT;
+pub mod zukertort_variation;
+pub use zukertort_variation::ZUKERTORT_VARIATION;
+pub mod zurich_gambit;
+pub use zurich_gambit::ZURICH_GAMBIT;

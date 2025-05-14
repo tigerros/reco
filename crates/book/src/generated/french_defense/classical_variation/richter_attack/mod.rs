@@ -100,20 +100,48 @@ pub const RICHTER_ATTACK: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: E7,
+                capture: Some(Bishop),
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: F6,
+                capture: None,
+                to: E7,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: D1,
+                capture: None,
+                to: G4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65038346568656640),
+                    pawn: Bitboard(65038415019697920),
                     knight: Bitboard(144115188076118080),
-                    bishop: Bitboard(292769160151171104),
+                    bishop: Bitboard(292733975779082272),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
+                    queen: Bitboard(576460753377165312),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
                     black: Bitboard(11526699397823856640),
-                    white: Bitboard(35184775063545),
+                    white: Bitboard(69927757809),
                 },
             ),
             promoted: Bitboard(0),
@@ -122,8 +150,8 @@ pub const RICHTER_ATTACK: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -201,48 +229,20 @@ pub const RICHTER_ATTACK: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: E7,
-                capture: Some(Bishop),
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: F6,
-                capture: None,
-                to: E7,
-                promotion: None,
-            },
-            Normal {
-                role: Queen,
-                from: D1,
-                capture: None,
-                to: G4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65038415019697920),
+                    pawn: Bitboard(65038346568656640),
                     knight: Bitboard(144115188076118080),
-                    bishop: Bitboard(292733975779082272),
+                    bishop: Bitboard(292769160151171104),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460753377165312),
+                    queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
                     black: Bitboard(11526699397823856640),
-                    white: Bitboard(69927757809),
+                    white: Bitboard(35184775063545),
                 },
             ),
             promoted: Bitboard(0),
@@ -251,8 +251,8 @@ pub const RICHTER_ATTACK: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

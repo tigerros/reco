@@ -86,30 +86,38 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
                 to: D4,
                 promotion: None,
             },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Castle { king: E1, rook: H1 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(68398471018755840),
-                    knight: Bitboard(4611690416475996162),
+                    knight: Bitboard(39582420697090),
                     bishop: Bitboard(2594073385365422084),
-                    rook: Bitboard(9295429630892703873),
+                    rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(18298974160522575872),
-                    white: Bitboard(140572575),
+                    black: Bitboard(13687323326467276800),
+                    white: Bitboard(140572527),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
+            castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -268,10 +276,10 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
                 promotion: None,
             },
             Normal {
-                role: Knight,
-                from: G8,
+                role: Pawn,
+                from: E7,
                 capture: None,
-                to: F6,
+                to: E6,
                 promotion: None,
             },
             Castle { king: E1, rook: H1 },
@@ -279,15 +287,15 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(68398471018755840),
-                    knight: Bitboard(39582420697090),
+                    pawn: Bitboard(63912463577429760),
+                    knight: Bitboard(4611690416475996162),
                     bishop: Bitboard(2594073385365422084),
                     rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(13687323326467276800),
+                    black: Bitboard(18294488153081249792),
                     white: Bitboard(140572527),
                 },
             ),
@@ -297,7 +305,7 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
             castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
+            halfmoves: 1,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
@@ -362,38 +370,30 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
                 to: D4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E6,
-                promotion: None,
-            },
-            Castle { king: E1, rook: H1 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(63912463577429760),
+                    pawn: Bitboard(68398471018755840),
                     knight: Bitboard(4611690416475996162),
                     bishop: Bitboard(2594073385365422084),
-                    rook: Bitboard(9295429630892703777),
+                    rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606847040),
+                    king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18294488153081249792),
-                    white: Bitboard(140572527),
+                    black: Bitboard(18298974160522575872),
+                    white: Bitboard(140572575),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(9295429630892703744),
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

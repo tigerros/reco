@@ -72,20 +72,34 @@ pub const TAYLER_OPENING: [Opening<'static, &str>; 2] = [
                 to: E2,
                 promotion: None,
             },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588421820160),
-                    knight: Bitboard(4611690416475996162),
+                    pawn: Bitboard(67272588556035840),
+                    knight: Bitboard(39582420697090),
                     bishop: Bitboard(2594073385365409796),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18297848277795602432),
-                    white: Bitboard(270598047),
+                    black: Bitboard(13686197443740303360),
+                    white: Bitboard(404813727),
                 },
             ),
             promoted: Bitboard(0),
@@ -94,8 +108,8 @@ pub const TAYLER_OPENING: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -145,34 +159,20 @@ pub const TAYLER_OPENING: [Opening<'static, &str>; 2] = [
                 to: E2,
                 promotion: None,
             },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588556035840),
-                    knight: Bitboard(39582420697090),
+                    pawn: Bitboard(67272588421820160),
+                    knight: Bitboard(4611690416475996162),
                     bishop: Bitboard(2594073385365409796),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13686197443740303360),
-                    white: Bitboard(404813727),
+                    black: Bitboard(18297848277795602432),
+                    white: Bitboard(270598047),
                 },
             ),
             promoted: Bitboard(0),
@@ -181,8 +181,8 @@ pub const TAYLER_OPENING: [Opening<'static, &str>; 2] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

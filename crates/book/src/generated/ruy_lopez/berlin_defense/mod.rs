@@ -79,6 +79,7 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
+            Castle { king: E1, rook: H1 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
@@ -86,22 +87,22 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 2] = [
                     pawn: Bitboard(67272588421820160),
                     knight: Bitboard(39582420697090),
                     bishop: Bitboard(2594073393955340292),
-                    rook: Bitboard(9295429630892703873),
+                    rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    king: Bitboard(1152921504606847040),
                 },
                 ByColor {
                     black: Bitboard(13686197443740303360),
-                    white: Bitboard(8860528543),
+                    white: Bitboard(8860528495),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 4,
+            halfmoves: 5,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
@@ -159,7 +160,6 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: F6,
                 promotion: None,
             },
-            Castle { king: E1, rook: H1 },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
@@ -167,22 +167,22 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 2] = [
                     pawn: Bitboard(67272588421820160),
                     knight: Bitboard(39582420697090),
                     bishop: Bitboard(2594073393955340292),
-                    rook: Bitboard(9295429630892703777),
+                    rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606847040),
+                    king: Bitboard(1152921504606846992),
                 },
                 ByColor {
                     black: Bitboard(13686197443740303360),
-                    white: Bitboard(8860528495),
+                    white: Bitboard(8860528543),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703744),
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 5,
+            halfmoves: 4,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
@@ -191,53 +191,53 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod kaufmann_variation;
-pub use kaufmann_variation::KAUFMANN_VARIATION;
-pub mod pillsbury_variation;
-pub use pillsbury_variation::PILLSBURY_VARIATION;
 pub mod anderssen_variation;
 pub use anderssen_variation::ANDERSSEN_VARIATION;
-pub mod improved_steinitz_defense;
-pub use improved_steinitz_defense::IMPROVED_STEINITZ_DEFENSE;
-pub mod hedgehog_variation;
-pub use hedgehog_variation::HEDGEHOG_VARIATION;
-pub mod zukertort_variation;
-pub use zukertort_variation::ZUKERTORT_VARIATION;
-pub mod mortimer_trap;
-pub use mortimer_trap::MORTIMER_TRAP;
-pub mod rio_gambit_accepted;
-pub use rio_gambit_accepted::RIO_GAMBIT_ACCEPTED;
-pub mod rio_de_janeiro_variation;
-pub use rio_de_janeiro_variation::RIO_DE_JANEIRO_VARIATION;
-pub mod rosenthal_variation;
-pub use rosenthal_variation::ROSENTHAL_VARIATION;
+pub mod berlin_wall;
+pub use berlin_wall::BERLIN_WALL;
 pub mod beverwijk_variation;
 pub use beverwijk_variation::BEVERWIJK_VARIATION;
-pub mod minckwitz_variation;
-pub use minckwitz_variation::MINCKWITZ_VARIATION;
+pub mod closed_bernstein_variation;
+pub use closed_bernstein_variation::CLOSED_BERNSTEIN_VARIATION;
+pub mod closed_showalter_variation;
+pub use closed_showalter_variation::CLOSED_SHOWALTER_VARIATION;
 pub mod closed_wolf_variation;
 pub use closed_wolf_variation::CLOSED_WOLF_VARIATION;
 pub mod cordel_variation;
 pub use cordel_variation::CORDEL_VARIATION;
 pub mod duras_variation;
 pub use duras_variation::DURAS_VARIATION;
-pub mod tarrasch_trap;
-pub use tarrasch_trap::TARRASCH_TRAP;
-pub mod l_hermet_variation;
-pub use l_hermet_variation::L_HERMET_VARIATION;
+pub mod fishing_pole_variation;
+pub use fishing_pole_variation::FISHING_POLE_VARIATION;
+pub mod hedgehog_variation;
+pub use hedgehog_variation::HEDGEHOG_VARIATION;
+pub mod improved_steinitz_defense;
+pub use improved_steinitz_defense::IMPROVED_STEINITZ_DEFENSE;
+pub mod kaufmann_variation;
+pub use kaufmann_variation::KAUFMANN_VARIATION;
+pub mod minckwitz_variation;
+pub use minckwitz_variation::MINCKWITZ_VARIATION;
+pub mod mortimer_trap;
+pub use mortimer_trap::MORTIMER_TRAP;
+pub mod mortimer_variation;
+pub use mortimer_variation::MORTIMER_VARIATION;
 pub mod nyholm_attack;
 pub use nyholm_attack::NYHOLM_ATTACK;
-pub mod berlin_wall;
-pub use berlin_wall::BERLIN_WALL;
+pub mod pillsbury_variation;
+pub use pillsbury_variation::PILLSBURY_VARIATION;
+pub mod rio_gambit_accepted;
+pub use rio_gambit_accepted::RIO_GAMBIT_ACCEPTED;
+pub mod rio_de_janeiro_variation;
+pub use rio_de_janeiro_variation::RIO_DE_JANEIRO_VARIATION;
+pub mod rosenthal_variation;
+pub use rosenthal_variation::ROSENTHAL_VARIATION;
+pub mod tarrasch_trap;
+pub use tarrasch_trap::TARRASCH_TRAP;
 pub mod trifunovic_variation;
 pub use trifunovic_variation::TRIFUNOVIC_VARIATION;
 pub mod winawer_attack;
 pub use winawer_attack::WINAWER_ATTACK;
-pub mod closed_showalter_variation;
-pub use closed_showalter_variation::CLOSED_SHOWALTER_VARIATION;
-pub mod closed_bernstein_variation;
-pub use closed_bernstein_variation::CLOSED_BERNSTEIN_VARIATION;
-pub mod mortimer_variation;
-pub use mortimer_variation::MORTIMER_VARIATION;
-pub mod fishing_pole_variation;
-pub use fishing_pole_variation::FISHING_POLE_VARIATION;
+pub mod zukertort_variation;
+pub use zukertort_variation::ZUKERTORT_VARIATION;
+pub mod l_hermet_variation;
+pub use l_hermet_variation::L_HERMET_VARIATION;

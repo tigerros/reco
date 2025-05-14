@@ -94,7 +94,7 @@ pub const AUSTRIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod haberditz_variation;
-pub use haberditz_variation::HABERDITZ_VARIATION;
 pub mod gusev_countergambit;
 pub use gusev_countergambit::GUSEV_COUNTERGAMBIT;
+pub mod haberditz_variation;
+pub use haberditz_variation::HABERDITZ_VARIATION;

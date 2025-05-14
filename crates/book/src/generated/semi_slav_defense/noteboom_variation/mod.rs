@@ -122,9 +122,9 @@ pub const NOTEBOOM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod anti_noteboom_variation;
-pub use anti_noteboom_variation::ANTI_NOTEBOOM_VARIATION;
 pub mod abrahams_variation;
 pub use abrahams_variation::ABRAHAMS_VARIATION;
 pub mod anti_noteboom_gambit;
 pub use anti_noteboom_gambit::ANTI_NOTEBOOM_GAMBIT;
+pub mod anti_noteboom_variation;
+pub use anti_noteboom_variation::ANTI_NOTEBOOM_VARIATION;

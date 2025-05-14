@@ -72,20 +72,34 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
                 to: D5,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: E6,
+                capture: Some(Pawn),
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65038346300221184),
-                    knight: Bitboard(4755801206503243842),
+                    pawn: Bitboard(65020754114176768),
+                    knight: Bitboard(4755801206503505984),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18439724791477829632),
-                    white: Bitboard(34494015487),
+                    black: Bitboard(18439707233651523584),
+                    white: Bitboard(134539261),
                 },
             ),
             promoted: Bitboard(0),
@@ -94,8 +108,8 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -232,34 +246,20 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
                 to: D5,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: E6,
-                capture: Some(Pawn),
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65020754114176768),
-                    knight: Bitboard(4755801206503505984),
+                    pawn: Bitboard(65038346300221184),
+                    knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18439707233651523584),
-                    white: Bitboard(134539261),
+                    black: Bitboard(18439724791477829632),
+                    white: Bitboard(34494015487),
                 },
             ),
             promoted: Bitboard(0),
@@ -268,8 +268,8 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -277,9 +277,9 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod svenonius_variation;
-pub use svenonius_variation::SVENONIUS_VARIATION;
-pub mod monte_carlo_variation;
-pub use monte_carlo_variation::MONTE_CARLO_VARIATION;
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
+pub mod monte_carlo_variation;
+pub use monte_carlo_variation::MONTE_CARLO_VARIATION;
+pub mod svenonius_variation;
+pub use svenonius_variation::SVENONIUS_VARIATION;

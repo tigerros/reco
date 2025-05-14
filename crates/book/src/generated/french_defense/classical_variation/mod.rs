@@ -153,121 +153,6 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: A7,
-                capture: None,
-                to: A6,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G1,
-                capture: None,
-                to: F3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: F6,
-                capture: None,
-                to: D7,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: C1,
-                capture: None,
-                to: G5,
-                promotion: None,
-            },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(64758039554615040),
-                    knight: Bitboard(146366987891900416),
-                    bishop: Bitboard(2594073660243312672),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(13830010231758782464),
-                    white: Bitboard(343734020025),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::C,
-            category: RangedU8::new_static::<14>(),
-        },
-        name: "French Defense",
-        variation: &["Classical Variation"],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E7,
-                capture: None,
-                to: E6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
-            Normal {
                 role: Knight,
                 from: G8,
                 capture: None,
@@ -346,33 +231,148 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
             },
         },
     },
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<14>(),
+        },
+        name: "French Defense",
+        variation: &["Classical Variation"],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D2,
+                capture: None,
+                to: D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: A7,
+                capture: None,
+                to: A6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G1,
+                capture: None,
+                to: F3,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: F6,
+                capture: None,
+                to: D7,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: C1,
+                capture: None,
+                to: G5,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(64758039554615040),
+                    knight: Bitboard(146366987891900416),
+                    bishop: Bitboard(2594073660243312672),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(13830010231758782464),
+                    white: Bitboard(343734020025),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
 ];
-pub mod svenonius_variation;
-pub use svenonius_variation::SVENONIUS_VARIATION;
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
-pub mod tarrasch_variation;
-pub use tarrasch_variation::TARRASCH_VARIATION;
-pub mod frankfurt_variation;
-pub use frankfurt_variation::FRANKFURT_VARIATION;
-pub mod richter_attack;
-pub use richter_attack::RICHTER_ATTACK;
-pub mod stahlberg_variation;
-pub use stahlberg_variation::STAHLBERG_VARIATION;
-pub mod burn_variation;
-pub mod swiss_variation;
-pub use swiss_variation::SWISS_VARIATION;
-pub mod pollock_variation;
-pub use pollock_variation::POLLOCK_VARIATION;
-pub mod tartakower_variation;
-pub use tartakower_variation::TARTAKOWER_VARIATION;
-pub mod delayed_exchange_variation;
-pub use delayed_exchange_variation::DELAYED_EXCHANGE_VARIATION;
-pub mod vistaneckis_variation;
-pub use vistaneckis_variation::VISTANECKIS_VARIATION;
 pub mod alapin_variation;
 pub use alapin_variation::ALAPIN_VARIATION;
+pub mod burn_variation;
+pub mod delayed_exchange_variation;
+pub use delayed_exchange_variation::DELAYED_EXCHANGE_VARIATION;
+pub mod frankfurt_variation;
+pub use frankfurt_variation::FRANKFURT_VARIATION;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod pollock_variation;
+pub use pollock_variation::POLLOCK_VARIATION;
+pub mod richter_attack;
+pub use richter_attack::RICHTER_ATTACK;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod stahlberg_variation;
+pub use stahlberg_variation::STAHLBERG_VARIATION;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod svenonius_variation;
+pub use svenonius_variation::SVENONIUS_VARIATION;
+pub mod swiss_variation;
+pub use swiss_variation::SWISS_VARIATION;
+pub mod tarrasch_variation;
+pub use tarrasch_variation::TARRASCH_VARIATION;
+pub mod tartakower_variation;
+pub use tartakower_variation::TARTAKOWER_VARIATION;
+pub mod vistaneckis_variation;
+pub use vistaneckis_variation::VISTANECKIS_VARIATION;

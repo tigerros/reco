@@ -124,11 +124,25 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
                 to: D4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: D7,
+                capture: None,
+                to: D6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: C2,
+                capture: None,
+                to: C4,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(71776187914970880),
+                    pawn: Bitboard(69533184261415680),
                     knight: Bitboard(144115222435594306),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -136,8 +150,8 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13834776614665191424),
-                    white: Bitboard(68853753855),
+                    black: Bitboard(13832533610944528384),
+                    white: Bitboard(68920861695),
                 },
             ),
             promoted: Bitboard(0),
@@ -147,7 +161,7 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -277,25 +291,11 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
                 to: D4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: D7,
-                capture: None,
-                to: D6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: C2,
-                capture: None,
-                to: C4,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(69533184261415680),
+                    pawn: Bitboard(71776187914970880),
                     knight: Bitboard(144115222435594306),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -303,8 +303,8 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13832533610944528384),
-                    white: Bitboard(68920861695),
+                    black: Bitboard(13834776614665191424),
+                    white: Bitboard(68853753855),
                 },
             ),
             promoted: Bitboard(0),
@@ -314,7 +314,7 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -322,43 +322,43 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod spielmann_gambit;
-pub use spielmann_gambit::SPIELMANN_GAMBIT;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
-pub mod welling_variation;
-pub use welling_variation::WELLING_VARIATION;
 pub mod balogh_variation;
 pub use balogh_variation::BALOGH_VARIATION;
-pub mod scandinavian_variation;
-pub use scandinavian_variation::SCANDINAVIAN_VARIATION;
-pub mod hunt_variation;
-pub use hunt_variation::HUNT_VARIATION;
-pub mod buckley_attack;
-pub use buckley_attack::BUCKLEY_ATTACK;
 pub mod brooklyn_variation;
 pub use brooklyn_variation::BROOKLYN_VARIATION;
-pub mod the_squirrel;
-pub use the_squirrel::THE_SQUIRREL;
-pub mod maroczy_variation;
-pub use maroczy_variation::MAROCZY_VARIATION;
+pub mod buckley_attack;
+pub use buckley_attack::BUCKLEY_ATTACK;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod mokele_mbembe;
-pub use mokele_mbembe::MOKELE_MBEMBE;
-pub mod o_sullivan_gambit;
-pub use o_sullivan_gambit::O_SULLIVAN_GAMBIT;
-pub mod steiner_variation;
-pub use steiner_variation::STEINER_VARIATION;
-pub mod kmoch_variation;
-pub use kmoch_variation::KMOCH_VARIATION;
-pub mod two_pawns_attack;
-pub use two_pawns_attack::TWO_PAWNS_ATTACK;
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
-pub mod samisch_attack;
-pub use samisch_attack::SAMISCH_ATTACK;
 pub mod four_pawns_attack;
 pub use four_pawns_attack::FOUR_PAWNS_ATTACK;
+pub mod hunt_variation;
+pub use hunt_variation::HUNT_VARIATION;
+pub mod kmoch_variation;
+pub use kmoch_variation::KMOCH_VARIATION;
 pub mod krejcik_variation;
 pub use krejcik_variation::KREJCIK_VARIATION;
+pub mod maroczy_variation;
+pub use maroczy_variation::MAROCZY_VARIATION;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
+pub mod mokele_mbembe;
+pub use mokele_mbembe::MOKELE_MBEMBE;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod o_sullivan_gambit;
+pub use o_sullivan_gambit::O_SULLIVAN_GAMBIT;
+pub mod samisch_attack;
+pub use samisch_attack::SAMISCH_ATTACK;
+pub mod scandinavian_variation;
+pub use scandinavian_variation::SCANDINAVIAN_VARIATION;
+pub mod spielmann_gambit;
+pub use spielmann_gambit::SPIELMANN_GAMBIT;
+pub mod steiner_variation;
+pub use steiner_variation::STEINER_VARIATION;
+pub mod the_squirrel;
+pub use the_squirrel::THE_SQUIRREL;
+pub mod two_pawns_attack;
+pub use two_pawns_attack::TWO_PAWNS_ATTACK;
+pub mod welling_variation;
+pub use welling_variation::WELLING_VARIATION;

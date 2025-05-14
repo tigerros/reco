@@ -115,7 +115,7 @@ pub const HALLOWEEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod plasma_variation;
-pub use plasma_variation::PLASMA_VARIATION;
 pub mod oldtimer_variation;
 pub use oldtimer_variation::OLDTIMER_VARIATION;
+pub mod plasma_variation;
+pub use plasma_variation::PLASMA_VARIATION;

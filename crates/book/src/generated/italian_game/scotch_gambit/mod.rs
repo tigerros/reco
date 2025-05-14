@@ -123,21 +123,21 @@ pub const SCOTCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod walbrodt_baird_gambit;
-pub use walbrodt_baird_gambit::WALBRODT_BAIRD_GAMBIT;
-pub mod janowski_defense;
-pub use janowski_defense::JANOWSKI_DEFENSE;
 pub mod anderssen_attack;
 pub use anderssen_attack::ANDERSSEN_ATTACK;
-pub mod max_lange_attack;
-pub use max_lange_attack::MAX_LANGE_ATTACK;
+pub mod canal_variation;
+pub use canal_variation::CANAL_VARIATION;
 pub mod double_gambit_accepted;
 pub use double_gambit_accepted::DOUBLE_GAMBIT_ACCEPTED;
+pub mod janowski_defense;
+pub use janowski_defense::JANOWSKI_DEFENSE;
+pub mod max_lange_attack;
+pub use max_lange_attack::MAX_LANGE_ATTACK;
 pub mod max_lange_attack_accepted;
 pub use max_lange_attack_accepted::MAX_LANGE_ATTACK_ACCEPTED;
 pub mod nakhmanson_gambit;
 pub use nakhmanson_gambit::NAKHMANSON_GAMBIT;
+pub mod walbrodt_baird_gambit;
+pub use walbrodt_baird_gambit::WALBRODT_BAIRD_GAMBIT;
 pub mod de_riviere_defense;
 pub use de_riviere_defense::DE_RIVIERE_DEFENSE;
-pub mod canal_variation;
-pub use canal_variation::CANAL_VARIATION;

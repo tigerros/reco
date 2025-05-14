@@ -115,30 +115,38 @@ pub const GLIGORIC_SYSTEM: [Opening<'static, &str>; 2] = [
                 to: C5,
                 promotion: None,
             },
+            Castle { king: E1, rook: H1 },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: D7,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(63912463641404160),
-                    knight: Bitboard(144150372450304000),
+                    knight: Bitboard(2286984188133376),
                     bishop: Bitboard(288230376185790468),
-                    rook: Bitboard(2377900603251622017),
+                    rook: Bitboard(2377900603251621921),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(4611686018427387920),
+                    king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(8062340586054615040),
-                    white: Bitboard(205317021),
+                    black: Bitboard(7920477197792444416),
+                    white: Bitboard(205316973),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: White,
-            castling_rights: Bitboard(129),
+            castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -231,38 +239,30 @@ pub const GLIGORIC_SYSTEM: [Opening<'static, &str>; 2] = [
                 to: C5,
                 promotion: None,
             },
-            Castle { king: E1, rook: H1 },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: D7,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(63912463641404160),
-                    knight: Bitboard(2286984188133376),
+                    knight: Bitboard(144150372450304000),
                     bishop: Bitboard(288230376185790468),
-                    rook: Bitboard(2377900603251621921),
+                    rook: Bitboard(2377900603251622017),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(4611686018427387968),
+                    king: Bitboard(4611686018427387920),
                 },
                 ByColor {
-                    black: Bitboard(7920477197792444416),
-                    white: Bitboard(205316973),
+                    black: Bitboard(8062340586054615040),
+                    white: Bitboard(205317021),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: White,
-            castling_rights: Bitboard(0),
+            castling_rights: Bitboard(129),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -270,13 +270,13 @@ pub const GLIGORIC_SYSTEM: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod smyslov_variation;
-pub use smyslov_variation::SMYSLOV_VARIATION;
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod bronstein_variation;
-pub use bronstein_variation::BRONSTEIN_VARIATION;
-pub mod keres_variation;
-pub use keres_variation::KERES_VARIATION;
 pub mod bernstein_defense;
 pub use bernstein_defense::BERNSTEIN_DEFENSE;
+pub mod bronstein_variation;
+pub use bronstein_variation::BRONSTEIN_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod keres_variation;
+pub use keres_variation::KERES_VARIATION;
+pub mod smyslov_variation;
+pub use smyslov_variation::SMYSLOV_VARIATION;

@@ -94,7 +94,7 @@ pub const NORWALDE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod schubert_variation;
-pub use schubert_variation::SCHUBERT_VARIATION;
 pub mod bucker_gambit;
 pub use bucker_gambit::BUCKER_GAMBIT;
+pub mod schubert_variation;
+pub use schubert_variation::SCHUBERT_VARIATION;

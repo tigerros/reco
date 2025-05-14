@@ -129,20 +129,34 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
                 promotion: None,
             },
             Castle { king: E8, rook: H8 },
+            Normal {
+                role: Queen,
+                from: D1,
+                capture: None,
+                to: D2,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(50463185938990848),
-                    knight: Bitboard(144150372582424576),
+                    knight: Bitboard(39582553079808),
                     bishop: Bitboard(306244774662242336),
                     rook: Bitboard(2377900603251622017),
-                    queen: Bitboard(576460752303423496),
+                    queen: Bitboard(576460752303425536),
                     king: Bitboard(4611686018427387920),
                 },
                 ByColor {
-                    black: Bitboard(8066905706759979008),
-                    white: Bitboard(406112185),
+                    black: Bitboard(7922794916730634240),
+                    white: Bitboard(406114225),
                 },
             ),
             promoted: Bitboard(0),
@@ -151,8 +165,8 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
             castling_rights: Bitboard(129),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+            halfmoves: 3,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -259,34 +273,20 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
                 promotion: None,
             },
             Castle { king: E8, rook: H8 },
-            Normal {
-                role: Queen,
-                from: D1,
-                capture: None,
-                to: D2,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(50463185938990848),
-                    knight: Bitboard(39582553079808),
+                    knight: Bitboard(144150372582424576),
                     bishop: Bitboard(306244774662242336),
                     rook: Bitboard(2377900603251622017),
-                    queen: Bitboard(576460752303425536),
+                    queen: Bitboard(576460752303423496),
                     king: Bitboard(4611686018427387920),
                 },
                 ByColor {
-                    black: Bitboard(7922794916730634240),
-                    white: Bitboard(406114225),
+                    black: Bitboard(8066905706759979008),
+                    white: Bitboard(406112185),
                 },
             ),
             promoted: Bitboard(0),
@@ -295,8 +295,8 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
             castling_rights: Bitboard(129),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 3,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -808,23 +808,23 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-pub mod byrne_variation;
-pub use byrne_variation::BYRNE_VARIATION;
-pub mod sosonko_variation;
-pub use sosonko_variation::SOSONKO_VARIATION;
-pub mod soltis_variation;
-pub use soltis_variation::SOLTIS_VARIATION;
 pub mod belezky_line;
 pub use belezky_line::BELEZKY_LINE;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod old_line;
-pub use old_line::OLD_LINE;
+pub mod byrne_variation;
+pub use byrne_variation::BYRNE_VARIATION;
 pub mod czerniak_variation;
 pub use czerniak_variation::CZERNIAK_VARIATION;
-pub mod panov_variation;
-pub use panov_variation::PANOV_VARIATION;
 pub mod early_deviations;
 pub use early_deviations::EARLY_DEVIATIONS;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod modern_line;
 pub use modern_line::MODERN_LINE;
+pub mod old_line;
+pub use old_line::OLD_LINE;
+pub mod panov_variation;
+pub use panov_variation::PANOV_VARIATION;
+pub mod soltis_variation;
+pub use soltis_variation::SOLTIS_VARIATION;
+pub mod sosonko_variation;
+pub use sosonko_variation::SOSONKO_VARIATION;

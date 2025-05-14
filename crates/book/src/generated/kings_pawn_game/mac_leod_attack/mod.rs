@@ -87,7 +87,7 @@ pub const MAC_LEOD_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod norwalde_gambit;
-pub use norwalde_gambit::NORWALDE_GAMBIT;
 pub mod lasa_gambit;
 pub use lasa_gambit::LASA_GAMBIT;
+pub mod norwalde_gambit;
+pub use norwalde_gambit::NORWALDE_GAMBIT;

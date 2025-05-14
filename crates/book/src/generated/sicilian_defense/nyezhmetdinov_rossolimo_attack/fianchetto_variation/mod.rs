@@ -108,9 +108,9 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod gufeld_gambit;
+pub use gufeld_gambit::GUFELD_GAMBIT;
 pub mod lutikov_gambit;
 pub use lutikov_gambit::LUTIKOV_GAMBIT;
 pub mod totsky_attack;
 pub use totsky_attack::TOTSKY_ATTACK;
-pub mod gufeld_gambit;
-pub use gufeld_gambit::GUFELD_GAMBIT;

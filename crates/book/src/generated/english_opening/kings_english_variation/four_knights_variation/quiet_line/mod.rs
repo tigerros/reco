@@ -90,30 +90,66 @@ pub const QUIET_LINE: [Opening<'static, &str>; 3] = [
                 to: E3,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: F8,
+                capture: None,
+                to: B4,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: D1,
+                capture: None,
+                to: C2,
+                promotion: None,
+            },
+            Castle { king: E8, rook: H8 },
+            Normal {
+                role: Knight,
+                from: C3,
+                capture: None,
+                to: D5,
+                promotion: None,
+            },
+            Normal {
+                role: Rook,
+                from: F8,
+                capture: None,
+                to: E8,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: C2,
+                capture: None,
+                to: F5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588221541120),
-                    knight: Bitboard(39582420959232),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    knight: Bitboard(39616780435456),
+                    bishop: Bitboard(288230376185266212),
+                    rook: Bitboard(1224979098644775041),
+                    queen: Bitboard(576460889742376960),
+                    king: Bitboard(4611686018427387920),
                 },
                 ByColor {
-                    black: Bitboard(13686197443740303360),
-                    white: Bitboard(70577085),
+                    black: Bitboard(6768668416132775936),
+                    white: Bitboard(171869006773),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
+            castling_rights: Bitboard(129),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 6,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -293,66 +329,30 @@ pub const QUIET_LINE: [Opening<'static, &str>; 3] = [
                 to: E3,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: F8,
-                capture: None,
-                to: B4,
-                promotion: None,
-            },
-            Normal {
-                role: Queen,
-                from: D1,
-                capture: None,
-                to: C2,
-                promotion: None,
-            },
-            Castle { king: E8, rook: H8 },
-            Normal {
-                role: Knight,
-                from: C3,
-                capture: None,
-                to: D5,
-                promotion: None,
-            },
-            Normal {
-                role: Rook,
-                from: F8,
-                capture: None,
-                to: E8,
-                promotion: None,
-            },
-            Normal {
-                role: Queen,
-                from: C2,
-                capture: None,
-                to: F5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588221541120),
-                    knight: Bitboard(39616780435456),
-                    bishop: Bitboard(288230376185266212),
-                    rook: Bitboard(1224979098644775041),
-                    queen: Bitboard(576460889742376960),
-                    king: Bitboard(4611686018427387920),
+                    knight: Bitboard(39582420959232),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(6768668416132775936),
-                    white: Bitboard(171869006773),
+                    black: Bitboard(13686197443740303360),
+                    white: Bitboard(70577085),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,
-            castling_rights: Bitboard(129),
+            castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 6,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

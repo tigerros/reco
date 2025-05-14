@@ -86,20 +86,34 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
                 to: C4,
                 promotion: None,
             },
+            Normal {
+                role: Knight,
+                from: G8,
+                capture: None,
+                to: F6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B1,
+                capture: None,
+                to: C3,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(68398453901812480),
-                    knight: Bitboard(4755801206503243842),
+                    knight: Bitboard(144150372448206912),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(18443084933372051456),
-                    white: Bitboard(201384959),
+                    black: Bitboard(13831434099316752384),
+                    white: Bitboard(201647101),
                 },
             ),
             promoted: Bitboard(0),
@@ -108,8 +122,8 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -173,34 +187,20 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
                 to: C4,
                 promotion: None,
             },
-            Normal {
-                role: Knight,
-                from: G8,
-                capture: None,
-                to: F6,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B1,
-                capture: None,
-                to: C3,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(68398453901812480),
-                    knight: Bitboard(144150372448206912),
+                    knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13831434099316752384),
-                    white: Bitboard(201647101),
+                    black: Bitboard(18443084933372051456),
+                    white: Bitboard(201384959),
                 },
             ),
             promoted: Bitboard(0),
@@ -209,8 +209,8 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -326,11 +326,11 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod modern_defense;
-pub use modern_defense::MODERN_DEFENSE;
+pub mod fianchetto_defense;
+pub use fianchetto_defense::FIANCHETTO_DEFENSE;
 pub mod gunderam_attack;
 pub use gunderam_attack::GUNDERAM_ATTACK;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-pub mod fianchetto_defense;
-pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod modern_defense;
+pub use modern_defense::MODERN_DEFENSE;

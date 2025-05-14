@@ -100,11 +100,25 @@ pub const GELLER_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: E4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: B7,
+                capture: None,
+                to: B5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: E4,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(68402817857020672),
+                    pawn: Bitboard(67839944944575232),
                     knight: Bitboard(144150372450304000),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -112,8 +126,8 @@ pub const GELLER_GAMBIT: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13831438463070633984),
-                    white: Bitboard(405070781),
+                    black: Bitboard(13830875521707147264),
+                    white: Bitboard(68856112061),
                 },
             ),
             promoted: Bitboard(0),
@@ -123,7 +137,7 @@ pub const GELLER_GAMBIT: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -201,25 +215,11 @@ pub const GELLER_GAMBIT: [Opening<'static, &str>; 2] = [
                 to: E4,
                 promotion: None,
             },
-            Normal {
-                role: Pawn,
-                from: B7,
-                capture: None,
-                to: B5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: E4,
-                capture: None,
-                to: E5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67839944944575232),
+                    pawn: Bitboard(68402817857020672),
                     knight: Bitboard(144150372450304000),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -227,8 +227,8 @@ pub const GELLER_GAMBIT: [Opening<'static, &str>; 2] = [
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13830875521707147264),
-                    white: Bitboard(68856112061),
+                    black: Bitboard(13831438463070633984),
+                    white: Bitboard(405070781),
                 },
             ),
             promoted: Bitboard(0),
@@ -238,7 +238,7 @@ pub const GELLER_GAMBIT: [Opening<'static, &str>; 2] = [
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")

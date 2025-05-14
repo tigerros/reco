@@ -115,9 +115,9 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod normal_line;
-pub use normal_line::NORMAL_LINE;
 pub mod heral_variation;
 pub use heral_variation::HERAL_VARIATION;
 pub mod knight_defense;
 pub use knight_defense::KNIGHT_DEFENSE;
+pub mod normal_line;
+pub use normal_line::NORMAL_LINE;

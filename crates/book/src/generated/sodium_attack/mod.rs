@@ -71,9 +71,9 @@ pub const SODIUM_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod chenoboskion_variation;
-pub use chenoboskion_variation::CHENOBOSKION_VARIATION;
 pub mod celadon_variation;
 pub use celadon_variation::CELADON_VARIATION;
+pub mod chenoboskion_variation;
+pub use chenoboskion_variation::CHENOBOSKION_VARIATION;
 pub mod durkin_gambit;
 pub use durkin_gambit::DURKIN_GAMBIT;

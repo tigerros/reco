@@ -143,7 +143,7 @@ pub const HAMPPE_ALLGAIER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod thorold_variation;
-pub use thorold_variation::THOROLD_VARIATION;
 pub mod alapin_variation;
 pub use alapin_variation::ALAPIN_VARIATION;
+pub mod thorold_variation;
+pub use thorold_variation::THOROLD_VARIATION;

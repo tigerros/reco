@@ -51,58 +51,6 @@ pub const NIMZOWITSCH_DEFENSE: [Opening<'static, &str>; 2] = [
                 to: C6,
                 promotion: None,
             },
-        ],
-        setup: &Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(71776119329713920),
-                    knight: Bitboard(4611690416473899074),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18302351808703496192),
-                    white: Bitboard(268496895),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        },
-    },
-    Opening {
-        code: Code {
-            volume: Volume::B,
-            category: RangedU8::new_static::<0>(),
-        },
-        name: "Nimzowitsch Defense",
-        variation: &[],
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
             Normal {
                 role: Pawn,
                 from: D2,
@@ -140,38 +88,90 @@ pub const NIMZOWITSCH_DEFENSE: [Opening<'static, &str>; 2] = [
             },
         },
     },
+    Opening {
+        code: Code {
+            volume: Volume::B,
+            category: RangedU8::new_static::<0>(),
+        },
+        name: "Nimzowitsch Defense",
+        variation: &[],
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: B8,
+                capture: None,
+                to: C6,
+                promotion: None,
+            },
+        ],
+        setup: &Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(71776119329713920),
+                    knight: Bitboard(4611690416473899074),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18302351808703496192),
+                    white: Bitboard(268496895),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        },
+    },
 ];
-pub mod pirc_connection;
-pub use pirc_connection::PIRC_CONNECTION;
-pub mod franco_nimzowitsch_variation;
-pub use franco_nimzowitsch_variation::FRANCO_NIMZOWITSCH_VARIATION;
-pub mod mikenas_variation;
-pub use mikenas_variation::MIKENAS_VARIATION;
-pub mod colorado_countergambit_accepted;
-pub use colorado_countergambit_accepted::COLORADO_COUNTERGAMBIT_ACCEPTED;
-pub mod scandinavian_variation;
-pub use scandinavian_variation::SCANDINAVIAN_VARIATION;
-pub mod colorado_countergambit;
-pub use colorado_countergambit::COLORADO_COUNTERGAMBIT;
-pub mod woodchuck_variation;
-pub use woodchuck_variation::WOODCHUCK_VARIATION;
-pub mod kennedy_variation;
-pub use kennedy_variation::KENNEDY_VARIATION;
-pub mod neo_mongoloid_defense;
-pub use neo_mongoloid_defense::NEO_MONGOLOID_DEFENSE;
-pub mod declined_variation;
-pub use declined_variation::DECLINED_VARIATION;
-pub mod williams_variation;
-pub use williams_variation::WILLIAMS_VARIATION;
-pub mod hornung_gambit;
-pub use hornung_gambit::HORNUNG_GAMBIT;
-pub mod pseudo_spanish_variation;
-pub use pseudo_spanish_variation::PSEUDO_SPANISH_VARIATION;
-pub mod wheeler_gambit;
-pub use wheeler_gambit::WHEELER_GAMBIT;
 pub mod breyer_variation;
 pub use breyer_variation::BREYER_VARIATION;
-pub mod french_connection;
-pub use french_connection::FRENCH_CONNECTION;
+pub mod colorado_countergambit;
+pub use colorado_countergambit::COLORADO_COUNTERGAMBIT;
+pub mod colorado_countergambit_accepted;
+pub use colorado_countergambit_accepted::COLORADO_COUNTERGAMBIT_ACCEPTED;
+pub mod declined_variation;
+pub use declined_variation::DECLINED_VARIATION;
 pub mod el_columpio_defense;
 pub use el_columpio_defense::EL_COLUMPIO_DEFENSE;
+pub mod franco_nimzowitsch_variation;
+pub use franco_nimzowitsch_variation::FRANCO_NIMZOWITSCH_VARIATION;
+pub mod french_connection;
+pub use french_connection::FRENCH_CONNECTION;
+pub mod hornung_gambit;
+pub use hornung_gambit::HORNUNG_GAMBIT;
+pub mod kennedy_variation;
+pub use kennedy_variation::KENNEDY_VARIATION;
+pub mod mikenas_variation;
+pub use mikenas_variation::MIKENAS_VARIATION;
+pub mod neo_mongoloid_defense;
+pub use neo_mongoloid_defense::NEO_MONGOLOID_DEFENSE;
+pub mod pirc_connection;
+pub use pirc_connection::PIRC_CONNECTION;
+pub mod pseudo_spanish_variation;
+pub use pseudo_spanish_variation::PSEUDO_SPANISH_VARIATION;
+pub mod scandinavian_variation;
+pub use scandinavian_variation::SCANDINAVIAN_VARIATION;
+pub mod wheeler_gambit;
+pub use wheeler_gambit::WHEELER_GAMBIT;
+pub mod williams_variation;
+pub use williams_variation::WILLIAMS_VARIATION;
+pub mod woodchuck_variation;
+pub use woodchuck_variation::WOODCHUCK_VARIATION;

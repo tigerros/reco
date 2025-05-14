@@ -101,7 +101,7 @@ pub const LONDON_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod with_e6;
-pub use with_e6::WITH_E6;
 pub mod pterodactyl_variation;
 pub use pterodactyl_variation::PTERODACTYL_VARIATION;
+pub mod with_e6;
+pub use with_e6::WITH_E6;

@@ -148,13 +148,13 @@ pub const ENGLISH_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod hartlaub_gambit_accepted;
-pub use hartlaub_gambit_accepted::HARTLAUB_GAMBIT_ACCEPTED;
 pub mod eastbourne_gambit;
 pub use eastbourne_gambit::EASTBOURNE_GAMBIT;
-pub mod poli_gambit;
-pub use poli_gambit::POLI_GAMBIT;
+pub mod hartlaub_gambit_accepted;
+pub use hartlaub_gambit_accepted::HARTLAUB_GAMBIT_ACCEPTED;
 pub mod hartlaub_gambit_declined;
 pub use hartlaub_gambit_declined::HARTLAUB_GAMBIT_DECLINED;
 pub mod perrin_variation;
 pub use perrin_variation::PERRIN_VARIATION;
+pub mod poli_gambit;
+pub use poli_gambit::POLI_GAMBIT;

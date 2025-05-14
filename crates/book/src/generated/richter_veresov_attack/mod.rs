@@ -72,30 +72,37 @@ pub const RICHTER_VERESOV_ATTACK: [Opening<'static, &str>; 2] = [
                 to: G5,
                 promotion: None,
             },
+            Normal {
+                role: Bishop,
+                from: C8,
+                capture: None,
+                to: F5,
+                promotion: None,
+            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(69524353741551360),
                     knight: Bitboard(144150372448206912),
-                    bishop: Bitboard(2594073660243312672),
+                    bishop: Bitboard(2305843421530554400),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13832559999223595008),
+                    black: Bitboard(13544329760510836736),
                     white: Bitboard(275012450297),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -145,37 +152,30 @@ pub const RICHTER_VERESOV_ATTACK: [Opening<'static, &str>; 2] = [
                 to: G5,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: C8,
-                capture: None,
-                to: F5,
-                promotion: None,
-            },
         ],
         setup: &Setup {
             board: Board::from_bitboards(
                 ByRole {
                     pawn: Bitboard(69524353741551360),
                     knight: Bitboard(144150372448206912),
-                    bishop: Bitboard(2305843421530554400),
+                    bishop: Bitboard(2594073660243312672),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13544329760510836736),
+                    black: Bitboard(13832559999223595008),
                     white: Bitboard(275012450297),
                 },
             ),
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 panic!("fullmoves is zero")
@@ -183,13 +183,13 @@ pub const RICHTER_VERESOV_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod veresov_variation;
-pub use veresov_variation::VERESOV_VARIATION;
-pub mod two_knights_system;
-pub use two_knights_system::TWO_KNIGHTS_SYSTEM;
 pub mod boyce_defense;
 pub use boyce_defense::BOYCE_DEFENSE;
-pub mod richter_variation;
-pub use richter_variation::RICHTER_VARIATION;
 pub mod malich_gambit;
 pub use malich_gambit::MALICH_GAMBIT;
+pub mod richter_variation;
+pub use richter_variation::RICHTER_VARIATION;
+pub mod two_knights_system;
+pub use two_knights_system::TWO_KNIGHTS_SYSTEM;
+pub mod veresov_variation;
+pub use veresov_variation::VERESOV_VARIATION;

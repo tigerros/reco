@@ -101,17 +101,17 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod van_der_wiel_attack;
-pub use van_der_wiel_attack::VAN_DER_WIEL_ATTACK;
-pub mod prins_attack;
-pub use prins_attack::PRINS_ATTACK;
-pub mod tal_variation;
-pub use tal_variation::TAL_VARIATION;
 pub mod bayonet_attack;
 pub use bayonet_attack::BAYONET_ATTACK;
-pub mod bronstein_variation;
-pub use bronstein_variation::BRONSTEIN_VARIATION;
 pub mod botvinnik_carls_defense;
 pub use botvinnik_carls_defense::BOTVINNIK_CARLS_DEFENSE;
+pub mod bronstein_variation;
+pub use bronstein_variation::BRONSTEIN_VARIATION;
+pub mod prins_attack;
+pub use prins_attack::PRINS_ATTACK;
 pub mod short_variation;
 pub use short_variation::SHORT_VARIATION;
+pub mod tal_variation;
+pub use tal_variation::TAL_VARIATION;
+pub mod van_der_wiel_attack;
+pub use van_der_wiel_attack::VAN_DER_WIEL_ATTACK;

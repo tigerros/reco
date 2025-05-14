@@ -130,7 +130,7 @@ pub const GRUNFELD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod capablanca_variation;
-pub use capablanca_variation::CAPABLANCA_VARIATION;
 pub mod botvinnik_variation;
 pub use botvinnik_variation::BOTVINNIK_VARIATION;
+pub mod capablanca_variation;
+pub use capablanca_variation::CAPABLANCA_VARIATION;

@@ -168,13 +168,13 @@ pub const MARSHALL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
 }];
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-pub mod original_marshall_attack;
-pub use original_marshall_attack::ORIGINAL_MARSHALL_ATTACK;
 pub mod modern_main_line;
 pub use modern_main_line::MODERN_MAIN_LINE;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
+pub mod original_marshall_attack;
+pub use original_marshall_attack::ORIGINAL_MARSHALL_ATTACK;
 pub mod re3_variation;
 pub use re3_variation::RE3_VARIATION;
 pub mod steiner_variation;
 pub use steiner_variation::STEINER_VARIATION;
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;

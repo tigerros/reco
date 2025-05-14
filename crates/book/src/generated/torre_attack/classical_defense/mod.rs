@@ -101,7 +101,7 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod petrosian_gambit;
-pub use petrosian_gambit::PETROSIAN_GAMBIT;
 pub mod nimzowitsch_variation;
 pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
+pub mod petrosian_gambit;
+pub use petrosian_gambit::PETROSIAN_GAMBIT;
