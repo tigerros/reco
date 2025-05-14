@@ -11,6 +11,7 @@ deunicode = { version = "1", default-features = false, features = ["alloc"] }
 dotenvy = { version = "0.15.7", default-features = false }
 heck = { version = "0.5.0", default-features = false }
 http = { version = "1", default-features = false }
+itertools = { version = "0.14.0", default-features = false, features = ["use_std"] }
 reco-core = { workspace = true, features = ["alloc"] }
 serde_json = { version = "1", default-features = false }
 shakmaty = { workspace = true }

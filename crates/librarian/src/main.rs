@@ -6,11 +6,12 @@ use crate::constants::{BRANCH, COMMIT_SOURCE_OUT, GEN_DIR, OWNER, REPO, WORKFLOW
 use deunicode::deunicode;
 use heck::{ToShoutySnekCase, ToSnekCase};
 use http::header;
+use itertools::Itertools;
 use reco_core::{Code, Opening, OpeningOwned};
 use serde_json::Value;
 use shakmaty::uci::UciMove;
 use shakmaty::{Chess, EnPassantMode, Position};
-use std::collections::HashMap;
+use std::collections::{BTreeMap, BTreeSet};
 use std::fs::{File, create_dir_all, exists, remove_dir_all, write};
 use std::io::{Cursor, Write};
 use std::str::FromStr;
@@ -39,7 +40,7 @@ fn main() {
     // The first value is the original full name of the opening.
     // The second value are all the "silent variations", those being different entries but having the
     // same identifier. Each item is already a string of a const expression.
-    let mut identifiers = HashMap::<Vec<String>, Option<(String, Vec<String>)>>::new();
+    let mut identifiers = BTreeMap::<Vec<String>, Option<(String, BTreeSet<String>)>>::new();
 
     for record in reader.records() {
         let record = record.unwrap();
@@ -86,7 +87,7 @@ fn main() {
 
         if let Some((full_name, silent_variations)) = value {
             *full_name = full_name_raw.to_owned();
-            silent_variations.push(get_opening_constant_expression_string(&OpeningOwned {
+            silent_variations.insert(get_opening_constant_expression_string(&OpeningOwned {
                 code,
                 name,
                 variation,
@@ -96,13 +97,13 @@ fn main() {
         } else {
             *value = Some((
                 full_name_raw.to_owned(),
-                vec![get_opening_constant_expression_string(&OpeningOwned {
+                BTreeSet::from([get_opening_constant_expression_string(&OpeningOwned {
                     code,
                     name,
                     variation,
                     moves,
                     setup,
-                })],
+                })]),
             ));
         }
     }
@@ -282,13 +283,13 @@ fn main() {
 fn get_opening_constant_item_string(
     identifier: &str,
     full_name: &str,
-    silent_variations: &[String],
+    silent_variations: &BTreeSet<String>,
 ) -> String {
     format!(
         "\n\n/// {full_name}.\npub const {}: [Opening<'static, &str>; {}] = [{}];",
         identifier.TO_SHOUTY_SNEK_CASE(),
         silent_variations.len(),
-        silent_variations.join(", ")
+        silent_variations.iter().join(", ")
     )
 }
 
