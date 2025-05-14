@@ -20,3 +20,7 @@ It generates a file for each ECO code in the corresponding volume directory.
 That file contains all the openings, as constants, for that ECO code.
 
 TODO: when is the librarian script going to run? set up a workflow that runs it if all other workflows pass, then commit the changes? perhaps make even releasing a new version automatic?
+
+## Cloning
+If you clone this repository, **exclude the `crates/book/generated` directory from your IDE.**
+Only open the files in there with a well optimized text editor.

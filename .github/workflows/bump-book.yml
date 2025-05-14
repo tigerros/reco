@@ -1,0 +1,63 @@
+name: Bump Book
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+
+jobs:
+  bump-and-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Run reco-librarian
+        run: cargo run -p reco-librarian
+
+      - name: Run cargo fmt
+        run: cargo fmt --all
+
+      - name: Check for changes
+        run: |
+          git config --global user.name "reco-librarian"
+          git config --global user.email "github-actions@users.noreply.github.com"
+          echo "CHANGED=false" >> $GITHUB_ENV
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "CHANGED=true" >> $GITHUB_ENV
+          fi
+
+      - name: Bump patch version if changes
+        if: env.CHANGED == 'true'
+        run: |
+          bump_patch() {
+            file=$1
+            local version_line=$(grep "^version" "$file")
+            local version=$(echo $version_line | cut -d '"' -f2)
+            IFS='.' read -r major minor patch <<< "$version"
+            local patch=$((patch + 1))
+            local new_version="$major.$minor.$patch"
+            sed -i "s/^version = \".*\"/version = \"$new_version\"/" "$file"
+          }
+          bump_patch crates/book/Cargo.toml
+          bump_patch crates/reco/Cargo.toml
+
+      - name: Read commit source SHA
+        if: env.CHANGED == 'true'
+        run: |
+          echo "SHA=$(cat crates/book/commit-source.txt)" >> $GITHUB_ENV
+
+      - name: Create pull request
+        if: env.CHANGED == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: Bump book from [${{ env.SHA }}](https://github.com/lichess-org/chess-openings/commit/${{ env.SHA }})
+          delete-branch: 'true'
+          commit-message: 'bump book'
+          branch: 'bump-book-${{ env.SHA }}'
+          body: 'Running reco-librarian resulted in a diff, which is why this PR was made.'
+          author: 'reco-librarian <github-actions@users.noreply.github.com>'
+          committer: 'reco-librarian <github-actions@users.noreply.github.com>'
+          sign-commits: 'true'

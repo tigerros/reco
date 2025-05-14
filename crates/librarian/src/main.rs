@@ -263,10 +263,7 @@ fn main() {
             )]\
             use reco_core::Opening;\
             {top_level_opening_mods_and_uses}\
-            /// Contains all openings and variations.\n
-            /// \n
-            /// This is a static and not a constant because it's huge.\n
-            /// It contains roughly 3500 openings, which is {} bytes.
+            #[doc = \"Contains all openings and variations.\n\nThis is a static and not a constant because it's huge.\nIt contains roughly 3500 openings, which is {} bytes.\"]
             pub static ALL: &[Opening<'static, &str>] = constcat::concat_slices!([Opening<'static, &str>]: {all_openings});",
             3500 * size_of::<Opening<'static, &str>>()
         ).as_bytes()

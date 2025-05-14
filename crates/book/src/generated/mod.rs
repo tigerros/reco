@@ -272,13 +272,10 @@ pub use zaire_defense::ZAIRE_DEFENSE;
 pub mod zukertort_defense;
 pub mod zukertort_opening;
 pub use zukertort_opening::ZUKERTORT_OPENING;
-/// Contains all openings and variations.
+#[doc = "Contains all openings and variations.
 
-///
-
-/// This is a static and not a constant because it's huge.
-
-/// It contains roughly 3500 openings, which is 224000 bytes.
+This is a static and not a constant because it's huge.
+It contains roughly 3500 openings, which is 224000 bytes."]
 pub static ALL: &[Opening<'static, &str>] = constcat::concat_slices!([Opening<'static, &str>]: &ALEKHINE_DEFENSE,
 &alekhine_defense::BALOGH_VARIATION,
 &alekhine_defense::BROOKLYN_VARIATION,
