@@ -33,7 +33,7 @@ pub const BALOGH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Alekhine Defense",
+    name: "Alekhine Defenser",
     variation: &["Balogh Variation"],
     moves: &[
         Normal {
