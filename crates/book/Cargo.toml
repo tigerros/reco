@@ -1,6 +1,6 @@
 [package]
 name = "reco-book"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "The ECO (Encyclopaedia of Chess Openings) book"
 categories = ["data-structures", "game-development", "no-std", "no-std::no-alloc", "api-bindings"]
