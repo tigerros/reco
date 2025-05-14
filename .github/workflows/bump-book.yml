@@ -55,7 +55,7 @@ jobs:
         if: env.CHANGED == 'true'
         run: |
           echo "SHA=$(cat crates/book/commit-source.txt)" >> $GITHUB_ENV
-          echo "SHORT_SHA=${${{ env.SHA }}:0:7}" >> $GITHUB_ENV
+          echo "SHORT_SHA=$(cut -c1-7 < crates/book/commit-source.txt)" >> $GITHUB_ENV
 
       - name: Create pull request
         if: env.CHANGED == 'true'
