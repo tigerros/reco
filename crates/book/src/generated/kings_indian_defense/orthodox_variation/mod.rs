@@ -503,23 +503,23 @@ pub const ORTHODOX_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod donner_defense;
-pub use donner_defense::DONNER_DEFENSE;
-pub mod aronin_taimanov_defense;
-pub use aronin_taimanov_defense::ARONIN_TAIMANOV_DEFENSE;
-pub mod glek_defense;
-pub use glek_defense::GLEK_DEFENSE;
-pub mod positional_defense;
-pub use positional_defense::POSITIONAL_DEFENSE;
 pub mod bayonet_attack;
 pub use bayonet_attack::BAYONET_ATTACK;
-pub mod modern_system;
-pub use modern_system::MODERN_SYSTEM;
 pub mod ukrainian_defense;
 pub use ukrainian_defense::UKRAINIAN_DEFENSE;
-pub mod classical_system;
-pub use classical_system::CLASSICAL_SYSTEM;
 pub mod gligoric_taimanov_system;
 pub use gligoric_taimanov_system::GLIGORIC_TAIMANOV_SYSTEM;
+pub mod donner_defense;
+pub use donner_defense::DONNER_DEFENSE;
+pub mod positional_defense;
+pub use positional_defense::POSITIONAL_DEFENSE;
 pub mod korchnoi_attack;
 pub use korchnoi_attack::KORCHNOI_ATTACK;
+pub mod classical_system;
+pub use classical_system::CLASSICAL_SYSTEM;
+pub mod glek_defense;
+pub use glek_defense::GLEK_DEFENSE;
+pub mod modern_system;
+pub use modern_system::MODERN_SYSTEM;
+pub mod aronin_taimanov_defense;
+pub use aronin_taimanov_defense::ARONIN_TAIMANOV_DEFENSE;

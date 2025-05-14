@@ -169,7 +169,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod gipslis_variation;
-pub use gipslis_variation::GIPSLIS_VARIATION;
 pub mod wing_gambit;
 pub use wing_gambit::WING_GAMBIT;
+pub mod gipslis_variation;
+pub use gipslis_variation::GIPSLIS_VARIATION;

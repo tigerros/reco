@@ -154,7 +154,7 @@ pub const PANNO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
 }];
 pub mod blockade_line;
 pub use blockade_line::BLOCKADE_LINE;
-pub mod korchnoi_line;
-pub use korchnoi_line::KORCHNOI_LINE;
 pub mod donner_line;
 pub use donner_line::DONNER_LINE;
+pub mod korchnoi_line;
+pub use korchnoi_line::KORCHNOI_LINE;

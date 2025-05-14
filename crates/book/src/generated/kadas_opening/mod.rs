@@ -73,13 +73,13 @@ pub const KADAS_OPENING: [Opening<'static, &str>; 1] = [Opening {
 }];
 pub mod beginners_trap;
 pub use beginners_trap::BEGINNERS_TRAP;
-pub mod myers_variation;
-pub use myers_variation::MYERS_VARIATION;
-pub mod steinbok_gambit;
-pub use steinbok_gambit::STEINBOK_GAMBIT;
 pub mod kadas_gambit;
 pub use kadas_gambit::KADAS_GAMBIT;
 pub mod schneider_gambit;
 pub use schneider_gambit::SCHNEIDER_GAMBIT;
+pub mod myers_variation;
+pub use myers_variation::MYERS_VARIATION;
+pub mod steinbok_gambit;
+pub use steinbok_gambit::STEINBOK_GAMBIT;
 pub mod koola_koola_variation;
 pub use koola_koola_variation::KOOLA_KOOLA_VARIATION;

@@ -137,17 +137,17 @@ pub const AVERBAKH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod geller_defense;
-pub use geller_defense::GELLER_DEFENSE;
-pub mod nc6_defense;
-pub use nc6_defense::NC6_DEFENSE;
-pub mod modern_defense;
-pub use modern_defense::MODERN_DEFENSE;
 pub mod flexible_defense;
 pub use flexible_defense::FLEXIBLE_DEFENSE;
+pub mod geller_defense;
+pub use geller_defense::GELLER_DEFENSE;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod modern_defense;
+pub use modern_defense::MODERN_DEFENSE;
 pub mod benoni_defense;
 pub use benoni_defense::BENONI_DEFENSE;
 pub mod spanish_defense;
 pub use spanish_defense::SPANISH_DEFENSE;
+pub mod nc6_defense;
+pub use nc6_defense::NC6_DEFENSE;

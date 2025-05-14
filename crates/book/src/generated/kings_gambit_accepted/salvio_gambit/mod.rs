@@ -129,13 +129,13 @@ pub const SALVIO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod santa_maria_defense;
-pub use santa_maria_defense::SANTA_MARIA_DEFENSE;
-pub mod viennese_variation;
-pub use viennese_variation::VIENNESE_VARIATION;
-pub mod cochrane_gambit;
-pub use cochrane_gambit::COCHRANE_GAMBIT;
 pub mod silberschmidt_defense;
 pub use silberschmidt_defense::SILBERSCHMIDT_DEFENSE;
 pub mod anderssen_counterattack;
 pub use anderssen_counterattack::ANDERSSEN_COUNTERATTACK;
+pub mod viennese_variation;
+pub use viennese_variation::VIENNESE_VARIATION;
+pub mod santa_maria_defense;
+pub use santa_maria_defense::SANTA_MARIA_DEFENSE;
+pub mod cochrane_gambit;
+pub use cochrane_gambit::COCHRANE_GAMBIT;

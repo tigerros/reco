@@ -87,7 +87,7 @@ pub const KINGS_KNIGHT_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
 pub mod konstantinopolsky;
 pub use konstantinopolsky::KONSTANTINOPOLSKY;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;

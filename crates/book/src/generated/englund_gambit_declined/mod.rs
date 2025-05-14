@@ -87,15 +87,15 @@ pub const ENGLUND_GAMBIT_DECLINED: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod reversed_krebs;
+pub use reversed_krebs::REVERSED_KREBS;
+pub mod reversed_french;
+pub use reversed_french::REVERSED_FRENCH;
+pub mod diemer_counterattack;
+pub use diemer_counterattack::DIEMER_COUNTERATTACK;
 pub mod reversed_brooklyn;
 pub use reversed_brooklyn::REVERSED_BROOKLYN;
 pub mod reversed_mokele_mbembe;
 pub use reversed_mokele_mbembe::REVERSED_MOKELE_MBEMBE;
-pub mod reversed_french;
-pub use reversed_french::REVERSED_FRENCH;
-pub mod reversed_krebs;
-pub use reversed_krebs::REVERSED_KREBS;
 pub mod reversed_alekhine;
 pub use reversed_alekhine::REVERSED_ALEKHINE;
-pub mod diemer_counterattack;
-pub use diemer_counterattack::DIEMER_COUNTERATTACK;

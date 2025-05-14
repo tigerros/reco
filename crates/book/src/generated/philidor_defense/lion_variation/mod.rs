@@ -122,14 +122,14 @@ pub const LION_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod bishop_sacrifice;
-pub mod lions_claw;
-pub use bishop_sacrifice::BISHOP_SACRIFICE;
-pub mod delayed_bishop_sacrifice;
-pub use delayed_bishop_sacrifice::DELAYED_BISHOP_SACRIFICE;
-pub mod shirov_gambit;
-pub use shirov_gambit::SHIROV_GAMBIT;
 pub mod forcing_line;
 pub use forcing_line::FORCING_LINE;
 pub mod sozin_variation;
 pub use sozin_variation::SOZIN_VARIATION;
+pub mod delayed_bishop_sacrifice;
+pub use delayed_bishop_sacrifice::DELAYED_BISHOP_SACRIFICE;
+pub mod lions_claw;
+pub mod shirov_gambit;
+pub use shirov_gambit::SHIROV_GAMBIT;
+pub mod bishop_sacrifice;
+pub use bishop_sacrifice::BISHOP_SACRIFICE;

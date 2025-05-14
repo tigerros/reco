@@ -808,23 +808,23 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
         },
     },
 ];
-pub mod belezky_line;
-pub use belezky_line::BELEZKY_LINE;
-pub mod modern_line;
-pub use modern_line::MODERN_LINE;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod byrne_variation;
 pub use byrne_variation::BYRNE_VARIATION;
-pub mod czerniak_variation;
-pub use czerniak_variation::CZERNIAK_VARIATION;
-pub mod soltis_variation;
-pub use soltis_variation::SOLTIS_VARIATION;
-pub mod old_line;
-pub use old_line::OLD_LINE;
 pub mod sosonko_variation;
 pub use sosonko_variation::SOSONKO_VARIATION;
-pub mod early_deviations;
-pub use early_deviations::EARLY_DEVIATIONS;
+pub mod soltis_variation;
+pub use soltis_variation::SOLTIS_VARIATION;
+pub mod belezky_line;
+pub use belezky_line::BELEZKY_LINE;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod old_line;
+pub use old_line::OLD_LINE;
+pub mod czerniak_variation;
+pub use czerniak_variation::CZERNIAK_VARIATION;
 pub mod panov_variation;
 pub use panov_variation::PANOV_VARIATION;
+pub mod early_deviations;
+pub use early_deviations::EARLY_DEVIATIONS;
+pub mod modern_line;
+pub use modern_line::MODERN_LINE;

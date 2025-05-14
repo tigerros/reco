@@ -340,11 +340,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
+pub mod marshall_variation;
+pub use marshall_variation::MARSHALL_VARIATION;
+pub mod maroczy_variation;
+pub use maroczy_variation::MAROCZY_VARIATION;
 pub mod marshall_gambit;
 pub use marshall_gambit::MARSHALL_GAMBIT;
 pub mod henneberger_variation;
 pub use henneberger_variation::HENNEBERGER_VARIATION;
-pub mod maroczy_variation;
-pub use maroczy_variation::MAROCZY_VARIATION;
-pub mod marshall_variation;
-pub use marshall_variation::MARSHALL_VARIATION;

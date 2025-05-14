@@ -136,14 +136,14 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod alekhine_system;
+pub use alekhine_system::ALEKHINE_SYSTEM;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-pub mod normal_line;
-pub use normal_line::NORMAL_LINE;
 pub mod russian_gambit;
 pub mod steinitz_variation;
 pub use russian_gambit::RUSSIAN_GAMBIT;
-pub mod alekhine_system;
-pub use alekhine_system::ALEKHINE_SYSTEM;
+pub mod normal_line;
+pub use normal_line::NORMAL_LINE;

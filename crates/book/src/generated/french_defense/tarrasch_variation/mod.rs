@@ -101,25 +101,25 @@ pub const TARRASCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod leningrad_variation;
+pub use leningrad_variation::LENINGRAD_VARIATION;
 pub mod eliskases_variation;
 pub use eliskases_variation::ELISKASES_VARIATION;
-pub mod closed_variation;
-pub use closed_variation::CLOSED_VARIATION;
+pub mod open_system;
+pub use open_system::OPEN_SYSTEM;
+pub mod modern_system;
+pub use modern_system::MODERN_SYSTEM;
+pub mod pawn_center_variation;
+pub use pawn_center_variation::PAWN_CENTER_VARIATION;
 pub mod botvinnik_variation;
 pub use botvinnik_variation::BOTVINNIK_VARIATION;
 pub mod haberditz_variation;
 pub use haberditz_variation::HABERDITZ_VARIATION;
-pub mod modern_system;
-pub use modern_system::MODERN_SYSTEM;
-pub mod guimard_defense;
-pub use guimard_defense::GUIMARD_DEFENSE;
-pub mod leningrad_variation;
-pub use leningrad_variation::LENINGRAD_VARIATION;
 pub mod chistyakov_defense;
 pub use chistyakov_defense::CHISTYAKOV_DEFENSE;
 pub mod morozevich_variation;
 pub use morozevich_variation::MOROZEVICH_VARIATION;
-pub mod open_system;
-pub use open_system::OPEN_SYSTEM;
-pub mod pawn_center_variation;
-pub use pawn_center_variation::PAWN_CENTER_VARIATION;
+pub mod closed_variation;
+pub use closed_variation::CLOSED_VARIATION;
+pub mod guimard_defense;
+pub use guimard_defense::GUIMARD_DEFENSE;

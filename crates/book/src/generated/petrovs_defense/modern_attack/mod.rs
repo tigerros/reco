@@ -183,19 +183,19 @@ pub const MODERN_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod murrey_variation;
-pub use murrey_variation::MURREY_VARIATION;
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod bardeleben_variation;
-pub use bardeleben_variation::BARDELEBEN_VARIATION;
-pub mod tal_gambit;
-pub use tal_gambit::TAL_GAMBIT;
-pub mod center_attack;
-pub use center_attack::CENTER_ATTACK;
 pub mod center_variation;
 pub use center_variation::CENTER_VARIATION;
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
 pub mod trifunovic_variation;
 pub use trifunovic_variation::TRIFUNOVIC_VARIATION;
+pub mod center_attack;
+pub use center_attack::CENTER_ATTACK;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
+pub mod bardeleben_variation;
+pub use bardeleben_variation::BARDELEBEN_VARIATION;
+pub mod murrey_variation;
+pub use murrey_variation::MURREY_VARIATION;
+pub mod tal_gambit;
+pub use tal_gambit::TAL_GAMBIT;

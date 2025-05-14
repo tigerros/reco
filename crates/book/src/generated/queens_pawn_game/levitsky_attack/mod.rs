@@ -87,6 +87,6 @@ pub const LEVITSKY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod euwe_variation;
 pub mod welling_variation;
 pub use welling_variation::WELLING_VARIATION;
+pub mod euwe_variation;

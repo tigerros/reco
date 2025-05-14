@@ -303,17 +303,17 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod traditional_variation;
-pub use traditional_variation::TRADITIONAL_VARIATION;
 pub mod czerniak_defense;
 pub use czerniak_defense::CZERNIAK_DEFENSE;
-pub mod argentine_counterattack;
-pub use argentine_counterattack::ARGENTINE_COUNTERATTACK;
+pub mod traditional_variation;
+pub use traditional_variation::TRADITIONAL_VARIATION;
 pub mod averbakh_grivas_attack;
 pub use averbakh_grivas_attack::AVERBAKH_GRIVAS_ATTACK;
-pub mod new_york_variation;
-pub use new_york_variation::NEW_YORK_VARIATION;
-pub mod full_line;
-pub use full_line::FULL_LINE;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod argentine_counterattack;
+pub use argentine_counterattack::ARGENTINE_COUNTERATTACK;
+pub mod full_line;
+pub use full_line::FULL_LINE;
+pub mod new_york_variation;
+pub use new_york_variation::NEW_YORK_VARIATION;

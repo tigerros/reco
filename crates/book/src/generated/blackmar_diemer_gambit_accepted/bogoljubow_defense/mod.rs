@@ -136,11 +136,11 @@ pub const BOGOLJUBOW_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod mad_dog_attack;
-pub use mad_dog_attack::MAD_DOG_ATTACK;
 pub mod nimzowitsch_attack;
 pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
 pub mod kloss_attack;
 pub use kloss_attack::KLOSS_ATTACK;
+pub mod mad_dog_attack;
+pub use mad_dog_attack::MAD_DOG_ATTACK;
 pub mod studier_attack;
 pub use studier_attack::STUDIER_ATTACK;

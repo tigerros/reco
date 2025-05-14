@@ -115,21 +115,21 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod kings_bishop_variation;
+pub use kings_bishop_variation::KINGS_BISHOP_VARIATION;
+pub mod gligoric_variation;
+pub use gligoric_variation::GLIGORIC_VARIATION;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod romanovsky_variation;
+pub use romanovsky_variation::ROMANOVSKY_VARIATION;
+pub mod lutikov_variation;
+pub use lutikov_variation::LUTIKOV_VARIATION;
 pub mod keres_variation;
 pub use keres_variation::KERES_VARIATION;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
-pub mod romanovsky_variation;
-pub use romanovsky_variation::ROMANOVSKY_VARIATION;
-pub mod bronstein_variation;
-pub use bronstein_variation::BRONSTEIN_VARIATION;
-pub mod lutikov_variation;
-pub use lutikov_variation::LUTIKOV_VARIATION;
 pub mod alapin_gambit;
 pub use alapin_gambit::ALAPIN_GAMBIT;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
-pub mod gligoric_variation;
-pub use gligoric_variation::GLIGORIC_VARIATION;
-pub mod kings_bishop_variation;
-pub use kings_bishop_variation::KINGS_BISHOP_VARIATION;
+pub mod bronstein_variation;
+pub use bronstein_variation::BRONSTEIN_VARIATION;

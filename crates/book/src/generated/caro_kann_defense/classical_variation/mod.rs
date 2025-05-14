@@ -260,15 +260,15 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod lobron_system;
-pub use lobron_system::LOBRON_SYSTEM;
-pub mod seirawan_variation;
-pub use seirawan_variation::SEIRAWAN_VARIATION;
-pub mod flohr_variation;
-pub use flohr_variation::FLOHR_VARIATION;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod maroczy_attack;
 pub use maroczy_attack::MAROCZY_ATTACK;
 pub mod spassky_variation;
 pub use spassky_variation::SPASSKY_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod flohr_variation;
+pub use flohr_variation::FLOHR_VARIATION;
+pub mod seirawan_variation;
+pub use seirawan_variation::SEIRAWAN_VARIATION;
+pub mod lobron_system;
+pub use lobron_system::LOBRON_SYSTEM;

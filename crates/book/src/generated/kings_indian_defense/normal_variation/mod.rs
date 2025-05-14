@@ -211,11 +211,11 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod rare_defenses;
-pub use rare_defenses::RARE_DEFENSES;
-pub mod kings_knight_variation;
-pub use kings_knight_variation::KINGS_KNIGHT_VARIATION;
-pub mod deferred_fianchetto;
-pub use deferred_fianchetto::DEFERRED_FIANCHETTO;
 pub mod standard_development;
 pub use standard_development::STANDARD_DEVELOPMENT;
+pub mod deferred_fianchetto;
+pub use deferred_fianchetto::DEFERRED_FIANCHETTO;
+pub mod kings_knight_variation;
+pub use kings_knight_variation::KINGS_KNIGHT_VARIATION;
+pub mod rare_defenses;
+pub use rare_defenses::RARE_DEFENSES;

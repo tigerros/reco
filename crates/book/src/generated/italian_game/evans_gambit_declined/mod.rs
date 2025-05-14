@@ -225,17 +225,17 @@ pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
         },
     },
 ];
+pub mod hicken_variation;
+pub use hicken_variation::HICKEN_VARIATION;
+pub mod hirschbach_variation;
+pub use hirschbach_variation::HIRSCHBACH_VARIATION;
 pub mod lange_variation;
 pub use lange_variation::LANGE_VARIATION;
 pub mod pavlov_variation;
 pub use pavlov_variation::PAVLOV_VARIATION;
-pub mod hicken_variation;
-pub use hicken_variation::HICKEN_VARIATION;
 pub mod showalter_variation;
 pub use showalter_variation::SHOWALTER_VARIATION;
-pub mod cordel_variation;
-pub use cordel_variation::CORDEL_VARIATION;
-pub mod hirschbach_variation;
-pub use hirschbach_variation::HIRSCHBACH_VARIATION;
 pub mod vasquez_variation;
 pub use vasquez_variation::VASQUEZ_VARIATION;
+pub mod cordel_variation;
+pub use cordel_variation::CORDEL_VARIATION;

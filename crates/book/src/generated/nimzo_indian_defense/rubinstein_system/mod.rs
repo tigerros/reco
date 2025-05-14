@@ -211,9 +211,9 @@ pub const RUBINSTEIN_SYSTEM: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod taimanov_variation;
-pub use taimanov_variation::TAIMANOV_VARIATION;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod hubner_variation;
 pub use hubner_variation::HUBNER_VARIATION;
+pub mod taimanov_variation;
+pub use taimanov_variation::TAIMANOV_VARIATION;

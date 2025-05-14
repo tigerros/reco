@@ -253,11 +253,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod dragon_transfer;
-pub use dragon_transfer::DRAGON_TRANSFER;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod anti_sozin_variation;
 pub use anti_sozin_variation::ANTI_SOZIN_VARIATION;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod dragon_transfer;
+pub use dragon_transfer::DRAGON_TRANSFER;
 pub mod sozin_attack;
 pub use sozin_attack::SOZIN_ATTACK;

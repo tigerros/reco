@@ -130,7 +130,7 @@ pub const L_HERMET_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod westerinen_line;
-pub use westerinen_line::WESTERINEN_LINE;
 pub mod berlin_wall_defense;
 pub use berlin_wall_defense::BERLIN_WALL_DEFENSE;
+pub mod westerinen_line;
+pub use westerinen_line::WESTERINEN_LINE;

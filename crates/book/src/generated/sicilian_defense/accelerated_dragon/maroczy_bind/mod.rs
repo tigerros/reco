@@ -354,7 +354,7 @@ pub const MAROCZY_BIND: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod breyer_variation;
-pub use breyer_variation::BREYER_VARIATION;
 pub mod gurgenidze_variation;
 pub use gurgenidze_variation::GURGENIDZE_VARIATION;
+pub mod breyer_variation;
+pub use breyer_variation::BREYER_VARIATION;

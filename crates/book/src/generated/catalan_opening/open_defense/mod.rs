@@ -448,9 +448,9 @@ pub const OPEN_DEFENSE: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod modern_sharp_variation;
-pub use modern_sharp_variation::MODERN_SHARP_VARIATION;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
 pub mod classical_line;
 pub use classical_line::CLASSICAL_LINE;
+pub mod modern_sharp_variation;
+pub use modern_sharp_variation::MODERN_SHARP_VARIATION;

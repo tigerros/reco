@@ -326,11 +326,11 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod fianchetto_defense;
-pub use fianchetto_defense::FIANCHETTO_DEFENSE;
-pub mod gunderam_attack;
-pub use gunderam_attack::GUNDERAM_ATTACK;
 pub mod modern_defense;
 pub use modern_defense::MODERN_DEFENSE;
+pub mod gunderam_attack;
+pub use gunderam_attack::GUNDERAM_ATTACK;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod fianchetto_defense;
+pub use fianchetto_defense::FIANCHETTO_DEFENSE;

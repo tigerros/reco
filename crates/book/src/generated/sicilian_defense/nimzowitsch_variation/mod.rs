@@ -94,11 +94,11 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod advance_variation;
-pub use advance_variation::ADVANCE_VARIATION;
 pub mod closed_variation;
 pub use closed_variation::CLOSED_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod advance_variation;
+pub use advance_variation::ADVANCE_VARIATION;

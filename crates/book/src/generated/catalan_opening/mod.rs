@@ -183,10 +183,10 @@ pub const CATALAN_OPENING: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod hungarian_gambit;
-pub use hungarian_gambit::HUNGARIAN_GAMBIT;
 pub mod closed;
 pub use closed::CLOSED;
-pub mod closed_variation;
 pub mod open_defense;
 pub use open_defense::OPEN_DEFENSE;
+pub mod closed_variation;
+pub mod hungarian_gambit;
+pub use hungarian_gambit::HUNGARIAN_GAMBIT;

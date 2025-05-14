@@ -211,7 +211,7 @@ pub const BARRY_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod tarzan_attack;
-pub use tarzan_attack::TARZAN_ATTACK;
 pub mod grunfeld_variation;
 pub use grunfeld_variation::GRUNFELD_VARIATION;
+pub mod tarzan_attack;
+pub use tarzan_attack::TARZAN_ATTACK;

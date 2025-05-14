@@ -122,9 +122,9 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod blackburne_attack;
+pub use blackburne_attack::BLACKBURNE_ATTACK;
 pub mod millennium_variation;
 pub use millennium_variation::MILLENNIUM_VARIATION;
 pub mod intermezzo_variation;
 pub use intermezzo_variation::INTERMEZZO_VARIATION;
-pub mod blackburne_attack;
-pub use blackburne_attack::BLACKBURNE_ATTACK;

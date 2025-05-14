@@ -115,9 +115,9 @@ pub const THREE_KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod shocron_gambit;
+pub use shocron_gambit::SHOCRON_GAMBIT;
 pub mod korchnoi_variation;
 pub use korchnoi_variation::KORCHNOI_VARIATION;
 pub mod euwe_variation;
 pub use euwe_variation::EUWE_VARIATION;
-pub mod shocron_gambit;
-pub use shocron_gambit::SHOCRON_GAMBIT;

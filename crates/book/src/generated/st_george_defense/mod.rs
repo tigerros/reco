@@ -80,9 +80,9 @@ pub const ST_GEORGE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod polish_variation;
+pub use polish_variation::POLISH_VARIATION;
 pub mod zilbermints_gambit;
 pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
 pub mod san_jorge_variation;
 pub use san_jorge_variation::SAN_JORGE_VARIATION;
-pub mod polish_variation;
-pub use polish_variation::POLISH_VARIATION;

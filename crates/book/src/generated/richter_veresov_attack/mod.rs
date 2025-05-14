@@ -185,11 +185,11 @@ pub const RICHTER_VERESOV_ATTACK: [Opening<'static, &str>; 2] = [
 ];
 pub mod veresov_variation;
 pub use veresov_variation::VERESOV_VARIATION;
-pub mod boyce_defense;
-pub use boyce_defense::BOYCE_DEFENSE;
 pub mod two_knights_system;
 pub use two_knights_system::TWO_KNIGHTS_SYSTEM;
-pub mod malich_gambit;
-pub use malich_gambit::MALICH_GAMBIT;
+pub mod boyce_defense;
+pub use boyce_defense::BOYCE_DEFENSE;
 pub mod richter_variation;
 pub use richter_variation::RICHTER_VARIATION;
+pub mod malich_gambit;
+pub use malich_gambit::MALICH_GAMBIT;

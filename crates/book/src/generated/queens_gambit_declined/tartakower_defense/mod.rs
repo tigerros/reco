@@ -346,7 +346,7 @@ pub const TARTAKOWER_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod makogonov_exchange_variation;
-pub use makogonov_exchange_variation::MAKOGONOV_EXCHANGE_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod makogonov_exchange_variation;
+pub use makogonov_exchange_variation::MAKOGONOV_EXCHANGE_VARIATION;

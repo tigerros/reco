@@ -96,9 +96,9 @@ pub const ST_GEORGE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
 }];
 pub mod sanky_george_gambit;
 pub use sanky_george_gambit::SANKY_GEORGE_GAMBIT;
-pub mod st_george_gambit;
-pub use st_george_gambit::ST_GEORGE_GAMBIT;
-pub mod three_pawn_attack;
-pub use three_pawn_attack::THREE_PAWN_ATTACK;
 pub mod traditional_line;
 pub use traditional_line::TRADITIONAL_LINE;
+pub mod three_pawn_attack;
+pub use three_pawn_attack::THREE_PAWN_ATTACK;
+pub mod st_george_gambit;
+pub use st_george_gambit::ST_GEORGE_GAMBIT;

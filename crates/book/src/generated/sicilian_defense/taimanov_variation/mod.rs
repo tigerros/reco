@@ -232,15 +232,15 @@ pub const TAIMANOV_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod szen_variation;
-pub use szen_variation::SZEN_VARIATION;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
 pub mod bastrikov_variation;
 pub use bastrikov_variation::BASTRIKOV_VARIATION;
-pub mod gary_gambit;
-pub use gary_gambit::GARY_GAMBIT;
-pub mod american_attack;
-pub use american_attack::AMERICAN_ATTACK;
 pub mod modern_line;
 pub use modern_line::MODERN_LINE;
+pub mod american_attack;
+pub use american_attack::AMERICAN_ATTACK;
+pub mod gary_gambit;
+pub use gary_gambit::GARY_GAMBIT;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod szen_variation;
+pub use szen_variation::SZEN_VARIATION;

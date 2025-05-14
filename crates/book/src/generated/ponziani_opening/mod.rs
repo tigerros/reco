@@ -101,23 +101,23 @@ pub const PONZIANI_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod romanishin_variation;
-pub use romanishin_variation::ROMANISHIN_VARIATION;
-pub mod ponziani_countergambit;
-pub use ponziani_countergambit::PONZIANI_COUNTERGAMBIT;
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod leonhardt_variation;
-pub use leonhardt_variation::LEONHARDT_VARIATION;
-pub mod reti_variation;
-pub use reti_variation::RETI_VARIATION;
-pub mod spanish_variation;
-pub use spanish_variation::SPANISH_VARIATION;
 pub mod neumann_gambit;
 pub use neumann_gambit::NEUMANN_GAMBIT;
-pub mod vukovic_gambit;
-pub use vukovic_gambit::VUKOVIC_GAMBIT;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
 pub mod caro_gambit;
 pub use caro_gambit::CARO_GAMBIT;
+pub mod spanish_variation;
+pub use spanish_variation::SPANISH_VARIATION;
+pub mod ponziani_countergambit;
+pub use ponziani_countergambit::PONZIANI_COUNTERGAMBIT;
+pub mod romanishin_variation;
+pub use romanishin_variation::ROMANISHIN_VARIATION;
+pub mod leonhardt_variation;
+pub use leonhardt_variation::LEONHARDT_VARIATION;
+pub mod vukovic_gambit;
+pub use vukovic_gambit::VUKOVIC_GAMBIT;
+pub mod reti_variation;
+pub use reti_variation::RETI_VARIATION;
 pub mod jaenisch_counterattack;
 pub use jaenisch_counterattack::JAENISCH_COUNTERATTACK;

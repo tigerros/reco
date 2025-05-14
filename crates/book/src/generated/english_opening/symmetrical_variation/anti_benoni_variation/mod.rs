@@ -101,7 +101,7 @@ pub const ANTI_BENONI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod geller_variation;
-pub use geller_variation::GELLER_VARIATION;
 pub mod spielmann_defense;
 pub use spielmann_defense::SPIELMANN_DEFENSE;
+pub mod geller_variation;
+pub use geller_variation::GELLER_VARIATION;

@@ -129,7 +129,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod kasparov_attack;
-pub use kasparov_attack::KASPAROV_ATTACK;
 pub mod ivanchuk_defense;
 pub use ivanchuk_defense::IVANCHUK_DEFENSE;
+pub mod kasparov_attack;
+pub use kasparov_attack::KASPAROV_ATTACK;

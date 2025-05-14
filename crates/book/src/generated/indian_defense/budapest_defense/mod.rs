@@ -176,14 +176,14 @@ pub const BUDAPEST_DEFENSE: [Opening<'static, &str>; 2] = [
         },
     },
 ];
+pub mod alekhine_variation;
+pub use alekhine_variation::ALEKHINE_VARIATION;
 pub mod fajarowicz_variation;
 pub use fajarowicz_variation::FAJAROWICZ_VARIATION;
-pub mod adler_variation;
-pub use adler_variation::ADLER_VARIATION;
 pub mod fajarowicz_steiner_variation;
 pub use fajarowicz_steiner_variation::FAJAROWICZ_STEINER_VARIATION;
-pub mod alekhine_variation;
 pub mod fajarowicz_defense;
-pub use alekhine_variation::ALEKHINE_VARIATION;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod adler_variation;
+pub use adler_variation::ADLER_VARIATION;

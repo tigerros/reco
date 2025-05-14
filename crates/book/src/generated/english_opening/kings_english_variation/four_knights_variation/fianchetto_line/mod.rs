@@ -480,9 +480,9 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod delayed_nc6;
-pub use delayed_nc6::DELAYED_NC6;
 pub mod with_bc5;
 pub use with_bc5::WITH_BC5;
+pub mod delayed_nc6;
+pub use delayed_nc6::DELAYED_NC6;
 pub mod with_nb6;
 pub use with_nb6::WITH_NB6;

@@ -145,9 +145,9 @@ pub const YUGOSLAV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod advance_line;
+pub use advance_line::ADVANCE_LINE;
 pub mod exchange_line;
 pub use exchange_line::EXCHANGE_LINE;
 pub mod rare_line;
 pub use rare_line::RARE_LINE;
-pub mod advance_line;
-pub use advance_line::ADVANCE_LINE;

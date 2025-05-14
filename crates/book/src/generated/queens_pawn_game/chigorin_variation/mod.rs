@@ -287,15 +287,15 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod shropshire_defense;
-pub use shropshire_defense::SHROPSHIRE_DEFENSE;
-pub mod anti_veresov;
-pub use anti_veresov::ANTI_VERESOV;
+pub mod fianchetto_defense;
+pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod alburt_defense;
+pub use alburt_defense::ALBURT_DEFENSE;
 pub mod shaviliuk_gambit;
 pub use shaviliuk_gambit::SHAVILIUK_GAMBIT;
 pub mod irish_gambit;
 pub use irish_gambit::IRISH_GAMBIT;
-pub mod alburt_defense;
-pub use alburt_defense::ALBURT_DEFENSE;
-pub mod fianchetto_defense;
-pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod anti_veresov;
+pub use anti_veresov::ANTI_VERESOV;
+pub mod shropshire_defense;
+pub use shropshire_defense::SHROPSHIRE_DEFENSE;

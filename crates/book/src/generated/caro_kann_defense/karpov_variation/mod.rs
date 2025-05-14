@@ -122,11 +122,11 @@ pub const KARPOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod smyslov_variation;
-pub use smyslov_variation::SMYSLOV_VARIATION;
-pub mod modern_main_line;
-pub use modern_main_line::MODERN_MAIN_LINE;
 pub mod tiviakov_fischer_attack;
 pub use tiviakov_fischer_attack::TIVIAKOV_FISCHER_ATTACK;
+pub mod modern_main_line;
+pub use modern_main_line::MODERN_MAIN_LINE;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
+pub mod smyslov_variation;
+pub use smyslov_variation::SMYSLOV_VARIATION;

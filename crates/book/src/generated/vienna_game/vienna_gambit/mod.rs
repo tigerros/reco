@@ -101,19 +101,19 @@ pub const VIENNA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
-pub mod breyer_variation;
-pub use breyer_variation::BREYER_VARIATION;
 pub mod kaufmann_variation;
 pub use kaufmann_variation::KAUFMANN_VARIATION;
 pub mod steinitz_variation;
 pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod bardeleben_variation;
-pub use bardeleben_variation::BARDELEBEN_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod breyer_variation;
+pub use breyer_variation::BREYER_VARIATION;
 pub mod paulsen_attack;
 pub use paulsen_attack::PAULSEN_ATTACK;
+pub mod bardeleben_variation;
+pub use bardeleben_variation::BARDELEBEN_VARIATION;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
 pub mod wurzburger_trap;
 pub use wurzburger_trap::WURZBURGER_TRAP;

@@ -80,7 +80,7 @@ pub const DUTCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod batavo_gambit;
-pub use batavo_gambit::BATAVO_GAMBIT;
 pub mod dudweiler_gambit;
 pub use dudweiler_gambit::DUDWEILER_GAMBIT;
+pub mod batavo_gambit;
+pub use batavo_gambit::BATAVO_GAMBIT;

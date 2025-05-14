@@ -122,25 +122,25 @@ pub const BLACKMAR_DIEMER_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Openin
         },
     },
 }];
-pub mod gunderam_defense;
-pub use gunderam_defense::GUNDERAM_DEFENSE;
+pub mod pietrowsky_defense;
+pub use pietrowsky_defense::PIETROWSKY_DEFENSE;
+pub mod ritter_defense;
+pub use ritter_defense::RITTER_DEFENSE;
 pub mod schlutter_defense;
 pub use schlutter_defense::SCHLUTTER_DEFENSE;
 pub mod ryder_gambit;
 pub use ryder_gambit::RYDER_GAMBIT;
-pub mod teichmann_defense;
-pub use teichmann_defense::TEICHMANN_DEFENSE;
-pub mod kaulich_defense;
-pub use kaulich_defense::KAULICH_DEFENSE;
-pub mod ziegler_defense;
-pub use ziegler_defense::ZIEGLER_DEFENSE;
-pub mod pietrowsky_defense;
-pub use pietrowsky_defense::PIETROWSKY_DEFENSE;
 pub mod holwell_defense;
 pub use holwell_defense::HOLWELL_DEFENSE;
+pub mod ziegler_defense;
+pub use ziegler_defense::ZIEGLER_DEFENSE;
+pub mod gunderam_defense;
+pub use gunderam_defense::GUNDERAM_DEFENSE;
 pub mod euwe_defense;
 pub use euwe_defense::EUWE_DEFENSE;
-pub mod ritter_defense;
-pub use ritter_defense::RITTER_DEFENSE;
+pub mod kaulich_defense;
+pub use kaulich_defense::KAULICH_DEFENSE;
 pub mod bogoljubow_defense;
 pub use bogoljubow_defense::BOGOLJUBOW_DEFENSE;
+pub mod teichmann_defense;
+pub use teichmann_defense::TEICHMANN_DEFENSE;

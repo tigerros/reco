@@ -94,21 +94,21 @@ pub const O_KELLY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod kieseritzky_system;
-pub use kieseritzky_system::KIESERITZKY_SYSTEM;
-pub mod venice_system;
-pub use venice_system::VENICE_SYSTEM;
 pub mod quiet_system;
 pub use quiet_system::QUIET_SYSTEM;
-pub mod wing_gambit;
-pub use wing_gambit::WING_GAMBIT;
-pub mod yerevan_system;
-pub use yerevan_system::YEREVAN_SYSTEM;
-pub mod normal_system;
-pub use normal_system::NORMAL_SYSTEM;
-pub mod maroczy_bind;
-pub use maroczy_bind::MAROCZY_BIND;
 pub mod reti_system;
 pub use reti_system::RETI_SYSTEM;
 pub mod aronin_system;
 pub use aronin_system::ARONIN_SYSTEM;
+pub mod wing_gambit;
+pub use wing_gambit::WING_GAMBIT;
+pub mod maroczy_bind;
+pub use maroczy_bind::MAROCZY_BIND;
+pub mod kieseritzky_system;
+pub use kieseritzky_system::KIESERITZKY_SYSTEM;
+pub mod normal_system;
+pub use normal_system::NORMAL_SYSTEM;
+pub mod venice_system;
+pub use venice_system::VENICE_SYSTEM;
+pub mod yerevan_system;
+pub use yerevan_system::YEREVAN_SYSTEM;

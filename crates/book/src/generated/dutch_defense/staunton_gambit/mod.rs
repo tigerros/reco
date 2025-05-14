@@ -176,15 +176,15 @@ pub const STAUNTON_GAMBIT: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod american_attack;
-pub use american_attack::AMERICAN_ATTACK;
-pub mod alekhine_variation;
-pub use alekhine_variation::ALEKHINE_VARIATION;
 pub mod nimzowitsch_variation;
 pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
-pub mod chigorin_variation;
-pub use chigorin_variation::CHIGORIN_VARIATION;
-pub mod tartakower_variation;
-pub use tartakower_variation::TARTAKOWER_VARIATION;
 pub mod lasker_variation;
 pub use lasker_variation::LASKER_VARIATION;
+pub mod chigorin_variation;
+pub use chigorin_variation::CHIGORIN_VARIATION;
+pub mod alekhine_variation;
+pub use alekhine_variation::ALEKHINE_VARIATION;
+pub mod american_attack;
+pub use american_attack::AMERICAN_ATTACK;
+pub mod tartakower_variation;
+pub use tartakower_variation::TARTAKOWER_VARIATION;

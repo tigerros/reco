@@ -145,7 +145,7 @@ pub const TRADITIONAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod nimzowitsch_line;
 pub use nimzowitsch_line::NIMZOWITSCH_LINE;
+pub mod main_line;
+pub use main_line::MAIN_LINE;

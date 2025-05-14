@@ -71,11 +71,11 @@ pub const BARNES_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod gedult_gambit;
+pub use gedult_gambit::GEDULT_GAMBIT;
 pub mod walkerling;
 pub use walkerling::WALKERLING;
 pub mod fools_mate;
 pub use fools_mate::FOOLS_MATE;
 pub mod hammerschlag;
 pub use hammerschlag::HAMMERSCHLAG;
-pub mod gedult_gambit;
-pub use gedult_gambit::GEDULT_GAMBIT;

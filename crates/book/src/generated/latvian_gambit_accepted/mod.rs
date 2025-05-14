@@ -101,19 +101,19 @@ pub const LATVIAN_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod main_line;
-pub use main_line::MAIN_LINE;
+pub mod bilguer_variation;
+pub use bilguer_variation::BILGUER_VARIATION;
 pub mod foltys_variation;
 pub use foltys_variation::FOLTYS_VARIATION;
-pub mod bronstein_gambit;
-pub use bronstein_gambit::BRONSTEIN_GAMBIT;
-pub mod leonhardt_variation;
-pub use leonhardt_variation::LEONHARDT_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod nimzowitsch_attack;
+pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
 pub mod foltys_leonhardt_variation;
 pub use foltys_leonhardt_variation::FOLTYS_LEONHARDT_VARIATION;
 pub mod bronstein_attack;
 pub use bronstein_attack::BRONSTEIN_ATTACK;
-pub mod nimzowitsch_attack;
-pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
-pub mod bilguer_variation;
-pub use bilguer_variation::BILGUER_VARIATION;
+pub mod bronstein_gambit;
+pub use bronstein_gambit::BRONSTEIN_GAMBIT;
+pub mod leonhardt_variation;
+pub use leonhardt_variation::LEONHARDT_VARIATION;

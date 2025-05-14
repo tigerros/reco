@@ -94,11 +94,11 @@ pub const TWO_KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod smyslov_system;
-pub use smyslov_system::SMYSLOV_SYSTEM;
 pub mod reversed_dragon;
 pub use reversed_dragon::REVERSED_DRAGON;
-pub mod fianchetto_line;
-pub use fianchetto_line::FIANCHETTO_LINE;
 pub mod keres_variation;
 pub use keres_variation::KERES_VARIATION;
+pub mod smyslov_system;
+pub use smyslov_system::SMYSLOV_SYSTEM;
+pub mod fianchetto_line;
+pub use fianchetto_line::FIANCHETTO_LINE;

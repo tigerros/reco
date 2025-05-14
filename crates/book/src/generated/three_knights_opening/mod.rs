@@ -183,11 +183,11 @@ pub const THREE_KNIGHTS_OPENING: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod schlechter_variation;
-pub use schlechter_variation::SCHLECHTER_VARIATION;
-pub mod steinitz_defense;
-pub use steinitz_defense::STEINITZ_DEFENSE;
-pub mod winawer_defense;
-pub use winawer_defense::WINAWER_DEFENSE;
 pub mod steinitz_rosenthal_variation;
 pub use steinitz_rosenthal_variation::STEINITZ_ROSENTHAL_VARIATION;
+pub mod steinitz_defense;
+pub use steinitz_defense::STEINITZ_DEFENSE;
+pub mod schlechter_variation;
+pub use schlechter_variation::SCHLECHTER_VARIATION;
+pub mod winawer_defense;
+pub use winawer_defense::WINAWER_DEFENSE;

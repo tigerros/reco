@@ -122,16 +122,16 @@ pub const KAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
 pub mod polugaevsky_variation;
 pub use polugaevsky_variation::POLUGAEVSKY_VARIATION;
-pub mod knight_variation;
-pub use knight_variation::KNIGHT_VARIATION;
+pub mod gipslis_variation;
+pub mod maroczy_bind;
+pub use gipslis_variation::GIPSLIS_VARIATION;
 pub mod swiss_cheese_variation;
 pub use swiss_cheese_variation::SWISS_CHEESE_VARIATION;
 pub mod wing_attack;
 pub use wing_attack::WING_ATTACK;
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
-pub mod gipslis_variation;
-pub use gipslis_variation::GIPSLIS_VARIATION;
-pub mod maroczy_bind;
+pub mod knight_variation;
+pub use knight_variation::KNIGHT_VARIATION;

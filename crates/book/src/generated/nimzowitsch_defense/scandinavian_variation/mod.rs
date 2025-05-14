@@ -94,11 +94,11 @@ pub const SCANDINAVIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod aachen_gambit;
-pub use aachen_gambit::AACHEN_GAMBIT;
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
+pub mod aachen_gambit;
+pub use aachen_gambit::AACHEN_GAMBIT;
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;

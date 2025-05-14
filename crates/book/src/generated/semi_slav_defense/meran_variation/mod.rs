@@ -480,23 +480,23 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod blumenfeld_variation;
-pub use blumenfeld_variation::BLUMENFELD_VARIATION;
-pub mod stahlberg_variation;
-pub use stahlberg_variation::STAHLBERG_VARIATION;
 pub mod rabinovich_variation;
 pub use rabinovich_variation::RABINOVICH_VARIATION;
-pub mod reynolds_variation;
-pub use reynolds_variation::REYNOLDS_VARIATION;
 pub mod wade_variation;
 pub use wade_variation::WADE_VARIATION;
-pub mod rellstab_attack;
-pub use rellstab_attack::RELLSTAB_ATTACK;
-pub mod lundin_variation;
-pub use lundin_variation::LUNDIN_VARIATION;
-pub mod sozin_variation;
-pub use sozin_variation::SOZIN_VARIATION;
 pub mod old_variation;
 pub use old_variation::OLD_VARIATION;
+pub mod lundin_variation;
+pub use lundin_variation::LUNDIN_VARIATION;
+pub mod reynolds_variation;
+pub use reynolds_variation::REYNOLDS_VARIATION;
+pub mod stahlberg_variation;
+pub use stahlberg_variation::STAHLBERG_VARIATION;
+pub mod sozin_variation;
+pub use sozin_variation::SOZIN_VARIATION;
+pub mod blumenfeld_variation;
+pub use blumenfeld_variation::BLUMENFELD_VARIATION;
 pub mod pirc_variation;
 pub use pirc_variation::PIRC_VARIATION;
+pub mod rellstab_attack;
+pub use rellstab_attack::RELLSTAB_ATTACK;

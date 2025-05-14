@@ -129,9 +129,9 @@ pub const QUIET_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod czech_defense;
-pub use czech_defense::CZECH_DEFENSE;
 pub mod chigorin_line;
 pub use chigorin_line::CHIGORIN_LINE;
+pub mod czech_defense;
+pub use czech_defense::CZECH_DEFENSE;
 pub mod parma_defense;
 pub use parma_defense::PARMA_DEFENSE;

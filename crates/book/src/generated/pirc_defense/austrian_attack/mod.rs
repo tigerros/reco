@@ -219,13 +219,13 @@ pub const AUSTRIAN_ATTACK: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod kurajica_variation;
-pub use kurajica_variation::KURAJICA_VARIATION;
+pub mod unzicker_attack;
+pub use unzicker_attack::UNZICKER_ATTACK;
 pub mod dragon_formation;
 pub use dragon_formation::DRAGON_FORMATION;
 pub mod weiss_variation;
 pub use weiss_variation::WEISS_VARIATION;
-pub mod unzicker_attack;
-pub use unzicker_attack::UNZICKER_ATTACK;
+pub mod kurajica_variation;
+pub use kurajica_variation::KURAJICA_VARIATION;
 pub mod ljubojevic_variation;
 pub use ljubojevic_variation::LJUBOJEVIC_VARIATION;

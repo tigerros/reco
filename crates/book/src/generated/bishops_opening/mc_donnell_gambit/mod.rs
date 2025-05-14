@@ -101,7 +101,7 @@ pub const MC_DONNELL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod mc_donnell_double_gambit;
-pub use mc_donnell_double_gambit::MC_DONNELL_DOUBLE_GAMBIT;
 pub mod la_bourdonnais_denker_gambit;
 pub use la_bourdonnais_denker_gambit::LA_BOURDONNAIS_DENKER_GAMBIT;
+pub mod mc_donnell_double_gambit;
+pub use mc_donnell_double_gambit::MC_DONNELL_DOUBLE_GAMBIT;

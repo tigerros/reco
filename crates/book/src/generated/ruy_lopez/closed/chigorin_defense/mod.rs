@@ -1082,7 +1082,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 6] = [
         },
     },
 ];
-pub mod gajewski_gambit;
-pub use gajewski_gambit::GAJEWSKI_GAMBIT;
 pub mod panov_system;
 pub use panov_system::PANOV_SYSTEM;
+pub mod gajewski_gambit;
+pub use gajewski_gambit::GAJEWSKI_GAMBIT;

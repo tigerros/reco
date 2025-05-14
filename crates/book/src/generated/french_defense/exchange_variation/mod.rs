@@ -277,9 +277,9 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod bogoljubow_variation;
-pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
-pub mod monte_carlo_variation;
-pub use monte_carlo_variation::MONTE_CARLO_VARIATION;
 pub mod svenonius_variation;
 pub use svenonius_variation::SVENONIUS_VARIATION;
+pub mod monte_carlo_variation;
+pub use monte_carlo_variation::MONTE_CARLO_VARIATION;
+pub mod bogoljubow_variation;
+pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;

@@ -108,17 +108,17 @@ pub const FOUR_KNIGHTS_GAME: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod halloween_gambit;
-pub use halloween_gambit::HALLOWEEN_GAMBIT;
-pub mod spanish_variation;
-pub use spanish_variation::SPANISH_VARIATION;
-pub mod gunsberg_variation;
-pub use gunsberg_variation::GUNSBERG_VARIATION;
-pub mod italian_variation;
-pub use italian_variation::ITALIAN_VARIATION;
-pub mod scotch_variation;
-pub use scotch_variation::SCOTCH_VARIATION;
 pub mod glek_system;
 pub use glek_system::GLEK_SYSTEM;
+pub mod italian_variation;
+pub use italian_variation::ITALIAN_VARIATION;
 pub mod scotch_variation_accepted;
 pub use scotch_variation_accepted::SCOTCH_VARIATION_ACCEPTED;
+pub mod scotch_variation;
+pub use scotch_variation::SCOTCH_VARIATION;
+pub mod spanish_variation;
+pub use spanish_variation::SPANISH_VARIATION;
+pub mod halloween_gambit;
+pub use halloween_gambit::HALLOWEEN_GAMBIT;
+pub mod gunsberg_variation;
+pub use gunsberg_variation::GUNSBERG_VARIATION;

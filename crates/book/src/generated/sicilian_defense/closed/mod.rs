@@ -740,17 +740,17 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
         },
     },
 ];
-pub mod traditional;
-pub use traditional::TRADITIONAL;
 pub mod botvinnik_defense;
-pub mod grob_attack;
-pub use grob_attack::GROB_ATTACK;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod korchnoi_defense;
 pub use korchnoi_defense::KORCHNOI_DEFENSE;
 pub mod chameleon_variation;
 pub use chameleon_variation::CHAMELEON_VARIATION;
+pub mod grob_attack;
+pub use grob_attack::GROB_ATTACK;
+pub mod anti_sveshnikov_variation;
 pub mod smyslov_variation;
 pub use smyslov_variation::SMYSLOV_VARIATION;
-pub mod anti_sveshnikov_variation;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod traditional;
+pub use traditional::TRADITIONAL;

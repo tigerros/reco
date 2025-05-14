@@ -260,13 +260,13 @@ pub const FOUR_KNIGHTS_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod quiet_line;
-pub use quiet_line::QUIET_LINE;
-pub mod flexible_line;
-pub use flexible_line::FLEXIBLE_LINE;
-pub mod bradley_beach_variation;
-pub use bradley_beach_variation::BRADLEY_BEACH_VARIATION;
 pub mod korchnoi_line;
 pub use korchnoi_line::KORCHNOI_LINE;
+pub mod flexible_line;
+pub use flexible_line::FLEXIBLE_LINE;
 pub mod fianchetto_line;
 pub use fianchetto_line::FIANCHETTO_LINE;
+pub mod quiet_line;
+pub use quiet_line::QUIET_LINE;
+pub mod bradley_beach_variation;
+pub use bradley_beach_variation::BRADLEY_BEACH_VARIATION;

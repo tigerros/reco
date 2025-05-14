@@ -115,11 +115,11 @@ pub const QUIET_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod schallopp_defense;
-pub use schallopp_defense::SCHALLOPP_DEFENSE;
-pub mod landau_variation;
-pub use landau_variation::LANDAU_VARIATION;
 pub mod pin_defense;
 pub use pin_defense::PIN_DEFENSE;
+pub mod schallopp_defense;
+pub use schallopp_defense::SCHALLOPP_DEFENSE;
 pub mod amsterdam_variation;
 pub use amsterdam_variation::AMSTERDAM_VARIATION;
+pub mod landau_variation;
+pub use landau_variation::LANDAU_VARIATION;

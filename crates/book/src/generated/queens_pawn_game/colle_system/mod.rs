@@ -270,9 +270,9 @@ pub const COLLE_SYSTEM: [Opening<'static, &str>; 3] = [
         },
     },
 ];
+pub mod grunfeld_formation;
+pub use grunfeld_formation::GRUNFELD_FORMATION;
 pub mod anti_colle;
 pub use anti_colle::ANTI_COLLE;
 pub mod traditional_colle;
 pub use traditional_colle::TRADITIONAL_COLLE;
-pub mod grunfeld_formation;
-pub use grunfeld_formation::GRUNFELD_FORMATION;

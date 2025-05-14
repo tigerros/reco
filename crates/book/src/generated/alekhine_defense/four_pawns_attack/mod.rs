@@ -129,17 +129,17 @@ pub const FOUR_PAWNS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod main_line;
-pub use main_line::MAIN_LINE;
+pub mod trifunovic_variation;
+pub use trifunovic_variation::TRIFUNOVIC_VARIATION;
 pub mod tartakower_variation;
 pub use tartakower_variation::TARTAKOWER_VARIATION;
 pub mod ilyin_zhenevsky_variation;
 pub use ilyin_zhenevsky_variation::ILYIN_ZHENEVSKY_VARIATION;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod korchnoi_variation;
 pub use korchnoi_variation::KORCHNOI_VARIATION;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod cambridge_gambit;
 pub use cambridge_gambit::CAMBRIDGE_GAMBIT;
-pub mod trifunovic_variation;
-pub use trifunovic_variation::TRIFUNOVIC_VARIATION;

@@ -108,7 +108,7 @@ pub const VALENCIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod ilundain_variation;
-pub use ilundain_variation::ILUNDAIN_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod ilundain_variation;
+pub use ilundain_variation::ILUNDAIN_VARIATION;

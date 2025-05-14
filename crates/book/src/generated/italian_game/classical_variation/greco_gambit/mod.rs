@@ -150,15 +150,15 @@ pub const GRECO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod moeller_therkatz_attack;
+pub use moeller_therkatz_attack::MOELLER_THERKATZ_ATTACK;
 pub mod greco_variation;
 pub use greco_variation::GRECO_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-pub mod moeller_therkatz_attack;
-pub use moeller_therkatz_attack::MOELLER_THERKATZ_ATTACK;
 pub mod moeller_bayonet_attack;
 pub use moeller_bayonet_attack::MOELLER_BAYONET_ATTACK;
-pub mod traditional_line;
-pub use traditional_line::TRADITIONAL_LINE;
 pub mod anderssen_variation;
 pub use anderssen_variation::ANDERSSEN_VARIATION;
+pub mod traditional_line;
+pub use traditional_line::TRADITIONAL_LINE;

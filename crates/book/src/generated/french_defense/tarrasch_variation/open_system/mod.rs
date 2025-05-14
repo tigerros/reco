@@ -204,13 +204,13 @@ pub const OPEN_SYSTEM: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod advance_line;
-pub use advance_line::ADVANCE_LINE;
-pub mod euwe_keres_line;
-pub use euwe_keres_line::EUWE_KERES_LINE;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod shaposhnikov_gambit;
 pub use shaposhnikov_gambit::SHAPOSHNIKOV_GAMBIT;
+pub mod advance_line;
+pub use advance_line::ADVANCE_LINE;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod euwe_keres_line;
+pub use euwe_keres_line::EUWE_KERES_LINE;
 pub mod suchting_line;
 pub use suchting_line::SUCHTING_LINE;

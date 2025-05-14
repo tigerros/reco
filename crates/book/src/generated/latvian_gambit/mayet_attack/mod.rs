@@ -101,11 +101,11 @@ pub const MAYET_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod morgado_defense;
-pub use morgado_defense::MORGADO_DEFENSE;
-pub mod strautins_gambit;
-pub use strautins_gambit::STRAUTINS_GAMBIT;
 pub mod polerio_svedenborg_variation;
 pub use polerio_svedenborg_variation::POLERIO_SVEDENBORG_VARIATION;
+pub mod strautins_gambit;
+pub use strautins_gambit::STRAUTINS_GAMBIT;
+pub mod morgado_defense;
+pub use morgado_defense::MORGADO_DEFENSE;
 pub mod poisoned_pawn_variation;
 pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;

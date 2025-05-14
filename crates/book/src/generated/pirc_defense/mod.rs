@@ -287,21 +287,21 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
         },
     },
 ];
+pub mod sveshnikov_system;
+pub use sveshnikov_system::SVESHNIKOV_SYSTEM;
+pub mod austrian_attack;
+pub use austrian_attack::AUSTRIAN_ATTACK;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
-pub mod kholmov_system;
-pub use kholmov_system::KHOLMOV_SYSTEM;
-pub mod roscher_gambit;
-pub use roscher_gambit::ROSCHER_GAMBIT;
-pub mod n150_attack;
-pub use n150_attack::N150_ATTACK;
+pub mod chinese_variation;
+pub use chinese_variation::CHINESE_VARIATION;
 pub mod bayonet_attack;
 pub use bayonet_attack::BAYONET_ATTACK;
 pub mod byrne_variation;
 pub use byrne_variation::BYRNE_VARIATION;
-pub mod austrian_attack;
-pub use austrian_attack::AUSTRIAN_ATTACK;
-pub mod sveshnikov_system;
-pub use sveshnikov_system::SVESHNIKOV_SYSTEM;
-pub mod chinese_variation;
-pub use chinese_variation::CHINESE_VARIATION;
+pub mod n150_attack;
+pub use n150_attack::N150_ATTACK;
+pub mod roscher_gambit;
+pub use roscher_gambit::ROSCHER_GAMBIT;
+pub mod kholmov_system;
+pub use kholmov_system::KHOLMOV_SYSTEM;

@@ -71,15 +71,15 @@ pub const WARE_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod wing_gambit;
-pub use wing_gambit::WING_GAMBIT;
-pub mod meadow_hay_trap;
-pub use meadow_hay_trap::MEADOW_HAY_TRAP;
-pub mod ware_gambit;
-pub use ware_gambit::WARE_GAMBIT;
-pub mod symmetric_variation;
-pub use symmetric_variation::SYMMETRIC_VARIATION;
 pub mod crab_variation;
 pub use crab_variation::CRAB_VARIATION;
+pub mod wing_gambit;
+pub use wing_gambit::WING_GAMBIT;
+pub mod ware_gambit;
+pub use ware_gambit::WARE_GAMBIT;
 pub mod cologne_gambit;
 pub use cologne_gambit::COLOGNE_GAMBIT;
+pub mod meadow_hay_trap;
+pub use meadow_hay_trap::MEADOW_HAY_TRAP;
+pub mod symmetric_variation;
+pub use symmetric_variation::SYMMETRIC_VARIATION;

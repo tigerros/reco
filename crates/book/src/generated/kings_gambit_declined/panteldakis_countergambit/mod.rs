@@ -94,13 +94,13 @@ pub const PANTELDAKIS_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod shirazi_line;
-pub use shirazi_line::SHIRAZI_LINE;
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
-pub mod pawn_sacrifice_line;
-pub use pawn_sacrifice_line::PAWN_SACRIFICE_LINE;
-pub mod greco_variation;
-pub use greco_variation::GRECO_VARIATION;
 pub mod schillers_defense;
 pub use schillers_defense::SCHILLERS_DEFENSE;
+pub mod greco_variation;
+pub use greco_variation::GRECO_VARIATION;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
+pub mod shirazi_line;
+pub use shirazi_line::SHIRAZI_LINE;
+pub mod pawn_sacrifice_line;
+pub use pawn_sacrifice_line::PAWN_SACRIFICE_LINE;

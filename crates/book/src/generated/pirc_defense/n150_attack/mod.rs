@@ -129,7 +129,7 @@ pub const N150_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod sveshnikov_jansa_attack;
-pub use sveshnikov_jansa_attack::SVESHNIKOV_JANSA_ATTACK;
 pub mod inner_doll_defense;
 pub use inner_doll_defense::INNER_DOLL_DEFENSE;
+pub mod sveshnikov_jansa_attack;
+pub use sveshnikov_jansa_attack::SVESHNIKOV_JANSA_ATTACK;

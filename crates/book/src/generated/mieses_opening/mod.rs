@@ -71,9 +71,9 @@ pub const MIESES_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod venezolana_variation;
+pub use venezolana_variation::VENEZOLANA_VARIATION;
 pub mod reversed_rat;
 pub use reversed_rat::REVERSED_RAT;
 pub mod myers_spike_attack;
 pub use myers_spike_attack::MYERS_SPIKE_ATTACK;
-pub mod venezolana_variation;
-pub use venezolana_variation::VENEZOLANA_VARIATION;

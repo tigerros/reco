@@ -253,15 +253,15 @@ pub const DRAGON_VARIATION: [Opening<'static, &str>; 2] = [
         },
     },
 ];
-pub mod yugoslav_attack;
-pub use yugoslav_attack::YUGOSLAV_ATTACK;
-pub mod modern_bc4_variation;
-pub use modern_bc4_variation::MODERN_BC4_VARIATION;
 pub mod levenfish_variation;
 pub use levenfish_variation::LEVENFISH_VARIATION;
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod modern_bc4_variation;
+pub use modern_bc4_variation::MODERN_BC4_VARIATION;
 pub mod accelerated_dragon;
 pub use accelerated_dragon::ACCELERATED_DRAGON;
+pub mod yugoslav_attack;
+pub use yugoslav_attack::YUGOSLAV_ATTACK;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;

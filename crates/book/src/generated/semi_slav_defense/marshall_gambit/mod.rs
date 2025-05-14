@@ -115,9 +115,9 @@ pub const MARSHALL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod forgotten_variation;
+pub use forgotten_variation::FORGOTTEN_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod tolush_variation;
 pub use tolush_variation::TOLUSH_VARIATION;
-pub mod forgotten_variation;
-pub use forgotten_variation::FORGOTTEN_VARIATION;

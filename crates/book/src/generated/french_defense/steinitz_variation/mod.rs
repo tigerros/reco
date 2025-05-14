@@ -605,11 +605,11 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
         },
     },
 ];
+pub mod boleslavsky_variation;
+pub use boleslavsky_variation::BOLESLAVSKY_VARIATION;
 pub mod brodsky_jones_variation;
 pub use brodsky_jones_variation::BRODSKY_JONES_VARIATION;
 pub mod gledhill_attack;
 pub use gledhill_attack::GLEDHILL_ATTACK;
-pub mod boleslavsky_variation;
-pub use boleslavsky_variation::BOLESLAVSKY_VARIATION;
 pub mod bradford_attack_variation;
 pub use bradford_attack_variation::BRADFORD_ATTACK_VARIATION;

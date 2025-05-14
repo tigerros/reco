@@ -702,13 +702,13 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 6] = [
         },
     },
 ];
-pub mod botvinnik_variation;
-pub use botvinnik_variation::BOTVINNIK_VARIATION;
 pub mod capablanca_variation;
 pub use capablanca_variation::CAPABLANCA_VARIATION;
 pub mod romanovsky_variation;
 pub use romanovsky_variation::ROMANOVSKY_VARIATION;
-pub mod o_kelly_variation;
-pub use o_kelly_variation::O_KELLY_VARIATION;
 pub mod keres_variation;
 pub use keres_variation::KERES_VARIATION;
+pub mod o_kelly_variation;
+pub use o_kelly_variation::O_KELLY_VARIATION;
+pub mod botvinnik_variation;
+pub use botvinnik_variation::BOTVINNIK_VARIATION;

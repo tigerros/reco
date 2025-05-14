@@ -540,7 +540,7 @@ pub const STOLTZ_VARIATION: [Opening<'static, &str>; 4] = [
         },
     },
 ];
-pub mod center_variation;
-pub use center_variation::CENTER_VARIATION;
 pub mod shabalov_attack;
 pub use shabalov_attack::SHABALOV_ATTACK;
+pub mod center_variation;
+pub use center_variation::CENTER_VARIATION;

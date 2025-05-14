@@ -136,13 +136,13 @@ pub const LASKER_PELIKAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod sveshnikov_variation;
-pub use sveshnikov_variation::SVESHNIKOV_VARIATION;
-pub mod schlechter_variation;
-pub use schlechter_variation::SCHLECHTER_VARIATION;
 pub mod bird_variation;
 pub use bird_variation::BIRD_VARIATION;
-pub mod retreat_variation;
-pub use retreat_variation::RETREAT_VARIATION;
+pub mod schlechter_variation;
+pub use schlechter_variation::SCHLECHTER_VARIATION;
+pub mod sveshnikov_variation;
+pub use sveshnikov_variation::SVESHNIKOV_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod retreat_variation;
+pub use retreat_variation::RETREAT_VARIATION;

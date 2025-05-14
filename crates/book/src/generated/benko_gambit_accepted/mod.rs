@@ -122,19 +122,19 @@ pub const BENKO_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod king_walk_variation;
-pub use king_walk_variation::KING_WALK_VARIATION;
-pub mod central_storming_variation;
-pub use central_storming_variation::CENTRAL_STORMING_VARIATION;
-pub mod fully_accepted_variation;
-pub use fully_accepted_variation::FULLY_ACCEPTED_VARIATION;
-pub mod dlugy_variation;
-pub use dlugy_variation::DLUGY_VARIATION;
-pub mod pawn_return_variation;
-pub use pawn_return_variation::PAWN_RETURN_VARIATION;
-pub mod yugoslav;
-pub use yugoslav::YUGOSLAV;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
+pub mod fully_accepted_variation;
+pub use fully_accepted_variation::FULLY_ACCEPTED_VARIATION;
+pub mod yugoslav;
+pub use yugoslav::YUGOSLAV;
+pub mod king_walk_variation;
+pub use king_walk_variation::KING_WALK_VARIATION;
+pub mod pawn_return_variation;
+pub use pawn_return_variation::PAWN_RETURN_VARIATION;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod central_storming_variation;
+pub use central_storming_variation::CENTRAL_STORMING_VARIATION;
+pub mod dlugy_variation;
+pub use dlugy_variation::DLUGY_VARIATION;

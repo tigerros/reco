@@ -590,11 +590,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
         },
     },
 ];
-pub mod huisl_variation;
-pub use huisl_variation::HUISL_VARIATION;
 pub mod blackburne_attack;
 pub use blackburne_attack::BLACKBURNE_ATTACK;
-pub mod buenos_aires_variation;
-pub use buenos_aires_variation::BUENOS_AIRES_VARIATION;
+pub mod huisl_variation;
+pub use huisl_variation::HUISL_VARIATION;
 pub mod ilyin_zhenevsky_variation;
 pub use ilyin_zhenevsky_variation::ILYIN_ZHENEVSKY_VARIATION;
+pub mod buenos_aires_variation;
+pub use buenos_aires_variation::BUENOS_AIRES_VARIATION;

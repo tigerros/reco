@@ -101,11 +101,11 @@ pub const OLD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod billinger_gambit;
+pub use billinger_gambit::BILLINGER_GAMBIT;
+pub mod novikov_gambit;
+pub use novikov_gambit::NOVIKOV_GAMBIT;
 pub mod christensen_gambit;
 pub use christensen_gambit::CHRISTENSEN_GAMBIT;
 pub mod korchnoi_gambit;
 pub use korchnoi_gambit::KORCHNOI_GAMBIT;
-pub mod novikov_gambit;
-pub use novikov_gambit::NOVIKOV_GAMBIT;
-pub mod billinger_gambit;
-pub use billinger_gambit::BILLINGER_GAMBIT;

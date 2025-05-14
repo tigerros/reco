@@ -396,23 +396,23 @@ pub const RICHTER_RAUZER_VARIATION: [Opening<'static, &str>; 3] = [
         },
     },
 ];
-pub mod vitolins_variation;
-pub use vitolins_variation::VITOLINS_VARIATION;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod rauzer_attack;
-pub use rauzer_attack::RAUZER_ATTACK;
-pub mod podebrady_variation;
-pub use podebrady_variation::PODEBRADY_VARIATION;
-pub mod dragon_variation;
-pub use dragon_variation::DRAGON_VARIATION;
 pub mod ivanov_variation;
 pub use ivanov_variation::IVANOV_VARIATION;
-pub mod traditional_variation;
-pub use traditional_variation::TRADITIONAL_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod neo_modern_variation;
 pub use neo_modern_variation::NEO_MODERN_VARIATION;
+pub mod traditional_variation;
+pub use traditional_variation::TRADITIONAL_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod vitolins_variation;
+pub use vitolins_variation::VITOLINS_VARIATION;
+pub mod podebrady_variation;
+pub use podebrady_variation::PODEBRADY_VARIATION;
+pub mod rauzer_attack;
+pub use rauzer_attack::RAUZER_ATTACK;
+pub mod dragon_variation;
+pub use dragon_variation::DRAGON_VARIATION;

@@ -249,15 +249,15 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
         },
     },
 ];
+pub mod lazard_gambit;
+pub use lazard_gambit::LAZARD_GAMBIT;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod janowski_variation;
 pub use janowski_variation::JANOWSKI_VARIATION;
-pub mod tartakower_gambit;
-pub use tartakower_gambit::TARTAKOWER_GAMBIT;
 pub mod modern_gambit;
 pub use modern_gambit::MODERN_GAMBIT;
+pub mod tartakower_gambit;
+pub use tartakower_gambit::TARTAKOWER_GAMBIT;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod lazard_gambit;
-pub use lazard_gambit::LAZARD_GAMBIT;

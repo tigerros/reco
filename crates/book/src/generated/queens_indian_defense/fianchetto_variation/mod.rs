@@ -115,15 +115,15 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
+pub mod check_variation;
+pub use check_variation::CHECK_VARIATION;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod samisch_variation;
+pub use samisch_variation::SAMISCH_VARIATION;
+pub mod kramnik_variation;
+pub use kramnik_variation::KRAMNIK_VARIATION;
 pub mod traditional_line;
 pub use traditional_line::TRADITIONAL_LINE;
 pub mod nimzowitsch_variation;
 pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
-pub mod check_variation;
-pub use check_variation::CHECK_VARIATION;
-pub mod kramnik_variation;
-pub use kramnik_variation::KRAMNIK_VARIATION;
-pub mod samisch_variation;
-pub use samisch_variation::SAMISCH_VARIATION;

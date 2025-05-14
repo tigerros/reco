@@ -87,15 +87,15 @@ pub const RETI_OPENING: [Opening<'static, &str>; 1] = [Opening {
         },
     },
 }];
-pub mod anglo_slav_variation;
-pub mod reti_gambit;
-pub mod zilbermints_gambit;
-pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
+pub mod reti_gambit;
+pub mod reversed_blumenfeld_gambit;
+pub use reversed_blumenfeld_gambit::REVERSED_BLUMENFELD_GAMBIT;
+pub mod zilbermints_gambit;
+pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
+pub mod anglo_slav_variation;
 pub mod penguin_variation;
 pub use penguin_variation::PENGUIN_VARIATION;
 pub mod reti_accepted;
 pub use reti_accepted::RETI_ACCEPTED;
-pub mod reversed_blumenfeld_gambit;
-pub use reversed_blumenfeld_gambit::REVERSED_BLUMENFELD_GAMBIT;
