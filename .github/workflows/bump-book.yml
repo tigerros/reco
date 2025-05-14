@@ -1,4 +1,4 @@
-name: Bump Book
+name: Bump book
 
 on:
   schedule:
@@ -16,6 +16,8 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Run reco-librarian
+        env:
+          GITHUB_TOKEN: ${{ secrets.GET_GITHUB_PAT }}
         run: cargo run -p reco-librarian
 
       - name: Run cargo fmt
