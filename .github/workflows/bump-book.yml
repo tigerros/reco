@@ -29,6 +29,7 @@ jobs:
           git config --global user.email "github-actions@users.noreply.github.com"
           echo "CHANGED=false" >> $GITHUB_ENV
           if [ -n "$(git status --porcelain)" ]; then
+            echo "changed"
             echo "CHANGED=true" >> $GITHUB_ENV
           fi
 
