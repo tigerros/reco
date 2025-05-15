@@ -2,7 +2,17 @@ name: Check
 on: [push, pull_request]
 
 jobs:
-  check:
+  check-workspace:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: taiki-e/install-action@cargo-hack
+
+      - name: Check
+        run: cargo hack check --feature-powerset --workspace --all-targets
+
+  check-reco:
     strategy:
       matrix:
         toolchain:
@@ -23,7 +33,5 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
           targets: x86_64-unknown-none
 
-      - name: All
-        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --workspace --all-targets ${{ matrix.flags }}
-      - name: No-std
-        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --all-targets --target x86_64-unknown-none
+      - name: Check
+        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --all-targets --target x86_64-unknown-none ${{ matrix.flags }}

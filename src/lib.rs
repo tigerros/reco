@@ -48,6 +48,9 @@
     reason = "triggers only on the generated bitboards"
 )]
 
+#[cfg(feature = "alloc")]
+extern crate alloc;
+
 pub mod code;
 mod opening;
 pub mod volume;

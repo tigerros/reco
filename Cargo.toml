@@ -7,12 +7,12 @@ categories = ["data-structures", "game-development", "no-std", "no-std::no-alloc
 keywords = ["chess", "eco", "dataset", "lichess"]
 repository = "https://github.com/tigerros/reco"
 license = "GPL-3"
-rust-version = "1.85.1"
+rust-version = "1.85.1" # remember to update check.yml
 readme = "README.md"
 include = ["src", "README.md", "LICENSE"]
 
 [dependencies]
-constcat = "0.6.0"
+constcat = { version = "0.6.0", optional = true }
 deranged = { version = "~0.4", default-features = false }
 serde = { version = "1", features = ["derive"], optional = true }
 shakmaty = { workspace = true }
@@ -20,7 +20,7 @@ shakmaty = { workspace = true }
 [features]
 serde = ["dep:serde", "deranged/serde"]
 alloc = ["serde?/alloc"]
-book = []
+book = ["dep:constcat"]
 
 [workspace]
 resolver = "3"

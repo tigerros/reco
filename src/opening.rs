@@ -1,7 +1,5 @@
 use crate::Code;
 #[cfg(feature = "alloc")]
-extern crate alloc;
-#[cfg(feature = "alloc")]
 use alloc::string::String;
 #[cfg(feature = "alloc")]
 use alloc::vec::Vec;
