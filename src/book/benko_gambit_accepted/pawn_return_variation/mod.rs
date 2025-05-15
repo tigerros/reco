@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benko Gambit Accepted: Pawn Return Variation.
 pub const PAWN_RETURN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

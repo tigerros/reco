@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Closed, Anti-Sveshnikov Variation, with Nf6.
 pub const WITH_NF6: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

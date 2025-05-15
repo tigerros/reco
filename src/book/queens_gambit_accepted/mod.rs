@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Accepted.
 pub const QUEENS_GAMBIT_ACCEPTED: [Opening<'static, &str>; 3] = [
     Opening {

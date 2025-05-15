@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Modern Defense: Neo-Modern Defense.
 pub const NEO_MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

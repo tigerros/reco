@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzo-Larsen Attack: Modern Variation.
 pub const MODERN_VARIATION: [Opening<'static, &str>; 4] = [
     Opening {

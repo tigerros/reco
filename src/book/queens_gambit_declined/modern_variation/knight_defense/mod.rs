@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Modern Variation, Knight Defense.
 pub const KNIGHT_DEFENSE: [Opening<'static, &str>; 3] = [
     Opening {

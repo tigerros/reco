@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Scotch Gambit, de Riviere Defense.
 pub const DE_RIVIERE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

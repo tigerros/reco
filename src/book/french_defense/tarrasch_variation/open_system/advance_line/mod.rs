@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Tarrasch Variation, Open System, Advance Line.
 pub const ADVANCE_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

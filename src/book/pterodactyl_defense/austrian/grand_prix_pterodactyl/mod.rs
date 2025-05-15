@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Pterodactyl Defense: Austrian, Grand Prix Pterodactyl.
 pub const GRAND_PRIX_PTERODACTYL: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

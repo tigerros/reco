@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Noah's Ark Trap.
 pub const NOAHS_ARK_TRAP: [Opening<'static, &str>; 2] = [
     Opening {

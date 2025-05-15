@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Bishop's Gambit, Bryan Countergambit.
 pub const BRYAN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

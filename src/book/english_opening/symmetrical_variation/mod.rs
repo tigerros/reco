@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Symmetrical Variation.
 pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
     Opening {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Caro-Kann Defense: Panov Attack, Modern Defense, Mieses Line.
 pub const MIESES_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

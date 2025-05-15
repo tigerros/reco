@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Symmetrical Variation, Anti-Benoni Variation, Spielmann Defense.
 pub const SPIELMANN_DEFENSE: [Opening<'static, &str>; 2] = [
     Opening {

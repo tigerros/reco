@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Mikenas-Carls Variation.
 pub const MIKENAS_CARLS_VARIATION: [Opening<'static, &str>; 3] = [
     Opening {

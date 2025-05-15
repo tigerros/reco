@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Taimanov Variation, Bastrikov Variation.
 pub const BASTRIKOV_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

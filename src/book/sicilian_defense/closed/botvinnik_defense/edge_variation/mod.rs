@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Closed, Botvinnik Defense, Edge Variation.
 pub const EDGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

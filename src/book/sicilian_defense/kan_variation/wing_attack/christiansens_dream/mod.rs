@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Kan Variation, Wing Attack, Christiansen's Dream.
 pub const CHRISTIANSENS_DREAM: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

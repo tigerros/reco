@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Indian Defense: Fianchetto Variation, Check Variation.
 pub const CHECK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

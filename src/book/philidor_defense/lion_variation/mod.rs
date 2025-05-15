@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Philidor Defense: Lion Variation.
 pub const LION_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

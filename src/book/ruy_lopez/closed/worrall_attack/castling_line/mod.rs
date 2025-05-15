@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Closed, Worrall Attack, Castling Line.
 pub const CASTLING_LINE: [Opening<'static, &str>; 2] = [
     Opening {

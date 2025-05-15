@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benoni Defense: King's Pawn Line.
 pub const KINGS_PAWN_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

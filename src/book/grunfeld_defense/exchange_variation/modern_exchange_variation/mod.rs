@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Grünfeld Defense: Exchange Variation, Modern Exchange Variation.
 pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
     Opening {

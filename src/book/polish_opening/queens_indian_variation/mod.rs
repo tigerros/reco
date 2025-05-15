@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Polish Opening: Queen's Indian Variation.
 pub const QUEENS_INDIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

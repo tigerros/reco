@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Berlin Defense, Trifunovic Variation.
 pub const TRIFUNOVIC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

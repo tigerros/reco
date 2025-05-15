@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Canard Opening.
 pub const CANARD_OPENING: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Three Knights Opening.
 pub const THREE_KNIGHTS_OPENING: [Opening<'static, &str>; 2] = [
     Opening {

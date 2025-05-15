@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Smith-Morra Gambit Deferred.
 pub const SMITH_MORRA_GAMBIT_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

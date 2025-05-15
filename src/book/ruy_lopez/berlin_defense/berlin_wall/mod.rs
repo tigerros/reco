@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Berlin Defense, Berlin Wall.
 pub const BERLIN_WALL: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

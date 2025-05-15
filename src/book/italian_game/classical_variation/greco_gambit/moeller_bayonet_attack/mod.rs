@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Classical Variation, Greco Gambit, Moeller-Bayonet Attack.
 pub const MOELLER_BAYONET_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

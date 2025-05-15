@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Réti Opening: Anglo-Slav Variation, Torre System.
 pub const TORRE_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

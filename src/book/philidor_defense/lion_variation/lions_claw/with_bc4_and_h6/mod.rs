@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Philidor Defense: Lion Variation, Lion's Claw, with Bc4 and h6.
 pub const WITH_BC4_AND_H6: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

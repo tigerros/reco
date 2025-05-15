@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Caro-Kann Defense: St. Patrick's Attack.
 pub const ST_PATRICKS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

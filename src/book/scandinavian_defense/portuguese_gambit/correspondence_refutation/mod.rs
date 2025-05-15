@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Scandinavian Defense: Portuguese Gambit, Correspondence Refutation.
 pub const CORRESPONDENCE_REFUTATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

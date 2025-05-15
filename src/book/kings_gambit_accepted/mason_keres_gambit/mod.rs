@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Mason-Keres Gambit.
 pub const MASON_KERES_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Vienna Game: Stanley Variation, Reversed Spanish.
 pub const REVERSED_SPANISH: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Scandinavian Defense: Panov Transfer.
 pub const PANOV_TRANSFER: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Pawn Game: Torre Attack, Gossip Variation.
 pub const GOSSIP_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

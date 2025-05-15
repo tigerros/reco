@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Alekhine Defense.
 pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
     Opening {

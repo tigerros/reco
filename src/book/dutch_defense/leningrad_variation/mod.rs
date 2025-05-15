@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Dutch Defense: Leningrad Variation.
 pub const LENINGRAD_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

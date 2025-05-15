@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Tarrasch Defense: Dubov Tarrasch.
 pub const DUBOV_TARRASCH: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

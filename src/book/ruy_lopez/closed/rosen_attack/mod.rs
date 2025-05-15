@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Closed, Rosen Attack.
 pub const ROSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

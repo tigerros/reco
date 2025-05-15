@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Slav Defense: Quiet Variation, Landau Variation.
 pub const LANDAU_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

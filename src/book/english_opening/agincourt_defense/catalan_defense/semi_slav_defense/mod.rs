@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Agincourt Defense, Catalan Defense, Semi-Slav Defense.
 pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Modern Defense: Pseudo-Austrian Attack.
 pub const PSEUDO_AUSTRIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

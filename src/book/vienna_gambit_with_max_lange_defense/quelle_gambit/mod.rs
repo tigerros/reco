@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Vienna Gambit, with Max Lange Defense: Quelle Gambit.
 pub const QUELLE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

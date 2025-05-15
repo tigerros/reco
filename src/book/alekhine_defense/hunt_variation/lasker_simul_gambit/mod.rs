@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Alekhine Defense: Hunt Variation, Lasker Simul Gambit.
 pub const LASKER_SIMUL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

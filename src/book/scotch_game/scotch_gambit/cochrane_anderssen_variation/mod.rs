@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Scotch Game: Scotch Gambit, Cochrane-Anderssen Variation.
 pub const COCHRANE_ANDERSSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

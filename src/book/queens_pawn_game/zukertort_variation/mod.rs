@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Pawn Game: Zukertort Variation.
 pub const ZUKERTORT_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

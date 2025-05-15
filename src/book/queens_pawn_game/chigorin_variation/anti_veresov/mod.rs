@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Pawn Game: Chigorin Variation, Anti-Veresov.
 pub const ANTI_VERESOV: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Four Knights Game: Spanish Variation, Rubinstein Variation Accepted.
 pub const RUBINSTEIN_VARIATION_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

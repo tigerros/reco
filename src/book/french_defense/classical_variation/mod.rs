@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Classical Variation.
 pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
     Opening {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Caro-Kann Defense: Advance Variation, Van der Wiel Attack.
 pub const VAN_DER_WIEL_ATTACK: [Opening<'static, &str>; 2] = [
     Opening {

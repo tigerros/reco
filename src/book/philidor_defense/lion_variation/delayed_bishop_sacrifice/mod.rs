@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Philidor Defense: Lion Variation, Delayed Bishop Sacrifice.
 pub const DELAYED_BISHOP_SACRIFICE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

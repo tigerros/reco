@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Dutch Defense: Blackburne Variation.
 pub const BLACKBURNE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

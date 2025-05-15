@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Blackmar-Diemer Gambit Accepted: Teichmann Defense, Seidel-Hall Attack.
 pub const SEIDEL_HALL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

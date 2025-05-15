@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Alapin Variation, Barmen Defense, Central Exchange.
 pub const CENTRAL_EXCHANGE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

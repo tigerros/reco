@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Bishop's Gambit, Classical Defense.
 pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

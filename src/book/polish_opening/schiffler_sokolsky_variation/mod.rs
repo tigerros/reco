@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Polish Opening: Schiffler-Sokolsky Variation.
 pub const SCHIFFLER_SOKOLSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

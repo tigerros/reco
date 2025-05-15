@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Achilles-Omega Gambit.
 pub const ACHILLES_OMEGA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

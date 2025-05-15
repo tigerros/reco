@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Dragon Variation, Classical Variation, Tartakower Line.
 pub const TARTAKOWER_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

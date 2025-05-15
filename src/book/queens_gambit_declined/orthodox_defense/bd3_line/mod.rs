@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Orthodox Defense, Bd3 Line.
 pub const BD3_LINE: [Opening<'static, &str>; 2] = [
     Opening {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Advance Variation, Milner-Barry Gambit.
 pub const MILNER_BARRY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

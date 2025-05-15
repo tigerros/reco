@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Zukertort Defense: Sicilian Knight Variation.
 pub const SICILIAN_KNIGHT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

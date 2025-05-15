@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: King's English Variation, Taimanov Variation.
 pub const TAIMANOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzo-Larsen Attack.
 pub const NIMZO_LARSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

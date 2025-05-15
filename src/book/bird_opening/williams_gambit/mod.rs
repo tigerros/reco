@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Bird Opening: Williams Gambit.
 pub const WILLIAMS_GAMBIT: [Opening<'static, &str>; 2] = [
     Opening {

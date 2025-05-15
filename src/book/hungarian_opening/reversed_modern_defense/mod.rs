@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Hungarian Opening: Reversed Modern Defense.
 pub const REVERSED_MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

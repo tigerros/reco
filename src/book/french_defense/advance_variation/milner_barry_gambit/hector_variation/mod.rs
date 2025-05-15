@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Advance Variation, Milner-Barry Gambit, Hector Variation.
 pub const HECTOR_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

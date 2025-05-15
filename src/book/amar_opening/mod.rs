@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Amar Opening.
 pub const AMAR_OPENING: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

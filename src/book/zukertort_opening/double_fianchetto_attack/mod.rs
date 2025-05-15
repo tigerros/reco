@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Zukertort Opening: Double Fianchetto Attack.
 pub const DOUBLE_FIANCHETTO_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

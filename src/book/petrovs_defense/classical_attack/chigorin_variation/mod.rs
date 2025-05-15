@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Petrov's Defense: Classical Attack, Chigorin Variation.
 pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

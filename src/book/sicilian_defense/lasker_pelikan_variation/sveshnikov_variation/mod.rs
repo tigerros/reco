@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Lasker-Pelikan Variation, Sveshnikov Variation.
 pub const SVESHNIKOV_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

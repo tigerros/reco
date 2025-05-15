@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Sozin Attack, Main Line, Sherbakov Variation.
 pub const SHERBAKOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

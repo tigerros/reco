@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Chigorin Defense.
 pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
     Opening {

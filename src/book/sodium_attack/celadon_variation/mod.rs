@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sodium Attack: Celadon Variation.
 pub const CELADON_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: King's Knight's Gambit.
 pub const KINGS_KNIGHTS_GAMBIT: [Opening<'static, &str>; 4] = [
     Opening {

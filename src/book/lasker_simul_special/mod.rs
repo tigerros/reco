@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Lasker Simul Special.
 pub const LASKER_SIMUL_SPECIAL: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

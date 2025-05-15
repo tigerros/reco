@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Slav Defense: Czech Variation, Krause Attack, Fazekas Gambit.
 pub const FAZEKAS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

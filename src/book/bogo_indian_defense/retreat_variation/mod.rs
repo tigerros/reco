@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Bogo-Indian Defense: Retreat Variation.
 pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
     Opening {

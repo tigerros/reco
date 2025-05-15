@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Two Knights Defense, Ulvestad Variation, Kurkin Gambit.
 pub const KURKIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Caro-Kann Defense: Maróczy Variation, Maróczy Gambit.
 pub const MAROCZY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

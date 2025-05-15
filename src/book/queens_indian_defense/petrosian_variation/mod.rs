@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Indian Defense: Petrosian Variation.
 pub const PETROSIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

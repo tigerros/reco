@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: King's English Variation, Four Knights Variation, Flexible Line.
 pub const FLEXIBLE_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Symmetrical Variation, Full Symmetry Line.
 pub const FULL_SYMMETRY_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

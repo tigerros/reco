@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Four Knights Game: Spanish Variation, Double Spanish.
 pub const DOUBLE_SPANISH: [Opening<'static, &str>; 2] = [
     Opening {

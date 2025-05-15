@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Alekhine Defense: Mokele Mbembe.
 pub const MOKELE_MBEMBE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

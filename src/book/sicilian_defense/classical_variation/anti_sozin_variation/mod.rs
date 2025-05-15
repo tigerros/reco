@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Classical Variation, Anti-Sozin Variation.
 pub const ANTI_SOZIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

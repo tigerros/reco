@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Scotch Game: Scotch Gambit, Göring Gambit Declined.
 pub const GORING_GAMBIT_DECLINED: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

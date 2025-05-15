@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Cambridge Springs Defense, Argentine Variation.
 pub const ARGENTINE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Modern Variation, Normal Line.
 pub const NORMAL_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

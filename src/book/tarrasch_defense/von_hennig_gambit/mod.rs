@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Tarrasch Defense: von Hennig Gambit.
 pub const VON_HENNIG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

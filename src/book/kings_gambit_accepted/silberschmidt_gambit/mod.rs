@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Silberschmidt Gambit.
 pub const SILBERSCHMIDT_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

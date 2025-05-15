@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Capablanca Variation, Anti-Cambridge Springs Variation.
 pub const ANTI_CAMBRIDGE_SPRINGS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

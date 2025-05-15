@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benoni Defense: Old Benoni.
 pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
     Opening {

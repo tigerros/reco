@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Classical Variation, Center Holding Variation.
 pub const CENTER_HOLDING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

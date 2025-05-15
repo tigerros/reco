@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Morphy Defense, Neo-Arkhangelsk Variation.
 pub const NEO_ARKHANGELSK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

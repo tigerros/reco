@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Indian Defense: Averbakh Variation, Nc6 Defense.
 pub const NC6_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Two Knights Defense, Traxler Variation, Trencianske-Teplice Gambit.
 pub const TRENCIANSKE_TEPLICE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

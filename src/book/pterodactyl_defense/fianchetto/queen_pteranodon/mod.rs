@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Pterodactyl Defense: Fianchetto, Queen Pteranodon.
 pub const QUEEN_PTERANODON: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

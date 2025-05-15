@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Pawn Game: Accelerated London System, Steinitz Countergambit, Morris Countergambit.
 pub const MORRIS_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

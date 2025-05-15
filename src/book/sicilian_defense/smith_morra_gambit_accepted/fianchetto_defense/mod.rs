@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Smith-Morra Gambit Accepted, Fianchetto Defense.
 pub const FIANCHETTO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

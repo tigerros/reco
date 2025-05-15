@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Englund Gambit Declined: Reversed Krebs.
 pub const REVERSED_KREBS: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

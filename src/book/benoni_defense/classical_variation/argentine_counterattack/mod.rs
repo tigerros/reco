@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benoni Defense: Classical Variation, Argentine Counterattack.
 pub const ARGENTINE_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

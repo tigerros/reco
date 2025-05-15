@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Modern Variations, Anti-Qxd4 Move Order.
 pub const ANTI_QXD4_MOVE_ORDER: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

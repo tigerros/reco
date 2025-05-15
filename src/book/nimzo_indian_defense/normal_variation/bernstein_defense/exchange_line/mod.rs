@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzo-Indian Defense: Normal Variation, Bernstein Defense, Exchange Line.
 pub const EXCHANGE_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

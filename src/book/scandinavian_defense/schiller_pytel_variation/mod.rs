@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Scandinavian Defense: Schiller-Pytel Variation.
 pub const SCHILLER_PYTEL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

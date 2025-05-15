@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzowitsch Defense: Kennedy Variation.
 pub const KENNEDY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Classical Variation, Ghulam-Kassim Variation.
 pub const GHULAM_KASSIM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

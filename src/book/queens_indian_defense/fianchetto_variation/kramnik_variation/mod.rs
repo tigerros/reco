@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Indian Defense: Fianchetto Variation, Kramnik Variation.
 pub const KRAMNIK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

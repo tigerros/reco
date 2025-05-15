@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Steinitz Variation, Gledhill Attack.
 pub const GLEDHILL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

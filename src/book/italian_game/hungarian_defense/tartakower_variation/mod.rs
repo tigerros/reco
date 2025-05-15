@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Hungarian Defense, Tartakower Variation.
 pub const TARTAKOWER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

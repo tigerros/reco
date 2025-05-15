@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Kan Variation, Swiss Cheese Variation.
 pub const SWISS_CHEESE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

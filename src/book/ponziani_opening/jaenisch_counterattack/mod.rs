@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ponziani Opening: Jaenisch Counterattack.
 pub const JAENISCH_COUNTERATTACK: [Opening<'static, &str>; 4] = [
     Opening {

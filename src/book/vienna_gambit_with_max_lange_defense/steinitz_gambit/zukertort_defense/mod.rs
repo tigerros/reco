@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Vienna Gambit, with Max Lange Defense: Steinitz Gambit, Zukertort Defense.
 pub const ZUKERTORT_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Muzio Gambit, Kling and Horwitz Counterattack.
 pub const KLING_AND_HORWITZ_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

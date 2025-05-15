@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzowitsch Defense: Colorado Countergambit Accepted.
 pub const COLORADO_COUNTERGAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

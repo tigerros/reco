@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Semi-Slav Defense: Noteboom Variation, Anti-Noteboom Variation, Belyavsky Line.
 pub const BELYAVSKY_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

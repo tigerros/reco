@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Anglo-Lithuanian Variation.
 pub const ANGLO_LITHUANIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

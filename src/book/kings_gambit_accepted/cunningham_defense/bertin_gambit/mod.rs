@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Cunningham Defense, Bertin Gambit.
 pub const BERTIN_GAMBIT: [Opening<'static, &str>; 2] = [
     Opening {

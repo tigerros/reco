@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Four Knights Game: Spanish Variation, Spielmann Variation.
 pub const SPIELMANN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Symmetrical Variation, Hedgehog Defense.
 pub const HEDGEHOG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

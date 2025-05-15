@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: King's Indian Attack.
 pub const KINGS_INDIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

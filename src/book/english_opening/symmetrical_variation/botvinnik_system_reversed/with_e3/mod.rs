@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Symmetrical Variation, Botvinnik System Reversed, with e3.
 pub const WITH_E3: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Philidor Defense: Philidor Countergambit.
 pub const PHILIDOR_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

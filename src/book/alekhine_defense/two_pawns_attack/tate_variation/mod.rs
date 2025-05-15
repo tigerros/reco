@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Alekhine Defense: Two Pawns Attack, Tate Variation.
 pub const TATE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

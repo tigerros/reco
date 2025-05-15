@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Scandinavian Defense: Portuguese Gambit, Jadoul Variation.
 pub const JADOUL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

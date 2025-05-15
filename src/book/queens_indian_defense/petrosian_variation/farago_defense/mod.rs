@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Indian Defense: Petrosian Variation, Farago Defense.
 pub const FARAGO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: MacCutcheon Variation, Bogoljubow Variation.
 pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

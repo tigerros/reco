@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Grünfeld Defense: Exchange Variation, Sokolsky Variation.
 pub const SOKOLSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

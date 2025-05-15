@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Classical Variation, Giuoco Pianissimo, with a6.
 pub const WITH_A6: [Opening<'static, &str>; 2] = [
     Opening {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benoni Defense: Old Benoni, Mujannah Formation.
 pub const MUJANNAH_FORMATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

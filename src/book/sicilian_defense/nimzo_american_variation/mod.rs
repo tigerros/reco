@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Nimzo-American Variation.
 pub const NIMZO_AMERICAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

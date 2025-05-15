@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Caro-Kann Defense: Panov Attack.
 pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
     Opening {

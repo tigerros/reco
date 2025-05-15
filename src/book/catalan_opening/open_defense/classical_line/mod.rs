@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Catalan Opening: Open Defense, Classical Line.
 pub const CLASSICAL_LINE: [Opening<'static, &str>; 2] = [
     Opening {

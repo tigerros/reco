@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Slav Defense: Modern Line.
 pub const MODERN_LINE: [Opening<'static, &str>; 2] = [
     Opening {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Salvio Gambit, Santa Maria Defense.
 pub const SANTA_MARIA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

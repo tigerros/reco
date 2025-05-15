@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Closed, Botvinnik Defense, with Nge2.
 pub const WITH_NGE2: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

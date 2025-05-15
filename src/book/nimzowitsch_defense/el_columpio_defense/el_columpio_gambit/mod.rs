@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzowitsch Defense: El Columpio Defense, El Columpio Gambit.
 pub const EL_COLUMPIO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Scotch Gambit, Max Lange Attack.
 pub const MAX_LANGE_ATTACK: [Opening<'static, &str>; 2] = [
     Opening {

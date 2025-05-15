@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzowitsch Defense: Scandinavian Variation, Bogoljubow Variation.
 pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

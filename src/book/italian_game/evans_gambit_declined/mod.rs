@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Evans Gambit Declined.
 pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
     Opening {

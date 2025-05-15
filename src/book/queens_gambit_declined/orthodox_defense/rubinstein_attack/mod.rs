@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Orthodox Defense, Rubinstein Attack.
 pub const RUBINSTEIN_ATTACK: [Opening<'static, &str>; 5] = [
     Opening {

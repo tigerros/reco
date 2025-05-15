@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Pawn Game: Accelerated London System.
 pub const ACCELERATED_LONDON_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

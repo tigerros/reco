@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benoni Defense: Fianchetto Variation.
 pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

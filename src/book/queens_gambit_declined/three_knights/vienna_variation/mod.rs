@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Three Knights, Vienna Variation.
 pub const VIENNA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

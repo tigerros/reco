@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Richter-Rauzer Variation, Neo-Modern Variation, Early Deviations.
 pub const EARLY_DEVIATIONS: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

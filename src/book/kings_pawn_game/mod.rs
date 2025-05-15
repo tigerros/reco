@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Pawn Game.
 pub const KINGS_PAWN_GAME: [Opening<'static, &str>; 2] = [
     Opening {

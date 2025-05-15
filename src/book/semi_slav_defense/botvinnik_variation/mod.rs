@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Semi-Slav Defense: Botvinnik Variation.
 pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Scotch Invitation Declined.
 pub const SCOTCH_INVITATION_DECLINED: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

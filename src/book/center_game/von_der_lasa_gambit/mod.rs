@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Center Game: von der Lasa Gambit.
 pub const VON_DER_LASA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

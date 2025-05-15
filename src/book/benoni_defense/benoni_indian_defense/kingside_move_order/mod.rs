@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benoni Defense: Benoni-Indian Defense, Kingside Move Order.
 pub const KINGSIDE_MOVE_ORDER: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

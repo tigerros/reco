@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Dutch Defense: Stonewall Variation, Chekhover Variation.
 pub const CHEKHOVER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

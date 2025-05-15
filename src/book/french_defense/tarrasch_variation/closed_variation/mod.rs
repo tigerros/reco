@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Tarrasch Variation, Closed Variation.
 pub const CLOSED_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

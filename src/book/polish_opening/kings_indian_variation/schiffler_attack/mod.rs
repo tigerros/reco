@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Polish Opening: King's Indian Variation, Schiffler Attack.
 pub const SCHIFFLER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

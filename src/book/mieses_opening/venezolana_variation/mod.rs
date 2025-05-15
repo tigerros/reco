@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Mieses Opening: Venezolana Variation.
 pub const VENEZOLANA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

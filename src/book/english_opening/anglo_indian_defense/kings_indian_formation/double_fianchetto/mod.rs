@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Opening: Anglo-Indian Defense, King's Indian Formation, Double Fianchetto.
 pub const DOUBLE_FIANCHETTO: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

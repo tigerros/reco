@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benoni Defense: Old Benoni, Schmid Variation.
 pub const SCHMID_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

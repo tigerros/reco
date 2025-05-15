@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Declined: Falkbeer Countergambit, Nimzowitsch-Marshall Countergambit.
 pub const NIMZOWITSCH_MARSHALL_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

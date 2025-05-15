@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Old Indian Defense: Czech Variation, with Nf3.
 pub const WITH_NF3: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

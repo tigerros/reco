@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Grünfeld Defense: Three Knights Variation, Burille Variation, Reversed Tarrasch.
 pub const REVERSED_TARRASCH: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

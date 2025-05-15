@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Neo-Grünfeld Defense: Delayed Exchange Variation.
 pub const DELAYED_EXCHANGE_VARIATION: [Opening<'static, &str>; 4] = [
     Opening {

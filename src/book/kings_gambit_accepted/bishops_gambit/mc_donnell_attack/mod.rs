@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Bishop's Gambit, McDonnell Attack.
 pub const MC_DONNELL_ATTACK: [Opening<'static, &str>; 2] = [
     Opening {

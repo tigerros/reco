@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Capablanca Variation.
 pub const CAPABLANCA_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Indian Defense: Sämisch Variation, Bobotsov-Korchnoi-Petrosian Variation.
 pub const BOBOTSOV_KORCHNOI_PETROSIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

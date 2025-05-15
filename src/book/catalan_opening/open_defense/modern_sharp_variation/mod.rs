@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Catalan Opening: Open Defense, Modern Sharp Variation.
 pub const MODERN_SHARP_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Rapport-Jobava System.
 pub const RAPPORT_JOBAVA_SYSTEM: [Opening<'static, &str>; 3] = [
     Opening {

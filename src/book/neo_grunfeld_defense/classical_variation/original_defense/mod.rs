@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Neo-Grünfeld Defense: Classical Variation, Original Defense.
 pub const ORIGINAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

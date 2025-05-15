@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Indian Attack: Sicilian Variation.
 pub const SICILIAN_VARIATION: [Opening<'static, &str>; 4] = [
     Opening {

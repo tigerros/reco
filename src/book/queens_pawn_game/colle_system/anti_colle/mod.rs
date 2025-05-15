@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Pawn Game: Colle System, Anti-Colle.
 pub const ANTI_COLLE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

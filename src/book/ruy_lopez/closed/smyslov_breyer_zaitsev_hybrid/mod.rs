@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Closed, Smyslov-Breyer-Zaitsev Hybrid.
 pub const SMYSLOV_BREYER_ZAITSEV_HYBRID: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

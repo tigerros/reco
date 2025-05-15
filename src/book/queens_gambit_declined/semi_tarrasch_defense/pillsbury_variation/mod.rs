@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Queen's Gambit Declined: Semi-Tarrasch Defense, Pillsbury Variation.
 pub const PILLSBURY_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

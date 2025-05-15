@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Evans Gambit, Fraser-Mortimer Attack.
 pub const FRASER_MORTIMER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

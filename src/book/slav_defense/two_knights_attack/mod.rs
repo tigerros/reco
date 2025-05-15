@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Slav Defense: Two Knights Attack.
 pub const TWO_KNIGHTS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

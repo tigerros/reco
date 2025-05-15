@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Delayed Alapin Variation, Basman-Palatnik Gambit.
 pub const BASMAN_PALATNIK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

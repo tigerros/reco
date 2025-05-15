@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Caro-Kann Defense: Panov-Botvinnik, Herzog Defense.
 pub const HERZOG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

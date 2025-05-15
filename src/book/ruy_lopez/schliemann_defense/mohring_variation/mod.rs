@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Schliemann Defense, Möhring Variation.
 pub const MOHRING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

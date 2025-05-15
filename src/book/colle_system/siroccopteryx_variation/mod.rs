@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Colle System: Siroccopteryx Variation.
 pub const SIROCCOPTERYX_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

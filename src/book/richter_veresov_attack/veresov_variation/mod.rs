@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Richter-Veresov Attack: Veresov Variation.
 pub const VERESOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

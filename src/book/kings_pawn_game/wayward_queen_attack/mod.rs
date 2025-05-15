@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Pawn Game: Wayward Queen Attack.
 pub const WAYWARD_QUEEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

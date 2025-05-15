@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Bishop's Gambit, Chigorin's Attack.
 pub const CHIGORINS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

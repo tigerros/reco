@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Exchange Variation, Monte Carlo Variation.
 pub const MONTE_CARLO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

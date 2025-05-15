@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Berlin Defense, l'Hermet Variation, Westerinen Line.
 pub const WESTERINEN_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

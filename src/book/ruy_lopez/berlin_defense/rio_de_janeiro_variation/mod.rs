@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Berlin Defense, Rio de Janeiro Variation.
 pub const RIO_DE_JANEIRO_VARIATION: [Opening<'static, &str>; 2] = [
     Opening {

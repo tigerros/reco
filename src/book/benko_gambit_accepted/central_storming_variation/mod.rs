@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benko Gambit Accepted: Central Storming Variation.
 pub const CENTRAL_STORMING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Scotch Game: Paulsen, Gunsberg Defense.
 pub const GUNSBERG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

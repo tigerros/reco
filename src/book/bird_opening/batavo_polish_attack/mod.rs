@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Bird Opening: Batavo-Polish Attack.
 pub const BATAVO_POLISH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

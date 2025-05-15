@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Alekhine Defense: Four Pawns Attack, Ilyin-Zhenevsky Variation.
 pub const ILYIN_ZHENEVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

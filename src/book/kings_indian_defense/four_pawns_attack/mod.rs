@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Indian Defense: Four Pawns Attack.
 pub const FOUR_PAWNS_ATTACK: [Opening<'static, &str>; 2] = [
     Opening {

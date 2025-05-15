@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benko Gambit Declined: Hjørring Countergambit.
 pub const HJORRING_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

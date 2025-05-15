@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Benoni Defense: Zilbermints-Benoni Gambit.
 pub const ZILBERMINTS_BENONI_GAMBIT: [Opening<'static, &str>; 2] = [
     Opening {

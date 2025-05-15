@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Sicilian Defense: Dragon Variation, Yugoslav Attack.
 pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
     Opening {

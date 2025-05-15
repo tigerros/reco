@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Gambit Accepted: Kieseritzky Gambit, Long Whip.
 pub const LONG_WHIP: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

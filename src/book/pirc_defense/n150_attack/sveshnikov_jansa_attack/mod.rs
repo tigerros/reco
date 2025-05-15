@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Pirc Defense: 150 Attack, Sveshnikov-Jansa Attack.
 pub const SVESHNIKOV_JANSA_ATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

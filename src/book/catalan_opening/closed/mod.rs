@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Catalan Opening: Closed.
 pub const CLOSED: [Opening<'static, &str>; 10] = [
     Opening {

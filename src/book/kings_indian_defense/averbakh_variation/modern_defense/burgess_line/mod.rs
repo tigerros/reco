@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// King's Indian Defense: Averbakh Variation, Modern Defense, Burgess Line.
 pub const BURGESS_LINE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

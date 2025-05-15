@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Caro-Kann Defense: Advance Variation, Botvinnik-Carls Defense.
 pub const BOTVINNIK_CARLS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

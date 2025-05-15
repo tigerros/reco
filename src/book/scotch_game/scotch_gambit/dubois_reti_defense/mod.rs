@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Scotch Game: Scotch Gambit, Dubois Réti Defense.
 pub const DUBOIS_RETI_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

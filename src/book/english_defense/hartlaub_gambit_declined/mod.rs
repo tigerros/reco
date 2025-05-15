@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// English Defense: Hartlaub Gambit Declined.
 pub const HARTLAUB_GAMBIT_DECLINED: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

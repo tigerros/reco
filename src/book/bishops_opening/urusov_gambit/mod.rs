@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Bishop's Opening: Urusov Gambit.
 pub const URUSOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

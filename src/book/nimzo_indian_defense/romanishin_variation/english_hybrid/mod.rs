@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzo-Indian Defense: Romanishin Variation, English Hybrid.
 pub const ENGLISH_HYBRID: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

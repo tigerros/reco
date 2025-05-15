@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game.
 pub const ITALIAN_GAME: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

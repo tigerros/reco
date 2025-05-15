@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Englund Gambit Declined: Diemer Counterattack.
 pub const DIEMER_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

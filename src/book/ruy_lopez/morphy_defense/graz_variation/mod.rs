@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Ruy Lopez: Morphy Defense, Graz Variation.
 pub const GRAZ_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

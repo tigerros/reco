@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Tarrasch Defense: Swedish Variation, Central Break.
 pub const CENTRAL_BREAK: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

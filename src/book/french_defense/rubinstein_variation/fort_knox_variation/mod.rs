@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Rubinstein Variation, Fort Knox Variation.
 pub const FORT_KNOX_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

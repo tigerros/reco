@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Modern Defense: Lizard Defense, Pirc-Diemer Gambit.
 pub const PIRC_DIEMER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

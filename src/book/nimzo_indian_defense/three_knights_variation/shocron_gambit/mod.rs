@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Nimzo-Indian Defense: Three Knights Variation, Shocron Gambit.
 pub const SHOCRON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

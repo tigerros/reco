@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// Italian Game: Two Knights Defense, Paoli Variation.
 pub const PAOLI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {

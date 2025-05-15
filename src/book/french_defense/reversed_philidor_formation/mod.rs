@@ -27,6 +27,7 @@ use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
 use shakmaty::{ByColor, ByRole, Setup};
 
+#[allow(clippy::doc_markdown)]
 /// French Defense: Reversed Philidor Formation.
 pub const REVERSED_PHILIDOR_FORMATION: [Opening<'static, &str>; 1] = [Opening {
     code: Code {
