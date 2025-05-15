@@ -11,7 +11,7 @@ pub fn get_opening_constant_item_string(
     silent_variations: &BTreeSet<String>,
 ) -> String {
     format!(
-        "\n\n/// {full_name}.\npub const {}: [Opening<'static, &str>; {}] = [{}];",
+        "\n\n#[allow(clippy::doc_markdown)]/// {full_name}.\npub const {}: [Opening<'static, &str>; {}] = [{}];",
         identifier.TO_SHOUTY_SNEK_CASE(),
         silent_variations.len(),
         silent_variations.iter().join(", ")
