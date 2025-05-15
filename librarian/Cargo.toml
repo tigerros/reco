@@ -18,3 +18,4 @@ serde_json = "1"
 shakmaty = { workspace = true }
 ureq = { version = "3", default-features = false, features = ["rustls", "json"] }
 zip = { version = "3" }
+serde = "^1.0.204"
