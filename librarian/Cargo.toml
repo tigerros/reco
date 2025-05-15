@@ -14,8 +14,8 @@ heck = "0.5.0"
 http = "1"
 itertools = "0.14.0"
 reco = { path = "..", features = ["alloc"] }
+serde = "^1.0.204"
 serde_json = "1"
 shakmaty = { workspace = true }
 ureq = { version = "3", default-features = false, features = ["rustls", "json"] }
 zip = { version = "3" }
-serde = "^1.0.204"
