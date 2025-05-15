@@ -61,7 +61,7 @@ jobs:
         if: env.CHANGED == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
-          title: 'Bump book using ${{ env.SHORT_SHA }}'
+          title: 'Bump book using `${{ env.SHORT_SHA }}`'
           delete-branch: 'true'
           commit-message: 'bump book'
           branch: 'bump-book-${{ env.SHORT_SHA }}'
