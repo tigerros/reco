@@ -39,23 +39,19 @@ jobs:
       - name: Bump patch version if changes
         if: env.CHANGED == 'true'
         run: |
-          bump_patch() {
-            file=$1
-            local version_line=$(grep "^version" "$file")
-            local version=$(echo $version_line | cut -d '"' -f2)
-            IFS='.' read -r major minor patch <<< "$version"
-            local patch=$((patch + 1))
-            local new_version="$major.$minor.$patch"
-            sed -i "s/^version = \".*\"/version = \"$new_version\"/" "$file"
-          }
-          bump_patch crates/book/Cargo.toml
-          bump_patch crates/reco/Cargo.toml
+          file=Cargo.toml
+          version_line=$(grep "^version" "$file")
+          version=$(echo $version_line | cut -d '"' -f2)
+          IFS='.' read -r major minor patch <<< "$version"
+          patch=$((patch + 1))
+          new_version="$major.$minor.$patch"
+          sed -i "s/^version = \".*\"/version = \"$new_version\"/" "$file"
 
       - name: Read commit source SHA
         if: env.CHANGED == 'true'
         run: |
-          echo "SHA=$(cat crates/book/commit-source.txt)" >> $GITHUB_ENV
-          echo "SHORT_SHA=$(cut -c1-7 < crates/book/commit-source.txt)" >> $GITHUB_ENV
+          echo "SHA=$(cat commit-source.txt)" >> $GITHUB_ENV
+          echo "SHORT_SHA=$(cut -c1-7 < commit-source.txt)" >> $GITHUB_ENV
 
       - name: Create pull request
         if: env.CHANGED == 'true'
@@ -66,9 +62,14 @@ jobs:
           commit-message: 'bump book'
           branch: 'bump-book-${{ env.SHORT_SHA }}'
           body: '
-            Running reco-librarian resulted in a diff, which is why this PR was made.
+            Running `reco-librarian` resulted in a diff, which is why this PR was made.
+            Apart from using `reco-librarian`''s output, this PR also bumps the patch version of `reco`.
+            However, if the Check SemVer workflow fails, the minor version will need to be bumped instead.
+            Furthermore, the crate must be published manually.
+            
             This PR was made using this commit: [lichess-org/chess-openings/${{ env.SHORT_SHA }}](https://github.com/lichess-org/chess-openings/commit/${{ env.SHA }}).
-            **However, this commit might not be new.** It is possible that only reco-librarian and the output changed.'
+            **However, this commit might not be new.** It is possible that only `reco-librarian` and the output changed.
+            If `commit-source.txt` changed, it is likely that the diff is caused by that new commit.'
           author: 'reco-librarian <github-actions@users.noreply.github.com>'
           committer: 'reco-librarian <github-actions@users.noreply.github.com>'
           sign-commits: 'true'

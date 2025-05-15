@@ -3,24 +3,23 @@
 
 This crate is an implementation of the [ECO](https://en.wikipedia.org/wiki/Encyclopaedia_of_Chess_Openings) standard using [`shakmaty`](https://crates.io/crates/shakmaty) for relevant types.
 
-Specifically, this crate contains:
+Contains:
 - Types to represent each part of an ECO entry.
 - ECO entries as constants, sourced from [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
 
 No-std and no-alloc compatible.
 
 ## Features
-- `book`: re-exports [`reco-book`](https://crates.io/crates/reco-book).
-- `alloc`: feature forwarded from [`reco-core`](https://crates.io/crates/reco-core).
-- `serde`: feature forwarded from [`reco-core`](https://crates.io/crates/reco-core).
+- `book`: adds ECO entries as constants. Because there's a lot of them, it might worsen compilation performance.
+- `alloc`: adds the `OpeningOwned` struct, which is an owned version of the `Opening` struct.
+- `serde`: enables serde support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
 
 ## Sourcing
-The ECO entries are sourced using the (unpublished) `librarian` crate (see the [repository](https://github.com/tigerros/reco)).
-It generates a file for each ECO code in the corresponding volume directory.
-That file contains all the openings, as constants, for that ECO code.
+The ECO entries are generated using the unpublished `reco-librarian` crate.
+To make sure they are up to date, there's a workflow that runs `reco-librarian` every day and makes a PR if any changes are detected.
 
-TODO: when is the librarian script going to run? set up a workflow that runs it if all other workflows pass, then commit the changes? perhaps make even releasing a new version automatic?
+See [`reco-librarian`'s README](https://github.com/tigerros/reco/tree/master/librarian/README.md) for more information.
 
 ## Cloning
-If you clone this repository, **exclude the `crates/book/generated` directory from your IDE.**
+If you clone this repository, **exclude the `src/book` directory from your IDE.**
 Only open the files in there with a well optimized text editor.
