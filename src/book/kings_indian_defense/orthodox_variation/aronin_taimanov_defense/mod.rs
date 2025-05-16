@@ -34,8 +34,11 @@ pub const ARONIN_TAIMANOV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<97>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Aronin-Taimanov Defense"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Aronin-Taimanov Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

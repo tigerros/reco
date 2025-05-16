@@ -34,8 +34,8 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<36>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &[
+    name: &[
+        "Nimzo-Indian Defense",
         "Classical Variation",
         "Noa Variation",
         "Botvinnik Variation",

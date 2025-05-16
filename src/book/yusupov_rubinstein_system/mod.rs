@@ -34,8 +34,7 @@ pub const YUSUPOV_RUBINSTEIN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Yusupov-Rubinstein System",
-    variation: &[],
+    name: &["Yusupov-Rubinstein System"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const WORMALD_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<77>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Morphy Defense", "Wormald Attack"],
+    name: &["Ruy Lopez", "Morphy Defense", "Wormald Attack"],
     moves: &[
         Normal {
             role: Pawn,

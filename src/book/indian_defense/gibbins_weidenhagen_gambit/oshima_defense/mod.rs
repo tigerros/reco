@@ -34,8 +34,11 @@ pub const OSHIMA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Gibbins-Weidenhagen Gambit", "Oshima Defense"],
+    name: &[
+        "Indian Defense",
+        "Gibbins-Weidenhagen Gambit",
+        "Oshima Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

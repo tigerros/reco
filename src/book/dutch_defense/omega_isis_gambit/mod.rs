@@ -34,8 +34,7 @@ pub const OMEGA_ISIS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Omega-Isis Gambit"],
+    name: &["Dutch Defense", "Omega-Isis Gambit"],
     moves: &[
         Normal {
             role: Pawn,

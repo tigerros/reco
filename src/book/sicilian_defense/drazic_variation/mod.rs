@@ -34,8 +34,7 @@ pub const DRAZIC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Drazic Variation"],
+    name: &["Sicilian Defense", "Drazic Variation"],
     moves: &[
         Normal {
             role: Pawn,

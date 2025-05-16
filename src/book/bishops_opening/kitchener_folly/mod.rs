@@ -34,8 +34,7 @@ pub const KITCHENER_FOLLY: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<24>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Kitchener Folly"],
+    name: &["Bishop's Opening", "Kitchener Folly"],
     moves: &[
         Normal {
             role: Pawn,

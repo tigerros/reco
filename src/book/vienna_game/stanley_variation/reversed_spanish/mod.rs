@@ -34,8 +34,7 @@ pub const REVERSED_SPANISH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Vienna Game",
-    variation: &["Stanley Variation", "Reversed Spanish"],
+    name: &["Vienna Game", "Stanley Variation", "Reversed Spanish"],
     moves: &[
         Normal {
             role: Pawn,

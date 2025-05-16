@@ -34,8 +34,7 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Taimanov Variation", "Normal Variation"],
+    name: &["Sicilian Defense", "Taimanov Variation", "Normal Variation"],
     moves: &[
         Normal {
             role: Pawn,

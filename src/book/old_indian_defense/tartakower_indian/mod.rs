@@ -34,8 +34,7 @@ pub const TARTAKOWER_INDIAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Old Indian Defense",
-    variation: &["Tartakower-Indian"],
+    name: &["Old Indian Defense", "Tartakower-Indian"],
     moves: &[
         Normal {
             role: Pawn,

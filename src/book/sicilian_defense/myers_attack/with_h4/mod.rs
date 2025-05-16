@@ -34,8 +34,7 @@ pub const WITH_H4: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Myers Attack", "with h4"],
+    name: &["Sicilian Defense", "Myers Attack", "with h4"],
     moves: &[
         Normal {
             role: Pawn,

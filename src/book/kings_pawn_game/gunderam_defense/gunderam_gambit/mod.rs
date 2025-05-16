@@ -34,8 +34,7 @@ pub const GUNDERAM_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Gunderam Defense", "Gunderam Gambit"],
+    name: &["King's Pawn Game", "Gunderam Defense", "Gunderam Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const CARO_KANN_DEFENSE: [Opening<'static, &str>; 7] = [
             volume: Volume::B,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &[],
+        name: &["Caro-Kann Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const CARO_KANN_DEFENSE: [Opening<'static, &str>; 7] = [
             volume: Volume::B,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &[],
+        name: &["Caro-Kann Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -160,8 +158,7 @@ pub const CARO_KANN_DEFENSE: [Opening<'static, &str>; 7] = [
             volume: Volume::B,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &[],
+        name: &["Caro-Kann Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -212,8 +209,7 @@ pub const CARO_KANN_DEFENSE: [Opening<'static, &str>; 7] = [
             volume: Volume::B,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &[],
+        name: &["Caro-Kann Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -278,8 +274,7 @@ pub const CARO_KANN_DEFENSE: [Opening<'static, &str>; 7] = [
             volume: Volume::B,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &[],
+        name: &["Caro-Kann Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -337,8 +332,7 @@ pub const CARO_KANN_DEFENSE: [Opening<'static, &str>; 7] = [
             volume: Volume::B,
             category: RangedU8::new_static::<15>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &[],
+        name: &["Caro-Kann Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -417,8 +411,7 @@ pub const CARO_KANN_DEFENSE: [Opening<'static, &str>; 7] = [
             volume: Volume::B,
             category: RangedU8::new_static::<15>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &[],
+        name: &["Caro-Kann Defense"],
         moves: &[
             Normal {
                 role: Pawn,

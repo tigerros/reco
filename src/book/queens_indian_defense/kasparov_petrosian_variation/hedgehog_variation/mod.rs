@@ -34,8 +34,11 @@ pub const HEDGEHOG_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Kasparov-Petrosian Variation", "Hedgehog Variation"],
+    name: &[
+        "Queen's Indian Defense",
+        "Kasparov-Petrosian Variation",
+        "Hedgehog Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

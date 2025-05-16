@@ -34,8 +34,7 @@ pub const BUERGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Buerger Variation"],
+    name: &["Queen's Indian Defense", "Buerger Variation"],
     moves: &[
         Normal {
             role: Pawn,

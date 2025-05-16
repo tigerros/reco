@@ -34,8 +34,11 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Bishop's Gambit", "Classical Defense"],
+    name: &[
+        "King's Gambit Accepted",
+        "Bishop's Gambit",
+        "Classical Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

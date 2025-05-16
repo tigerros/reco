@@ -34,8 +34,7 @@ pub const CARO_KANN_DEFENSIVE_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<11>(),
     },
-    name: "English Opening",
-    variation: &["Caro-Kann Defensive System"],
+    name: &["English Opening", "Caro-Kann Defensive System"],
     moves: &[
         Normal {
             role: Pawn,

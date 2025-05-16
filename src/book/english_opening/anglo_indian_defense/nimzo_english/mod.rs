@@ -34,8 +34,7 @@ pub const NIMZO_ENGLISH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<17>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Indian Defense", "Nimzo-English"],
+    name: &["English Opening", "Anglo-Indian Defense", "Nimzo-English"],
     moves: &[
         Normal {
             role: Pawn,

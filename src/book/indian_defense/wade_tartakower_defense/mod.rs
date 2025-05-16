@@ -34,8 +34,7 @@ pub const WADE_TARTAKOWER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Indian Defense",
-    variation: &["Wade-Tartakower Defense"],
+    name: &["Indian Defense", "Wade-Tartakower Defense"],
     moves: &[
         Normal {
             role: Pawn,

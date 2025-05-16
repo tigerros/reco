@@ -34,8 +34,7 @@ pub const CHEBANENKO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Slav Defense",
-    variation: &["Chebanenko Variation"],
+    name: &["Slav Defense", "Chebanenko Variation"],
     moves: &[
         Normal {
             role: Pawn,

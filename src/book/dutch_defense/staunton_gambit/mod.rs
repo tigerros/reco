@@ -35,8 +35,7 @@ pub const STAUNTON_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<82>(),
         },
-        name: "Dutch Defense",
-        variation: &["Staunton Gambit"],
+        name: &["Dutch Defense", "Staunton Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -94,8 +93,7 @@ pub const STAUNTON_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<83>(),
         },
-        name: "Dutch Defense",
-        variation: &["Staunton Gambit"],
+        name: &["Dutch Defense", "Staunton Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

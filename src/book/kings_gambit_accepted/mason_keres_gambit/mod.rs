@@ -34,8 +34,7 @@ pub const MASON_KERES_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Mason-Keres Gambit"],
+    name: &["King's Gambit Accepted", "Mason-Keres Gambit"],
     moves: &[
         Normal {
             role: Pawn,

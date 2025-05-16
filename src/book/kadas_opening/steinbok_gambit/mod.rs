@@ -34,8 +34,7 @@ pub const STEINBOK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Kádas Opening",
-    variation: &["Steinbok Gambit"],
+    name: &["Kádas Opening", "Steinbok Gambit"],
     moves: &[
         Normal {
             role: Pawn,

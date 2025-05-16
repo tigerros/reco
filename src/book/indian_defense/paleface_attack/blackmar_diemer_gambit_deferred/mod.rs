@@ -34,8 +34,11 @@ pub const BLACKMAR_DIEMER_GAMBIT_DEFERRED: [Opening<'static, &str>; 1] = [Openin
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Paleface Attack", "Blackmar-Diemer Gambit Deferred"],
+    name: &[
+        "Indian Defense",
+        "Paleface Attack",
+        "Blackmar-Diemer Gambit Deferred",
+    ],
     moves: &[
         Normal {
             role: Pawn,

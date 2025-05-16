@@ -34,8 +34,12 @@ pub const TRADITIONAL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Italian Game",
-    variation: &["Classical Variation", "Greco Gambit", "Traditional Line"],
+    name: &[
+        "Italian Game",
+        "Classical Variation",
+        "Greco Gambit",
+        "Traditional Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

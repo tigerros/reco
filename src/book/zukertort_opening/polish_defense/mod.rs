@@ -34,8 +34,7 @@ pub const POLISH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Polish Defense"],
+    name: &["Zukertort Opening", "Polish Defense"],
     moves: &[
         Normal {
             role: Knight,

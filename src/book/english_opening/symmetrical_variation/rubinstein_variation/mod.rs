@@ -35,8 +35,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<34>(),
         },
-        name: "English Opening",
-        variation: &["Symmetrical Variation", "Rubinstein Variation"],
+        name: &[
+            "English Opening",
+            "Symmetrical Variation",
+            "Rubinstein Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +146,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<34>(),
         },
-        name: "English Opening",
-        variation: &["Symmetrical Variation", "Rubinstein Variation"],
+        name: &[
+            "English Opening",
+            "Symmetrical Variation",
+            "Rubinstein Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

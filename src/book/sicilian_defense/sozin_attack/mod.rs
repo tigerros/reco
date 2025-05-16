@@ -34,8 +34,7 @@ pub const SOZIN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<86>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Sozin Attack"],
+    name: &["Sicilian Defense", "Sozin Attack"],
     moves: &[
         Normal {
             role: Pawn,

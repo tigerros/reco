@@ -34,8 +34,7 @@ pub const KINGFISHER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Kingfisher Gambit"],
+    name: &["Dutch Defense", "Kingfisher Gambit"],
     moves: &[
         Normal {
             role: Pawn,

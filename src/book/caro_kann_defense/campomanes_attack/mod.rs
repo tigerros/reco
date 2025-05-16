@@ -34,8 +34,7 @@ pub const CAMPOMANES_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Campomanes Attack"],
+    name: &["Caro-Kann Defense", "Campomanes Attack"],
     moves: &[
         Normal {
             role: Pawn,

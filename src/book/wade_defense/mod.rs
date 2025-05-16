@@ -34,8 +34,7 @@ pub const WADE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Wade Defense",
-    variation: &[],
+    name: &["Wade Defense"],
     moves: &[
         Normal {
             role: Pawn,

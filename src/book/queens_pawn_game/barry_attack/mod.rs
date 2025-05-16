@@ -35,8 +35,7 @@ pub const BARRY_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<48>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Barry Attack"],
+        name: &["Queen's Pawn Game", "Barry Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const BARRY_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<48>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Barry Attack"],
+        name: &["Queen's Pawn Game", "Barry Attack"],
         moves: &[
             Normal {
                 role: Pawn,

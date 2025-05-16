@@ -34,8 +34,7 @@ pub const NASELWAUS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Owen Defense",
-    variation: &["Naselwaus Gambit"],
+    name: &["Owen Defense", "Naselwaus Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const LUNDIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Meran Variation", "Lundin Variation"],
+    name: &["Semi-Slav Defense", "Meran Variation", "Lundin Variation"],
     moves: &[
         Normal {
             role: Pawn,

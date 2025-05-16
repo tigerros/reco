@@ -34,8 +34,7 @@ pub const LIONS_JAW: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Lion Defense",
-    variation: &["Lion's Jaw"],
+    name: &["Lion Defense", "Lion's Jaw"],
     moves: &[
         Normal {
             role: Pawn,

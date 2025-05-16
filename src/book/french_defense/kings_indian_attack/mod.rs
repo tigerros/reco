@@ -34,8 +34,7 @@ pub const KINGS_INDIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["King's Indian Attack"],
+    name: &["French Defense", "King's Indian Attack"],
     moves: &[
         Normal {
             role: Pawn,

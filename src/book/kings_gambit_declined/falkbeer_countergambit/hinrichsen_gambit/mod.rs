@@ -34,8 +34,11 @@ pub const HINRICHSEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<31>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Falkbeer Countergambit", "Hinrichsen Gambit"],
+    name: &[
+        "King's Gambit Declined",
+        "Falkbeer Countergambit",
+        "Hinrichsen Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

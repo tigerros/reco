@@ -34,8 +34,11 @@ pub const WING_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Smith-Morra Gambit Declined", "Wing Formation"],
+    name: &[
+        "Sicilian Defense",
+        "Smith-Morra Gambit Declined",
+        "Wing Formation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

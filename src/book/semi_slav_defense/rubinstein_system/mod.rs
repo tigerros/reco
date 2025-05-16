@@ -34,8 +34,7 @@ pub const RUBINSTEIN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Rubinstein System"],
+    name: &["Semi-Slav Defense", "Rubinstein System"],
     moves: &[
         Normal {
             role: Pawn,

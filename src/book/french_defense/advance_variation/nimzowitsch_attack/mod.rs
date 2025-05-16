@@ -34,8 +34,7 @@ pub const NIMZOWITSCH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<2>(),
     },
-    name: "French Defense",
-    variation: &["Advance Variation", "Nimzowitsch Attack"],
+    name: &["French Defense", "Advance Variation", "Nimzowitsch Attack"],
     moves: &[
         Normal {
             role: Pawn,

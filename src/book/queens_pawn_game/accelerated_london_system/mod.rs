@@ -34,8 +34,7 @@ pub const ACCELERATED_LONDON_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Accelerated London System"],
+    name: &["Queen's Pawn Game", "Accelerated London System"],
     moves: &[
         Normal {
             role: Pawn,

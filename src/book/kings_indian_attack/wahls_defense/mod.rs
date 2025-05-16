@@ -34,8 +34,7 @@ pub const WAHLS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "King's Indian Attack",
-    variation: &["Wahls Defense"],
+    name: &["King's Indian Attack", "Wahls Defense"],
     moves: &[
         Normal {
             role: Knight,

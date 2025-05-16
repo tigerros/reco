@@ -35,8 +35,8 @@ pub const PAULSEN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<85>(),
         },
-        name: "Sicilian Defense",
-        variation: &[
+        name: &[
+            "Sicilian Defense",
             "Scheveningen Variation",
             "Classical Variation",
             "Paulsen Variation",
@@ -183,8 +183,8 @@ pub const PAULSEN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<85>(),
         },
-        name: "Sicilian Defense",
-        variation: &[
+        name: &[
+            "Sicilian Defense",
             "Scheveningen Variation",
             "Classical Variation",
             "Paulsen Variation",
@@ -338,8 +338,8 @@ pub const PAULSEN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<85>(),
         },
-        name: "Sicilian Defense",
-        variation: &[
+        name: &[
+            "Sicilian Defense",
             "Scheveningen Variation",
             "Classical Variation",
             "Paulsen Variation",

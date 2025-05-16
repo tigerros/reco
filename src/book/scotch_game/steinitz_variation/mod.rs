@@ -35,8 +35,7 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Scotch Game",
-        variation: &["Steinitz Variation"],
+        name: &["Scotch Game", "Steinitz Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Scotch Game",
-        variation: &["Steinitz Variation"],
+        name: &["Scotch Game", "Steinitz Variation"],
         moves: &[
             Normal {
                 role: Pawn,

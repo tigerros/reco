@@ -35,8 +35,7 @@ pub const MIKENAS_CARLS_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<18>(),
         },
-        name: "English Opening",
-        variation: &["Mikenas-Carls Variation"],
+        name: &["English Opening", "Mikenas-Carls Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const MIKENAS_CARLS_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<18>(),
         },
-        name: "English Opening",
-        variation: &["Mikenas-Carls Variation"],
+        name: &["English Opening", "Mikenas-Carls Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -202,8 +200,7 @@ pub const MIKENAS_CARLS_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<18>(),
         },
-        name: "English Opening",
-        variation: &["Mikenas-Carls Variation"],
+        name: &["English Opening", "Mikenas-Carls Variation"],
         moves: &[
             Normal {
                 role: Pawn,

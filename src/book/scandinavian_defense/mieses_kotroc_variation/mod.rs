@@ -34,8 +34,7 @@ pub const MIESES_KOTROC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Mieses-Kotroc Variation"],
+    name: &["Scandinavian Defense", "Mieses-Kotroc Variation"],
     moves: &[
         Normal {
             role: Pawn,

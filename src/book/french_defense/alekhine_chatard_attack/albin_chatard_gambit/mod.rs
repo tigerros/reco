@@ -34,8 +34,11 @@ pub const ALBIN_CHATARD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<13>(),
     },
-    name: "French Defense",
-    variation: &["Alekhine-Chatard Attack", "Albin-Chatard Gambit"],
+    name: &[
+        "French Defense",
+        "Alekhine-Chatard Attack",
+        "Albin-Chatard Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PIRC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Meran Variation", "Pirc Variation"],
+    name: &["Semi-Slav Defense", "Meran Variation", "Pirc Variation"],
     moves: &[
         Normal {
             role: Pawn,

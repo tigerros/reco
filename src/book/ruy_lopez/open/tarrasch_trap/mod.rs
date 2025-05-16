@@ -34,8 +34,7 @@ pub const TARRASCH_TRAP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<83>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Tarrasch Trap"],
+    name: &["Ruy Lopez", "Open", "Tarrasch Trap"],
     moves: &[
         Normal {
             role: Pawn,

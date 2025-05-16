@@ -34,8 +34,11 @@ pub const SEIDEL_HALL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Teichmann Defense", "Seidel-Hall Attack"],
+    name: &[
+        "Blackmar-Diemer Gambit Accepted",
+        "Teichmann Defense",
+        "Seidel-Hall Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

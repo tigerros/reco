@@ -34,8 +34,7 @@ pub const KARPOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Karpov Variation"],
+    name: &["Caro-Kann Defense", "Karpov Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const STOLTZ_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Alapin Variation", "Stoltz Attack"],
+    name: &["Sicilian Defense", "Alapin Variation", "Stoltz Attack"],
     moves: &[
         Normal {
             role: Pawn,

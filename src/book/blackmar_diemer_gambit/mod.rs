@@ -35,8 +35,7 @@ pub const BLACKMAR_DIEMER_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Blackmar-Diemer Gambit",
-        variation: &[],
+        name: &["Blackmar-Diemer Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const BLACKMAR_DIEMER_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Blackmar-Diemer Gambit",
-        variation: &[],
+        name: &["Blackmar-Diemer Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

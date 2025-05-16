@@ -34,8 +34,7 @@ pub const VITOLINS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Modern Variation", "Vitolins Attack"],
+    name: &["Alekhine Defense", "Modern Variation", "Vitolins Attack"],
     moves: &[
         Normal {
             role: Pawn,

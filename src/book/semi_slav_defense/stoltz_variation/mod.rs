@@ -35,8 +35,7 @@ pub const STOLTZ_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Stoltz Variation"],
+        name: &["Semi-Slav Defense", "Stoltz Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -172,8 +171,7 @@ pub const STOLTZ_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Stoltz Variation"],
+        name: &["Semi-Slav Defense", "Stoltz Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -301,8 +299,7 @@ pub const STOLTZ_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Stoltz Variation"],
+        name: &["Semi-Slav Defense", "Stoltz Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -430,8 +427,7 @@ pub const STOLTZ_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Stoltz Variation"],
+        name: &["Semi-Slav Defense", "Stoltz Variation"],
         moves: &[
             Normal {
                 role: Pawn,

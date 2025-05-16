@@ -34,8 +34,11 @@ pub const ANTI_SOZIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Classical Variation", "Anti-Sozin Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Classical Variation",
+        "Anti-Sozin Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ALEKHINE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<68>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Exchange", "Alekhine Variation"],
+    name: &["Ruy Lopez", "Exchange", "Alekhine Variation"],
     moves: &[
         Normal {
             role: Pawn,

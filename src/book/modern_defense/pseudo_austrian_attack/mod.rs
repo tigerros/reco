@@ -34,8 +34,7 @@ pub const PSEUDO_AUSTRIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Pseudo-Austrian Attack"],
+    name: &["Modern Defense", "Pseudo-Austrian Attack"],
     moves: &[
         Normal {
             role: Pawn,

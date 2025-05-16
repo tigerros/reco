@@ -34,8 +34,7 @@ pub const CORMORANT_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Cormorant Gambit"],
+    name: &["Benoni Defense", "Cormorant Gambit"],
     moves: &[
         Normal {
             role: Pawn,

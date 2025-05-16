@@ -34,8 +34,7 @@ pub const MAX_LANGE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Max Lange Attack"],
+    name: &["Italian Game", "Two Knights Defense", "Max Lange Attack"],
     moves: &[
         Normal {
             role: Pawn,

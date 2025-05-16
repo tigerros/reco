@@ -34,8 +34,7 @@ pub const DURAS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<65>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Duras Variation"],
+    name: &["Ruy Lopez", "Berlin Defense", "Duras Variation"],
     moves: &[
         Normal {
             role: Pawn,

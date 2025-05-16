@@ -34,8 +34,7 @@ pub const MONTICELLI_TRAP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Bogo-Indian Defense",
-    variation: &["Monticelli Trap"],
+    name: &["Bogo-Indian Defense", "Monticelli Trap"],
     moves: &[
         Normal {
             role: Pawn,

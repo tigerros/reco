@@ -34,8 +34,11 @@ pub const SCHLECHTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<33>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Lasker-Pelikan Variation", "Schlechter Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Lasker-Pelikan Variation",
+        "Schlechter Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

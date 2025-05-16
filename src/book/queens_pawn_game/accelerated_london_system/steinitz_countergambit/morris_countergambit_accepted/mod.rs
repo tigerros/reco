@@ -34,8 +34,8 @@ pub const MORRIS_COUNTERGAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening 
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &[
+    name: &[
+        "Queen's Pawn Game",
         "Accelerated London System",
         "Steinitz Countergambit",
         "Morris Countergambit Accepted",

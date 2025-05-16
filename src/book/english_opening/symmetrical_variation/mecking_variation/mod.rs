@@ -34,8 +34,11 @@ pub const MECKING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<39>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Mecking Variation"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Mecking Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const NIMZOWITSCH_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Nimzowitsch Defense",
-        variation: &[],
+        name: &["Nimzowitsch Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -94,8 +93,7 @@ pub const NIMZOWITSCH_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Nimzowitsch Defense",
-        variation: &[],
+        name: &["Nimzowitsch Defense"],
         moves: &[
             Normal {
                 role: Pawn,

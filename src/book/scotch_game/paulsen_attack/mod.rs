@@ -34,8 +34,7 @@ pub const PAULSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Scotch Game",
-    variation: &["Paulsen Attack"],
+    name: &["Scotch Game", "Paulsen Attack"],
     moves: &[
         Normal {
             role: Pawn,

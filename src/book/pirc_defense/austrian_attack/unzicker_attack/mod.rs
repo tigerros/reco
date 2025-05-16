@@ -34,8 +34,7 @@ pub const UNZICKER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Pirc Defense",
-    variation: &["Austrian Attack", "Unzicker Attack"],
+    name: &["Pirc Defense", "Austrian Attack", "Unzicker Attack"],
     moves: &[
         Normal {
             role: Pawn,

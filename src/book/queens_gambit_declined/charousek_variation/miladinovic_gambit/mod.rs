@@ -34,8 +34,11 @@ pub const MILADINOVIC_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Charousek Variation", "Miladinovic Gambit"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Charousek Variation",
+        "Miladinovic Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

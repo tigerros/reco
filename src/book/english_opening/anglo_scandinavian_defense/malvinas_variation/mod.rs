@@ -34,8 +34,11 @@ pub const MALVINAS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Scandinavian Defense", "Malvinas Variation"],
+    name: &[
+        "English Opening",
+        "Anglo-Scandinavian Defense",
+        "Malvinas Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

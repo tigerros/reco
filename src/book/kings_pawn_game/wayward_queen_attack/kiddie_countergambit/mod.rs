@@ -34,8 +34,11 @@ pub const KIDDIE_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Wayward Queen Attack", "Kiddie Countergambit"],
+    name: &[
+        "King's Pawn Game",
+        "Wayward Queen Attack",
+        "Kiddie Countergambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const RAUZER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<65>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Richter-Rauzer Variation", "Rauzer Attack"],
+    name: &[
+        "Sicilian Defense",
+        "Richter-Rauzer Variation",
+        "Rauzer Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

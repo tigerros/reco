@@ -34,8 +34,11 @@ pub const PAWN_CENTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<5>(),
     },
-    name: "French Defense",
-    variation: &["Tarrasch Variation", "Pawn Center Variation"],
+    name: &[
+        "French Defense",
+        "Tarrasch Variation",
+        "Pawn Center Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

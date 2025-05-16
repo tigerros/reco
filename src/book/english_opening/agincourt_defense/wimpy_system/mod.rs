@@ -34,8 +34,7 @@ pub const WIMPY_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<13>(),
     },
-    name: "English Opening",
-    variation: &["Agincourt Defense", "Wimpy System"],
+    name: &["English Opening", "Agincourt Defense", "Wimpy System"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const NAKHMANSON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Scotch Gambit", "Nakhmanson Gambit"],
+    name: &["Italian Game", "Scotch Gambit", "Nakhmanson Gambit"],
     moves: &[
         Normal {
             role: Pawn,

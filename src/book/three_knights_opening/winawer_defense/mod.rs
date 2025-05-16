@@ -34,8 +34,7 @@ pub const WINAWER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Three Knights Opening",
-    variation: &["Winawer Defense"],
+    name: &["Three Knights Opening", "Winawer Defense"],
     moves: &[
         Normal {
             role: Pawn,

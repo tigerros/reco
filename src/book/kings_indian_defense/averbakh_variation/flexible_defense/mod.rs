@@ -34,8 +34,11 @@ pub const FLEXIBLE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<73>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Averbakh Variation", "Flexible Defense"],
+    name: &[
+        "King's Indian Defense",
+        "Averbakh Variation",
+        "Flexible Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

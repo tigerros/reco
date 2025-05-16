@@ -34,8 +34,7 @@ pub const SEMMERING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Semmering Variation"],
+    name: &["Queen's Gambit Declined", "Semmering Variation"],
     moves: &[
         Normal {
             role: Pawn,

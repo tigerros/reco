@@ -34,8 +34,7 @@ pub const HAAG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Moscow Variation", "Haag Gambit"],
+    name: &["Sicilian Defense", "Moscow Variation", "Haag Gambit"],
     moves: &[
         Normal {
             role: Pawn,

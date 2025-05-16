@@ -34,8 +34,8 @@ pub const BISHOP_CHECK_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Italian Game",
-    variation: &[
+    name: &[
+        "Italian Game",
         "Two Knights Defense",
         "Polerio Defense",
         "Bishop Check Line",

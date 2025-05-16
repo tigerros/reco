@@ -34,8 +34,11 @@ pub const SCHILLERS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Panteldakis Countergambit", "Schiller's Defense"],
+    name: &[
+        "King's Gambit Declined",
+        "Panteldakis Countergambit",
+        "Schiller's Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

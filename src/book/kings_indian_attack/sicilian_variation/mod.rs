@@ -35,8 +35,7 @@ pub const SICILIAN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<7>(),
         },
-        name: "King's Indian Attack",
-        variation: &["Sicilian Variation"],
+        name: &["King's Indian Attack", "Sicilian Variation"],
         moves: &[
             Normal {
                 role: Knight,
@@ -101,8 +100,7 @@ pub const SICILIAN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<8>(),
         },
-        name: "King's Indian Attack",
-        variation: &["Sicilian Variation"],
+        name: &["King's Indian Attack", "Sicilian Variation"],
         moves: &[
             Normal {
                 role: Knight,
@@ -196,8 +194,7 @@ pub const SICILIAN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<8>(),
         },
-        name: "King's Indian Attack",
-        variation: &["Sicilian Variation"],
+        name: &["King's Indian Attack", "Sicilian Variation"],
         moves: &[
             Normal {
                 role: Knight,
@@ -269,8 +266,7 @@ pub const SICILIAN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<8>(),
         },
-        name: "King's Indian Attack",
-        variation: &["Sicilian Variation"],
+        name: &["King's Indian Attack", "Sicilian Variation"],
         moves: &[
             Normal {
                 role: Pawn,

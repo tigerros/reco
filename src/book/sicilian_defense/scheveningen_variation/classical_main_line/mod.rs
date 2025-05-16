@@ -34,8 +34,11 @@ pub const CLASSICAL_MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<85>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Scheveningen Variation", "Classical Main Line"],
+    name: &[
+        "Sicilian Defense",
+        "Scheveningen Variation",
+        "Classical Main Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

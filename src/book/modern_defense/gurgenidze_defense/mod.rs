@@ -34,8 +34,7 @@ pub const GURGENIDZE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Gurgenidze Defense"],
+    name: &["Modern Defense", "Gurgenidze Defense"],
     moves: &[
         Normal {
             role: Pawn,

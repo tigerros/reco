@@ -35,8 +35,11 @@ pub const SVESHNIKOV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<33>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Lasker-Pelikan Variation", "Sveshnikov Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Lasker-Pelikan Variation",
+            "Sveshnikov Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -213,8 +216,11 @@ pub const SVESHNIKOV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<33>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Lasker-Pelikan Variation", "Sveshnikov Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Lasker-Pelikan Variation",
+            "Sveshnikov Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

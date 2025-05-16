@@ -34,8 +34,7 @@ pub const RARE_DEFENSES: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<90>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Normal Variation", "Rare Defenses"],
+    name: &["King's Indian Defense", "Normal Variation", "Rare Defenses"],
     moves: &[
         Normal {
             role: Pawn,

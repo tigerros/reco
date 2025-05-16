@@ -34,8 +34,7 @@ pub const DEKKER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<90>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "Dekker Gambit"],
+    name: &["Sicilian Defense", "Najdorf Variation", "Dekker Gambit"],
     moves: &[
         Normal {
             role: Pawn,

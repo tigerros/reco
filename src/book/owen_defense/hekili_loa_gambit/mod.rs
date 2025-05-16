@@ -34,8 +34,7 @@ pub const HEKILI_LOA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Owen Defense",
-    variation: &["Hekili-Loa Gambit"],
+    name: &["Owen Defense", "Hekili-Loa Gambit"],
     moves: &[
         Normal {
             role: Pawn,

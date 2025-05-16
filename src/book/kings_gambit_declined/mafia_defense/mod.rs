@@ -34,8 +34,7 @@ pub const MAFIA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Mafia Defense"],
+    name: &["King's Gambit Declined", "Mafia Defense"],
     moves: &[
         Normal {
             role: Pawn,

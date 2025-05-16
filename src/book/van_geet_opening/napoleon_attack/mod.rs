@@ -34,8 +34,7 @@ pub const NAPOLEON_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Napoleon Attack"],
+    name: &["Van Geet Opening", "Napoleon Attack"],
     moves: &[
         Normal {
             role: Knight,

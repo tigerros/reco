@@ -34,8 +34,11 @@ pub const ZURICH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<33>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Classical Variation", "Zurich Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Zurich Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

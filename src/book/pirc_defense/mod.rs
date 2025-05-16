@@ -35,8 +35,7 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Pirc Defense",
-        variation: &[],
+        name: &["Pirc Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Pirc Defense",
-        variation: &[],
+        name: &["Pirc Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -160,8 +158,7 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Pirc Defense",
-        variation: &[],
+        name: &["Pirc Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -212,8 +209,7 @@ pub const PIRC_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<7>(),
         },
-        name: "Pirc Defense",
-        variation: &[],
+        name: &["Pirc Defense"],
         moves: &[
             Normal {
                 role: Pawn,

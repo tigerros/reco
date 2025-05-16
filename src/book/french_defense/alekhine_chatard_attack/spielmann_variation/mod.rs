@@ -34,8 +34,11 @@ pub const SPIELMANN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<13>(),
     },
-    name: "French Defense",
-    variation: &["Alekhine-Chatard Attack", "Spielmann Variation"],
+    name: &[
+        "French Defense",
+        "Alekhine-Chatard Attack",
+        "Spielmann Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

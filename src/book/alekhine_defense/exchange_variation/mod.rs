@@ -34,8 +34,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Exchange Variation"],
+    name: &["Alekhine Defense", "Exchange Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const SIMAGIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<96>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "Polugaevsky Variation", "Simagin Line"],
+    name: &[
+        "Sicilian Defense",
+        "Najdorf Variation",
+        "Polugaevsky Variation",
+        "Simagin Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

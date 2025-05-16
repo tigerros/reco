@@ -34,8 +34,7 @@ pub const HORWITZ_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Scotch Game",
-    variation: &["Horwitz Attack"],
+    name: &["Scotch Game", "Horwitz Attack"],
     moves: &[
         Normal {
             role: Pawn,

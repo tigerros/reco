@@ -34,8 +34,12 @@ pub const BREYER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<39>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Accelerated Dragon", "Maróczy Bind", "Breyer Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Accelerated Dragon",
+        "Maróczy Bind",
+        "Breyer Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

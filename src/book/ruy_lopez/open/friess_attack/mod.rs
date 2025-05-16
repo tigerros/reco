@@ -34,8 +34,7 @@ pub const FRIESS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Friess Attack"],
+    name: &["Ruy Lopez", "Open", "Friess Attack"],
     moves: &[
         Normal {
             role: Pawn,

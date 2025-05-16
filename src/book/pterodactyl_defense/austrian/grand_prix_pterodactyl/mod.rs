@@ -34,8 +34,7 @@ pub const GRAND_PRIX_PTERODACTYL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Austrian", "Grand Prix Pterodactyl"],
+    name: &["Pterodactyl Defense", "Austrian", "Grand Prix Pterodactyl"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const MIKHALCHISHIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Stoltz Variation", "Center Variation", "Mikhalchishin Line"],
+    name: &[
+        "Semi-Slav Defense",
+        "Stoltz Variation",
+        "Center Variation",
+        "Mikhalchishin Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

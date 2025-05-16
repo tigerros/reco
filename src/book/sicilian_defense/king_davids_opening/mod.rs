@@ -34,8 +34,7 @@ pub const KING_DAVIDS_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["King David's Opening"],
+    name: &["Sicilian Defense", "King David's Opening"],
     moves: &[
         Normal {
             role: Pawn,

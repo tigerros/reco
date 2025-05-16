@@ -34,8 +34,7 @@ pub const KARKLINS_MARTINOVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening
         volume: Volume::C,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Karklins-Martinovsky Variation"],
+    name: &["Petrov's Defense", "Karklins-Martinovsky Variation"],
     moves: &[
         Normal {
             role: Pawn,

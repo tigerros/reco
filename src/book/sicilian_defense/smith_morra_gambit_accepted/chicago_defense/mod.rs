@@ -35,8 +35,11 @@ pub const CHICAGO_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Smith-Morra Gambit Accepted", "Chicago Defense"],
+        name: &[
+            "Sicilian Defense",
+            "Smith-Morra Gambit Accepted",
+            "Chicago Defense",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -193,8 +196,11 @@ pub const CHICAGO_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Smith-Morra Gambit Accepted", "Chicago Defense"],
+        name: &[
+            "Sicilian Defense",
+            "Smith-Morra Gambit Accepted",
+            "Chicago Defense",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

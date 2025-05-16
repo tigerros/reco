@@ -34,8 +34,7 @@ pub const WING_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<78>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Morphy Defense", "Wing Attack"],
+    name: &["Ruy Lopez", "Morphy Defense", "Wing Attack"],
     moves: &[
         Normal {
             role: Pawn,

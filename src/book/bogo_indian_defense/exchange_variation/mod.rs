@@ -34,8 +34,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Bogo-Indian Defense",
-    variation: &["Exchange Variation"],
+    name: &["Bogo-Indian Defense", "Exchange Variation"],
     moves: &[
         Normal {
             role: Pawn,

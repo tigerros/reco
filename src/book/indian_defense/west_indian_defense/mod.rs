@@ -34,8 +34,7 @@ pub const WEST_INDIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Indian Defense",
-    variation: &["West Indian Defense"],
+    name: &["Indian Defense", "West Indian Defense"],
     moves: &[
         Normal {
             role: Pawn,

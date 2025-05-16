@@ -34,8 +34,7 @@ pub const PTERODACTYL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &[],
+    name: &["Pterodactyl Defense"],
     moves: &[
         Normal {
             role: Knight,

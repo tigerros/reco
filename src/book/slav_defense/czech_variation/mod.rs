@@ -34,8 +34,7 @@ pub const CZECH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Slav Defense",
-    variation: &["Czech Variation"],
+    name: &["Slav Defense", "Czech Variation"],
     moves: &[
         Normal {
             role: Pawn,

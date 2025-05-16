@@ -34,8 +34,11 @@ pub const CLASSICAL_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Smith-Morra Gambit Accepted", "Classical Formation"],
+    name: &[
+        "Sicilian Defense",
+        "Smith-Morra Gambit Accepted",
+        "Classical Formation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

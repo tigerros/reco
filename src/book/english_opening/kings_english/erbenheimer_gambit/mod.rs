@@ -34,8 +34,7 @@ pub const ERBENHEIMER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<22>(),
     },
-    name: "English Opening",
-    variation: &["King's English", "Erbenheimer Gambit"],
+    name: &["English Opening", "King's English", "Erbenheimer Gambit"],
     moves: &[
         Normal {
             role: Pawn,

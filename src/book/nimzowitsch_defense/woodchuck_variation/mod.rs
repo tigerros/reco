@@ -34,8 +34,7 @@ pub const WOODCHUCK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Woodchuck Variation"],
+    name: &["Nimzowitsch Defense", "Woodchuck Variation"],
     moves: &[
         Normal {
             role: Pawn,

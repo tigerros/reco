@@ -34,8 +34,7 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Catalan Opening",
-    variation: &["Closed", "Botvinnik Variation"],
+    name: &["Catalan Opening", "Closed", "Botvinnik Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const VERESOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Richter-Veresov Attack",
-    variation: &["Veresov Variation"],
+    name: &["Richter-Veresov Attack", "Veresov Variation"],
     moves: &[
         Normal {
             role: Pawn,

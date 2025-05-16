@@ -34,8 +34,7 @@ pub const O_SULLIVAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Alekhine Defense",
-    variation: &["O'Sullivan Gambit"],
+    name: &["Alekhine Defense", "O'Sullivan Gambit"],
     moves: &[
         Normal {
             role: Pawn,

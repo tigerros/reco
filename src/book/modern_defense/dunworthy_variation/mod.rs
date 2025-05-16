@@ -34,8 +34,7 @@ pub const DUNWORTHY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Dunworthy Variation"],
+    name: &["Modern Defense", "Dunworthy Variation"],
     moves: &[
         Normal {
             role: Pawn,

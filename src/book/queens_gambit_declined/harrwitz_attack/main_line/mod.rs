@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<37>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Harrwitz Attack", "Main Line"],
+    name: &["Queen's Gambit Declined", "Harrwitz Attack", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

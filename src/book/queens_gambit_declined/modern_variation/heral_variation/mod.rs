@@ -34,8 +34,11 @@ pub const HERAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Modern Variation", "Heral Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Modern Variation",
+        "Heral Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

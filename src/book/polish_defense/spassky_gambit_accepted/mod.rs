@@ -34,8 +34,7 @@ pub const SPASSKY_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Polish Defense",
-    variation: &["Spassky Gambit Accepted"],
+    name: &["Polish Defense", "Spassky Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

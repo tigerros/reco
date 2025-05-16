@@ -34,8 +34,7 @@ pub const GRIMM_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Bishop's Gambit", "Grimm Attack"],
+    name: &["King's Gambit Accepted", "Bishop's Gambit", "Grimm Attack"],
     moves: &[
         Normal {
             role: Pawn,

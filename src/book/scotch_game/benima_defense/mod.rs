@@ -34,8 +34,7 @@ pub const BENIMA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Benima Defense"],
+    name: &["Scotch Game", "Benima Defense"],
     moves: &[
         Normal {
             role: Pawn,

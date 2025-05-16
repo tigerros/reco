@@ -34,8 +34,7 @@ pub const TOIKKANEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Toikkanen Gambit"],
+    name: &["Caro-Kann Defense", "Toikkanen Gambit"],
     moves: &[
         Normal {
             role: Pawn,

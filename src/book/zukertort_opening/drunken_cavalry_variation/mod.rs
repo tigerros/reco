@@ -34,8 +34,7 @@ pub const DRUNKEN_CAVALRY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Drunken Cavalry Variation"],
+    name: &["Zukertort Opening", "Drunken Cavalry Variation"],
     moves: &[
         Normal {
             role: Knight,

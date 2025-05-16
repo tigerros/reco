@@ -34,8 +34,7 @@ pub const RETI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &["Réti Variation"],
+    name: &["Ponziani Opening", "Réti Variation"],
     moves: &[
         Normal {
             role: Pawn,

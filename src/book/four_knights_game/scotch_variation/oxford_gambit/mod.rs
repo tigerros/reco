@@ -34,8 +34,7 @@ pub const OXFORD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Four Knights Game",
-    variation: &["Scotch Variation", "Oxford Gambit"],
+    name: &["Four Knights Game", "Scotch Variation", "Oxford Gambit"],
     moves: &[
         Normal {
             role: Pawn,

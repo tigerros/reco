@@ -34,8 +34,7 @@ pub const ANTI_STONEWALL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Manhattan Gambit", "Anti-Stonewall"],
+    name: &["Dutch Defense", "Manhattan Gambit", "Anti-Stonewall"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const UHLMANN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Uhlmann Variation"],
+    name: &["Queen's Gambit Declined", "Uhlmann Variation"],
     moves: &[
         Normal {
             role: Pawn,

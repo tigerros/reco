@@ -34,8 +34,7 @@ pub const SYMMETRICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "King's Indian Attack",
-    variation: &["Symmetrical Defense"],
+    name: &["King's Indian Attack", "Symmetrical Defense"],
     moves: &[
         Normal {
             role: Knight,

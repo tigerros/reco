@@ -34,8 +34,8 @@ pub const ICELANDIC_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<17>(),
     },
-    name: "French Defense",
-    variation: &[
+    name: &[
+        "French Defense",
         "Winawer Variation",
         "Bogoljubow Variation",
         "Icelandic Defense",

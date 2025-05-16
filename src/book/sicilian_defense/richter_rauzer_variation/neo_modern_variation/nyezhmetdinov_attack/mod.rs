@@ -34,8 +34,8 @@ pub const NYEZHMETDINOV_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<69>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Richter-Rauzer Variation",
         "Neo-Modern Variation",
         "Nyezhmetdinov Attack",

@@ -34,8 +34,11 @@ pub const FORGOTTEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Marshall Gambit", "Forgotten Variation"],
+    name: &[
+        "Semi-Slav Defense",
+        "Marshall Gambit",
+        "Forgotten Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

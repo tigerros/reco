@@ -34,8 +34,7 @@ pub const KARPOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Karpov Gambit"],
+    name: &["Ruy Lopez", "Open", "Karpov Gambit"],
     moves: &[
         Normal {
             role: Pawn,

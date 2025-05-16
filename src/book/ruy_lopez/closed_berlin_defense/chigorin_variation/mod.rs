@@ -34,8 +34,7 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<66>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed Berlin Defense", "Chigorin Variation"],
+    name: &["Ruy Lopez", "Closed Berlin Defense", "Chigorin Variation"],
     moves: &[
         Normal {
             role: Pawn,

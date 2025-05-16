@@ -34,8 +34,12 @@ pub const CLOSED_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<94>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Positional Defense", "Closed Line"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Positional Defense",
+        "Closed Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

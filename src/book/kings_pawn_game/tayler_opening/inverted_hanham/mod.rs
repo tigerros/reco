@@ -34,8 +34,7 @@ pub const INVERTED_HANHAM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Tayler Opening", "Inverted Hanham"],
+    name: &["King's Pawn Game", "Tayler Opening", "Inverted Hanham"],
     moves: &[
         Normal {
             role: Pawn,

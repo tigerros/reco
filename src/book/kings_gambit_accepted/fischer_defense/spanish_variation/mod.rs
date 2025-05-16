@@ -34,8 +34,11 @@ pub const SPANISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<34>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Fischer Defense", "Spanish Variation"],
+    name: &[
+        "King's Gambit Accepted",
+        "Fischer Defense",
+        "Spanish Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

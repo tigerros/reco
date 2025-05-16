@@ -35,8 +35,7 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<76>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Yugoslav Attack"],
+        name: &["Sicilian Defense", "Dragon Variation", "Yugoslav Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -179,8 +178,7 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<76>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Yugoslav Attack"],
+        name: &["Sicilian Defense", "Dragon Variation", "Yugoslav Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -309,8 +307,7 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<77>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Yugoslav Attack"],
+        name: &["Sicilian Defense", "Dragon Variation", "Yugoslav Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -467,8 +464,7 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<78>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Yugoslav Attack"],
+        name: &["Sicilian Defense", "Dragon Variation", "Yugoslav Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -626,8 +622,7 @@ pub const YUGOSLAV_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<79>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Yugoslav Attack"],
+        name: &["Sicilian Defense", "Dragon Variation", "Yugoslav Attack"],
         moves: &[
             Normal {
                 role: Pawn,

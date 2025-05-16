@@ -34,8 +34,7 @@ pub const ACTON_EXTENSION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Acton Extension"],
+    name: &["Sicilian Defense", "Acton Extension"],
     moves: &[
         Normal {
             role: Pawn,

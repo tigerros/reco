@@ -34,8 +34,7 @@ pub const DEVIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Indian Defense",
-    variation: &["Devin Gambit"],
+    name: &["Indian Defense", "Devin Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const LONDON_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<48>(),
     },
-    name: "London System",
-    variation: &[],
+    name: &["London System"],
     moves: &[
         Normal {
             role: Pawn,

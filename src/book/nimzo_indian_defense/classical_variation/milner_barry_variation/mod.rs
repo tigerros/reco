@@ -34,8 +34,11 @@ pub const MILNER_BARRY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<33>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Classical Variation", "Milner-Barry Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Milner-Barry Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

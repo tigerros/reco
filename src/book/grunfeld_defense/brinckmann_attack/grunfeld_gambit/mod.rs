@@ -34,8 +34,7 @@ pub const GRUNFELD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<83>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Brinckmann Attack", "Grünfeld Gambit"],
+    name: &["Grünfeld Defense", "Brinckmann Attack", "Grünfeld Gambit"],
     moves: &[
         Normal {
             role: Pawn,

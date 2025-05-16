@@ -35,8 +35,7 @@ pub const MORPHY_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<70>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense"],
+        name: &["Ruy Lopez", "Morphy Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const MORPHY_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<78>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense"],
+        name: &["Ruy Lopez", "Morphy Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -231,8 +229,7 @@ pub const MORPHY_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<78>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense"],
+        name: &["Ruy Lopez", "Morphy Defense"],
         moves: &[
             Normal {
                 role: Pawn,

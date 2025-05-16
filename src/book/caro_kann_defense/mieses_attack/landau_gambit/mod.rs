@@ -34,8 +34,7 @@ pub const LANDAU_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Mieses Attack", "Landau Gambit"],
+    name: &["Caro-Kann Defense", "Mieses Attack", "Landau Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SMALL_CENTER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Rat Defense",
-    variation: &["Small Center Defense"],
+    name: &["Rat Defense", "Small Center Defense"],
     moves: &[
         Normal {
             role: Pawn,

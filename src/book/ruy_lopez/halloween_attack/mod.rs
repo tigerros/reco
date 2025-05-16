@@ -34,8 +34,7 @@ pub const HALLOWEEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<65>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Halloween Attack"],
+    name: &["Ruy Lopez", "Halloween Attack"],
     moves: &[
         Normal {
             role: Pawn,

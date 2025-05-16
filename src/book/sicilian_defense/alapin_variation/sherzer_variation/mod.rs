@@ -34,8 +34,7 @@ pub const SHERZER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Alapin Variation", "Sherzer Variation"],
+    name: &["Sicilian Defense", "Alapin Variation", "Sherzer Variation"],
     moves: &[
         Normal {
             role: Pawn,

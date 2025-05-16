@@ -34,8 +34,11 @@ pub const PSEUDO_TARRASCH_BISHOP_ATTACK: [Opening<'static, &str>; 1] = [Opening 
         volume: Volume::D,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Tarrasch Defense", "Pseudo-Tarrasch Bishop Attack"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Tarrasch Defense",
+        "Pseudo-Tarrasch Bishop Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

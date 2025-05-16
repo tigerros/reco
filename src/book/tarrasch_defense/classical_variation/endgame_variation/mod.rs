@@ -34,8 +34,11 @@ pub const ENDGAME_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<34>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Classical Variation", "Endgame Variation"],
+    name: &[
+        "Tarrasch Defense",
+        "Classical Variation",
+        "Endgame Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const DUDWEILER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Bird Opening",
-    variation: &["Dutch Variation", "Dudweiler Gambit"],
+    name: &["Bird Opening", "Dutch Variation", "Dudweiler Gambit"],
     moves: &[
         Normal {
             role: Pawn,

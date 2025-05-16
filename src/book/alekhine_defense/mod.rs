@@ -35,8 +35,7 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<2>(),
         },
-        name: "Alekhine Defense",
-        variation: &[],
+        name: &["Alekhine Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -87,8 +86,7 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<3>(),
         },
-        name: "Alekhine Defense",
-        variation: &[],
+        name: &["Alekhine Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -174,8 +172,7 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<3>(),
         },
-        name: "Alekhine Defense",
-        variation: &[],
+        name: &["Alekhine Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -254,8 +251,7 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<3>(),
         },
-        name: "Alekhine Defense",
-        variation: &[],
+        name: &["Alekhine Defense"],
         moves: &[
             Normal {
                 role: Pawn,

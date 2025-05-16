@@ -34,8 +34,7 @@ pub const SMYSLOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "King's Indian Attack",
-    variation: &["Smyslov Variation"],
+    name: &["King's Indian Attack", "Smyslov Variation"],
     moves: &[
         Normal {
             role: Knight,

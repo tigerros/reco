@@ -34,8 +34,7 @@ pub const ZURICH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Zurich Gambit"],
+    name: &["Queen's Pawn Game", "Zurich Gambit"],
     moves: &[
         Normal {
             role: Pawn,

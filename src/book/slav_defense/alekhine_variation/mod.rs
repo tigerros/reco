@@ -34,8 +34,7 @@ pub const ALEKHINE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Slav Defense",
-    variation: &["Alekhine Variation"],
+    name: &["Slav Defense", "Alekhine Variation"],
     moves: &[
         Normal {
             role: Pawn,

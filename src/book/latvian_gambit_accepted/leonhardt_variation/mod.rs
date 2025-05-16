@@ -34,8 +34,7 @@ pub const LEONHARDT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit Accepted",
-    variation: &["Leonhardt Variation"],
+    name: &["Latvian Gambit Accepted", "Leonhardt Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const STAFFORD_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<42>(),
         },
-        name: "Petrov's Defense",
-        variation: &["Stafford Gambit"],
+        name: &["Petrov's Defense", "Stafford Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const STAFFORD_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<42>(),
         },
-        name: "Petrov's Defense",
-        variation: &["Stafford Gambit"],
+        name: &["Petrov's Defense", "Stafford Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

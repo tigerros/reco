@@ -34,8 +34,7 @@ pub const CENTRAL_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<78>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Central Countergambit"],
+    name: &["Ruy Lopez", "Central Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

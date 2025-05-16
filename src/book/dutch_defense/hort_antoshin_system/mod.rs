@@ -34,8 +34,7 @@ pub const HORT_ANTOSHIN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<86>(),
     },
-    name: "Dutch Defense",
-    variation: &["Hort-Antoshin System"],
+    name: &["Dutch Defense", "Hort-Antoshin System"],
     moves: &[
         Normal {
             role: Pawn,

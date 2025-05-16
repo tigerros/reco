@@ -34,8 +34,7 @@ pub const JAFFE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<77>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Morphy Defense", "Jaffe Gambit"],
+    name: &["Ruy Lopez", "Morphy Defense", "Jaffe Gambit"],
     moves: &[
         Normal {
             role: Pawn,

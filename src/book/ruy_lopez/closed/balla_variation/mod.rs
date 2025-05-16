@@ -34,8 +34,7 @@ pub const BALLA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<88>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Balla Variation"],
+    name: &["Ruy Lopez", "Closed", "Balla Variation"],
     moves: &[
         Normal {
             role: Pawn,

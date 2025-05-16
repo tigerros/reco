@@ -34,8 +34,7 @@ pub const ENGLISH_RAT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Rat Defense",
-    variation: &["English Rat"],
+    name: &["Rat Defense", "English Rat"],
     moves: &[
         Normal {
             role: Pawn,

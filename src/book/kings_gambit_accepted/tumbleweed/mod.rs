@@ -34,8 +34,7 @@ pub const TUMBLEWEED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Tumbleweed"],
+    name: &["King's Gambit Accepted", "Tumbleweed"],
     moves: &[
         Normal {
             role: Pawn,

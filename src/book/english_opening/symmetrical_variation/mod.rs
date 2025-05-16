@@ -35,8 +35,7 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<30>(),
         },
-        name: "English Opening",
-        variation: &["Symmetrical Variation"],
+        name: &["English Opening", "Symmetrical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -94,8 +93,7 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<30>(),
         },
-        name: "English Opening",
-        variation: &["Symmetrical Variation"],
+        name: &["English Opening", "Symmetrical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -146,8 +144,7 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<34>(),
         },
-        name: "English Opening",
-        variation: &["Symmetrical Variation"],
+        name: &["English Opening", "Symmetrical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -254,8 +251,7 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<35>(),
         },
-        name: "English Opening",
-        variation: &["Symmetrical Variation"],
+        name: &["English Opening", "Symmetrical Variation"],
         moves: &[
             Normal {
                 role: Pawn,

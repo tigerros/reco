@@ -34,8 +34,7 @@ pub const LASKER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Lasker Gambit"],
+    name: &["Bird Opening", "Lasker Gambit"],
     moves: &[
         Normal {
             role: Pawn,

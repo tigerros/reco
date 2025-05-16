@@ -34,8 +34,11 @@ pub const DELAYED_EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<11>(),
     },
-    name: "French Defense",
-    variation: &["Classical Variation", "Delayed Exchange Variation"],
+    name: &[
+        "French Defense",
+        "Classical Variation",
+        "Delayed Exchange Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

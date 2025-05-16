@@ -34,8 +34,7 @@ pub const BENONI_QUETZALCOATLUS: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Central", "Benoni Quetzalcoatlus"],
+    name: &["Pterodactyl Defense", "Central", "Benoni Quetzalcoatlus"],
     moves: &[
         Normal {
             role: Pawn,

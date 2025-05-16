@@ -34,8 +34,7 @@ pub const SHY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Formation",
-    variation: &["Shy Attack"],
+    name: &["Formation", "Shy Attack"],
     moves: &[
         Normal {
             role: Pawn,

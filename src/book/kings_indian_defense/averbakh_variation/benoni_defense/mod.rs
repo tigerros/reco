@@ -34,8 +34,11 @@ pub const BENONI_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<74>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Averbakh Variation", "Benoni Defense"],
+    name: &[
+        "King's Indian Defense",
+        "Averbakh Variation",
+        "Benoni Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

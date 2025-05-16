@@ -34,8 +34,7 @@ pub const ULYSSES_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Ulysses Gambit"],
+    name: &["Caro-Kann Defense", "Ulysses Gambit"],
     moves: &[
         Normal {
             role: Pawn,

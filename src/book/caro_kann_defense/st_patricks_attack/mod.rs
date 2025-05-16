@@ -34,8 +34,7 @@ pub const ST_PATRICKS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["St. Patrick's Attack"],
+    name: &["Caro-Kann Defense", "St. Patrick's Attack"],
     moves: &[
         Normal {
             role: Pawn,

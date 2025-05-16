@@ -35,8 +35,7 @@ pub const BENKO_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<57>(),
         },
-        name: "Benko Gambit",
-        variation: &[],
+        name: &["Benko Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const BENKO_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<59>(),
         },
-        name: "Benko Gambit",
-        variation: &[],
+        name: &["Benko Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

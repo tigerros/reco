@@ -34,8 +34,12 @@ pub const LOMAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Max Lange Attack", "Loman Defense"],
+    name: &[
+        "Italian Game",
+        "Two Knights Defense",
+        "Max Lange Attack",
+        "Loman Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

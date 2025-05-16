@@ -34,8 +34,7 @@ pub const TUBINGEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Tübingen Gambit"],
+    name: &["Van Geet Opening", "Tübingen Gambit"],
     moves: &[
         Normal {
             role: Knight,

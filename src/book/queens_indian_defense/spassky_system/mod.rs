@@ -34,8 +34,7 @@ pub const SPASSKY_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<14>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Spassky System"],
+    name: &["Queen's Indian Defense", "Spassky System"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const MAROCZY_WALLIS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<17>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Maróczy-Wallis Variation"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Maróczy-Wallis Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

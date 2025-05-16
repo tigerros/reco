@@ -34,8 +34,7 @@ pub const LOBRON_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<19>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Classical Variation", "Lobron System"],
+    name: &["Caro-Kann Defense", "Classical Variation", "Lobron System"],
     moves: &[
         Normal {
             role: Pawn,

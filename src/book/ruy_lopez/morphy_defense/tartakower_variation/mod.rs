@@ -34,8 +34,7 @@ pub const TARTAKOWER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Morphy Defense", "Tartakower Variation"],
+    name: &["Ruy Lopez", "Morphy Defense", "Tartakower Variation"],
     moves: &[
         Normal {
             role: Pawn,

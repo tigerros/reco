@@ -34,8 +34,11 @@ pub const GRUNFELD_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<15>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Indian Defense", "Grünfeld Formation"],
+    name: &[
+        "English Opening",
+        "Anglo-Indian Defense",
+        "Grünfeld Formation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

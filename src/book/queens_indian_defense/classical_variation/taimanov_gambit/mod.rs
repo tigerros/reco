@@ -34,8 +34,11 @@ pub const TAIMANOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Classical Variation", "Taimanov Gambit"],
+    name: &[
+        "Queen's Indian Defense",
+        "Classical Variation",
+        "Taimanov Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

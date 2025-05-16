@@ -34,8 +34,7 @@ pub const COCHRANE_SHUMOV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Cochrane-Shumov Defense"],
+    name: &["Scotch Game", "Cochrane-Shumov Defense"],
     moves: &[
         Normal {
             role: Pawn,

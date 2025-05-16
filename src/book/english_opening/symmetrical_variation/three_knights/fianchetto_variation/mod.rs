@@ -34,8 +34,8 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<37>(),
     },
-    name: "English Opening",
-    variation: &[
+    name: &[
+        "English Opening",
         "Symmetrical Variation",
         "Three Knights",
         "Fianchetto Variation",

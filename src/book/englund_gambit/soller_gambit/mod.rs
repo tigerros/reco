@@ -34,8 +34,7 @@ pub const SOLLER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit",
-    variation: &["Soller Gambit"],
+    name: &["Englund Gambit", "Soller Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const WAGENBACH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<34>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Wagenbach Defense"],
+    name: &["King's Gambit Accepted", "Wagenbach Defense"],
     moves: &[
         Normal {
             role: Pawn,

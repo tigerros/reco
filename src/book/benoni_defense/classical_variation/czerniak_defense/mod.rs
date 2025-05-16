@@ -35,8 +35,7 @@ pub const CZERNIAK_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<76>(),
         },
-        name: "Benoni Defense",
-        variation: &["Classical Variation", "Czerniak Defense"],
+        name: &["Benoni Defense", "Classical Variation", "Czerniak Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -187,8 +186,7 @@ pub const CZERNIAK_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<78>(),
         },
-        name: "Benoni Defense",
-        variation: &["Classical Variation", "Czerniak Defense"],
+        name: &["Benoni Defense", "Classical Variation", "Czerniak Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -353,8 +351,7 @@ pub const CZERNIAK_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<79>(),
         },
-        name: "Benoni Defense",
-        variation: &["Classical Variation", "Czerniak Defense"],
+        name: &["Benoni Defense", "Classical Variation", "Czerniak Defense"],
         moves: &[
             Normal {
                 role: Pawn,

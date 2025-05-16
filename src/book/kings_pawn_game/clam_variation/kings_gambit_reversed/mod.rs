@@ -34,8 +34,11 @@ pub const KINGS_GAMBIT_REVERSED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Clam Variation", "King's Gambit Reversed"],
+    name: &[
+        "King's Pawn Game",
+        "Clam Variation",
+        "King's Gambit Reversed",
+    ],
     moves: &[
         Normal {
             role: Pawn,

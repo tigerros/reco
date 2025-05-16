@@ -34,8 +34,7 @@ pub const PSEUDO_SLAV: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Baltic Defense", "Pseudo-Slav"],
+    name: &["Queen's Gambit Declined", "Baltic Defense", "Pseudo-Slav"],
     moves: &[
         Normal {
             role: Pawn,

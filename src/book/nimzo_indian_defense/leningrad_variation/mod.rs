@@ -34,8 +34,7 @@ pub const LENINGRAD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Leningrad Variation"],
+    name: &["Nimzo-Indian Defense", "Leningrad Variation"],
     moves: &[
         Normal {
             role: Pawn,

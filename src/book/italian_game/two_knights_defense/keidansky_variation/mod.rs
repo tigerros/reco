@@ -34,8 +34,7 @@ pub const KEIDANSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Keidansky Variation"],
+    name: &["Italian Game", "Two Knights Defense", "Keidansky Variation"],
     moves: &[
         Normal {
             role: Pawn,

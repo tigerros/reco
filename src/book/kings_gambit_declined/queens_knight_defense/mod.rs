@@ -34,8 +34,7 @@ pub const QUEENS_KNIGHT_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Queen's Knight Defense"],
+    name: &["King's Gambit Declined", "Queen's Knight Defense"],
     moves: &[
         Normal {
             role: Pawn,

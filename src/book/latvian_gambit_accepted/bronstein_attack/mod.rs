@@ -34,8 +34,7 @@ pub const BRONSTEIN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit Accepted",
-    variation: &["Bronstein Attack"],
+    name: &["Latvian Gambit Accepted", "Bronstein Attack"],
     moves: &[
         Normal {
             role: Pawn,

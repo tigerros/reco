@@ -34,8 +34,7 @@ pub const PONZIANI_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &["Ponziani Countergambit"],
+    name: &["Ponziani Opening", "Ponziani Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

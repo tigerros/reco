@@ -35,8 +35,7 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
             volume: Volume::A,
             category: RangedU8::new_static::<40>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &[],
+        name: &["Queen's Pawn Game"],
         moves: &[Normal {
             role: Pawn,
             from: D2,
@@ -78,8 +77,7 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
             volume: Volume::A,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &[],
+        name: &["Queen's Pawn Game"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -130,8 +128,7 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
             volume: Volume::D,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &[],
+        name: &["Queen's Pawn Game"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -196,8 +193,7 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
             volume: Volume::D,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &[],
+        name: &["Queen's Pawn Game"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -255,8 +251,7 @@ pub const QUEENS_PAWN_GAME: [Opening<'static, &str>; 5] = [
             volume: Volume::D,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &[],
+        name: &["Queen's Pawn Game"],
         moves: &[
             Normal {
                 role: Pawn,

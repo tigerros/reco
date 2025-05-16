@@ -34,8 +34,7 @@ pub const BEEN_KOOMEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Been-Koomen Variation"],
+    name: &["Queen's Gambit Declined", "Been-Koomen Variation"],
     moves: &[
         Normal {
             role: Pawn,

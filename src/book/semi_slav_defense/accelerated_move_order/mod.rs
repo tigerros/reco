@@ -34,8 +34,7 @@ pub const ACCELERATED_MOVE_ORDER: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Accelerated Move Order"],
+    name: &["Semi-Slav Defense", "Accelerated Move Order"],
     moves: &[
         Normal {
             role: Pawn,

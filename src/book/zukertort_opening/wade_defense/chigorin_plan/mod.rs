@@ -34,8 +34,7 @@ pub const CHIGORIN_PLAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Wade Defense", "Chigorin Plan"],
+    name: &["Zukertort Opening", "Wade Defense", "Chigorin Plan"],
     moves: &[
         Normal {
             role: Pawn,

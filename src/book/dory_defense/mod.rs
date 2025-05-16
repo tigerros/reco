@@ -34,8 +34,7 @@ pub const DORY_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Döry Defense",
-    variation: &[],
+    name: &["Döry Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const AMERICAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["St. Petersburg Variation", "American Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "St. Petersburg Variation",
+        "American Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

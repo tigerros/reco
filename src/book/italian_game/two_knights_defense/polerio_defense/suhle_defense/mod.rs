@@ -34,8 +34,12 @@ pub const SUHLE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<59>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Polerio Defense", "Suhle Defense"],
+    name: &[
+        "Italian Game",
+        "Two Knights Defense",
+        "Polerio Defense",
+        "Suhle Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

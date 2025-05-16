@@ -34,8 +34,7 @@ pub const ZAITSEV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Zaitsev Gambit"],
+    name: &["Grünfeld Defense", "Zaitsev Gambit"],
     moves: &[
         Normal {
             role: Pawn,

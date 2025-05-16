@@ -34,8 +34,7 @@ pub const AVERBAKH_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Modern Defense",
-    variation: &["Averbakh System"],
+    name: &["Modern Defense", "Averbakh System"],
     moves: &[
         Normal {
             role: Pawn,

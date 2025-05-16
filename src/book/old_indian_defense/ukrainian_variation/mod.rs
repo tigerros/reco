@@ -34,8 +34,7 @@ pub const UKRAINIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Old Indian Defense",
-    variation: &["Ukrainian Variation"],
+    name: &["Old Indian Defense", "Ukrainian Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MASON_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Mason Attack"],
+    name: &["Queen's Pawn Game", "Mason Attack"],
     moves: &[
         Normal {
             role: Pawn,

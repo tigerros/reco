@@ -34,8 +34,7 @@ pub const QUEEN_PTERODACTYL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Fianchetto", "Queen Pterodactyl"],
+    name: &["Pterodactyl Defense", "Fianchetto", "Queen Pterodactyl"],
     moves: &[
         Normal {
             role: Pawn,

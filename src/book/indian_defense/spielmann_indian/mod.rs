@@ -34,8 +34,7 @@ pub const SPIELMANN_INDIAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Indian Defense",
-    variation: &["Spielmann-Indian"],
+    name: &["Indian Defense", "Spielmann-Indian"],
     moves: &[
         Normal {
             role: Pawn,

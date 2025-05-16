@@ -34,8 +34,7 @@ pub const HROMADKA_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Benoni Defense",
-    variation: &["Hromádka System"],
+    name: &["Benoni Defense", "Hromádka System"],
     moves: &[
         Normal {
             role: Pawn,

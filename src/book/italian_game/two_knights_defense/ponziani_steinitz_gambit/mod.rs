@@ -34,8 +34,11 @@ pub const PONZIANI_STEINITZ_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Ponziani-Steinitz Gambit"],
+    name: &[
+        "Italian Game",
+        "Two Knights Defense",
+        "Ponziani-Steinitz Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MAKOGONOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<94>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Makogonov Variation"],
+    name: &["Grünfeld Defense", "Makogonov Variation"],
     moves: &[
         Normal {
             role: Pawn,

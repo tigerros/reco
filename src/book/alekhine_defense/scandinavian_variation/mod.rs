@@ -34,8 +34,7 @@ pub const SCANDINAVIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Scandinavian Variation"],
+    name: &["Alekhine Defense", "Scandinavian Variation"],
     moves: &[
         Normal {
             role: Pawn,

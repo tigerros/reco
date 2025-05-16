@@ -34,8 +34,7 @@ pub const REVERSED_PHILIDOR_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Reversed Philidor Formation"],
+    name: &["French Defense", "Reversed Philidor Formation"],
     moves: &[
         Normal {
             role: Pawn,

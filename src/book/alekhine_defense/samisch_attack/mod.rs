@@ -34,8 +34,7 @@ pub const SAMISCH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Sämisch Attack"],
+    name: &["Alekhine Defense", "Sämisch Attack"],
     moves: &[
         Normal {
             role: Pawn,

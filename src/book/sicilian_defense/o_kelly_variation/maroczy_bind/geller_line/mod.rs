@@ -34,8 +34,12 @@ pub const GELLER_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Sicilian Defense",
-    variation: &["O'Kelly Variation", "Maróczy Bind", "Geller Line"],
+    name: &[
+        "Sicilian Defense",
+        "O'Kelly Variation",
+        "Maróczy Bind",
+        "Geller Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

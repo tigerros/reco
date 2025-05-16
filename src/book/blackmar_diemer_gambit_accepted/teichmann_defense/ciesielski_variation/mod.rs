@@ -34,8 +34,11 @@ pub const CIESIELSKI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Teichmann Defense", "Ciesielski Variation"],
+    name: &[
+        "Blackmar-Diemer Gambit Accepted",
+        "Teichmann Defense",
+        "Ciesielski Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

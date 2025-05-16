@@ -34,8 +34,11 @@ pub const LILIENTHAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Botvinnik Variation", "Lilienthal Variation"],
+    name: &[
+        "Semi-Slav Defense",
+        "Botvinnik Variation",
+        "Lilienthal Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

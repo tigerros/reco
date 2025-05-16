@@ -34,8 +34,12 @@ pub const IVANCHUK_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Karpov Variation", "Modern Variation", "Ivanchuk Defense"],
+    name: &[
+        "Caro-Kann Defense",
+        "Karpov Variation",
+        "Modern Variation",
+        "Ivanchuk Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

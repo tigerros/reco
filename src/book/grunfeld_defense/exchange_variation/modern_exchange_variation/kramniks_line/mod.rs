@@ -34,8 +34,8 @@ pub const KRAMNIKS_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<85>(),
     },
-    name: "Grünfeld Defense",
-    variation: &[
+    name: &[
+        "Grünfeld Defense",
         "Exchange Variation",
         "Modern Exchange Variation",
         "Kramnik's Line",

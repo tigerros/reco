@@ -35,8 +35,7 @@ pub const KINGS_KNIGHTS_GAMBIT: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<34>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["King's Knight's Gambit"],
+        name: &["King's Gambit Accepted", "King's Knight's Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const KINGS_KNIGHTS_GAMBIT: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<34>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["King's Knight's Gambit"],
+        name: &["King's Gambit Accepted", "King's Knight's Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -188,8 +186,7 @@ pub const KINGS_KNIGHTS_GAMBIT: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<37>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["King's Knight's Gambit"],
+        name: &["King's Gambit Accepted", "King's Knight's Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -275,8 +272,7 @@ pub const KINGS_KNIGHTS_GAMBIT: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<39>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["King's Knight's Gambit"],
+        name: &["King's Gambit Accepted", "King's Knight's Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

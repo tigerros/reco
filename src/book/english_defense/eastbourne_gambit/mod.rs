@@ -34,8 +34,7 @@ pub const EASTBOURNE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "English Defense",
-    variation: &["Eastbourne Gambit"],
+    name: &["English Defense", "Eastbourne Gambit"],
     moves: &[
         Normal {
             role: Pawn,

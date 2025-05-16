@@ -35,8 +35,11 @@ pub const QUEENS_INDIAN_FORMATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<15>(),
         },
-        name: "English Opening",
-        variation: &["Anglo-Indian Defense", "Queen's Indian Formation"],
+        name: &[
+            "English Opening",
+            "Anglo-Indian Defense",
+            "Queen's Indian Formation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +104,11 @@ pub const QUEENS_INDIAN_FORMATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<15>(),
         },
-        name: "English Opening",
-        variation: &["Anglo-Indian Defense", "Queen's Indian Formation"],
+        name: &[
+            "English Opening",
+            "Anglo-Indian Defense",
+            "Queen's Indian Formation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -195,8 +201,11 @@ pub const QUEENS_INDIAN_FORMATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<17>(),
         },
-        name: "English Opening",
-        variation: &["Anglo-Indian Defense", "Queen's Indian Formation"],
+        name: &[
+            "English Opening",
+            "Anglo-Indian Defense",
+            "Queen's Indian Formation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

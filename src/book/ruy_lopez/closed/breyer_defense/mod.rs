@@ -35,8 +35,7 @@ pub const BREYER_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<94>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Breyer Defense"],
+        name: &["Ruy Lopez", "Closed", "Breyer Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -187,8 +186,7 @@ pub const BREYER_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<95>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Breyer Defense"],
+        name: &["Ruy Lopez", "Closed", "Breyer Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -381,8 +379,7 @@ pub const BREYER_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<95>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Breyer Defense"],
+        name: &["Ruy Lopez", "Closed", "Breyer Defense"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const MC_DONNELL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Sicilian Defense",
-    variation: &["McDonnell Attack"],
+    name: &["Sicilian Defense", "McDonnell Attack"],
     moves: &[
         Normal {
             role: Pawn,

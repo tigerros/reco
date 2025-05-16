@@ -34,8 +34,7 @@ pub const AVERBAKH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<87>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Averbakh Variation"],
+    name: &["Ruy Lopez", "Closed", "Averbakh Variation"],
     moves: &[
         Normal {
             role: Pawn,

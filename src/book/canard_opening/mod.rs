@@ -34,8 +34,7 @@ pub const CANARD_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Canard Opening",
-    variation: &[],
+    name: &["Canard Opening"],
     moves: &[
         Normal {
             role: Pawn,

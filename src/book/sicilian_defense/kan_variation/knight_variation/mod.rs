@@ -34,8 +34,7 @@ pub const KNIGHT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Kan Variation", "Knight Variation"],
+    name: &["Sicilian Defense", "Kan Variation", "Knight Variation"],
     moves: &[
         Normal {
             role: Pawn,

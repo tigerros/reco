@@ -34,8 +34,7 @@ pub const STEINITZ_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Steinitz Attack"],
+    name: &["French Defense", "Steinitz Attack"],
     moves: &[
         Normal {
             role: Pawn,

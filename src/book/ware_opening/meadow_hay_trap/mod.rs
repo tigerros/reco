@@ -34,8 +34,7 @@ pub const MEADOW_HAY_TRAP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Ware Opening",
-    variation: &["Meadow Hay Trap"],
+    name: &["Ware Opening", "Meadow Hay Trap"],
     moves: &[
         Normal {
             role: Pawn,

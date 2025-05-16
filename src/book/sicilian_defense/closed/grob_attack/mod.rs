@@ -34,8 +34,7 @@ pub const GROB_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Closed", "Grob Attack"],
+    name: &["Sicilian Defense", "Closed", "Grob Attack"],
     moves: &[
         Normal {
             role: Pawn,

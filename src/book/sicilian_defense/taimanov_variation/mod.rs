@@ -35,8 +35,7 @@ pub const TAIMANOV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Taimanov Variation"],
+        name: &["Sicilian Defense", "Taimanov Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const TAIMANOV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Taimanov Variation"],
+        name: &["Sicilian Defense", "Taimanov Variation"],
         moves: &[
             Normal {
                 role: Pawn,

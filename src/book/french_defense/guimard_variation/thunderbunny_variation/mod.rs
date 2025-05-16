@@ -34,8 +34,11 @@ pub const THUNDERBUNNY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<3>(),
     },
-    name: "French Defense",
-    variation: &["Guimard Variation", "Thunderbunny Variation"],
+    name: &[
+        "French Defense",
+        "Guimard Variation",
+        "Thunderbunny Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

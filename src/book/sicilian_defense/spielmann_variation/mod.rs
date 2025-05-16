@@ -34,8 +34,7 @@ pub const SPIELMANN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Spielmann Variation"],
+    name: &["Sicilian Defense", "Spielmann Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ACCELERATED_GURGENIDZE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Rat Defense",
-    variation: &["Accelerated Gurgenidze"],
+    name: &["Rat Defense", "Accelerated Gurgenidze"],
     moves: &[
         Normal {
             role: Pawn,

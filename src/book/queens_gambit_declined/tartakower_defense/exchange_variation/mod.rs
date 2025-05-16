@@ -34,8 +34,11 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Tartakower Defense", "Exchange Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Tartakower Defense",
+        "Exchange Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

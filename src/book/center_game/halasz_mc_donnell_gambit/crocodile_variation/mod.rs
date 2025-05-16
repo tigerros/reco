@@ -34,8 +34,11 @@ pub const CROCODILE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Center Game",
-    variation: &["Halasz-McDonnell Gambit", "Crocodile Variation"],
+    name: &[
+        "Center Game",
+        "Halasz-McDonnell Gambit",
+        "Crocodile Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

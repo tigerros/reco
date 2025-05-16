@@ -34,8 +34,7 @@ pub const MAC_CUTCHEON_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<12>(),
     },
-    name: "French Defense",
-    variation: &["MacCutcheon Variation"],
+    name: &["French Defense", "MacCutcheon Variation"],
     moves: &[
         Normal {
             role: Pawn,

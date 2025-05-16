@@ -34,8 +34,12 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<36>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Classical Variation", "Noa Variation", "Main Line"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Noa Variation",
+        "Main Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const RUSSIAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Classical Defense", "Russian Gambit"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Classical Defense",
+        "Russian Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

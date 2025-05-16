@@ -34,8 +34,12 @@ pub const BRONSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<55>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Normal Variation", "Gligoric System", "Bronstein Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Normal Variation",
+        "Gligoric System",
+        "Bronstein Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

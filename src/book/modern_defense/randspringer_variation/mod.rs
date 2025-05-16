@@ -34,8 +34,7 @@ pub const RANDSPRINGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Modern Defense",
-    variation: &["Randspringer Variation"],
+    name: &["Modern Defense", "Randspringer Variation"],
     moves: &[
         Normal {
             role: Pawn,

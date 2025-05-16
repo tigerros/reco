@@ -34,8 +34,12 @@ pub const ANTI_ENGLISH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<90>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "English Attack", "Anti-English"],
+    name: &[
+        "Sicilian Defense",
+        "Najdorf Variation",
+        "English Attack",
+        "Anti-English",
+    ],
     moves: &[
         Normal {
             role: Pawn,

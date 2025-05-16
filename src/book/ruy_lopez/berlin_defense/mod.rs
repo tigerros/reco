@@ -35,8 +35,7 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<65>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Berlin Defense"],
+        name: &["Ruy Lopez", "Berlin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -116,8 +115,7 @@ pub const BERLIN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<65>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Berlin Defense"],
+        name: &["Ruy Lopez", "Berlin Defense"],
         moves: &[
             Normal {
                 role: Pawn,

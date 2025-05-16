@@ -34,8 +34,7 @@ pub const ERBEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Vienna Game",
-    variation: &["Mieses Variation", "Erben Gambit"],
+    name: &["Vienna Game", "Mieses Variation", "Erben Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MILES_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Miles Defense"],
+    name: &["King's Gambit Declined", "Miles Defense"],
     moves: &[
         Normal {
             role: Pawn,

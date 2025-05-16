@@ -34,8 +34,7 @@ pub const MONKEYS_BUM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Bishop Attack", "Monkey's Bum"],
+    name: &["Modern Defense", "Bishop Attack", "Monkey's Bum"],
     moves: &[
         Normal {
             role: Pawn,

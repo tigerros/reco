@@ -34,8 +34,7 @@ pub const SLAV_INDIAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Slav Indian",
-    variation: &[],
+    name: &["Slav Indian"],
     moves: &[
         Normal {
             role: Pawn,

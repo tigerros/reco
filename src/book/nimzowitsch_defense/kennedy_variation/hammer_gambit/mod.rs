@@ -34,8 +34,7 @@ pub const HAMMER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Kennedy Variation", "Hammer Gambit"],
+    name: &["Nimzowitsch Defense", "Kennedy Variation", "Hammer Gambit"],
     moves: &[
         Normal {
             role: Pawn,

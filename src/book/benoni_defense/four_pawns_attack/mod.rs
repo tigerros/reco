@@ -34,8 +34,7 @@ pub const FOUR_PAWNS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<68>(),
     },
-    name: "Benoni Defense",
-    variation: &["Four Pawns Attack"],
+    name: &["Benoni Defense", "Four Pawns Attack"],
     moves: &[
         Normal {
             role: Pawn,

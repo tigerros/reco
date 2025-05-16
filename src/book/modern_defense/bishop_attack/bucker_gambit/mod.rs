@@ -34,8 +34,7 @@ pub const BUCKER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Bishop Attack", "Bücker Gambit"],
+    name: &["Modern Defense", "Bishop Attack", "Bücker Gambit"],
     moves: &[
         Normal {
             role: Pawn,

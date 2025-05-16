@@ -34,8 +34,7 @@ pub const PRINS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Euwe Attack", "Prins Gambit"],
+    name: &["Sicilian Defense", "Euwe Attack", "Prins Gambit"],
     moves: &[
         Normal {
             role: Pawn,

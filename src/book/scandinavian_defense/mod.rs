@@ -35,8 +35,7 @@ pub const SCANDINAVIAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Scandinavian Defense",
-        variation: &[],
+        name: &["Scandinavian Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -94,8 +93,7 @@ pub const SCANDINAVIAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Scandinavian Defense",
-        variation: &[],
+        name: &["Scandinavian Defense"],
         moves: &[
             Normal {
                 role: Pawn,

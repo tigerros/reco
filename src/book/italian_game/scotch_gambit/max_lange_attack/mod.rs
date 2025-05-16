@@ -35,8 +35,7 @@ pub const MAX_LANGE_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<56>(),
         },
-        name: "Italian Game",
-        variation: &["Scotch Gambit", "Max Lange Attack"],
+        name: &["Italian Game", "Scotch Gambit", "Max Lange Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -157,8 +156,7 @@ pub const MAX_LANGE_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<56>(),
         },
-        name: "Italian Game",
-        variation: &["Scotch Gambit", "Max Lange Attack"],
+        name: &["Italian Game", "Scotch Gambit", "Max Lange Attack"],
         moves: &[
             Normal {
                 role: Pawn,

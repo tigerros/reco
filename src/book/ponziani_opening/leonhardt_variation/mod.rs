@@ -34,8 +34,7 @@ pub const LEONHARDT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &["Leonhardt Variation"],
+    name: &["Ponziani Opening", "Leonhardt Variation"],
     moves: &[
         Normal {
             role: Pawn,

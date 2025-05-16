@@ -34,8 +34,12 @@ pub const TAL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Two Knights Variation", "Suttles Variation", "Tal Gambit"],
+    name: &[
+        "Modern Defense",
+        "Two Knights Variation",
+        "Suttles Variation",
+        "Tal Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

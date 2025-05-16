@@ -34,8 +34,11 @@ pub const NORMAL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<8>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Albin Countergambit", "Normal Line"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Albin Countergambit",
+        "Normal Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

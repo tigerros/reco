@@ -34,8 +34,11 @@ pub const GUSEV_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Austrian Defense", "Gusev Countergambit"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Austrian Defense",
+        "Gusev Countergambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

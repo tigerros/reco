@@ -34,8 +34,7 @@ pub const KINGS_INDIAN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Benoni Defense",
-    variation: &["King's Indian System"],
+    name: &["Benoni Defense", "King's Indian System"],
     moves: &[
         Normal {
             role: Pawn,

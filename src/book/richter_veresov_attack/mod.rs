@@ -35,8 +35,7 @@ pub const RICHTER_VERESOV_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Richter-Veresov Attack",
-        variation: &[],
+        name: &["Richter-Veresov Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const RICHTER_VERESOV_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Richter-Veresov Attack",
-        variation: &[],
+        name: &["Richter-Veresov Attack"],
         moves: &[
             Normal {
                 role: Pawn,

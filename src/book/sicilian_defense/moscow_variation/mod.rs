@@ -34,8 +34,7 @@ pub const MOSCOW_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Moscow Variation"],
+    name: &["Sicilian Defense", "Moscow Variation"],
     moves: &[
         Normal {
             role: Pawn,

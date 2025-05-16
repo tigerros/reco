@@ -34,8 +34,11 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Panteldakis Countergambit", "Symmetrical Variation"],
+    name: &[
+        "King's Gambit Declined",
+        "Panteldakis Countergambit",
+        "Symmetrical Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

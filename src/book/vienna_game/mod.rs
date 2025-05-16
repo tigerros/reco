@@ -34,8 +34,7 @@ pub const VIENNA_GAME: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &[],
+    name: &["Vienna Game"],
     moves: &[
         Normal {
             role: Pawn,

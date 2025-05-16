@@ -34,8 +34,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<86>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Exchange Variation", "Classical Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Exchange Variation",
+        "Classical Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

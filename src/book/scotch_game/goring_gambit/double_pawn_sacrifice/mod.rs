@@ -34,8 +34,7 @@ pub const DOUBLE_PAWN_SACRIFICE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Göring Gambit", "Double Pawn Sacrifice"],
+    name: &["Scotch Game", "Göring Gambit", "Double Pawn Sacrifice"],
     moves: &[
         Normal {
             role: Pawn,

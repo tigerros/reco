@@ -34,8 +34,7 @@ pub const QUEENS_GAMBIT_INVITATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Queen's Gambit Invitation"],
+    name: &["Zukertort Opening", "Queen's Gambit Invitation"],
     moves: &[
         Normal {
             role: Knight,

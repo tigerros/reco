@@ -34,8 +34,12 @@ pub const FLOHR_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<62>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Orthodox Defense", "Rubinstein Variation", "Flohr Line"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Orthodox Defense",
+        "Rubinstein Variation",
+        "Flohr Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

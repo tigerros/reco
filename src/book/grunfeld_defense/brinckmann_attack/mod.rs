@@ -34,8 +34,7 @@ pub const BRINCKMANN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Brinckmann Attack"],
+    name: &["Grünfeld Defense", "Brinckmann Attack"],
     moves: &[
         Normal {
             role: Pawn,

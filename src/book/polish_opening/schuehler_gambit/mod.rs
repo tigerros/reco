@@ -34,8 +34,7 @@ pub const SCHUEHLER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Polish Opening",
-    variation: &["Schuehler Gambit"],
+    name: &["Polish Opening", "Schuehler Gambit"],
     moves: &[
         Normal {
             role: Pawn,

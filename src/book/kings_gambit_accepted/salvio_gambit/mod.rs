@@ -34,8 +34,7 @@ pub const SALVIO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Salvio Gambit"],
+    name: &["King's Gambit Accepted", "Salvio Gambit"],
     moves: &[
         Normal {
             role: Pawn,

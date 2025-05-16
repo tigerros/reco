@@ -34,8 +34,12 @@ pub const SHERBAKOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<89>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Sozin Attack", "Main Line", "Sherbakov Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Sozin Attack",
+        "Main Line",
+        "Sherbakov Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PIRC_CONNECTION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Pirc Connection"],
+    name: &["Nimzowitsch Defense", "Pirc Connection"],
     moves: &[
         Normal {
             role: Pawn,

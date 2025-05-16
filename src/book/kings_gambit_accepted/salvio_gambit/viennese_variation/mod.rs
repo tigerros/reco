@@ -34,8 +34,11 @@ pub const VIENNESE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Salvio Gambit", "Viennese Variation"],
+    name: &[
+        "King's Gambit Accepted",
+        "Salvio Gambit",
+        "Viennese Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

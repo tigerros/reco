@@ -34,8 +34,11 @@ pub const ANTI_CAMBRIDGE_SPRINGS_VARIATION: [Opening<'static, &str>; 1] = [Openi
         volume: Volume::D,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Capablanca Variation", "Anti-Cambridge Springs Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Capablanca Variation",
+        "Anti-Cambridge Springs Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

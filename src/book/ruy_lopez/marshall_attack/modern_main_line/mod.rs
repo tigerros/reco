@@ -34,8 +34,7 @@ pub const MODERN_MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<89>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Marshall Attack", "Modern Main Line"],
+    name: &["Ruy Lopez", "Marshall Attack", "Modern Main Line"],
     moves: &[
         Normal {
             role: Pawn,

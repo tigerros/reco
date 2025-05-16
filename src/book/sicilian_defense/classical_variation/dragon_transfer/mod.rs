@@ -34,8 +34,7 @@ pub const DRAGON_TRANSFER: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Classical Variation", "Dragon Transfer"],
+    name: &["Sicilian Defense", "Classical Variation", "Dragon Transfer"],
     moves: &[
         Normal {
             role: Pawn,

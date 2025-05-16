@@ -35,8 +35,7 @@ pub const CAPABLANCA_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<30>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Capablanca Variation"],
+        name: &["Queen's Gambit Declined", "Capablanca Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -150,8 +149,7 @@ pub const CAPABLANCA_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<30>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Capablanca Variation"],
+        name: &["Queen's Gambit Declined", "Capablanca Variation"],
         moves: &[
             Normal {
                 role: Pawn,

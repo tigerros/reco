@@ -34,8 +34,11 @@ pub const SCHIFFLER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Polish Opening",
-    variation: &["King's Indian Variation", "Schiffler Attack"],
+    name: &[
+        "Polish Opening",
+        "King's Indian Variation",
+        "Schiffler Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Classical Attack", "Chigorin Variation", "Main Line"],
+    name: &[
+        "Petrov's Defense",
+        "Classical Attack",
+        "Chigorin Variation",
+        "Main Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

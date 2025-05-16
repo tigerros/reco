@@ -34,8 +34,11 @@ pub const LASKER_TRAP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<8>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Albin Countergambit", "Lasker Trap"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Albin Countergambit",
+        "Lasker Trap",
+    ],
     moves: &[
         Normal {
             role: Pawn,

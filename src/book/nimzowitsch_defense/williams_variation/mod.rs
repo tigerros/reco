@@ -34,8 +34,7 @@ pub const WILLIAMS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Williams Variation"],
+    name: &["Nimzowitsch Defense", "Williams Variation"],
     moves: &[
         Normal {
             role: Pawn,

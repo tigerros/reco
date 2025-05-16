@@ -34,8 +34,7 @@ pub const BARDELEBEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<29>(),
     },
-    name: "Vienna Game",
-    variation: &["Vienna Gambit", "Bardeleben Variation"],
+    name: &["Vienna Game", "Vienna Gambit", "Bardeleben Variation"],
     moves: &[
         Normal {
             role: Pawn,

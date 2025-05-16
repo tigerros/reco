@@ -34,8 +34,7 @@ pub const ULTRA_DELAYED_EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Openi
         volume: Volume::D,
         category: RangedU8::new_static::<79>(),
     },
-    name: "Neo-Grünfeld Defense",
-    variation: &["Ultra-Delayed Exchange Variation"],
+    name: &["Neo-Grünfeld Defense", "Ultra-Delayed Exchange Variation"],
     moves: &[
         Normal {
             role: Pawn,

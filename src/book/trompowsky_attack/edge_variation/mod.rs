@@ -34,8 +34,7 @@ pub const EDGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Trompowsky Attack",
-    variation: &["Edge Variation"],
+    name: &["Trompowsky Attack", "Edge Variation"],
     moves: &[
         Normal {
             role: Pawn,

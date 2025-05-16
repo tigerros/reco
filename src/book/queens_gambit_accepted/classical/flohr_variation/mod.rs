@@ -34,8 +34,7 @@ pub const FLOHR_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Classical", "Flohr Variation"],
+    name: &["Queen's Gambit Accepted", "Classical", "Flohr Variation"],
     moves: &[
         Normal {
             role: Pawn,

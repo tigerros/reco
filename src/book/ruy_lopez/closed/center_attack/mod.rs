@@ -34,8 +34,7 @@ pub const CENTER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<84>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Center Attack"],
+    name: &["Ruy Lopez", "Closed", "Center Attack"],
     moves: &[
         Normal {
             role: Pawn,

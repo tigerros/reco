@@ -34,8 +34,12 @@ pub const CHINESE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Classical Attack", "Marshall Variation", "Chinese Gambit"],
+    name: &[
+        "Petrov's Defense",
+        "Classical Attack",
+        "Marshall Variation",
+        "Chinese Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

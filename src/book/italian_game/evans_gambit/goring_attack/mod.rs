@@ -34,8 +34,7 @@ pub const GORING_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Göring Attack"],
+    name: &["Italian Game", "Evans Gambit", "Göring Attack"],
     moves: &[
         Normal {
             role: Pawn,

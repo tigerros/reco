@@ -34,8 +34,7 @@ pub const SOKOLSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Catalan Opening",
-    variation: &["Closed", "Sokolsky Variation"],
+    name: &["Catalan Opening", "Closed", "Sokolsky Variation"],
     moves: &[
         Normal {
             role: Pawn,

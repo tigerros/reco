@@ -34,8 +34,7 @@ pub const MODERN_SHARP_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Catalan Opening",
-    variation: &["Open Defense", "Modern Sharp Variation"],
+    name: &["Catalan Opening", "Open Defense", "Modern Sharp Variation"],
     moves: &[
         Normal {
             role: Pawn,

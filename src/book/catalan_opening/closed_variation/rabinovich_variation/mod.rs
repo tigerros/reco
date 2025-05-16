@@ -34,8 +34,11 @@ pub const RABINOVICH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Catalan Opening",
-    variation: &["Closed Variation", "Rabinovich Variation"],
+    name: &[
+        "Catalan Opening",
+        "Closed Variation",
+        "Rabinovich Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

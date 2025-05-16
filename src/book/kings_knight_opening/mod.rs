@@ -34,8 +34,7 @@ pub const KINGS_KNIGHT_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "King's Knight Opening",
-    variation: &[],
+    name: &["King's Knight Opening"],
     moves: &[
         Normal {
             role: Pawn,

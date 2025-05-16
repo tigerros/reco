@@ -34,8 +34,7 @@ pub const ELLIS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<10>(),
     },
-    name: "French Defense",
-    variation: &["Rubinstein Variation", "Ellis Gambit"],
+    name: &["French Defense", "Rubinstein Variation", "Ellis Gambit"],
     moves: &[
         Normal {
             role: Pawn,

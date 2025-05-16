@@ -34,8 +34,12 @@ pub const SPASSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<89>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Marshall Attack", "Main Line", "Spassky Variation"],
+    name: &[
+        "Ruy Lopez",
+        "Marshall Attack",
+        "Main Line",
+        "Spassky Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

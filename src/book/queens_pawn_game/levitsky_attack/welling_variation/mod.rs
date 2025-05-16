@@ -34,8 +34,7 @@ pub const WELLING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Levitsky Attack", "Welling Variation"],
+    name: &["Queen's Pawn Game", "Levitsky Attack", "Welling Variation"],
     moves: &[
         Normal {
             role: Pawn,

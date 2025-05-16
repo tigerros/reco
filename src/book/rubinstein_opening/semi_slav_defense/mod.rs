@@ -35,8 +35,7 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Rubinstein Opening",
-        variation: &["Semi-Slav Defense"],
+        name: &["Rubinstein Opening", "Semi-Slav Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -166,8 +165,7 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Rubinstein Opening",
-        variation: &["Semi-Slav Defense"],
+        name: &["Rubinstein Opening", "Semi-Slav Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -290,8 +288,7 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Rubinstein Opening",
-        variation: &["Semi-Slav Defense"],
+        name: &["Rubinstein Opening", "Semi-Slav Defense"],
         moves: &[
             Normal {
                 role: Pawn,

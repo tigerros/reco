@@ -34,8 +34,7 @@ pub const LARSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Larsen Variation"],
+    name: &["Philidor Defense", "Larsen Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BELLON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<84>(),
     },
-    name: "Dutch Defense",
-    variation: &["Bellon Gambit"],
+    name: &["Dutch Defense", "Bellon Gambit"],
     moves: &[
         Normal {
             role: Pawn,

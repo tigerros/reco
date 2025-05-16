@@ -34,8 +34,7 @@ pub const RHAMPHORHYNCHUS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Colle System",
-    variation: &["Rhamphorhynchus Variation"],
+    name: &["Colle System", "Rhamphorhynchus Variation"],
     moves: &[
         Normal {
             role: Knight,

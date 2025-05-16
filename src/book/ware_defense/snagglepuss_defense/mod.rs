@@ -34,8 +34,7 @@ pub const SNAGGLEPUSS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Ware Defense",
-    variation: &["Snagglepuss Defense"],
+    name: &["Ware Defense", "Snagglepuss Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,8 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<24>(),
     },
-    name: "English Opening",
-    variation: &[
+    name: &[
+        "English Opening",
         "King's English Variation",
         "Two Knights Variation",
         "Fianchetto Line",

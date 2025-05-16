@@ -34,8 +34,7 @@ pub const GRIGORIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Polish Opening",
-    variation: &["Grigorian Variation"],
+    name: &["Polish Opening", "Grigorian Variation"],
     moves: &[
         Normal {
             role: Pawn,

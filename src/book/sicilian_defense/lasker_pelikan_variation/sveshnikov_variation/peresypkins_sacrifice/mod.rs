@@ -34,8 +34,8 @@ pub const PERESYPKINS_SACRIFICE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<33>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Lasker-Pelikan Variation",
         "Sveshnikov Variation",
         "Peresypkin's Sacrifice",

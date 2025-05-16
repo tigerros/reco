@@ -34,8 +34,11 @@ pub const ALATORTSEV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Alekhine Defense", "Alatortsev Variation"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Alekhine Defense",
+        "Alatortsev Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

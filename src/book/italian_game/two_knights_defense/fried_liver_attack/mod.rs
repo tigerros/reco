@@ -34,8 +34,7 @@ pub const FRIED_LIVER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Fried Liver Attack"],
+    name: &["Italian Game", "Two Knights Defense", "Fried Liver Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const JENDROSSEK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Jendrossek Gambit"],
+    name: &["Van Geet Opening", "Jendrossek Gambit"],
     moves: &[
         Normal {
             role: Knight,

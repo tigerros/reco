@@ -34,8 +34,7 @@ pub const SZEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Taimanov Variation", "Szén Variation"],
+    name: &["Sicilian Defense", "Taimanov Variation", "Szén Variation"],
     moves: &[
         Normal {
             role: Pawn,

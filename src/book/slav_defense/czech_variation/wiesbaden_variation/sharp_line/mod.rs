@@ -34,8 +34,12 @@ pub const SHARP_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Slav Defense",
-    variation: &["Czech Variation", "Wiesbaden Variation", "Sharp Line"],
+    name: &[
+        "Slav Defense",
+        "Czech Variation",
+        "Wiesbaden Variation",
+        "Sharp Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

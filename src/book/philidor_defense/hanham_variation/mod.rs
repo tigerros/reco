@@ -34,8 +34,7 @@ pub const HANHAM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Hanham Variation"],
+    name: &["Philidor Defense", "Hanham Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const GRECO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Central Variation", "Greco Variation"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Central Variation",
+        "Greco Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Four Knights Game",
-    variation: &["Scotch Variation", "Belgrade Gambit", "Modern Defense"],
+    name: &[
+        "Four Knights Game",
+        "Scotch Variation",
+        "Belgrade Gambit",
+        "Modern Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

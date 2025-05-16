@@ -34,8 +34,11 @@ pub const DOUBLE_FIANCHETTO_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<64>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Fianchetto Variation", "Double Fianchetto Attack"],
+    name: &[
+        "King's Indian Defense",
+        "Fianchetto Variation",
+        "Double Fianchetto Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ALAPIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<14>(),
     },
-    name: "French Defense",
-    variation: &["Classical Variation", "Alapin Variation"],
+    name: &["French Defense", "Classical Variation", "Alapin Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const CHEKHOVER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<95>(),
     },
-    name: "Dutch Defense",
-    variation: &["Stonewall Variation", "Chekhover Variation"],
+    name: &[
+        "Dutch Defense",
+        "Stonewall Variation",
+        "Chekhover Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const TENNISON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Tennison Gambit"],
+    name: &["Zukertort Opening", "Tennison Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PTERANODON: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Eastern", "Pteranodon"],
+    name: &["Pterodactyl Defense", "Eastern", "Pteranodon"],
     moves: &[
         Normal {
             role: Pawn,

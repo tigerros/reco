@@ -34,8 +34,7 @@ pub const SCHULZE_MULLER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Schulze-Müller Gambit"],
+    name: &["King's Pawn Game", "Schulze-Müller Gambit"],
     moves: &[
         Normal {
             role: Pawn,

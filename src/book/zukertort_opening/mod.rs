@@ -35,8 +35,7 @@ pub const ZUKERTORT_OPENING: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<4>(),
         },
-        name: "Zukertort Opening",
-        variation: &[],
+        name: &["Zukertort Opening"],
         moves: &[Normal {
             role: Knight,
             from: G1,
@@ -78,8 +77,7 @@ pub const ZUKERTORT_OPENING: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Zukertort Opening",
-        variation: &[],
+        name: &["Zukertort Opening"],
         moves: &[
             Normal {
                 role: Knight,
@@ -144,8 +142,7 @@ pub const ZUKERTORT_OPENING: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Zukertort Opening",
-        variation: &[],
+        name: &["Zukertort Opening"],
         moves: &[
             Normal {
                 role: Knight,
@@ -196,8 +193,7 @@ pub const ZUKERTORT_OPENING: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Zukertort Opening",
-        variation: &[],
+        name: &["Zukertort Opening"],
         moves: &[
             Normal {
                 role: Knight,

@@ -34,8 +34,7 @@ pub const GAJEWSKI_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<96>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Chigorin Defense", "Gajewski Gambit"],
+    name: &["Ruy Lopez", "Closed", "Chigorin Defense", "Gajewski Gambit"],
     moves: &[
         Normal {
             role: Pawn,

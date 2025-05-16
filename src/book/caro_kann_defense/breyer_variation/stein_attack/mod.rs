@@ -34,8 +34,7 @@ pub const STEIN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Breyer Variation", "Stein Attack"],
+    name: &["Caro-Kann Defense", "Breyer Variation", "Stein Attack"],
     moves: &[
         Normal {
             role: Pawn,

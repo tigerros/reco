@@ -34,8 +34,7 @@ pub const COLOGNE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Ware Opening",
-    variation: &["Cologne Gambit"],
+    name: &["Ware Opening", "Cologne Gambit"],
     moves: &[
         Normal {
             role: Pawn,

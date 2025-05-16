@@ -34,8 +34,7 @@ pub const RESHEVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Reshevsky Variation"],
+    name: &["Nimzo-Indian Defense", "Reshevsky Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,11 @@ pub const VAN_DER_WIEL_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Advance Variation", "Van der Wiel Attack"],
+        name: &[
+            "Caro-Kann Defense",
+            "Advance Variation",
+            "Van der Wiel Attack",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -164,8 +167,11 @@ pub const VAN_DER_WIEL_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Advance Variation", "Van der Wiel Attack"],
+        name: &[
+            "Caro-Kann Defense",
+            "Advance Variation",
+            "Van der Wiel Attack",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,11 @@ pub const KRAMNIK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Fianchetto Variation", "Kramnik Variation"],
+    name: &[
+        "Queen's Indian Defense",
+        "Fianchetto Variation",
+        "Kramnik Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PSEUDO_SAMISCH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit Declined",
-    variation: &["Pseudo-Sämisch"],
+    name: &["Benko Gambit Declined", "Pseudo-Sämisch"],
     moves: &[
         Normal {
             role: Pawn,

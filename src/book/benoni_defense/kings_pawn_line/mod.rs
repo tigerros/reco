@@ -34,8 +34,7 @@ pub const KINGS_PAWN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<65>(),
     },
-    name: "Benoni Defense",
-    variation: &["King's Pawn Line"],
+    name: &["Benoni Defense", "King's Pawn Line"],
     moves: &[
         Normal {
             role: Pawn,

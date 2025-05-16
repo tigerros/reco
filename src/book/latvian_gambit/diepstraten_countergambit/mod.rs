@@ -34,8 +34,7 @@ pub const DIEPSTRATEN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Diepstraten Countergambit"],
+    name: &["Latvian Gambit", "Diepstraten Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

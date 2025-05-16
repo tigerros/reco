@@ -34,8 +34,11 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Semi-Tarrasch Defense", "Symmetrical Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Semi-Tarrasch Defense",
+        "Symmetrical Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

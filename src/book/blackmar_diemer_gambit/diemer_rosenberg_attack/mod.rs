@@ -34,8 +34,7 @@ pub const DIEMER_ROSENBERG_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["Diemer-Rosenberg Attack"],
+    name: &["Blackmar-Diemer Gambit", "Diemer-Rosenberg Attack"],
     moves: &[
         Normal {
             role: Pawn,

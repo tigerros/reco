@@ -34,8 +34,12 @@ pub const ALEKHINE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Chigorin Defense", "Main Line", "Alekhine Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Chigorin Defense",
+        "Main Line",
+        "Alekhine Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

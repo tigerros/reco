@@ -34,8 +34,8 @@ pub const MAR_DEL_PLATA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &[
+    name: &[
+        "Queen's Gambit Declined",
         "Lasker Defense",
         "Bernstein Variation",
         "Mar del Plata Gambit",

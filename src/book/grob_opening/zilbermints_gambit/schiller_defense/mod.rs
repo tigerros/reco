@@ -34,8 +34,7 @@ pub const SCHILLER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Zilbermints Gambit", "Schiller Defense"],
+    name: &["Grob Opening", "Zilbermints Gambit", "Schiller Defense"],
     moves: &[
         Normal {
             role: Pawn,

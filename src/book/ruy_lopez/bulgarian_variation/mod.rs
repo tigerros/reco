@@ -34,8 +34,7 @@ pub const BULGARIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Bulgarian Variation"],
+    name: &["Ruy Lopez", "Bulgarian Variation"],
     moves: &[
         Normal {
             role: Pawn,

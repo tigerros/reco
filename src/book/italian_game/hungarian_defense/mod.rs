@@ -34,8 +34,7 @@ pub const HUNGARIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Hungarian Defense"],
+    name: &["Italian Game", "Hungarian Defense"],
     moves: &[
         Normal {
             role: Pawn,

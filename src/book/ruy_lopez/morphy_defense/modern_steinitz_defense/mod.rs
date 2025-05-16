@@ -35,8 +35,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<71>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<71>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -237,8 +235,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<71>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -331,8 +328,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<72>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -426,8 +422,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<73>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -548,8 +543,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<73>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -663,8 +657,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<74>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -786,8 +779,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<74>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -887,8 +879,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<75>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -1009,8 +1000,7 @@ pub const MODERN_STEINITZ_DEFENSE: [Opening<'static, &str>; 10] = [
             volume: Volume::C,
             category: RangedU8::new_static::<75>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Modern Steinitz Defense"],
+        name: &["Ruy Lopez", "Morphy Defense", "Modern Steinitz Defense"],
         moves: &[
             Normal {
                 role: Pawn,

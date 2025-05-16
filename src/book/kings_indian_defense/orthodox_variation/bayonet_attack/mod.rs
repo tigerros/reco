@@ -34,8 +34,11 @@ pub const BAYONET_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<97>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Bayonet Attack"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Bayonet Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

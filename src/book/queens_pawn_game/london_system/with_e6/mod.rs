@@ -34,8 +34,7 @@ pub const WITH_E6: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["London System", "with e6"],
+    name: &["Queen's Pawn Game", "London System", "with e6"],
     moves: &[
         Normal {
             role: Pawn,

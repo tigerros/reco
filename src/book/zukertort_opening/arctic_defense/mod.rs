@@ -34,8 +34,7 @@ pub const ARCTIC_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Arctic Defense"],
+    name: &["Zukertort Opening", "Arctic Defense"],
     moves: &[
         Normal {
             role: Knight,

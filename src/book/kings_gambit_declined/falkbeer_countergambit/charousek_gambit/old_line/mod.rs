@@ -34,8 +34,12 @@ pub const OLD_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<32>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Falkbeer Countergambit", "Charousek Gambit", "Old Line"],
+    name: &[
+        "King's Gambit Declined",
+        "Falkbeer Countergambit",
+        "Charousek Gambit",
+        "Old Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

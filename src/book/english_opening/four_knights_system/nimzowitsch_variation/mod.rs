@@ -34,8 +34,11 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<28>(),
     },
-    name: "English Opening",
-    variation: &["Four Knights System", "Nimzowitsch Variation"],
+    name: &[
+        "English Opening",
+        "Four Knights System",
+        "Nimzowitsch Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SNAIL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Snail Variation"],
+    name: &["Benoni Defense", "Snail Variation"],
     moves: &[
         Normal {
             role: Pawn,

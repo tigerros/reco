@@ -35,8 +35,11 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<49>(),
         },
-        name: "Four Knights Game",
-        variation: &["Spanish Variation", "Symmetrical Variation"],
+        name: &[
+            "Four Knights Game",
+            "Spanish Variation",
+            "Symmetrical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -201,8 +204,11 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<49>(),
         },
-        name: "Four Knights Game",
-        variation: &["Spanish Variation", "Symmetrical Variation"],
+        name: &[
+            "Four Knights Game",
+            "Spanish Variation",
+            "Symmetrical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -325,8 +331,11 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<49>(),
         },
-        name: "Four Knights Game",
-        variation: &["Spanish Variation", "Symmetrical Variation"],
+        name: &[
+            "Four Knights Game",
+            "Spanish Variation",
+            "Symmetrical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -442,8 +451,11 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<49>(),
         },
-        name: "Four Knights Game",
-        variation: &["Spanish Variation", "Symmetrical Variation"],
+        name: &[
+            "Four Knights Game",
+            "Spanish Variation",
+            "Symmetrical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

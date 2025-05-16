@@ -34,8 +34,7 @@ pub const ENGLISH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<90>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "English Attack"],
+    name: &["Sicilian Defense", "Najdorf Variation", "English Attack"],
     moves: &[
         Normal {
             role: Pawn,

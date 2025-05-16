@@ -34,8 +34,11 @@ pub const LINKSSPRINGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Kennedy Variation", "Linksspringer Variation"],
+    name: &[
+        "Nimzowitsch Defense",
+        "Kennedy Variation",
+        "Linksspringer Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

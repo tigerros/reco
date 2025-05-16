@@ -34,8 +34,7 @@ pub const KURAJICA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<13>(),
     },
-    name: "English Opening",
-    variation: &["Agincourt Defense", "Kurajica Defense"],
+    name: &["English Opening", "Agincourt Defense", "Kurajica Defense"],
     moves: &[
         Normal {
             role: Pawn,

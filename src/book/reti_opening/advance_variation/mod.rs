@@ -34,8 +34,7 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Réti Opening",
-    variation: &["Advance Variation"],
+    name: &["Réti Opening", "Advance Variation"],
     moves: &[
         Normal {
             role: Knight,

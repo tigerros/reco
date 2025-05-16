@@ -34,8 +34,7 @@ pub const SEMI_BENONI: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Benoni Defense",
-    variation: &["Semi-Benoni"],
+    name: &["Benoni Defense", "Semi-Benoni"],
     moves: &[
         Normal {
             role: Pawn,

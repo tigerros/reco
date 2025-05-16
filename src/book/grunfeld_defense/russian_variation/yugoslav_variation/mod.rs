@@ -34,8 +34,11 @@ pub const YUGOSLAV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<99>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Russian Variation", "Yugoslav Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Russian Variation",
+        "Yugoslav Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const BRYAN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Bishop's Gambit", "Bryan Countergambit"],
+    name: &[
+        "King's Gambit Accepted",
+        "Bishop's Gambit",
+        "Bryan Countergambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

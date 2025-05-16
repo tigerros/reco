@@ -34,8 +34,11 @@ pub const EUWE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Classical Variation", "Euwe Attack"],
+    name: &[
+        "King's Gambit Declined",
+        "Classical Variation",
+        "Euwe Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

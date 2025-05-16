@@ -35,8 +35,7 @@ pub const YUGOSLAV: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<59>(),
         },
-        name: "Benko Gambit Accepted",
-        variation: &["Yugoslav"],
+        name: &["Benko Gambit Accepted", "Yugoslav"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -164,8 +163,7 @@ pub const YUGOSLAV: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<59>(),
         },
-        name: "Benko Gambit Accepted",
-        variation: &["Yugoslav"],
+        name: &["Benko Gambit Accepted", "Yugoslav"],
         moves: &[
             Normal {
                 role: Pawn,

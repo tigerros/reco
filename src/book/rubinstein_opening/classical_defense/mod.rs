@@ -34,8 +34,7 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Rubinstein Opening",
-    variation: &["Classical Defense"],
+    name: &["Rubinstein Opening", "Classical Defense"],
     moves: &[
         Normal {
             role: Pawn,

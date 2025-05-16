@@ -34,8 +34,12 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<19>(),
     },
-    name: "Slav Defense",
-    variation: &["Czech Variation", "Dutch Variation", "Sämisch Variation"],
+    name: &[
+        "Slav Defense",
+        "Czech Variation",
+        "Dutch Variation",
+        "Sämisch Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

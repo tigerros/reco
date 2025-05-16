@@ -34,8 +34,11 @@ pub const CHIGORINS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Bishop's Gambit", "Chigorin's Attack"],
+    name: &[
+        "King's Gambit Accepted",
+        "Bishop's Gambit",
+        "Chigorin's Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

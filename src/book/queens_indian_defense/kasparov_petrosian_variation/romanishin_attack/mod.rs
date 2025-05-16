@@ -34,8 +34,11 @@ pub const ROMANISHIN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Kasparov-Petrosian Variation", "Romanishin Attack"],
+    name: &[
+        "Queen's Indian Defense",
+        "Kasparov-Petrosian Variation",
+        "Romanishin Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

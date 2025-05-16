@@ -35,8 +35,7 @@ pub const ENGLISH_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<40>(),
         },
-        name: "English Defense",
-        variation: &[],
+        name: &["English Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -87,8 +86,7 @@ pub const ENGLISH_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<40>(),
         },
-        name: "English Defense",
-        variation: &[],
+        name: &["English Defense"],
         moves: &[
             Normal {
                 role: Pawn,

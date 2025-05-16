@@ -34,8 +34,7 @@ pub const KINGSIDE_FIANCHETTO: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Kingside Fianchetto"],
+    name: &["Zukertort Opening", "Kingside Fianchetto"],
     moves: &[
         Normal {
             role: Knight,

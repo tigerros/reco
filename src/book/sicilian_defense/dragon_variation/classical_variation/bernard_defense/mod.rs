@@ -34,8 +34,12 @@ pub const BERNARD_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<74>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Classical Variation", "Bernard Defense"],
+    name: &[
+        "Sicilian Defense",
+        "Dragon Variation",
+        "Classical Variation",
+        "Bernard Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HEDGEHOG_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<17>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Indian Defense", "Hedgehog System"],
+    name: &["English Opening", "Anglo-Indian Defense", "Hedgehog System"],
     moves: &[
         Normal {
             role: Pawn,

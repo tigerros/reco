@@ -34,8 +34,7 @@ pub const BULLA_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<13>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Exchange Variation", "Bulla Attack"],
+    name: &["Caro-Kann Defense", "Exchange Variation", "Bulla Attack"],
     moves: &[
         Normal {
             role: Pawn,

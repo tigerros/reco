@@ -34,8 +34,7 @@ pub const BRONSTEIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Vienna Game",
-    variation: &["Stanley Variation", "Bronstein Gambit"],
+    name: &["Vienna Game", "Stanley Variation", "Bronstein Gambit"],
     moves: &[
         Normal {
             role: Pawn,

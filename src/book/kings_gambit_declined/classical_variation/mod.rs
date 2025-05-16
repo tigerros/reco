@@ -35,8 +35,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<30>(),
         },
-        name: "King's Gambit Declined",
-        variation: &["Classical Variation"],
+        name: &["King's Gambit Declined", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<30>(),
         },
-        name: "King's Gambit Declined",
-        variation: &["Classical Variation"],
+        name: &["King's Gambit Declined", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,

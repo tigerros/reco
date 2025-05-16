@@ -34,8 +34,7 @@ pub const HJORRING_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit Declined",
-    variation: &["Hjørring Countergambit"],
+    name: &["Benko Gambit Declined", "Hjørring Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

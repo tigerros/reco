@@ -35,8 +35,7 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<7>(),
         },
-        name: "King's Indian Attack",
-        variation: &["Keres Variation"],
+        name: &["King's Indian Attack", "Keres Variation"],
         moves: &[
             Normal {
                 role: Knight,
@@ -115,8 +114,7 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<7>(),
         },
-        name: "King's Indian Attack",
-        variation: &["Keres Variation"],
+        name: &["King's Indian Attack", "Keres Variation"],
         moves: &[
             Normal {
                 role: Knight,

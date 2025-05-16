@@ -34,8 +34,11 @@ pub const ADHIBAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<22>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Adhiban Gambit"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Adhiban Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

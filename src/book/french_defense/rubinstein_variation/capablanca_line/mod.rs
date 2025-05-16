@@ -34,8 +34,7 @@ pub const CAPABLANCA_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<10>(),
     },
-    name: "French Defense",
-    variation: &["Rubinstein Variation", "Capablanca Line"],
+    name: &["French Defense", "Rubinstein Variation", "Capablanca Line"],
     moves: &[
         Normal {
             role: Pawn,

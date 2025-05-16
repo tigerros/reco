@@ -34,8 +34,8 @@ pub const BONSDORF_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Indian Defense",
-    variation: &[
+    name: &[
+        "Indian Defense",
         "Budapest Defense",
         "Fajarowicz Defense",
         "Bonsdorf Variation",

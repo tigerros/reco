@@ -34,8 +34,7 @@ pub const KNORRE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<59>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Knorre Variation"],
+    name: &["Italian Game", "Two Knights Defense", "Knorre Variation"],
     moves: &[
         Normal {
             role: Pawn,

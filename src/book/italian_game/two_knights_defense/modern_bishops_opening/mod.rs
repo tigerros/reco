@@ -35,8 +35,11 @@ pub const MODERN_BISHOPS_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<55>(),
         },
-        name: "Italian Game",
-        variation: &["Two Knights Defense", "Modern Bishop's Opening"],
+        name: &[
+            "Italian Game",
+            "Two Knights Defense",
+            "Modern Bishop's Opening",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +132,11 @@ pub const MODERN_BISHOPS_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<55>(),
         },
-        name: "Italian Game",
-        variation: &["Two Knights Defense", "Modern Bishop's Opening"],
+        name: &[
+            "Italian Game",
+            "Two Knights Defense",
+            "Modern Bishop's Opening",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

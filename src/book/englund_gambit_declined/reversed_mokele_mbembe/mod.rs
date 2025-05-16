@@ -34,8 +34,7 @@ pub const REVERSED_MOKELE_MBEMBE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit Declined",
-    variation: &["Reversed Mokele Mbembe"],
+    name: &["Englund Gambit Declined", "Reversed Mokele Mbembe"],
     moves: &[
         Normal {
             role: Pawn,

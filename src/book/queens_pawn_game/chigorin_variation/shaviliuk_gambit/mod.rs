@@ -34,8 +34,11 @@ pub const SHAVILIUK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Chigorin Variation", "Shaviliuk Gambit"],
+    name: &[
+        "Queen's Pawn Game",
+        "Chigorin Variation",
+        "Shaviliuk Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

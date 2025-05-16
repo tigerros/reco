@@ -34,8 +34,7 @@ pub const ZILBERMINTS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Zilbermints Gambit"],
+    name: &["Grob Opening", "Zilbermints Gambit"],
     moves: &[
         Normal {
             role: Pawn,

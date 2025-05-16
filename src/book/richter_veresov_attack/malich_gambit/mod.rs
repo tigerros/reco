@@ -34,8 +34,7 @@ pub const MALICH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Richter-Veresov Attack",
-    variation: &["Malich Gambit"],
+    name: &["Richter-Veresov Attack", "Malich Gambit"],
     moves: &[
         Normal {
             role: Pawn,

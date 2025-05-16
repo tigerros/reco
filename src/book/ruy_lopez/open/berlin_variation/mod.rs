@@ -34,8 +34,7 @@ pub const BERLIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Berlin Variation"],
+    name: &["Ruy Lopez", "Open", "Berlin Variation"],
     moves: &[
         Normal {
             role: Pawn,

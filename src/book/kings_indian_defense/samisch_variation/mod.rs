@@ -35,8 +35,7 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<80>(),
         },
-        name: "King's Indian Defense",
-        variation: &["Sämisch Variation"],
+        name: &["King's Indian Defense", "Sämisch Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<86>(),
         },
-        name: "King's Indian Defense",
-        variation: &["Sämisch Variation"],
+        name: &["King's Indian Defense", "Sämisch Variation"],
         moves: &[
             Normal {
                 role: Pawn,

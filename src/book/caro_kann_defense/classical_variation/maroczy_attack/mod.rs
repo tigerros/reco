@@ -34,8 +34,7 @@ pub const MAROCZY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<18>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Classical Variation", "Maróczy Attack"],
+    name: &["Caro-Kann Defense", "Classical Variation", "Maróczy Attack"],
     moves: &[
         Normal {
             role: Pawn,

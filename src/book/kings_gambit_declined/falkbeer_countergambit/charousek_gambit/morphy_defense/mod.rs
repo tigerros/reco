@@ -34,8 +34,8 @@ pub const MORPHY_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<31>(),
     },
-    name: "King's Gambit Declined",
-    variation: &[
+    name: &[
+        "King's Gambit Declined",
         "Falkbeer Countergambit",
         "Charousek Gambit",
         "Morphy Defense",

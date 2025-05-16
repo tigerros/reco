@@ -34,8 +34,12 @@ pub const NIKITIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &["Spanish Variation", "Harrwitz Attack", "Nikitin Gambit"],
+    name: &[
+        "Ponziani Opening",
+        "Spanish Variation",
+        "Harrwitz Attack",
+        "Nikitin Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

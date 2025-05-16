@@ -34,8 +34,11 @@ pub const QUEEN_ATTACK_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Baltic Defense", "Queen Attack Deferred"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Baltic Defense",
+        "Queen Attack Deferred",
+    ],
     moves: &[
         Normal {
             role: Pawn,

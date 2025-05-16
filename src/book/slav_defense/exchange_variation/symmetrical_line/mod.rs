@@ -34,8 +34,7 @@ pub const SYMMETRICAL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<14>(),
     },
-    name: "Slav Defense",
-    variation: &["Exchange Variation", "Symmetrical Line"],
+    name: &["Slav Defense", "Exchange Variation", "Symmetrical Line"],
     moves: &[
         Normal {
             role: Pawn,

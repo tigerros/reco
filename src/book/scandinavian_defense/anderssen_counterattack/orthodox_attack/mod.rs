@@ -34,8 +34,11 @@ pub const ORTHODOX_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Anderssen Counterattack", "Orthodox Attack"],
+    name: &[
+        "Scandinavian Defense",
+        "Anderssen Counterattack",
+        "Orthodox Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HERZOG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<13>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Panov-Botvinnik", "Herzog Defense"],
+    name: &["Caro-Kann Defense", "Panov-Botvinnik", "Herzog Defense"],
     moves: &[
         Normal {
             role: Pawn,

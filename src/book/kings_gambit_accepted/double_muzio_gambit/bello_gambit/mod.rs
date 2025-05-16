@@ -34,8 +34,11 @@ pub const BELLO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Double Muzio Gambit", "Bello Gambit"],
+    name: &[
+        "King's Gambit Accepted",
+        "Double Muzio Gambit",
+        "Bello Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

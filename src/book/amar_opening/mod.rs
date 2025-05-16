@@ -34,8 +34,7 @@ pub const AMAR_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Amar Opening",
-    variation: &[],
+    name: &["Amar Opening"],
     moves: &[Normal {
         role: Knight,
         from: G1,

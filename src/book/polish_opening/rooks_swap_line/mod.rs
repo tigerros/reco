@@ -34,8 +34,7 @@ pub const ROOKS_SWAP_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Polish Opening",
-    variation: &["Rooks Swap Line"],
+    name: &["Polish Opening", "Rooks Swap Line"],
     moves: &[
         Normal {
             role: Pawn,

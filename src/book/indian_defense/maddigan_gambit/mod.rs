@@ -34,8 +34,7 @@ pub const MADDIGAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Maddigan Gambit"],
+    name: &["Indian Defense", "Maddigan Gambit"],
     moves: &[
         Normal {
             role: Pawn,

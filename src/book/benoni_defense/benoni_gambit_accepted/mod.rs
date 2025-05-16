@@ -34,8 +34,7 @@ pub const BENONI_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Benoni Gambit Accepted"],
+    name: &["Benoni Defense", "Benoni Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const GRUNFELD_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<84>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Brinckmann Attack", "Grünfeld Gambit Accepted"],
+    name: &[
+        "Grünfeld Defense",
+        "Brinckmann Attack",
+        "Grünfeld Gambit Accepted",
+    ],
     moves: &[
         Normal {
             role: Pawn,

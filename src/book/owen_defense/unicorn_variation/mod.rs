@@ -34,8 +34,7 @@ pub const UNICORN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Owen Defense",
-    variation: &["Unicorn Variation"],
+    name: &["Owen Defense", "Unicorn Variation"],
     moves: &[
         Normal {
             role: Pawn,

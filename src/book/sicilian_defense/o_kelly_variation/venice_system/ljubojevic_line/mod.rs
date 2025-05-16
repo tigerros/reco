@@ -34,8 +34,12 @@ pub const LJUBOJEVIC_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Sicilian Defense",
-    variation: &["O'Kelly Variation", "Venice System", "Ljubojevic Line"],
+    name: &[
+        "Sicilian Defense",
+        "O'Kelly Variation",
+        "Venice System",
+        "Ljubojevic Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

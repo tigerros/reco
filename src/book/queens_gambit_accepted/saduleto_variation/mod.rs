@@ -34,8 +34,7 @@ pub const SADULETO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Saduleto Variation"],
+    name: &["Queen's Gambit Accepted", "Saduleto Variation"],
     moves: &[
         Normal {
             role: Pawn,

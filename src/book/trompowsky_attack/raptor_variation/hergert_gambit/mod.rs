@@ -34,8 +34,7 @@ pub const HERGERT_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Trompowsky Attack",
-    variation: &["Raptor Variation", "Hergert Gambit"],
+    name: &["Trompowsky Attack", "Raptor Variation", "Hergert Gambit"],
     moves: &[
         Normal {
             role: Pawn,

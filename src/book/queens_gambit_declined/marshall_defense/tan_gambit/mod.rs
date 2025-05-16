@@ -34,8 +34,7 @@ pub const TAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Marshall Defense", "Tan Gambit"],
+    name: &["Queen's Gambit Declined", "Marshall Defense", "Tan Gambit"],
     moves: &[
         Normal {
             role: Pawn,

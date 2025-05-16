@@ -35,8 +35,7 @@ pub const KASPAROV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Queen's Indian Defense",
-        variation: &["Kasparov Variation"],
+        name: &["Queen's Indian Defense", "Kasparov Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const KASPAROV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<13>(),
         },
-        name: "Queen's Indian Defense",
-        variation: &["Kasparov Variation"],
+        name: &["Queen's Indian Defense", "Kasparov Variation"],
         moves: &[
             Normal {
                 role: Pawn,

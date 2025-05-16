@@ -34,8 +34,7 @@ pub const SCHALLOPP_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<34>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Schallopp Defense"],
+    name: &["King's Gambit Accepted", "Schallopp Defense"],
     moves: &[
         Normal {
             role: Pawn,

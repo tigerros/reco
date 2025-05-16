@@ -10,23 +10,19 @@ use shakmaty::{Move, Setup};
 /// Fields are borrowed in order to be compatible with constants.
 /// You can enable the `alloc` feature for an `OpeningOwned` struct.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub struct Opening<'a, Variation>
+pub struct Opening<'a, Name = &'a str>
 where
-    Variation: AsRef<str>,
+    Name: AsRef<str>,
 {
     /// The ECO code of the opening.
     ///
-    /// The C95 in `Ruy Lopez: Closed, Breyer`.
+    /// C95 for `Ruy Lopez: Closed, Breyer`.
     pub code: Code,
-    /// The top-level name of the opening.
-    ///
-    /// The `"Ruy Lopez"` in `Ruy Lopez: Closed, Breyer`.
-    pub name: &'a str,
-    /// The variation of the opening.
+    /// The name of the opening.
     /// Each item represents an extra layer of specificity.
     ///
-    /// The `["Closed", "Breyer"]` in `Ruy Lopez: Closed, Breyer`.
-    pub variation: &'a [Variation],
+    /// `["Ruy Lopez", "Closed", "Breyer"]` for `Ruy Lopez: Closed, Breyer`.
+    pub name: &'a [Name],
     /// The moves of this opening.
     pub moves: &'a [Move],
     /// The position that occurs after the last move in [`Self.moves`](Self#structfield.moves) is played.
@@ -40,9 +36,7 @@ pub struct OpeningOwned {
     /// See [`Opening.code`](Opening#structfield.code).
     pub code: Code,
     /// See [`Opening.name`](Opening#structfield.name).
-    pub name: String,
-    /// See [`Opening.variation`](Opening#structfield.variation).
-    pub variation: Vec<String>,
+    pub name: Vec<String>,
     /// See [`Opening.moves`](Opening#structfield.moves).
     pub moves: Vec<Move>,
     /// See [`Opening.setup`](Opening#structfield.setup).
@@ -56,7 +50,6 @@ impl<'a> From<&'a OpeningOwned> for Opening<'a, String> {
         Self {
             code: value.code,
             name: &value.name,
-            variation: &value.variation,
             moves: &value.moves,
             setup: &value.setup,
         }

@@ -34,8 +34,11 @@ pub const KERES_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<21>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Keres Defense"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Keres Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

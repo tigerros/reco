@@ -34,8 +34,12 @@ pub const RETREAT_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Two Knights Attack", "Mindeno Variation", "Retreat Line"],
+    name: &[
+        "Caro-Kann Defense",
+        "Two Knights Attack",
+        "Mindeno Variation",
+        "Retreat Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

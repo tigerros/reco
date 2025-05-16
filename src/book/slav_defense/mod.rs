@@ -35,8 +35,7 @@ pub const SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Slav Defense",
-        variation: &[],
+        name: &["Slav Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Slav Defense",
-        variation: &[],
+        name: &["Slav Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -188,8 +186,7 @@ pub const SLAV_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Slav Defense",
-        variation: &[],
+        name: &["Slav Defense"],
         moves: &[
             Normal {
                 role: Pawn,

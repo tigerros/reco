@@ -34,8 +34,7 @@ pub const ARAFAT_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Omega Gambit", "Arafat Gambit"],
+    name: &["Indian Defense", "Omega Gambit", "Arafat Gambit"],
     moves: &[
         Normal {
             role: Pawn,

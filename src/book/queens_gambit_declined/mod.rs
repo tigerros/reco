@@ -35,8 +35,7 @@ pub const QUEENS_GAMBIT_DECLINED: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<30>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &[],
+        name: &["Queen's Gambit Declined"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const QUEENS_GAMBIT_DECLINED: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<52>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &[],
+        name: &["Queen's Gambit Declined"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -216,8 +214,7 @@ pub const QUEENS_GAMBIT_DECLINED: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<53>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &[],
+        name: &["Queen's Gambit Declined"],
         moves: &[
             Normal {
                 role: Pawn,

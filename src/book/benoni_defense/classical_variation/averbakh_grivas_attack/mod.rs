@@ -34,8 +34,11 @@ pub const AVERBAKH_GRIVAS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<71>(),
     },
-    name: "Benoni Defense",
-    variation: &["Classical Variation", "Averbakh-Grivas Attack"],
+    name: &[
+        "Benoni Defense",
+        "Classical Variation",
+        "Averbakh-Grivas Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

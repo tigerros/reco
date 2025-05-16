@@ -34,8 +34,7 @@ pub const HERRSTROM_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Herrstrom Gambit"],
+    name: &["Zukertort Opening", "Herrstrom Gambit"],
     moves: &[
         Normal {
             role: Knight,

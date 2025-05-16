@@ -34,8 +34,7 @@ pub const MC_DONNELL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "McDonnell Defense"],
+    name: &["Italian Game", "Evans Gambit", "McDonnell Defense"],
     moves: &[
         Normal {
             role: Pawn,

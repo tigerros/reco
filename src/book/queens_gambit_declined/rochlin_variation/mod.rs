@@ -34,8 +34,7 @@ pub const ROCHLIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Rochlin Variation"],
+    name: &["Queen's Gambit Declined", "Rochlin Variation"],
     moves: &[
         Normal {
             role: Pawn,

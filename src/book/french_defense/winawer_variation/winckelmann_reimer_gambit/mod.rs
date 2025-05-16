@@ -34,8 +34,11 @@ pub const WINCKELMANN_REIMER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<15>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Winckelmann-Reimer Gambit"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Winckelmann-Reimer Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

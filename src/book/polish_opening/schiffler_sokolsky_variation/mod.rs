@@ -34,8 +34,7 @@ pub const SCHIFFLER_SOKOLSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Polish Opening",
-    variation: &["Schiffler-Sokolsky Variation"],
+    name: &["Polish Opening", "Schiffler-Sokolsky Variation"],
     moves: &[
         Normal {
             role: Pawn,

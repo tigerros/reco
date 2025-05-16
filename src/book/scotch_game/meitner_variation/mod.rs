@@ -34,8 +34,7 @@ pub const MEITNER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Scotch Game",
-    variation: &["Meitner Variation"],
+    name: &["Scotch Game", "Meitner Variation"],
     moves: &[
         Normal {
             role: Pawn,

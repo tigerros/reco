@@ -34,8 +34,11 @@ pub const SCHULDER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<34>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Fischer Defense", "Schulder Gambit"],
+    name: &[
+        "King's Gambit Accepted",
+        "Fischer Defense",
+        "Schulder Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

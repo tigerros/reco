@@ -34,8 +34,7 @@ pub const ROMANISHIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &["Romanishin Variation"],
+    name: &["Ponziani Opening", "Romanishin Variation"],
     moves: &[
         Normal {
             role: Pawn,

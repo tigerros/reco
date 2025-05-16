@@ -35,8 +35,11 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<83>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Scheveningen Variation", "Modern Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Scheveningen Variation",
+            "Modern Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -157,8 +160,11 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<83>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Scheveningen Variation", "Modern Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Scheveningen Variation",
+            "Modern Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -316,8 +322,11 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<83>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Scheveningen Variation", "Modern Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Scheveningen Variation",
+            "Modern Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

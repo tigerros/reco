@@ -34,8 +34,7 @@ pub const SICILIAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<19>(),
     },
-    name: "English Opening",
-    variation: &["Mikenas-Carls", "Sicilian"],
+    name: &["English Opening", "Mikenas-Carls", "Sicilian"],
     moves: &[
         Normal {
             role: Pawn,

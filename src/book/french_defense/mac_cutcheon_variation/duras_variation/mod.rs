@@ -34,8 +34,7 @@ pub const DURAS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<12>(),
     },
-    name: "French Defense",
-    variation: &["MacCutcheon Variation", "Duras Variation"],
+    name: &["French Defense", "MacCutcheon Variation", "Duras Variation"],
     moves: &[
         Normal {
             role: Pawn,

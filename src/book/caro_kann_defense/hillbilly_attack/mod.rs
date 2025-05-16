@@ -34,8 +34,7 @@ pub const HILLBILLY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Hillbilly Attack"],
+    name: &["Caro-Kann Defense", "Hillbilly Attack"],
     moves: &[
         Normal {
             role: Pawn,

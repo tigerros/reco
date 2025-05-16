@@ -34,8 +34,7 @@ pub const DIEMER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Slav Defense",
-    variation: &["Diemer Gambit"],
+    name: &["Slav Defense", "Diemer Gambit"],
     moves: &[
         Normal {
             role: Pawn,

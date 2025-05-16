@@ -34,8 +34,7 @@ pub const LISBON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Rat Defense",
-    variation: &["English Rat", "Lisbon Gambit"],
+    name: &["Rat Defense", "English Rat", "Lisbon Gambit"],
     moves: &[
         Normal {
             role: Pawn,

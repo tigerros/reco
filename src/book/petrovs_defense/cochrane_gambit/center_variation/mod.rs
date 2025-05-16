@@ -34,8 +34,7 @@ pub const CENTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Cochrane Gambit", "Center Variation"],
+    name: &["Petrov's Defense", "Cochrane Gambit", "Center Variation"],
     moves: &[
         Normal {
             role: Pawn,

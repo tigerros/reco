@@ -34,8 +34,7 @@ pub const ANDERSSEN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Anderssen Defense"],
+    name: &["Italian Game", "Evans Gambit", "Anderssen Defense"],
     moves: &[
         Normal {
             role: Pawn,

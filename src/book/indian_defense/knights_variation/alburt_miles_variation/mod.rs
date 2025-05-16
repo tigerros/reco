@@ -34,8 +34,11 @@ pub const ALBURT_MILES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Indian Defense",
-    variation: &["Knights Variation", "Alburt-Miles Variation"],
+    name: &[
+        "Indian Defense",
+        "Knights Variation",
+        "Alburt-Miles Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const FULL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<74>(),
     },
-    name: "Benoni Defense",
-    variation: &["Classical Variation", "Full Line"],
+    name: &["Benoni Defense", "Classical Variation", "Full Line"],
     moves: &[
         Normal {
             role: Pawn,

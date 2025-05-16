@@ -34,8 +34,7 @@ pub const MENGARINI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Vienna Game",
-    variation: &["Mengarini Variation"],
+    name: &["Vienna Game", "Mengarini Variation"],
     moves: &[
         Normal {
             role: Pawn,

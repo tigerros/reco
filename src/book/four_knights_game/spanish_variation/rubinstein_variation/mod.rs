@@ -35,8 +35,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<48>(),
         },
-        name: "Four Knights Game",
-        variation: &["Spanish Variation", "Rubinstein Variation"],
+        name: &[
+            "Four Knights Game",
+            "Spanish Variation",
+            "Rubinstein Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +139,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<48>(),
         },
-        name: "Four Knights Game",
-        variation: &["Spanish Variation", "Rubinstein Variation"],
+        name: &[
+            "Four Knights Game",
+            "Spanish Variation",
+            "Rubinstein Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -230,8 +236,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<48>(),
         },
-        name: "Four Knights Game",
-        variation: &["Spanish Variation", "Rubinstein Variation"],
+        name: &[
+            "Four Knights Game",
+            "Spanish Variation",
+            "Rubinstein Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

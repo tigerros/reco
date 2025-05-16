@@ -34,8 +34,7 @@ pub const THE_GOBLIN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Dresden Opening",
-    variation: &["The Goblin"],
+    name: &["Dresden Opening", "The Goblin"],
     moves: &[
         Normal {
             role: Pawn,

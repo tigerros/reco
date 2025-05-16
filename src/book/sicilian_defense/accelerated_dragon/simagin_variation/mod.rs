@@ -34,8 +34,11 @@ pub const SIMAGIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<37>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Accelerated Dragon", "Simagin Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Accelerated Dragon",
+        "Simagin Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

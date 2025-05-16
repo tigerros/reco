@@ -34,8 +34,11 @@ pub const SMITH_MORRA_DECLINED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Alapin Variation", "Smith-Morra Declined"],
+    name: &[
+        "Sicilian Defense",
+        "Alapin Variation",
+        "Smith-Morra Declined",
+    ],
     moves: &[
         Normal {
             role: Pawn,

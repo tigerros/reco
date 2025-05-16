@@ -34,8 +34,7 @@ pub const CANAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Giuoco Pianissimo", "Canal Variation"],
+    name: &["Italian Game", "Giuoco Pianissimo", "Canal Variation"],
     moves: &[
         Normal {
             role: Pawn,

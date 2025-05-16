@@ -34,8 +34,7 @@ pub const FULLY_ACCEPTED_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Benko Gambit Accepted",
-    variation: &["Fully Accepted Variation"],
+    name: &["Benko Gambit Accepted", "Fully Accepted Variation"],
     moves: &[
         Normal {
             role: Pawn,

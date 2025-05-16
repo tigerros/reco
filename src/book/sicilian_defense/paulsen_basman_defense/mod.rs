@@ -34,8 +34,7 @@ pub const PAULSEN_BASMAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Paulsen-Basman Defense"],
+    name: &["Sicilian Defense", "Paulsen-Basman Defense"],
     moves: &[
         Normal {
             role: Pawn,

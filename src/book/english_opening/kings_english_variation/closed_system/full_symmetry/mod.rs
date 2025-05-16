@@ -34,8 +34,12 @@ pub const FULL_SYMMETRY: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<26>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Closed System", "Full Symmetry"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Closed System",
+        "Full Symmetry",
+    ],
     moves: &[
         Normal {
             role: Pawn,

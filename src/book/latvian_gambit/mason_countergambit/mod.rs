@@ -34,8 +34,7 @@ pub const MASON_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Mason Countergambit"],
+    name: &["Latvian Gambit", "Mason Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

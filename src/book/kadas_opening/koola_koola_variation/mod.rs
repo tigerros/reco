@@ -34,8 +34,7 @@ pub const KOOLA_KOOLA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Kádas Opening",
-    variation: &["Koola-Koola Variation"],
+    name: &["Kádas Opening", "Koola-Koola Variation"],
     moves: &[
         Normal {
             role: Pawn,

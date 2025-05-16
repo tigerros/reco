@@ -34,8 +34,7 @@ pub const RETI_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Réti Opening",
-    variation: &["Réti Accepted"],
+    name: &["Réti Opening", "Réti Accepted"],
     moves: &[
         Normal {
             role: Knight,

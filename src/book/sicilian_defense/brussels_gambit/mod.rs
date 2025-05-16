@@ -34,8 +34,7 @@ pub const BRUSSELS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Brussels Gambit"],
+    name: &["Sicilian Defense", "Brussels Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SHOWALTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<67>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open Berlin Defense", "Showalter Variation"],
+    name: &["Ruy Lopez", "Open Berlin Defense", "Showalter Variation"],
     moves: &[
         Normal {
             role: Pawn,

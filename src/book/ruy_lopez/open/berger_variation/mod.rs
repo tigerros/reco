@@ -34,8 +34,7 @@ pub const BERGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Berger Variation"],
+    name: &["Ruy Lopez", "Open", "Berger Variation"],
     moves: &[
         Normal {
             role: Pawn,

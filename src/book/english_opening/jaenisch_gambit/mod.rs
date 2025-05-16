@@ -34,8 +34,7 @@ pub const JAENISCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Jaenisch Gambit"],
+    name: &["English Opening", "Jaenisch Gambit"],
     moves: &[
         Normal {
             role: Pawn,

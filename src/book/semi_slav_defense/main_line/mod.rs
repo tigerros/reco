@@ -35,8 +35,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Main Line"],
+        name: &["Semi-Slav Defense", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Main Line"],
+        name: &["Semi-Slav Defense", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -251,8 +249,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Main Line"],
+        name: &["Semi-Slav Defense", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,

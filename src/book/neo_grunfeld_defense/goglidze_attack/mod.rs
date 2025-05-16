@@ -34,8 +34,7 @@ pub const GOGLIDZE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<70>(),
     },
-    name: "Neo-Grünfeld Defense",
-    variation: &["Goglidze Attack"],
+    name: &["Neo-Grünfeld Defense", "Goglidze Attack"],
     moves: &[
         Normal {
             role: Pawn,

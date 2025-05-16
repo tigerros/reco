@@ -34,8 +34,7 @@ pub const HALASZ_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Halasz Gambit"],
+    name: &["Sicilian Defense", "Halasz Gambit"],
     moves: &[
         Normal {
             role: Pawn,

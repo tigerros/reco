@@ -34,8 +34,7 @@ pub const MARIENBAD_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Marienbad System",
-    variation: &[],
+    name: &["Marienbad System"],
     moves: &[
         Normal {
             role: Pawn,

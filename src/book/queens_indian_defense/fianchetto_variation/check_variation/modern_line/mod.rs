@@ -34,8 +34,12 @@ pub const MODERN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Fianchetto Variation", "Check Variation", "Modern Line"],
+    name: &[
+        "Queen's Indian Defense",
+        "Fianchetto Variation",
+        "Check Variation",
+        "Modern Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

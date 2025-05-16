@@ -34,8 +34,11 @@ pub const YOUNG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Double Muzio Gambit", "Young Gambit"],
+    name: &[
+        "King's Gambit Accepted",
+        "Double Muzio Gambit",
+        "Young Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

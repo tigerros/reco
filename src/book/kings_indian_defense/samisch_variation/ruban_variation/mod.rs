@@ -34,8 +34,11 @@ pub const RUBAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<83>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Sämisch Variation", "Ruban Variation"],
+    name: &[
+        "King's Indian Defense",
+        "Sämisch Variation",
+        "Ruban Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

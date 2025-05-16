@@ -34,8 +34,7 @@ pub const CHAMELEON_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Closed", "Chameleon Variation"],
+    name: &["Sicilian Defense", "Closed", "Chameleon Variation"],
     moves: &[
         Normal {
             role: Pawn,

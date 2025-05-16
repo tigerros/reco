@@ -34,8 +34,7 @@ pub const BALTIC_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Baltic Defense"],
+    name: &["Queen's Gambit Declined", "Baltic Defense"],
     moves: &[
         Normal {
             role: Pawn,

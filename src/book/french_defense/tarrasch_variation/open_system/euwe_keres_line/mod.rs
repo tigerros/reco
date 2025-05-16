@@ -34,8 +34,12 @@ pub const EUWE_KERES_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<7>(),
     },
-    name: "French Defense",
-    variation: &["Tarrasch Variation", "Open System", "Euwe-Keres Line"],
+    name: &[
+        "French Defense",
+        "Tarrasch Variation",
+        "Open System",
+        "Euwe-Keres Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

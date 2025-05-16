@@ -34,8 +34,7 @@ pub const MODERN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Mokele Mbembe", "Modern Line"],
+    name: &["Alekhine Defense", "Mokele Mbembe", "Modern Line"],
     moves: &[
         Normal {
             role: Pawn,

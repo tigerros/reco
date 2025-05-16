@@ -35,8 +35,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -260,8 +258,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -412,8 +409,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -513,8 +509,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<7>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -623,8 +618,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -782,8 +776,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -920,8 +913,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -1051,8 +1043,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -1168,8 +1159,7 @@ pub const CLOSED: [Opening<'static, &str>; 10] = [
             volume: Volume::E,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed"],
+        name: &["Catalan Opening", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,

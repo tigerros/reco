@@ -34,8 +34,7 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<83>(),
     },
-    name: "Dutch Defense",
-    variation: &["Staunton Gambit", "Chigorin Variation"],
+    name: &["Dutch Defense", "Staunton Gambit", "Chigorin Variation"],
     moves: &[
         Normal {
             role: Pawn,

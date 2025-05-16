@@ -34,8 +34,7 @@ pub const ZAGREB_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<91>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "Zagreb Variation"],
+    name: &["Sicilian Defense", "Najdorf Variation", "Zagreb Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PAOLI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Paoli Variation"],
+    name: &["Italian Game", "Two Knights Defense", "Paoli Variation"],
     moves: &[
         Normal {
             role: Pawn,

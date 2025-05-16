@@ -34,8 +34,7 @@ pub const THREE_PAWN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["St. George Defense", "Three Pawn Attack"],
+    name: &["French Defense", "St. George Defense", "Three Pawn Attack"],
     moves: &[
         Normal {
             role: Pawn,

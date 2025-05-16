@@ -34,8 +34,7 @@ pub const RELLSTAB_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<49>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Meran Variation", "Rellstab Attack"],
+    name: &["Semi-Slav Defense", "Meran Variation", "Rellstab Attack"],
     moves: &[
         Normal {
             role: Pawn,

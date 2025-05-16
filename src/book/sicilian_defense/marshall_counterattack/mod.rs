@@ -34,8 +34,7 @@ pub const MARSHALL_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Marshall Counterattack"],
+    name: &["Sicilian Defense", "Marshall Counterattack"],
     moves: &[
         Normal {
             role: Pawn,

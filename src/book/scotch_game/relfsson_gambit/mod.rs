@@ -34,8 +34,7 @@ pub const RELFSSON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Relfsson Gambit"],
+    name: &["Scotch Game", "Relfsson Gambit"],
     moves: &[
         Normal {
             role: Pawn,

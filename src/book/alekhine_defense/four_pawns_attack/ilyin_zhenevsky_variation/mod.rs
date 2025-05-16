@@ -34,8 +34,11 @@ pub const ILYIN_ZHENEVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Four Pawns Attack", "Ilyin-Zhenevsky Variation"],
+    name: &[
+        "Alekhine Defense",
+        "Four Pawns Attack",
+        "Ilyin-Zhenevsky Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

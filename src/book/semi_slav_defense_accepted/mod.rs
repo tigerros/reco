@@ -34,8 +34,7 @@ pub const SEMI_SLAV_DEFENSE_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Semi-Slav Defense Accepted",
-    variation: &[],
+    name: &["Semi-Slav Defense Accepted"],
     moves: &[
         Normal {
             role: Pawn,

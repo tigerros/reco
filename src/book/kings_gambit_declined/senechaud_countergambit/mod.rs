@@ -34,8 +34,7 @@ pub const SENECHAUD_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Senechaud Countergambit"],
+    name: &["King's Gambit Declined", "Senechaud Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

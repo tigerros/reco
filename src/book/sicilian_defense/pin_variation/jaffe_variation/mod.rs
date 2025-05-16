@@ -34,8 +34,7 @@ pub const JAFFE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Pin Variation", "Jaffe Variation"],
+    name: &["Sicilian Defense", "Pin Variation", "Jaffe Variation"],
     moves: &[
         Normal {
             role: Pawn,

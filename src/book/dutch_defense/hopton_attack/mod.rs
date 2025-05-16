@@ -34,8 +34,7 @@ pub const HOPTON_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Hopton Attack"],
+    name: &["Dutch Defense", "Hopton Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,11 @@ pub const FOUR_KNIGHTS_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<28>(),
         },
-        name: "English Opening",
-        variation: &["King's English Variation", "Four Knights Variation"],
+        name: &[
+            "English Opening",
+            "King's English Variation",
+            "Four Knights Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -185,8 +188,11 @@ pub const FOUR_KNIGHTS_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<28>(),
         },
-        name: "English Opening",
-        variation: &["King's English Variation", "Four Knights Variation"],
+        name: &[
+            "English Opening",
+            "King's English Variation",
+            "Four Knights Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

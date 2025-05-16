@@ -34,8 +34,7 @@ pub const POMAR_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<72>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Pomar System"],
+    name: &["King's Indian Defense", "Pomar System"],
     moves: &[
         Normal {
             role: Pawn,

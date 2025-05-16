@@ -34,8 +34,11 @@ pub const CATALAN_DEFENSE_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<13>(),
     },
-    name: "English Opening",
-    variation: &["Agincourt Defense", "Catalan Defense Accepted"],
+    name: &[
+        "English Opening",
+        "Agincourt Defense",
+        "Catalan Defense Accepted",
+    ],
     moves: &[
         Normal {
             role: Pawn,

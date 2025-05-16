@@ -34,8 +34,7 @@ pub const BIG_CLAMP_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Big Clamp Formation"],
+    name: &["Sicilian Defense", "Big Clamp Formation"],
     moves: &[
         Normal {
             role: Pawn,

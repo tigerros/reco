@@ -34,8 +34,7 @@ pub const ADVANCE_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Slav Defense",
-    variation: &["Chebanenko Variation", "Advance System"],
+    name: &["Slav Defense", "Chebanenko Variation", "Advance System"],
     moves: &[
         Normal {
             role: Pawn,

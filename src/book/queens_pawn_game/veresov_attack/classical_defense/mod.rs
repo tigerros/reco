@@ -34,8 +34,7 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Veresov Attack", "Classical Defense"],
+    name: &["Queen's Pawn Game", "Veresov Attack", "Classical Defense"],
     moves: &[
         Normal {
             role: Pawn,

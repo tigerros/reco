@@ -34,8 +34,7 @@ pub const BOGOLJUBOW_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Rubinstein Opening",
-    variation: &["Bogoljubow Defense"],
+    name: &["Rubinstein Opening", "Bogoljubow Defense"],
     moves: &[
         Normal {
             role: Pawn,

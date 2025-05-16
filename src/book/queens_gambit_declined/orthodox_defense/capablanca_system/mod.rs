@@ -34,8 +34,11 @@ pub const CAPABLANCA_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<67>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Orthodox Defense", "Capablanca System"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Orthodox Defense",
+        "Capablanca System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

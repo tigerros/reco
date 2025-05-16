@@ -34,8 +34,11 @@ pub const KINGSIDE_MOVE_ORDER: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Benoni-Indian Defense", "Kingside Move Order"],
+    name: &[
+        "Benoni Defense",
+        "Benoni-Indian Defense",
+        "Kingside Move Order",
+    ],
     moves: &[
         Normal {
             role: Pawn,

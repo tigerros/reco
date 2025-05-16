@@ -34,8 +34,7 @@ pub const ZAITSEV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Chekhover Variation", "Zaitsev Defense"],
+    name: &["Sicilian Defense", "Chekhover Variation", "Zaitsev Defense"],
     moves: &[
         Normal {
             role: Pawn,

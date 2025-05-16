@@ -34,8 +34,12 @@ pub const EXCHANGE_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Normal Variation", "Bernstein Defense", "Exchange Line"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Normal Variation",
+        "Bernstein Defense",
+        "Exchange Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

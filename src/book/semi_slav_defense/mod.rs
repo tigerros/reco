@@ -34,8 +34,7 @@ pub const SEMI_SLAV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &[],
+    name: &["Semi-Slav Defense"],
     moves: &[
         Normal {
             role: Pawn,

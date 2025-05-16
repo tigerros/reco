@@ -34,8 +34,11 @@ pub const PANNO_MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<84>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Sämisch Variation", "Panno Main Line"],
+    name: &[
+        "King's Indian Defense",
+        "Sämisch Variation",
+        "Panno Main Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const HEDGEHOG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<30>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Hedgehog Defense"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Hedgehog Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const COBRA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<33>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Four Knights Variation", "Cobra Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Four Knights Variation",
+        "Cobra Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

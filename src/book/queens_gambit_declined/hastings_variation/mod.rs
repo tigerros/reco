@@ -34,8 +34,7 @@ pub const HASTINGS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Hastings Variation"],
+    name: &["Queen's Gambit Declined", "Hastings Variation"],
     moves: &[
         Normal {
             role: Pawn,

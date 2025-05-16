@@ -34,8 +34,7 @@ pub const JANOWSKI_LARSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Janowski-Larsen Variation"],
+    name: &["Queen's Gambit Accepted", "Janowski-Larsen Variation"],
     moves: &[
         Normal {
             role: Pawn,

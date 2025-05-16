@@ -34,8 +34,7 @@ pub const FRASER_MORTIMER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Fraser-Mortimer Attack"],
+    name: &["Italian Game", "Evans Gambit", "Fraser-Mortimer Attack"],
     moves: &[
         Normal {
             role: Pawn,

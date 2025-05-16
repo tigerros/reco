@@ -34,8 +34,7 @@ pub const COLES_SICILIAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Coles Sicilian Gambit"],
+    name: &["Sicilian Defense", "Coles Sicilian Gambit"],
     moves: &[
         Normal {
             role: Pawn,

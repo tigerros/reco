@@ -34,8 +34,11 @@ pub const DEFERRED_FIANCHETTO: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<72>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Normal Variation", "Deferred Fianchetto"],
+    name: &[
+        "King's Indian Defense",
+        "Normal Variation",
+        "Deferred Fianchetto",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const GELLER_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<15>(),
         },
-        name: "Slav Defense",
-        variation: &["Geller Gambit"],
+        name: &["Slav Defense", "Geller Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -150,8 +149,7 @@ pub const GELLER_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<15>(),
         },
-        name: "Slav Defense",
-        variation: &["Geller Gambit"],
+        name: &["Slav Defense", "Geller Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

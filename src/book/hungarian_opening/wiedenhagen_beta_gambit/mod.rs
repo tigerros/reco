@@ -34,8 +34,7 @@ pub const WIEDENHAGEN_BETA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Wiedenhagen-Beta Gambit"],
+    name: &["Hungarian Opening", "Wiedenhagen-Beta Gambit"],
     moves: &[
         Normal {
             role: Pawn,

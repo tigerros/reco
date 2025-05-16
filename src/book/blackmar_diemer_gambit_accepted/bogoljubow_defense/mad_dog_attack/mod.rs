@@ -34,8 +34,11 @@ pub const MAD_DOG_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Bogoljubow Defense", "Mad Dog Attack"],
+    name: &[
+        "Blackmar-Diemer Gambit Accepted",
+        "Bogoljubow Defense",
+        "Mad Dog Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

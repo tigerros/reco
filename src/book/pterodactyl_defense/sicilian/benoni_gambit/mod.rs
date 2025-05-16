@@ -34,8 +34,7 @@ pub const BENONI_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Sicilian", "Benoni Gambit"],
+    name: &["Pterodactyl Defense", "Sicilian", "Benoni Gambit"],
     moves: &[
         Normal {
             role: Pawn,

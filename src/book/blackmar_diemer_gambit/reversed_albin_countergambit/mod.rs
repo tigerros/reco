@@ -34,8 +34,7 @@ pub const REVERSED_ALBIN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["Reversed Albin Countergambit"],
+    name: &["Blackmar-Diemer Gambit", "Reversed Albin Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

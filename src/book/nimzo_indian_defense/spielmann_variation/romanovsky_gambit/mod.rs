@@ -34,8 +34,11 @@ pub const ROMANOVSKY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Spielmann Variation", "Romanovsky Gambit"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Spielmann Variation",
+        "Romanovsky Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

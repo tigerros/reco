@@ -34,8 +34,7 @@ pub const ALEKHINE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<88>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Alekhine Gambit"],
+    name: &["Ruy Lopez", "Closed", "Alekhine Gambit"],
     moves: &[
         Normal {
             role: Pawn,

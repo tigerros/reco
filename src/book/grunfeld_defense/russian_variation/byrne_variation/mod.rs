@@ -34,8 +34,7 @@ pub const BYRNE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<97>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Russian Variation", "Byrne Variation"],
+    name: &["Grünfeld Defense", "Russian Variation", "Byrne Variation"],
     moves: &[
         Normal {
             role: Pawn,

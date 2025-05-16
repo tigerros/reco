@@ -34,8 +34,7 @@ pub const SCHAEFFER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Hillbilly Attack", "Schaeffer Gambit"],
+    name: &["Caro-Kann Defense", "Hillbilly Attack", "Schaeffer Gambit"],
     moves: &[
         Normal {
             role: Pawn,

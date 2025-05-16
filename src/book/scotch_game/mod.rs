@@ -35,8 +35,7 @@ pub const SCOTCH_GAME: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Scotch Game",
-        variation: &[],
+        name: &["Scotch Game"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const SCOTCH_GAME: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Scotch Game",
-        variation: &[],
+        name: &["Scotch Game"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -188,8 +186,7 @@ pub const SCOTCH_GAME: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Scotch Game",
-        variation: &[],
+        name: &["Scotch Game"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -303,8 +300,7 @@ pub const SCOTCH_GAME: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Scotch Game",
-        variation: &[],
+        name: &["Scotch Game"],
         moves: &[
             Normal {
                 role: Pawn,

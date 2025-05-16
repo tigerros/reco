@@ -34,8 +34,7 @@ pub const PSEUDO_BENKO: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Indian Defense",
-    variation: &["Pseudo-Benko"],
+    name: &["Indian Defense", "Pseudo-Benko"],
     moves: &[
         Normal {
             role: Pawn,

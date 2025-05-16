@@ -34,8 +34,11 @@ pub const VITOLINS_ADORJAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Classical Variation", "Vitolins-Adorjan Gambit"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Vitolins-Adorjan Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

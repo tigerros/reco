@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit Declined",
-    variation: &["Main Line"],
+    name: &["Benko Gambit Declined", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

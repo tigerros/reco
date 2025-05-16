@@ -35,8 +35,8 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<29>(),
         },
-        name: "English Opening",
-        variation: &[
+        name: &[
+            "English Opening",
             "King's English Variation",
             "Four Knights Variation",
             "Fianchetto Line",
@@ -126,8 +126,8 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<29>(),
         },
-        name: "English Opening",
-        variation: &[
+        name: &[
+            "English Opening",
             "King's English Variation",
             "Four Knights Variation",
             "Fianchetto Line",
@@ -254,8 +254,8 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<29>(),
         },
-        name: "English Opening",
-        variation: &[
+        name: &[
+            "English Opening",
             "King's English Variation",
             "Four Knights Variation",
             "Fianchetto Line",
@@ -373,8 +373,8 @@ pub const FIANCHETTO_LINE: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<29>(),
         },
-        name: "English Opening",
-        variation: &[
+        name: &[
+            "English Opening",
             "King's English Variation",
             "Four Knights Variation",
             "Fianchetto Line",

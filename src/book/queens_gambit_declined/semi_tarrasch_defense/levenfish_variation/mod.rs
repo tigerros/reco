@@ -34,8 +34,11 @@ pub const LEVENFISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Semi-Tarrasch Defense", "Levenfish Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Semi-Tarrasch Defense",
+        "Levenfish Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

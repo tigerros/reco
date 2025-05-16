@@ -34,8 +34,7 @@ pub const BONET_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Slav Defense",
-    variation: &["Bonet Gambit"],
+    name: &["Slav Defense", "Bonet Gambit"],
     moves: &[
         Normal {
             role: Pawn,

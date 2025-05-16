@@ -34,8 +34,7 @@ pub const QUIET_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Queen Pterodactyl", "Quiet Line"],
+    name: &["Pterodactyl Defense", "Queen Pterodactyl", "Quiet Line"],
     moves: &[
         Normal {
             role: Pawn,

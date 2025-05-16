@@ -34,8 +34,7 @@ pub const POLLOCK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Vienna Game",
-    variation: &["Paulsen Variation", "Pollock Gambit"],
+    name: &["Vienna Game", "Paulsen Variation", "Pollock Gambit"],
     moves: &[
         Normal {
             role: Pawn,

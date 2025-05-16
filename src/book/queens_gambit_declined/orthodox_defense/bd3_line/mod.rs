@@ -35,8 +35,7 @@ pub const BD3_LINE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<66>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Bd3 Line"],
+        name: &["Queen's Gambit Declined", "Orthodox Defense", "Bd3 Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -172,8 +171,7 @@ pub const BD3_LINE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<67>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Bd3 Line"],
+        name: &["Queen's Gambit Declined", "Orthodox Defense", "Bd3 Line"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const SCHMID_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Old Benoni", "Schmid Variation"],
+    name: &["Benoni Defense", "Old Benoni", "Schmid Variation"],
     moves: &[
         Normal {
             role: Pawn,

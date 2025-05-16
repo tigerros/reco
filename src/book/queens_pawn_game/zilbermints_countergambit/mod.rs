@@ -34,8 +34,7 @@ pub const ZILBERMINTS_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Zilbermints Countergambit"],
+    name: &["Queen's Pawn Game", "Zilbermints Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

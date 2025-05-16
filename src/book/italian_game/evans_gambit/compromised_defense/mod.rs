@@ -34,8 +34,7 @@ pub const COMPROMISED_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Compromised Defense"],
+    name: &["Italian Game", "Evans Gambit", "Compromised Defense"],
     moves: &[
         Normal {
             role: Pawn,

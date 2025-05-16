@@ -34,8 +34,7 @@ pub const ANTI_CLASSICAL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Manhattan Gambit", "Anti-Classical Line"],
+    name: &["Dutch Defense", "Manhattan Gambit", "Anti-Classical Line"],
     moves: &[
         Normal {
             role: Pawn,

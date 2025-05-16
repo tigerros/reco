@@ -35,8 +35,7 @@ pub const KADAS_GAMBIT: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Kádas Opening",
-        variation: &["Kádas Gambit"],
+        name: &["Kádas Opening", "Kádas Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -94,8 +93,7 @@ pub const KADAS_GAMBIT: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Kádas Opening",
-        variation: &["Kádas Gambit"],
+        name: &["Kádas Opening", "Kádas Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -181,8 +179,7 @@ pub const KADAS_GAMBIT: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Kádas Opening",
-        variation: &["Kádas Gambit"],
+        name: &["Kádas Opening", "Kádas Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

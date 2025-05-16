@@ -34,8 +34,7 @@ pub const QUIET_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<8>(),
     },
-    name: "Pirc Defense",
-    variation: &["Classical Variation", "Quiet System"],
+    name: &["Pirc Defense", "Classical Variation", "Quiet System"],
     moves: &[
         Normal {
             role: Pawn,

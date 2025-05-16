@@ -34,8 +34,7 @@ pub const SCHLENKER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Benoni Gambit", "Schlenker Defense"],
+    name: &["Benoni Defense", "Benoni Gambit", "Schlenker Defense"],
     moves: &[
         Normal {
             role: Pawn,

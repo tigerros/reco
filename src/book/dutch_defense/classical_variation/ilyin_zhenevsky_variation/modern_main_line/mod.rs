@@ -34,8 +34,8 @@ pub const MODERN_MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<99>(),
     },
-    name: "Dutch Defense",
-    variation: &[
+    name: &[
+        "Dutch Defense",
         "Classical Variation",
         "Ilyin-Zhenevsky Variation",
         "Modern Main Line",

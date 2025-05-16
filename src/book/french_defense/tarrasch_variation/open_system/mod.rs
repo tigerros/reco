@@ -35,8 +35,7 @@ pub const OPEN_SYSTEM: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<7>(),
         },
-        name: "French Defense",
-        variation: &["Tarrasch Variation", "Open System"],
+        name: &["French Defense", "Tarrasch Variation", "Open System"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const OPEN_SYSTEM: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<8>(),
         },
-        name: "French Defense",
-        variation: &["Tarrasch Variation", "Open System"],
+        name: &["French Defense", "Tarrasch Variation", "Open System"],
         moves: &[
             Normal {
                 role: Pawn,

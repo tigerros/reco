@@ -34,8 +34,12 @@ pub const DREYEV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Advance Variation", "Van der Wiel Attack", "Dreyev Defense"],
+    name: &[
+        "Caro-Kann Defense",
+        "Advance Variation",
+        "Van der Wiel Attack",
+        "Dreyev Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

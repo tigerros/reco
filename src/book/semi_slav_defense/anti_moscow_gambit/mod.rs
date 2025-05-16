@@ -34,8 +34,7 @@ pub const ANTI_MOSCOW_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Anti-Moscow Gambit"],
+    name: &["Semi-Slav Defense", "Anti-Moscow Gambit"],
     moves: &[
         Normal {
             role: Pawn,

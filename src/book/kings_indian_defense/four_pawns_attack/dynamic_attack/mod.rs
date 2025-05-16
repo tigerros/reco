@@ -34,8 +34,11 @@ pub const DYNAMIC_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<76>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Four Pawns Attack", "Dynamic Attack"],
+    name: &[
+        "King's Indian Defense",
+        "Four Pawns Attack",
+        "Dynamic Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

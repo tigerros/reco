@@ -34,8 +34,11 @@ pub const VIENNA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<39>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Ragozin Defense", "Vienna Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Ragozin Defense",
+        "Vienna Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

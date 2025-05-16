@@ -34,8 +34,8 @@ pub const NIMZOWITSCH_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<18>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &[
+    name: &[
+        "Queen's Indian Defense",
         "Classical Variation",
         "Traditional Variation",
         "Nimzowitsch Line",

@@ -35,8 +35,11 @@ pub const HUBNER_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Rubinstein System", "Hübner Variation"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Rubinstein System",
+            "Hübner Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -173,8 +176,11 @@ pub const HUBNER_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Rubinstein System", "Hübner Variation"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Rubinstein System",
+            "Hübner Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

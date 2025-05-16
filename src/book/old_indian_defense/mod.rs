@@ -35,8 +35,7 @@ pub const OLD_INDIAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Old Indian Defense",
-        variation: &[],
+        name: &["Old Indian Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -94,8 +93,7 @@ pub const OLD_INDIAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<53>(),
         },
-        name: "Old Indian Defense",
-        variation: &[],
+        name: &["Old Indian Defense"],
         moves: &[
             Normal {
                 role: Pawn,

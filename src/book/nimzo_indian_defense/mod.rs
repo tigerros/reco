@@ -35,8 +35,7 @@ pub const NIMZO_INDIAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<20>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &[],
+        name: &["Nimzo-Indian Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const NIMZO_INDIAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<50>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &[],
+        name: &["Nimzo-Indian Defense"],
         moves: &[
             Normal {
                 role: Pawn,

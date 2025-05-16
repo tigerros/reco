@@ -34,8 +34,7 @@ pub const BARMEN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Alapin Variation", "Barmen Defense"],
+    name: &["Sicilian Defense", "Alapin Variation", "Barmen Defense"],
     moves: &[
         Normal {
             role: Pawn,

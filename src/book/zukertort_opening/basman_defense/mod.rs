@@ -34,8 +34,7 @@ pub const BASMAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Basman Defense"],
+    name: &["Zukertort Opening", "Basman Defense"],
     moves: &[
         Normal {
             role: Knight,

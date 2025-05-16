@@ -34,8 +34,11 @@ pub const BOLESLAVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<11>(),
     },
-    name: "French Defense",
-    variation: &["Steinitz Variation", "Boleslavsky Variation"],
+    name: &[
+        "French Defense",
+        "Steinitz Variation",
+        "Boleslavsky Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

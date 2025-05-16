@@ -34,8 +34,7 @@ pub const ALEKHINE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Alekhine Defense"],
+    name: &["Queen's Gambit Accepted", "Alekhine Defense"],
     moves: &[
         Normal {
             role: Pawn,

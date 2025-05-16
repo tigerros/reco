@@ -35,8 +35,7 @@ pub const GEDULT_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Barnes Opening",
-        variation: &["Gedult Gambit"],
+        name: &["Barnes Opening", "Gedult Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const GEDULT_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Barnes Opening",
-        variation: &["Gedult Gambit"],
+        name: &["Barnes Opening", "Gedult Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

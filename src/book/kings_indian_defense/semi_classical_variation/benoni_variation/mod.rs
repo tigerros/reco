@@ -34,8 +34,11 @@ pub const BENONI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Semi-Classical Variation", "Benoni Variation"],
+    name: &[
+        "King's Indian Defense",
+        "Semi-Classical Variation",
+        "Benoni Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

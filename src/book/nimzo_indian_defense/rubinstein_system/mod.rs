@@ -35,8 +35,7 @@ pub const RUBINSTEIN_SYSTEM: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<40>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Rubinstein System"],
+        name: &["Nimzo-Indian Defense", "Rubinstein System"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const RUBINSTEIN_SYSTEM: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Rubinstein System"],
+        name: &["Nimzo-Indian Defense", "Rubinstein System"],
         moves: &[
             Normal {
                 role: Pawn,

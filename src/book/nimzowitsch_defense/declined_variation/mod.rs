@@ -34,8 +34,7 @@ pub const DECLINED_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Declined Variation"],
+    name: &["Nimzowitsch Defense", "Declined Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const NOAHS_ARK_TRAP: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<71>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Noah's Ark Trap"],
+        name: &["Ruy Lopez", "Noah's Ark Trap"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -185,8 +184,7 @@ pub const NOAHS_ARK_TRAP: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<88>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Noah's Ark Trap"],
+        name: &["Ruy Lopez", "Noah's Ark Trap"],
         moves: &[
             Normal {
                 role: Pawn,

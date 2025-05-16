@@ -34,8 +34,8 @@ pub const GUFELD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Nyezhmetdinov-Rossolimo Attack",
         "Fianchetto Variation",
         "Gufeld Gambit",

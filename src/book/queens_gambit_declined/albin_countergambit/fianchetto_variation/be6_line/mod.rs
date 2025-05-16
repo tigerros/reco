@@ -34,8 +34,12 @@ pub const BE6_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Albin Countergambit", "Fianchetto Variation", "Be6 Line"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Albin Countergambit",
+        "Fianchetto Variation",
+        "Be6 Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

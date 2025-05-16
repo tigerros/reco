@@ -34,8 +34,7 @@ pub const PENGUIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Réti Opening",
-    variation: &["Penguin Variation"],
+    name: &["Réti Opening", "Penguin Variation"],
     moves: &[
         Normal {
             role: Knight,

@@ -34,8 +34,7 @@ pub const CUNNINGHAM_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<35>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Cunningham Defense"],
+    name: &["King's Gambit Accepted", "Cunningham Defense"],
     moves: &[
         Normal {
             role: Pawn,

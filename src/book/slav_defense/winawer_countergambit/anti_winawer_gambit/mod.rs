@@ -34,8 +34,11 @@ pub const ANTI_WINAWER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Slav Defense",
-    variation: &["Winawer Countergambit", "Anti-Winawer Gambit"],
+    name: &[
+        "Slav Defense",
+        "Winawer Countergambit",
+        "Anti-Winawer Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

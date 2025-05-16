@@ -35,8 +35,7 @@ pub const OPEN: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<80>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Open"],
+        name: &["Ruy Lopez", "Open"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -172,8 +171,7 @@ pub const OPEN: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<80>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Open"],
+        name: &["Ruy Lopez", "Open"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -295,8 +293,7 @@ pub const OPEN: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<80>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Open"],
+        name: &["Ruy Lopez", "Open"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -404,8 +401,7 @@ pub const OPEN: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<80>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Open"],
+        name: &["Ruy Lopez", "Open"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -506,8 +502,7 @@ pub const OPEN: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<82>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Open"],
+        name: &["Ruy Lopez", "Open"],
         moves: &[
             Normal {
                 role: Pawn,

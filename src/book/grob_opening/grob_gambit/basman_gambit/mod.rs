@@ -34,8 +34,7 @@ pub const BASMAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Grob Gambit", "Basman Gambit"],
+    name: &["Grob Opening", "Grob Gambit", "Basman Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HYPERACCELERATED_FIANCHETTO: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Hyperaccelerated Fianchetto"],
+    name: &["Sicilian Defense", "Hyperaccelerated Fianchetto"],
     moves: &[
         Normal {
             role: Pawn,

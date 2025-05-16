@@ -34,8 +34,7 @@ pub const DIEMER_DUHM_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Diemer-Duhm Gambit Accepted"],
+    name: &["French Defense", "Diemer-Duhm Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

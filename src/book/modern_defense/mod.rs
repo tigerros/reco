@@ -35,8 +35,7 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Modern Defense",
-        variation: &[],
+        name: &["Modern Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Modern Defense",
-        variation: &[],
+        name: &["Modern Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -181,8 +179,7 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Modern Defense",
-        variation: &[],
+        name: &["Modern Defense"],
         moves: &[
             Normal {
                 role: Pawn,

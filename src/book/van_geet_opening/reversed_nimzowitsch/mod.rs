@@ -34,8 +34,7 @@ pub const REVERSED_NIMZOWITSCH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Reversed Nimzowitsch"],
+    name: &["Van Geet Opening", "Reversed Nimzowitsch"],
     moves: &[
         Normal {
             role: Knight,

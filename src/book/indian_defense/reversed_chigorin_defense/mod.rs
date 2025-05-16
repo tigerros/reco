@@ -34,8 +34,7 @@ pub const REVERSED_CHIGORIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Reversed Chigorin Defense"],
+    name: &["Indian Defense", "Reversed Chigorin Defense"],
     moves: &[
         Normal {
             role: Pawn,

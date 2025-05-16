@@ -5,12 +5,11 @@ use reco::OpeningOwned;
 /// Uses the last variation layer for the constant identifier, or the opening name if the
 /// variation is unspecified.
 pub fn get_opening_constant_expression_string(opening: &OpeningOwned) -> String {
-    let name = &opening.name;
     let moves = &opening.moves;
     let volume = opening.code.volume;
     let category = opening.code.category;
-    let variation_joined = opening
-        .variation
+    let name_joined = opening
+        .name
         .iter()
         .map(|v| format!("\"{}\"", v.trim()))
         .collect::<Vec<_>>()
@@ -31,8 +30,7 @@ pub fn get_opening_constant_expression_string(opening: &OpeningOwned) -> String 
         volume: Volume::{volume},
         category: RangedU8::new_static::<{category}>(),
     }},
-    name: "{name}",
-    variation: &[{variation_joined}],
+    name: &[{name_joined}],
     moves: &{moves:#?},
     setup: &Setup {{
         board: Board::from_bitboards(

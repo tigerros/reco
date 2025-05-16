@@ -34,8 +34,7 @@ pub const MIKENAS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Mikenas Variation"],
+    name: &["Nimzowitsch Defense", "Mikenas Variation"],
     moves: &[
         Normal {
             role: Pawn,

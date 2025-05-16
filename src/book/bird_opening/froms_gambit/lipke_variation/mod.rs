@@ -34,8 +34,7 @@ pub const LIPKE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["From's Gambit", "Lipke Variation"],
+    name: &["Bird Opening", "From's Gambit", "Lipke Variation"],
     moves: &[
         Normal {
             role: Pawn,

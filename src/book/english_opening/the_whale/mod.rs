@@ -34,8 +34,7 @@ pub const THE_WHALE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "English Opening",
-    variation: &["The Whale"],
+    name: &["English Opening", "The Whale"],
     moves: &[
         Normal {
             role: Pawn,

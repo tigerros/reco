@@ -34,8 +34,7 @@ pub const TROON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Borg Defense",
-    variation: &["Troon Gambit"],
+    name: &["Borg Defense", "Troon Gambit"],
     moves: &[
         Normal {
             role: Pawn,

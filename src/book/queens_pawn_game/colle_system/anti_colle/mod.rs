@@ -34,8 +34,7 @@ pub const ANTI_COLLE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Colle System", "Anti-Colle"],
+    name: &["Queen's Pawn Game", "Colle System", "Anti-Colle"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PETROSIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<92>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Petrosian Variation"],
+    name: &["King's Indian Defense", "Petrosian Variation"],
     moves: &[
         Normal {
             role: Pawn,

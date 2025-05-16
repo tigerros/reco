@@ -34,8 +34,7 @@ pub const REVERSED_BROOKLYN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit Declined",
-    variation: &["Reversed Brooklyn"],
+    name: &["Englund Gambit Declined", "Reversed Brooklyn"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SCHLIEMANN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Schliemann Defense"],
+    name: &["Ruy Lopez", "Schliemann Defense"],
     moves: &[
         Normal {
             role: Pawn,

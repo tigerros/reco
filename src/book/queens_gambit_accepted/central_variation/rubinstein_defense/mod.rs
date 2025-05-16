@@ -34,8 +34,11 @@ pub const RUBINSTEIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Central Variation", "Rubinstein Defense"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Central Variation",
+        "Rubinstein Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

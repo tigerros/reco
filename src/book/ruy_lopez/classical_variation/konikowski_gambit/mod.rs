@@ -34,8 +34,7 @@ pub const KONIKOWSKI_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<64>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Classical Variation", "Konikowski Gambit"],
+    name: &["Ruy Lopez", "Classical Variation", "Konikowski Gambit"],
     moves: &[
         Normal {
             role: Pawn,

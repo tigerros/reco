@@ -34,8 +34,7 @@ pub const FURMAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Furman Variation"],
+    name: &["Queen's Gambit Accepted", "Furman Variation"],
     moves: &[
         Normal {
             role: Pawn,

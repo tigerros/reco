@@ -34,8 +34,7 @@ pub const RADISCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Clam Variation", "Radisch Gambit"],
+    name: &["King's Pawn Game", "Clam Variation", "Radisch Gambit"],
     moves: &[
         Normal {
             role: Pawn,

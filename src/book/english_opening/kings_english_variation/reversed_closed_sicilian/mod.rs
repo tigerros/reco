@@ -34,8 +34,11 @@ pub const REVERSED_CLOSED_SICILIAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<25>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Reversed Closed Sicilian"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Reversed Closed Sicilian",
+    ],
     moves: &[
         Normal {
             role: Pawn,

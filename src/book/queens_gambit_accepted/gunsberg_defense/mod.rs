@@ -34,8 +34,7 @@ pub const GUNSBERG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Gunsberg Defense"],
+    name: &["Queen's Gambit Accepted", "Gunsberg Defense"],
     moves: &[
         Normal {
             role: Pawn,

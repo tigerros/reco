@@ -34,8 +34,11 @@ pub const GLEK_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<94>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Glek Defense"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Glek Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

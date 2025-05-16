@@ -34,8 +34,7 @@ pub const MORTIMER_EVANS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Mortimer-Evans Gambit"],
+    name: &["Italian Game", "Evans Gambit", "Mortimer-Evans Gambit"],
     moves: &[
         Normal {
             role: Pawn,

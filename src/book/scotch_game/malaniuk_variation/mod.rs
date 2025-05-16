@@ -34,8 +34,7 @@ pub const MALANIUK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Scotch Game",
-    variation: &["Malaniuk Variation"],
+    name: &["Scotch Game", "Malaniuk Variation"],
     moves: &[
         Normal {
             role: Pawn,

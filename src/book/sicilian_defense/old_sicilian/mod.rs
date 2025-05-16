@@ -34,8 +34,7 @@ pub const OLD_SICILIAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Old Sicilian"],
+    name: &["Sicilian Defense", "Old Sicilian"],
     moves: &[
         Normal {
             role: Pawn,

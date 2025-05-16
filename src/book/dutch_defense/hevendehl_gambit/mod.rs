@@ -34,8 +34,7 @@ pub const HEVENDEHL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Hevendehl Gambit"],
+    name: &["Dutch Defense", "Hevendehl Gambit"],
     moves: &[
         Normal {
             role: Pawn,

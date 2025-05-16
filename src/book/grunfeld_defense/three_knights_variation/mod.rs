@@ -35,8 +35,7 @@ pub const THREE_KNIGHTS_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<90>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Three Knights Variation"],
+        name: &["Grünfeld Defense", "Three Knights Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const THREE_KNIGHTS_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<90>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Three Knights Variation"],
+        name: &["Grünfeld Defense", "Three Knights Variation"],
         moves: &[
             Normal {
                 role: Pawn,

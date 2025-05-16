@@ -35,8 +35,7 @@ pub const ITALIAN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<47>(),
         },
-        name: "Four Knights Game",
-        variation: &["Italian Variation"],
+        name: &["Four Knights Game", "Italian Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const ITALIAN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<50>(),
         },
-        name: "Four Knights Game",
-        variation: &["Italian Variation"],
+        name: &["Four Knights Game", "Italian Variation"],
         moves: &[
             Normal {
                 role: Pawn,

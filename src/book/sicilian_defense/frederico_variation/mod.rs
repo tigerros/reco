@@ -34,8 +34,7 @@ pub const FREDERICO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Frederico Variation"],
+    name: &["Sicilian Defense", "Frederico Variation"],
     moves: &[
         Normal {
             role: Pawn,

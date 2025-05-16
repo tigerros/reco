@@ -35,8 +35,7 @@ pub const RUSSIAN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<96>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Russian Variation"],
+        name: &["Grünfeld Defense", "Russian Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const RUSSIAN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<97>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Russian Variation"],
+        name: &["Grünfeld Defense", "Russian Variation"],
         moves: &[
             Normal {
                 role: Pawn,

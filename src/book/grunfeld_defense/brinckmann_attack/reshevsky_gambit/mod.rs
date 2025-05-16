@@ -34,8 +34,7 @@ pub const RESHEVSKY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<83>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Brinckmann Attack", "Reshevsky Gambit"],
+    name: &["Grünfeld Defense", "Brinckmann Attack", "Reshevsky Gambit"],
     moves: &[
         Normal {
             role: Pawn,

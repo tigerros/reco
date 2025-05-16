@@ -34,8 +34,11 @@ pub const EKSTROM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Botvinnik Variation", "Ekstrom Variation"],
+    name: &[
+        "Semi-Slav Defense",
+        "Botvinnik Variation",
+        "Ekstrom Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

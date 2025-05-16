@@ -34,8 +34,7 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Indian Defense",
-    variation: &["Budapest Defense", "Rubinstein Variation"],
+    name: &["Indian Defense", "Budapest Defense", "Rubinstein Variation"],
     moves: &[
         Normal {
             role: Pawn,

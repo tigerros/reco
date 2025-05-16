@@ -34,8 +34,7 @@ pub const LA_BOURDONNAIS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["La Bourdonnais Variation"],
+    name: &["French Defense", "La Bourdonnais Variation"],
     moves: &[
         Normal {
             role: Pawn,

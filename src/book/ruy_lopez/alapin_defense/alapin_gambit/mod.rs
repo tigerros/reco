@@ -34,8 +34,7 @@ pub const ALAPIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Alapin Defense", "Alapin Gambit"],
+    name: &["Ruy Lopez", "Alapin Defense", "Alapin Gambit"],
     moves: &[
         Normal {
             role: Pawn,

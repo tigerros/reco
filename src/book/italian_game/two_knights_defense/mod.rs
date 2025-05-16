@@ -35,8 +35,7 @@ pub const TWO_KNIGHTS_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<55>(),
         },
-        name: "Italian Game",
-        variation: &["Two Knights Defense"],
+        name: &["Italian Game", "Two Knights Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -165,8 +164,7 @@ pub const TWO_KNIGHTS_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<55>(),
         },
-        name: "Italian Game",
-        variation: &["Two Knights Defense"],
+        name: &["Italian Game", "Two Knights Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -245,8 +243,7 @@ pub const TWO_KNIGHTS_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<58>(),
         },
-        name: "Italian Game",
-        variation: &["Two Knights Defense"],
+        name: &["Italian Game", "Two Knights Defense"],
         moves: &[
             Normal {
                 role: Pawn,

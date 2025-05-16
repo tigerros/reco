@@ -34,8 +34,7 @@ pub const GOLDSMITH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Goldsmith Defense",
-    variation: &[],
+    name: &["Goldsmith Defense"],
     moves: &[
         Normal {
             role: Pawn,

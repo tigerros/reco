@@ -34,8 +34,7 @@ pub const POLISH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Polish Defense",
-    variation: &[],
+    name: &["Polish Defense"],
     moves: &[
         Normal {
             role: Pawn,

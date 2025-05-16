@@ -34,8 +34,7 @@ pub const SCOTCH_INVITATION_DECLINED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Scotch Invitation Declined"],
+    name: &["Italian Game", "Scotch Invitation Declined"],
     moves: &[
         Normal {
             role: Pawn,

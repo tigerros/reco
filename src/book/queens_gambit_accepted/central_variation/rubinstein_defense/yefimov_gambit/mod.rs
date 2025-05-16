@@ -34,8 +34,12 @@ pub const YEFIMOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Central Variation", "Rubinstein Defense", "Yefimov Gambit"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Central Variation",
+        "Rubinstein Defense",
+        "Yefimov Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

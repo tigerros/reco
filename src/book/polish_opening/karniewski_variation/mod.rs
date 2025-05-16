@@ -34,8 +34,7 @@ pub const KARNIEWSKI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Polish Opening",
-    variation: &["Karniewski Variation"],
+    name: &["Polish Opening", "Karniewski Variation"],
     moves: &[
         Normal {
             role: Pawn,

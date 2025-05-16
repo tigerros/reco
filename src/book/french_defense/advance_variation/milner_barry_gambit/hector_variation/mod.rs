@@ -35,8 +35,8 @@ pub const HECTOR_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<2>(),
         },
-        name: "French Defense",
-        variation: &[
+        name: &[
+            "French Defense",
             "Advance Variation",
             "Milner-Barry Gambit",
             "Hector Variation",
@@ -176,8 +176,8 @@ pub const HECTOR_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<2>(),
         },
-        name: "French Defense",
-        variation: &[
+        name: &[
+            "French Defense",
             "Advance Variation",
             "Milner-Barry Gambit",
             "Hector Variation",

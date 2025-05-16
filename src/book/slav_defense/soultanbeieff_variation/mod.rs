@@ -34,8 +34,7 @@ pub const SOULTANBEIEFF_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<16>(),
     },
-    name: "Slav Defense",
-    variation: &["Soultanbeieff Variation"],
+    name: &["Slav Defense", "Soultanbeieff Variation"],
     moves: &[
         Normal {
             role: Pawn,

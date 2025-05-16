@@ -34,8 +34,11 @@ pub const FIANCHETTO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<37>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Harrwitz Attack", "Fianchetto Defense"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Harrwitz Attack",
+        "Fianchetto Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

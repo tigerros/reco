@@ -35,8 +35,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::E,
             category: RangedU8::new_static::<9>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed", "Main Line"],
+        name: &["Catalan Opening", "Closed", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -222,8 +221,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::E,
             category: RangedU8::new_static::<9>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed", "Main Line"],
+        name: &["Catalan Opening", "Closed", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -353,8 +351,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::E,
             category: RangedU8::new_static::<9>(),
         },
-        name: "Catalan Opening",
-        variation: &["Closed", "Main Line"],
+        name: &["Catalan Opening", "Closed", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,

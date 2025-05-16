@@ -35,8 +35,7 @@ pub const KEENES_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<30>(),
         },
-        name: "King's Gambit Declined",
-        variation: &["Keene's Defense"],
+        name: &["King's Gambit Declined", "Keene's Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const KEENES_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<30>(),
         },
-        name: "King's Gambit Declined",
-        variation: &["Keene's Defense"],
+        name: &["King's Gambit Declined", "Keene's Defense"],
         moves: &[
             Normal {
                 role: Pawn,

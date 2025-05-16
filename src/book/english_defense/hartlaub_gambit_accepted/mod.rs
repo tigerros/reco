@@ -34,8 +34,7 @@ pub const HARTLAUB_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "English Defense",
-    variation: &["Hartlaub Gambit Accepted"],
+    name: &["English Defense", "Hartlaub Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const TARTAKOWER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Dutch Defense",
-    variation: &["Staunton Gambit", "Tartakower Variation"],
+    name: &["Dutch Defense", "Staunton Gambit", "Tartakower Variation"],
     moves: &[
         Normal {
             role: Pawn,

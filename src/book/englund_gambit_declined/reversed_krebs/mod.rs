@@ -34,8 +34,7 @@ pub const REVERSED_KREBS: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit Declined",
-    variation: &["Reversed Krebs"],
+    name: &["Englund Gambit Declined", "Reversed Krebs"],
     moves: &[
         Normal {
             role: Pawn,

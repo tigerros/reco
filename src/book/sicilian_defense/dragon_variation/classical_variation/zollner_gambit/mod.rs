@@ -34,8 +34,12 @@ pub const ZOLLNER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<73>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Classical Variation", "Zollner Gambit"],
+    name: &[
+        "Sicilian Defense",
+        "Dragon Variation",
+        "Classical Variation",
+        "Zollner Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const DELAYED_EXCHANGE_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<74>(),
         },
-        name: "Neo-Grünfeld Defense",
-        variation: &["Delayed Exchange Variation"],
+        name: &["Neo-Grünfeld Defense", "Delayed Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -152,8 +151,7 @@ pub const DELAYED_EXCHANGE_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<75>(),
         },
-        name: "Neo-Grünfeld Defense",
-        variation: &["Delayed Exchange Variation"],
+        name: &["Neo-Grünfeld Defense", "Delayed Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -283,8 +281,7 @@ pub const DELAYED_EXCHANGE_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<75>(),
         },
-        name: "Neo-Grünfeld Defense",
-        variation: &["Delayed Exchange Variation"],
+        name: &["Neo-Grünfeld Defense", "Delayed Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -414,8 +411,7 @@ pub const DELAYED_EXCHANGE_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<76>(),
         },
-        name: "Neo-Grünfeld Defense",
-        variation: &["Delayed Exchange Variation"],
+        name: &["Neo-Grünfeld Defense", "Delayed Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,

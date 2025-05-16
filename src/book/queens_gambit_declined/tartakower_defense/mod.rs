@@ -35,8 +35,7 @@ pub const TARTAKOWER_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<58>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Tartakower Defense"],
+        name: &["Queen's Gambit Declined", "Tartakower Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -165,8 +164,7 @@ pub const TARTAKOWER_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<59>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Tartakower Defense"],
+        name: &["Queen's Gambit Declined", "Tartakower Defense"],
         moves: &[
             Normal {
                 role: Pawn,

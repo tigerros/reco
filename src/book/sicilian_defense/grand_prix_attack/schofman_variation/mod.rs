@@ -34,8 +34,11 @@ pub const SCHOFMAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Grand Prix Attack", "Schofman Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Grand Prix Attack",
+        "Schofman Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

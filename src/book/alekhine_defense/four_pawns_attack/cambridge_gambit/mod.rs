@@ -34,8 +34,7 @@ pub const CAMBRIDGE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Four Pawns Attack", "Cambridge Gambit"],
+    name: &["Alekhine Defense", "Four Pawns Attack", "Cambridge Gambit"],
     moves: &[
         Normal {
             role: Pawn,

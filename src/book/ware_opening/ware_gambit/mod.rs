@@ -34,8 +34,7 @@ pub const WARE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Ware Opening",
-    variation: &["Ware Gambit"],
+    name: &["Ware Opening", "Ware Gambit"],
     moves: &[
         Normal {
             role: Pawn,

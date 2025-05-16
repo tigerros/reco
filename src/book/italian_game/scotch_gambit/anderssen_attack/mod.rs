@@ -34,8 +34,7 @@ pub const ANDERSSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Scotch Gambit", "Anderssen Attack"],
+    name: &["Italian Game", "Scotch Gambit", "Anderssen Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PANOV_TRANSFER: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Panov Transfer"],
+    name: &["Scandinavian Defense", "Panov Transfer"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const DUBOIS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &["Hamppe-Muzio", "Dubois Variation"],
+    name: &["Vienna Game", "Hamppe-Muzio", "Dubois Variation"],
     moves: &[
         Normal {
             role: Pawn,

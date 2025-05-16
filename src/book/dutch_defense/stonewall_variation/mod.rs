@@ -35,8 +35,7 @@ pub const STONEWALL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<92>(),
         },
-        name: "Dutch Defense",
-        variation: &["Stonewall Variation"],
+        name: &["Dutch Defense", "Stonewall Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -152,8 +151,7 @@ pub const STONEWALL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<92>(),
         },
-        name: "Dutch Defense",
-        variation: &["Stonewall Variation"],
+        name: &["Dutch Defense", "Stonewall Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -262,8 +260,7 @@ pub const STONEWALL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<94>(),
         },
-        name: "Dutch Defense",
-        variation: &["Stonewall Variation"],
+        name: &["Dutch Defense", "Stonewall Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -393,8 +390,7 @@ pub const STONEWALL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<95>(),
         },
-        name: "Dutch Defense",
-        variation: &["Stonewall Variation"],
+        name: &["Dutch Defense", "Stonewall Variation"],
         moves: &[
             Normal {
                 role: Pawn,

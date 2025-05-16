@@ -34,8 +34,7 @@ pub const VENICE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Venice Attack"],
+    name: &["Sicilian Defense", "Venice Attack"],
     moves: &[
         Normal {
             role: Pawn,

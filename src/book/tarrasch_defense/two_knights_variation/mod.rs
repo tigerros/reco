@@ -34,8 +34,7 @@ pub const TWO_KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Two Knights Variation"],
+    name: &["Tarrasch Defense", "Two Knights Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const NEUMANN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &["Neumann Gambit"],
+    name: &["Ponziani Opening", "Neumann Gambit"],
     moves: &[
         Normal {
             role: Pawn,

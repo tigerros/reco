@@ -34,8 +34,11 @@ pub const SANTA_MARIA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Salvio Gambit", "Santa Maria Defense"],
+    name: &[
+        "King's Gambit Accepted",
+        "Salvio Gambit",
+        "Santa Maria Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

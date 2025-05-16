@@ -34,8 +34,11 @@ pub const BALDWIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Double Muzio Gambit", "Baldwin Gambit"],
+    name: &[
+        "King's Gambit Accepted",
+        "Double Muzio Gambit",
+        "Baldwin Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

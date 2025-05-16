@@ -34,8 +34,11 @@ pub const LARSEN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<62>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Fianchetto Variation", "Larsen Defense"],
+    name: &[
+        "King's Indian Defense",
+        "Fianchetto Variation",
+        "Larsen Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

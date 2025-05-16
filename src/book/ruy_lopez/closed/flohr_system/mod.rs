@@ -34,8 +34,7 @@ pub const FLOHR_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<92>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Flohr System"],
+    name: &["Ruy Lopez", "Closed", "Flohr System"],
     moves: &[
         Normal {
             role: Pawn,

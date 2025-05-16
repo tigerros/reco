@@ -34,8 +34,7 @@ pub const EIFEL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Vienna Game",
-    variation: &["Stanley Variation", "Eifel Gambit"],
+    name: &["Vienna Game", "Stanley Variation", "Eifel Gambit"],
     moves: &[
         Normal {
             role: Pawn,

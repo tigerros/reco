@@ -34,8 +34,7 @@ pub const CHINESE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Pirc Defense",
-    variation: &["Chinese Variation"],
+    name: &["Pirc Defense", "Chinese Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const KHAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Khan Gambit"],
+    name: &["Bishop's Opening", "Khan Gambit"],
     moves: &[
         Normal {
             role: Pawn,

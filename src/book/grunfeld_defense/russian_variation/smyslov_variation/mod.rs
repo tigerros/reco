@@ -35,8 +35,7 @@ pub const SMYSLOV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<98>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Russian Variation", "Smyslov Variation"],
+        name: &["Grünfeld Defense", "Russian Variation", "Smyslov Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -165,8 +164,7 @@ pub const SMYSLOV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<99>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Russian Variation", "Smyslov Variation"],
+        name: &["Grünfeld Defense", "Russian Variation", "Smyslov Variation"],
         moves: &[
             Normal {
                 role: Pawn,

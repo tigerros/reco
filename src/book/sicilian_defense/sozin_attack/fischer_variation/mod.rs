@@ -34,8 +34,7 @@ pub const FISCHER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<88>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Sozin Attack", "Fischer Variation"],
+    name: &["Sicilian Defense", "Sozin Attack", "Fischer Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const SANKY_GEORGE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["St. George Defense", "Sanky-George Gambit"],
+    name: &[
+        "French Defense",
+        "St. George Defense",
+        "Sanky-George Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

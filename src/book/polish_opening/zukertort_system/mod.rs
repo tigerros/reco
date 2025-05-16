@@ -34,8 +34,7 @@ pub const ZUKERTORT_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Polish Opening",
-    variation: &["Zukertort System"],
+    name: &["Polish Opening", "Zukertort System"],
     moves: &[
         Normal {
             role: Knight,

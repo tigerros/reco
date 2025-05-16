@@ -34,8 +34,7 @@ pub const NORMAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<35>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Normal Defense"],
+    name: &["Queen's Gambit Declined", "Normal Defense"],
     moves: &[
         Normal {
             role: Pawn,

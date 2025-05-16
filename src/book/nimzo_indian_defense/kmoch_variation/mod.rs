@@ -34,8 +34,7 @@ pub const KMOCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Kmoch Variation"],
+    name: &["Nimzo-Indian Defense", "Kmoch Variation"],
     moves: &[
         Normal {
             role: Pawn,

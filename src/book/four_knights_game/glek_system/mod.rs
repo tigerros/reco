@@ -34,8 +34,7 @@ pub const GLEK_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Four Knights Game",
-    variation: &["Glek System"],
+    name: &["Four Knights Game", "Glek System"],
     moves: &[
         Normal {
             role: Pawn,

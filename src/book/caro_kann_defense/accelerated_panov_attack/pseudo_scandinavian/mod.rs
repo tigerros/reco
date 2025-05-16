@@ -34,8 +34,11 @@ pub const PSEUDO_SCANDINAVIAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Accelerated Panov Attack", "Pseudo-Scandinavian"],
+    name: &[
+        "Caro-Kann Defense",
+        "Accelerated Panov Attack",
+        "Pseudo-Scandinavian",
+    ],
     moves: &[
         Normal {
             role: Pawn,

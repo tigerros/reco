@@ -34,8 +34,7 @@ pub const MONSTER_DECLINED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Vienna Game",
-    variation: &["Stanley Variation", "Monster Declined"],
+    name: &["Vienna Game", "Stanley Variation", "Monster Declined"],
     moves: &[
         Normal {
             role: Pawn,

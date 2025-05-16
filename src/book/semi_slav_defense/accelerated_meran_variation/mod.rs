@@ -34,8 +34,7 @@ pub const ACCELERATED_MERAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Accelerated Meran Variation"],
+    name: &["Semi-Slav Defense", "Accelerated Meran Variation"],
     moves: &[
         Normal {
             role: Pawn,

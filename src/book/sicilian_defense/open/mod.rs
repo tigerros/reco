@@ -35,8 +35,7 @@ pub const OPEN: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<32>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Open"],
+        name: &["Sicilian Defense", "Open"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const OPEN: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<32>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Open"],
+        name: &["Sicilian Defense", "Open"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -202,8 +200,7 @@ pub const OPEN: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<32>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Open"],
+        name: &["Sicilian Defense", "Open"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -275,8 +272,7 @@ pub const OPEN: [Opening<'static, &str>; 4] = [
             volume: Volume::B,
             category: RangedU8::new_static::<33>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Open"],
+        name: &["Sicilian Defense", "Open"],
         moves: &[
             Normal {
                 role: Pawn,

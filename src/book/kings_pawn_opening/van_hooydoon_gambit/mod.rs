@@ -34,8 +34,7 @@ pub const VAN_HOOYDOON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Opening",
-    variation: &["Van Hooydoon Gambit"],
+    name: &["King's Pawn Opening", "Van Hooydoon Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ANTI_PHILIDOR: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Lion Defense",
-    variation: &["Anti-Philidor"],
+    name: &["Lion Defense", "Anti-Philidor"],
     moves: &[
         Normal {
             role: Pawn,

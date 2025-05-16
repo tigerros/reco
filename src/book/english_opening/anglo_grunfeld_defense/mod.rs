@@ -34,8 +34,7 @@ pub const ANGLO_GRUNFELD_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<16>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Grünfeld Defense"],
+    name: &["English Opening", "Anglo-Grünfeld Defense"],
     moves: &[
         Normal {
             role: Pawn,

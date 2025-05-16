@@ -35,8 +35,11 @@ pub const LASKER_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<12>(),
         },
-        name: "French Defense",
-        variation: &["MacCutcheon Variation", "Lasker Variation"],
+        name: &[
+            "French Defense",
+            "MacCutcheon Variation",
+            "Lasker Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -185,8 +188,11 @@ pub const LASKER_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<12>(),
         },
-        name: "French Defense",
-        variation: &["MacCutcheon Variation", "Lasker Variation"],
+        name: &[
+            "French Defense",
+            "MacCutcheon Variation",
+            "Lasker Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const NORWEGIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Norwegian Defense"],
+    name: &["Modern Defense", "Norwegian Defense"],
     moves: &[
         Normal {
             role: Pawn,

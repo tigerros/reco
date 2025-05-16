@@ -34,8 +34,7 @@ pub const PAULSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<2>(),
     },
-    name: "French Defense",
-    variation: &["Advance Variation", "Paulsen Attack"],
+    name: &["French Defense", "Advance Variation", "Paulsen Attack"],
     moves: &[
         Normal {
             role: Pawn,

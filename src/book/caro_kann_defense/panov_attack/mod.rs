@@ -35,8 +35,7 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<13>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Panov Attack"],
+        name: &["Caro-Kann Defense", "Panov Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<13>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Panov Attack"],
+        name: &["Caro-Kann Defense", "Panov Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -223,8 +221,7 @@ pub const PANOV_ATTACK: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<14>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Panov Attack"],
+        name: &["Caro-Kann Defense", "Panov Attack"],
         moves: &[
             Normal {
                 role: Pawn,

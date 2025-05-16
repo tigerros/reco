@@ -34,8 +34,8 @@ pub const STONEWALL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<14>(),
     },
-    name: "Réti Opening",
-    variation: &[
+    name: &[
+        "Réti Opening",
         "Anglo-Slav Variation",
         "Bogoljubow Variation",
         "Stonewall Line",

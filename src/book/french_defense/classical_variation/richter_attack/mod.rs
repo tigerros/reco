@@ -35,8 +35,7 @@ pub const RICHTER_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<13>(),
         },
-        name: "French Defense",
-        variation: &["Classical Variation", "Richter Attack"],
+        name: &["French Defense", "Classical Variation", "Richter Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -164,8 +163,7 @@ pub const RICHTER_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<13>(),
         },
-        name: "French Defense",
-        variation: &["Classical Variation", "Richter Attack"],
+        name: &["French Defense", "Classical Variation", "Richter Attack"],
         moves: &[
             Normal {
                 role: Pawn,

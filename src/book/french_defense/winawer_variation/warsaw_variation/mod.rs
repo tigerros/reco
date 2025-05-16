@@ -34,8 +34,7 @@ pub const WARSAW_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<19>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Warsaw Variation"],
+    name: &["French Defense", "Winawer Variation", "Warsaw Variation"],
     moves: &[
         Normal {
             role: Pawn,

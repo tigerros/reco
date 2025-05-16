@@ -34,8 +34,7 @@ pub const GRUNFELD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Barry Attack", "Grünfeld Variation"],
+    name: &["Queen's Pawn Game", "Barry Attack", "Grünfeld Variation"],
     moves: &[
         Normal {
             role: Pawn,

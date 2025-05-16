@@ -34,8 +34,7 @@ pub const KEVITZ_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Fianchetto Defense", "Kevitz Gambit"],
+    name: &["Ruy Lopez", "Fianchetto Defense", "Kevitz Gambit"],
     moves: &[
         Normal {
             role: Pawn,

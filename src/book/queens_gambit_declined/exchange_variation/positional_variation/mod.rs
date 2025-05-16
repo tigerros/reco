@@ -35,8 +35,11 @@ pub const POSITIONAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<35>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Exchange Variation", "Positional Variation"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Exchange Variation",
+            "Positional Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +146,11 @@ pub const POSITIONAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<35>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Exchange Variation", "Positional Variation"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Exchange Variation",
+            "Positional Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const TWO_KNIGHTS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Two Knights Attack"],
+    name: &["Caro-Kann Defense", "Two Knights Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const CARO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &["Caro Gambit"],
+    name: &["Ponziani Opening", "Caro Gambit"],
     moves: &[
         Normal {
             role: Pawn,

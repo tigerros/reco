@@ -34,8 +34,7 @@ pub const KORCHNOI_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Korchnoi Attack"],
+    name: &["Dutch Defense", "Korchnoi Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const N150_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Pirc Defense",
-    variation: &["150 Attack"],
+    name: &["Pirc Defense", "150 Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<68>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Exchange Variation", "Keres Variation"],
+    name: &["Ruy Lopez", "Exchange Variation", "Keres Variation"],
     moves: &[
         Normal {
             role: Pawn,

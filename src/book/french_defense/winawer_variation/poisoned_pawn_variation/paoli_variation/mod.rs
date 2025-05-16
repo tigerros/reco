@@ -34,8 +34,8 @@ pub const PAOLI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<19>(),
     },
-    name: "French Defense",
-    variation: &[
+    name: &[
+        "French Defense",
         "Winawer Variation",
         "Poisoned Pawn Variation",
         "Paoli Variation",

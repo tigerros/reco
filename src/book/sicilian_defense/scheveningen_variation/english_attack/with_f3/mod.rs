@@ -34,8 +34,12 @@ pub const WITH_F3: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<90>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Scheveningen Variation", "English Attack", "with f3"],
+    name: &[
+        "Sicilian Defense",
+        "Scheveningen Variation",
+        "English Attack",
+        "with f3",
+    ],
     moves: &[
         Normal {
             role: Pawn,

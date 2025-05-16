@@ -34,8 +34,7 @@ pub const SORENSEN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Danish Gambit Declined",
-    variation: &["Sörensen Defense"],
+    name: &["Danish Gambit Declined", "Sörensen Defense"],
     moves: &[
         Normal {
             role: Pawn,

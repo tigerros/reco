@@ -34,8 +34,7 @@ pub const DRAGON_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Pirc Defense",
-    variation: &["Austrian Attack", "Dragon Formation"],
+    name: &["Pirc Defense", "Austrian Attack", "Dragon Formation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const DOUBLE_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Scotch Gambit", "Double Gambit Accepted"],
+    name: &["Italian Game", "Scotch Gambit", "Double Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

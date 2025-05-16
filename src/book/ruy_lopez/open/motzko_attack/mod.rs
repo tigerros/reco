@@ -34,8 +34,7 @@ pub const MOTZKO_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Motzko Attack"],
+    name: &["Ruy Lopez", "Open", "Motzko Attack"],
     moves: &[
         Normal {
             role: Pawn,

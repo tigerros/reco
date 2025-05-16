@@ -34,8 +34,7 @@ pub const KEIDANSKY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Urusov Gambit", "Keidansky Gambit"],
+    name: &["Bishop's Opening", "Urusov Gambit", "Keidansky Gambit"],
     moves: &[
         Normal {
             role: Pawn,

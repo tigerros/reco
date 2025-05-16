@@ -35,8 +35,7 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<61>(),
         },
-        name: "Benoni Defense",
-        variation: &["Fianchetto Variation"],
+        name: &["Benoni Defense", "Fianchetto Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -164,8 +163,7 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<62>(),
         },
-        name: "Benoni Defense",
-        variation: &["Fianchetto Variation"],
+        name: &["Benoni Defense", "Fianchetto Variation"],
         moves: &[
             Normal {
                 role: Pawn,

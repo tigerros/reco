@@ -34,8 +34,7 @@ pub const MAYET_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Mayet Attack"],
+    name: &["Latvian Gambit", "Mayet Attack"],
     moves: &[
         Normal {
             role: Pawn,

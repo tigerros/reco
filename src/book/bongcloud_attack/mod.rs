@@ -34,8 +34,7 @@ pub const BONGCLOUD_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Bongcloud Attack",
-    variation: &[],
+    name: &["Bongcloud Attack"],
     moves: &[
         Normal {
             role: Pawn,

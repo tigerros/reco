@@ -34,8 +34,7 @@ pub const KOTOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Kotov Gambit"],
+    name: &["King's Gambit Accepted", "Kotov Gambit"],
     moves: &[
         Normal {
             role: Pawn,

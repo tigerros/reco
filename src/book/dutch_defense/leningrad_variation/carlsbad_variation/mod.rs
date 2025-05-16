@@ -34,8 +34,7 @@ pub const CARLSBAD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<81>(),
     },
-    name: "Dutch Defense",
-    variation: &["Leningrad Variation", "Carlsbad Variation"],
+    name: &["Dutch Defense", "Leningrad Variation", "Carlsbad Variation"],
     moves: &[
         Normal {
             role: Pawn,

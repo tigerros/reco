@@ -34,8 +34,7 @@ pub const HORWITZ_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Horwitz Defense",
-    variation: &[],
+    name: &["Horwitz Defense"],
     moves: &[
         Normal {
             role: Pawn,

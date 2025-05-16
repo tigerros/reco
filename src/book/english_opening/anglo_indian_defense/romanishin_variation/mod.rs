@@ -34,8 +34,11 @@ pub const ROMANISHIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<15>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Indian Defense", "Romanishin Variation"],
+    name: &[
+        "English Opening",
+        "Anglo-Indian Defense",
+        "Romanishin Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const RASA_STUDIER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["Rasa-Studier Gambit"],
+    name: &["Blackmar-Diemer Gambit", "Rasa-Studier Gambit"],
     moves: &[
         Normal {
             role: Pawn,

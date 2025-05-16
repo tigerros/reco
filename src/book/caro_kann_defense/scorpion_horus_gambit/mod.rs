@@ -34,8 +34,7 @@ pub const SCORPION_HORUS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Scorpion-Horus Gambit"],
+    name: &["Caro-Kann Defense", "Scorpion-Horus Gambit"],
     moves: &[
         Normal {
             role: Pawn,

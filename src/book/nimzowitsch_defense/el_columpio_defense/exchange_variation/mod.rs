@@ -34,8 +34,11 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["El Columpio Defense", "Exchange Variation"],
+    name: &[
+        "Nimzowitsch Defense",
+        "El Columpio Defense",
+        "Exchange Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ROMANIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Wing Gambit", "Romanian Defense"],
+    name: &["Sicilian Defense", "Wing Gambit", "Romanian Defense"],
     moves: &[
         Normal {
             role: Pawn,

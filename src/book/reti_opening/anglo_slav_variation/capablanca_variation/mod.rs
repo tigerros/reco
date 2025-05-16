@@ -34,8 +34,11 @@ pub const CAPABLANCA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Réti Opening",
-    variation: &["Anglo-Slav Variation", "Capablanca Variation"],
+    name: &[
+        "Réti Opening",
+        "Anglo-Slav Variation",
+        "Capablanca Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

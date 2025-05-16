@@ -34,8 +34,7 @@ pub const COZIO_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Cozio Attack"],
+    name: &["Petrov's Defense", "Cozio Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<68>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Classical Variation"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -236,8 +239,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<68>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Classical Variation"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -430,8 +436,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<68>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Classical Variation"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -631,8 +640,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<69>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Classical Variation"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

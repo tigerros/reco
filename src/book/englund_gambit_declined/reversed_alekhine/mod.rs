@@ -34,8 +34,7 @@ pub const REVERSED_ALEKHINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit Declined",
-    variation: &["Reversed Alekhine"],
+    name: &["Englund Gambit Declined", "Reversed Alekhine"],
     moves: &[
         Normal {
             role: Pawn,

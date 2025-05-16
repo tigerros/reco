@@ -35,8 +35,7 @@ pub const DE_BRUYCKER_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["De Bruycker Defense"],
+        name: &["Caro-Kann Defense", "De Bruycker Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const DE_BRUYCKER_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["De Bruycker Defense"],
+        name: &["Caro-Kann Defense", "De Bruycker Defense"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const GRAND_PRIX_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Grand Prix Attack"],
+    name: &["Sicilian Defense", "Grand Prix Attack"],
     moves: &[
         Normal {
             role: Pawn,

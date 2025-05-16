@@ -34,8 +34,7 @@ pub const DUTCH_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Veresov Attack", "Dutch System"],
+    name: &["Queen's Pawn Game", "Veresov Attack", "Dutch System"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const DUZ_KHOTIMIRSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Blumenfeld Countergambit",
-    variation: &["Duz-Khotimirsky Variation"],
+    name: &["Blumenfeld Countergambit", "Duz-Khotimirsky Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,12 @@ pub const BRONSTEIN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Kan Variation", "Maróczy Bind", "Bronstein Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Kan Variation",
+            "Maróczy Bind",
+            "Bronstein Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -178,8 +182,12 @@ pub const BRONSTEIN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Kan Variation", "Maróczy Bind", "Bronstein Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Kan Variation",
+            "Maróczy Bind",
+            "Bronstein Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

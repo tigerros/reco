@@ -34,8 +34,7 @@ pub const HAMPPE_MUZIO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &["Hamppe-Muzio Gambit"],
+    name: &["Vienna Game", "Hamppe-Muzio Gambit"],
     moves: &[
         Normal {
             role: Pawn,

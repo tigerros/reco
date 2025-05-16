@@ -34,8 +34,7 @@ pub const THERKATZ_HERZOG_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Italian Game",
-    variation: &["Giuoco Piano", "Therkatz-Herzog Variation"],
+    name: &["Italian Game", "Giuoco Piano", "Therkatz-Herzog Variation"],
     moves: &[
         Normal {
             role: Pawn,

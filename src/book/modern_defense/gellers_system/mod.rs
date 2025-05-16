@@ -34,8 +34,7 @@ pub const GELLERS_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Modern Defense",
-    variation: &["Geller's System"],
+    name: &["Modern Defense", "Geller's System"],
     moves: &[
         Normal {
             role: Pawn,

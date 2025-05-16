@@ -34,8 +34,7 @@ pub const ICELANDIC_PALME_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Icelandic-Palme Gambit"],
+    name: &["Scandinavian Defense", "Icelandic-Palme Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const STANLEY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Vienna Game",
-    variation: &["Stanley Variation"],
+    name: &["Vienna Game", "Stanley Variation"],
     moves: &[
         Normal {
             role: Pawn,

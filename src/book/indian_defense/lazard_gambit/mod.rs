@@ -34,8 +34,7 @@ pub const LAZARD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Lazard Gambit"],
+    name: &["Indian Defense", "Lazard Gambit"],
     moves: &[
         Normal {
             role: Pawn,

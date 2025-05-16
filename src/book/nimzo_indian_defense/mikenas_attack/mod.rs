@@ -34,8 +34,7 @@ pub const MIKENAS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Mikenas Attack"],
+    name: &["Nimzo-Indian Defense", "Mikenas Attack"],
     moves: &[
         Normal {
             role: Pawn,

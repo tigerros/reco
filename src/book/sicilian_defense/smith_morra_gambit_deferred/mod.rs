@@ -34,8 +34,7 @@ pub const SMITH_MORRA_GAMBIT_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Smith-Morra Gambit Deferred"],
+    name: &["Sicilian Defense", "Smith-Morra Gambit Deferred"],
     moves: &[
         Normal {
             role: Pawn,

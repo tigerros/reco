@@ -34,8 +34,11 @@ pub const KINGS_INDIAN_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<15>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Indian Defense", "King's Indian Formation"],
+    name: &[
+        "English Opening",
+        "Anglo-Indian Defense",
+        "King's Indian Formation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

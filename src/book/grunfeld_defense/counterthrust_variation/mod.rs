@@ -34,8 +34,7 @@ pub const COUNTERTHRUST_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Counterthrust Variation"],
+    name: &["Grünfeld Defense", "Counterthrust Variation"],
     moves: &[
         Normal {
             role: Pawn,

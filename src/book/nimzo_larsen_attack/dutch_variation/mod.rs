@@ -34,8 +34,7 @@ pub const DUTCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Nimzo-Larsen Attack",
-    variation: &["Dutch Variation"],
+    name: &["Nimzo-Larsen Attack", "Dutch Variation"],
     moves: &[
         Normal {
             role: Pawn,

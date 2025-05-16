@@ -34,8 +34,7 @@ pub const POZAREK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Mikenas Defense",
-    variation: &["Pozarek Gambit"],
+    name: &["Mikenas Defense", "Pozarek Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const CHAROUSEK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Charousek Variation"],
+    name: &["Queen's Gambit Declined", "Charousek Variation"],
     moves: &[
         Normal {
             role: Pawn,

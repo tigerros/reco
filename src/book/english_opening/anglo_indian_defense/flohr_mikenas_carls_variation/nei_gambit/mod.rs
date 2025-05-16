@@ -34,8 +34,8 @@ pub const NEI_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<19>(),
     },
-    name: "English Opening",
-    variation: &[
+    name: &[
+        "English Opening",
         "Anglo-Indian Defense",
         "Flohr-Mikenas-Carls Variation",
         "Nei Gambit",

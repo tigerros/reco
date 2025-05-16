@@ -34,8 +34,7 @@ pub const ANTI_MARSHALL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<88>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Anti-Marshall"],
+    name: &["Ruy Lopez", "Closed", "Anti-Marshall"],
     moves: &[
         Normal {
             role: Pawn,

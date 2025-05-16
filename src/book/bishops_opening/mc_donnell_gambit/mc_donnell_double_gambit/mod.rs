@@ -34,8 +34,11 @@ pub const MC_DONNELL_DOUBLE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["McDonnell Gambit", "McDonnell Double Gambit"],
+    name: &[
+        "Bishop's Opening",
+        "McDonnell Gambit",
+        "McDonnell Double Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

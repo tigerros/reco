@@ -34,8 +34,11 @@ pub const TRADITIONAL_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Normal Variation", "Traditional System"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Normal Variation",
+        "Traditional System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

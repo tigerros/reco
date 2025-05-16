@@ -34,8 +34,11 @@ pub const TRADITIONAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Catalan Opening",
-    variation: &["Closed Variation", "Traditional Variation"],
+    name: &[
+        "Catalan Opening",
+        "Closed Variation",
+        "Traditional Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

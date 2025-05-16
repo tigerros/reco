@@ -34,8 +34,12 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<89>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Sämisch Variation", "Closed Variation", "Main Line"],
+    name: &[
+        "King's Indian Defense",
+        "Sämisch Variation",
+        "Closed Variation",
+        "Main Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

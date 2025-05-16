@@ -34,8 +34,11 @@ pub const SPASSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<34>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Classical Variation", "Spassky Variation"],
+    name: &[
+        "Tarrasch Defense",
+        "Classical Variation",
+        "Spassky Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

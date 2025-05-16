@@ -34,8 +34,7 @@ pub const BAYONET_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Lion Defense",
-    variation: &["Bayonet Attack"],
+    name: &["Lion Defense", "Bayonet Attack"],
     moves: &[
         Normal {
             role: Pawn,

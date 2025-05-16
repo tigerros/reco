@@ -35,8 +35,7 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Chigorin Variation"],
+        name: &["Queen's Pawn Game", "Chigorin Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Chigorin Variation"],
+        name: &["Queen's Pawn Game", "Chigorin Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -167,8 +165,7 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Chigorin Variation"],
+        name: &["Queen's Pawn Game", "Chigorin Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -226,8 +223,7 @@ pub const CHIGORIN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<2>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Chigorin Variation"],
+        name: &["Queen's Pawn Game", "Chigorin Variation"],
         moves: &[
             Normal {
                 role: Pawn,

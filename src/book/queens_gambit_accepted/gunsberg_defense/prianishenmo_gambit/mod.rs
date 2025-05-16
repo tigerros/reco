@@ -34,8 +34,11 @@ pub const PRIANISHENMO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<24>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Gunsberg Defense", "Prianishenmo Gambit"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Gunsberg Defense",
+        "Prianishenmo Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const LA_BOURDONNAIS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "King's Pawn Game",
-    variation: &["La Bourdonnais Gambit"],
+    name: &["King's Pawn Game", "La Bourdonnais Gambit"],
     moves: &[
         Normal {
             role: Pawn,

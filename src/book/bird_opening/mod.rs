@@ -34,8 +34,7 @@ pub const BIRD_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &[],
+    name: &["Bird Opening"],
     moves: &[Normal {
         role: Pawn,
         from: F2,

@@ -34,8 +34,11 @@ pub const LICHTENHEIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Boden-Kieseritzky Gambit", "Lichtenhein Defense"],
+    name: &[
+        "Bishop's Opening",
+        "Boden-Kieseritzky Gambit",
+        "Lichtenhein Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const CHAMELEON_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<35>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Exchange Variation", "Chameleon Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Exchange Variation",
+        "Chameleon Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

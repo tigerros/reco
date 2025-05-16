@@ -34,8 +34,7 @@ pub const SCHLECHTER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Schlechter Defense"],
+    name: &["Ruy Lopez", "Open", "Schlechter Defense"],
     moves: &[
         Normal {
             role: Pawn,

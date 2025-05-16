@@ -34,8 +34,7 @@ pub const HALL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Center Game",
-    variation: &["Hall Variation"],
+    name: &["Center Game", "Hall Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MIESES_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Mieses Opening",
-    variation: &[],
+    name: &["Mieses Opening"],
     moves: &[Normal {
         role: Pawn,
         from: D2,

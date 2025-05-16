@@ -34,8 +34,7 @@ pub const RUSHMERE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &["Pierce Gambit", "Rushmere Attack"],
+    name: &["Vienna Game", "Pierce Gambit", "Rushmere Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const VON_POPIEL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["von Popiel Gambit"],
+    name: &["Blackmar-Diemer Gambit", "von Popiel Gambit"],
     moves: &[
         Normal {
             role: Pawn,

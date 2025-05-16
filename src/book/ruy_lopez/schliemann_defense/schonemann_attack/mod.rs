@@ -34,8 +34,7 @@ pub const SCHONEMANN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Schliemann Defense", "Schönemann Attack"],
+    name: &["Ruy Lopez", "Schliemann Defense", "Schönemann Attack"],
     moves: &[
         Normal {
             role: Pawn,

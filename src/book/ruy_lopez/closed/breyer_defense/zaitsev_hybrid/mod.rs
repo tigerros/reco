@@ -34,8 +34,7 @@ pub const ZAITSEV_HYBRID: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<95>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Breyer Defense", "Zaitsev Hybrid"],
+    name: &["Ruy Lopez", "Closed", "Breyer Defense", "Zaitsev Hybrid"],
     moves: &[
         Normal {
             role: Pawn,

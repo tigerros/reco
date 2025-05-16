@@ -35,8 +35,7 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<11>(),
         },
-        name: "French Defense",
-        variation: &["Steinitz Variation"],
+        name: &["French Defense", "Steinitz Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -150,8 +149,7 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<11>(),
         },
-        name: "French Defense",
-        variation: &["Steinitz Variation"],
+        name: &["French Defense", "Steinitz Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -272,8 +270,7 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<11>(),
         },
-        name: "French Defense",
-        variation: &["Steinitz Variation"],
+        name: &["French Defense", "Steinitz Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -387,8 +384,7 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<11>(),
         },
-        name: "French Defense",
-        variation: &["Steinitz Variation"],
+        name: &["French Defense", "Steinitz Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -502,8 +498,7 @@ pub const STEINITZ_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<11>(),
         },
-        name: "French Defense",
-        variation: &["Steinitz Variation"],
+        name: &["French Defense", "Steinitz Variation"],
         moves: &[
             Normal {
                 role: Pawn,

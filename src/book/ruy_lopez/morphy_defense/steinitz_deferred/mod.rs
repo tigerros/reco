@@ -35,8 +35,7 @@ pub const STEINITZ_DEFERRED: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<79>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Steinitz Deferred"],
+        name: &["Ruy Lopez", "Morphy Defense", "Steinitz Deferred"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -165,8 +164,7 @@ pub const STEINITZ_DEFERRED: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<79>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Morphy Defense", "Steinitz Deferred"],
+        name: &["Ruy Lopez", "Morphy Defense", "Steinitz Deferred"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -35,8 +35,7 @@ pub const KIESERITZKY_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Center Game",
-        variation: &["Kieseritzky Variation"],
+        name: &["Center Game", "Kieseritzky Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const KIESERITZKY_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Center Game",
-        variation: &["Kieseritzky Variation"],
+        name: &["Center Game", "Kieseritzky Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -202,8 +200,7 @@ pub const KIESERITZKY_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Center Game",
-        variation: &["Kieseritzky Variation"],
+        name: &["Center Game", "Kieseritzky Variation"],
         moves: &[
             Normal {
                 role: Pawn,

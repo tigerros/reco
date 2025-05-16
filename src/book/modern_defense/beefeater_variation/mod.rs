@@ -34,8 +34,7 @@ pub const BEEFEATER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Modern Defense",
-    variation: &["Beefeater Variation"],
+    name: &["Modern Defense", "Beefeater Variation"],
     moves: &[
         Normal {
             role: Pawn,

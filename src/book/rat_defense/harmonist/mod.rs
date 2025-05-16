@@ -34,8 +34,7 @@ pub const HARMONIST: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Rat Defense",
-    variation: &["Harmonist"],
+    name: &["Rat Defense", "Harmonist"],
     moves: &[
         Normal {
             role: Pawn,

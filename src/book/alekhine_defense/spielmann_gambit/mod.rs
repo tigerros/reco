@@ -34,8 +34,7 @@ pub const SPIELMANN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Spielmann Gambit"],
+    name: &["Alekhine Defense", "Spielmann Gambit"],
     moves: &[
         Normal {
             role: Pawn,

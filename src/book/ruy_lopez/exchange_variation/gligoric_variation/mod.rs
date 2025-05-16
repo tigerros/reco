@@ -34,8 +34,7 @@ pub const GLIGORIC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<69>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Exchange Variation", "Gligoric Variation"],
+    name: &["Ruy Lopez", "Exchange Variation", "Gligoric Variation"],
     moves: &[
         Normal {
             role: Pawn,

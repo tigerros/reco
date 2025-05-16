@@ -34,8 +34,7 @@ pub const PSEUDO_SAMISCH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Modern Defense",
-    variation: &["Averbakh Variation", "Pseudo-Sämisch"],
+    name: &["Modern Defense", "Averbakh Variation", "Pseudo-Sämisch"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SHABALOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Shabalov Gambit"],
+    name: &["Zukertort Opening", "Shabalov Gambit"],
     moves: &[
         Normal {
             role: Knight,

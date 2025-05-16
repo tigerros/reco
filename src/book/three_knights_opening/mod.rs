@@ -35,8 +35,7 @@ pub const THREE_KNIGHTS_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Three Knights Opening",
-        variation: &[],
+        name: &["Three Knights Opening"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const THREE_KNIGHTS_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Three Knights Opening",
-        variation: &[],
+        name: &["Three Knights Opening"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const FRENCH_BENONI: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["French Benoni"],
+    name: &["Benoni Defense", "French Benoni"],
     moves: &[
         Normal {
             role: Pawn,

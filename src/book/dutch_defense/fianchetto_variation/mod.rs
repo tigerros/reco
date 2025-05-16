@@ -34,8 +34,7 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<86>(),
     },
-    name: "Dutch Defense",
-    variation: &["Fianchetto Variation"],
+    name: &["Dutch Defense", "Fianchetto Variation"],
     moves: &[
         Normal {
             role: Pawn,

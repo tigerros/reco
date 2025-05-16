@@ -34,8 +34,7 @@ pub const GUNDERAM_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<13>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Panov Attack", "Gunderam Attack"],
+    name: &["Caro-Kann Defense", "Panov Attack", "Gunderam Attack"],
     moves: &[
         Normal {
             role: Pawn,

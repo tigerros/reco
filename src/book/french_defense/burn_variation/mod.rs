@@ -34,8 +34,7 @@ pub const BURN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<11>(),
     },
-    name: "French Defense",
-    variation: &["Burn Variation"],
+    name: &["French Defense", "Burn Variation"],
     moves: &[
         Normal {
             role: Pawn,

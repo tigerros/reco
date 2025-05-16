@@ -34,8 +34,7 @@ pub const GURGENIDZE_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Gurgenidze Counterattack"],
+    name: &["Caro-Kann Defense", "Gurgenidze Counterattack"],
     moves: &[
         Normal {
             role: Pawn,

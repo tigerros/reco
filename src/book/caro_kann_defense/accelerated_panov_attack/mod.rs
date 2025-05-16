@@ -35,8 +35,7 @@ pub const ACCELERATED_PANOV_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Accelerated Panov Attack"],
+        name: &["Caro-Kann Defense", "Accelerated Panov Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const ACCELERATED_PANOV_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Accelerated Panov Attack"],
+        name: &["Caro-Kann Defense", "Accelerated Panov Attack"],
         moves: &[
             Normal {
                 role: Pawn,

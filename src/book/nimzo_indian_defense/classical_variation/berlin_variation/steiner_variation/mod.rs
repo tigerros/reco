@@ -34,8 +34,8 @@ pub const STEINER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<38>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &[
+    name: &[
+        "Nimzo-Indian Defense",
         "Classical Variation",
         "Berlin Variation",
         "Steiner Variation",

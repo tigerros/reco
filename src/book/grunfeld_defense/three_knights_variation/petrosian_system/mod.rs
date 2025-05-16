@@ -34,8 +34,11 @@ pub const PETROSIAN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<91>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Three Knights Variation", "Petrosian System"],
+    name: &[
+        "Grünfeld Defense",
+        "Three Knights Variation",
+        "Petrosian System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const TARZAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Barry Attack", "Tarzan Attack"],
+    name: &["Queen's Pawn Game", "Barry Attack", "Tarzan Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const NESCAFE_FRAPPE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit",
-    variation: &["Zaitsev Variation", "Nescafe Frappe Attack"],
+    name: &["Benko Gambit", "Zaitsev Variation", "Nescafe Frappe Attack"],
     moves: &[
         Normal {
             role: Pawn,

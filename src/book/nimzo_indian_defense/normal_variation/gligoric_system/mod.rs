@@ -35,8 +35,11 @@ pub const GLIGORIC_SYSTEM: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<53>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Normal Variation", "Gligoric System"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Normal Variation",
+            "Gligoric System",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -159,8 +162,11 @@ pub const GLIGORIC_SYSTEM: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<53>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Normal Variation", "Gligoric System"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Normal Variation",
+            "Gligoric System",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

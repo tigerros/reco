@@ -34,8 +34,7 @@ pub const RIUMIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<16>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Riumin Variation"],
+    name: &["Queen's Indian Defense", "Riumin Variation"],
     moves: &[
         Normal {
             role: Pawn,

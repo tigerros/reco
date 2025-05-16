@@ -34,8 +34,12 @@ pub const KURKIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Ulvestad Variation", "Kurkin Gambit"],
+    name: &[
+        "Italian Game",
+        "Two Knights Defense",
+        "Ulvestad Variation",
+        "Kurkin Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

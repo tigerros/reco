@@ -34,8 +34,7 @@ pub const DUFRESNE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Dufresne Defense"],
+    name: &["Italian Game", "Evans Gambit", "Dufresne Defense"],
     moves: &[
         Normal {
             role: Pawn,

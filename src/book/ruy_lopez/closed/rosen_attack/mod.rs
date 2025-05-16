@@ -34,8 +34,7 @@ pub const ROSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<88>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Rosen Attack"],
+    name: &["Ruy Lopez", "Closed", "Rosen Attack"],
     moves: &[
         Normal {
             role: Pawn,

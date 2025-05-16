@@ -34,8 +34,7 @@ pub const RUBINSTEIN_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Rubinstein Opening",
-    variation: &[],
+    name: &["Rubinstein Opening"],
     moves: &[
         Normal {
             role: Pawn,

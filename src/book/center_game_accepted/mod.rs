@@ -34,8 +34,7 @@ pub const CENTER_GAME_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Center Game Accepted",
-    variation: &[],
+    name: &["Center Game Accepted"],
     moves: &[
         Normal {
             role: Pawn,

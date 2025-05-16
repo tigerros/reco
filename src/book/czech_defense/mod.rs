@@ -34,8 +34,7 @@ pub const CZECH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Czech Defense",
-    variation: &[],
+    name: &["Czech Defense"],
     moves: &[
         Normal {
             role: Pawn,

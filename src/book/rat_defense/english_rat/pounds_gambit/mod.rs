@@ -34,8 +34,7 @@ pub const POUNDS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Rat Defense",
-    variation: &["English Rat", "Pounds Gambit"],
+    name: &["Rat Defense", "English Rat", "Pounds Gambit"],
     moves: &[
         Normal {
             role: Pawn,

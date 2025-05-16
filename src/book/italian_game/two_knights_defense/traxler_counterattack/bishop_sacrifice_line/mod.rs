@@ -34,8 +34,8 @@ pub const BISHOP_SACRIFICE_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Italian Game",
-    variation: &[
+    name: &[
+        "Italian Game",
         "Two Knights Defense",
         "Traxler Counterattack",
         "Bishop Sacrifice Line",

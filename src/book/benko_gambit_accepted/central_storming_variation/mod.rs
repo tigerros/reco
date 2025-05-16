@@ -34,8 +34,7 @@ pub const CENTRAL_STORMING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Benko Gambit Accepted",
-    variation: &["Central Storming Variation"],
+    name: &["Benko Gambit Accepted", "Central Storming Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Bogo-Indian Defense",
-    variation: &["Nimzowitsch Variation"],
+    name: &["Bogo-Indian Defense", "Nimzowitsch Variation"],
     moves: &[
         Normal {
             role: Pawn,

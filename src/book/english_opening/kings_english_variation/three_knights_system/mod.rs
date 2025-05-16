@@ -34,8 +34,11 @@ pub const THREE_KNIGHTS_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<27>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Three Knights System"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Three Knights System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

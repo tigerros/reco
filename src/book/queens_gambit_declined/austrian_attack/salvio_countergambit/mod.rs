@@ -34,8 +34,11 @@ pub const SALVIO_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Austrian Attack", "Salvio Countergambit"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Austrian Attack",
+        "Salvio Countergambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

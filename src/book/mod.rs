@@ -201,14 +201,11 @@ pub mod queens_indian_accelerated;
 pub use queens_indian_accelerated::QUEENS_INDIAN_ACCELERATED;
 pub mod queens_indian_defense;
 pub use queens_indian_defense::QUEENS_INDIAN_DEFENSE;
+pub mod queens_pawn;
 pub mod queens_pawn_game;
 pub use queens_pawn_game::QUEENS_PAWN_GAME;
-pub mod queens_pawn_mengarini_attack;
-pub use queens_pawn_mengarini_attack::QUEENS_PAWN_MENGARINI_ATTACK;
 pub mod rapport_jobava_system;
 pub use rapport_jobava_system::RAPPORT_JOBAVA_SYSTEM;
-pub mod rapport_jobava_system_with_e6;
-pub use rapport_jobava_system_with_e6::RAPPORT_JOBAVA_SYSTEM_WITH_E6;
 pub mod rat_defense;
 pub mod reti_opening;
 pub use reti_opening::RETI_OPENING;
@@ -253,8 +250,7 @@ pub mod van_geet_opening;
 pub use van_geet_opening::VAN_GEET_OPENING;
 pub mod vant_kruijs_opening;
 pub use vant_kruijs_opening::VANT_KRUIJS_OPENING;
-pub mod vienna_gambit_with_max_lange_defense;
-pub use vienna_gambit_with_max_lange_defense::VIENNA_GAMBIT_WITH_MAX_LANGE_DEFENSE;
+pub mod vienna_gambit;
 pub mod vienna_game;
 pub use vienna_game::VIENNA_GAME;
 pub mod vulture_defense;
@@ -275,7 +271,7 @@ pub use zukertort_opening::ZUKERTORT_OPENING;
 #[doc = "Contains all openings and variations.
 
 This is a static and not a constant because it's huge.
-It contains 3518 openings, which is 225152 bytes."]
+It contains 3518 openings, which is 168864 bytes."]
 pub static ALL: &[Opening<'static, &str>] = constcat::concat_slices!([Opening<'static, &str>]: &ALEKHINE_DEFENSE,
 &alekhine_defense::BALOGH_VARIATION,
 &alekhine_defense::BROOKLYN_VARIATION,
@@ -2390,6 +2386,7 @@ pub static ALL: &[Opening<'static, &str>] = constcat::concat_slices!([Opening<'s
 &queens_indian_defense::SPASSKY_SYSTEM,
 &queens_indian_defense::TRADITIONAL_VARIATION,
 &queens_indian_defense::YATES_VARIATION,
+&queens_pawn::MENGARINI_ATTACK,
 &QUEENS_PAWN_GAME,
 &queens_pawn_game::ACCELERATED_LONDON_SYSTEM,
 &queens_pawn_game::accelerated_london_system::STEINITZ_COUNTERGAMBIT,
@@ -2438,9 +2435,8 @@ pub static ALL: &[Opening<'static, &str>] = constcat::concat_slices!([Opening<'s
 &queens_pawn_game::ZILBERMINTS_COUNTERGAMBIT,
 &queens_pawn_game::ZUKERTORT_VARIATION,
 &queens_pawn_game::ZURICH_GAMBIT,
-&QUEENS_PAWN_MENGARINI_ATTACK,
 &RAPPORT_JOBAVA_SYSTEM,
-&RAPPORT_JOBAVA_SYSTEM_WITH_E6,
+&rapport_jobava_system::WITH_E6,
 &rat_defense::ACCELERATED_GURGENIDZE,
 &rat_defense::ANTAL_DEFENSE,
 &rat_defense::BALOGH_DEFENSE,
@@ -3273,21 +3269,21 @@ pub static ALL: &[Opening<'static, &str>] = constcat::concat_slices!([Opening<'s
 &vant_kruijs_opening::keoni_hiva_gambit::AKAHI_VARIATION,
 &vant_kruijs_opening::keoni_hiva_gambit::ALUA_VARIATION,
 &vant_kruijs_opening::keoni_hiva_gambit::EKOLU_VARIATION,
-&VIENNA_GAMBIT_WITH_MAX_LANGE_DEFENSE,
-&vienna_gambit_with_max_lange_defense::CUNNINGHAM_DEFENSE,
-&vienna_gambit_with_max_lange_defense::HAMPPE_ALLGAIER_GAMBIT,
-&vienna_gambit_with_max_lange_defense::hamppe_allgaier_gambit::ALAPIN_VARIATION,
-&vienna_gambit_with_max_lange_defense::hamppe_allgaier_gambit::THOROLD_VARIATION,
-&vienna_gambit_with_max_lange_defense::HAMPPE_MUZIO_GAMBIT,
-&vienna_gambit_with_max_lange_defense::KNIGHT_VARIATION,
-&vienna_gambit_with_max_lange_defense::PIERCE_GAMBIT,
-&vienna_gambit_with_max_lange_defense::QUELLE_GAMBIT,
-&vienna_gambit_with_max_lange_defense::STEINITZ_GAMBIT,
-&vienna_gambit_with_max_lange_defense::steinitz_gambit::FRASER_MINCKWITZ_DEFENSE,
-&vienna_gambit_with_max_lange_defense::steinitz_gambit::MAIN_LINE,
-&vienna_gambit_with_max_lange_defense::steinitz_gambit::PAULSEN_DEFENSE,
-&vienna_gambit_with_max_lange_defense::steinitz_gambit::SORENSEN_DEFENSE,
-&vienna_gambit_with_max_lange_defense::steinitz_gambit::ZUKERTORT_DEFENSE,
+&vienna_gambit::WITH_MAX_LANGE_DEFENSE,
+&vienna_gambit::with_max_lange_defense::CUNNINGHAM_DEFENSE,
+&vienna_gambit::with_max_lange_defense::HAMPPE_ALLGAIER_GAMBIT,
+&vienna_gambit::with_max_lange_defense::hamppe_allgaier_gambit::ALAPIN_VARIATION,
+&vienna_gambit::with_max_lange_defense::hamppe_allgaier_gambit::THOROLD_VARIATION,
+&vienna_gambit::with_max_lange_defense::HAMPPE_MUZIO_GAMBIT,
+&vienna_gambit::with_max_lange_defense::KNIGHT_VARIATION,
+&vienna_gambit::with_max_lange_defense::PIERCE_GAMBIT,
+&vienna_gambit::with_max_lange_defense::QUELLE_GAMBIT,
+&vienna_gambit::with_max_lange_defense::STEINITZ_GAMBIT,
+&vienna_gambit::with_max_lange_defense::steinitz_gambit::FRASER_MINCKWITZ_DEFENSE,
+&vienna_gambit::with_max_lange_defense::steinitz_gambit::MAIN_LINE,
+&vienna_gambit::with_max_lange_defense::steinitz_gambit::PAULSEN_DEFENSE,
+&vienna_gambit::with_max_lange_defense::steinitz_gambit::SORENSEN_DEFENSE,
+&vienna_gambit::with_max_lange_defense::steinitz_gambit::ZUKERTORT_DEFENSE,
 &VIENNA_GAME,
 &vienna_game::ADAMS_GAMBIT,
 &vienna_game::ANDERSSEN_DEFENSE,

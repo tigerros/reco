@@ -34,8 +34,11 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<66>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Orthodox Defense", "Fianchetto Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Orthodox Defense",
+        "Fianchetto Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

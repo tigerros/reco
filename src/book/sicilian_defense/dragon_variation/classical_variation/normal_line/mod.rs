@@ -34,8 +34,12 @@ pub const NORMAL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<74>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Classical Variation", "Normal Line"],
+    name: &[
+        "Sicilian Defense",
+        "Dragon Variation",
+        "Classical Variation",
+        "Normal Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

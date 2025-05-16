@@ -34,8 +34,11 @@ pub const IMMEDIATE_FIANCHETTO: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Fianchetto Variation", "Immediate Fianchetto"],
+    name: &[
+        "King's Indian Defense",
+        "Fianchetto Variation",
+        "Immediate Fianchetto",
+    ],
     moves: &[
         Normal {
             role: Pawn,

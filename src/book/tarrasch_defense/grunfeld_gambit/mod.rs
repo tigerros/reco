@@ -34,8 +34,7 @@ pub const GRUNFELD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Grünfeld Gambit"],
+    name: &["Tarrasch Defense", "Grünfeld Gambit"],
     moves: &[
         Normal {
             role: Pawn,

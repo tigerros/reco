@@ -34,8 +34,11 @@ pub const PTERODACTYL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["London System", "Pterodactyl Variation"],
+    name: &[
+        "Queen's Pawn Game",
+        "London System",
+        "Pterodactyl Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

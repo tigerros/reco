@@ -34,8 +34,7 @@ pub const BENONI_PTERODACTYL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Central", "Benoni Pterodactyl"],
+    name: &["Pterodactyl Defense", "Central", "Benoni Pterodactyl"],
     moves: &[
         Normal {
             role: Pawn,

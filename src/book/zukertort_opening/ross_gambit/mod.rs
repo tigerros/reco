@@ -34,8 +34,7 @@ pub const ROSS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Ross Gambit"],
+    name: &["Zukertort Opening", "Ross Gambit"],
     moves: &[
         Normal {
             role: Knight,

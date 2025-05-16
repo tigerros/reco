@@ -34,8 +34,7 @@ pub const PAWN_STORM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<66>(),
     },
-    name: "Benoni Defense",
-    variation: &["Pawn Storm Variation"],
+    name: &["Benoni Defense", "Pawn Storm Variation"],
     moves: &[
         Normal {
             role: Pawn,

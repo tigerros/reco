@@ -34,8 +34,7 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Bogoljubow Variation"],
+    name: &["Semi-Slav Defense", "Bogoljubow Variation"],
     moves: &[
         Normal {
             role: Pawn,

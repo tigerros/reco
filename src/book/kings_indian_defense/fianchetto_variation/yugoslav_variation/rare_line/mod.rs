@@ -34,8 +34,12 @@ pub const RARE_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<64>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Fianchetto Variation", "Yugoslav Variation", "Rare Line"],
+    name: &[
+        "King's Indian Defense",
+        "Fianchetto Variation",
+        "Yugoslav Variation",
+        "Rare Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

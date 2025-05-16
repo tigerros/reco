@@ -34,8 +34,7 @@ pub const ALAPIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Alapin Variation"],
+    name: &["Queen's Gambit Declined", "Alapin Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HAXO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Haxo Gambit"],
+    name: &["Scotch Game", "Haxo Gambit"],
     moves: &[
         Normal {
             role: Pawn,

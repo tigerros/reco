@@ -34,8 +34,7 @@ pub const STANDARD_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Standard Defense"],
+    name: &["Modern Defense", "Standard Defense"],
     moves: &[
         Normal {
             role: Pawn,

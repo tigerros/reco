@@ -34,8 +34,11 @@ pub const ZVJAGINSEV_KRASENKOW_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<17>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Indian Defense", "Zvjaginsev-Krasenkow Attack"],
+    name: &[
+        "English Opening",
+        "Anglo-Indian Defense",
+        "Zvjaginsev-Krasenkow Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

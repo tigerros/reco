@@ -34,8 +34,7 @@ pub const ALEKHINE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Scotch Game",
-    variation: &["Alekhine Gambit"],
+    name: &["Scotch Game", "Alekhine Gambit"],
     moves: &[
         Normal {
             role: Pawn,

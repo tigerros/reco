@@ -34,8 +34,7 @@ pub const SHORT_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<91>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Yates Variation", "Short Attack"],
+    name: &["Ruy Lopez", "Closed", "Yates Variation", "Short Attack"],
     moves: &[
         Normal {
             role: Pawn,

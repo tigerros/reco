@@ -34,8 +34,11 @@ pub const MALTESE_FALCON: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Gibbins-Weidenhagen Gambit", "Maltese Falcon"],
+    name: &[
+        "Indian Defense",
+        "Gibbins-Weidenhagen Gambit",
+        "Maltese Falcon",
+    ],
     moves: &[
         Normal {
             role: Pawn,

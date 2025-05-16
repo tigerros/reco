@@ -34,8 +34,11 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<34>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Fianchetto Variation"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Fianchetto Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

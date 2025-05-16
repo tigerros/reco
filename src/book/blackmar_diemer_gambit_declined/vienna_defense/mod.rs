@@ -34,8 +34,7 @@ pub const VIENNA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Declined",
-    variation: &["Vienna Defense"],
+    name: &["Blackmar-Diemer Gambit Declined", "Vienna Defense"],
     moves: &[
         Normal {
             role: Pawn,

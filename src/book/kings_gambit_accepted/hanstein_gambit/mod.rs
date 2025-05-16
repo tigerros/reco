@@ -34,8 +34,7 @@ pub const HANSTEIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<38>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Hanstein Gambit"],
+    name: &["King's Gambit Accepted", "Hanstein Gambit"],
     moves: &[
         Normal {
             role: Pawn,

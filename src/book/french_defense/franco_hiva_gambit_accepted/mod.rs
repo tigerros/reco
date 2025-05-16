@@ -34,8 +34,7 @@ pub const FRANCO_HIVA_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Franco-Hiva Gambit Accepted"],
+    name: &["French Defense", "Franco-Hiva Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

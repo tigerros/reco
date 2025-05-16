@@ -34,8 +34,7 @@ pub const SPIKE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Rat Defense",
-    variation: &["Spike Attack"],
+    name: &["Rat Defense", "Spike Attack"],
     moves: &[
         Normal {
             role: Pawn,

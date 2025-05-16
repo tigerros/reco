@@ -34,8 +34,11 @@ pub const IVANOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Richter-Rauzer Variation", "Ivanov Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Richter-Rauzer Variation",
+        "Ivanov Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

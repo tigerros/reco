@@ -34,8 +34,7 @@ pub const WITH_BB5: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Schurig Gambit", "with Bb5"],
+    name: &["King's Gambit Accepted", "Schurig Gambit", "with Bb5"],
     moves: &[
         Normal {
             role: Pawn,

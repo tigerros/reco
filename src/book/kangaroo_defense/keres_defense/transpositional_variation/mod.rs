@@ -34,8 +34,11 @@ pub const TRANSPOSITIONAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Kangaroo Defense",
-    variation: &["Keres Defense", "Transpositional Variation"],
+    name: &[
+        "Kangaroo Defense",
+        "Keres Defense",
+        "Transpositional Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

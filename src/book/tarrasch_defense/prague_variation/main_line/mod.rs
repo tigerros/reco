@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<34>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Prague Variation", "Main Line"],
+    name: &["Tarrasch Defense", "Prague Variation", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

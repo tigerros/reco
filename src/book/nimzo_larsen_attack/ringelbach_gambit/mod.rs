@@ -34,8 +34,7 @@ pub const RINGELBACH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Nimzo-Larsen Attack",
-    variation: &["Ringelbach Gambit"],
+    name: &["Nimzo-Larsen Attack", "Ringelbach Gambit"],
     moves: &[
         Normal {
             role: Pawn,

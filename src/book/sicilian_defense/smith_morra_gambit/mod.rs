@@ -35,8 +35,7 @@ pub const SMITH_MORRA_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Smith-Morra Gambit"],
+        name: &["Sicilian Defense", "Smith-Morra Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const SMITH_MORRA_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Smith-Morra Gambit"],
+        name: &["Sicilian Defense", "Smith-Morra Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

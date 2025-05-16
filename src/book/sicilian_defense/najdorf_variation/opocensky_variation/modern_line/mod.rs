@@ -34,8 +34,12 @@ pub const MODERN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<92>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "Opocensky Variation", "Modern Line"],
+    name: &[
+        "Sicilian Defense",
+        "Najdorf Variation",
+        "Opocensky Variation",
+        "Modern Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

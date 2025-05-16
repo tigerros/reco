@@ -35,8 +35,7 @@ pub const AGINCOURT_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<13>(),
         },
-        name: "English Opening",
-        variation: &["Agincourt Defense"],
+        name: &["English Opening", "Agincourt Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const AGINCOURT_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<13>(),
         },
-        name: "English Opening",
-        variation: &["Agincourt Defense"],
+        name: &["English Opening", "Agincourt Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -160,8 +158,7 @@ pub const AGINCOURT_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<13>(),
         },
-        name: "English Opening",
-        variation: &["Agincourt Defense"],
+        name: &["English Opening", "Agincourt Defense"],
         moves: &[
             Normal {
                 role: Pawn,

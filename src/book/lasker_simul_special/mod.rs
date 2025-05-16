@@ -34,8 +34,7 @@ pub const LASKER_SIMUL_SPECIAL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Lasker Simul Special",
-    variation: &[],
+    name: &["Lasker Simul Special"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const MOROZEVICH_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<11>(),
     },
-    name: "French Defense",
-    variation: &["Classical Variation", "Burn Variation", "Morozevich Line"],
+    name: &[
+        "French Defense",
+        "Classical Variation",
+        "Burn Variation",
+        "Morozevich Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

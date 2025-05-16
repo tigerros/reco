@@ -34,8 +34,7 @@ pub const SANTASIERE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Wing Gambit", "Santasiere Variation"],
+    name: &["Sicilian Defense", "Wing Gambit", "Santasiere Variation"],
     moves: &[
         Normal {
             role: Pawn,

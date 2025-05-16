@@ -34,8 +34,7 @@ pub const SMYSLOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Smyslov Variation"],
+    name: &["Queen's Gambit Accepted", "Smyslov Variation"],
     moves: &[
         Normal {
             role: Pawn,

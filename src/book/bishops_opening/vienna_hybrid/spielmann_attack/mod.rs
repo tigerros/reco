@@ -34,8 +34,7 @@ pub const SPIELMANN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Vienna Hybrid", "Spielmann Attack"],
+    name: &["Bishop's Opening", "Vienna Hybrid", "Spielmann Attack"],
     moves: &[
         Normal {
             role: Pawn,

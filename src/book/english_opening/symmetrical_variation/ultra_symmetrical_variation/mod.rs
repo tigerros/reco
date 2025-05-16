@@ -34,8 +34,11 @@ pub const ULTRA_SYMMETRICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<36>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Ultra-Symmetrical Variation"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Ultra-Symmetrical Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

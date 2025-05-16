@@ -34,8 +34,11 @@ pub const HENNEBERGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Orthodox Defense", "Henneberger Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Orthodox Defense",
+        "Henneberger Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

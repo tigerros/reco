@@ -34,8 +34,7 @@ pub const MALKIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<83>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Malkin Variation"],
+    name: &["Ruy Lopez", "Open", "Malkin Variation"],
     moves: &[
         Normal {
             role: Pawn,

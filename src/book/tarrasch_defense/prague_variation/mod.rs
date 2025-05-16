@@ -34,8 +34,7 @@ pub const PRAGUE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<33>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Prague Variation"],
+    name: &["Tarrasch Defense", "Prague Variation"],
     moves: &[
         Normal {
             role: Pawn,

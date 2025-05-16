@@ -34,8 +34,7 @@ pub const CENTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Stoltz Variation", "Center Variation"],
+    name: &["Semi-Slav Defense", "Stoltz Variation", "Center Variation"],
     moves: &[
         Normal {
             role: Pawn,

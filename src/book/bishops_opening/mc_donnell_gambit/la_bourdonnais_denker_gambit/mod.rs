@@ -34,8 +34,11 @@ pub const LA_BOURDONNAIS_DENKER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["McDonnell Gambit", "La Bourdonnais-Denker Gambit"],
+    name: &[
+        "Bishop's Opening",
+        "McDonnell Gambit",
+        "La Bourdonnais-Denker Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

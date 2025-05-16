@@ -35,8 +35,7 @@ pub const LEWIS_COUNTERGAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<23>(),
         },
-        name: "Bishop's Opening",
-        variation: &["Lewis Countergambit"],
+        name: &["Bishop's Opening", "Lewis Countergambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const LEWIS_COUNTERGAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<23>(),
         },
-        name: "Bishop's Opening",
-        variation: &["Lewis Countergambit"],
+        name: &["Bishop's Opening", "Lewis Countergambit"],
         moves: &[
             Normal {
                 role: Pawn,

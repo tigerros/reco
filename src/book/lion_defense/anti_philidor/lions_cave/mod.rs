@@ -34,8 +34,7 @@ pub const LIONS_CAVE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Lion Defense",
-    variation: &["Anti-Philidor", "Lion's Cave"],
+    name: &["Lion Defense", "Anti-Philidor", "Lion's Cave"],
     moves: &[
         Normal {
             role: Pawn,

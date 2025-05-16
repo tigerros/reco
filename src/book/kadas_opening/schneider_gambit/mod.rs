@@ -34,8 +34,7 @@ pub const SCHNEIDER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Kádas Opening",
-    variation: &["Schneider Gambit"],
+    name: &["Kádas Opening", "Schneider Gambit"],
     moves: &[
         Normal {
             role: Pawn,

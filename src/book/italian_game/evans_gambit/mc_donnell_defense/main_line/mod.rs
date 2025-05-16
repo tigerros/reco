@@ -34,8 +34,12 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "McDonnell Defense", "Main Line"],
+    name: &[
+        "Italian Game",
+        "Evans Gambit",
+        "McDonnell Defense",
+        "Main Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

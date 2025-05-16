@@ -34,8 +34,12 @@ pub const ABONYI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Indian Defense",
-    variation: &["Budapest Defense", "Alekhine Variation", "Abonyi Variation"],
+    name: &[
+        "Indian Defense",
+        "Budapest Defense",
+        "Alekhine Variation",
+        "Abonyi Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

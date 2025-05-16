@@ -34,8 +34,11 @@ pub const GLIGORIC_TAIMANOV_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<92>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Gligoric-Taimanov System"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Gligoric-Taimanov System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const TRADITIONAL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<99>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Classical System", "Traditional Line"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Classical System",
+        "Traditional Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

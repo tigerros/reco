@@ -34,8 +34,11 @@ pub const SEIRAWAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<19>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Classical Variation", "Seirawan Variation"],
+    name: &[
+        "Caro-Kann Defense",
+        "Classical Variation",
+        "Seirawan Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

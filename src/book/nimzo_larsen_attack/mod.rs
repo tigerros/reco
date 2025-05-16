@@ -34,8 +34,7 @@ pub const NIMZO_LARSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Nimzo-Larsen Attack",
-    variation: &[],
+    name: &["Nimzo-Larsen Attack"],
     moves: &[Normal {
         role: Pawn,
         from: B2,

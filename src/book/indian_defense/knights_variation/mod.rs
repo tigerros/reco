@@ -34,8 +34,7 @@ pub const KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Indian Defense",
-    variation: &["Knights Variation"],
+    name: &["Indian Defense", "Knights Variation"],
     moves: &[
         Normal {
             role: Pawn,

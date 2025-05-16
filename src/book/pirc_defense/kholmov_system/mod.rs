@@ -34,8 +34,7 @@ pub const KHOLMOV_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Pirc Defense",
-    variation: &["Kholmov System"],
+    name: &["Pirc Defense", "Kholmov System"],
     moves: &[
         Normal {
             role: Pawn,

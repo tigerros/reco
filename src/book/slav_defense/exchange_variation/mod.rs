@@ -35,8 +35,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<10>(),
         },
-        name: "Slav Defense",
-        variation: &["Exchange Variation"],
+        name: &["Slav Defense", "Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<13>(),
         },
-        name: "Slav Defense",
-        variation: &["Exchange Variation"],
+        name: &["Slav Defense", "Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,

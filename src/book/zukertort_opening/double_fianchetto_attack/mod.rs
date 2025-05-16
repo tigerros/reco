@@ -34,8 +34,7 @@ pub const DOUBLE_FIANCHETTO_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Double Fianchetto Attack"],
+    name: &["Zukertort Opening", "Double Fianchetto Attack"],
     moves: &[
         Normal {
             role: Knight,

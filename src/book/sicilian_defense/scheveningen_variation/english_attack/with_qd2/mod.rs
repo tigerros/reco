@@ -34,8 +34,12 @@ pub const WITH_QD2: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Scheveningen Variation", "English Attack", "with Qd2"],
+    name: &[
+        "Sicilian Defense",
+        "Scheveningen Variation",
+        "English Attack",
+        "with Qd2",
+    ],
     moves: &[
         Normal {
             role: Pawn,

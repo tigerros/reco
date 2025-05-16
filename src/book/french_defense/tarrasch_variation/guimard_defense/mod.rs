@@ -34,8 +34,7 @@ pub const GUIMARD_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<3>(),
     },
-    name: "French Defense",
-    variation: &["Tarrasch Variation", "Guimard Defense"],
+    name: &["French Defense", "Tarrasch Variation", "Guimard Defense"],
     moves: &[
         Normal {
             role: Pawn,

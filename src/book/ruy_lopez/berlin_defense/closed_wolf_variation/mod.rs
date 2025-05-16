@@ -34,8 +34,7 @@ pub const CLOSED_WOLF_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<66>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Closed Wolf Variation"],
+    name: &["Ruy Lopez", "Berlin Defense", "Closed Wolf Variation"],
     moves: &[
         Normal {
             role: Pawn,

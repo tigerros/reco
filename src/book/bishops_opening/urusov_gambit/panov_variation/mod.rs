@@ -34,8 +34,7 @@ pub const PANOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<24>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Urusov Gambit", "Panov Variation"],
+    name: &["Bishop's Opening", "Urusov Gambit", "Panov Variation"],
     moves: &[
         Normal {
             role: Pawn,

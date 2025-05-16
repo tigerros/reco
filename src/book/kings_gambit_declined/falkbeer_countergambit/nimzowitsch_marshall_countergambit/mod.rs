@@ -34,8 +34,8 @@ pub const NIMZOWITSCH_MARSHALL_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Ope
         volume: Volume::C,
         category: RangedU8::new_static::<31>(),
     },
-    name: "King's Gambit Declined",
-    variation: &[
+    name: &[
+        "King's Gambit Declined",
         "Falkbeer Countergambit",
         "Nimzowitsch-Marshall Countergambit",
     ],

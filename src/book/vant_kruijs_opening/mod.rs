@@ -34,8 +34,7 @@ pub const VANT_KRUIJS_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van't Kruijs Opening",
-    variation: &[],
+    name: &["Van't Kruijs Opening"],
     moves: &[Normal {
         role: Pawn,
         from: E2,

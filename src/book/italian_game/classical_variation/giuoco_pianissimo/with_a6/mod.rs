@@ -35,8 +35,12 @@ pub const WITH_A6: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation", "Giuoco Pianissimo", "with a6"],
+        name: &[
+            "Italian Game",
+            "Classical Variation",
+            "Giuoco Pianissimo",
+            "with a6",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +147,12 @@ pub const WITH_A6: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation", "Giuoco Pianissimo", "with a6"],
+        name: &[
+            "Italian Game",
+            "Classical Variation",
+            "Giuoco Pianissimo",
+            "with a6",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

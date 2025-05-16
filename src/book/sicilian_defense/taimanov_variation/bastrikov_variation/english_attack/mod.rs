@@ -34,8 +34,8 @@ pub const ENGLISH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Taimanov Variation",
         "Bastrikov Variation",
         "English Attack",

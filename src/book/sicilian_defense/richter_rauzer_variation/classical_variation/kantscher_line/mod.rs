@@ -34,8 +34,8 @@ pub const KANTSCHER_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Richter-Rauzer Variation",
         "Classical Variation",
         "Kantscher Line",

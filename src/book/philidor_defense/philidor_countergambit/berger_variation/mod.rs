@@ -34,8 +34,11 @@ pub const BERGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Philidor Countergambit", "Berger Variation"],
+    name: &[
+        "Philidor Defense",
+        "Philidor Countergambit",
+        "Berger Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

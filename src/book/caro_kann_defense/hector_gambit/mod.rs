@@ -34,8 +34,7 @@ pub const HECTOR_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Hector Gambit"],
+    name: &["Caro-Kann Defense", "Hector Gambit"],
     moves: &[
         Normal {
             role: Pawn,

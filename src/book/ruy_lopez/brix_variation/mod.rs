@@ -34,8 +34,7 @@ pub const BRIX_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<78>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Brix Variation"],
+    name: &["Ruy Lopez", "Brix Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const LANDAU_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Slav Defense",
-    variation: &["Quiet Variation", "Landau Variation"],
+    name: &["Slav Defense", "Quiet Variation", "Landau Variation"],
     moves: &[
         Normal {
             role: Pawn,

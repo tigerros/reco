@@ -35,8 +35,11 @@ pub const PILLSBURY_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<40>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Semi-Tarrasch Defense", "Pillsbury Variation"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Semi-Tarrasch Defense",
+            "Pillsbury Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +139,11 @@ pub const PILLSBURY_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Semi-Tarrasch Defense", "Pillsbury Variation"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Semi-Tarrasch Defense",
+            "Pillsbury Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

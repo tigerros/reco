@@ -34,8 +34,7 @@ pub const ITALIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Italian Variation"],
+    name: &["Ruy Lopez", "Open", "Italian Variation"],
     moves: &[
         Normal {
             role: Pawn,

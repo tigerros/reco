@@ -34,8 +34,7 @@ pub const ZIEGLER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Ziegler Defense"],
+    name: &["Blackmar-Diemer Gambit Accepted", "Ziegler Defense"],
     moves: &[
         Normal {
             role: Pawn,

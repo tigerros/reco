@@ -34,8 +34,7 @@ pub const CHENOBOSKION_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Sodium Attack",
-    variation: &["Chenoboskion Variation"],
+    name: &["Sodium Attack", "Chenoboskion Variation"],
     moves: &[
         Normal {
             role: Knight,

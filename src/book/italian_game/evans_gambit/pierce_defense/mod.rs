@@ -34,8 +34,7 @@ pub const PIERCE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Pierce Defense"],
+    name: &["Italian Game", "Evans Gambit", "Pierce Defense"],
     moves: &[
         Normal {
             role: Pawn,

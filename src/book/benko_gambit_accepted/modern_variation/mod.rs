@@ -34,8 +34,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit Accepted",
-    variation: &["Modern Variation"],
+    name: &["Benko Gambit Accepted", "Modern Variation"],
     moves: &[
         Normal {
             role: Pawn,

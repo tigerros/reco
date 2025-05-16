@@ -2,14 +2,14 @@
 
 mod constants;
 mod get_archive_and_commit;
-mod get_name_and_variation;
+mod get_name;
 mod get_opening_constant_expression_string;
 mod get_opening_constant_item_string;
 mod get_uci;
 
 use crate::constants::{COMMIT_SOURCE_OUT, GEN_DIR};
 use crate::get_archive_and_commit::get_archive_and_commit;
-use crate::get_name_and_variation::get_name_and_variation;
+use crate::get_name::get_name;
 use crate::get_opening_constant_expression_string::get_opening_constant_expression_string;
 use crate::get_opening_constant_item_string::get_opening_constant_item_string;
 use crate::get_uci::get_uci;
@@ -50,11 +50,11 @@ fn main() {
     for record in reader.records() {
         let record = record.unwrap();
         let code_raw = &record[0];
-        let full_name_raw = &record[1];
+        let name_raw = &record[1];
         let uci_raw = &record[3];
 
         let code = Code::from_str(code_raw).unwrap();
-        let (name, variation) = get_name_and_variation(full_name_raw);
+        let name = get_name(name_raw);
         let uci = get_uci(uci_raw);
         let mut moves = Vec::new();
         let mut p = Chess::new();
@@ -67,8 +67,7 @@ fn main() {
 
         let setup = p.to_setup(EnPassantMode::Legal);
 
-        let mut identifier = variation.clone();
-        identifier.insert(0, name.clone());
+        let mut identifier = name.clone();
 
         for part in identifier.iter_mut() {
             *part = deunicode(part);
@@ -93,21 +92,19 @@ fn main() {
         let value = identifiers.get_mut(&identifier).unwrap();
 
         if let Some((full_name, silent_variations)) = value {
-            *full_name = full_name_raw.to_owned();
+            *full_name = name_raw.to_owned();
             silent_variations.insert(get_opening_constant_expression_string(&OpeningOwned {
                 code,
                 name,
-                variation,
                 moves,
                 setup,
             }));
         } else {
             *value = Some((
-                full_name_raw.to_owned(),
+                name_raw.to_owned(),
                 BTreeSet::from([get_opening_constant_expression_string(&OpeningOwned {
                     code,
                     name,
-                    variation,
                     moves,
                     setup,
                 })]),

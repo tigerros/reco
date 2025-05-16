@@ -34,8 +34,7 @@ pub const REVERSED_FRENCH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit Declined",
-    variation: &["Reversed French"],
+    name: &["Englund Gambit Declined", "Reversed French"],
     moves: &[
         Normal {
             role: Pawn,

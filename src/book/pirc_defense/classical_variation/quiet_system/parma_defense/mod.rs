@@ -34,8 +34,12 @@ pub const PARMA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<8>(),
     },
-    name: "Pirc Defense",
-    variation: &["Classical Variation", "Quiet System", "Parma Defense"],
+    name: &[
+        "Pirc Defense",
+        "Classical Variation",
+        "Quiet System",
+        "Parma Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

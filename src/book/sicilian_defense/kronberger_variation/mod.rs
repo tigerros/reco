@@ -34,8 +34,7 @@ pub const KRONBERGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Kronberger Variation"],
+    name: &["Sicilian Defense", "Kronberger Variation"],
     moves: &[
         Normal {
             role: Pawn,

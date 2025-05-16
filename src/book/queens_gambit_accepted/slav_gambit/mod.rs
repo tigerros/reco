@@ -34,8 +34,7 @@ pub const SLAV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Slav Gambit"],
+    name: &["Queen's Gambit Accepted", "Slav Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const TWO_KNIGHTS_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Richter-Veresov Attack",
-    variation: &["Two Knights System"],
+    name: &["Richter-Veresov Attack", "Two Knights System"],
     moves: &[
         Normal {
             role: Pawn,

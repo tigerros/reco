@@ -34,8 +34,12 @@ pub const WESTERINEN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<67>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "l'Hermet Variation", "Westerinen Line"],
+    name: &[
+        "Ruy Lopez",
+        "Berlin Defense",
+        "l'Hermet Variation",
+        "Westerinen Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

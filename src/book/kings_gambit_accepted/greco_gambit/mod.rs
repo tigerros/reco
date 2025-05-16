@@ -35,8 +35,7 @@ pub const GRECO_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<34>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["Greco Gambit"],
+        name: &["King's Gambit Accepted", "Greco Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -157,8 +156,7 @@ pub const GRECO_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<38>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["Greco Gambit"],
+        name: &["King's Gambit Accepted", "Greco Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

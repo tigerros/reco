@@ -34,8 +34,7 @@ pub const GIRAFFE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &["Giraffe Attack"],
+    name: &["Vienna Game", "Giraffe Attack"],
     moves: &[
         Normal {
             role: Pawn,

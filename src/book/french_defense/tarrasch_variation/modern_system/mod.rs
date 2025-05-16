@@ -34,8 +34,7 @@ pub const MODERN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<3>(),
     },
-    name: "French Defense",
-    variation: &["Tarrasch Variation", "Modern System"],
+    name: &["French Defense", "Tarrasch Variation", "Modern System"],
     moves: &[
         Normal {
             role: Pawn,

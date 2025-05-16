@@ -35,8 +35,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Scandinavian Defense",
-        variation: &["Modern Variation"],
+        name: &["Scandinavian Defense", "Modern Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Scandinavian Defense",
-        variation: &["Modern Variation"],
+        name: &["Scandinavian Defense", "Modern Variation"],
         moves: &[
             Normal {
                 role: Pawn,

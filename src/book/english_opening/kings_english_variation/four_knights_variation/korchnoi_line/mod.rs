@@ -34,8 +34,8 @@ pub const KORCHNOI_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<28>(),
     },
-    name: "English Opening",
-    variation: &[
+    name: &[
+        "English Opening",
         "King's English Variation",
         "Four Knights Variation",
         "Korchnoi Line",

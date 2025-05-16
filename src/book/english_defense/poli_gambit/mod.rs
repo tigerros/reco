@@ -34,8 +34,7 @@ pub const POLI_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "English Defense",
-    variation: &["Poli Gambit"],
+    name: &["English Defense", "Poli Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const LONG_WHIP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Kieseritzky Gambit", "Long Whip"],
+    name: &["King's Gambit Accepted", "Kieseritzky Gambit", "Long Whip"],
     moves: &[
         Normal {
             role: Pawn,

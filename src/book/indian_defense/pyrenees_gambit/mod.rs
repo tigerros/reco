@@ -34,8 +34,7 @@ pub const PYRENEES_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Indian Defense",
-    variation: &["Pyrenees Gambit"],
+    name: &["Indian Defense", "Pyrenees Gambit"],
     moves: &[
         Normal {
             role: Pawn,

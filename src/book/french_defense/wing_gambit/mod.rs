@@ -34,8 +34,7 @@ pub const WING_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Wing Gambit"],
+    name: &["French Defense", "Wing Gambit"],
     moves: &[
         Normal {
             role: Pawn,

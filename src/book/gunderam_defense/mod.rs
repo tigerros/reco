@@ -34,8 +34,7 @@ pub const GUNDERAM_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Gunderam Defense",
-    variation: &[],
+    name: &["Gunderam Defense"],
     moves: &[
         Normal {
             role: Pawn,

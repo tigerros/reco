@@ -34,8 +34,8 @@ pub const RICHTER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &[
+    name: &[
+        "Nimzowitsch Defense",
         "Scandinavian Variation",
         "Bogoljubow Variation",
         "Richter Gambit",

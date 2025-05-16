@@ -34,8 +34,11 @@ pub const KLOSS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Bogoljubow Defense", "Kloss Attack"],
+    name: &[
+        "Blackmar-Diemer Gambit Accepted",
+        "Bogoljubow Defense",
+        "Kloss Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

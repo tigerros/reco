@@ -34,8 +34,7 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Symmetrical Variation"],
+    name: &["Hungarian Opening", "Symmetrical Variation"],
     moves: &[
         Normal {
             role: Pawn,

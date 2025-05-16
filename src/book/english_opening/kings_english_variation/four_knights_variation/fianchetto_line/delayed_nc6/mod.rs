@@ -34,8 +34,8 @@ pub const DELAYED_NC6: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<29>(),
     },
-    name: "English Opening",
-    variation: &[
+    name: &[
+        "English Opening",
         "King's English Variation",
         "Four Knights Variation",
         "Fianchetto Line",

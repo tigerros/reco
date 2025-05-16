@@ -34,8 +34,12 @@ pub const MODERN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<7>(),
     },
-    name: "French Defense",
-    variation: &["Tarrasch Variation", "Chistyakov Defense", "Modern Line"],
+    name: &[
+        "French Defense",
+        "Tarrasch Variation",
+        "Chistyakov Defense",
+        "Modern Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

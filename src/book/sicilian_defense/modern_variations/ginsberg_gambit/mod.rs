@@ -34,8 +34,7 @@ pub const GINSBERG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Modern Variations", "Ginsberg Gambit"],
+    name: &["Sicilian Defense", "Modern Variations", "Ginsberg Gambit"],
     moves: &[
         Normal {
             role: Pawn,

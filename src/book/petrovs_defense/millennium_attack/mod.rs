@@ -34,8 +34,7 @@ pub const MILLENNIUM_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Millennium Attack"],
+    name: &["Petrov's Defense", "Millennium Attack"],
     moves: &[
         Normal {
             role: Pawn,

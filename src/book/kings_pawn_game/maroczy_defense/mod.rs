@@ -34,8 +34,7 @@ pub const MAROCZY_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Maróczy Defense"],
+    name: &["King's Pawn Game", "Maróczy Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,11 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<60>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Richter-Rauzer Variation", "Modern Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Richter-Rauzer Variation",
+            "Modern Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -157,8 +160,11 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<61>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Richter-Rauzer Variation", "Modern Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Richter-Rauzer Variation",
+            "Modern Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

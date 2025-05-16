@@ -34,8 +34,7 @@ pub const GORING_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Göring Gambit"],
+    name: &["Scotch Game", "Göring Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BUCKLEY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Buckley Attack"],
+    name: &["Alekhine Defense", "Buckley Attack"],
     moves: &[
         Normal {
             role: Pawn,

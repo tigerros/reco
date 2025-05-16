@@ -34,8 +34,7 @@ pub const BANZAI_LEONG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Banzai-Leong Gambit"],
+    name: &["French Defense", "Banzai-Leong Gambit"],
     moves: &[
         Normal {
             role: Pawn,

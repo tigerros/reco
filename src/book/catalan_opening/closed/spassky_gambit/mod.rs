@@ -34,8 +34,7 @@ pub const SPASSKY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<8>(),
     },
-    name: "Catalan Opening",
-    variation: &["Closed", "Spassky Gambit"],
+    name: &["Catalan Opening", "Closed", "Spassky Gambit"],
     moves: &[
         Normal {
             role: Pawn,

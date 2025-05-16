@@ -34,8 +34,7 @@ pub const AUSTRALIAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Australian Gambit"],
+    name: &["King's Gambit Accepted", "Australian Gambit"],
     moves: &[
         Normal {
             role: Pawn,

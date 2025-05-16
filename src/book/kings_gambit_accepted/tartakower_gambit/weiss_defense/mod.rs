@@ -34,8 +34,11 @@ pub const WEISS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Tartakower Gambit", "Weiss Defense"],
+    name: &[
+        "King's Gambit Accepted",
+        "Tartakower Gambit",
+        "Weiss Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

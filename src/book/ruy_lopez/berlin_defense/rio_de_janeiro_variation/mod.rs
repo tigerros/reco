@@ -35,8 +35,7 @@ pub const RIO_DE_JANEIRO_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<67>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Berlin Defense", "Rio de Janeiro Variation"],
+        name: &["Ruy Lopez", "Berlin Defense", "Rio de Janeiro Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -243,8 +242,7 @@ pub const RIO_DE_JANEIRO_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<67>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Berlin Defense", "Rio de Janeiro Variation"],
+        name: &["Ruy Lopez", "Berlin Defense", "Rio de Janeiro Variation"],
         moves: &[
             Normal {
                 role: Pawn,

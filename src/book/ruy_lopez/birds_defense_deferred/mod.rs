@@ -34,8 +34,7 @@ pub const BIRDS_DEFENSE_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<70>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Bird's Defense Deferred"],
+    name: &["Ruy Lopez", "Bird's Defense Deferred"],
     moves: &[
         Normal {
             role: Pawn,

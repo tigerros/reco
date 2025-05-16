@@ -34,8 +34,7 @@ pub const KREJCIK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Krejcik Variation", "Krejcik Gambit"],
+    name: &["Alekhine Defense", "Krejcik Variation", "Krejcik Gambit"],
     moves: &[
         Normal {
             role: Pawn,

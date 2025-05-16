@@ -34,8 +34,12 @@ pub const CENTRAL_EXCHANGE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Alapin Variation", "Barmen Defense", "Central Exchange"],
+    name: &[
+        "Sicilian Defense",
+        "Alapin Variation",
+        "Barmen Defense",
+        "Central Exchange",
+    ],
     moves: &[
         Normal {
             role: Pawn,

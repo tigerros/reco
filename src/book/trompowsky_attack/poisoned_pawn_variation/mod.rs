@@ -34,8 +34,7 @@ pub const POISONED_PAWN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Trompowsky Attack",
-    variation: &["Poisoned Pawn Variation"],
+    name: &["Trompowsky Attack", "Poisoned Pawn Variation"],
     moves: &[
         Normal {
             role: Pawn,

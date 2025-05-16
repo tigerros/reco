@@ -34,8 +34,7 @@ pub const COLORADO_COUNTERGAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Openin
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Colorado Countergambit Accepted"],
+    name: &["Nimzowitsch Defense", "Colorado Countergambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const DUBOIS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Giuoco Pianissimo", "Dubois Variation"],
+    name: &["Italian Game", "Giuoco Pianissimo", "Dubois Variation"],
     moves: &[
         Normal {
             role: Pawn,

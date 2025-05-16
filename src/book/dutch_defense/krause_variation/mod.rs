@@ -34,8 +34,7 @@ pub const KRAUSE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<84>(),
     },
-    name: "Dutch Defense",
-    variation: &["Krause Variation"],
+    name: &["Dutch Defense", "Krause Variation"],
     moves: &[
         Normal {
             role: Pawn,

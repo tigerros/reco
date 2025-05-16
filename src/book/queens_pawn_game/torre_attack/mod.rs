@@ -34,8 +34,7 @@ pub const TORRE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Torre Attack"],
+    name: &["Queen's Pawn Game", "Torre Attack"],
     moves: &[
         Normal {
             role: Pawn,

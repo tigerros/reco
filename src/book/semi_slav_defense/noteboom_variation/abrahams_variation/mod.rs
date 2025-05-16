@@ -34,8 +34,11 @@ pub const ABRAHAMS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Noteboom Variation", "Abrahams Variation"],
+    name: &[
+        "Semi-Slav Defense",
+        "Noteboom Variation",
+        "Abrahams Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

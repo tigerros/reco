@@ -34,8 +34,7 @@ pub const ANTAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Rat Defense",
-    variation: &["Antal Defense"],
+    name: &["Rat Defense", "Antal Defense"],
     moves: &[
         Normal {
             role: Pawn,

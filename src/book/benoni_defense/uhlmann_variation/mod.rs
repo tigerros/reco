@@ -34,8 +34,7 @@ pub const UHLMANN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<61>(),
     },
-    name: "Benoni Defense",
-    variation: &["Uhlmann Variation"],
+    name: &["Benoni Defense", "Uhlmann Variation"],
     moves: &[
         Normal {
             role: Pawn,

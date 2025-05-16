@@ -34,8 +34,11 @@ pub const LANGE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["Lemberger Countergambit", "Lange Gambit"],
+    name: &[
+        "Blackmar-Diemer Gambit",
+        "Lemberger Countergambit",
+        "Lange Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

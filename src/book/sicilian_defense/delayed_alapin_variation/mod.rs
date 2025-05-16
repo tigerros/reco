@@ -34,8 +34,7 @@ pub const DELAYED_ALAPIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Delayed Alapin Variation"],
+    name: &["Sicilian Defense", "Delayed Alapin Variation"],
     moves: &[
         Normal {
             role: Pawn,

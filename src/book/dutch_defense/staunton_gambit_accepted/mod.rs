@@ -34,8 +34,7 @@ pub const STAUNTON_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Dutch Defense",
-    variation: &["Staunton Gambit Accepted"],
+    name: &["Dutch Defense", "Staunton Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

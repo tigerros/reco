@@ -34,8 +34,7 @@ pub const AMERICAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Taimanov Variation", "American Attack"],
+    name: &["Sicilian Defense", "Taimanov Variation", "American Attack"],
     moves: &[
         Normal {
             role: Pawn,

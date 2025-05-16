@@ -34,8 +34,7 @@ pub const DIEMER_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit Declined",
-    variation: &["Diemer Counterattack"],
+    name: &["Englund Gambit Declined", "Diemer Counterattack"],
     moves: &[
         Normal {
             role: Pawn,

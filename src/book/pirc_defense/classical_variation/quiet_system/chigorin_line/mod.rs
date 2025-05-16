@@ -34,8 +34,12 @@ pub const CHIGORIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<8>(),
     },
-    name: "Pirc Defense",
-    variation: &["Classical Variation", "Quiet System", "Chigorin Line"],
+    name: &[
+        "Pirc Defense",
+        "Classical Variation",
+        "Quiet System",
+        "Chigorin Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

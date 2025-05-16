@@ -35,8 +35,7 @@ pub const DRAGON_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<70>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation"],
+        name: &["Sicilian Defense", "Dragon Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +142,7 @@ pub const DRAGON_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<72>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation"],
+        name: &["Sicilian Defense", "Dragon Variation"],
         moves: &[
             Normal {
                 role: Pawn,

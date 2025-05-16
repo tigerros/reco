@@ -34,8 +34,11 @@ pub const ANTI_QXD4_MOVE_ORDER: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Modern Variations", "Anti-Qxd4 Move Order"],
+    name: &[
+        "Sicilian Defense",
+        "Modern Variations",
+        "Anti-Qxd4 Move Order",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Kennedy Variation", "Main Line"],
+    name: &["Nimzowitsch Defense", "Kennedy Variation", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

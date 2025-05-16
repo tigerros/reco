@@ -34,8 +34,7 @@ pub const BASMAN_WILLIAMS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Indian Defense",
-    variation: &["Anti-Grünfeld", "Basman-Williams Attack"],
+    name: &["Indian Defense", "Anti-Grünfeld", "Basman-Williams Attack"],
     moves: &[
         Normal {
             role: Pawn,

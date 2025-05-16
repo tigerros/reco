@@ -34,8 +34,7 @@ pub const WURZBURGER_TRAP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<29>(),
     },
-    name: "Vienna Game",
-    variation: &["Vienna Gambit", "Wurzburger Trap"],
+    name: &["Vienna Game", "Vienna Gambit", "Wurzburger Trap"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const MAROCZY_BIND: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<36>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Accelerated Dragon", "Maróczy Bind"],
+        name: &["Sicilian Defense", "Accelerated Dragon", "Maróczy Bind"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const MAROCZY_BIND: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<37>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Accelerated Dragon", "Maróczy Bind"],
+        name: &["Sicilian Defense", "Accelerated Dragon", "Maróczy Bind"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -244,8 +242,7 @@ pub const MAROCZY_BIND: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<38>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Accelerated Dragon", "Maróczy Bind"],
+        name: &["Sicilian Defense", "Accelerated Dragon", "Maróczy Bind"],
         moves: &[
             Normal {
                 role: Pawn,

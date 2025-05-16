@@ -34,8 +34,7 @@ pub const PHILIDOR_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Philidor Gambit"],
+    name: &["Philidor Defense", "Philidor Gambit"],
     moves: &[
         Normal {
             role: Pawn,

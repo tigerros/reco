@@ -34,8 +34,7 @@ pub const LJUBOJEVIC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Pirc Defense",
-    variation: &["Austrian Attack", "Ljubojevic Variation"],
+    name: &["Pirc Defense", "Austrian Attack", "Ljubojevic Variation"],
     moves: &[
         Normal {
             role: Pawn,

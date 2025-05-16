@@ -34,8 +34,7 @@ pub const GENT_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Amar Opening",
-    variation: &["Paris Gambit", "Gent Gambit"],
+    name: &["Amar Opening", "Paris Gambit", "Gent Gambit"],
     moves: &[
         Normal {
             role: Knight,

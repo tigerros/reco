@@ -34,8 +34,7 @@ pub const LASKER_DUNNE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Lasker-Dunne Attack"],
+    name: &["Sicilian Defense", "Lasker-Dunne Attack"],
     moves: &[
         Normal {
             role: Pawn,

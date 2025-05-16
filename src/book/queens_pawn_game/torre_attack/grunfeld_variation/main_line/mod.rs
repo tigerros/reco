@@ -34,8 +34,12 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Torre Attack", "Grünfeld Variation", "Main Line"],
+    name: &[
+        "Queen's Pawn Game",
+        "Torre Attack",
+        "Grünfeld Variation",
+        "Main Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

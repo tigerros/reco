@@ -34,8 +34,7 @@ pub const MARSHALL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Marshall Gambit"],
+    name: &["Tarrasch Defense", "Marshall Gambit"],
     moves: &[
         Normal {
             role: Pawn,

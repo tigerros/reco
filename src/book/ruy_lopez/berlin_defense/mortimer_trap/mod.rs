@@ -34,8 +34,7 @@ pub const MORTIMER_TRAP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<65>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Mortimer Trap"],
+    name: &["Ruy Lopez", "Berlin Defense", "Mortimer Trap"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BOOR_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Slav Defense",
-    variation: &["Exchange Variation", "Boor Attack"],
+    name: &["Slav Defense", "Exchange Variation", "Boor Attack"],
     moves: &[
         Normal {
             role: Pawn,

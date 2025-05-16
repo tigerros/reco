@@ -34,8 +34,11 @@ pub const JANOWSKI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<49>(),
     },
-    name: "Four Knights Game",
-    variation: &["Spanish Variation", "Janowski Variation"],
+    name: &[
+        "Four Knights Game",
+        "Spanish Variation",
+        "Janowski Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

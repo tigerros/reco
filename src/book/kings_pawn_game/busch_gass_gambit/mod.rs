@@ -34,8 +34,7 @@ pub const BUSCH_GASS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Busch-Gass Gambit"],
+    name: &["King's Pawn Game", "Busch-Gass Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const COZIO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Kieseritzky", "Salvio Defense", "Cozio Variation"],
+    name: &[
+        "King's Gambit Accepted",
+        "Kieseritzky",
+        "Salvio Defense",
+        "Cozio Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

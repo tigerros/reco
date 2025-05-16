@@ -34,8 +34,7 @@ pub const PELIKAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Pelikan Variation"],
+    name: &["French Defense", "Pelikan Variation"],
     moves: &[
         Normal {
             role: Pawn,

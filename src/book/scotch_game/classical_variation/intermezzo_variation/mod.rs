@@ -34,8 +34,7 @@ pub const INTERMEZZO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Scotch Game",
-    variation: &["Classical Variation", "Intermezzo Variation"],
+    name: &["Scotch Game", "Classical Variation", "Intermezzo Variation"],
     moves: &[
         Normal {
             role: Pawn,

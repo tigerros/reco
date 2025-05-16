@@ -34,8 +34,7 @@ pub const MYERS_SPIKE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Mieses Opening",
-    variation: &["Myers Spike Attack"],
+    name: &["Mieses Opening", "Myers Spike Attack"],
     moves: &[
         Normal {
             role: Pawn,

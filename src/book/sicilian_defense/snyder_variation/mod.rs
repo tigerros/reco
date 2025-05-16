@@ -34,8 +34,7 @@ pub const SNYDER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Snyder Variation"],
+    name: &["Sicilian Defense", "Snyder Variation"],
     moves: &[
         Normal {
             role: Pawn,

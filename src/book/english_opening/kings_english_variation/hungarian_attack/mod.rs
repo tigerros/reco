@@ -34,8 +34,11 @@ pub const HUNGARIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<25>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Hungarian Attack"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Hungarian Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

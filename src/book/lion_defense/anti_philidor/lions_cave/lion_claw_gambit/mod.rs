@@ -34,8 +34,12 @@ pub const LION_CLAW_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Lion Defense",
-    variation: &["Anti-Philidor", "Lion's Cave", "Lion Claw Gambit"],
+    name: &[
+        "Lion Defense",
+        "Anti-Philidor",
+        "Lion's Cave",
+        "Lion Claw Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

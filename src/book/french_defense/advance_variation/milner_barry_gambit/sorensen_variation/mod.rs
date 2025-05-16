@@ -34,8 +34,8 @@ pub const SORENSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<2>(),
     },
-    name: "French Defense",
-    variation: &[
+    name: &[
+        "French Defense",
         "Advance Variation",
         "Milner-Barry Gambit",
         "Sørensen Variation",

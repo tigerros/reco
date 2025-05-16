@@ -35,8 +35,7 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation", "Giuoco Pianissimo"],
+        name: &["Italian Game", "Classical Variation", "Giuoco Pianissimo"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -151,8 +150,7 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation", "Giuoco Pianissimo"],
+        name: &["Italian Game", "Classical Variation", "Giuoco Pianissimo"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -260,8 +258,7 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation", "Giuoco Pianissimo"],
+        name: &["Italian Game", "Classical Variation", "Giuoco Pianissimo"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -370,8 +367,7 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation", "Giuoco Pianissimo"],
+        name: &["Italian Game", "Classical Variation", "Giuoco Pianissimo"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -487,8 +483,7 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation", "Giuoco Pianissimo"],
+        name: &["Italian Game", "Classical Variation", "Giuoco Pianissimo"],
         moves: &[
             Normal {
                 role: Pawn,

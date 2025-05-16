@@ -34,8 +34,7 @@ pub const CENTRAL_BREAK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<33>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Swedish Variation", "Central Break"],
+    name: &["Tarrasch Defense", "Swedish Variation", "Central Break"],
     moves: &[
         Normal {
             role: Pawn,

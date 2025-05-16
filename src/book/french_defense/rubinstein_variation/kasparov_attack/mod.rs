@@ -34,8 +34,7 @@ pub const KASPAROV_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<10>(),
     },
-    name: "French Defense",
-    variation: &["Rubinstein Variation", "Kasparov Attack"],
+    name: &["French Defense", "Rubinstein Variation", "Kasparov Attack"],
     moves: &[
         Normal {
             role: Pawn,

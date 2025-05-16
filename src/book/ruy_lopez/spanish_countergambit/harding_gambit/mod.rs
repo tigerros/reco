@@ -34,8 +34,7 @@ pub const HARDING_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Spanish Countergambit", "Harding Gambit"],
+    name: &["Ruy Lopez", "Spanish Countergambit", "Harding Gambit"],
     moves: &[
         Normal {
             role: Pawn,

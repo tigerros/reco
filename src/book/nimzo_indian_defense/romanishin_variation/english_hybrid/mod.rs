@@ -34,8 +34,11 @@ pub const ENGLISH_HYBRID: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Romanishin Variation", "English Hybrid"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Romanishin Variation",
+        "English Hybrid",
+    ],
     moves: &[
         Normal {
             role: Pawn,

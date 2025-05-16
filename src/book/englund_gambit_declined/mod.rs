@@ -34,8 +34,7 @@ pub const ENGLUND_GAMBIT_DECLINED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit Declined",
-    variation: &[],
+    name: &["Englund Gambit Declined"],
     moves: &[
         Normal {
             role: Pawn,

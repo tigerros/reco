@@ -34,8 +34,12 @@ pub const CHRISTIANSENS_DREAM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Kan Variation", "Wing Attack", "Christiansen's Dream"],
+    name: &[
+        "Sicilian Defense",
+        "Kan Variation",
+        "Wing Attack",
+        "Christiansen's Dream",
+    ],
     moves: &[
         Normal {
             role: Pawn,

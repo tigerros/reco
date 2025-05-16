@@ -34,8 +34,7 @@ pub const CHAROUSEK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Center Game",
-    variation: &["Charousek Variation"],
+    name: &["Center Game", "Charousek Variation"],
     moves: &[
         Normal {
             role: Pawn,

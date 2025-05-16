@@ -34,8 +34,7 @@ pub const KINGSIDE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Scotch Gambit", "Kingside Variation"],
+    name: &["Scotch Game", "Scotch Gambit", "Kingside Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const LANGHELD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["From's Gambit", "Langheld Gambit"],
+    name: &["Bird Opening", "From's Gambit", "Langheld Gambit"],
     moves: &[
         Normal {
             role: Pawn,

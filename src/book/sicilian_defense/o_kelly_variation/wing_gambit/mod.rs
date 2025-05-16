@@ -34,8 +34,7 @@ pub const WING_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Sicilian Defense",
-    variation: &["O'Kelly Variation", "Wing Gambit"],
+    name: &["Sicilian Defense", "O'Kelly Variation", "Wing Gambit"],
     moves: &[
         Normal {
             role: Pawn,

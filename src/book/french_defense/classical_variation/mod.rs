@@ -35,8 +35,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<11>(),
         },
-        name: "French Defense",
-        variation: &["Classical Variation"],
+        name: &["French Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<14>(),
         },
-        name: "French Defense",
-        variation: &["Classical Variation"],
+        name: &["French Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -237,8 +235,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<14>(),
         },
-        name: "French Defense",
-        variation: &["Classical Variation"],
+        name: &["French Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,

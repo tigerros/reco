@@ -34,8 +34,11 @@ pub const THREE_KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Vienna Game",
-    variation: &["Stanley Variation", "Three Knights Variation"],
+    name: &[
+        "Vienna Game",
+        "Stanley Variation",
+        "Three Knights Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

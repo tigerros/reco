@@ -34,8 +34,7 @@ pub const BLACKMAR_DIEMER_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Openin
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &[],
+    name: &["Blackmar-Diemer Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

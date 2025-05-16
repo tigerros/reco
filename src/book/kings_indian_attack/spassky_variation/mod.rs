@@ -34,8 +34,7 @@ pub const SPASSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "King's Indian Attack",
-    variation: &["Spassky Variation"],
+    name: &["King's Indian Attack", "Spassky Variation"],
     moves: &[
         Normal {
             role: Knight,

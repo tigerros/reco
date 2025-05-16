@@ -34,8 +34,7 @@ pub const TRIFUNOVIC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<14>(),
     },
-    name: "Slav Defense",
-    variation: &["Exchange Variation", "Trifunovic Variation"],
+    name: &["Slav Defense", "Exchange Variation", "Trifunovic Variation"],
     moves: &[
         Normal {
             role: Pawn,

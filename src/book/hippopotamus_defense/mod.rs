@@ -35,8 +35,7 @@ pub const HIPPOPOTAMUS_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Hippopotamus Defense",
-        variation: &[],
+        name: &["Hippopotamus Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const HIPPOPOTAMUS_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Hippopotamus Defense",
-        variation: &[],
+        name: &["Hippopotamus Defense"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -35,8 +35,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &["Exchange Variation"],
+        name: &["Philidor Defense", "Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &["Exchange Variation"],
+        name: &["Philidor Defense", "Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -216,8 +214,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &["Exchange Variation"],
+        name: &["Philidor Defense", "Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,

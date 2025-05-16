@@ -34,8 +34,12 @@ pub const BENKO_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<99>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Classical System", "Benko Attack"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Classical System",
+        "Benko Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

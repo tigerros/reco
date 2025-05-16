@@ -34,8 +34,7 @@ pub const RETI_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Sicilian Defense",
-    variation: &["O'Kelly Variation", "Réti System"],
+    name: &["Sicilian Defense", "O'Kelly Variation", "Réti System"],
     moves: &[
         Normal {
             role: Pawn,

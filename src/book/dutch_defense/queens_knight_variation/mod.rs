@@ -34,8 +34,7 @@ pub const QUEENS_KNIGHT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<85>(),
     },
-    name: "Dutch Defense",
-    variation: &["Queen's Knight Variation"],
+    name: &["Dutch Defense", "Queen's Knight Variation"],
     moves: &[
         Normal {
             role: Pawn,

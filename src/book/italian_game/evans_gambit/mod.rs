@@ -35,8 +35,7 @@ pub const EVANS_GAMBIT: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<51>(),
         },
-        name: "Italian Game",
-        variation: &["Evans Gambit"],
+        name: &["Italian Game", "Evans Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -193,8 +192,7 @@ pub const EVANS_GAMBIT: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<51>(),
         },
-        name: "Italian Game",
-        variation: &["Evans Gambit"],
+        name: &["Italian Game", "Evans Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -280,8 +278,7 @@ pub const EVANS_GAMBIT: [Opening<'static, &str>; 3] = [
             volume: Volume::C,
             category: RangedU8::new_static::<52>(),
         },
-        name: "Italian Game",
-        variation: &["Evans Gambit"],
+        name: &["Italian Game", "Evans Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

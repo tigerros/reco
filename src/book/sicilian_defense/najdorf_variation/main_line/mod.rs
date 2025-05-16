@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<99>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "Main Line"],
+    name: &["Sicilian Defense", "Najdorf Variation", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

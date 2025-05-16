@@ -34,8 +34,7 @@ pub const KEENE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Keene Defense"],
+    name: &["Grob Opening", "Keene Defense"],
     moves: &[
         Normal {
             role: Pawn,

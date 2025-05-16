@@ -34,8 +34,11 @@ pub const CHAROUSEK_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<32>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Falkbeer Countergambit", "Charousek Gambit Accepted"],
+    name: &[
+        "King's Gambit Declined",
+        "Falkbeer Countergambit",
+        "Charousek Gambit Accepted",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const WITH_A5: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Italian Game",
-    variation: &["Classical Variation", "Giuoco Pianissimo", "with a5"],
+    name: &[
+        "Italian Game",
+        "Classical Variation",
+        "Giuoco Pianissimo",
+        "with a5",
+    ],
     moves: &[
         Normal {
             role: Pawn,

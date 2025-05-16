@@ -34,8 +34,7 @@ pub const HECHT_REEFSCHLAGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<10>(),
     },
-    name: "French Defense",
-    variation: &["Hecht-Reefschläger Variation"],
+    name: &["French Defense", "Hecht-Reefschläger Variation"],
     moves: &[
         Normal {
             role: Pawn,

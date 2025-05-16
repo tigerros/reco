@@ -34,8 +34,7 @@ pub const SENECHAUD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Senechaud Gambit"],
+    name: &["Latvian Gambit", "Senechaud Gambit"],
     moves: &[
         Normal {
             role: Pawn,

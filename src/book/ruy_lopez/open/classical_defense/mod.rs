@@ -34,8 +34,7 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<83>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Classical Defense"],
+    name: &["Ruy Lopez", "Open", "Classical Defense"],
     moves: &[
         Normal {
             role: Pawn,

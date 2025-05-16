@@ -34,8 +34,7 @@ pub const EKSTROM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<81>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Howell Attack", "Ekstrom Variation"],
+    name: &["Ruy Lopez", "Open", "Howell Attack", "Ekstrom Variation"],
     moves: &[
         Normal {
             role: Pawn,

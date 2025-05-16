@@ -34,8 +34,7 @@ pub const DAMIANO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Damiano Defense"],
+    name: &["King's Pawn Game", "Damiano Defense"],
     moves: &[
         Normal {
             role: Pawn,

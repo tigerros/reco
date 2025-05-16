@@ -34,8 +34,8 @@ pub const MOROZEVICH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Slav Defense",
-    variation: &[
+    name: &[
+        "Slav Defense",
         "Czech Variation",
         "Carlsbad Variation",
         "Morozevich Variation",

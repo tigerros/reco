@@ -34,8 +34,7 @@ pub const THE_WALRUS: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["The Walrus"],
+    name: &["Zukertort Opening", "The Walrus"],
     moves: &[
         Normal {
             role: Knight,

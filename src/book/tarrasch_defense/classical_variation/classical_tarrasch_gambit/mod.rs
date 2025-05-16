@@ -34,8 +34,11 @@ pub const CLASSICAL_TARRASCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<34>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Classical Variation", "Classical Tarrasch Gambit"],
+    name: &[
+        "Tarrasch Defense",
+        "Classical Variation",
+        "Classical Tarrasch Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BONSCH_OSMOLOVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<34>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Bonsch-Osmolovsky Variation"],
+    name: &["King's Gambit Accepted", "Bonsch-Osmolovsky Variation"],
     moves: &[
         Normal {
             role: Pawn,

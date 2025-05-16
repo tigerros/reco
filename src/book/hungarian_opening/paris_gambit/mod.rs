@@ -34,8 +34,7 @@ pub const PARIS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Paris Gambit"],
+    name: &["Hungarian Opening", "Paris Gambit"],
     moves: &[
         Normal {
             role: Pawn,

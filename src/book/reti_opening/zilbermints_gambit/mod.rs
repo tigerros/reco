@@ -34,8 +34,7 @@ pub const ZILBERMINTS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Réti Opening",
-    variation: &["Zilbermints Gambit"],
+    name: &["Réti Opening", "Zilbermints Gambit"],
     moves: &[
         Normal {
             role: Knight,

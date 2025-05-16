@@ -34,8 +34,7 @@ pub const ANHANGUERA: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Eastern", "Anhanguera"],
+    name: &["Pterodactyl Defense", "Eastern", "Anhanguera"],
     moves: &[
         Normal {
             role: Pawn,

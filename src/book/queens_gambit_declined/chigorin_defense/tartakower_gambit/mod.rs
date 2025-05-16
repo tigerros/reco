@@ -34,8 +34,11 @@ pub const TARTAKOWER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Chigorin Defense", "Tartakower Gambit"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Chigorin Defense",
+        "Tartakower Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

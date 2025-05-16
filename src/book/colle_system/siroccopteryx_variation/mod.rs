@@ -34,8 +34,7 @@ pub const SIROCCOPTERYX_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Colle System",
-    variation: &["Siroccopteryx Variation"],
+    name: &["Colle System", "Siroccopteryx Variation"],
     moves: &[
         Normal {
             role: Pawn,

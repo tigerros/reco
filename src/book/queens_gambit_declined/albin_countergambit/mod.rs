@@ -34,8 +34,7 @@ pub const ALBIN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<8>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Albin Countergambit"],
+    name: &["Queen's Gambit Declined", "Albin Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

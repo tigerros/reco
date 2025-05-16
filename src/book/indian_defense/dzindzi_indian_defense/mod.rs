@@ -34,8 +34,7 @@ pub const DZINDZI_INDIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Indian Defense",
-    variation: &["Dzindzi-Indian Defense"],
+    name: &["Indian Defense", "Dzindzi-Indian Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const TAL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<77>(),
     },
-    name: "Benoni Defense",
-    variation: &["Classical Variation", "Czerniak Defense", "Tal Line"],
+    name: &[
+        "Benoni Defense",
+        "Classical Variation",
+        "Czerniak Defense",
+        "Tal Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

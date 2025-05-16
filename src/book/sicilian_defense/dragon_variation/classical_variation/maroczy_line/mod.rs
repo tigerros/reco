@@ -34,8 +34,12 @@ pub const MAROCZY_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<74>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Classical Variation", "Maróczy Line"],
+    name: &[
+        "Sicilian Defense",
+        "Dragon Variation",
+        "Classical Variation",
+        "Maróczy Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

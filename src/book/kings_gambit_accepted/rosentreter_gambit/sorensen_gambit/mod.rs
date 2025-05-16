@@ -34,8 +34,11 @@ pub const SORENSEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Rosentreter Gambit", "Sörensen Gambit"],
+    name: &[
+        "King's Gambit Accepted",
+        "Rosentreter Gambit",
+        "Sörensen Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Scandinavian Variation", "Advance Variation"],
+    name: &[
+        "Nimzowitsch Defense",
+        "Scandinavian Variation",
+        "Advance Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

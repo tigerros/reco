@@ -34,8 +34,12 @@ pub const SOMOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Central Variation", "McDonnell Defense", "Somov Gambit"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Central Variation",
+        "McDonnell Defense",
+        "Somov Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

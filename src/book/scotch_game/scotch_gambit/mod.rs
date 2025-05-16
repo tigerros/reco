@@ -34,8 +34,7 @@ pub const SCOTCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Scotch Gambit"],
+    name: &["Scotch Game", "Scotch Gambit"],
     moves: &[
         Normal {
             role: Pawn,

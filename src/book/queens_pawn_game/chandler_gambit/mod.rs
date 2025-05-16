@@ -34,8 +34,7 @@ pub const CHANDLER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Chandler Gambit"],
+    name: &["Queen's Pawn Game", "Chandler Gambit"],
     moves: &[
         Normal {
             role: Pawn,

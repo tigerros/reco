@@ -34,8 +34,7 @@ pub const PICKLEPUSS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Goldsmith Defense",
-    variation: &["Picklepuss Defense"],
+    name: &["Goldsmith Defense", "Picklepuss Defense"],
     moves: &[
         Normal {
             role: Pawn,

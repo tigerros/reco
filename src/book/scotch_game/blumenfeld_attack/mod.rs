@@ -34,8 +34,7 @@ pub const BLUMENFELD_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Scotch Game",
-    variation: &["Blumenfeld Attack"],
+    name: &["Scotch Game", "Blumenfeld Attack"],
     moves: &[
         Normal {
             role: Pawn,

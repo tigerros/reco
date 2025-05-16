@@ -34,8 +34,7 @@ pub const ENGLISH_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &[],
+    name: &["English Opening"],
     moves: &[Normal {
         role: Pawn,
         from: C2,

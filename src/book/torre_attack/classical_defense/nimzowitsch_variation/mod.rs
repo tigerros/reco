@@ -34,8 +34,7 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Torre Attack",
-    variation: &["Classical Defense", "Nimzowitsch Variation"],
+    name: &["Torre Attack", "Classical Defense", "Nimzowitsch Variation"],
     moves: &[
         Normal {
             role: Pawn,

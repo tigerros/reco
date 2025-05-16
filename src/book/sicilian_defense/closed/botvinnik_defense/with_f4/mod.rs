@@ -34,8 +34,7 @@ pub const WITH_F4: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Closed", "Botvinnik Defense", "with f4"],
+    name: &["Sicilian Defense", "Closed", "Botvinnik Defense", "with f4"],
     moves: &[
         Normal {
             role: Pawn,

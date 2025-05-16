@@ -34,8 +34,8 @@ pub const BERLIN_WALL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<67>(),
     },
-    name: "Ruy Lopez",
-    variation: &[
+    name: &[
+        "Ruy Lopez",
         "Berlin Defense",
         "l'Hermet Variation",
         "Berlin Wall Defense",

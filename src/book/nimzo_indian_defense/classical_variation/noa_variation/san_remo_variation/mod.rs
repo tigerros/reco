@@ -34,8 +34,12 @@ pub const SAN_REMO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<37>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Classical Variation", "Noa Variation", "San Remo Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Noa Variation",
+        "San Remo Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

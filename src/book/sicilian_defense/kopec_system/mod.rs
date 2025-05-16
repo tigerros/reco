@@ -34,8 +34,7 @@ pub const KOPEC_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Kopec System"],
+    name: &["Sicilian Defense", "Kopec System"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ROSCHER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Pirc Defense",
-    variation: &["Roscher Gambit"],
+    name: &["Pirc Defense", "Roscher Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<83>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Scheveningen Variation", "Classical Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Scheveningen Variation",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -150,8 +153,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<84>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Scheveningen Variation", "Classical Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Scheveningen Variation",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -280,8 +286,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<84>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Scheveningen Variation", "Classical Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Scheveningen Variation",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

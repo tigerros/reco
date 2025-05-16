@@ -34,8 +34,7 @@ pub const POLERIO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Kieseritzky", "Polerio Defense"],
+    name: &["King's Gambit Accepted", "Kieseritzky", "Polerio Defense"],
     moves: &[
         Normal {
             role: Pawn,

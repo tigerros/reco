@@ -35,8 +35,7 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Zukertort Opening",
-        variation: &["Reversed Grünfeld"],
+        name: &["Zukertort Opening", "Reversed Grünfeld"],
         moves: &[
             Normal {
                 role: Knight,
@@ -130,8 +129,7 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Zukertort Opening",
-        variation: &["Reversed Grünfeld"],
+        name: &["Zukertort Opening", "Reversed Grünfeld"],
         moves: &[
             Normal {
                 role: Knight,
@@ -224,8 +222,7 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Zukertort Opening",
-        variation: &["Reversed Grünfeld"],
+        name: &["Zukertort Opening", "Reversed Grünfeld"],
         moves: &[
             Normal {
                 role: Knight,
@@ -319,8 +316,7 @@ pub const REVERSED_GRUNFELD: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Zukertort Opening",
-        variation: &["Reversed Grünfeld"],
+        name: &["Zukertort Opening", "Reversed Grünfeld"],
         moves: &[
             Normal {
                 role: Knight,

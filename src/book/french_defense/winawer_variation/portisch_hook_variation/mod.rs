@@ -34,8 +34,11 @@ pub const PORTISCH_HOOK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<18>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Portisch-Hook Variation"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Portisch-Hook Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MAX_LANGE_ATTACK_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Scotch Gambit", "Max Lange Attack Accepted"],
+    name: &["Italian Game", "Scotch Gambit", "Max Lange Attack Accepted"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const CLOSED_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<29>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Nimzowitsch Variation", "Closed Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Nimzowitsch Variation",
+        "Closed Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

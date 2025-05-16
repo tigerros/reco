@@ -34,8 +34,11 @@ pub const STUDIER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Bogoljubow Defense", "Studier Attack"],
+    name: &[
+        "Blackmar-Diemer Gambit Accepted",
+        "Bogoljubow Defense",
+        "Studier Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

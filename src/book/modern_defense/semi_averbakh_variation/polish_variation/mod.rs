@@ -34,8 +34,11 @@ pub const POLISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Modern Defense",
-    variation: &["Semi-Averbakh Variation", "Polish Variation"],
+    name: &[
+        "Modern Defense",
+        "Semi-Averbakh Variation",
+        "Polish Variation",
+    ],
     moves: &[
         Normal {
             role: Knight,

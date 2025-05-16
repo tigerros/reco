@@ -34,8 +34,7 @@ pub const GRECO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Italian Game",
-    variation: &["Classical Variation", "Greco Gambit"],
+    name: &["Italian Game", "Classical Variation", "Greco Gambit"],
     moves: &[
         Normal {
             role: Pawn,

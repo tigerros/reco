@@ -34,8 +34,7 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Indian Defense",
-    variation: &["Anti-Grünfeld", "Advance Variation"],
+    name: &["Indian Defense", "Anti-Grünfeld", "Advance Variation"],
     moves: &[
         Normal {
             role: Pawn,

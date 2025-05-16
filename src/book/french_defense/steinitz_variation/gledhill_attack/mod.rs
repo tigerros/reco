@@ -34,8 +34,7 @@ pub const GLEDHILL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<11>(),
     },
-    name: "French Defense",
-    variation: &["Steinitz Variation", "Gledhill Attack"],
+    name: &["French Defense", "Steinitz Variation", "Gledhill Attack"],
     moves: &[
         Normal {
             role: Pawn,

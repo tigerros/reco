@@ -34,8 +34,7 @@ pub const SIROCCOPTERYX: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Sicilian", "Siroccopteryx"],
+    name: &["Pterodactyl Defense", "Sicilian", "Siroccopteryx"],
     moves: &[
         Normal {
             role: Pawn,

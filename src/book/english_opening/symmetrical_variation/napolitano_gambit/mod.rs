@@ -34,8 +34,11 @@ pub const NAPOLITANO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<30>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Napolitano Gambit"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Napolitano Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

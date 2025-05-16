@@ -34,8 +34,7 @@ pub const FOLTYS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit Accepted",
-    variation: &["Foltys Variation"],
+    name: &["Latvian Gambit Accepted", "Foltys Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ROTARY_ALBANY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Rotary-Albany Gambit"],
+    name: &["Ruy Lopez", "Rotary-Albany Gambit"],
     moves: &[
         Normal {
             role: Pawn,

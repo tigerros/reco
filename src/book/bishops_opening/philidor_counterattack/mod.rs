@@ -34,8 +34,7 @@ pub const PHILIDOR_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Philidor Counterattack"],
+    name: &["Bishop's Opening", "Philidor Counterattack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BATAVO_POLISH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Batavo-Polish Attack"],
+    name: &["Bird Opening", "Batavo-Polish Attack"],
     moves: &[
         Normal {
             role: Pawn,

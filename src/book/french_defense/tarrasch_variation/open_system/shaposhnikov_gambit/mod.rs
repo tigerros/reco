@@ -34,8 +34,12 @@ pub const SHAPOSHNIKOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<7>(),
     },
-    name: "French Defense",
-    variation: &["Tarrasch Variation", "Open System", "Shaposhnikov Gambit"],
+    name: &[
+        "French Defense",
+        "Tarrasch Variation",
+        "Open System",
+        "Shaposhnikov Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

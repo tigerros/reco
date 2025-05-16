@@ -34,8 +34,7 @@ pub const GLOBAL_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Global Opening",
-    variation: &[],
+    name: &["Global Opening"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const OMEGA_DELTA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<7>(),
     },
-    name: "King's Indian Attack",
-    variation: &["Omega-Delta Gambit"],
+    name: &["King's Indian Attack", "Omega-Delta Gambit"],
     moves: &[
         Normal {
             role: Knight,

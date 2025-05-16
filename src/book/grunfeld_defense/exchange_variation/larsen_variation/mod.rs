@@ -35,8 +35,7 @@ pub const LARSEN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<86>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Exchange Variation", "Larsen Variation"],
+        name: &["Grünfeld Defense", "Exchange Variation", "Larsen Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -187,8 +186,7 @@ pub const LARSEN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<86>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Exchange Variation", "Larsen Variation"],
+        name: &["Grünfeld Defense", "Exchange Variation", "Larsen Variation"],
         moves: &[
             Normal {
                 role: Pawn,

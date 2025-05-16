@@ -34,8 +34,11 @@ pub const DRAGON_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Richter-Rauzer Variation", "Dragon Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Richter-Rauzer Variation",
+        "Dragon Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

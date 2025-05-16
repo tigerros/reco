@@ -34,8 +34,11 @@ pub const GOTEBORG_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<98>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "Goteborg Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Najdorf Variation",
+        "Goteborg Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Creepy Crawly Formation",
-    variation: &["Classical Defense"],
+    name: &["Creepy Crawly Formation", "Classical Defense"],
     moves: &[
         Normal {
             role: Pawn,

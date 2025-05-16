@@ -34,8 +34,12 @@ pub const BLOCKADE_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<37>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Harrwitz Attack", "Two Knights Defense", "Blockade Line"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Harrwitz Attack",
+        "Two Knights Defense",
+        "Blockade Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

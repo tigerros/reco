@@ -34,8 +34,7 @@ pub const BUGAYEV_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Polish Opening",
-    variation: &["Bugayev Attack"],
+    name: &["Polish Opening", "Bugayev Attack"],
     moves: &[
         Normal {
             role: Pawn,

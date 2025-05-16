@@ -34,8 +34,11 @@ pub const MODERN_TRANSFER: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<31>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Falkbeer Countergambit", "Modern Transfer"],
+    name: &[
+        "King's Gambit Declined",
+        "Falkbeer Countergambit",
+        "Modern Transfer",
+    ],
     moves: &[
         Normal {
             role: Pawn,

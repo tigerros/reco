@@ -34,8 +34,7 @@ pub const SICILIAN_TWO_KNIGHTS: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Sicilian Two Knights"],
+    name: &["Van Geet Opening", "Sicilian Two Knights"],
     moves: &[
         Normal {
             role: Knight,

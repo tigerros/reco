@@ -34,8 +34,7 @@ pub const TRADITIONAL_COLLE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Colle System", "Traditional Colle"],
+    name: &["Queen's Pawn Game", "Colle System", "Traditional Colle"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BENONI_STAUNTON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Benoni-Staunton Gambit"],
+    name: &["Benoni Defense", "Benoni-Staunton Gambit"],
     moves: &[
         Normal {
             role: Pawn,

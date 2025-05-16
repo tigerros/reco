@@ -34,8 +34,7 @@ pub const NC6_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<73>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Averbakh Variation", "Nc6 Defense"],
+    name: &["King's Indian Defense", "Averbakh Variation", "Nc6 Defense"],
     moves: &[
         Normal {
             role: Pawn,

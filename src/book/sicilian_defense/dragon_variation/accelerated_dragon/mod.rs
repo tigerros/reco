@@ -34,8 +34,7 @@ pub const ACCELERATED_DRAGON: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Accelerated Dragon"],
+    name: &["Sicilian Defense", "Dragon Variation", "Accelerated Dragon"],
     moves: &[
         Normal {
             role: Pawn,

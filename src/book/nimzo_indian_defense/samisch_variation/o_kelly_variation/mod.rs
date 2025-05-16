@@ -34,8 +34,11 @@ pub const O_KELLY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<26>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Sämisch Variation", "O'Kelly Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Sämisch Variation",
+        "O'Kelly Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

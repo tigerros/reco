@@ -35,8 +35,7 @@ pub const SEMI_TARRASCH_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<40>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Semi-Tarrasch Defense"],
+        name: &["Queen's Gambit Declined", "Semi-Tarrasch Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const SEMI_TARRASCH_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Semi-Tarrasch Defense"],
+        name: &["Queen's Gambit Declined", "Semi-Tarrasch Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -237,8 +235,7 @@ pub const SEMI_TARRASCH_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Semi-Tarrasch Defense"],
+        name: &["Queen's Gambit Declined", "Semi-Tarrasch Defense"],
         moves: &[
             Normal {
                 role: Pawn,

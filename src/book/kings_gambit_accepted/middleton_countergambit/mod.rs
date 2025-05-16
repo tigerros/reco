@@ -34,8 +34,7 @@ pub const MIDDLETON_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Middleton Countergambit"],
+    name: &["King's Gambit Accepted", "Middleton Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

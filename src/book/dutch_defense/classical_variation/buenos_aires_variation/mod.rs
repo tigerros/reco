@@ -34,8 +34,11 @@ pub const BUENOS_AIRES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<96>(),
     },
-    name: "Dutch Defense",
-    variation: &["Classical Variation", "Buenos Aires Variation"],
+    name: &[
+        "Dutch Defense",
+        "Classical Variation",
+        "Buenos Aires Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

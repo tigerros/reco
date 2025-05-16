@@ -34,8 +34,7 @@ pub const MURREY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Lutikov Variation", "Murrey Attack"],
+    name: &["Grünfeld Defense", "Lutikov Variation", "Murrey Attack"],
     moves: &[
         Normal {
             role: Pawn,

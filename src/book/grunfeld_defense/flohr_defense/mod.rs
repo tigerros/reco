@@ -34,8 +34,7 @@ pub const FLOHR_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<94>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Flohr Defense"],
+    name: &["Grünfeld Defense", "Flohr Defense"],
     moves: &[
         Normal {
             role: Pawn,

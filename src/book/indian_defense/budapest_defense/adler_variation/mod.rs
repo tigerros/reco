@@ -34,8 +34,7 @@ pub const ADLER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Indian Defense",
-    variation: &["Budapest Defense", "Adler Variation"],
+    name: &["Indian Defense", "Budapest Defense", "Adler Variation"],
     moves: &[
         Normal {
             role: Pawn,

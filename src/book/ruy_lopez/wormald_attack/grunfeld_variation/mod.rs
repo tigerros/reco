@@ -34,8 +34,7 @@ pub const GRUNFELD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<77>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Wormald Attack", "Grünfeld Variation"],
+    name: &["Ruy Lopez", "Wormald Attack", "Grünfeld Variation"],
     moves: &[
         Normal {
             role: Pawn,

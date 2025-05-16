@@ -34,8 +34,11 @@ pub const MC_CORMICK_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<35>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Cunningham Defense", "McCormick Defense"],
+    name: &[
+        "King's Gambit Accepted",
+        "Cunningham Defense",
+        "McCormick Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

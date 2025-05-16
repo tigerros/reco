@@ -34,8 +34,7 @@ pub const BIRD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Bird Gambit"],
+    name: &["Philidor Defense", "Bird Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BOGO_INDIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Bogo-Indian Defense",
-    variation: &[],
+    name: &["Bogo-Indian Defense"],
     moves: &[
         Normal {
             role: Pawn,

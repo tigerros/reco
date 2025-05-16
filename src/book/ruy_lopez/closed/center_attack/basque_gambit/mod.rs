@@ -34,8 +34,7 @@ pub const BASQUE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<84>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Center Attack", "Basque Gambit"],
+    name: &["Ruy Lopez", "Closed", "Center Attack", "Basque Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MARTIAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<18>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Martian Gambit"],
+    name: &["Caro-Kann Defense", "Martian Gambit"],
     moves: &[
         Normal {
             role: Pawn,

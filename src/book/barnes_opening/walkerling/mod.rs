@@ -34,8 +34,7 @@ pub const WALKERLING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Barnes Opening",
-    variation: &["Walkerling"],
+    name: &["Barnes Opening", "Walkerling"],
     moves: &[
         Normal {
             role: Pawn,

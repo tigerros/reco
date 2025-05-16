@@ -34,8 +34,7 @@ pub const MYERS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Kádas Opening",
-    variation: &["Myers Variation"],
+    name: &["Kádas Opening", "Myers Variation"],
     moves: &[
         Normal {
             role: Pawn,

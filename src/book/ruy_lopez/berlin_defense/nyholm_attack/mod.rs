@@ -34,8 +34,7 @@ pub const NYHOLM_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<65>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Nyholm Attack"],
+    name: &["Ruy Lopez", "Berlin Defense", "Nyholm Attack"],
     moves: &[
         Normal {
             role: Pawn,

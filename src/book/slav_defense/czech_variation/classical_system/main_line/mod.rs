@@ -34,8 +34,12 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<19>(),
     },
-    name: "Slav Defense",
-    variation: &["Czech Variation", "Classical System", "Main Line"],
+    name: &[
+        "Slav Defense",
+        "Czech Variation",
+        "Classical System",
+        "Main Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

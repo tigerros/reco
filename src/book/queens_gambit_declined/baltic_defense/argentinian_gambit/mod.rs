@@ -34,8 +34,11 @@ pub const ARGENTINIAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Baltic Defense", "Argentinian Gambit"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Baltic Defense",
+        "Argentinian Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

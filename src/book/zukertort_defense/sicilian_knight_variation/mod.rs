@@ -34,8 +34,7 @@ pub const SICILIAN_KNIGHT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Defense",
-    variation: &["Sicilian Knight Variation"],
+    name: &["Zukertort Defense", "Sicilian Knight Variation"],
     moves: &[
         Normal {
             role: Knight,

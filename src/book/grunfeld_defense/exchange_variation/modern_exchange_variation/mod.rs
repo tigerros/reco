@@ -35,8 +35,11 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<85>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Exchange Variation", "Modern Exchange Variation"],
+        name: &[
+            "Grünfeld Defense",
+            "Exchange Variation",
+            "Modern Exchange Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -178,8 +181,11 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<85>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Exchange Variation", "Modern Exchange Variation"],
+        name: &[
+            "Grünfeld Defense",
+            "Exchange Variation",
+            "Modern Exchange Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -314,8 +320,11 @@ pub const MODERN_EXCHANGE_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<85>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Exchange Variation", "Modern Exchange Variation"],
+        name: &[
+            "Grünfeld Defense",
+            "Exchange Variation",
+            "Modern Exchange Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

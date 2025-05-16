@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit",
-    variation: &["Main Line"],
+    name: &["Englund Gambit", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

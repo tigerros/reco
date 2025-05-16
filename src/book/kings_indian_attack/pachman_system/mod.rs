@@ -34,8 +34,7 @@ pub const PACHMAN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<7>(),
     },
-    name: "King's Indian Attack",
-    variation: &["Pachman System"],
+    name: &["King's Indian Attack", "Pachman System"],
     moves: &[
         Normal {
             role: Knight,

@@ -34,8 +34,7 @@ pub const VITOLINS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Bogo-Indian Defense",
-    variation: &["Vitolins Variation"],
+    name: &["Bogo-Indian Defense", "Vitolins Variation"],
     moves: &[
         Normal {
             role: Pawn,

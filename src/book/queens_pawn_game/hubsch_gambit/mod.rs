@@ -34,8 +34,7 @@ pub const HUBSCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Hübsch Gambit"],
+    name: &["Queen's Pawn Game", "Hübsch Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const OLD_INDIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Old Indian Attack"],
+    name: &["Zukertort Opening", "Old Indian Attack"],
     moves: &[
         Normal {
             role: Knight,

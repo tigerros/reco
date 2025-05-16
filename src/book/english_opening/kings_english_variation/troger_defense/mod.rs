@@ -34,8 +34,11 @@ pub const TROGER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<21>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Troger Defense"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Troger Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

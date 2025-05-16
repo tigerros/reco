@@ -34,8 +34,7 @@ pub const LASKER_SIMUL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Hunt Variation", "Lasker Simul Gambit"],
+    name: &["Alekhine Defense", "Hunt Variation", "Lasker Simul Gambit"],
     moves: &[
         Normal {
             role: Pawn,

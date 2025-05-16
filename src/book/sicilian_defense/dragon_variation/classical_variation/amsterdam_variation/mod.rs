@@ -34,8 +34,8 @@ pub const AMSTERDAM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<72>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Dragon Variation",
         "Classical Variation",
         "Amsterdam Variation",

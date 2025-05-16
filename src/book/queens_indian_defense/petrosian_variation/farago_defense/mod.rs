@@ -34,8 +34,11 @@ pub const FARAGO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Petrosian Variation", "Farago Defense"],
+    name: &[
+        "Queen's Indian Defense",
+        "Petrosian Variation",
+        "Farago Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

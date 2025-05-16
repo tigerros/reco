@@ -34,8 +34,7 @@ pub const QUIET_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<94>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Breyer Defense", "Quiet Variation"],
+    name: &["Ruy Lopez", "Closed", "Breyer Defense", "Quiet Variation"],
     moves: &[
         Normal {
             role: Pawn,

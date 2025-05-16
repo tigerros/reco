@@ -34,8 +34,12 @@ pub const IVANCHUK_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Alapin Variation", "Stoltz Attack", "Ivanchuk Line"],
+    name: &[
+        "Sicilian Defense",
+        "Alapin Variation",
+        "Stoltz Attack",
+        "Ivanchuk Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

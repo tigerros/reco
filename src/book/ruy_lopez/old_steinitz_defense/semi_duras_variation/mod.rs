@@ -34,8 +34,7 @@ pub const SEMI_DURAS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<62>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Old Steinitz Defense", "Semi-Duras Variation"],
+    name: &["Ruy Lopez", "Old Steinitz Defense", "Semi-Duras Variation"],
     moves: &[
         Normal {
             role: Pawn,

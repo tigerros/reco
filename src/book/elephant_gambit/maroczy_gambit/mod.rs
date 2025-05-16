@@ -34,8 +34,7 @@ pub const MAROCZY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Elephant Gambit",
-    variation: &["Maróczy Gambit"],
+    name: &["Elephant Gambit", "Maróczy Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SOSONKO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit Declined",
-    variation: &["Sosonko Variation"],
+    name: &["Benko Gambit Declined", "Sosonko Variation"],
     moves: &[
         Normal {
             role: Pawn,

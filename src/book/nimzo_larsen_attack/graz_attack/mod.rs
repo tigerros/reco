@@ -34,8 +34,7 @@ pub const GRAZ_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Nimzo-Larsen Attack",
-    variation: &["Graz Attack"],
+    name: &["Nimzo-Larsen Attack", "Graz Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SPIKE_LEE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Clemenz Opening",
-    variation: &["Spike Lee Gambit"],
+    name: &["Clemenz Opening", "Spike Lee Gambit"],
     moves: &[
         Normal {
             role: Pawn,

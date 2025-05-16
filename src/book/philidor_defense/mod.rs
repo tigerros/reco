@@ -35,8 +35,7 @@ pub const PHILIDOR_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &[],
+        name: &["Philidor Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const PHILIDOR_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &[],
+        name: &["Philidor Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -188,8 +186,7 @@ pub const PHILIDOR_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &[],
+        name: &["Philidor Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -261,8 +258,7 @@ pub const PHILIDOR_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &[],
+        name: &["Philidor Defense"],
         moves: &[
             Normal {
                 role: Pawn,

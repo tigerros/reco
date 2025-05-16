@@ -34,8 +34,11 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<73>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Averbakh Variation", "Modern Defense"],
+    name: &[
+        "King's Indian Defense",
+        "Averbakh Variation",
+        "Modern Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

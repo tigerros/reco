@@ -34,8 +34,7 @@ pub const KHOLMOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Damiano Variation", "Kholmov Gambit"],
+    name: &["Petrov's Defense", "Damiano Variation", "Kholmov Gambit"],
     moves: &[
         Normal {
             role: Pawn,

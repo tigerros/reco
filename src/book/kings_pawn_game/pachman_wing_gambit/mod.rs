@@ -34,8 +34,7 @@ pub const PACHMAN_WING_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Pachman Wing Gambit"],
+    name: &["King's Pawn Game", "Pachman Wing Gambit"],
     moves: &[
         Normal {
             role: Pawn,

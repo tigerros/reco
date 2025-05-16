@@ -34,8 +34,7 @@ pub const PLATZ_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Platz Gambit"],
+    name: &["Bird Opening", "Platz Gambit"],
     moves: &[
         Normal {
             role: Pawn,

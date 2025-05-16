@@ -35,8 +35,7 @@ pub const NAJDORF_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<90>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Najdorf Variation"],
+        name: &["Sicilian Defense", "Najdorf Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +142,7 @@ pub const NAJDORF_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<94>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Najdorf Variation"],
+        name: &["Sicilian Defense", "Najdorf Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -258,8 +256,7 @@ pub const NAJDORF_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<95>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Najdorf Variation"],
+        name: &["Sicilian Defense", "Najdorf Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -380,8 +377,7 @@ pub const NAJDORF_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<96>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Najdorf Variation"],
+        name: &["Sicilian Defense", "Najdorf Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -509,8 +505,7 @@ pub const NAJDORF_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<98>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Najdorf Variation"],
+        name: &["Sicilian Defense", "Najdorf Variation"],
         moves: &[
             Normal {
                 role: Pawn,

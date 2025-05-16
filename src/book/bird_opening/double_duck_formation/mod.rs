@@ -34,8 +34,7 @@ pub const DOUBLE_DUCK_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Double Duck Formation"],
+    name: &["Bird Opening", "Double Duck Formation"],
     moves: &[
         Normal {
             role: Pawn,

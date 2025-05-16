@@ -34,8 +34,11 @@ pub const MAURIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Bishop's Gambit", "Maurian Defense"],
+    name: &[
+        "King's Gambit Accepted",
+        "Bishop's Gambit",
+        "Maurian Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

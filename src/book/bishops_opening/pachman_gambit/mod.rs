@@ -34,8 +34,7 @@ pub const PACHMAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<24>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Pachman Gambit"],
+    name: &["Bishop's Opening", "Pachman Gambit"],
     moves: &[
         Normal {
             role: Pawn,

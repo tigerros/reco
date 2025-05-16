@@ -34,8 +34,7 @@ pub const VAVRA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Mokele Mbembe", "Vavra Defense"],
+    name: &["Alekhine Defense", "Mokele Mbembe", "Vavra Defense"],
     moves: &[
         Normal {
             role: Pawn,

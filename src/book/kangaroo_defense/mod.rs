@@ -34,8 +34,7 @@ pub const KANGAROO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Kangaroo Defense",
-    variation: &[],
+    name: &["Kangaroo Defense"],
     moves: &[
         Normal {
             role: Pawn,

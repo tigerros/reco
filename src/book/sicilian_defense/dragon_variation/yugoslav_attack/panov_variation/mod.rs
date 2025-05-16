@@ -34,8 +34,12 @@ pub const PANOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<76>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Yugoslav Attack", "Panov Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Dragon Variation",
+        "Yugoslav Attack",
+        "Panov Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

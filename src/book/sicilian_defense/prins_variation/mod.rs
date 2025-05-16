@@ -34,8 +34,7 @@ pub const PRINS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Prins Variation"],
+    name: &["Sicilian Defense", "Prins Variation"],
     moves: &[
         Normal {
             role: Pawn,

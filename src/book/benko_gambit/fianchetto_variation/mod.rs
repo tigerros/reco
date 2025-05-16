@@ -34,8 +34,7 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Benko Gambit",
-    variation: &["Fianchetto Variation"],
+    name: &["Benko Gambit", "Fianchetto Variation"],
     moves: &[
         Normal {
             role: Pawn,

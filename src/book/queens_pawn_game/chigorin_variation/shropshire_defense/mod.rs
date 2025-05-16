@@ -34,8 +34,11 @@ pub const SHROPSHIRE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Chigorin Variation", "Shropshire Defense"],
+    name: &[
+        "Queen's Pawn Game",
+        "Chigorin Variation",
+        "Shropshire Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PONZIANI_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &[],
+    name: &["Ponziani Opening"],
     moves: &[
         Normal {
             role: Pawn,

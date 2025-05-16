@@ -34,8 +34,7 @@ pub const PRATT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Pratt Variation"],
+    name: &["Bishop's Opening", "Pratt Variation"],
     moves: &[
         Normal {
             role: Pawn,

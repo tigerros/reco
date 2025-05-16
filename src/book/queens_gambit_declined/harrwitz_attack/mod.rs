@@ -35,8 +35,7 @@ pub const HARRWITZ_ATTACK: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<35>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Harrwitz Attack"],
+        name: &["Queen's Gambit Declined", "Harrwitz Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const HARRWITZ_ATTACK: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<37>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Harrwitz Attack"],
+        name: &["Queen's Gambit Declined", "Harrwitz Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -281,8 +279,7 @@ pub const HARRWITZ_ATTACK: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<37>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Harrwitz Attack"],
+        name: &["Queen's Gambit Declined", "Harrwitz Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -446,8 +443,7 @@ pub const HARRWITZ_ATTACK: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<37>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Harrwitz Attack"],
+        name: &["Queen's Gambit Declined", "Harrwitz Attack"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const REVERSED_MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Reversed Modern Defense"],
+    name: &["Hungarian Opening", "Reversed Modern Defense"],
     moves: &[
         Normal {
             role: Pawn,

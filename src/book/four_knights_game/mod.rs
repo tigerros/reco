@@ -34,8 +34,7 @@ pub const FOUR_KNIGHTS_GAME: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Four Knights Game",
-    variation: &[],
+    name: &["Four Knights Game"],
     moves: &[
         Normal {
             role: Pawn,

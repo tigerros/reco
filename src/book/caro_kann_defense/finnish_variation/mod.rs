@@ -34,8 +34,7 @@ pub const FINNISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<16>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Finnish Variation"],
+    name: &["Caro-Kann Defense", "Finnish Variation"],
     moves: &[
         Normal {
             role: Pawn,

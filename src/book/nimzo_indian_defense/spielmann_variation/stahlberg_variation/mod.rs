@@ -35,8 +35,11 @@ pub const STAHLBERG_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<23>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Spielmann Variation", "Stahlberg Variation"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Spielmann Variation",
+            "Stahlberg Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -192,8 +195,11 @@ pub const STAHLBERG_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<23>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Spielmann Variation", "Stahlberg Variation"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Spielmann Variation",
+            "Stahlberg Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,11 @@ pub const CLOSED_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<25>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Closed System"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Closed System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

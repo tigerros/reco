@@ -34,8 +34,11 @@ pub const EL_COLUMPIO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["El Columpio Defense", "El Columpio Gambit"],
+    name: &[
+        "Nimzowitsch Defense",
+        "El Columpio Defense",
+        "El Columpio Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

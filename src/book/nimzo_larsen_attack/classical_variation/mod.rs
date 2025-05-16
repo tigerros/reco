@@ -35,8 +35,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Nimzo-Larsen Attack",
-        variation: &["Classical Variation"],
+        name: &["Nimzo-Larsen Attack", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -87,8 +86,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Nimzo-Larsen Attack",
-        variation: &["Classical Variation"],
+        name: &["Nimzo-Larsen Attack", "Classical Variation"],
         moves: &[
             Normal {
                 role: Knight,

@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit Accepted",
-    variation: &["Main Line"],
+    name: &["Latvian Gambit Accepted", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

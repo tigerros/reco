@@ -35,8 +35,7 @@ pub const MODERN_LINE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Slav Defense",
-        variation: &["Modern Line"],
+        name: &["Slav Defense", "Modern Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +142,7 @@ pub const MODERN_LINE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Slav Defense",
-        variation: &["Modern Line"],
+        name: &["Slav Defense", "Modern Line"],
         moves: &[
             Normal {
                 role: Pawn,

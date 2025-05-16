@@ -35,8 +35,8 @@ pub const SPIELMANN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<32>(),
         },
-        name: "English Opening",
-        variation: &[
+        name: &[
+            "English Opening",
             "Symmetrical Variation",
             "Anti-Benoni Variation",
             "Spielmann Defense",
@@ -133,8 +133,8 @@ pub const SPIELMANN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<33>(),
         },
-        name: "English Opening",
-        variation: &[
+        name: &[
+            "English Opening",
             "Symmetrical Variation",
             "Anti-Benoni Variation",
             "Spielmann Defense",

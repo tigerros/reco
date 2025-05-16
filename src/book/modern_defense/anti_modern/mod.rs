@@ -34,8 +34,7 @@ pub const ANTI_MODERN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Anti-Modern"],
+    name: &["Modern Defense", "Anti-Modern"],
     moves: &[
         Normal {
             role: Pawn,

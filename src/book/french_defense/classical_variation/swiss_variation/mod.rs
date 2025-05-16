@@ -34,8 +34,7 @@ pub const SWISS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<11>(),
     },
-    name: "French Defense",
-    variation: &["Classical Variation", "Swiss Variation"],
+    name: &["French Defense", "Classical Variation", "Swiss Variation"],
     moves: &[
         Normal {
             role: Pawn,

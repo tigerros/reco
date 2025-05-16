@@ -34,8 +34,11 @@ pub const DOUBLE_FIANCHETTO: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<38>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Double Fianchetto"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Double Fianchetto",
+    ],
     moves: &[
         Normal {
             role: Pawn,

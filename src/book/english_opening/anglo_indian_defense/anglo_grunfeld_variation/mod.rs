@@ -35,8 +35,11 @@ pub const ANGLO_GRUNFELD_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<16>(),
         },
-        name: "English Opening",
-        variation: &["Anglo-Indian Defense", "Anglo-Grünfeld Variation"],
+        name: &[
+            "English Opening",
+            "Anglo-Indian Defense",
+            "Anglo-Grünfeld Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +132,11 @@ pub const ANGLO_GRUNFELD_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<16>(),
         },
-        name: "English Opening",
-        variation: &["Anglo-Indian Defense", "Anglo-Grünfeld Variation"],
+        name: &[
+            "English Opening",
+            "Anglo-Indian Defense",
+            "Anglo-Grünfeld Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -216,8 +222,11 @@ pub const ANGLO_GRUNFELD_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<16>(),
         },
-        name: "English Opening",
-        variation: &["Anglo-Indian Defense", "Anglo-Grünfeld Variation"],
+        name: &[
+            "English Opening",
+            "Anglo-Indian Defense",
+            "Anglo-Grünfeld Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -324,8 +333,11 @@ pub const ANGLO_GRUNFELD_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<16>(),
         },
-        name: "English Opening",
-        variation: &["Anglo-Indian Defense", "Anglo-Grünfeld Variation"],
+        name: &[
+            "English Opening",
+            "Anglo-Indian Defense",
+            "Anglo-Grünfeld Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

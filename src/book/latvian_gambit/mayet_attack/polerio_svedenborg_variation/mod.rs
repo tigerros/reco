@@ -34,8 +34,11 @@ pub const POLERIO_SVEDENBORG_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Mayet Attack", "Polerio-Svedenborg Variation"],
+    name: &[
+        "Latvian Gambit",
+        "Mayet Attack",
+        "Polerio-Svedenborg Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

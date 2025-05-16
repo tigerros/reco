@@ -35,8 +35,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 6] = [
             volume: Volume::C,
             category: RangedU8::new_static::<96>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Chigorin Defense"],
+        name: &["Ruy Lopez", "Closed", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -201,8 +200,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 6] = [
             volume: Volume::C,
             category: RangedU8::new_static::<96>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Chigorin Defense"],
+        name: &["Ruy Lopez", "Closed", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -360,8 +358,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 6] = [
             volume: Volume::C,
             category: RangedU8::new_static::<97>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Chigorin Defense"],
+        name: &["Ruy Lopez", "Closed", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -540,8 +537,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 6] = [
             volume: Volume::C,
             category: RangedU8::new_static::<97>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Chigorin Defense"],
+        name: &["Ruy Lopez", "Closed", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -692,8 +688,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 6] = [
             volume: Volume::C,
             category: RangedU8::new_static::<98>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Chigorin Defense"],
+        name: &["Ruy Lopez", "Closed", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -893,8 +888,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 6] = [
             volume: Volume::C,
             category: RangedU8::new_static::<98>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Chigorin Defense"],
+        name: &["Ruy Lopez", "Closed", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,

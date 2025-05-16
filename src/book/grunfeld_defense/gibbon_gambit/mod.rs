@@ -34,8 +34,7 @@ pub const GIBBON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Gibbon Gambit"],
+    name: &["Grünfeld Defense", "Gibbon Gambit"],
     moves: &[
         Normal {
             role: Pawn,

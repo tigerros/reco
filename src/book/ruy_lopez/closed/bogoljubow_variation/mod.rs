@@ -34,8 +34,7 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<91>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Bogoljubow Variation"],
+    name: &["Ruy Lopez", "Closed", "Bogoljubow Variation"],
     moves: &[
         Normal {
             role: Pawn,

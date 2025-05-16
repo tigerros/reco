@@ -34,8 +34,7 @@ pub const NYEZHMETDINOV_ROSSOLIMO_ATTACK: [Opening<'static, &str>; 1] = [Opening
         volume: Volume::B,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Nyezhmetdinov-Rossolimo Attack"],
+    name: &["Sicilian Defense", "Nyezhmetdinov-Rossolimo Attack"],
     moves: &[
         Normal {
             role: Pawn,

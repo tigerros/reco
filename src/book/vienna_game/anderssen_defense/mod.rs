@@ -34,8 +34,7 @@ pub const ANDERSSEN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &["Anderssen Defense"],
+    name: &["Vienna Game", "Anderssen Defense"],
     moves: &[
         Normal {
             role: Pawn,

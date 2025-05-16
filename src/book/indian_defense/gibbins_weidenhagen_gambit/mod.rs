@@ -34,8 +34,7 @@ pub const GIBBINS_WEIDENHAGEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Gibbins-Weidenhagen Gambit"],
+    name: &["Indian Defense", "Gibbins-Weidenhagen Gambit"],
     moves: &[
         Normal {
             role: Pawn,

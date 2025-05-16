@@ -34,8 +34,11 @@ pub const MODERN_BC4_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<35>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Accelerated Dragon", "Modern Bc4 Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Accelerated Dragon",
+        "Modern Bc4 Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const MELBOURNE_SHUFFLE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Portuguese Gambit", "Melbourne Shuffle Variation"],
+    name: &[
+        "Scandinavian Defense",
+        "Portuguese Gambit",
+        "Melbourne Shuffle Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HAITI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Bogo-Indian Defense",
-    variation: &["Haiti Variation"],
+    name: &["Bogo-Indian Defense", "Haiti Variation"],
     moves: &[
         Normal {
             role: Pawn,

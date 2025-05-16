@@ -34,8 +34,7 @@ pub const DELAYED_EXCHANGE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<85>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Delayed Exchange"],
+    name: &["Ruy Lopez", "Closed", "Delayed Exchange"],
     moves: &[
         Normal {
             role: Pawn,

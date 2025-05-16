@@ -34,8 +34,7 @@ pub const SHABALOV_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Stoltz Variation", "Shabalov Attack"],
+    name: &["Semi-Slav Defense", "Stoltz Variation", "Shabalov Attack"],
     moves: &[
         Normal {
             role: Pawn,

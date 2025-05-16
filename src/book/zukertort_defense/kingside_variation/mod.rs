@@ -34,8 +34,7 @@ pub const KINGSIDE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Defense",
-    variation: &["Kingside Variation"],
+    name: &["Zukertort Defense", "Kingside Variation"],
     moves: &[
         Normal {
             role: Knight,

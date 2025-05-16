@@ -34,8 +34,12 @@ pub const RETI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Kan Variation", "Maróczy Bind", "Réti Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Kan Variation",
+        "Maróczy Bind",
+        "Réti Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const DELAYED_BISHOP_SACRIFICE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Lion Variation", "Delayed Bishop Sacrifice"],
+    name: &[
+        "Philidor Defense",
+        "Lion Variation",
+        "Delayed Bishop Sacrifice",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const WITH_NE4: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["St. Petersburg Variation", "with Ne4"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "St. Petersburg Variation",
+        "with Ne4",
+    ],
     moves: &[
         Normal {
             role: Pawn,

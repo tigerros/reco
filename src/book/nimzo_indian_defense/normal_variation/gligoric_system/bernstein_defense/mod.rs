@@ -34,8 +34,12 @@ pub const BERNSTEIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Normal Variation", "Gligoric System", "Bernstein Defense"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Normal Variation",
+        "Gligoric System",
+        "Bernstein Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

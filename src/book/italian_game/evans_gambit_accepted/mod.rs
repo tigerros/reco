@@ -34,8 +34,7 @@ pub const EVANS_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit Accepted"],
+    name: &["Italian Game", "Evans Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

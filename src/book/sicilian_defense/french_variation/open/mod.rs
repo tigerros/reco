@@ -34,8 +34,7 @@ pub const OPEN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Sicilian Defense",
-    variation: &["French Variation", "Open"],
+    name: &["Sicilian Defense", "French Variation", "Open"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MODERN_PTERODACTYL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Modern Pterodactyl"],
+    name: &["Modern Defense", "Modern Pterodactyl"],
     moves: &[
         Normal {
             role: Pawn,

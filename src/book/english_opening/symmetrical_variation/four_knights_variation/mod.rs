@@ -34,8 +34,11 @@ pub const FOUR_KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<35>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Four Knights Variation"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Four Knights Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const KUDISCHEWITSCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Slav Indian",
-    variation: &["Kudischewitsch Gambit"],
+    name: &["Slav Indian", "Kudischewitsch Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const VON_HENNIG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["von Hennig Gambit"],
+    name: &["Tarrasch Defense", "von Hennig Gambit"],
     moves: &[
         Normal {
             role: Pawn,

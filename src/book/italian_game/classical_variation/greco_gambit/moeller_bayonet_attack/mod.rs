@@ -34,8 +34,8 @@ pub const MOELLER_BAYONET_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Italian Game",
-    variation: &[
+    name: &[
+        "Italian Game",
         "Classical Variation",
         "Greco Gambit",
         "Moeller-Bayonet Attack",

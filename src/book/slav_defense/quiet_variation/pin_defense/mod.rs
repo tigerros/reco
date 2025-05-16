@@ -34,8 +34,7 @@ pub const PIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Slav Defense",
-    variation: &["Quiet Variation", "Pin Defense"],
+    name: &["Slav Defense", "Quiet Variation", "Pin Defense"],
     moves: &[
         Normal {
             role: Pawn,

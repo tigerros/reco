@@ -34,8 +34,7 @@ pub const SCHALLOPP_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<13>(),
     },
-    name: "Slav Defense",
-    variation: &["Exchange Variation", "Schallopp Variation"],
+    name: &["Slav Defense", "Exchange Variation", "Schallopp Variation"],
     moves: &[
         Normal {
             role: Pawn,

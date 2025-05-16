@@ -34,8 +34,7 @@ pub const FELBECKER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit",
-    variation: &["Felbecker Gambit"],
+    name: &["Englund Gambit", "Felbecker Gambit"],
     moves: &[
         Normal {
             role: Pawn,

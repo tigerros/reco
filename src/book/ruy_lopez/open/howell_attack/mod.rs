@@ -35,8 +35,7 @@ pub const HOWELL_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<81>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Open", "Howell Attack"],
+        name: &["Ruy Lopez", "Open", "Howell Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -200,8 +199,7 @@ pub const HOWELL_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<81>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Open", "Howell Attack"],
+        name: &["Ruy Lopez", "Open", "Howell Attack"],
         moves: &[
             Normal {
                 role: Pawn,

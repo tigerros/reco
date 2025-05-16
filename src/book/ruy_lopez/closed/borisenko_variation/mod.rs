@@ -34,8 +34,7 @@ pub const BORISENKO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<96>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Borisenko Variation"],
+    name: &["Ruy Lopez", "Closed", "Borisenko Variation"],
     moves: &[
         Normal {
             role: Pawn,

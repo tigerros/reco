@@ -34,8 +34,7 @@ pub const BEYER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Beyer Gambit"],
+    name: &["King's Pawn Game", "Beyer Gambit"],
     moves: &[
         Normal {
             role: Pawn,

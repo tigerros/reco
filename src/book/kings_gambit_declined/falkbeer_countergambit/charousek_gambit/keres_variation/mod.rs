@@ -34,8 +34,8 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<32>(),
     },
-    name: "King's Gambit Declined",
-    variation: &[
+    name: &[
+        "King's Gambit Declined",
         "Falkbeer Countergambit",
         "Charousek Gambit",
         "Keres Variation",

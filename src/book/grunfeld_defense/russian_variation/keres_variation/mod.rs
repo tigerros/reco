@@ -34,8 +34,7 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<98>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Russian Variation", "Keres Variation"],
+    name: &["Grünfeld Defense", "Russian Variation", "Keres Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const REYNOLDS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Meran Variation", "Reynolds' Variation"],
+    name: &[
+        "Semi-Slav Defense",
+        "Meran Variation",
+        "Reynolds' Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

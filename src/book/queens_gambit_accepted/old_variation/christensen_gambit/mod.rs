@@ -34,8 +34,11 @@ pub const CHRISTENSEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Old Variation", "Christensen Gambit"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Old Variation",
+        "Christensen Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

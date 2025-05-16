@@ -34,8 +34,7 @@ pub const AUSTRIADACTYLUS_WESTERN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Austrian", "Austriadactylus Western"],
+    name: &["Pterodactyl Defense", "Austrian", "Austriadactylus Western"],
     moves: &[
         Normal {
             role: Pawn,

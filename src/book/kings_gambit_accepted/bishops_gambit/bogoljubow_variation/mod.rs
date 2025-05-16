@@ -34,8 +34,11 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Bishop's Gambit", "Bogoljubow Variation"],
+    name: &[
+        "King's Gambit Accepted",
+        "Bishop's Gambit",
+        "Bogoljubow Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

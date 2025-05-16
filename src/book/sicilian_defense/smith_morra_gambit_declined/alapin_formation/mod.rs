@@ -34,8 +34,11 @@ pub const ALAPIN_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Smith-Morra Gambit Declined", "Alapin Formation"],
+    name: &[
+        "Sicilian Defense",
+        "Smith-Morra Gambit Declined",
+        "Alapin Formation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

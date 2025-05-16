@@ -34,8 +34,11 @@ pub const PSEUDO_CHIGORIN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Baltic Defense", "Pseudo-Chigorin"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Baltic Defense",
+        "Pseudo-Chigorin",
+    ],
     moves: &[
         Normal {
             role: Pawn,

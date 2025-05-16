@@ -34,8 +34,7 @@ pub const LISITSYN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Lisitsyn Variation"],
+    name: &["Bishop's Opening", "Lisitsyn Variation"],
     moves: &[
         Normal {
             role: Pawn,

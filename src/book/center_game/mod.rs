@@ -35,8 +35,7 @@ pub const CENTER_GAME: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<20>(),
         },
-        name: "Center Game",
-        variation: &[],
+        name: &["Center Game"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -94,8 +93,7 @@ pub const CENTER_GAME: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Center Game",
-        variation: &[],
+        name: &["Center Game"],
         moves: &[
             Normal {
                 role: Pawn,

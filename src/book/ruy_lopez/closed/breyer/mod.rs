@@ -34,8 +34,7 @@ pub const BREYER: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<95>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Breyer"],
+    name: &["Ruy Lopez", "Closed", "Breyer"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BLACHLY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Blachly Gambit"],
+    name: &["King's Gambit Accepted", "Blachly Gambit"],
     moves: &[
         Normal {
             role: Pawn,

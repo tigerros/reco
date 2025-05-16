@@ -34,8 +34,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Modern Variation"],
+    name: &["Queen's Gambit Declined", "Modern Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const VALENCIA_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Valencia Opening",
-    variation: &[],
+    name: &["Valencia Opening"],
     moves: &[
         Normal {
             role: Pawn,

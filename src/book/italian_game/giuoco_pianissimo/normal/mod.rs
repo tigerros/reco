@@ -34,8 +34,7 @@ pub const NORMAL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Giuoco Pianissimo", "Normal"],
+    name: &["Italian Game", "Giuoco Pianissimo", "Normal"],
     moves: &[
         Normal {
             role: Pawn,

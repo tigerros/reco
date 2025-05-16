@@ -34,8 +34,7 @@ pub const CANNSTATTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Mikenas Defense",
-    variation: &["Cannstatter Variation"],
+    name: &["Mikenas Defense", "Cannstatter Variation"],
     moves: &[
         Normal {
             role: Pawn,

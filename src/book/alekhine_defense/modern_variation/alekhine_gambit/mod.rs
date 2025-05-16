@@ -34,8 +34,7 @@ pub const ALEKHINE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Modern Variation", "Alekhine Gambit"],
+    name: &["Alekhine Defense", "Modern Variation", "Alekhine Gambit"],
     moves: &[
         Normal {
             role: Pawn,

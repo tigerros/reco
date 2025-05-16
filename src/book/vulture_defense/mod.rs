@@ -34,8 +34,7 @@ pub const VULTURE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Vulture Defense",
-    variation: &[],
+    name: &["Vulture Defense"],
     moves: &[
         Normal {
             role: Pawn,

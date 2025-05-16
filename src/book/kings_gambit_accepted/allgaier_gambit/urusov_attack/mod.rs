@@ -34,8 +34,7 @@ pub const URUSOV_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Allgaier Gambit", "Urusov Attack"],
+    name: &["King's Gambit Accepted", "Allgaier Gambit", "Urusov Attack"],
     moves: &[
         Normal {
             role: Pawn,

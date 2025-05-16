@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<69>(),
     },
-    name: "Benoni Defense",
-    variation: &["Four Pawns Attack", "Main Line"],
+    name: &["Benoni Defense", "Four Pawns Attack", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

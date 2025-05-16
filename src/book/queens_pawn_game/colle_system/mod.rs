@@ -35,8 +35,7 @@ pub const COLLE_SYSTEM: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<4>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Colle System"],
+        name: &["Queen's Pawn Game", "Colle System"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const COLLE_SYSTEM: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Colle System"],
+        name: &["Queen's Pawn Game", "Colle System"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -195,8 +193,7 @@ pub const COLLE_SYSTEM: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Colle System"],
+        name: &["Queen's Pawn Game", "Colle System"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const ABBAZIA_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<36>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Abbazia Defense"],
+    name: &["King's Gambit Accepted", "Abbazia Defense"],
     moves: &[
         Normal {
             role: Pawn,

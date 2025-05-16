@@ -34,8 +34,11 @@ pub const TIVIAKOV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<18>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Classical Variation", "Tiviakov Defense"],
+    name: &[
+        "Queen's Indian Defense",
+        "Classical Variation",
+        "Tiviakov Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

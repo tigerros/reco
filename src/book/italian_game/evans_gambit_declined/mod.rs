@@ -35,8 +35,7 @@ pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<51>(),
         },
-        name: "Italian Game",
-        variation: &["Evans Gambit Declined"],
+        name: &["Italian Game", "Evans Gambit Declined"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const EVANS_GAMBIT_DECLINED: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<51>(),
         },
-        name: "Italian Game",
-        variation: &["Evans Gambit Declined"],
+        name: &["Italian Game", "Evans Gambit Declined"],
         moves: &[
             Normal {
                 role: Pawn,

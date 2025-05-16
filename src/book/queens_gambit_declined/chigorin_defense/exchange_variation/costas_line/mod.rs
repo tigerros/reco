@@ -34,8 +34,12 @@ pub const COSTAS_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Chigorin Defense", "Exchange Variation", "Costa's Line"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Chigorin Defense",
+        "Exchange Variation",
+        "Costa's Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

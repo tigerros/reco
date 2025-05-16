@@ -34,8 +34,7 @@ pub const SICILIAN_INVITATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Sicilian Invitation"],
+    name: &["Zukertort Opening", "Sicilian Invitation"],
     moves: &[
         Normal {
             role: Knight,

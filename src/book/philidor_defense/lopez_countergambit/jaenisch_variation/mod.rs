@@ -34,8 +34,11 @@ pub const JAENISCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Lopez Countergambit", "Jaenisch Variation"],
+    name: &[
+        "Philidor Defense",
+        "Lopez Countergambit",
+        "Jaenisch Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

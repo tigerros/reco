@@ -34,8 +34,7 @@ pub const TARTAKOWER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Tartakower Gambit"],
+    name: &["King's Gambit Accepted", "Tartakower Gambit"],
     moves: &[
         Normal {
             role: Pawn,

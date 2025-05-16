@@ -35,8 +35,7 @@ pub const CATALAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<13>(),
         },
-        name: "English Opening",
-        variation: &["Agincourt Defense", "Catalan Defense"],
+        name: &["English Opening", "Agincourt Defense", "Catalan Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -130,8 +129,7 @@ pub const CATALAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<13>(),
         },
-        name: "English Opening",
-        variation: &["Agincourt Defense", "Catalan Defense"],
+        name: &["English Opening", "Agincourt Defense", "Catalan Defense"],
         moves: &[
             Normal {
                 role: Pawn,

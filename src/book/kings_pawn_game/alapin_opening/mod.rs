@@ -34,8 +34,7 @@ pub const ALAPIN_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Alapin Opening"],
+    name: &["King's Pawn Game", "Alapin Opening"],
     moves: &[
         Normal {
             role: Pawn,

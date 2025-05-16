@@ -34,8 +34,7 @@ pub const GIBBINS_WEIDENHAGEN_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Op
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Gibbins-Weidenhagen Gambit Accepted"],
+    name: &["Indian Defense", "Gibbins-Weidenhagen Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const CHABANON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Dutch Variation", "Chabanon Gambit"],
+    name: &[
+        "English Opening",
+        "Anglo-Dutch Variation",
+        "Chabanon Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

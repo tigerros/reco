@@ -34,8 +34,7 @@ pub const BOUNCING_BISHOP_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van't Kruijs Opening",
-    variation: &["Bouncing Bishop Variation"],
+    name: &["Van't Kruijs Opening", "Bouncing Bishop Variation"],
     moves: &[
         Normal {
             role: Pawn,

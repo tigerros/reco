@@ -35,8 +35,8 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<23>(),
         },
-        name: "English Opening",
-        variation: &[
+        name: &[
+            "English Opening",
             "King's English Variation",
             "Two Knights Variation",
             "Keres Variation",
@@ -133,8 +133,8 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<23>(),
         },
-        name: "English Opening",
-        variation: &[
+        name: &[
+            "English Opening",
             "King's English Variation",
             "Two Knights Variation",
             "Keres Variation",

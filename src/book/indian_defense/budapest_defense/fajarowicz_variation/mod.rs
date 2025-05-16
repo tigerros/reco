@@ -34,8 +34,7 @@ pub const FAJAROWICZ_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Indian Defense",
-    variation: &["Budapest Defense", "Fajarowicz Variation"],
+    name: &["Indian Defense", "Budapest Defense", "Fajarowicz Variation"],
     moves: &[
         Normal {
             role: Pawn,

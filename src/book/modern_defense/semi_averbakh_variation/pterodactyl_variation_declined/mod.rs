@@ -34,8 +34,11 @@ pub const PTERODACTYL_VARIATION_DECLINED: [Opening<'static, &str>; 1] = [Opening
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Semi-Averbakh Variation", "Pterodactyl Variation Declined"],
+    name: &[
+        "Modern Defense",
+        "Semi-Averbakh Variation",
+        "Pterodactyl Variation Declined",
+    ],
     moves: &[
         Normal {
             role: Pawn,

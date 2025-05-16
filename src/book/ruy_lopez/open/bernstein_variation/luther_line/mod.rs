@@ -34,8 +34,7 @@ pub const LUTHER_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Bernstein Variation", "Luther Line"],
+    name: &["Ruy Lopez", "Open", "Bernstein Variation", "Luther Line"],
     moves: &[
         Normal {
             role: Pawn,

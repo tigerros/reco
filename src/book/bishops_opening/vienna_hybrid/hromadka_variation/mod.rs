@@ -34,8 +34,7 @@ pub const HROMADKA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Vienna Hybrid", "Hromádka Variation"],
+    name: &["Bishop's Opening", "Vienna Hybrid", "Hromádka Variation"],
     moves: &[
         Normal {
             role: Pawn,

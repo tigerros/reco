@@ -34,8 +34,7 @@ pub const NEW_YORK_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Réti Opening",
-    variation: &["Anglo-Slav Variation", "New York System"],
+    name: &["Réti Opening", "Anglo-Slav Variation", "New York System"],
     moves: &[
         Normal {
             role: Knight,

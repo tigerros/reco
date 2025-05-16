@@ -34,8 +34,7 @@ pub const COOK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Allgaier", "Cook Variation"],
+    name: &["King's Gambit Accepted", "Allgaier", "Cook Variation"],
     moves: &[
         Normal {
             role: Pawn,

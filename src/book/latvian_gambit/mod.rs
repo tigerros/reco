@@ -34,8 +34,7 @@ pub const LATVIAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &[],
+    name: &["Latvian Gambit"],
     moves: &[
         Normal {
             role: Pawn,

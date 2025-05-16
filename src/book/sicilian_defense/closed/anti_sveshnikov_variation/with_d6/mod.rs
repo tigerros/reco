@@ -34,8 +34,12 @@ pub const WITH_D6: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Closed", "Anti-Sveshnikov Variation", "with d6"],
+    name: &[
+        "Sicilian Defense",
+        "Closed",
+        "Anti-Sveshnikov Variation",
+        "with d6",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,8 @@ pub const ALATORTSEV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<15>(),
     },
-    name: "French Defense",
-    variation: &[
+    name: &[
+        "French Defense",
         "Winawer Variation",
         "Alekhine Gambit",
         "Alatortsev Variation",

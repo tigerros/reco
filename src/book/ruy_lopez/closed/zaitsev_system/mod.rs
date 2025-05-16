@@ -34,8 +34,7 @@ pub const ZAITSEV_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<92>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Zaitsev System"],
+    name: &["Ruy Lopez", "Closed", "Zaitsev System"],
     moves: &[
         Normal {
             role: Pawn,

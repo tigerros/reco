@@ -34,8 +34,11 @@ pub const MARCO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Kasparov-Petrosian Variation", "Marco Defense"],
+    name: &[
+        "Queen's Indian Defense",
+        "Kasparov-Petrosian Variation",
+        "Marco Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

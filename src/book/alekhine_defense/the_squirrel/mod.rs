@@ -34,8 +34,7 @@ pub const THE_SQUIRREL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["The Squirrel"],
+    name: &["Alekhine Defense", "The Squirrel"],
     moves: &[
         Normal {
             role: Pawn,

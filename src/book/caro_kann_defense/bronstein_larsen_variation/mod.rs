@@ -34,8 +34,7 @@ pub const BRONSTEIN_LARSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<16>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Bronstein-Larsen Variation"],
+    name: &["Caro-Kann Defense", "Bronstein-Larsen Variation"],
     moves: &[
         Normal {
             role: Pawn,

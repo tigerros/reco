@@ -34,8 +34,7 @@ pub const WAGNER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Torre Attack",
-    variation: &["Wagner Gambit"],
+    name: &["Torre Attack", "Wagner Gambit"],
     moves: &[
         Normal {
             role: Pawn,

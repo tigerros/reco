@@ -35,8 +35,7 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<47>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Meran Variation"],
+        name: &["Semi-Slav Defense", "Meran Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -171,8 +170,7 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<48>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Meran Variation"],
+        name: &["Semi-Slav Defense", "Meran Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -335,8 +333,7 @@ pub const MERAN_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<48>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Meran Variation"],
+        name: &["Semi-Slav Defense", "Meran Variation"],
         moves: &[
             Normal {
                 role: Pawn,

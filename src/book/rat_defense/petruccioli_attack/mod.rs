@@ -34,8 +34,7 @@ pub const PETRUCCIOLI_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Rat Defense",
-    variation: &["Petruccioli Attack"],
+    name: &["Rat Defense", "Petruccioli Attack"],
     moves: &[
         Normal {
             role: Pawn,

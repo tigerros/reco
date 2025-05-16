@@ -34,8 +34,7 @@ pub const SVESHNIKOV_JANSA_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<7>(),
     },
-    name: "Pirc Defense",
-    variation: &["150 Attack", "Sveshnikov-Jansa Attack"],
+    name: &["Pirc Defense", "150 Attack", "Sveshnikov-Jansa Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const ANTI_ANTI_GRUNFELD: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<15>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Indian Defense", "Anti-Anti-Grünfeld"],
+    name: &[
+        "English Opening",
+        "Anglo-Indian Defense",
+        "Anti-Anti-Grünfeld",
+    ],
     moves: &[
         Normal {
             role: Pawn,

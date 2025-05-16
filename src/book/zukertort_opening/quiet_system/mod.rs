@@ -34,8 +34,7 @@ pub const QUIET_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Quiet System"],
+    name: &["Zukertort Opening", "Quiet System"],
     moves: &[
         Normal {
             role: Knight,

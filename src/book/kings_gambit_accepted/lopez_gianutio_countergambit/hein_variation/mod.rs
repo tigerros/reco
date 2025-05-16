@@ -34,8 +34,11 @@ pub const HEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Lopez-Gianutio Countergambit", "Hein Variation"],
+    name: &[
+        "King's Gambit Accepted",
+        "Lopez-Gianutio Countergambit",
+        "Hein Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

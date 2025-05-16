@@ -35,8 +35,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<63>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Main Line"],
+        name: &["Queen's Gambit Declined", "Orthodox Defense", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -165,8 +164,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<63>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Main Line"],
+        name: &["Queen's Gambit Declined", "Orthodox Defense", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -288,8 +286,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<67>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Main Line"],
+        name: &["Queen's Gambit Declined", "Orthodox Defense", "Main Line"],
         moves: &[
             Normal {
                 role: Pawn,

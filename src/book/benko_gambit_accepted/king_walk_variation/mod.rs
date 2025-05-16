@@ -34,8 +34,7 @@ pub const KING_WALK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<59>(),
     },
-    name: "Benko Gambit Accepted",
-    variation: &["King Walk Variation"],
+    name: &["Benko Gambit Accepted", "King Walk Variation"],
     moves: &[
         Normal {
             role: Pawn,

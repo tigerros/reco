@@ -34,8 +34,11 @@ pub const LEVENFISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<97>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Russian Variation", "Levenfish Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Russian Variation",
+        "Levenfish Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

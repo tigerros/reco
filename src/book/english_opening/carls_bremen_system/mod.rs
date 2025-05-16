@@ -34,8 +34,7 @@ pub const CARLS_BREMEN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<22>(),
     },
-    name: "English Opening",
-    variation: &["Carls-Bremen System"],
+    name: &["English Opening", "Carls-Bremen System"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MAROCZY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Maróczy Variation", "Maróczy Gambit"],
+    name: &["Caro-Kann Defense", "Maróczy Variation", "Maróczy Gambit"],
     moves: &[
         Normal {
             role: Pawn,

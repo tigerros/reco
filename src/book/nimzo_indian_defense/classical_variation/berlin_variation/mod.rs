@@ -34,8 +34,11 @@ pub const BERLIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<38>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Classical Variation", "Berlin Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Berlin Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

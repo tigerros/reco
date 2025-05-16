@@ -34,8 +34,11 @@ pub const SOKOLSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<89>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Exchange Variation", "Sokolsky Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Exchange Variation",
+        "Sokolsky Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

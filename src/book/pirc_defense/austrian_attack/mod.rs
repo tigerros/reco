@@ -35,8 +35,7 @@ pub const AUSTRIAN_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<9>(),
         },
-        name: "Pirc Defense",
-        variation: &["Austrian Attack"],
+        name: &["Pirc Defense", "Austrian Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -137,8 +136,7 @@ pub const AUSTRIAN_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<9>(),
         },
-        name: "Pirc Defense",
-        variation: &["Austrian Attack"],
+        name: &["Pirc Defense", "Austrian Attack"],
         moves: &[
             Normal {
                 role: Pawn,

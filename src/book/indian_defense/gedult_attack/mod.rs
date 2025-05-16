@@ -34,8 +34,7 @@ pub const GEDULT_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Gedult Attack"],
+    name: &["Indian Defense", "Gedult Attack"],
     moves: &[
         Normal {
             role: Pawn,

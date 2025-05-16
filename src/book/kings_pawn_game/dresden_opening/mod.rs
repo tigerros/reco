@@ -34,8 +34,7 @@ pub const DRESDEN_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Dresden Opening"],
+    name: &["King's Pawn Game", "Dresden Opening"],
     moves: &[
         Normal {
             role: Pawn,

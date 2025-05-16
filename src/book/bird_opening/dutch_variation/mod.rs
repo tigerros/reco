@@ -34,8 +34,7 @@ pub const DUTCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<3>(),
     },
-    name: "Bird Opening",
-    variation: &["Dutch Variation"],
+    name: &["Bird Opening", "Dutch Variation"],
     moves: &[
         Normal {
             role: Pawn,

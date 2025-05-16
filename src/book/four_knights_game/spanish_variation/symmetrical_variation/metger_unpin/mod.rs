@@ -34,8 +34,12 @@ pub const METGER_UNPIN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<49>(),
     },
-    name: "Four Knights Game",
-    variation: &["Spanish Variation", "Symmetrical Variation", "Metger Unpin"],
+    name: &[
+        "Four Knights Game",
+        "Spanish Variation",
+        "Symmetrical Variation",
+        "Metger Unpin",
+    ],
     moves: &[
         Normal {
             role: Pawn,

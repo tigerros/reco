@@ -35,8 +35,7 @@ pub const ZUKERTORT_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<2>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Zukertort Variation"],
+        name: &["Queen's Pawn Game", "Zukertort Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -94,8 +93,7 @@ pub const ZUKERTORT_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Queen's Pawn Game",
-        variation: &["Zukertort Variation"],
+        name: &["Queen's Pawn Game", "Zukertort Variation"],
         moves: &[
             Normal {
                 role: Pawn,

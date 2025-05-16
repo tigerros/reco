@@ -35,8 +35,7 @@ pub const QUIET_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<30>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Quiet Variation"],
+        name: &["Semi-Slav Defense", "Quiet Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +142,7 @@ pub const QUIET_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<30>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Quiet Variation"],
+        name: &["Semi-Slav Defense", "Quiet Variation"],
         moves: &[
             Normal {
                 role: Pawn,

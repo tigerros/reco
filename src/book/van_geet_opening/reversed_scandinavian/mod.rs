@@ -34,8 +34,7 @@ pub const REVERSED_SCANDINAVIAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Reversed Scandinavian"],
+    name: &["Van Geet Opening", "Reversed Scandinavian"],
     moves: &[
         Normal {
             role: Knight,

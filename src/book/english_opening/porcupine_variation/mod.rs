@@ -34,8 +34,7 @@ pub const PORCUPINE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Porcupine Variation"],
+    name: &["English Opening", "Porcupine Variation"],
     moves: &[
         Normal {
             role: Pawn,

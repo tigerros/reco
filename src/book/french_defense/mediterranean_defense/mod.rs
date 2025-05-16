@@ -34,8 +34,7 @@ pub const MEDITERRANEAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Mediterranean Defense"],
+    name: &["French Defense", "Mediterranean Defense"],
     moves: &[
         Normal {
             role: Pawn,

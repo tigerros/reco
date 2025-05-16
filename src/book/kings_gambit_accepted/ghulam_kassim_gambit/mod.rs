@@ -35,8 +35,7 @@ pub const GHULAM_KASSIM_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<37>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["Ghulam-Kassim Gambit"],
+        name: &["King's Gambit Accepted", "Ghulam-Kassim Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -150,8 +149,7 @@ pub const GHULAM_KASSIM_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<37>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["Ghulam-Kassim Gambit"],
+        name: &["King's Gambit Accepted", "Ghulam-Kassim Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

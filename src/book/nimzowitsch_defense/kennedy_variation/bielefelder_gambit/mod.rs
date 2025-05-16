@@ -34,8 +34,11 @@ pub const BIELEFELDER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Kennedy Variation", "Bielefelder Gambit"],
+    name: &[
+        "Nimzowitsch Defense",
+        "Kennedy Variation",
+        "Bielefelder Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

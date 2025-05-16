@@ -34,8 +34,11 @@ pub const STAUNTON_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<31>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Falkbeer Countergambit", "Staunton Line"],
+    name: &[
+        "King's Gambit Declined",
+        "Falkbeer Countergambit",
+        "Staunton Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

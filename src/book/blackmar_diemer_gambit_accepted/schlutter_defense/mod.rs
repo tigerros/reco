@@ -34,8 +34,7 @@ pub const SCHLUTTER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Schlutter Defense"],
+    name: &["Blackmar-Diemer Gambit Accepted", "Schlutter Defense"],
     moves: &[
         Normal {
             role: Pawn,

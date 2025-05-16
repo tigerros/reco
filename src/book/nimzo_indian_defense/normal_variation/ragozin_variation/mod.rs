@@ -34,8 +34,11 @@ pub const RAGOZIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Normal Variation", "Ragozin Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Normal Variation",
+        "Ragozin Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

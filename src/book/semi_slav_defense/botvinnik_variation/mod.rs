@@ -35,8 +35,7 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Botvinnik Variation"],
+        name: &["Semi-Slav Defense", "Botvinnik Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -192,8 +191,7 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Botvinnik Variation"],
+        name: &["Semi-Slav Defense", "Botvinnik Variation"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,12 @@ pub const PORTISCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Anti-Noteboom", "Stonewall Variation", "Portisch Gambit"],
+    name: &[
+        "Semi-Slav Defense",
+        "Anti-Noteboom",
+        "Stonewall Variation",
+        "Portisch Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

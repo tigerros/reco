@@ -34,8 +34,7 @@ pub const WESTERINEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Sicilian Defense",
-    variation: &["French Variation", "Westerinen Attack"],
+    name: &["Sicilian Defense", "French Variation", "Westerinen Attack"],
     moves: &[
         Normal {
             role: Pawn,

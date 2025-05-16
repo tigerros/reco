@@ -34,8 +34,11 @@ pub const DELAYED_KERES_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<90>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Scheveningen Variation", "Delayed Keres Attack"],
+    name: &[
+        "Sicilian Defense",
+        "Scheveningen Variation",
+        "Delayed Keres Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ROMANISHIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<13>(),
     },
-    name: "English Opening",
-    variation: &["Romanishin Gambit"],
+    name: &["English Opening", "Romanishin Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const AACHEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Scandinavian Variation", "Aachen Gambit"],
+    name: &[
+        "Nimzowitsch Defense",
+        "Scandinavian Variation",
+        "Aachen Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

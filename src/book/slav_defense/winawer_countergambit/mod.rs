@@ -34,8 +34,7 @@ pub const WINAWER_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Slav Defense",
-    variation: &["Winawer Countergambit"],
+    name: &["Slav Defense", "Winawer Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

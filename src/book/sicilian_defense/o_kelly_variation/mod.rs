@@ -34,8 +34,7 @@ pub const O_KELLY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Sicilian Defense",
-    variation: &["O'Kelly Variation"],
+    name: &["Sicilian Defense", "O'Kelly Variation"],
     moves: &[
         Normal {
             role: Pawn,

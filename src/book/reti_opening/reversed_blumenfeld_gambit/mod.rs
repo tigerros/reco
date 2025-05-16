@@ -34,8 +34,7 @@ pub const REVERSED_BLUMENFELD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Réti Opening",
-    variation: &["Reversed Blumenfeld Gambit"],
+    name: &["Réti Opening", "Reversed Blumenfeld Gambit"],
     moves: &[
         Normal {
             role: Knight,

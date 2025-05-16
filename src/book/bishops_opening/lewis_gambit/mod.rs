@@ -34,8 +34,7 @@ pub const LEWIS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Lewis Gambit"],
+    name: &["Bishop's Opening", "Lewis Gambit"],
     moves: &[
         Normal {
             role: Pawn,

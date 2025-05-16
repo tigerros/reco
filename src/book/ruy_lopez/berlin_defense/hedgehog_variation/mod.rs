@@ -34,8 +34,7 @@ pub const HEDGEHOG_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<66>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Hedgehog Variation"],
+    name: &["Ruy Lopez", "Berlin Defense", "Hedgehog Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const KORCHNOI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<16>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Grünfeld Defense", "Korchnoi Variation"],
+    name: &[
+        "English Opening",
+        "Anglo-Grünfeld Defense",
+        "Korchnoi Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

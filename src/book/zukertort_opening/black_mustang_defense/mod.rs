@@ -34,8 +34,7 @@ pub const BLACK_MUSTANG_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Black Mustang Defense"],
+    name: &["Zukertort Opening", "Black Mustang Defense"],
     moves: &[
         Normal {
             role: Knight,

@@ -34,8 +34,7 @@ pub const FRIED_FOX_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Fried Fox Defense",
-    variation: &[],
+    name: &["Fried Fox Defense"],
     moves: &[
         Normal {
             role: Pawn,

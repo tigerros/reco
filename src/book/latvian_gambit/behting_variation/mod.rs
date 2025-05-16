@@ -34,8 +34,7 @@ pub const BEHTING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Behting Variation"],
+    name: &["Latvian Gambit", "Behting Variation"],
     moves: &[
         Normal {
             role: Pawn,

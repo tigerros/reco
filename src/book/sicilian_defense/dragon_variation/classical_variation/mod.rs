@@ -35,8 +35,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<70>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Classical Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Dragon Variation",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -150,8 +153,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<72>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Classical Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Dragon Variation",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -293,8 +299,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<72>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Classical Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Dragon Variation",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -429,8 +438,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<72>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Classical Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Dragon Variation",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -558,8 +570,11 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 5] = [
             volume: Volume::B,
             category: RangedU8::new_static::<73>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Dragon Variation", "Classical Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Dragon Variation",
+            "Classical Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

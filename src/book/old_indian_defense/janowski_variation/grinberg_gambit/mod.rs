@@ -34,8 +34,11 @@ pub const GRINBERG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Old Indian Defense",
-    variation: &["Janowski Variation", "Grinberg Gambit"],
+    name: &[
+        "Old Indian Defense",
+        "Janowski Variation",
+        "Grinberg Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const L_HERMET_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Center Game",
-    variation: &["l'Hermet Variation"],
+    name: &["Center Game", "l'Hermet Variation"],
     moves: &[
         Normal {
             role: Pawn,

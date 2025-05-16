@@ -34,8 +34,7 @@ pub const ROMIH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Romih Variation"],
+    name: &["Semi-Slav Defense", "Romih Variation"],
     moves: &[
         Normal {
             role: Pawn,

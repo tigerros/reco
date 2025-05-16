@@ -34,8 +34,7 @@ pub const ALEKHINE_CHATARD_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<13>(),
     },
-    name: "French Defense",
-    variation: &["Alekhine-Chatard Attack"],
+    name: &["French Defense", "Alekhine-Chatard Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HURST_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Spike", "Hurst Attack"],
+    name: &["Grob Opening", "Spike", "Hurst Attack"],
     moves: &[
         Normal {
             role: Pawn,

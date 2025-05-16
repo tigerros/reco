@@ -34,8 +34,7 @@ pub const BRIGGS_TRAP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Tennison Gambit", "Brigg's Trap"],
+    name: &["Zukertort Opening", "Tennison Gambit", "Brigg's Trap"],
     moves: &[
         Normal {
             role: Pawn,

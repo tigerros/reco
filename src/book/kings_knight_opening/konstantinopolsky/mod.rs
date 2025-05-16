@@ -34,8 +34,7 @@ pub const KONSTANTINOPOLSKY: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "King's Knight Opening",
-    variation: &["Konstantinopolsky"],
+    name: &["King's Knight Opening", "Konstantinopolsky"],
     moves: &[
         Normal {
             role: Pawn,

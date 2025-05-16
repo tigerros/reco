@@ -34,8 +34,7 @@ pub const HORSEFLY_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Horsefly Defense"],
+    name: &["Bird Opening", "Horsefly Defense"],
     moves: &[
         Normal {
             role: Pawn,

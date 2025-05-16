@@ -34,8 +34,7 @@ pub const QUINTEROS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Quinteros Variation"],
+    name: &["Sicilian Defense", "Quinteros Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BLUMENFELD_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Blumenfeld Countergambit",
-    variation: &[],
+    name: &["Blumenfeld Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

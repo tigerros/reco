@@ -34,8 +34,12 @@ pub const ENDGAME_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Alapin Variation", "Barmen Defense", "Endgame Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Alapin Variation",
+        "Barmen Defense",
+        "Endgame Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

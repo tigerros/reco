@@ -34,8 +34,7 @@ pub const FALKBEER_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<31>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Falkbeer Countergambit"],
+    name: &["King's Gambit Declined", "Falkbeer Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

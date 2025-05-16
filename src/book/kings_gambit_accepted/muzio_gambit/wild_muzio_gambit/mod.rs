@@ -34,8 +34,11 @@ pub const WILD_MUZIO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Muzio Gambit", "Wild Muzio Gambit"],
+    name: &[
+        "King's Gambit Accepted",
+        "Muzio Gambit",
+        "Wild Muzio Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

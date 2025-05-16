@@ -34,8 +34,11 @@ pub const RUBINSTEIN_VARIATION_ACCEPTED: [Opening<'static, &str>; 1] = [Opening 
         volume: Volume::C,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Four Knights Game",
-    variation: &["Spanish Variation", "Rubinstein Variation Accepted"],
+    name: &[
+        "Four Knights Game",
+        "Spanish Variation",
+        "Rubinstein Variation Accepted",
+    ],
     moves: &[
         Normal {
             role: Pawn,

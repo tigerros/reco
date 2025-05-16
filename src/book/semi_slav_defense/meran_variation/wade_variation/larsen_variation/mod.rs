@@ -34,8 +34,12 @@ pub const LARSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Meran Variation", "Wade Variation", "Larsen Variation"],
+    name: &[
+        "Semi-Slav Defense",
+        "Meran Variation",
+        "Wade Variation",
+        "Larsen Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

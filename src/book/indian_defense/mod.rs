@@ -35,8 +35,7 @@ pub const INDIAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<45>(),
         },
-        name: "Indian Defense",
-        variation: &[],
+        name: &["Indian Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -87,8 +86,7 @@ pub const INDIAN_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Indian Defense",
-        variation: &[],
+        name: &["Indian Defense"],
         moves: &[
             Normal {
                 role: Pawn,

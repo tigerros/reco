@@ -34,8 +34,7 @@ pub const LOLLI_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Lolli Attack"],
+    name: &["Italian Game", "Two Knights Defense", "Lolli Attack"],
     moves: &[
         Normal {
             role: Pawn,

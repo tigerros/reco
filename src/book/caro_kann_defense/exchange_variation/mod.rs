@@ -35,8 +35,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<13>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Exchange Variation"],
+        name: &["Caro-Kann Defense", "Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const EXCHANGE_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<13>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Exchange Variation"],
+        name: &["Caro-Kann Defense", "Exchange Variation"],
         moves: &[
             Normal {
                 role: Pawn,

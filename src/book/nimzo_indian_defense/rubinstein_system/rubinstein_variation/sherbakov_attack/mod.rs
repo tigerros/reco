@@ -34,8 +34,8 @@ pub const SHERBAKOV_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &[
+    name: &[
+        "Nimzo-Indian Defense",
         "Rubinstein System",
         "Rubinstein Variation",
         "Sherbakov Attack",

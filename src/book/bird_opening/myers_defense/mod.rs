@@ -34,8 +34,7 @@ pub const MYERS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Myers Defense"],
+    name: &["Bird Opening", "Myers Defense"],
     moves: &[
         Normal {
             role: Pawn,

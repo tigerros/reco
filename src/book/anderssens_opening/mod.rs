@@ -34,8 +34,7 @@ pub const ANDERSSENS_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Anderssen's Opening",
-    variation: &[],
+    name: &["Anderssen's Opening"],
     moves: &[Normal {
         role: Pawn,
         from: A2,

@@ -34,8 +34,7 @@ pub const SMITH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Owen Defense",
-    variation: &["Smith Gambit"],
+    name: &["Owen Defense", "Smith Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const GIUOCO_PIANO: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Giuoco Piano"],
+    name: &["Italian Game", "Giuoco Piano"],
     moves: &[
         Normal {
             role: Pawn,

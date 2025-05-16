@@ -34,8 +34,7 @@ pub const TOLUSH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Marshall Gambit", "Tolush Variation"],
+    name: &["Semi-Slav Defense", "Marshall Gambit", "Tolush Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,8 @@ pub const JAENISCH_GAMBIT_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<70>(),
     },
-    name: "Ruy Lopez",
-    variation: &[
+    name: &[
+        "Ruy Lopez",
         "Morphy Defense",
         "Schliemann Defense Deferred",
         "Jaenisch Gambit Deferred",

@@ -35,8 +35,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Nimzo-Larsen Attack",
-        variation: &["Modern Variation"],
+        name: &["Nimzo-Larsen Attack", "Modern Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Nimzo-Larsen Attack",
-        variation: &["Modern Variation"],
+        name: &["Nimzo-Larsen Attack", "Modern Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -188,8 +186,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Nimzo-Larsen Attack",
-        variation: &["Modern Variation"],
+        name: &["Nimzo-Larsen Attack", "Modern Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -254,8 +251,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Nimzo-Larsen Attack",
-        variation: &["Modern Variation"],
+        name: &["Nimzo-Larsen Attack", "Modern Variation"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const NOVOSIBIRSK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Novosibirsk Variation"],
+    name: &["Van Geet Opening", "Novosibirsk Variation"],
     moves: &[
         Normal {
             role: Knight,

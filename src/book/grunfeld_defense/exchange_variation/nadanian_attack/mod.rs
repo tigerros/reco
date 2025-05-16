@@ -34,8 +34,7 @@ pub const NADANIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<85>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Exchange Variation", "Nadanian Attack"],
+    name: &["Grünfeld Defense", "Exchange Variation", "Nadanian Attack"],
     moves: &[
         Normal {
             role: Pawn,

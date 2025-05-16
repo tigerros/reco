@@ -34,8 +34,11 @@ pub const AKAHI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van't Kruijs Opening",
-    variation: &["Keoni-Hiva Gambit", "Akahi Variation"],
+    name: &[
+        "Van't Kruijs Opening",
+        "Keoni-Hiva Gambit",
+        "Akahi Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

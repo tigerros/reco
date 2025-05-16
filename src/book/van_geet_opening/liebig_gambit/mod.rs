@@ -34,8 +34,7 @@ pub const LIEBIG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Liebig Gambit"],
+    name: &["Van Geet Opening", "Liebig Gambit"],
     moves: &[
         Normal {
             role: Knight,

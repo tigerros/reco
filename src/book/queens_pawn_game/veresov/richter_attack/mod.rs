@@ -34,8 +34,7 @@ pub const RICHTER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Veresov", "Richter Attack"],
+    name: &["Queen's Pawn Game", "Veresov", "Richter Attack"],
     moves: &[
         Normal {
             role: Pawn,

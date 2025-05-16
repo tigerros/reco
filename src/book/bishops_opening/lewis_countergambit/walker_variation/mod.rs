@@ -34,8 +34,11 @@ pub const WALKER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Lewis Countergambit", "Walker Variation"],
+    name: &[
+        "Bishop's Opening",
+        "Lewis Countergambit",
+        "Walker Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HEIN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Hein Countergambit"],
+    name: &["Italian Game", "Evans Gambit", "Hein Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const KRAUSE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Krause Variation"],
+    name: &["Queen's Pawn Game", "Krause Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const TROMPOWSKY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Trompowsky Attack",
-    variation: &[],
+    name: &["Trompowsky Attack"],
     moves: &[
         Normal {
             role: Pawn,

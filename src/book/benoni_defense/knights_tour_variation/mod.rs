@@ -34,8 +34,7 @@ pub const KNIGHTS_TOUR_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<61>(),
     },
-    name: "Benoni Defense",
-    variation: &["Knight's Tour Variation"],
+    name: &["Benoni Defense", "Knight's Tour Variation"],
     moves: &[
         Normal {
             role: Pawn,

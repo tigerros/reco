@@ -34,8 +34,7 @@ pub const NAPOLEON_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Napoleon Attack"],
+    name: &["King's Pawn Game", "Napoleon Attack"],
     moves: &[
         Normal {
             role: Pawn,

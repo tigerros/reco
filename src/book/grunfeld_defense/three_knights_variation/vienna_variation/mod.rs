@@ -34,8 +34,11 @@ pub const VIENNA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<95>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Three Knights Variation", "Vienna Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Three Knights Variation",
+        "Vienna Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

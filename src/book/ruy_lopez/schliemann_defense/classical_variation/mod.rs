@@ -34,8 +34,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Schliemann Defense", "Classical Variation"],
+    name: &["Ruy Lopez", "Schliemann Defense", "Classical Variation"],
     moves: &[
         Normal {
             role: Pawn,

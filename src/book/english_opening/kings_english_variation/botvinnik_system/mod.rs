@@ -34,8 +34,11 @@ pub const BOTVINNIK_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<26>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Botvinnik System"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Botvinnik System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const ROMANOVSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Sämisch Variation", "Romanovsky Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Sämisch Variation",
+        "Romanovsky Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

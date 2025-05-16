@@ -34,8 +34,11 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Orthodox Defense", "Botvinnik Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Orthodox Defense",
+        "Botvinnik Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

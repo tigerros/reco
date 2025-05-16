@@ -34,8 +34,11 @@ pub const TAIMANOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<25>(),
     },
-    name: "English Opening",
-    variation: &["King's English Variation", "Taimanov Variation"],
+    name: &[
+        "English Opening",
+        "King's English Variation",
+        "Taimanov Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

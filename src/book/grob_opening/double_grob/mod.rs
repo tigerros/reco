@@ -34,8 +34,7 @@ pub const DOUBLE_GROB: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Double Grob"],
+    name: &["Grob Opening", "Double Grob"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const VELIMIROVIC_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<89>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Velimirovic Attack"],
+    name: &["Sicilian Defense", "Velimirovic Attack"],
     moves: &[
         Normal {
             role: Pawn,

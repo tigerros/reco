@@ -34,8 +34,11 @@ pub const POISONED_PAWN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<19>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Poisoned Pawn Variation"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Poisoned Pawn Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

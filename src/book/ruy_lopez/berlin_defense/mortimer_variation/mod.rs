@@ -34,8 +34,7 @@ pub const MORTIMER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<65>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Mortimer Variation"],
+    name: &["Ruy Lopez", "Berlin Defense", "Mortimer Variation"],
     moves: &[
         Normal {
             role: Pawn,

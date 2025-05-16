@@ -34,8 +34,7 @@ pub const ZAITSEV_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit",
-    variation: &["Zaitsev System"],
+    name: &["Benko Gambit", "Zaitsev System"],
     moves: &[
         Normal {
             role: Pawn,

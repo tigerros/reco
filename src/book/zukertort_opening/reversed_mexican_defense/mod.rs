@@ -34,8 +34,7 @@ pub const REVERSED_MEXICAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Reversed Mexican Defense"],
+    name: &["Zukertort Opening", "Reversed Mexican Defense"],
     moves: &[
         Normal {
             role: Knight,

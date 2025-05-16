@@ -35,8 +35,11 @@ pub const CHAROUSEK_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<31>(),
         },
-        name: "King's Gambit Declined",
-        variation: &["Falkbeer Countergambit", "Charousek Gambit"],
+        name: &[
+            "King's Gambit Declined",
+            "Falkbeer Countergambit",
+            "Charousek Gambit",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +125,11 @@ pub const CHAROUSEK_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<32>(),
         },
-        name: "King's Gambit Declined",
-        variation: &["Falkbeer Countergambit", "Charousek Gambit"],
+        name: &[
+            "King's Gambit Declined",
+            "Falkbeer Countergambit",
+            "Charousek Gambit",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

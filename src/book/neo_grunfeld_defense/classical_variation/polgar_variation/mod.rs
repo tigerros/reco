@@ -34,8 +34,11 @@ pub const POLGAR_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<77>(),
     },
-    name: "Neo-Grünfeld Defense",
-    variation: &["Classical Variation", "Polgar Variation"],
+    name: &[
+        "Neo-Grünfeld Defense",
+        "Classical Variation",
+        "Polgar Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const SAMISCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<81>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Sämisch Variation", "Sämisch Gambit"],
+    name: &[
+        "King's Indian Defense",
+        "Sämisch Variation",
+        "Sämisch Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

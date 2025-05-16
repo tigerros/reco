@@ -34,8 +34,7 @@ pub const HASTINGS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Benoni Defense",
-    variation: &["Fianchetto Variation", "Hastings Defense"],
+    name: &["Benoni Defense", "Fianchetto Variation", "Hastings Defense"],
     moves: &[
         Normal {
             role: Pawn,

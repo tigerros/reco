@@ -34,8 +34,7 @@ pub const DRILL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<20>(),
     },
-    name: "English Opening",
-    variation: &["Drill Variation"],
+    name: &["English Opening", "Drill Variation"],
     moves: &[
         Normal {
             role: Pawn,

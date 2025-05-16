@@ -34,8 +34,12 @@ pub const EDGE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Closed", "Botvinnik Defense", "Edge Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Closed",
+        "Botvinnik Defense",
+        "Edge Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

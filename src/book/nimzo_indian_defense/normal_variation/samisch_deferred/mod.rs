@@ -34,8 +34,11 @@ pub const SAMISCH_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Normal Variation", "Sämisch Deferred"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Normal Variation",
+        "Sämisch Deferred",
+    ],
     moves: &[
         Normal {
             role: Pawn,

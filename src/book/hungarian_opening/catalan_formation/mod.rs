@@ -34,8 +34,7 @@ pub const CATALAN_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Catalan Formation"],
+    name: &["Hungarian Opening", "Catalan Formation"],
     moves: &[
         Normal {
             role: Pawn,

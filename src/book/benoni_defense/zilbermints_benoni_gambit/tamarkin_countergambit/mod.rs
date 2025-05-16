@@ -34,8 +34,11 @@ pub const TAMARKIN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Zilbermints-Benoni Gambit", "Tamarkin Countergambit"],
+    name: &[
+        "Benoni Defense",
+        "Zilbermints-Benoni Gambit",
+        "Tamarkin Countergambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

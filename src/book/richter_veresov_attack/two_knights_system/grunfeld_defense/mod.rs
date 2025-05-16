@@ -34,8 +34,11 @@ pub const GRUNFELD_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Richter-Veresov Attack",
-    variation: &["Two Knights System", "Grünfeld Defense"],
+    name: &[
+        "Richter-Veresov Attack",
+        "Two Knights System",
+        "Grünfeld Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

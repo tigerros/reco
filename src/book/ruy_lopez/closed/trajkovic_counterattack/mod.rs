@@ -34,8 +34,7 @@ pub const TRAJKOVIC_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<88>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Trajkovic Counterattack"],
+    name: &["Ruy Lopez", "Closed", "Trajkovic Counterattack"],
     moves: &[
         Normal {
             role: Pawn,

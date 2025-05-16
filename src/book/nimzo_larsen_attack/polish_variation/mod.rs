@@ -34,8 +34,7 @@ pub const POLISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Nimzo-Larsen Attack",
-    variation: &["Polish Variation"],
+    name: &["Nimzo-Larsen Attack", "Polish Variation"],
     moves: &[
         Normal {
             role: Pawn,

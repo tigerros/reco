@@ -34,8 +34,11 @@ pub const PTERODACTYL_VARIATION_ACCEPTED: [Opening<'static, &str>; 1] = [Opening
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Modern Defense",
-    variation: &["Semi-Averbakh Variation", "Pterodactyl Variation Accepted"],
+    name: &[
+        "Modern Defense",
+        "Semi-Averbakh Variation",
+        "Pterodactyl Variation Accepted",
+    ],
     moves: &[
         Normal {
             role: Knight,

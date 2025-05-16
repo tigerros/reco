@@ -34,8 +34,8 @@ pub const HENNEBERGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Four Knights Game",
-    variation: &[
+    name: &[
+        "Four Knights Game",
         "Spanish Variation",
         "Rubinstein Variation",
         "Henneberger Variation",

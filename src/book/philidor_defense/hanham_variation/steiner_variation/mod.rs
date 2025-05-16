@@ -34,8 +34,7 @@ pub const STEINER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Hanham Variation", "Steiner Variation"],
+    name: &["Philidor Defense", "Hanham Variation", "Steiner Variation"],
     moves: &[
         Normal {
             role: Pawn,

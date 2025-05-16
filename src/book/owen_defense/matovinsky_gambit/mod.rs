@@ -34,8 +34,7 @@ pub const MATOVINSKY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Owen Defense",
-    variation: &["Matovinsky Gambit"],
+    name: &["Owen Defense", "Matovinsky Gambit"],
     moves: &[
         Normal {
             role: Pawn,

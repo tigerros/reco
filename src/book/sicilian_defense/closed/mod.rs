@@ -35,8 +35,7 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
             volume: Volume::B,
             category: RangedU8::new_static::<23>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Closed"],
+        name: &["Sicilian Defense", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
             volume: Volume::B,
             category: RangedU8::new_static::<23>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Closed"],
+        name: &["Sicilian Defense", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -174,8 +172,7 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
             volume: Volume::B,
             category: RangedU8::new_static::<23>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Closed"],
+        name: &["Sicilian Defense", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -233,8 +230,7 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
             volume: Volume::B,
             category: RangedU8::new_static::<24>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Closed"],
+        name: &["Sicilian Defense", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -327,8 +323,7 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
             volume: Volume::B,
             category: RangedU8::new_static::<24>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Closed"],
+        name: &["Sicilian Defense", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -407,8 +402,7 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
             volume: Volume::B,
             category: RangedU8::new_static::<25>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Closed"],
+        name: &["Sicilian Defense", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -522,8 +516,7 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
             volume: Volume::B,
             category: RangedU8::new_static::<25>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Closed"],
+        name: &["Sicilian Defense", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -630,8 +623,7 @@ pub const CLOSED: [Opening<'static, &str>; 8] = [
             volume: Volume::B,
             category: RangedU8::new_static::<26>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Closed"],
+        name: &["Sicilian Defense", "Closed"],
         moves: &[
             Normal {
                 role: Pawn,

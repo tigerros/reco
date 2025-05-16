@@ -34,8 +34,11 @@ pub const ALEKHINE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<90>(),
     },
-    name: "Dutch Defense",
-    variation: &["Nimzo-Dutch Variation", "Alekhine Variation"],
+    name: &[
+        "Dutch Defense",
+        "Nimzo-Dutch Variation",
+        "Alekhine Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

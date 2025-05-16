@@ -34,8 +34,7 @@ pub const SEMI_MERAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Semi-Meran Variation"],
+    name: &["Semi-Slav Defense", "Semi-Meran Variation"],
     moves: &[
         Normal {
             role: Pawn,

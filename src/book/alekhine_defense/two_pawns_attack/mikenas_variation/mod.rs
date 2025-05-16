@@ -34,8 +34,7 @@ pub const MIKENAS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Two Pawns Attack", "Mikenas Variation"],
+    name: &["Alekhine Defense", "Two Pawns Attack", "Mikenas Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ST_GEORGE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["St. George Defense"],
+    name: &["Zukertort Opening", "St. George Defense"],
     moves: &[
         Normal {
             role: Knight,

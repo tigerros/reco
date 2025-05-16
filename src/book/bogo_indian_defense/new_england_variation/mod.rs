@@ -34,8 +34,7 @@ pub const NEW_ENGLAND_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Bogo-Indian Defense",
-    variation: &["New England Variation"],
+    name: &["Bogo-Indian Defense", "New England Variation"],
     moves: &[
         Normal {
             role: Pawn,

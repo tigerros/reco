@@ -35,8 +35,7 @@ pub const PETROVS_DEFENSE: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<42>(),
         },
-        name: "Petrov's Defense",
-        variation: &[],
+        name: &["Petrov's Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const PETROVS_DEFENSE: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<42>(),
         },
-        name: "Petrov's Defense",
-        variation: &[],
+        name: &["Petrov's Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -216,8 +214,7 @@ pub const PETROVS_DEFENSE: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<42>(),
         },
-        name: "Petrov's Defense",
-        variation: &[],
+        name: &["Petrov's Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -296,8 +293,7 @@ pub const PETROVS_DEFENSE: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<42>(),
         },
-        name: "Petrov's Defense",
-        variation: &[],
+        name: &["Petrov's Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -369,8 +365,7 @@ pub const PETROVS_DEFENSE: [Opening<'static, &str>; 5] = [
             volume: Volume::C,
             category: RangedU8::new_static::<42>(),
         },
-        name: "Petrov's Defense",
-        variation: &[],
+        name: &["Petrov's Defense"],
         moves: &[
             Normal {
                 role: Pawn,

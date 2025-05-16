@@ -34,8 +34,7 @@ pub const TWYBLE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Twyble Attack"],
+    name: &["Van Geet Opening", "Twyble Attack"],
     moves: &[
         Normal {
             role: Knight,

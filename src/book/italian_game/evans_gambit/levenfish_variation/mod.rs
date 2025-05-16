@@ -34,8 +34,7 @@ pub const LEVENFISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Levenfish Variation"],
+    name: &["Italian Game", "Evans Gambit", "Levenfish Variation"],
     moves: &[
         Normal {
             role: Pawn,

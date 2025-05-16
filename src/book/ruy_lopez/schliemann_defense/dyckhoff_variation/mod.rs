@@ -34,8 +34,7 @@ pub const DYCKHOFF_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Schliemann Defense", "Dyckhoff Variation"],
+    name: &["Ruy Lopez", "Schliemann Defense", "Dyckhoff Variation"],
     moves: &[
         Normal {
             role: Pawn,

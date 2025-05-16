@@ -34,8 +34,7 @@ pub const FOOLS_MATE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Barnes Opening",
-    variation: &["Fool's Mate"],
+    name: &["Barnes Opening", "Fool's Mate"],
     moves: &[
         Normal {
             role: Pawn,

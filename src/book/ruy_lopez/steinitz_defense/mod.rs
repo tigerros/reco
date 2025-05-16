@@ -34,8 +34,7 @@ pub const STEINITZ_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<62>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Steinitz Defense"],
+    name: &["Ruy Lopez", "Steinitz Defense"],
     moves: &[
         Normal {
             role: Pawn,

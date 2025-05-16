@@ -34,8 +34,7 @@ pub const SPEELSMET_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Speelsmet Gambit"],
+    name: &["Zukertort Opening", "Speelsmet Gambit"],
     moves: &[
         Normal {
             role: Knight,

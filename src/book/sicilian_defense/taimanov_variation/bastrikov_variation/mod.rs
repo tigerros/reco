@@ -35,8 +35,11 @@ pub const BASTRIKOV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<47>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Taimanov Variation", "Bastrikov Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Taimanov Variation",
+            "Bastrikov Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +146,11 @@ pub const BASTRIKOV_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<49>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Taimanov Variation", "Bastrikov Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Taimanov Variation",
+            "Bastrikov Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

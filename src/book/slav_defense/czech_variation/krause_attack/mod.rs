@@ -34,8 +34,7 @@ pub const KRAUSE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Slav Defense",
-    variation: &["Czech Variation", "Krause Attack"],
+    name: &["Slav Defense", "Czech Variation", "Krause Attack"],
     moves: &[
         Normal {
             role: Pawn,

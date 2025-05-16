@@ -34,8 +34,7 @@ pub const SLAV_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Slav Formation"],
+    name: &["Hungarian Opening", "Slav Formation"],
     moves: &[
         Normal {
             role: Pawn,

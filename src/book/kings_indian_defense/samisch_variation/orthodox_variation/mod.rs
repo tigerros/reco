@@ -34,8 +34,11 @@ pub const ORTHODOX_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<85>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Sämisch Variation", "Orthodox Variation"],
+    name: &[
+        "King's Indian Defense",
+        "Sämisch Variation",
+        "Orthodox Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

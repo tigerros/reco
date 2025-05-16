@@ -34,8 +34,11 @@ pub const MILES_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<31>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Falkbeer Countergambit", "Miles Gambit"],
+    name: &[
+        "King's Gambit Declined",
+        "Falkbeer Countergambit",
+        "Miles Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

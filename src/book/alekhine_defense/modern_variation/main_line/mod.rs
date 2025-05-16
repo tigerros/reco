@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Modern Variation", "Main Line"],
+    name: &["Alekhine Defense", "Modern Variation", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

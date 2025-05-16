@@ -34,8 +34,7 @@ pub const COPENHAGEN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Danish Gambit Accepted",
-    variation: &["Copenhagen Defense"],
+    name: &["Danish Gambit Accepted", "Copenhagen Defense"],
     moves: &[
         Normal {
             role: Pawn,

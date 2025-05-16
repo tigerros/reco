@@ -34,8 +34,7 @@ pub const IRISH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Chigorin Variation", "Irish Gambit"],
+    name: &["Queen's Pawn Game", "Chigorin Variation", "Irish Gambit"],
     moves: &[
         Normal {
             role: Pawn,

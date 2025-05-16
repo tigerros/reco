@@ -35,8 +35,7 @@ pub const OPEN_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<2>(),
         },
-        name: "Catalan Opening",
-        variation: &["Open Defense"],
+        name: &["Catalan Opening", "Open Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const OPEN_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<3>(),
         },
-        name: "Catalan Opening",
-        variation: &["Open Defense"],
+        name: &["Catalan Opening", "Open Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -244,8 +242,7 @@ pub const OPEN_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<4>(),
         },
-        name: "Catalan Opening",
-        variation: &["Open Defense"],
+        name: &["Catalan Opening", "Open Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -352,8 +349,7 @@ pub const OPEN_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<4>(),
         },
-        name: "Catalan Opening",
-        variation: &["Open Defense"],
+        name: &["Catalan Opening", "Open Defense"],
         moves: &[
             Normal {
                 role: Pawn,

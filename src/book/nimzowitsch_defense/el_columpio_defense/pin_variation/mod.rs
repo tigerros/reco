@@ -34,8 +34,11 @@ pub const PIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["El Columpio Defense", "Pin Variation"],
+    name: &[
+        "Nimzowitsch Defense",
+        "El Columpio Defense",
+        "Pin Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

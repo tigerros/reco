@@ -34,8 +34,7 @@ pub const HANNEKEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Hanneken Variation"],
+    name: &["Scotch Game", "Hanneken Variation"],
     moves: &[
         Normal {
             role: Pawn,

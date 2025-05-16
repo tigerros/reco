@@ -34,8 +34,7 @@ pub const URUSOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Urusov Gambit"],
+    name: &["Bishop's Opening", "Urusov Gambit"],
     moves: &[
         Normal {
             role: Pawn,

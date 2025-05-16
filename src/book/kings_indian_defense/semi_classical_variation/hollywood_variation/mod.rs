@@ -34,8 +34,11 @@ pub const HOLLYWOOD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Semi-Classical Variation", "Hollywood Variation"],
+    name: &[
+        "King's Indian Defense",
+        "Semi-Classical Variation",
+        "Hollywood Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

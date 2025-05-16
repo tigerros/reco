@@ -34,8 +34,7 @@ pub const HORNUNG_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Hornung Gambit"],
+    name: &["Nimzowitsch Defense", "Hornung Gambit"],
     moves: &[
         Normal {
             role: Pawn,

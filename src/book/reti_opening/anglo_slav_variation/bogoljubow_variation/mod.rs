@@ -35,8 +35,11 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Réti Opening",
-        variation: &["Anglo-Slav Variation", "Bogoljubow Variation"],
+        name: &[
+            "Réti Opening",
+            "Anglo-Slav Variation",
+            "Bogoljubow Variation",
+        ],
         moves: &[
             Normal {
                 role: Knight,
@@ -122,8 +125,11 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Réti Opening",
-        variation: &["Anglo-Slav Variation", "Bogoljubow Variation"],
+        name: &[
+            "Réti Opening",
+            "Anglo-Slav Variation",
+            "Bogoljubow Variation",
+        ],
         moves: &[
             Normal {
                 role: Knight,
@@ -202,8 +208,11 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::A,
             category: RangedU8::new_static::<12>(),
         },
-        name: "Réti Opening",
-        variation: &["Anglo-Slav Variation", "Bogoljubow Variation"],
+        name: &[
+            "Réti Opening",
+            "Anglo-Slav Variation",
+            "Bogoljubow Variation",
+        ],
         moves: &[
             Normal {
                 role: Knight,

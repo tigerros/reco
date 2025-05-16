@@ -35,8 +35,7 @@ pub const ORTHODOX_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<91>(),
         },
-        name: "King's Indian Defense",
-        variation: &["Orthodox Variation"],
+        name: &["King's Indian Defense", "Orthodox Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -144,8 +143,7 @@ pub const ORTHODOX_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<92>(),
         },
-        name: "King's Indian Defense",
-        variation: &["Orthodox Variation"],
+        name: &["King's Indian Defense", "Orthodox Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -260,8 +258,7 @@ pub const ORTHODOX_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<94>(),
         },
-        name: "King's Indian Defense",
-        variation: &["Orthodox Variation"],
+        name: &["King's Indian Defense", "Orthodox Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -377,8 +374,7 @@ pub const ORTHODOX_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<95>(),
         },
-        name: "King's Indian Defense",
-        variation: &["Orthodox Variation"],
+        name: &["King's Indian Defense", "Orthodox Variation"],
         moves: &[
             Normal {
                 role: Pawn,

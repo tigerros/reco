@@ -34,8 +34,7 @@ pub const DUBOV_TARRASCH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<33>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Dubov Tarrasch"],
+    name: &["Tarrasch Defense", "Dubov Tarrasch"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,12 @@ pub const MODERN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Levitsky Attack", "Euwe Variation", "Modern Line"],
+    name: &[
+        "Queen's Pawn Game",
+        "Levitsky Attack",
+        "Euwe Variation",
+        "Modern Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

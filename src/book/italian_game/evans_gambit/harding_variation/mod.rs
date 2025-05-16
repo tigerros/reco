@@ -34,8 +34,7 @@ pub const HARDING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Harding Variation"],
+    name: &["Italian Game", "Evans Gambit", "Harding Variation"],
     moves: &[
         Normal {
             role: Pawn,

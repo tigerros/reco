@@ -34,8 +34,12 @@ pub const BELEZKY_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<75>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Yugoslav Attack", "Belezky Line"],
+    name: &[
+        "Sicilian Defense",
+        "Dragon Variation",
+        "Yugoslav Attack",
+        "Belezky Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

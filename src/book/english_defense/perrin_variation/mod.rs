@@ -34,8 +34,7 @@ pub const PERRIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "English Defense",
-    variation: &["Perrin Variation"],
+    name: &["English Defense", "Perrin Variation"],
     moves: &[
         Normal {
             role: Pawn,

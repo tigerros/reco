@@ -34,8 +34,7 @@ pub const NETHERLANDS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["Netherlands Variation"],
+    name: &["Blackmar-Diemer Gambit", "Netherlands Variation"],
     moves: &[
         Normal {
             role: Pawn,

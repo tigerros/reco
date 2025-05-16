@@ -34,8 +34,7 @@ pub const LPUTIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<2>(),
     },
-    name: "French Defense",
-    variation: &["Advance Variation", "Lputian Variation"],
+    name: &["French Defense", "Advance Variation", "Lputian Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,11 @@ pub const NOA_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<34>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Classical Variation", "Noa Variation"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Classical Variation",
+            "Noa Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +132,11 @@ pub const NOA_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<35>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Classical Variation", "Noa Variation"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Classical Variation",
+            "Noa Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -237,8 +243,11 @@ pub const NOA_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<36>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Classical Variation", "Noa Variation"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Classical Variation",
+            "Noa Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -338,8 +347,11 @@ pub const NOA_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::E,
             category: RangedU8::new_static::<37>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Classical Variation", "Noa Variation"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Classical Variation",
+            "Noa Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

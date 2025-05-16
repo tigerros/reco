@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Main Line"],
+    name: &["Ruy Lopez", "Open", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

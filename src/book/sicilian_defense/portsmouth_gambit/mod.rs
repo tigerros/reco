@@ -34,8 +34,7 @@ pub const PORTSMOUTH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Portsmouth Gambit"],
+    name: &["Sicilian Defense", "Portsmouth Gambit"],
     moves: &[
         Normal {
             role: Pawn,

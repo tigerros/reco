@@ -34,8 +34,11 @@ pub const BASMAN_PALATNIK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Delayed Alapin Variation", "Basman-Palatnik Gambit"],
+    name: &[
+        "Sicilian Defense",
+        "Delayed Alapin Variation",
+        "Basman-Palatnik Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

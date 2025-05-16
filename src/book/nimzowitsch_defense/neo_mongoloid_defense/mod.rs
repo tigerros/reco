@@ -34,8 +34,7 @@ pub const NEO_MONGOLOID_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Neo-Mongoloid Defense"],
+    name: &["Nimzowitsch Defense", "Neo-Mongoloid Defense"],
     moves: &[
         Normal {
             role: Pawn,

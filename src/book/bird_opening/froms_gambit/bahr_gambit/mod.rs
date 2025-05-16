@@ -34,8 +34,7 @@ pub const BAHR_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["From's Gambit", "Bahr Gambit"],
+    name: &["Bird Opening", "From's Gambit", "Bahr Gambit"],
     moves: &[
         Normal {
             role: Pawn,

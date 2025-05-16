@@ -35,8 +35,7 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<50>(),
         },
-        name: "Italian Game",
-        variation: &["Giuoco Pianissimo"],
+        name: &["Italian Game", "Giuoco Pianissimo"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const GIUOCO_PIANISSIMO: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<50>(),
         },
-        name: "Italian Game",
-        variation: &["Giuoco Pianissimo"],
+        name: &["Italian Game", "Giuoco Pianissimo"],
         moves: &[
             Normal {
                 role: Pawn,

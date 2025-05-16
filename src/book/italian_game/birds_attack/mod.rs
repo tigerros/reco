@@ -34,8 +34,7 @@ pub const BIRDS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Italian Game",
-    variation: &["Bird's Attack"],
+    name: &["Italian Game", "Bird's Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HIPPOPOTAMUS_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Formation",
-    variation: &["Hippopotamus Attack"],
+    name: &["Formation", "Hippopotamus Attack"],
     moves: &[
         Normal {
             role: Pawn,

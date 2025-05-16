@@ -34,8 +34,7 @@ pub const PHILIDOR_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &["Philidor Countergambit"],
+    name: &["Vienna Game", "Philidor Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

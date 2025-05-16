@@ -34,8 +34,7 @@ pub const COCA_COLA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Double Grob", "Coca-Cola Gambit"],
+    name: &["Grob Opening", "Double Grob", "Coca-Cola Gambit"],
     moves: &[
         Normal {
             role: Pawn,

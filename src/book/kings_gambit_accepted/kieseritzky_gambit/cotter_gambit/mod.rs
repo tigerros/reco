@@ -34,8 +34,11 @@ pub const COTTER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Kieseritzky Gambit", "Cotter Gambit"],
+    name: &[
+        "King's Gambit Accepted",
+        "Kieseritzky Gambit",
+        "Cotter Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MOKELE_MBEMBE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Mokele Mbembe"],
+    name: &["Alekhine Defense", "Mokele Mbembe"],
     moves: &[
         Normal {
             role: Pawn,

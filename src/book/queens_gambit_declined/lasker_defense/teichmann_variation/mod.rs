@@ -34,8 +34,11 @@ pub const TEICHMANN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Lasker Defense", "Teichmann Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Lasker Defense",
+        "Teichmann Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

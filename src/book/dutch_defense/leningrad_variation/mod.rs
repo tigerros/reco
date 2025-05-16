@@ -35,8 +35,7 @@ pub const LENINGRAD_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<86>(),
         },
-        name: "Dutch Defense",
-        variation: &["Leningrad Variation"],
+        name: &["Dutch Defense", "Leningrad Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const LENINGRAD_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<87>(),
         },
-        name: "Dutch Defense",
-        variation: &["Leningrad Variation"],
+        name: &["Dutch Defense", "Leningrad Variation"],
         moves: &[
             Normal {
                 role: Pawn,

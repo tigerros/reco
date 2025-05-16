@@ -34,8 +34,7 @@ pub const BERLIN_WALL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<67>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Berlin Wall"],
+    name: &["Ruy Lopez", "Berlin Defense", "Berlin Wall"],
     moves: &[
         Normal {
             role: Pawn,

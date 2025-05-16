@@ -34,8 +34,7 @@ pub const WASP_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Elephant Gambit",
-    variation: &["Wasp Variation"],
+    name: &["Elephant Gambit", "Wasp Variation"],
     moves: &[
         Normal {
             role: Pawn,

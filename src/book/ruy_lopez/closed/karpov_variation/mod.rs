@@ -34,8 +34,7 @@ pub const KARPOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<92>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Karpov Variation"],
+    name: &["Ruy Lopez", "Closed", "Karpov Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const CLAM_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Clam Gambit"],
+    name: &["Latvian Gambit", "Clam Gambit"],
     moves: &[
         Normal {
             role: Pawn,

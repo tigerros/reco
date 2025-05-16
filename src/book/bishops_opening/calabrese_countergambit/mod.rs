@@ -34,8 +34,7 @@ pub const CALABRESE_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Calabrese Countergambit"],
+    name: &["Bishop's Opening", "Calabrese Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

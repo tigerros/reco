@@ -34,8 +34,7 @@ pub const ALAPIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Alapin Defense"],
+    name: &["Ruy Lopez", "Alapin Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const FRENCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<8>(),
     },
-    name: "King's Indian Attack",
-    variation: &["French Variation"],
+    name: &["King's Indian Attack", "French Variation"],
     moves: &[
         Normal {
             role: Knight,

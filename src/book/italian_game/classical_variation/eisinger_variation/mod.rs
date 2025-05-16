@@ -34,8 +34,7 @@ pub const EISINGER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Italian Game",
-    variation: &["Classical Variation", "Eisinger Variation"],
+    name: &["Italian Game", "Classical Variation", "Eisinger Variation"],
     moves: &[
         Normal {
             role: Pawn,

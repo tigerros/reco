@@ -34,8 +34,7 @@ pub const MUTKIN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit",
-    variation: &["Mutkin Countergambit"],
+    name: &["Benko Gambit", "Mutkin Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

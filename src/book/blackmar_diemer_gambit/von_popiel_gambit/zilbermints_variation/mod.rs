@@ -34,8 +34,11 @@ pub const ZILBERMINTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["von Popiel Gambit", "Zilbermints Variation"],
+    name: &[
+        "Blackmar-Diemer Gambit",
+        "von Popiel Gambit",
+        "Zilbermints Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

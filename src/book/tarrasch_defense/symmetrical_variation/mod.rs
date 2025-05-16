@@ -34,8 +34,7 @@ pub const SYMMETRICAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Symmetrical Variation"],
+    name: &["Tarrasch Defense", "Symmetrical Variation"],
     moves: &[
         Normal {
             role: Pawn,

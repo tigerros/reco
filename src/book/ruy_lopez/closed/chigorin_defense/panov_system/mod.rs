@@ -34,8 +34,7 @@ pub const PANOV_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<99>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Chigorin Defense", "Panov System"],
+    name: &["Ruy Lopez", "Closed", "Chigorin Defense", "Panov System"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PSEUDO_QUEENS_INDIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Pseudo Queen's Indian Defense",
-    variation: &[],
+    name: &["Pseudo Queen's Indian Defense"],
     moves: &[
         Normal {
             role: Pawn,

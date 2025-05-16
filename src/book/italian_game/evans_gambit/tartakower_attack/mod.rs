@@ -34,8 +34,7 @@ pub const TARTAKOWER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Tartakower Attack"],
+    name: &["Italian Game", "Evans Gambit", "Tartakower Attack"],
     moves: &[
         Normal {
             role: Pawn,

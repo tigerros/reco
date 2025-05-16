@@ -34,8 +34,7 @@ pub const AMAZON_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Amazon Attack",
-    variation: &[],
+    name: &["Amazon Attack"],
     moves: &[
         Normal {
             role: Pawn,

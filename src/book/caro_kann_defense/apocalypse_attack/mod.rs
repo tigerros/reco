@@ -34,8 +34,7 @@ pub const APOCALYPSE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Apocalypse Attack"],
+    name: &["Caro-Kann Defense", "Apocalypse Attack"],
     moves: &[
         Normal {
             role: Pawn,

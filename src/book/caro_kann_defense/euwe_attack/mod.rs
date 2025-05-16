@@ -34,8 +34,7 @@ pub const EUWE_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Euwe Attack"],
+    name: &["Caro-Kann Defense", "Euwe Attack"],
     moves: &[
         Normal {
             role: Pawn,

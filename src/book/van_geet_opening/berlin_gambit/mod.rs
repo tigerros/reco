@@ -34,8 +34,7 @@ pub const BERLIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Berlin Gambit"],
+    name: &["Van Geet Opening", "Berlin Gambit"],
     moves: &[
         Normal {
             role: Pawn,

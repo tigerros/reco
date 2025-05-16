@@ -35,8 +35,7 @@ pub const BENONI_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<56>(),
         },
-        name: "Benoni Defense",
-        variation: &[],
+        name: &["Benoni Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const BENONI_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<61>(),
         },
-        name: "Benoni Defense",
-        variation: &[],
+        name: &["Benoni Defense"],
         moves: &[
             Normal {
                 role: Pawn,

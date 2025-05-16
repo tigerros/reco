@@ -34,8 +34,11 @@ pub const ORIGINAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<78>(),
     },
-    name: "Neo-Grünfeld Defense",
-    variation: &["Classical Variation", "Original Defense"],
+    name: &[
+        "Neo-Grünfeld Defense",
+        "Classical Variation",
+        "Original Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

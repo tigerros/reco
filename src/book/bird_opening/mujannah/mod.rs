@@ -34,8 +34,7 @@ pub const MUJANNAH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Mujannah"],
+    name: &["Bird Opening", "Mujannah"],
     moves: &[
         Normal {
             role: Pawn,

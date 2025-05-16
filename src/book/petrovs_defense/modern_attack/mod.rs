@@ -35,8 +35,7 @@ pub const MODERN_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Petrov's Defense",
-        variation: &["Modern Attack"],
+        name: &["Petrov's Defense", "Modern Attack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const MODERN_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Petrov's Defense",
-        variation: &["Modern Attack"],
+        name: &["Petrov's Defense", "Modern Attack"],
         moves: &[
             Normal {
                 role: Pawn,

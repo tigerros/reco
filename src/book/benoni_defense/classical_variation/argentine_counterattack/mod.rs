@@ -34,8 +34,11 @@ pub const ARGENTINE_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<75>(),
     },
-    name: "Benoni Defense",
-    variation: &["Classical Variation", "Argentine Counterattack"],
+    name: &[
+        "Benoni Defense",
+        "Classical Variation",
+        "Argentine Counterattack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

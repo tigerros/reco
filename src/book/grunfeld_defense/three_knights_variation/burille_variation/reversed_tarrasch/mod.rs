@@ -34,8 +34,8 @@ pub const REVERSED_TARRASCH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Grünfeld Defense",
-    variation: &[
+    name: &[
+        "Grünfeld Defense",
         "Three Knights Variation",
         "Burille Variation",
         "Reversed Tarrasch",

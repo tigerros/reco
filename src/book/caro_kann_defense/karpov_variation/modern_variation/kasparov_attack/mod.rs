@@ -34,8 +34,12 @@ pub const KASPAROV_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Karpov Variation", "Modern Variation", "Kasparov Attack"],
+    name: &[
+        "Caro-Kann Defense",
+        "Karpov Variation",
+        "Modern Variation",
+        "Kasparov Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

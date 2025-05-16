@@ -34,8 +34,7 @@ pub const MARIC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<10>(),
     },
-    name: "French Defense",
-    variation: &["Rubinstein Variation", "Maric Variation"],
+    name: &["French Defense", "Rubinstein Variation", "Maric Variation"],
     moves: &[
         Normal {
             role: Pawn,

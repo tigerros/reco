@@ -34,8 +34,7 @@ pub const SHIROV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Lion Variation", "Shirov Gambit"],
+    name: &["Philidor Defense", "Lion Variation", "Shirov Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Rubinstein System", "Rubinstein Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Rubinstein System",
+        "Rubinstein Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

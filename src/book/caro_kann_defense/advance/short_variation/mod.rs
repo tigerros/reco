@@ -34,8 +34,7 @@ pub const SHORT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Advance", "Short Variation"],
+    name: &["Caro-Kann Defense", "Advance", "Short Variation"],
     moves: &[
         Normal {
             role: Pawn,

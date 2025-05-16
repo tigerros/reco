@@ -34,8 +34,7 @@ pub const ALBIN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Classical Variation", "Albin Gambit"],
+    name: &["Italian Game", "Classical Variation", "Albin Gambit"],
     moves: &[
         Normal {
             role: Pawn,

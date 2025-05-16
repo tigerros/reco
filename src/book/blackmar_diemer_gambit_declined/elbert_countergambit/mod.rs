@@ -34,8 +34,7 @@ pub const ELBERT_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Declined",
-    variation: &["Elbert Countergambit"],
+    name: &["Blackmar-Diemer Gambit Declined", "Elbert Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

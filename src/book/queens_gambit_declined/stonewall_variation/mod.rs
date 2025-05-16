@@ -34,8 +34,7 @@ pub const STONEWALL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Stonewall Variation"],
+    name: &["Queen's Gambit Declined", "Stonewall Variation"],
     moves: &[
         Normal {
             role: Pawn,

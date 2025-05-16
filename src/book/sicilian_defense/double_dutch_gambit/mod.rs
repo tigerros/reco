@@ -34,8 +34,7 @@ pub const DOUBLE_DUTCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Double-Dutch Gambit"],
+    name: &["Sicilian Defense", "Double-Dutch Gambit"],
     moves: &[
         Normal {
             role: Pawn,

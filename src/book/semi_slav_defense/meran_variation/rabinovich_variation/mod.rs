@@ -34,8 +34,11 @@ pub const RABINOVICH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<49>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Meran Variation", "Rabinovich Variation"],
+    name: &[
+        "Semi-Slav Defense",
+        "Meran Variation",
+        "Rabinovich Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

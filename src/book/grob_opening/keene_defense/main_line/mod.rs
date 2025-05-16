@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Keene Defense", "Main Line"],
+    name: &["Grob Opening", "Keene Defense", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

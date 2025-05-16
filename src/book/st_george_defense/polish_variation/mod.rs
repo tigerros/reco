@@ -34,8 +34,7 @@ pub const POLISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "St. George Defense",
-    variation: &["Polish Variation"],
+    name: &["St. George Defense", "Polish Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const DEFERRED_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Wing Gambit", "Deferred Variation"],
+    name: &["Sicilian Defense", "Wing Gambit", "Deferred Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const FRANCO_NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Franco-Nimzowitsch Variation"],
+    name: &["Nimzowitsch Defense", "Franco-Nimzowitsch Variation"],
     moves: &[
         Normal {
             role: Pawn,

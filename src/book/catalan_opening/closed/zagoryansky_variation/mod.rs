@@ -34,8 +34,7 @@ pub const ZAGORYANSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<8>(),
     },
-    name: "Catalan Opening",
-    variation: &["Closed", "Zagoryansky Variation"],
+    name: &["Catalan Opening", "Closed", "Zagoryansky Variation"],
     moves: &[
         Normal {
             role: Pawn,

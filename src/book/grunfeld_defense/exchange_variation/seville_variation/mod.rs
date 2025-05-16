@@ -34,8 +34,11 @@ pub const SEVILLE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<87>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Exchange Variation", "Seville Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Exchange Variation",
+        "Seville Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

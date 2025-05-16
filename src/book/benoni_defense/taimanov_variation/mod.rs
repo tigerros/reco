@@ -34,8 +34,7 @@ pub const TAIMANOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<67>(),
     },
-    name: "Benoni Defense",
-    variation: &["Taimanov Variation"],
+    name: &["Benoni Defense", "Taimanov Variation"],
     moves: &[
         Normal {
             role: Pawn,

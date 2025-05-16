@@ -34,8 +34,7 @@ pub const PAWN_PUSH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Pawn Push Variation"],
+    name: &["Indian Defense", "Pawn Push Variation"],
     moves: &[
         Normal {
             role: Pawn,

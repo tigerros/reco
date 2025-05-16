@@ -34,8 +34,11 @@ pub const HABERDITZ_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Alekhine Defense", "Haberditz Variation"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Alekhine Defense",
+        "Haberditz Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

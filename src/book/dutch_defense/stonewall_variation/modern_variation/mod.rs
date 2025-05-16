@@ -34,8 +34,7 @@ pub const MODERN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<90>(),
     },
-    name: "Dutch Defense",
-    variation: &["Stonewall Variation", "Modern Variation"],
+    name: &["Dutch Defense", "Stonewall Variation", "Modern Variation"],
     moves: &[
         Normal {
             role: Pawn,

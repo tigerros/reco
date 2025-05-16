@@ -34,8 +34,7 @@ pub const RHAMPHORHYNCHUS: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Western", "Rhamphorhynchus"],
+    name: &["Pterodactyl Defense", "Western", "Rhamphorhynchus"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MASI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Masi Variation"],
+    name: &["Caro-Kann Defense", "Masi Variation"],
     moves: &[
         Normal {
             role: Pawn,

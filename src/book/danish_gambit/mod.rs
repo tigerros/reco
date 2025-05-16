@@ -34,8 +34,7 @@ pub const DANISH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Danish Gambit",
-    variation: &[],
+    name: &["Danish Gambit"],
     moves: &[
         Normal {
             role: Pawn,

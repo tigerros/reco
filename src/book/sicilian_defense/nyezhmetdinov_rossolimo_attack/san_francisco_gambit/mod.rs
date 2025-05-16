@@ -34,8 +34,11 @@ pub const SAN_FRANCISCO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Nyezhmetdinov-Rossolimo Attack", "San Francisco Gambit"],
+    name: &[
+        "Sicilian Defense",
+        "Nyezhmetdinov-Rossolimo Attack",
+        "San Francisco Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

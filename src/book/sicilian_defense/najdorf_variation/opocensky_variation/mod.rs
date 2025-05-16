@@ -35,8 +35,11 @@ pub const OPOCENSKY_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<92>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Najdorf Variation", "Opocensky Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Najdorf Variation",
+            "Opocensky Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -178,8 +181,11 @@ pub const OPOCENSKY_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<92>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Najdorf Variation", "Opocensky Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Najdorf Variation",
+            "Opocensky Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

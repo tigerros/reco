@@ -34,8 +34,12 @@ pub const EXCHANGE_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<11>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Two Knights Attack", "Mindeno Variation", "Exchange Line"],
+    name: &[
+        "Caro-Kann Defense",
+        "Two Knights Attack",
+        "Mindeno Variation",
+        "Exchange Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HARTLAUB_CHARLICK_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit",
-    variation: &["Hartlaub-Charlick Gambit"],
+    name: &["Englund Gambit", "Hartlaub-Charlick Gambit"],
     moves: &[
         Normal {
             role: Pawn,

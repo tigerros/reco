@@ -34,8 +34,12 @@ pub const ROMFORD_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Grob Gambit", "Fritz Gambit", "Romford Countergambit"],
+    name: &[
+        "Grob Opening",
+        "Grob Gambit",
+        "Fritz Gambit",
+        "Romford Countergambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

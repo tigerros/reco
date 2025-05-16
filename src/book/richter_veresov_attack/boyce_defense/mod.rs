@@ -34,8 +34,7 @@ pub const BOYCE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Richter-Veresov Attack",
-    variation: &["Boyce Defense"],
+    name: &["Richter-Veresov Attack", "Boyce Defense"],
     moves: &[
         Normal {
             role: Pawn,

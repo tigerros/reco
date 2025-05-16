@@ -34,8 +34,7 @@ pub const UNPIN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Sicilian", "Unpin"],
+    name: &["Pterodactyl Defense", "Sicilian", "Unpin"],
     moves: &[
         Normal {
             role: Pawn,

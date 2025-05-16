@@ -35,8 +35,7 @@ pub const JAENISCH_COUNTERATTACK: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Ponziani Opening",
-        variation: &["Jaenisch Counterattack"],
+        name: &["Ponziani Opening", "Jaenisch Counterattack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const JAENISCH_COUNTERATTACK: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Ponziani Opening",
-        variation: &["Jaenisch Counterattack"],
+        name: &["Ponziani Opening", "Jaenisch Counterattack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -230,8 +228,7 @@ pub const JAENISCH_COUNTERATTACK: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Ponziani Opening",
-        variation: &["Jaenisch Counterattack"],
+        name: &["Ponziani Opening", "Jaenisch Counterattack"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -317,8 +314,7 @@ pub const JAENISCH_COUNTERATTACK: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Ponziani Opening",
-        variation: &["Jaenisch Counterattack"],
+        name: &["Ponziani Opening", "Jaenisch Counterattack"],
         moves: &[
             Normal {
                 role: Pawn,

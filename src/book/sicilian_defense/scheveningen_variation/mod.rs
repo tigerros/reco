@@ -34,8 +34,7 @@ pub const SCHEVENINGEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Scheveningen Variation"],
+    name: &["Sicilian Defense", "Scheveningen Variation"],
     moves: &[
         Normal {
             role: Pawn,

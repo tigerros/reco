@@ -34,8 +34,7 @@ pub const GREAT_SNAKE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Great Snake Variation"],
+    name: &["English Opening", "Great Snake Variation"],
     moves: &[
         Normal {
             role: Pawn,

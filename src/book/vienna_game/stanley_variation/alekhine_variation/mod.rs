@@ -34,8 +34,7 @@ pub const ALEKHINE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Vienna Game",
-    variation: &["Stanley Variation", "Alekhine Variation"],
+    name: &["Vienna Game", "Stanley Variation", "Alekhine Variation"],
     moves: &[
         Normal {
             role: Pawn,

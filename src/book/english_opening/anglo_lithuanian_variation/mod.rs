@@ -34,8 +34,7 @@ pub const ANGLO_LITHUANIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Lithuanian Variation"],
+    name: &["English Opening", "Anglo-Lithuanian Variation"],
     moves: &[
         Normal {
             role: Pawn,

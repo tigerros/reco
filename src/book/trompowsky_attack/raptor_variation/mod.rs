@@ -34,8 +34,7 @@ pub const RAPTOR_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Trompowsky Attack",
-    variation: &["Raptor Variation"],
+    name: &["Trompowsky Attack", "Raptor Variation"],
     moves: &[
         Normal {
             role: Pawn,

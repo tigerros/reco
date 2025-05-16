@@ -34,8 +34,7 @@ pub const PILNIK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<90>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Pilnik Variation"],
+    name: &["Ruy Lopez", "Closed", "Pilnik Variation"],
     moves: &[
         Normal {
             role: Pawn,

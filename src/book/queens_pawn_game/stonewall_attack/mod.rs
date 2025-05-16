@@ -34,8 +34,7 @@ pub const STONEWALL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Stonewall Attack"],
+    name: &["Queen's Pawn Game", "Stonewall Attack"],
     moves: &[
         Normal {
             role: Pawn,

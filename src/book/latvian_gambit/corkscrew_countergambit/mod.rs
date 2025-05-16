@@ -34,8 +34,7 @@ pub const CORKSCREW_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Corkscrew Countergambit"],
+    name: &["Latvian Gambit", "Corkscrew Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

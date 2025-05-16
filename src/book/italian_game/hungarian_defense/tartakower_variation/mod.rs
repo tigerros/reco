@@ -34,8 +34,7 @@ pub const TARTAKOWER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Hungarian Defense", "Tartakower Variation"],
+    name: &["Italian Game", "Hungarian Defense", "Tartakower Variation"],
     moves: &[
         Normal {
             role: Pawn,

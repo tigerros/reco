@@ -34,8 +34,11 @@ pub const KRAUSE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Semi-Tarrasch Defense", "Krause Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Semi-Tarrasch Defense",
+        "Krause Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

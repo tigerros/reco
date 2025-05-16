@@ -34,8 +34,7 @@ pub const PAWN_RETURN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit Accepted",
-    variation: &["Pawn Return Variation"],
+    name: &["Benko Gambit Accepted", "Pawn Return Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const KORCHNOI_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Closed", "Korchnoi Defense"],
+    name: &["Sicilian Defense", "Closed", "Korchnoi Defense"],
     moves: &[
         Normal {
             role: Pawn,

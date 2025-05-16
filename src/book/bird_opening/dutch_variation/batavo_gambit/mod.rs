@@ -34,8 +34,7 @@ pub const BATAVO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Bird Opening",
-    variation: &["Dutch Variation", "Batavo Gambit"],
+    name: &["Bird Opening", "Dutch Variation", "Batavo Gambit"],
     moves: &[
         Normal {
             role: Pawn,

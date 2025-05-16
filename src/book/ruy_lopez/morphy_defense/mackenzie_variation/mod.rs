@@ -34,8 +34,7 @@ pub const MACKENZIE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<77>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Morphy Defense", "Mackenzie Variation"],
+    name: &["Ruy Lopez", "Morphy Defense", "Mackenzie Variation"],
     moves: &[
         Normal {
             role: Pawn,

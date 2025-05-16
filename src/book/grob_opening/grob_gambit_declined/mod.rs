@@ -34,8 +34,7 @@ pub const GROB_GAMBIT_DECLINED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["Grob Gambit Declined"],
+    name: &["Grob Opening", "Grob Gambit Declined"],
     moves: &[
         Normal {
             role: Pawn,

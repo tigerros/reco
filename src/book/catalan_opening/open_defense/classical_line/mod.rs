@@ -35,8 +35,7 @@ pub const CLASSICAL_LINE: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Catalan Opening",
-        variation: &["Open Defense", "Classical Line"],
+        name: &["Catalan Opening", "Open Defense", "Classical Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -145,8 +144,7 @@ pub const CLASSICAL_LINE: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<5>(),
         },
-        name: "Catalan Opening",
-        variation: &["Open Defense", "Classical Line"],
+        name: &["Catalan Opening", "Open Defense", "Classical Line"],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,7 @@ pub const CLASSICAL_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<18>(),
     },
-    name: "Slav Defense",
-    variation: &["Czech Variation", "Classical System"],
+    name: &["Slav Defense", "Czech Variation", "Classical System"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const HUNGARIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<92>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Three Knights Variation", "Hungarian Attack"],
+    name: &[
+        "Grünfeld Defense",
+        "Three Knights Variation",
+        "Hungarian Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

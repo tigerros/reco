@@ -34,8 +34,7 @@ pub const WITH_D6: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Delayed Alapin Variation", "with d6"],
+    name: &["Sicilian Defense", "Delayed Alapin Variation", "with d6"],
     moves: &[
         Normal {
             role: Pawn,

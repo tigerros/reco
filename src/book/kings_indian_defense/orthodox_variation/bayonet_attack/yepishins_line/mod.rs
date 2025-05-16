@@ -34,8 +34,12 @@ pub const YEPISHINS_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<97>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Bayonet Attack", "Yepishin's Line"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Bayonet Attack",
+        "Yepishin's Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

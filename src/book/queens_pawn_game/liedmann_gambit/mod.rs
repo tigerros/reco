@@ -34,8 +34,7 @@ pub const LIEDMANN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Liedmann Gambit"],
+    name: &["Queen's Pawn Game", "Liedmann Gambit"],
     moves: &[
         Normal {
             role: Pawn,

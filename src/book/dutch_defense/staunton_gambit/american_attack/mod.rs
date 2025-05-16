@@ -34,8 +34,7 @@ pub const AMERICAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Dutch Defense",
-    variation: &["Staunton Gambit", "American Attack"],
+    name: &["Dutch Defense", "Staunton Gambit", "American Attack"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ACHILLES_OMEGA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Achilles-Omega Gambit"],
+    name: &["English Opening", "Achilles-Omega Gambit"],
     moves: &[
         Normal {
             role: Pawn,

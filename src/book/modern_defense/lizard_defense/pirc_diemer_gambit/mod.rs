@@ -34,8 +34,7 @@ pub const PIRC_DIEMER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Modern Defense",
-    variation: &["Lizard Defense", "Pirc-Diemer Gambit"],
+    name: &["Modern Defense", "Lizard Defense", "Pirc-Diemer Gambit"],
     moves: &[
         Normal {
             role: Pawn,

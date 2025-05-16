@@ -34,8 +34,8 @@ pub const STOCKHOLM_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<74>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Dragon Variation",
         "Classical Variation",
         "Stockholm Attack",

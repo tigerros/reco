@@ -34,8 +34,7 @@ pub const WADE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Wade Gambit"],
+    name: &["English Opening", "Wade Gambit"],
     moves: &[
         Normal {
             role: Pawn,

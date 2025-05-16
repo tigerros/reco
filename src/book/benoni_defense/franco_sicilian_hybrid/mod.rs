@@ -34,8 +34,7 @@ pub const FRANCO_SICILIAN_HYBRID: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Benoni Defense",
-    variation: &["Franco-Sicilian Hybrid"],
+    name: &["Benoni Defense", "Franco-Sicilian Hybrid"],
     moves: &[
         Normal {
             role: Pawn,

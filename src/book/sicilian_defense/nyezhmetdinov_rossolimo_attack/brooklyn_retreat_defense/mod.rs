@@ -34,8 +34,11 @@ pub const BROOKLYN_RETREAT_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Nyezhmetdinov-Rossolimo Attack", "Brooklyn Retreat Defense"],
+    name: &[
+        "Sicilian Defense",
+        "Nyezhmetdinov-Rossolimo Attack",
+        "Brooklyn Retreat Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

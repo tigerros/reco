@@ -34,8 +34,12 @@ pub const CORTLEVER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Sicilian Defense",
-    variation: &["O'Kelly Variation", "Normal System", "Cortlever Gambit"],
+    name: &[
+        "Sicilian Defense",
+        "O'Kelly Variation",
+        "Normal System",
+        "Cortlever Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

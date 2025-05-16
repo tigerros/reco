@@ -35,8 +35,7 @@ pub const LOLLI_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Scotch Game",
-        variation: &["Lolli Variation"],
+        name: &["Scotch Game", "Lolli Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -136,8 +135,7 @@ pub const LOLLI_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Scotch Game",
-        variation: &["Lolli Variation"],
+        name: &["Scotch Game", "Lolli Variation"],
         moves: &[
             Normal {
                 role: Pawn,

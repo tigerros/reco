@@ -34,8 +34,11 @@ pub const TRADITIONAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<70>(),
     },
-    name: "Benoni Defense",
-    variation: &["Classical Variation", "Traditional Variation"],
+    name: &[
+        "Benoni Defense",
+        "Classical Variation",
+        "Traditional Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

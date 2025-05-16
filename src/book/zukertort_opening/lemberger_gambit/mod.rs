@@ -34,8 +34,7 @@ pub const LEMBERGER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Lemberger Gambit"],
+    name: &["Zukertort Opening", "Lemberger Gambit"],
     moves: &[
         Normal {
             role: Knight,

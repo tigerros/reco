@@ -35,8 +35,7 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Benoni Defense",
-        variation: &["Old Benoni"],
+        name: &["Benoni Defense", "Old Benoni"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Benoni Defense",
-        variation: &["Old Benoni"],
+        name: &["Benoni Defense", "Old Benoni"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -160,8 +158,7 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Benoni Defense",
-        variation: &["Old Benoni"],
+        name: &["Benoni Defense", "Old Benoni"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -212,8 +209,7 @@ pub const OLD_BENONI: [Opening<'static, &str>; 4] = [
             volume: Volume::A,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Benoni Defense",
-        variation: &["Old Benoni"],
+        name: &["Benoni Defense", "Old Benoni"],
         moves: &[
             Normal {
                 role: Pawn,

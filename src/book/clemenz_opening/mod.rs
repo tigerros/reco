@@ -34,8 +34,7 @@ pub const CLEMENZ_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Clemenz Opening",
-    variation: &[],
+    name: &["Clemenz Opening"],
     moves: &[Normal {
         role: Pawn,
         from: H2,

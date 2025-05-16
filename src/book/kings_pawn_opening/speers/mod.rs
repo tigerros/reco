@@ -34,8 +34,7 @@ pub const SPEERS: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Opening",
-    variation: &["Speers"],
+    name: &["King's Pawn Opening", "Speers"],
     moves: &[
         Normal {
             role: Pawn,

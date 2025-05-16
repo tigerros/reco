@@ -35,8 +35,7 @@ pub const QUEENS_GAMBIT_ACCEPTED: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<20>(),
         },
-        name: "Queen's Gambit Accepted",
-        variation: &[],
+        name: &["Queen's Gambit Accepted"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const QUEENS_GAMBIT_ACCEPTED: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<23>(),
         },
-        name: "Queen's Gambit Accepted",
-        variation: &[],
+        name: &["Queen's Gambit Accepted"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -181,8 +179,7 @@ pub const QUEENS_GAMBIT_ACCEPTED: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<24>(),
         },
-        name: "Queen's Gambit Accepted",
-        variation: &[],
+        name: &["Queen's Gambit Accepted"],
         moves: &[
             Normal {
                 role: Pawn,

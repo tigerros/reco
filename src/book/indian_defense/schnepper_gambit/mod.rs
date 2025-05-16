@@ -34,8 +34,7 @@ pub const SCHNEPPER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Indian Defense",
-    variation: &["Schnepper Gambit"],
+    name: &["Indian Defense", "Schnepper Gambit"],
     moves: &[
         Normal {
             role: Pawn,

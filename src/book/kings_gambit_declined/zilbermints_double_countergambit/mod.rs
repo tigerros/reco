@@ -34,8 +34,7 @@ pub const ZILBERMINTS_DOUBLE_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Openi
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Zilbermints Double Countergambit"],
+    name: &["King's Gambit Declined", "Zilbermints Double Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const NORMAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<81>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Sämisch Variation", "Normal Defense"],
+    name: &[
+        "King's Indian Defense",
+        "Sämisch Variation",
+        "Normal Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

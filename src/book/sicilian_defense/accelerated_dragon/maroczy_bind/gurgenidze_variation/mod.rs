@@ -34,8 +34,12 @@ pub const GURGENIDZE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<36>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Accelerated Dragon", "Maróczy Bind", "Gurgenidze Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Accelerated Dragon",
+        "Maróczy Bind",
+        "Gurgenidze Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

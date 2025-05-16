@@ -34,8 +34,7 @@ pub const MUJANNAH_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Benoni Defense",
-    variation: &["Old Benoni", "Mujannah Formation"],
+    name: &["Benoni Defense", "Old Benoni", "Mujannah Formation"],
     moves: &[
         Normal {
             role: Pawn,

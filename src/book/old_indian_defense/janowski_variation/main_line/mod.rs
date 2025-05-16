@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Old Indian Defense",
-    variation: &["Janowski Variation", "Main Line"],
+    name: &["Old Indian Defense", "Janowski Variation", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

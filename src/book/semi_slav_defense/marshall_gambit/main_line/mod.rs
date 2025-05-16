@@ -34,8 +34,7 @@ pub const MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Marshall Gambit", "Main Line"],
+    name: &["Semi-Slav Defense", "Marshall Gambit", "Main Line"],
     moves: &[
         Normal {
             role: Pawn,

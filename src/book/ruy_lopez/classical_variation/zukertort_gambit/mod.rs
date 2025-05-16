@@ -34,8 +34,7 @@ pub const ZUKERTORT_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<65>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Classical Variation", "Zukertort Gambit"],
+    name: &["Ruy Lopez", "Classical Variation", "Zukertort Gambit"],
     moves: &[
         Normal {
             role: Pawn,

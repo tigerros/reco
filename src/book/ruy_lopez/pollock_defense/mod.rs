@@ -34,8 +34,7 @@ pub const POLLOCK_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Pollock Defense"],
+    name: &["Ruy Lopez", "Pollock Defense"],
     moves: &[
         Normal {
             role: Pawn,

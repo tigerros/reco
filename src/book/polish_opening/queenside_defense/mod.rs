@@ -34,8 +34,7 @@ pub const QUEENSIDE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Polish Opening",
-    variation: &["Queenside Defense"],
+    name: &["Polish Opening", "Queenside Defense"],
     moves: &[
         Normal {
             role: Pawn,

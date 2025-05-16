@@ -35,8 +35,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::A,
             category: RangedU8::new_static::<84>(),
         },
-        name: "Dutch Defense",
-        variation: &["Classical Variation"],
+        name: &["Dutch Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::A,
             category: RangedU8::new_static::<90>(),
         },
-        name: "Dutch Defense",
-        variation: &["Classical Variation"],
+        name: &["Dutch Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -202,8 +200,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::A,
             category: RangedU8::new_static::<90>(),
         },
-        name: "Dutch Defense",
-        variation: &["Classical Variation"],
+        name: &["Dutch Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -289,8 +286,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::A,
             category: RangedU8::new_static::<91>(),
         },
-        name: "Dutch Defense",
-        variation: &["Classical Variation"],
+        name: &["Dutch Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -383,8 +379,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::A,
             category: RangedU8::new_static::<92>(),
         },
-        name: "Dutch Defense",
-        variation: &["Classical Variation"],
+        name: &["Dutch Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -485,8 +480,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::A,
             category: RangedU8::new_static::<96>(),
         },
-        name: "Dutch Defense",
-        variation: &["Classical Variation"],
+        name: &["Dutch Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,

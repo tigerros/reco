@@ -34,8 +34,7 @@ pub const LASKER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit", "Lasker Defense"],
+    name: &["Italian Game", "Evans Gambit", "Lasker Defense"],
     moves: &[
         Normal {
             role: Pawn,

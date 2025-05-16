@@ -34,8 +34,7 @@ pub const HAMMERSCHLAG: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Barnes Opening",
-    variation: &["Hammerschlag"],
+    name: &["Barnes Opening", "Hammerschlag"],
     moves: &[
         Normal {
             role: Pawn,

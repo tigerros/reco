@@ -34,8 +34,7 @@ pub const REVERSED_ALEKHINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Reversed Alekhine"],
+    name: &["Hungarian Opening", "Reversed Alekhine"],
     moves: &[
         Normal {
             role: Pawn,

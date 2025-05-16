@@ -35,8 +35,7 @@ pub const NEO_ORTHODOX_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Neo-Orthodox Variation"],
+        name: &["Queen's Gambit Declined", "Neo-Orthodox Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -144,8 +143,7 @@ pub const NEO_ORTHODOX_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<55>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Neo-Orthodox Variation"],
+        name: &["Queen's Gambit Declined", "Neo-Orthodox Variation"],
         moves: &[
             Normal {
                 role: Pawn,

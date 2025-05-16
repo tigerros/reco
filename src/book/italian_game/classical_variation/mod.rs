@@ -35,8 +35,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<53>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation"],
+        name: &["Italian Game", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<54>(),
         },
-        name: "Italian Game",
-        variation: &["Classical Variation"],
+        name: &["Italian Game", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,

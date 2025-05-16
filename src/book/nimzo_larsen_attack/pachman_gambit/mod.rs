@@ -34,8 +34,7 @@ pub const PACHMAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Nimzo-Larsen Attack",
-    variation: &["Pachman Gambit"],
+    name: &["Nimzo-Larsen Attack", "Pachman Gambit"],
     moves: &[
         Normal {
             role: Pawn,

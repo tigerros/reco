@@ -34,8 +34,8 @@ pub const EARLY_DEVIATIONS: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<66>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Richter-Rauzer Variation",
         "Neo-Modern Variation",
         "Early Deviations",

@@ -34,8 +34,7 @@ pub const TRIFUNOVIC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<67>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Trifunovic Variation"],
+    name: &["Ruy Lopez", "Berlin Defense", "Trifunovic Variation"],
     moves: &[
         Normal {
             role: Pawn,

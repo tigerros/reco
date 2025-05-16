@@ -34,8 +34,12 @@ pub const WITH_NGE2: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Closed", "Botvinnik Defense", "with Nge2"],
+    name: &[
+        "Sicilian Defense",
+        "Closed",
+        "Botvinnik Defense",
+        "with Nge2",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const RIGA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Riga Variation"],
+    name: &["Ruy Lopez", "Open", "Riga Variation"],
     moves: &[
         Normal {
             role: Pawn,

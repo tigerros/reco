@@ -35,8 +35,11 @@ pub const RUBINSTEIN_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::D,
             category: RangedU8::new_static::<64>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Rubinstein Attack"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Rubinstein Attack",
+        ],
         moves: &[
             Normal {
                 role: Knight,
@@ -179,8 +182,11 @@ pub const RUBINSTEIN_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::D,
             category: RangedU8::new_static::<64>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Rubinstein Attack"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Rubinstein Attack",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -330,8 +336,11 @@ pub const RUBINSTEIN_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::D,
             category: RangedU8::new_static::<64>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Rubinstein Attack"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Rubinstein Attack",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -474,8 +483,11 @@ pub const RUBINSTEIN_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::D,
             category: RangedU8::new_static::<64>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Rubinstein Attack"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Rubinstein Attack",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -611,8 +623,11 @@ pub const RUBINSTEIN_ATTACK: [Opening<'static, &str>; 5] = [
             volume: Volume::D,
             category: RangedU8::new_static::<65>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Orthodox Defense", "Rubinstein Attack"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Orthodox Defense",
+            "Rubinstein Attack",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

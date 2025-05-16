@@ -34,8 +34,11 @@ pub const KASPAROV_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Kasparov-Petrosian Variation", "Kasparov Attack"],
+    name: &[
+        "Queen's Indian Defense",
+        "Kasparov-Petrosian Variation",
+        "Kasparov Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

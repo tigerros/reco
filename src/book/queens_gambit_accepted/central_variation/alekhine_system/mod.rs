@@ -34,8 +34,11 @@ pub const ALEKHINE_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Central Variation", "Alekhine System"],
+    name: &[
+        "Queen's Gambit Accepted",
+        "Central Variation",
+        "Alekhine System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

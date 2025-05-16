@@ -35,8 +35,11 @@ pub const KNIGHT_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<51>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Modern Variation", "Knight Defense"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Modern Variation",
+            "Knight Defense",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +146,11 @@ pub const KNIGHT_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<51>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Modern Variation", "Knight Defense"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Modern Variation",
+            "Knight Defense",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -244,8 +250,11 @@ pub const KNIGHT_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<51>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Modern Variation", "Knight Defense"],
+        name: &[
+            "Queen's Gambit Declined",
+            "Modern Variation",
+            "Knight Defense",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

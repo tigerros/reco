@@ -34,8 +34,12 @@ pub const MACIEJA_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<39>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Classical Variation", "Berlin Variation", "Macieja System"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Berlin Variation",
+        "Macieja System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

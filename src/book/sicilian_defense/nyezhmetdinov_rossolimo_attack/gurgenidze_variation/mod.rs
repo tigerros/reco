@@ -34,8 +34,11 @@ pub const GURGENIDZE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Nyezhmetdinov-Rossolimo Attack", "Gurgenidze Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Nyezhmetdinov-Rossolimo Attack",
+        "Gurgenidze Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

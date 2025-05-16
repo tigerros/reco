@@ -34,8 +34,7 @@ pub const THREE_KNIGHTS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<37>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Three Knights Variation"],
+    name: &["Queen's Gambit Declined", "Three Knights Variation"],
     moves: &[
         Normal {
             role: Pawn,

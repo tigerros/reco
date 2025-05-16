@@ -34,8 +34,11 @@ pub const ANTI_NOTEBOOM_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Noteboom Variation", "Anti-Noteboom Gambit"],
+    name: &[
+        "Semi-Slav Defense",
+        "Noteboom Variation",
+        "Anti-Noteboom Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

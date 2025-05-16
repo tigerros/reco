@@ -34,8 +34,7 @@ pub const BOGOLJUBOW_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Bogoljubow Defense"],
+    name: &["Blackmar-Diemer Gambit Accepted", "Bogoljubow Defense"],
     moves: &[
         Normal {
             role: Pawn,

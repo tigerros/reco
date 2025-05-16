@@ -34,8 +34,7 @@ pub const STOCKHOLM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit",
-    variation: &["Stockholm Variation"],
+    name: &["Englund Gambit", "Stockholm Variation"],
     moves: &[
         Normal {
             role: Pawn,

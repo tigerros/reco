@@ -34,8 +34,11 @@ pub const GESCHEV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Scandinavian Variation", "Geschev Gambit"],
+    name: &[
+        "Alekhine Defense",
+        "Scandinavian Variation",
+        "Geschev Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

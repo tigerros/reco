@@ -34,8 +34,7 @@ pub const STEINER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Grünfeld Defense", "Steiner Gambit"],
+    name: &["Van Geet Opening", "Grünfeld Defense", "Steiner Gambit"],
     moves: &[
         Normal {
             role: Pawn,

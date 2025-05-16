@@ -34,8 +34,11 @@ pub const DUCHAMP_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<38>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Duchamp Variation"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Duchamp Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

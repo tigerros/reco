@@ -34,8 +34,7 @@ pub const THE_POTATO: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Zukertort Opening",
-    variation: &["The Potato"],
+    name: &["Zukertort Opening", "The Potato"],
     moves: &[
         Normal {
             role: Knight,

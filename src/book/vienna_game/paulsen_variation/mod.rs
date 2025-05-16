@@ -35,8 +35,7 @@ pub const PAULSEN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<25>(),
         },
-        name: "Vienna Game",
-        variation: &["Paulsen Variation"],
+        name: &["Vienna Game", "Paulsen Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +142,7 @@ pub const PAULSEN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<25>(),
         },
-        name: "Vienna Game",
-        variation: &["Paulsen Variation"],
+        name: &["Vienna Game", "Paulsen Variation"],
         moves: &[
             Normal {
                 role: Pawn,

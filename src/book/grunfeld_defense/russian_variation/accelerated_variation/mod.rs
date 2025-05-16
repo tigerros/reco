@@ -34,8 +34,11 @@ pub const ACCELERATED_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<81>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Russian Variation", "Accelerated Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Russian Variation",
+        "Accelerated Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

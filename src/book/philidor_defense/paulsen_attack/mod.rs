@@ -34,8 +34,7 @@ pub const PAULSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Paulsen Attack"],
+    name: &["Philidor Defense", "Paulsen Attack"],
     moves: &[
         Normal {
             role: Pawn,

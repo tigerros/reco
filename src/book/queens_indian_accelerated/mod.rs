@@ -34,8 +34,7 @@ pub const QUEENS_INDIAN_ACCELERATED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Queen's Indian Accelerated",
-    variation: &[],
+    name: &["Queen's Indian Accelerated"],
     moves: &[
         Normal {
             role: Pawn,

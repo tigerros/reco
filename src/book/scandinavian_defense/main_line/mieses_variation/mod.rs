@@ -34,8 +34,7 @@ pub const MIESES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Main Line", "Mieses Variation"],
+    name: &["Scandinavian Defense", "Main Line", "Mieses Variation"],
     moves: &[
         Normal {
             role: Pawn,

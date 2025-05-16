@@ -35,8 +35,7 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::E,
             category: RangedU8::new_static::<24>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Sämisch Variation"],
+        name: &["Nimzo-Indian Defense", "Sämisch Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::E,
             category: RangedU8::new_static::<25>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Sämisch Variation"],
+        name: &["Nimzo-Indian Defense", "Sämisch Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -251,8 +249,7 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::E,
             category: RangedU8::new_static::<26>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Sämisch Variation"],
+        name: &["Nimzo-Indian Defense", "Sämisch Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -366,8 +363,7 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::E,
             category: RangedU8::new_static::<27>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Sämisch Variation"],
+        name: &["Nimzo-Indian Defense", "Sämisch Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -468,8 +464,7 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::E,
             category: RangedU8::new_static::<28>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Sämisch Variation"],
+        name: &["Nimzo-Indian Defense", "Sämisch Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -577,8 +572,7 @@ pub const SAMISCH_VARIATION: [Opening<'static, &str>; 6] = [
             volume: Volume::E,
             category: RangedU8::new_static::<29>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Sämisch Variation"],
+        name: &["Nimzo-Indian Defense", "Sämisch Variation"],
         moves: &[
             Normal {
                 role: Pawn,

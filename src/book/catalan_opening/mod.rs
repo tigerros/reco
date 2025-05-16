@@ -35,8 +35,7 @@ pub const CATALAN_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Catalan Opening",
-        variation: &[],
+        name: &["Catalan Opening"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const CATALAN_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Catalan Opening",
-        variation: &[],
+        name: &["Catalan Opening"],
         moves: &[
             Normal {
                 role: Pawn,

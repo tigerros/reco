@@ -34,8 +34,11 @@ pub const SHIRAZI_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Panteldakis Countergambit", "Shirazi Line"],
+    name: &[
+        "King's Gambit Declined",
+        "Panteldakis Countergambit",
+        "Shirazi Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

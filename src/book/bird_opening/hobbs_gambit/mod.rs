@@ -34,8 +34,7 @@ pub const HOBBS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Hobbs Gambit"],
+    name: &["Bird Opening", "Hobbs Gambit"],
     moves: &[
         Normal {
             role: Pawn,

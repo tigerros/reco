@@ -34,8 +34,7 @@ pub const PAULSEN_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Elephant Gambit",
-    variation: &["Paulsen Countergambit"],
+    name: &["Elephant Gambit", "Paulsen Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

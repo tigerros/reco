@@ -34,8 +34,7 @@ pub const BLACKBURNE_KLOOSTERBOER_GAMBIT: [Opening<'static, &str>; 1] = [Opening
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Blackburne-Kloosterboer Gambit"],
+    name: &["Scandinavian Defense", "Blackburne-Kloosterboer Gambit"],
     moves: &[
         Normal {
             role: Pawn,

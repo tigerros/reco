@@ -34,8 +34,7 @@ pub const MYERS_POLISH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Myers Polish Attack"],
+    name: &["Zukertort Opening", "Myers Polish Attack"],
     moves: &[
         Normal {
             role: Knight,

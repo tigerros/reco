@@ -34,8 +34,11 @@ pub const NEUMANN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Kieseritzky Gambit", "Neumann Defense"],
+    name: &[
+        "King's Gambit Accepted",
+        "Kieseritzky Gambit",
+        "Neumann Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

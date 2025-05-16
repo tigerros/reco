@@ -34,8 +34,7 @@ pub const BERNSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Italian Game",
-    variation: &["Giuoco Piano", "Bernstein Variation"],
+    name: &["Italian Game", "Giuoco Piano", "Bernstein Variation"],
     moves: &[
         Normal {
             role: Pawn,

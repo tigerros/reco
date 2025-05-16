@@ -34,8 +34,11 @@ pub const THOROLD_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Allgaier Gambit", "Thorold Attack"],
+    name: &[
+        "King's Gambit Accepted",
+        "Allgaier Gambit",
+        "Thorold Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

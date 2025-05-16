@@ -34,8 +34,7 @@ pub const WINAWER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Winawer Defense"],
+    name: &["Queen's Gambit Accepted", "Winawer Defense"],
     moves: &[
         Normal {
             role: Pawn,

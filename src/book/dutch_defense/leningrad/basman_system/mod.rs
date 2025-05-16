@@ -34,8 +34,7 @@ pub const BASMAN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<81>(),
     },
-    name: "Dutch Defense",
-    variation: &["Leningrad", "Basman System"],
+    name: &["Dutch Defense", "Leningrad", "Basman System"],
     moves: &[
         Normal {
             role: Pawn,

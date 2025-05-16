@@ -34,8 +34,11 @@ pub const PIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Smith-Morra Gambit Accepted", "Pin Defense"],
+    name: &[
+        "Sicilian Defense",
+        "Smith-Morra Gambit Accepted",
+        "Pin Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

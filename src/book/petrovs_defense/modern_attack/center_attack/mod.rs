@@ -34,8 +34,7 @@ pub const CENTER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<43>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Modern Attack", "Center Attack"],
+    name: &["Petrov's Defense", "Modern Attack", "Center Attack"],
     moves: &[
         Normal {
             role: Pawn,

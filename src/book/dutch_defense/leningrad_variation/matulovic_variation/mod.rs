@@ -34,8 +34,11 @@ pub const MATULOVIC_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<89>(),
     },
-    name: "Dutch Defense",
-    variation: &["Leningrad Variation", "Matulovic Variation"],
+    name: &[
+        "Dutch Defense",
+        "Leningrad Variation",
+        "Matulovic Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

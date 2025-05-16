@@ -34,8 +34,7 @@ pub const HICKMANN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Dutch Defense", "Hickmann Gambit"],
+    name: &["English Opening", "Anglo-Dutch Defense", "Hickmann Gambit"],
     moves: &[
         Normal {
             role: Pawn,

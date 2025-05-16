@@ -35,8 +35,11 @@ pub const NEO_MODERN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<67>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Richter-Rauzer Variation", "Neo-Modern Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Richter-Rauzer Variation",
+            "Neo-Modern Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -179,8 +182,11 @@ pub const NEO_MODERN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<68>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Richter-Rauzer Variation", "Neo-Modern Variation"],
+        name: &[
+            "Sicilian Defense",
+            "Richter-Rauzer Variation",
+            "Neo-Modern Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,11 @@ pub const LOUMA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Boleslavsky Variation", "Louma Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Boleslavsky Variation",
+        "Louma Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

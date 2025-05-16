@@ -34,8 +34,11 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Old Indian Defense",
-    variation: &["Janowski Variation", "Fianchetto Variation"],
+    name: &[
+        "Old Indian Defense",
+        "Janowski Variation",
+        "Fianchetto Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

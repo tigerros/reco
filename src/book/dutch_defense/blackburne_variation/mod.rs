@@ -34,8 +34,7 @@ pub const BLACKBURNE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<81>(),
     },
-    name: "Dutch Defense",
-    variation: &["Blackburne Variation"],
+    name: &["Dutch Defense", "Blackburne Variation"],
     moves: &[
         Normal {
             role: Pawn,

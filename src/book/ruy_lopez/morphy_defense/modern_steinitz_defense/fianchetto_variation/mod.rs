@@ -34,8 +34,8 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<76>(),
     },
-    name: "Ruy Lopez",
-    variation: &[
+    name: &[
+        "Ruy Lopez",
         "Morphy Defense",
         "Modern Steinitz Defense",
         "Fianchetto Variation",

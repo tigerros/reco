@@ -34,8 +34,11 @@ pub const TIVIAKOV_FISCHER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Karpov Variation", "Tiviakov-Fischer Attack"],
+    name: &[
+        "Caro-Kann Defense",
+        "Karpov Variation",
+        "Tiviakov-Fischer Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

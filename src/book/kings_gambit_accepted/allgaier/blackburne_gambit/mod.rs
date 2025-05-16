@@ -34,8 +34,7 @@ pub const BLACKBURNE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Allgaier", "Blackburne Gambit"],
+    name: &["King's Gambit Accepted", "Allgaier", "Blackburne Gambit"],
     moves: &[
         Normal {
             role: Pawn,

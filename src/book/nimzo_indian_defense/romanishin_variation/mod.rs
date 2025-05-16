@@ -35,8 +35,7 @@ pub const ROMANISHIN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<20>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Romanishin Variation"],
+        name: &["Nimzo-Indian Defense", "Romanishin Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -144,8 +143,7 @@ pub const ROMANISHIN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<20>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Romanishin Variation"],
+        name: &["Nimzo-Indian Defense", "Romanishin Variation"],
         moves: &[
             Normal {
                 role: Pawn,

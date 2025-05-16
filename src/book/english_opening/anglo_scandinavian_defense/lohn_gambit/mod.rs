@@ -34,8 +34,11 @@ pub const LOHN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Anglo-Scandinavian Defense", "Löhn Gambit"],
+    name: &[
+        "English Opening",
+        "Anglo-Scandinavian Defense",
+        "Löhn Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const FIANCHETTO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Nyezhmetdinov-Rossolimo Attack", "Fianchetto Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Nyezhmetdinov-Rossolimo Attack",
+        "Fianchetto Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

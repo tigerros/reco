@@ -34,8 +34,11 @@ pub const BIG_CENTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Trompowsky Attack",
-    variation: &["Classical Defense", "Big Center Variation"],
+    name: &[
+        "Trompowsky Attack",
+        "Classical Defense",
+        "Big Center Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

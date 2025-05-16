@@ -34,8 +34,7 @@ pub const HICKEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit Declined", "Hicken Variation"],
+    name: &["Italian Game", "Evans Gambit Declined", "Hicken Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SLAV_INVITATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Slav Invitation"],
+    name: &["Zukertort Opening", "Slav Invitation"],
     moves: &[
         Normal {
             role: Knight,

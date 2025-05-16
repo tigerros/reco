@@ -34,8 +34,7 @@ pub const FIANCHETTO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<14>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Panov Attack", "Fianchetto Defense"],
+    name: &["Caro-Kann Defense", "Panov Attack", "Fianchetto Defense"],
     moves: &[
         Normal {
             role: Pawn,

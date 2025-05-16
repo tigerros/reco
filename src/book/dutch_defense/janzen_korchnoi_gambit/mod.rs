@@ -34,8 +34,7 @@ pub const JANZEN_KORCHNOI_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Janzen-Korchnoi Gambit"],
+    name: &["Dutch Defense", "Janzen-Korchnoi Gambit"],
     moves: &[
         Normal {
             role: Pawn,

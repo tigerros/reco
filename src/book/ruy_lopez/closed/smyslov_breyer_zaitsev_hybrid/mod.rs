@@ -34,8 +34,7 @@ pub const SMYSLOV_BREYER_ZAITSEV_HYBRID: [Opening<'static, &str>; 1] = [Opening 
         volume: Volume::C,
         category: RangedU8::new_static::<92>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Smyslov-Breyer-Zaitsev Hybrid"],
+    name: &["Ruy Lopez", "Closed", "Smyslov-Breyer-Zaitsev Hybrid"],
     moves: &[
         Normal {
             role: Pawn,

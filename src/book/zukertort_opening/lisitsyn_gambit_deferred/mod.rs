@@ -34,8 +34,7 @@ pub const LISITSYN_GAMBIT_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Lisitsyn Gambit Deferred"],
+    name: &["Zukertort Opening", "Lisitsyn Gambit Deferred"],
     moves: &[
         Normal {
             role: Knight,

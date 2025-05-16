@@ -35,8 +35,7 @@ pub const FRENCH_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<0>(),
         },
-        name: "French Defense",
-        variation: &[],
+        name: &["French Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -101,8 +100,7 @@ pub const FRENCH_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<0>(),
         },
-        name: "French Defense",
-        variation: &[],
+        name: &["French Defense"],
         moves: &[
             Normal {
                 role: Pawn,

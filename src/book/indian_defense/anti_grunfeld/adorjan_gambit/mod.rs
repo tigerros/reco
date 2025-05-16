@@ -34,8 +34,7 @@ pub const ADORJAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Indian Defense",
-    variation: &["Anti-Grünfeld", "Adorjan Gambit"],
+    name: &["Indian Defense", "Anti-Grünfeld", "Adorjan Gambit"],
     moves: &[
         Normal {
             role: Pawn,

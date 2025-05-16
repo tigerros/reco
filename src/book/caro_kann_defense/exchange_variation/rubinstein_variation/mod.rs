@@ -34,8 +34,11 @@ pub const RUBINSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<13>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Exchange Variation", "Rubinstein Variation"],
+    name: &[
+        "Caro-Kann Defense",
+        "Exchange Variation",
+        "Rubinstein Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

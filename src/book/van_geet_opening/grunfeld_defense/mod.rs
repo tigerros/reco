@@ -34,8 +34,7 @@ pub const GRUNFELD_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Grünfeld Defense"],
+    name: &["Van Geet Opening", "Grünfeld Defense"],
     moves: &[
         Normal {
             role: Pawn,

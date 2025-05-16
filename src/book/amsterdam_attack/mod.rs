@@ -34,8 +34,7 @@ pub const AMSTERDAM_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Amsterdam Attack",
-    variation: &[],
+    name: &["Amsterdam Attack"],
     moves: &[
         Normal {
             role: Pawn,

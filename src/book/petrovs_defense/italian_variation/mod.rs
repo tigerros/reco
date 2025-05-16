@@ -34,8 +34,7 @@ pub const ITALIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Petrov's Defense",
-    variation: &["Italian Variation"],
+    name: &["Petrov's Defense", "Italian Variation"],
     moves: &[
         Normal {
             role: Pawn,

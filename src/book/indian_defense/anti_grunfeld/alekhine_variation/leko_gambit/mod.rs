@@ -34,8 +34,12 @@ pub const LEKO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Indian Defense",
-    variation: &["Anti-Grünfeld", "Alekhine Variation", "Leko Gambit"],
+    name: &[
+        "Indian Defense",
+        "Anti-Grünfeld",
+        "Alekhine Variation",
+        "Leko Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

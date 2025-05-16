@@ -34,8 +34,11 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<77>(),
     },
-    name: "Neo-Grünfeld Defense",
-    variation: &["Classical Variation", "Modern Defense"],
+    name: &[
+        "Neo-Grünfeld Defense",
+        "Classical Variation",
+        "Modern Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

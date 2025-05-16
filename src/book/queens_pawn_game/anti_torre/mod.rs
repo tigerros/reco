@@ -34,8 +34,7 @@ pub const ANTI_TORRE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Anti-Torre"],
+    name: &["Queen's Pawn Game", "Anti-Torre"],
     moves: &[
         Normal {
             role: Knight,

@@ -34,8 +34,7 @@ pub const QUAADE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Quaade Gambit"],
+    name: &["King's Gambit Accepted", "Quaade Gambit"],
     moves: &[
         Normal {
             role: Pawn,

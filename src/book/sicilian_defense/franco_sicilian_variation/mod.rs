@@ -34,8 +34,7 @@ pub const FRANCO_SICILIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Franco-Sicilian Variation"],
+    name: &["Sicilian Defense", "Franco-Sicilian Variation"],
     moves: &[
         Normal {
             role: Pawn,

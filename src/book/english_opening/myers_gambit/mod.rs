@@ -34,8 +34,7 @@ pub const MYERS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &["Myers Gambit"],
+    name: &["English Opening", "Myers Gambit"],
     moves: &[
         Normal {
             role: Pawn,

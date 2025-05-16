@@ -34,8 +34,11 @@ pub const SUTTLES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Two Knights Variation", "Suttles Variation"],
+    name: &[
+        "Modern Defense",
+        "Two Knights Variation",
+        "Suttles Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

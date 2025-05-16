@@ -34,8 +34,7 @@ pub const LONDON_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Grob Opening",
-    variation: &["London Defense"],
+    name: &["Grob Opening", "London Defense"],
     moves: &[
         Normal {
             role: Pawn,

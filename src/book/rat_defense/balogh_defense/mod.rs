@@ -34,8 +34,7 @@ pub const BALOGH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Rat Defense",
-    variation: &["Balogh Defense"],
+    name: &["Rat Defense", "Balogh Defense"],
     moves: &[
         Normal {
             role: Pawn,

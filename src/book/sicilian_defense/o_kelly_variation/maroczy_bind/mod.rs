@@ -34,8 +34,7 @@ pub const MAROCZY_BIND: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<28>(),
     },
-    name: "Sicilian Defense",
-    variation: &["O'Kelly Variation", "Maróczy Bind"],
+    name: &["Sicilian Defense", "O'Kelly Variation", "Maróczy Bind"],
     moves: &[
         Normal {
             role: Pawn,

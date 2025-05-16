@@ -35,8 +35,11 @@ pub const MC_DONNELL_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<33>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["Bishop's Gambit", "McDonnell Attack"],
+        name: &[
+            "King's Gambit Accepted",
+            "Bishop's Gambit",
+            "McDonnell Attack",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -164,8 +167,11 @@ pub const MC_DONNELL_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<33>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["Bishop's Gambit", "McDonnell Attack"],
+        name: &[
+            "King's Gambit Accepted",
+            "Bishop's Gambit",
+            "McDonnell Attack",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

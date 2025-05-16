@@ -34,8 +34,7 @@ pub const AUSTRALIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Australian Defense",
-    variation: &[],
+    name: &["Australian Defense"],
     moves: &[
         Normal {
             role: Pawn,

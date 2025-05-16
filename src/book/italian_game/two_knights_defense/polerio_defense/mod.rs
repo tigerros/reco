@@ -34,8 +34,7 @@ pub const POLERIO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<58>(),
     },
-    name: "Italian Game",
-    variation: &["Two Knights Defense", "Polerio Defense"],
+    name: &["Italian Game", "Two Knights Defense", "Polerio Defense"],
     moves: &[
         Normal {
             role: Pawn,

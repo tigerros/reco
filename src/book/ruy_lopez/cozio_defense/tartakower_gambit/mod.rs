@@ -34,8 +34,7 @@ pub const TARTAKOWER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Cozio Defense", "Tartakower Gambit"],
+    name: &["Ruy Lopez", "Cozio Defense", "Tartakower Gambit"],
     moves: &[
         Normal {
             role: Pawn,

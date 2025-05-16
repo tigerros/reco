@@ -34,8 +34,11 @@ pub const ALATORTSEV_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Botvinnik Variation", "Alatortsev System"],
+    name: &[
+        "Semi-Slav Defense",
+        "Botvinnik Variation",
+        "Alatortsev System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

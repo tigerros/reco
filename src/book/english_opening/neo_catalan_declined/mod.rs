@@ -34,8 +34,7 @@ pub const NEO_CATALAN_DECLINED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<13>(),
     },
-    name: "English Opening",
-    variation: &["Neo-Catalan Declined"],
+    name: &["English Opening", "Neo-Catalan Declined"],
     moves: &[
         Normal {
             role: Pawn,

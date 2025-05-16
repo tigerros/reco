@@ -34,8 +34,11 @@ pub const STUMMER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Indian Defense",
-    variation: &["Gibbins-Weidenhagen Gambit", "Stummer Gambit"],
+    name: &[
+        "Indian Defense",
+        "Gibbins-Weidenhagen Gambit",
+        "Stummer Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

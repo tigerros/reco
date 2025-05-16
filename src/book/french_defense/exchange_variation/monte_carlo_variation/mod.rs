@@ -34,8 +34,11 @@ pub const MONTE_CARLO_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<1>(),
     },
-    name: "French Defense",
-    variation: &["Exchange Variation", "Monte Carlo Variation"],
+    name: &[
+        "French Defense",
+        "Exchange Variation",
+        "Monte Carlo Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

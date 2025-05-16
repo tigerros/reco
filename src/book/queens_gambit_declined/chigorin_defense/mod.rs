@@ -35,8 +35,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<7>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Chigorin Defense"],
+        name: &["Queen's Gambit Declined", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<7>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Chigorin Defense"],
+        name: &["Queen's Gambit Declined", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -188,8 +186,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<7>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Chigorin Defense"],
+        name: &["Queen's Gambit Declined", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,

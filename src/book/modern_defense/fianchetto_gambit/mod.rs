@@ -34,8 +34,7 @@ pub const FIANCHETTO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Fianchetto Gambit"],
+    name: &["Modern Defense", "Fianchetto Gambit"],
     moves: &[
         Normal {
             role: Pawn,

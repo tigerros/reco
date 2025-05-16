@@ -34,8 +34,7 @@ pub const ASTEN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Asten Gambit"],
+    name: &["Hungarian Opening", "Asten Gambit"],
     moves: &[
         Normal {
             role: Pawn,

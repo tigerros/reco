@@ -34,8 +34,7 @@ pub const STEINER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<16>(),
     },
-    name: "Slav Defense",
-    variation: &["Steiner Variation"],
+    name: &["Slav Defense", "Steiner Variation"],
     moves: &[
         Normal {
             role: Pawn,

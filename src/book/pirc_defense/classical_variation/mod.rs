@@ -35,8 +35,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Pirc Defense",
-        variation: &["Classical Variation"],
+        name: &["Pirc Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<8>(),
         },
-        name: "Pirc Defense",
-        variation: &["Classical Variation"],
+        name: &["Pirc Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,

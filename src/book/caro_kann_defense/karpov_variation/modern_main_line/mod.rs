@@ -34,8 +34,7 @@ pub const MODERN_MAIN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Karpov Variation", "Modern Main Line"],
+    name: &["Caro-Kann Defense", "Karpov Variation", "Modern Main Line"],
     moves: &[
         Normal {
             role: Pawn,

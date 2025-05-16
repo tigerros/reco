@@ -34,8 +34,7 @@ pub const FULLER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Rat Defense",
-    variation: &["Fuller Gambit"],
+    name: &["Rat Defense", "Fuller Gambit"],
     moves: &[
         Normal {
             role: Pawn,

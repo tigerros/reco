@@ -34,8 +34,7 @@ pub const BISHOP_SACRIFICE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Lion Variation", "Bishop Sacrifice"],
+    name: &["Philidor Defense", "Lion Variation", "Bishop Sacrifice"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,8 @@ pub const PRICKLY_PAWN_PASS_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<10>(),
     },
-    name: "English Opening",
-    variation: &[
+    name: &[
+        "English Opening",
         "King's English Variation",
         "Botvinnik System",
         "Prickly Pawn Pass System",

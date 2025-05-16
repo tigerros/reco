@@ -34,8 +34,7 @@ pub const DOUBLE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Labahn Attack", "Double Gambit"],
+    name: &["Caro-Kann Defense", "Labahn Attack", "Double Gambit"],
     moves: &[
         Normal {
             role: Pawn,

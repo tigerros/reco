@@ -34,8 +34,7 @@ pub const RASA_STUDIER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Rasa-Studier Gambit"],
+    name: &["Caro-Kann Defense", "Rasa-Studier Gambit"],
     moves: &[
         Normal {
             role: Pawn,

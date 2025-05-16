@@ -35,8 +35,7 @@ pub const TAYLER_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "King's Pawn Game",
-        variation: &["Tayler Opening"],
+        name: &["King's Pawn Game", "Tayler Opening"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const TAYLER_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<44>(),
         },
-        name: "King's Pawn Game",
-        variation: &["Tayler Opening"],
+        name: &["King's Pawn Game", "Tayler Opening"],
         moves: &[
             Normal {
                 role: Pawn,

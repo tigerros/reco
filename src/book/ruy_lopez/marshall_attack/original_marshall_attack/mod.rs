@@ -34,8 +34,7 @@ pub const ORIGINAL_MARSHALL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<89>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Marshall Attack", "Original Marshall Attack"],
+    name: &["Ruy Lopez", "Marshall Attack", "Original Marshall Attack"],
     moves: &[
         Normal {
             role: Pawn,

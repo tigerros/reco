@@ -34,8 +34,7 @@ pub const HOLZHAUSEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<54>(),
     },
-    name: "Italian Game",
-    variation: &["Giuoco Piano", "Holzhausen Attack"],
+    name: &["Italian Game", "Giuoco Piano", "Holzhausen Attack"],
     moves: &[
         Normal {
             role: Pawn,

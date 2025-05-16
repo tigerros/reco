@@ -34,8 +34,7 @@ pub const LOPEZ_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Lopez Countergambit"],
+    name: &["Philidor Defense", "Lopez Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

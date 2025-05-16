@@ -34,8 +34,12 @@ pub const FLEXIBLE_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<30>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical", "Hedgehog", "Flexible Formation"],
+    name: &[
+        "English Opening",
+        "Symmetrical",
+        "Hedgehog",
+        "Flexible Formation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

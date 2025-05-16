@@ -34,8 +34,11 @@ pub const ALEKHINE_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<15>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Alekhine Gambit Accepted"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Alekhine Gambit Accepted",
+    ],
     moves: &[
         Normal {
             role: Pawn,

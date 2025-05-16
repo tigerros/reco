@@ -34,8 +34,11 @@ pub const POSITIONAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<19>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Positional Variation"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Positional Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

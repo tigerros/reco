@@ -34,8 +34,7 @@ pub const SOLLER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["Zeller Defense", "Soller Attack"],
+    name: &["Blackmar-Diemer Gambit", "Zeller Defense", "Soller Attack"],
     moves: &[
         Normal {
             role: Pawn,

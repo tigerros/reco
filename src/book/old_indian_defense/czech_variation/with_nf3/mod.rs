@@ -34,8 +34,7 @@ pub const WITH_NF3: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Old Indian Defense",
-    variation: &["Czech Variation", "with Nf3"],
+    name: &["Old Indian Defense", "Czech Variation", "with Nf3"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const HUNGARIAN_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &[],
+    name: &["Hungarian Opening"],
     moves: &[Normal {
         role: Pawn,
         from: G2,

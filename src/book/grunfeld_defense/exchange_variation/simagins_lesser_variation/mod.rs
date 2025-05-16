@@ -34,8 +34,11 @@ pub const SIMAGINS_LESSER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<86>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Exchange Variation", "Simagin's Lesser Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Exchange Variation",
+        "Simagin's Lesser Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

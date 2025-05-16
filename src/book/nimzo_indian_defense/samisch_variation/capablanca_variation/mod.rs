@@ -34,8 +34,11 @@ pub const CAPABLANCA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<29>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Sämisch Variation", "Capablanca Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Sämisch Variation",
+        "Capablanca Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

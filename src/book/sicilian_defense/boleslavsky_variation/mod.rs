@@ -35,8 +35,7 @@ pub const BOLESLAVSKY_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<58>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Boleslavsky Variation"],
+        name: &["Sicilian Defense", "Boleslavsky Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -157,8 +156,7 @@ pub const BOLESLAVSKY_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<59>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Boleslavsky Variation"],
+        name: &["Sicilian Defense", "Boleslavsky Variation"],
         moves: &[
             Normal {
                 role: Pawn,

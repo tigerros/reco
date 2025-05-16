@@ -34,8 +34,7 @@ pub const BODEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<64>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Classical Defense", "Boden Variation"],
+    name: &["Ruy Lopez", "Classical Defense", "Boden Variation"],
     moves: &[
         Normal {
             role: Pawn,

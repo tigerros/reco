@@ -34,8 +34,7 @@ pub const MELLON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Wayward Queen Attack", "Mellon Gambit"],
+    name: &["King's Pawn Game", "Wayward Queen Attack", "Mellon Gambit"],
     moves: &[
         Normal {
             role: Pawn,

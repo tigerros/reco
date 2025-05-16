@@ -34,8 +34,7 @@ pub const ORTHODOX_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Orthodox Defense"],
+    name: &["Queen's Gambit Declined", "Orthodox Defense"],
     moves: &[
         Normal {
             role: Pawn,

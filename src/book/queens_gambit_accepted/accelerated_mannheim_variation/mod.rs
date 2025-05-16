@@ -34,8 +34,7 @@ pub const ACCELERATED_MANNHEIM_VARIATION: [Opening<'static, &str>; 1] = [Opening
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Accelerated Mannheim Variation"],
+    name: &["Queen's Gambit Accepted", "Accelerated Mannheim Variation"],
     moves: &[
         Normal {
             role: Pawn,

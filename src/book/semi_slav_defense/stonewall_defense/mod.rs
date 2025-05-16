@@ -34,8 +34,7 @@ pub const STONEWALL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Stonewall Defense"],
+    name: &["Semi-Slav Defense", "Stonewall Defense"],
     moves: &[
         Normal {
             role: Pawn,

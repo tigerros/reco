@@ -34,8 +34,11 @@ pub const HIRSCHBACH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit Declined", "Hirschbach Variation"],
+    name: &[
+        "Italian Game",
+        "Evans Gambit Declined",
+        "Hirschbach Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ROSS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Center Game",
-    variation: &["Ross Gambit"],
+    name: &["Center Game", "Ross Gambit"],
     moves: &[
         Normal {
             role: Pawn,

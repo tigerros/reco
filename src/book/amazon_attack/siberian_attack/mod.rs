@@ -34,8 +34,7 @@ pub const SIBERIAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Amazon Attack",
-    variation: &["Siberian Attack"],
+    name: &["Amazon Attack", "Siberian Attack"],
     moves: &[
         Normal {
             role: Pawn,

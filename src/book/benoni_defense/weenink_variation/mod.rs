@@ -34,8 +34,7 @@ pub const WEENINK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Benoni Defense",
-    variation: &["Weenink Variation"],
+    name: &["Benoni Defense", "Weenink Variation"],
     moves: &[
         Normal {
             role: Pawn,

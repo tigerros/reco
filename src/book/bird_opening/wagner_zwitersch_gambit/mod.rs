@@ -34,8 +34,7 @@ pub const WAGNER_ZWITERSCH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Wagner-Zwitersch Gambit"],
+    name: &["Bird Opening", "Wagner-Zwitersch Gambit"],
     moves: &[
         Normal {
             role: Pawn,

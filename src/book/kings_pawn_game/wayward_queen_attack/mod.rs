@@ -34,8 +34,7 @@ pub const WAYWARD_QUEEN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Wayward Queen Attack"],
+    name: &["King's Pawn Game", "Wayward Queen Attack"],
     moves: &[
         Normal {
             role: Pawn,

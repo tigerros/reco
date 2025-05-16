@@ -34,8 +34,7 @@ pub const ST_GEORGE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["St. George Defense", "St. George Gambit"],
+    name: &["French Defense", "St. George Defense", "St. George Gambit"],
     moves: &[
         Normal {
             role: Pawn,

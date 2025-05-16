@@ -34,8 +34,8 @@ pub const FRICKE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &[
+    name: &[
+        "Ruy Lopez",
         "Spanish Countergambit",
         "Harding Countergambit",
         "Fricke Gambit",

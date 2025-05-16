@@ -34,8 +34,12 @@ pub const EARLY_DEVIATIONS: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<75>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Yugoslav Attack", "Early Deviations"],
+    name: &[
+        "Sicilian Defense",
+        "Dragon Variation",
+        "Yugoslav Attack",
+        "Early Deviations",
+    ],
     moves: &[
         Normal {
             role: Pawn,

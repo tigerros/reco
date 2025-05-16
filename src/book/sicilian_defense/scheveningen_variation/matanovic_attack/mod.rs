@@ -34,8 +34,11 @@ pub const MATANOVIC_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Scheveningen Variation", "Matanovic Attack"],
+    name: &[
+        "Sicilian Defense",
+        "Scheveningen Variation",
+        "Matanovic Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

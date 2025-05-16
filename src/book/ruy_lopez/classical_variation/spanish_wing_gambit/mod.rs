@@ -34,8 +34,7 @@ pub const SPANISH_WING_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<64>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Classical Variation", "Spanish Wing Gambit"],
+    name: &["Ruy Lopez", "Classical Variation", "Spanish Wing Gambit"],
     moves: &[
         Normal {
             role: Pawn,

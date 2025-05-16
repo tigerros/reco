@@ -34,8 +34,11 @@ pub const CHANDLER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<34>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Classical Variation", "Chandler Variation"],
+    name: &[
+        "Tarrasch Defense",
+        "Classical Variation",
+        "Chandler Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

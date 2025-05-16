@@ -34,8 +34,7 @@ pub const PSEUDO_SPANISH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Pseudo-Spanish Variation"],
+    name: &["Nimzowitsch Defense", "Pseudo-Spanish Variation"],
     moves: &[
         Normal {
             role: Pawn,

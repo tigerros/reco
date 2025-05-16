@@ -34,8 +34,7 @@ pub const SOLLER_GAMBIT_DEFERRED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Englund Gambit",
-    variation: &["Soller Gambit Deferred"],
+    name: &["Englund Gambit", "Soller Gambit Deferred"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Danish Gambit Accepted",
-    variation: &["Chigorin Defense"],
+    name: &["Danish Gambit Accepted", "Chigorin Defense"],
     moves: &[
         Normal {
             role: Pawn,

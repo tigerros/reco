@@ -34,8 +34,7 @@ pub const BREYER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Torre Attack", "Breyer Variation"],
+    name: &["Queen's Pawn Game", "Torre Attack", "Breyer Variation"],
     moves: &[
         Normal {
             role: Pawn,

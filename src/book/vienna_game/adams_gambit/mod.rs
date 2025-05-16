@@ -34,8 +34,7 @@ pub const ADAMS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Vienna Game",
-    variation: &["Adams' Gambit"],
+    name: &["Vienna Game", "Adams' Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BARNES_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Barnes Defense",
-    variation: &[],
+    name: &["Barnes Defense"],
     moves: &[
         Normal {
             role: Pawn,

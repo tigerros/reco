@@ -35,8 +35,7 @@ pub const NORFOLK_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Nimzo-Larsen Attack",
-        variation: &["Norfolk Gambit"],
+        name: &["Nimzo-Larsen Attack", "Norfolk Gambit"],
         moves: &[
             Normal {
                 role: Knight,
@@ -122,8 +121,7 @@ pub const NORFOLK_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<6>(),
         },
-        name: "Nimzo-Larsen Attack",
-        variation: &["Norfolk Gambit"],
+        name: &["Nimzo-Larsen Attack", "Norfolk Gambit"],
         moves: &[
             Normal {
                 role: Knight,

@@ -34,8 +34,7 @@ pub const MORGADO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit",
-    variation: &["Mayet Attack", "Morgado Defense"],
+    name: &["Latvian Gambit", "Mayet Attack", "Morgado Defense"],
     moves: &[
         Normal {
             role: Pawn,

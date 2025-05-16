@@ -34,8 +34,7 @@ pub const SVENONIUS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Danish Gambit Accepted",
-    variation: &["Svenonius Defense"],
+    name: &["Danish Gambit Accepted", "Svenonius Defense"],
     moves: &[
         Normal {
             role: Pawn,

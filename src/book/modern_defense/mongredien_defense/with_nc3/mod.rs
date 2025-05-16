@@ -34,8 +34,7 @@ pub const WITH_NC3: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Mongredien Defense", "with Nc3"],
+    name: &["Modern Defense", "Mongredien Defense", "with Nc3"],
     moves: &[
         Normal {
             role: Pawn,

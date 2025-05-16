@@ -34,8 +34,11 @@ pub const ZILBERMINTS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Euwe Defense", "Zilbermints Gambit"],
+    name: &[
+        "Blackmar-Diemer Gambit Accepted",
+        "Euwe Defense",
+        "Zilbermints Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

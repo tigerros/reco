@@ -34,8 +34,11 @@ pub const ZUKERTORT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Philidor Countergambit", "Zukertort Variation"],
+    name: &[
+        "Philidor Defense",
+        "Philidor Countergambit",
+        "Zukertort Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const LEONARDIS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Leonardis Variation"],
+    name: &["King's Pawn Game", "Leonardis Variation"],
     moves: &[
         Normal {
             role: Pawn,

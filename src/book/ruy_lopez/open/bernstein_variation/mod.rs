@@ -34,8 +34,7 @@ pub const BERNSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Bernstein Variation"],
+    name: &["Ruy Lopez", "Open", "Bernstein Variation"],
     moves: &[
         Normal {
             role: Pawn,

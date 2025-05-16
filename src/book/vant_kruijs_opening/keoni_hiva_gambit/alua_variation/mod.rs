@@ -34,8 +34,11 @@ pub const ALUA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van't Kruijs Opening",
-    variation: &["Keoni-Hiva Gambit", "Alua Variation"],
+    name: &[
+        "Van't Kruijs Opening",
+        "Keoni-Hiva Gambit",
+        "Alua Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

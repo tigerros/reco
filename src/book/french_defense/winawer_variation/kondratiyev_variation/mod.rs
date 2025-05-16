@@ -34,8 +34,11 @@ pub const KONDRATIYEV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<15>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Kondratiyev Variation"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Kondratiyev Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

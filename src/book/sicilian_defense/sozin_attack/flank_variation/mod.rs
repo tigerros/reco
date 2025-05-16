@@ -34,8 +34,7 @@ pub const FLANK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<87>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Sozin Attack", "Flank Variation"],
+    name: &["Sicilian Defense", "Sozin Attack", "Flank Variation"],
     moves: &[
         Normal {
             role: Pawn,

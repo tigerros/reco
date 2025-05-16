@@ -34,8 +34,7 @@ pub const NOTEBOOM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Semi-Slav Defense",
-    variation: &["Noteboom Variation"],
+    name: &["Semi-Slav Defense", "Noteboom Variation"],
     moves: &[
         Normal {
             role: Pawn,

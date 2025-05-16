@@ -35,8 +35,7 @@ pub const KINGS_HEAD_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<20>(),
         },
-        name: "King's Pawn Game",
-        variation: &["King's Head Opening"],
+        name: &["King's Pawn Game", "King's Head Opening"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const KINGS_HEAD_OPENING: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<20>(),
         },
-        name: "King's Pawn Game",
-        variation: &["King's Head Opening"],
+        name: &["King's Pawn Game", "King's Head Opening"],
         moves: &[
             Normal {
                 role: Pawn,

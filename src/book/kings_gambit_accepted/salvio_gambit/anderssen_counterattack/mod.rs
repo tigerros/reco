@@ -34,8 +34,11 @@ pub const ANDERSSEN_COUNTERATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Salvio Gambit", "Anderssen Counterattack"],
+    name: &[
+        "King's Gambit Accepted",
+        "Salvio Gambit",
+        "Anderssen Counterattack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

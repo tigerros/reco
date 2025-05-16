@@ -34,8 +34,8 @@ pub const PONOMARIOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Taimanov Variation",
         "Bastrikov Variation",
         "Ponomariov Gambit",

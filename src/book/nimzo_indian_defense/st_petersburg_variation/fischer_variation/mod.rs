@@ -34,8 +34,11 @@ pub const FISCHER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["St. Petersburg Variation", "Fischer Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "St. Petersburg Variation",
+        "Fischer Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

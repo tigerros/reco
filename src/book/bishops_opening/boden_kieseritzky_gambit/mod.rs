@@ -34,8 +34,7 @@ pub const BODEN_KIESERITZKY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Boden-Kieseritzky Gambit"],
+    name: &["Bishop's Opening", "Boden-Kieseritzky Gambit"],
     moves: &[
         Normal {
             role: Pawn,

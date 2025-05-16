@@ -35,8 +35,7 @@ pub const SOZIN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<49>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Meran Variation", "Sozin Variation"],
+        name: &["Semi-Slav Defense", "Meran Variation", "Sozin Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -242,8 +241,7 @@ pub const SOZIN_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<49>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Meran Variation", "Sozin Variation"],
+        name: &["Semi-Slav Defense", "Meran Variation", "Sozin Variation"],
         moves: &[
             Normal {
                 role: Pawn,

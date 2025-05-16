@@ -35,8 +35,7 @@ pub const CAMBRIDGE_SPRINGS_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<52>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Cambridge Springs Defense"],
+        name: &["Queen's Gambit Declined", "Cambridge Springs Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -164,8 +163,7 @@ pub const CAMBRIDGE_SPRINGS_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<52>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Cambridge Springs Defense"],
+        name: &["Queen's Gambit Declined", "Cambridge Springs Defense"],
         moves: &[
             Normal {
                 role: Pawn,

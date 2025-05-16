@@ -34,8 +34,7 @@ pub const ANTI_TARTAKOWER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<55>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Anti-Tartakower Variation"],
+    name: &["Queen's Gambit Declined", "Anti-Tartakower Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const PANOV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Modern Variation", "Panov Variation"],
+    name: &["Alekhine Defense", "Modern Variation", "Panov Variation"],
     moves: &[
         Normal {
             role: Pawn,

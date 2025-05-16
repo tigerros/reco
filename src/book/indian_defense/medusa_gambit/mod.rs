@@ -34,8 +34,7 @@ pub const MEDUSA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Indian Defense",
-    variation: &["Medusa Gambit"],
+    name: &["Indian Defense", "Medusa Gambit"],
     moves: &[
         Normal {
             role: Pawn,

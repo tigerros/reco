@@ -34,8 +34,7 @@ pub const MODERN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<13>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Panov Attack", "Modern Defense"],
+    name: &["Caro-Kann Defense", "Panov Attack", "Modern Defense"],
     moves: &[
         Normal {
             role: Pawn,

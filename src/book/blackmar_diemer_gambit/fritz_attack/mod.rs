@@ -34,8 +34,7 @@ pub const FRITZ_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit",
-    variation: &["Fritz Attack"],
+    name: &["Blackmar-Diemer Gambit", "Fritz Attack"],
     moves: &[
         Normal {
             role: Pawn,

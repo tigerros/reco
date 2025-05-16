@@ -34,8 +34,11 @@ pub const ROMANISHIN_PSAKHIS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["St. Petersburg Variation", "Romanishin–Psakhis Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "St. Petersburg Variation",
+        "Romanishin–Psakhis Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,11 @@ pub const SPASSKY_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<87>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Exchange Variation", "Spassky Variation"],
+        name: &[
+            "Grünfeld Defense",
+            "Exchange Variation",
+            "Spassky Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -179,8 +182,11 @@ pub const SPASSKY_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<88>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Exchange Variation", "Spassky Variation"],
+        name: &[
+            "Grünfeld Defense",
+            "Exchange Variation",
+            "Spassky Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -352,8 +358,11 @@ pub const SPASSKY_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<89>(),
         },
-        name: "Grünfeld Defense",
-        variation: &["Exchange Variation", "Spassky Variation"],
+        name: &[
+            "Grünfeld Defense",
+            "Exchange Variation",
+            "Spassky Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,11 @@ pub const BERNSTEIN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Lasker Defense", "Bernstein Variation"],
+    name: &[
+        "Queen's Gambit Declined",
+        "Lasker Defense",
+        "Bernstein Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

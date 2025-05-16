@@ -34,8 +34,12 @@ pub const FAZEKAS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Slav Defense",
-    variation: &["Czech Variation", "Krause Attack", "Fazekas Gambit"],
+    name: &[
+        "Slav Defense",
+        "Czech Variation",
+        "Krause Attack",
+        "Fazekas Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

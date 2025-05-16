@@ -34,8 +34,7 @@ pub const SPIKE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Nimzo-Larsen Attack",
-    variation: &["Spike Variation"],
+    name: &["Nimzo-Larsen Attack", "Spike Variation"],
     moves: &[
         Normal {
             role: Pawn,

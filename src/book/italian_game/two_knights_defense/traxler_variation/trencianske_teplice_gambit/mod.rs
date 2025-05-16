@@ -34,8 +34,8 @@ pub const TRENCIANSKE_TEPLICE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Italian Game",
-    variation: &[
+    name: &[
+        "Italian Game",
         "Two Knights Defense",
         "Traxler Variation",
         "Trencianske-Teplice Gambit",

@@ -34,8 +34,7 @@ pub const SCHARA_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Tarrasch Defense",
-    variation: &["Schara Gambit"],
+    name: &["Tarrasch Defense", "Schara Gambit"],
     moves: &[
         Normal {
             role: Pawn,

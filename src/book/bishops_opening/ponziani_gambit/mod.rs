@@ -34,8 +34,7 @@ pub const PONZIANI_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<24>(),
     },
-    name: "Bishop's Opening",
-    variation: &["Ponziani Gambit"],
+    name: &["Bishop's Opening", "Ponziani Gambit"],
     moves: &[
         Normal {
             role: Pawn,

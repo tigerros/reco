@@ -34,8 +34,7 @@ pub const PERSEUS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["Perseus Gambit"],
+    name: &["French Defense", "Perseus Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MIKENAS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Hunt Variation", "Mikenas Gambit"],
+    name: &["Alekhine Defense", "Hunt Variation", "Mikenas Gambit"],
     moves: &[
         Normal {
             role: Pawn,

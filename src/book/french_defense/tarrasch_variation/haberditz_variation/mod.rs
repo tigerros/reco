@@ -34,8 +34,11 @@ pub const HABERDITZ_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<3>(),
     },
-    name: "French Defense",
-    variation: &["Tarrasch Variation", "Haberditz Variation"],
+    name: &[
+        "French Defense",
+        "Tarrasch Variation",
+        "Haberditz Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

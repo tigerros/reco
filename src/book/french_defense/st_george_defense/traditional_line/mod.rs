@@ -34,8 +34,7 @@ pub const TRADITIONAL_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["St. George Defense", "Traditional Line"],
+    name: &["French Defense", "St. George Defense", "Traditional Line"],
     moves: &[
         Normal {
             role: Pawn,

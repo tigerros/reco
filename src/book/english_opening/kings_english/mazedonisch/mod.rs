@@ -34,8 +34,7 @@ pub const MAZEDONISCH: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<22>(),
     },
-    name: "English Opening",
-    variation: &["King's English", "Mazedonisch"],
+    name: &["English Opening", "King's English", "Mazedonisch"],
     moves: &[
         Normal {
             role: Pawn,

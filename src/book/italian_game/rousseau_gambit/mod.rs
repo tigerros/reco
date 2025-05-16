@@ -34,8 +34,7 @@ pub const ROUSSEAU_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Rousseau Gambit"],
+    name: &["Italian Game", "Rousseau Gambit"],
     moves: &[
         Normal {
             role: Pawn,

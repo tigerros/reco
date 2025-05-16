@@ -35,8 +35,7 @@ pub const LASKER_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<53>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Lasker Defense"],
+        name: &["Queen's Gambit Declined", "Lasker Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -143,8 +142,7 @@ pub const LASKER_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<56>(),
         },
-        name: "Queen's Gambit Declined",
-        variation: &["Lasker Defense"],
+        name: &["Queen's Gambit Declined", "Lasker Defense"],
         moves: &[
             Normal {
                 role: Pawn,

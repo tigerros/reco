@@ -34,8 +34,11 @@ pub const BROOKLYN_BENKO_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Reversed Brooklyn Defense", "Brooklyn Benko Gambit"],
+    name: &[
+        "Hungarian Opening",
+        "Reversed Brooklyn Defense",
+        "Brooklyn Benko Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

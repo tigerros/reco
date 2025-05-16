@@ -34,8 +34,7 @@ pub const RIO_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<67>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Berlin Defense", "Rio Gambit Accepted"],
+    name: &["Ruy Lopez", "Berlin Defense", "Rio Gambit Accepted"],
     moves: &[
         Normal {
             role: Pawn,

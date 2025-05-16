@@ -34,8 +34,7 @@ pub const SWISS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Swiss Gambit"],
+    name: &["Bird Opening", "Swiss Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SPANISH_COUNTERGAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<60>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Spanish Countergambit"],
+    name: &["Ruy Lopez", "Spanish Countergambit"],
     moves: &[
         Normal {
             role: Pawn,

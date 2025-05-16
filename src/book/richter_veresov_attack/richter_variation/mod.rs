@@ -34,8 +34,7 @@ pub const RICHTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Richter-Veresov Attack",
-    variation: &["Richter Variation"],
+    name: &["Richter-Veresov Attack", "Richter Variation"],
     moves: &[
         Normal {
             role: Pawn,

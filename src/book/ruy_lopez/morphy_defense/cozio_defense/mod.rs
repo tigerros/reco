@@ -34,8 +34,7 @@ pub const COZIO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<70>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Morphy Defense", "Cozio Defense"],
+    name: &["Ruy Lopez", "Morphy Defense", "Cozio Defense"],
     moves: &[
         Normal {
             role: Pawn,

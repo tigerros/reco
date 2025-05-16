@@ -34,8 +34,11 @@ pub const KLING_AND_HORWITZ_COUNTERATTACK: [Opening<'static, &str>; 1] = [Openin
         volume: Volume::C,
         category: RangedU8::new_static::<37>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Muzio Gambit", "Kling and Horwitz Counterattack"],
+    name: &[
+        "King's Gambit Accepted",
+        "Muzio Gambit",
+        "Kling and Horwitz Counterattack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const MAGNUS_SMITH_TRAP: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Magnus Smith Trap"],
+    name: &["Sicilian Defense", "Magnus Smith Trap"],
     moves: &[
         Normal {
             role: Pawn,

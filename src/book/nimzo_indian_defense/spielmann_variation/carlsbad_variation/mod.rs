@@ -34,8 +34,11 @@ pub const CARLSBAD_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Spielmann Variation", "Carlsbad Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Spielmann Variation",
+        "Carlsbad Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

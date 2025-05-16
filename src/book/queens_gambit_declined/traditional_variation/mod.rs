@@ -34,8 +34,7 @@ pub const TRADITIONAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Traditional Variation"],
+    name: &["Queen's Gambit Declined", "Traditional Variation"],
     moves: &[
         Normal {
             role: Pawn,

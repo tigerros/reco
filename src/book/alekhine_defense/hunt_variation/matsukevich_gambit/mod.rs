@@ -34,8 +34,7 @@ pub const MATSUKEVICH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Hunt Variation", "Matsukevich Gambit"],
+    name: &["Alekhine Defense", "Hunt Variation", "Matsukevich Gambit"],
     moves: &[
         Normal {
             role: Pawn,

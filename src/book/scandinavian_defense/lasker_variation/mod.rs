@@ -34,8 +34,7 @@ pub const LASKER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Lasker Variation"],
+    name: &["Scandinavian Defense", "Lasker Variation"],
     moves: &[
         Normal {
             role: Pawn,

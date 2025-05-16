@@ -34,8 +34,7 @@ pub const TARRASCH_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<32>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Tarrasch Defense"],
+    name: &["Queen's Gambit Declined", "Tarrasch Defense"],
     moves: &[
         Normal {
             role: Pawn,

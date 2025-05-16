@@ -35,8 +35,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -166,8 +165,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -317,8 +315,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -432,8 +429,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -570,8 +566,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -706,8 +701,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -858,8 +852,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -982,8 +975,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -1099,8 +1091,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -1215,8 +1206,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -1330,8 +1320,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -1424,8 +1413,7 @@ pub const ST_PETERSBURG_VARIATION: [Opening<'static, &str>; 12] = [
             volume: Volume::E,
             category: RangedU8::new_static::<44>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["St. Petersburg Variation"],
+        name: &["Nimzo-Indian Defense", "St. Petersburg Variation"],
         moves: &[
             Normal {
                 role: Pawn,

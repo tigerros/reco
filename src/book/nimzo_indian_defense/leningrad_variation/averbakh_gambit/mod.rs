@@ -34,8 +34,11 @@ pub const AVERBAKH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Leningrad Variation", "Averbakh Gambit"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Leningrad Variation",
+        "Averbakh Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

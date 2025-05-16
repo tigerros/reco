@@ -34,8 +34,7 @@ pub const MYERS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Scandinavian Variation", "Myers Gambit"],
+    name: &["Alekhine Defense", "Scandinavian Variation", "Myers Gambit"],
     moves: &[
         Normal {
             role: Pawn,

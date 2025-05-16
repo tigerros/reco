@@ -34,8 +34,11 @@ pub const BOBOTSOV_KORCHNOI_PETROSIAN_VARIATION: [Opening<'static, &str>; 1] = [
         volume: Volume::E,
         category: RangedU8::new_static::<81>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Sämisch Variation", "Bobotsov-Korchnoi-Petrosian Variation"],
+    name: &[
+        "King's Indian Defense",
+        "Sämisch Variation",
+        "Bobotsov-Korchnoi-Petrosian Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

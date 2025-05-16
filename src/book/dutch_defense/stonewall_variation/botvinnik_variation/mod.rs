@@ -34,8 +34,11 @@ pub const BOTVINNIK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<93>(),
     },
-    name: "Dutch Defense",
-    variation: &["Stonewall Variation", "Botvinnik Variation"],
+    name: &[
+        "Dutch Defense",
+        "Stonewall Variation",
+        "Botvinnik Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

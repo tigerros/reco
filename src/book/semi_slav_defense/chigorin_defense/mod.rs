@@ -35,8 +35,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Chigorin Defense"],
+        name: &["Semi-Slav Defense", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -164,8 +163,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Chigorin Defense"],
+        name: &["Semi-Slav Defense", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -286,8 +284,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Chigorin Defense"],
+        name: &["Semi-Slav Defense", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -459,8 +456,7 @@ pub const CHIGORIN_DEFENSE: [Opening<'static, &str>; 4] = [
             volume: Volume::D,
             category: RangedU8::new_static::<46>(),
         },
-        name: "Semi-Slav Defense",
-        variation: &["Chigorin Defense"],
+        name: &["Semi-Slav Defense", "Chigorin Defense"],
         moves: &[
             Normal {
                 role: Pawn,

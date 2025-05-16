@@ -34,8 +34,7 @@ pub const FYFE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &["Fyfe Gambit"],
+    name: &["Vienna Game", "Fyfe Gambit"],
     moves: &[
         Normal {
             role: Pawn,

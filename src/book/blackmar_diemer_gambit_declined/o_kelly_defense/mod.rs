@@ -34,8 +34,7 @@ pub const O_KELLY_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Declined",
-    variation: &["O'Kelly Defense"],
+    name: &["Blackmar-Diemer Gambit Declined", "O'Kelly Defense"],
     moves: &[
         Normal {
             role: Pawn,

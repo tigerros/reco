@@ -34,8 +34,7 @@ pub const ABRAHAMS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<31>(),
     },
-    name: "Queen's Gambit Declined",
-    variation: &["Semi-Slav", "Abrahams Variation"],
+    name: &["Queen's Gambit Declined", "Semi-Slav", "Abrahams Variation"],
     moves: &[
         Normal {
             role: Pawn,

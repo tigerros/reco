@@ -34,8 +34,11 @@ pub const NEW_YORK_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<70>(),
     },
-    name: "Benoni Defense",
-    variation: &["Classical Variation", "New York Variation"],
+    name: &[
+        "Benoni Defense",
+        "Classical Variation",
+        "New York Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,8 @@ pub const TARTAKOWER_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<52>(),
     },
-    name: "Indian Defense",
-    variation: &[
+    name: &[
+        "Indian Defense",
         "Budapest Defense",
         "Alekhine Variation",
         "Tartakower Defense",

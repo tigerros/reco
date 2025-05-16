@@ -34,8 +34,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<17>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Retreat Variation"],
+    name: &["French Defense", "Winawer Variation", "Retreat Variation"],
     moves: &[
         Normal {
             role: Pawn,

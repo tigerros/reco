@@ -35,8 +35,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<18>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Classical Variation"],
+        name: &["Caro-Kann Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const CLASSICAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<19>(),
         },
-        name: "Caro-Kann Defense",
-        variation: &["Classical Variation"],
+        name: &["Caro-Kann Defense", "Classical Variation"],
         moves: &[
             Normal {
                 role: Pawn,

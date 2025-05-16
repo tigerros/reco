@@ -34,8 +34,7 @@ pub const ENGLISH_ORANGUTAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<15>(),
     },
-    name: "English Orangutan",
-    variation: &[],
+    name: &["English Orangutan"],
     moves: &[
         Normal {
             role: Pawn,

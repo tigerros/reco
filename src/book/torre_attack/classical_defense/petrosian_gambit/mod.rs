@@ -34,8 +34,7 @@ pub const PETROSIAN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<46>(),
     },
-    name: "Torre Attack",
-    variation: &["Classical Defense", "Petrosian Gambit"],
+    name: &["Torre Attack", "Classical Defense", "Petrosian Gambit"],
     moves: &[
         Normal {
             role: Pawn,

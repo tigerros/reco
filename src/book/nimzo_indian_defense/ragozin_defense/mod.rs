@@ -34,8 +34,7 @@ pub const RAGOZIN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Ragozin Defense"],
+    name: &["Nimzo-Indian Defense", "Ragozin Defense"],
     moves: &[
         Normal {
             role: Pawn,

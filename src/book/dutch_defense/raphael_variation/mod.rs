@@ -34,8 +34,7 @@ pub const RAPHAEL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Dutch Defense",
-    variation: &["Raphael Variation"],
+    name: &["Dutch Defense", "Raphael Variation"],
     moves: &[
         Normal {
             role: Pawn,

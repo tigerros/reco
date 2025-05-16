@@ -34,8 +34,8 @@ pub const KHARLOV_KRAMNIK_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<30>(),
     },
-    name: "Sicilian Defense",
-    variation: &[
+    name: &[
+        "Sicilian Defense",
         "Closed",
         "Anti-Sveshnikov Variation",
         "Kharlov-Kramnik Line",

@@ -34,8 +34,7 @@ pub const SEIRAWAN_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Indian Defense",
-    variation: &["Seirawan Attack"],
+    name: &["Indian Defense", "Seirawan Attack"],
     moves: &[
         Normal {
             role: Pawn,

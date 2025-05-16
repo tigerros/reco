@@ -34,8 +34,7 @@ pub const PRZEPIORKA_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<49>(),
     },
-    name: "Indian Defense",
-    variation: &["Przepiorka Variation"],
+    name: &["Indian Defense", "Przepiorka Variation"],
     moves: &[
         Normal {
             role: Pawn,

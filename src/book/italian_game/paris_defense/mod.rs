@@ -34,8 +34,7 @@ pub const PARIS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Paris Defense"],
+    name: &["Italian Game", "Paris Defense"],
     moves: &[
         Normal {
             role: Pawn,

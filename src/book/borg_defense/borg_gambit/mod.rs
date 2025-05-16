@@ -35,8 +35,7 @@ pub const BORG_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<40>(),
         },
-        name: "Borg Defense",
-        variation: &["Borg Gambit"],
+        name: &["Borg Defense", "Borg Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -87,8 +86,7 @@ pub const BORG_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Borg Defense",
-        variation: &["Borg Gambit"],
+        name: &["Borg Defense", "Borg Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

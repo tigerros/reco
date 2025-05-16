@@ -34,8 +34,11 @@ pub const BURILLE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<94>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Three Knights Variation", "Burille Variation"],
+    name: &[
+        "Grünfeld Defense",
+        "Three Knights Variation",
+        "Burille Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const STEINER_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<81>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Steiner Attack"],
+    name: &["King's Indian Defense", "Steiner Attack"],
     moves: &[
         Normal {
             role: Pawn,

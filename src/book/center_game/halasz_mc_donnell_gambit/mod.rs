@@ -34,8 +34,7 @@ pub const HALASZ_MC_DONNELL_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<21>(),
     },
-    name: "Center Game",
-    variation: &["Halasz-McDonnell Gambit"],
+    name: &["Center Game", "Halasz-McDonnell Gambit"],
     moves: &[
         Normal {
             role: Pawn,

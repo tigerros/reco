@@ -34,8 +34,11 @@ pub const BELYAVSKY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<34>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Classical Variation", "Belyavsky Gambit"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Belyavsky Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

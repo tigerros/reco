@@ -34,8 +34,7 @@ pub const HAMPPE_MEITNER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<25>(),
     },
-    name: "Vienna Game",
-    variation: &["Hamppe-Meitner Variation"],
+    name: &["Vienna Game", "Hamppe-Meitner Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const CLOSED_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<5>(),
         },
-        name: "French Defense",
-        variation: &["Tarrasch Variation", "Closed Variation"],
+        name: &["French Defense", "Tarrasch Variation", "Closed Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -157,8 +156,7 @@ pub const CLOSED_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<5>(),
         },
-        name: "French Defense",
-        variation: &["Tarrasch Variation", "Closed Variation"],
+        name: &["French Defense", "Tarrasch Variation", "Closed Variation"],
         moves: &[
             Normal {
                 role: Pawn,

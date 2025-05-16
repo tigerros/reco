@@ -34,8 +34,7 @@ pub const DUSSELDORF_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Van Geet Opening",
-    variation: &["Düsseldorf Gambit"],
+    name: &["Van Geet Opening", "Düsseldorf Gambit"],
     moves: &[
         Normal {
             role: Knight,

@@ -34,8 +34,11 @@ pub const ANTI_BENONI_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<31>(),
     },
-    name: "English Opening",
-    variation: &["Symmetrical Variation", "Anti-Benoni Variation"],
+    name: &[
+        "English Opening",
+        "Symmetrical Variation",
+        "Anti-Benoni Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

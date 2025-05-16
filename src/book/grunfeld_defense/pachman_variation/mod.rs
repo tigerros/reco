@@ -34,8 +34,7 @@ pub const PACHMAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<95>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Pachman Variation"],
+    name: &["Grünfeld Defense", "Pachman Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const SMYSLOV_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<94>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Smyslov Defense"],
+    name: &["Grünfeld Defense", "Smyslov Defense"],
     moves: &[
         Normal {
             role: Pawn,

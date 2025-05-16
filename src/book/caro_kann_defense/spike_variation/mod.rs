@@ -34,8 +34,7 @@ pub const SPIKE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Spike Variation"],
+    name: &["Caro-Kann Defense", "Spike Variation"],
     moves: &[
         Normal {
             role: Pawn,

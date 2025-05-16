@@ -34,8 +34,7 @@ pub const WESTERMANN_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Westermann Gambit"],
+    name: &["Modern Defense", "Westermann Gambit"],
     moves: &[
         Normal {
             role: Pawn,

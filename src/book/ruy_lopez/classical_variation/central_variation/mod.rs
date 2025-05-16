@@ -34,8 +34,7 @@ pub const CENTRAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<64>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Classical Variation", "Central Variation"],
+    name: &["Ruy Lopez", "Classical Variation", "Central Variation"],
     moves: &[
         Normal {
             role: Pawn,

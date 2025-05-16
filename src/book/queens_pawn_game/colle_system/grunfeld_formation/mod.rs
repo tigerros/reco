@@ -34,8 +34,7 @@ pub const GRUNFELD_FORMATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Colle System", "Grünfeld Formation"],
+    name: &["Queen's Pawn Game", "Colle System", "Grünfeld Formation"],
     moves: &[
         Normal {
             role: Pawn,

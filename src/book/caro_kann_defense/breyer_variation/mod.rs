@@ -34,8 +34,7 @@ pub const BREYER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Breyer Variation"],
+    name: &["Caro-Kann Defense", "Breyer Variation"],
     moves: &[
         Normal {
             role: Pawn,

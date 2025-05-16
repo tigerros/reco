@@ -35,8 +35,7 @@ pub const KINGS_INDIAN_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<5>(),
         },
-        name: "King's Indian Attack",
-        variation: &[],
+        name: &["King's Indian Attack"],
         moves: &[
             Normal {
                 role: Knight,
@@ -101,8 +100,7 @@ pub const KINGS_INDIAN_ATTACK: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<7>(),
         },
-        name: "King's Indian Attack",
-        variation: &[],
+        name: &["King's Indian Attack"],
         moves: &[
             Normal {
                 role: Knight,

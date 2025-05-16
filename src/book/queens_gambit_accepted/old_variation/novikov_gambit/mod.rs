@@ -34,8 +34,7 @@ pub const NOVIKOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Old Variation", "Novikov Gambit"],
+    name: &["Queen's Gambit Accepted", "Old Variation", "Novikov Gambit"],
     moves: &[
         Normal {
             role: Pawn,

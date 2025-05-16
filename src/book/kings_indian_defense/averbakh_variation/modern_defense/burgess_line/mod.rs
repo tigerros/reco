@@ -34,8 +34,12 @@ pub const BURGESS_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<73>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Averbakh Variation", "Modern Defense", "Burgess Line"],
+    name: &[
+        "King's Indian Defense",
+        "Averbakh Variation",
+        "Modern Defense",
+        "Burgess Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

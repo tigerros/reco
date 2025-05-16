@@ -34,8 +34,7 @@ pub const MANNHEIM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<23>(),
     },
-    name: "Queen's Gambit Accepted",
-    variation: &["Mannheim Variation"],
+    name: &["Queen's Gambit Accepted", "Mannheim Variation"],
     moves: &[
         Normal {
             role: Pawn,

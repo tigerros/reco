@@ -34,8 +34,7 @@ pub const ANGLO_SLAV_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Anglo-Slav Opening"],
+    name: &["Queen's Pawn Game", "Anglo-Slav Opening"],
     moves: &[
         Normal {
             role: Pawn,

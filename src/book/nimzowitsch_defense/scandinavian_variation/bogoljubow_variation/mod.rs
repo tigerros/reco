@@ -35,8 +35,11 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Nimzowitsch Defense",
-        variation: &["Scandinavian Variation", "Bogoljubow Variation"],
+        name: &[
+            "Nimzowitsch Defense",
+            "Scandinavian Variation",
+            "Bogoljubow Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +118,11 @@ pub const BOGOLJUBOW_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::B,
             category: RangedU8::new_static::<0>(),
         },
-        name: "Nimzowitsch Defense",
-        variation: &["Scandinavian Variation", "Bogoljubow Variation"],
+        name: &[
+            "Nimzowitsch Defense",
+            "Scandinavian Variation",
+            "Bogoljubow Variation",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

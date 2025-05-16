@@ -35,8 +35,11 @@ pub const SCHLECHTER_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<52>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Normal Variation", "Schlechter Defense"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Normal Variation",
+            "Schlechter Defense",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -151,8 +154,11 @@ pub const SCHLECHTER_DEFENSE: [Opening<'static, &str>; 2] = [
             volume: Volume::E,
             category: RangedU8::new_static::<52>(),
         },
-        name: "Nimzo-Indian Defense",
-        variation: &["Normal Variation", "Schlechter Defense"],
+        name: &[
+            "Nimzo-Indian Defense",
+            "Normal Variation",
+            "Schlechter Defense",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

@@ -34,8 +34,11 @@ pub const CLOSED_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<87>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Sämisch Variation", "Closed Variation"],
+    name: &[
+        "King's Indian Defense",
+        "Sämisch Variation",
+        "Closed Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

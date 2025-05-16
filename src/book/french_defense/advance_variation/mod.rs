@@ -35,8 +35,7 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<2>(),
         },
-        name: "French Defense",
-        variation: &["Advance Variation"],
+        name: &["French Defense", "Advance Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<2>(),
         },
-        name: "French Defense",
-        variation: &["Advance Variation"],
+        name: &["French Defense", "Advance Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -216,8 +214,7 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<2>(),
         },
-        name: "French Defense",
-        variation: &["Advance Variation"],
+        name: &["French Defense", "Advance Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -296,8 +293,7 @@ pub const ADVANCE_VARIATION: [Opening<'static, &str>; 4] = [
             volume: Volume::C,
             category: RangedU8::new_static::<2>(),
         },
-        name: "French Defense",
-        variation: &["Advance Variation"],
+        name: &["French Defense", "Advance Variation"],
         moves: &[
             Normal {
                 role: Pawn,

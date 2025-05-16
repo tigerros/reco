@@ -34,8 +34,7 @@ pub const AGED_GIBBON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Old Indian Defense",
-    variation: &["Aged Gibbon Gambit"],
+    name: &["Old Indian Defense", "Aged Gibbon Gambit"],
     moves: &[
         Normal {
             role: Pawn,

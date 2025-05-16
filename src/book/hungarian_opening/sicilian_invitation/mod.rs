@@ -34,8 +34,7 @@ pub const SICILIAN_INVITATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Sicilian Invitation"],
+    name: &["Hungarian Opening", "Sicilian Invitation"],
     moves: &[
         Normal {
             role: Pawn,

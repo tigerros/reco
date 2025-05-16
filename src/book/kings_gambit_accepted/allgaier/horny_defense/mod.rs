@@ -34,8 +34,7 @@ pub const HORNY_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<39>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Allgaier", "Horny Defense"],
+    name: &["King's Gambit Accepted", "Allgaier", "Horny Defense"],
     moves: &[
         Normal {
             role: Pawn,

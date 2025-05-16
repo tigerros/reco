@@ -34,8 +34,11 @@ pub const NIMZOWITSCH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Blackmar-Diemer Gambit Accepted",
-    variation: &["Bogoljubow Defense", "Nimzowitsch Attack"],
+    name: &[
+        "Blackmar-Diemer Gambit Accepted",
+        "Bogoljubow Defense",
+        "Nimzowitsch Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

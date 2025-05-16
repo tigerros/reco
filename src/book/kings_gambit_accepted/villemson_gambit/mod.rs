@@ -34,8 +34,7 @@ pub const VILLEMSON_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<33>(),
     },
-    name: "King's Gambit Accepted",
-    variation: &["Villemson Gambit"],
+    name: &["King's Gambit Accepted", "Villemson Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const ALBURT_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Chigorin Variation", "Alburt Defense"],
+    name: &["Queen's Pawn Game", "Chigorin Variation", "Alburt Defense"],
     moves: &[
         Normal {
             role: Pawn,

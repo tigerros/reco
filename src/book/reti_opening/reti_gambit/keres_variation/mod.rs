@@ -34,8 +34,7 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Réti Opening",
-    variation: &["Réti Gambit", "Keres Variation"],
+    name: &["Réti Opening", "Réti Gambit", "Keres Variation"],
     moves: &[
         Normal {
             role: Knight,

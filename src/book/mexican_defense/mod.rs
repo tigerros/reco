@@ -34,8 +34,7 @@ pub const MEXICAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Mexican Defense",
-    variation: &[],
+    name: &["Mexican Defense"],
     moves: &[
         Normal {
             role: Pawn,

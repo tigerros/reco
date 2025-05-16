@@ -34,8 +34,7 @@ pub const WITH_G3: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<70>(),
     },
-    name: "Neo-Grünfeld Defense",
-    variation: &["with g3"],
+    name: &["Neo-Grünfeld Defense", "with g3"],
     moves: &[
         Normal {
             role: Pawn,

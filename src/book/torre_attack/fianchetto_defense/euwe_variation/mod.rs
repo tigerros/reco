@@ -34,8 +34,7 @@ pub const EUWE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Torre Attack",
-    variation: &["Fianchetto Defense", "Euwe Variation"],
+    name: &["Torre Attack", "Fianchetto Defense", "Euwe Variation"],
     moves: &[
         Normal {
             role: Pawn,

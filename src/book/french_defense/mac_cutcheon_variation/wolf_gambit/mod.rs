@@ -34,8 +34,7 @@ pub const WOLF_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<15>(),
     },
-    name: "French Defense",
-    variation: &["MacCutcheon Variation", "Wolf Gambit"],
+    name: &["French Defense", "MacCutcheon Variation", "Wolf Gambit"],
     moves: &[
         Normal {
             role: Pawn,

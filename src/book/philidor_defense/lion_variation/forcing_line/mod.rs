@@ -34,8 +34,7 @@ pub const FORCING_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<41>(),
     },
-    name: "Philidor Defense",
-    variation: &["Lion Variation", "Forcing Line"],
+    name: &["Philidor Defense", "Lion Variation", "Forcing Line"],
     moves: &[
         Normal {
             role: Pawn,

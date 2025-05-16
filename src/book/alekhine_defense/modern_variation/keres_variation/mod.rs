@@ -34,8 +34,7 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<4>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Modern Variation", "Keres Variation"],
+    name: &["Alekhine Defense", "Modern Variation", "Keres Variation"],
     moves: &[
         Normal {
             role: Pawn,

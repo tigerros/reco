@@ -34,8 +34,7 @@ pub const AMPEL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Ampel Variation"],
+    name: &["Zukertort Opening", "Ampel Variation"],
     moves: &[
         Normal {
             role: Knight,

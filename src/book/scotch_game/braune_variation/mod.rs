@@ -34,8 +34,7 @@ pub const BRAUNE_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<45>(),
     },
-    name: "Scotch Game",
-    variation: &["Braune Variation"],
+    name: &["Scotch Game", "Braune Variation"],
     moves: &[
         Normal {
             role: Pawn,

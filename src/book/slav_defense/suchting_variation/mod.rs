@@ -34,8 +34,7 @@ pub const SUCHTING_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<15>(),
     },
-    name: "Slav Defense",
-    variation: &["Süchting Variation"],
+    name: &["Slav Defense", "Süchting Variation"],
     moves: &[
         Normal {
             role: Pawn,

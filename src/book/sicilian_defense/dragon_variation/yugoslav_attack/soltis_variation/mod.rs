@@ -34,8 +34,12 @@ pub const SOLTIS_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<79>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Dragon Variation", "Yugoslav Attack", "Soltis Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Dragon Variation",
+        "Yugoslav Attack",
+        "Soltis Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

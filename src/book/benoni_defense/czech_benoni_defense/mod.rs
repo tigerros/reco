@@ -34,8 +34,7 @@ pub const CZECH_BENONI_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Benoni Defense",
-    variation: &["Czech Benoni Defense"],
+    name: &["Benoni Defense", "Czech Benoni Defense"],
     moves: &[
         Normal {
             role: Pawn,

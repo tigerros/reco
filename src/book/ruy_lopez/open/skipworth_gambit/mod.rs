@@ -34,8 +34,7 @@ pub const SKIPWORTH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<80>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Open", "Skipworth Gambit"],
+    name: &["Ruy Lopez", "Open", "Skipworth Gambit"],
     moves: &[
         Normal {
             role: Pawn,

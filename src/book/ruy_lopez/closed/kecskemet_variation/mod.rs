@@ -34,8 +34,7 @@ pub const KECSKEMET_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<72>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Kecskemet Variation"],
+    name: &["Ruy Lopez", "Closed", "Kecskemet Variation"],
     moves: &[
         Normal {
             role: Pawn,

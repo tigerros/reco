@@ -34,8 +34,7 @@ pub const NIMZO_LARSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<5>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Nimzo-Larsen Variation"],
+    name: &["Zukertort Opening", "Nimzo-Larsen Variation"],
     moves: &[
         Normal {
             role: Knight,

@@ -34,8 +34,7 @@ pub const MASSACHUSETTS_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<12>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Massachusetts Defense"],
+    name: &["Caro-Kann Defense", "Massachusetts Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,11 @@ pub const BERTIN_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<35>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["Cunningham Defense", "Bertin Gambit"],
+        name: &[
+            "King's Gambit Accepted",
+            "Cunningham Defense",
+            "Bertin Gambit",
+        ],
         moves: &[
             Normal {
                 role: Pawn,
@@ -158,8 +161,11 @@ pub const BERTIN_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<35>(),
         },
-        name: "King's Gambit Accepted",
-        variation: &["Cunningham Defense", "Bertin Gambit"],
+        name: &[
+            "King's Gambit Accepted",
+            "Cunningham Defense",
+            "Bertin Gambit",
+        ],
         moves: &[
             Normal {
                 role: Pawn,

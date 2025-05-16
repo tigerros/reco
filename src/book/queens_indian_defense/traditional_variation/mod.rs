@@ -34,8 +34,7 @@ pub const TRADITIONAL_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Traditional Variation"],
+    name: &["Queen's Indian Defense", "Traditional Variation"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const BUCKER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Hungarian Opening",
-    variation: &["Bücker Gambit"],
+    name: &["Hungarian Opening", "Bücker Gambit"],
     moves: &[
         Normal {
             role: Pawn,

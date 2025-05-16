@@ -34,8 +34,7 @@ pub const ANTI_QUEENS_INDIAN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<17>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Anti-Queen's Indian System"],
+    name: &["Queen's Indian Defense", "Anti-Queen's Indian System"],
     moves: &[
         Normal {
             role: Pawn,

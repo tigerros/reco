@@ -34,8 +34,11 @@ pub const REUTER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<0>(),
     },
-    name: "French Defense",
-    variation: &["La Bourdonnais Variation", "Reuter Gambit"],
+    name: &[
+        "French Defense",
+        "La Bourdonnais Variation",
+        "Reuter Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

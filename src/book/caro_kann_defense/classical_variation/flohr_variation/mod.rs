@@ -34,8 +34,11 @@ pub const FLOHR_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<18>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Classical Variation", "Flohr Variation"],
+    name: &[
+        "Caro-Kann Defense",
+        "Classical Variation",
+        "Flohr Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

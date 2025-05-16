@@ -34,8 +34,7 @@ pub const DEUTZ_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Italian Game",
-    variation: &["Deutz Gambit"],
+    name: &["Italian Game", "Deutz Gambit"],
     moves: &[
         Normal {
             role: Pawn,

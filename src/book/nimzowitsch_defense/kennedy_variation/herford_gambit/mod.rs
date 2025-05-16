@@ -34,8 +34,7 @@ pub const HERFORD_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["Kennedy Variation", "Herford Gambit"],
+    name: &["Nimzowitsch Defense", "Kennedy Variation", "Herford Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const GOTEBORG_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<1>(),
     },
-    name: "Scandinavian Defense",
-    variation: &["Anderssen Counterattack", "Goteborg System"],
+    name: &[
+        "Scandinavian Defense",
+        "Anderssen Counterattack",
+        "Goteborg System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

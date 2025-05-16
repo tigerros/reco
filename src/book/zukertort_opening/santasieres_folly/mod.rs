@@ -34,8 +34,7 @@ pub const SANTASIERES_FOLLY: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Zukertort Opening",
-    variation: &["Santasiere's Folly"],
+    name: &["Zukertort Opening", "Santasiere's Folly"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const COCHRANE_ANDERSSEN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Scotch Game",
-    variation: &["Scotch Gambit", "Cochrane-Anderssen Variation"],
+    name: &[
+        "Scotch Game",
+        "Scotch Gambit",
+        "Cochrane-Anderssen Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

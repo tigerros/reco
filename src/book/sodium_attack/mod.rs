@@ -34,8 +34,7 @@ pub const SODIUM_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Sodium Attack",
-    variation: &[],
+    name: &["Sodium Attack"],
     moves: &[Normal {
         role: Knight,
         from: B1,

@@ -34,8 +34,7 @@ pub const MONTEVIDEO_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Montevideo Defense",
-    variation: &[],
+    name: &["Montevideo Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const SHOWALTER_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<51>(),
     },
-    name: "Italian Game",
-    variation: &["Evans Gambit Declined", "Showalter Variation"],
+    name: &[
+        "Italian Game",
+        "Evans Gambit Declined",
+        "Showalter Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

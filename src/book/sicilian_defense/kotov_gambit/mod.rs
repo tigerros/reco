@@ -34,8 +34,7 @@ pub const KOTOV_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<50>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Kotov Gambit"],
+    name: &["Sicilian Defense", "Kotov Gambit"],
     moves: &[
         Normal {
             role: Pawn,

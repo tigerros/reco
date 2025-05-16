@@ -34,8 +34,7 @@ pub const SCHLECHTER_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Bird Opening",
-    variation: &["Schlechter Gambit"],
+    name: &["Bird Opening", "Schlechter Gambit"],
     moves: &[
         Normal {
             role: Pawn,

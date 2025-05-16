@@ -34,8 +34,11 @@ pub const CLASSICAL_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Normal Variation", "Classical Defense"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Normal Variation",
+        "Classical Defense",
+    ],
     moves: &[
         Normal {
             role: Pawn,

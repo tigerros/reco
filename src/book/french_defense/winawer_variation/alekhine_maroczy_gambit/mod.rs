@@ -34,8 +34,11 @@ pub const ALEKHINE_MAROCZY_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<15>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Alekhine-Maróczy Gambit"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Alekhine-Maróczy Gambit",
+    ],
     moves: &[
         Normal {
             role: Pawn,

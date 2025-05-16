@@ -34,8 +34,7 @@ pub const EAST_INDIAN_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<48>(),
     },
-    name: "East Indian Defense",
-    variation: &[],
+    name: &["East Indian Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,7 @@ pub const KRAUSE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Four Knights Game",
-    variation: &["Scotch Variation", "Krause Gambit"],
+    name: &["Four Knights Game", "Scotch Variation", "Krause Gambit"],
     moves: &[
         Normal {
             role: Pawn,

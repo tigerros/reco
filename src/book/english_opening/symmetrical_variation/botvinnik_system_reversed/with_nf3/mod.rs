@@ -34,8 +34,8 @@ pub const WITH_NF3: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<37>(),
     },
-    name: "English Opening",
-    variation: &[
+    name: &[
+        "English Opening",
         "Symmetrical Variation",
         "Botvinnik System Reversed",
         "with Nf3",

@@ -34,8 +34,7 @@ pub const FRENCH_CONNECTION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<0>(),
     },
-    name: "Nimzowitsch Defense",
-    variation: &["French Connection"],
+    name: &["Nimzowitsch Defense", "French Connection"],
     moves: &[
         Normal {
             role: Pawn,

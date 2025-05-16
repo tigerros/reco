@@ -34,8 +34,7 @@ pub const OPOCENSKY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<94>(),
     },
-    name: "Grünfeld Defense",
-    variation: &["Opocensky Variation"],
+    name: &["Grünfeld Defense", "Opocensky Variation"],
     moves: &[
         Normal {
             role: Pawn,

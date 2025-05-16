@@ -34,8 +34,7 @@ pub const HOBBS_ZILBERMINTS_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<30>(),
     },
-    name: "King's Gambit Declined",
-    variation: &["Hobbs-Zilbermints Gambit"],
+    name: &["King's Gambit Declined", "Hobbs-Zilbermints Gambit"],
     moves: &[
         Normal {
             role: Pawn,

@@ -34,8 +34,11 @@ pub const SCHMIDT_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<44>(),
     },
-    name: "Ponziani Opening",
-    variation: &["Ponziani Countergambit", "Schmidt Attack"],
+    name: &[
+        "Ponziani Opening",
+        "Ponziani Countergambit",
+        "Schmidt Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

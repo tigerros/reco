@@ -34,8 +34,7 @@ pub const TORTOISE_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["Tortoise Opening"],
+    name: &["King's Pawn Game", "Tortoise Opening"],
     moves: &[
         Normal {
             role: Pawn,

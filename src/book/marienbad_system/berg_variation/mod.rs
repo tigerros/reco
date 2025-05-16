@@ -34,8 +34,7 @@ pub const BERG_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<47>(),
     },
-    name: "Marienbad System",
-    variation: &["Berg Variation"],
+    name: &["Marienbad System", "Berg Variation"],
     moves: &[
         Normal {
             role: Pawn,

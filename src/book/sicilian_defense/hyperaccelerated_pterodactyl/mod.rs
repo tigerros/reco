@@ -34,8 +34,7 @@ pub const HYPERACCELERATED_PTERODACTYL: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<27>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Hyperaccelerated Pterodactyl"],
+    name: &["Sicilian Defense", "Hyperaccelerated Pterodactyl"],
     moves: &[
         Normal {
             role: Pawn,

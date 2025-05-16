@@ -35,8 +35,7 @@ pub const RICHTER_RAUZER_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<60>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Richter-Rauzer Variation"],
+        name: &["Sicilian Defense", "Richter-Rauzer Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -150,8 +149,7 @@ pub const RICHTER_RAUZER_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<62>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Richter-Rauzer Variation"],
+        name: &["Sicilian Defense", "Richter-Rauzer Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -279,8 +277,7 @@ pub const RICHTER_RAUZER_VARIATION: [Opening<'static, &str>; 3] = [
             volume: Volume::B,
             category: RangedU8::new_static::<62>(),
         },
-        name: "Sicilian Defense",
-        variation: &["Richter-Rauzer Variation"],
+        name: &["Sicilian Defense", "Richter-Rauzer Variation"],
         moves: &[
             Normal {
                 role: Pawn,

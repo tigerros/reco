@@ -34,8 +34,7 @@ pub const RETI_OPENING: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<9>(),
     },
-    name: "Réti Opening",
-    variation: &[],
+    name: &["Réti Opening"],
     moves: &[
         Normal {
             role: Knight,

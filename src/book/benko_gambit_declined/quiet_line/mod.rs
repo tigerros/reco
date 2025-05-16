@@ -34,8 +34,7 @@ pub const QUIET_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<57>(),
     },
-    name: "Benko Gambit Declined",
-    variation: &["Quiet Line"],
+    name: &["Benko Gambit Declined", "Quiet Line"],
     moves: &[
         Normal {
             role: Pawn,

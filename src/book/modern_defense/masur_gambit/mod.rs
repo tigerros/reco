@@ -34,8 +34,7 @@ pub const MASUR_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<6>(),
     },
-    name: "Modern Defense",
-    variation: &["Masur Gambit"],
+    name: &["Modern Defense", "Masur Gambit"],
     moves: &[
         Normal {
             role: Pawn,

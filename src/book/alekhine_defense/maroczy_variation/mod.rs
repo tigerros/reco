@@ -34,8 +34,7 @@ pub const MAROCZY_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Alekhine Defense",
-    variation: &["Maróczy Variation"],
+    name: &["Alekhine Defense", "Maróczy Variation"],
     moves: &[
         Normal {
             role: Pawn,

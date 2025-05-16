@@ -34,8 +34,7 @@ pub const KINGS_INDIAN_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<48>(),
     },
-    name: "Indian Defense",
-    variation: &["Colle System", "King's Indian Variation"],
+    name: &["Indian Defense", "Colle System", "King's Indian Variation"],
     moves: &[
         Normal {
             role: Pawn,

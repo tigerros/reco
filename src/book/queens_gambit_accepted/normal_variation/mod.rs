@@ -35,8 +35,7 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<21>(),
         },
-        name: "Queen's Gambit Accepted",
-        variation: &["Normal Variation"],
+        name: &["Queen's Gambit Accepted", "Normal Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const NORMAL_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::D,
             category: RangedU8::new_static::<25>(),
         },
-        name: "Queen's Gambit Accepted",
-        variation: &["Normal Variation"],
+        name: &["Queen's Gambit Accepted", "Normal Variation"],
         moves: &[
             Normal {
                 role: Pawn,

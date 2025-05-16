@@ -34,8 +34,7 @@ pub const NEMETH_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<20>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Kronberger Variation", "Nemeth Gambit"],
+    name: &["Sicilian Defense", "Kronberger Variation", "Nemeth Gambit"],
     moves: &[
         Normal {
             role: Pawn,

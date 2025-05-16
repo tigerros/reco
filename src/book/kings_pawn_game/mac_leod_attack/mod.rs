@@ -34,8 +34,7 @@ pub const MAC_LEOD_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<20>(),
     },
-    name: "King's Pawn Game",
-    variation: &["MacLeod Attack"],
+    name: &["King's Pawn Game", "MacLeod Attack"],
     moves: &[
         Normal {
             role: Pawn,

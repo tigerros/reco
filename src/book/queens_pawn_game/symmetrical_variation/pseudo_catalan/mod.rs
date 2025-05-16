@@ -34,8 +34,11 @@ pub const PSEUDO_CATALAN: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::D,
         category: RangedU8::new_static::<2>(),
     },
-    name: "Queen's Pawn Game",
-    variation: &["Symmetrical Variation", "Pseudo-Catalan"],
+    name: &[
+        "Queen's Pawn Game",
+        "Symmetrical Variation",
+        "Pseudo-Catalan",
+    ],
     moves: &[
         Normal {
             role: Pawn,

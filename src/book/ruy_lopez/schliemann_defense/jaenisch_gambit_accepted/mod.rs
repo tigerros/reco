@@ -34,8 +34,11 @@ pub const JAENISCH_GAMBIT_ACCEPTED: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<63>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Schliemann Defense", "Jaenisch Gambit Accepted"],
+    name: &[
+        "Ruy Lopez",
+        "Schliemann Defense",
+        "Jaenisch Gambit Accepted",
+    ],
     moves: &[
         Normal {
             role: Pawn,

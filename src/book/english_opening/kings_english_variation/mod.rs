@@ -35,8 +35,7 @@ pub const KINGS_ENGLISH_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<20>(),
         },
-        name: "English Opening",
-        variation: &["King's English Variation"],
+        name: &["English Opening", "King's English Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -87,8 +86,7 @@ pub const KINGS_ENGLISH_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<21>(),
         },
-        name: "English Opening",
-        variation: &["King's English Variation"],
+        name: &["English Opening", "King's English Variation"],
         moves: &[
             Normal {
                 role: Pawn,

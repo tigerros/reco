@@ -34,8 +34,8 @@ pub const NIGHTINGALE_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<70>(),
     },
-    name: "Ruy Lopez",
-    variation: &[
+    name: &[
+        "Ruy Lopez",
         "Morphy Defense",
         "Norwegian Variation",
         "Nightingale Gambit",

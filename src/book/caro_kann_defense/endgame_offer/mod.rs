@@ -34,8 +34,7 @@ pub const ENDGAME_OFFER: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<10>(),
     },
-    name: "Caro-Kann Defense",
-    variation: &["Endgame Offer"],
+    name: &["Caro-Kann Defense", "Endgame Offer"],
     moves: &[
         Normal {
             role: Pawn,

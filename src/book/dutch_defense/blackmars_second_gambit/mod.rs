@@ -34,8 +34,7 @@ pub const BLACKMARS_SECOND_GAMBIT: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<82>(),
     },
-    name: "Dutch Defense",
-    variation: &["Blackmar's Second Gambit"],
+    name: &["Dutch Defense", "Blackmar's Second Gambit"],
     moves: &[
         Normal {
             role: Pawn,

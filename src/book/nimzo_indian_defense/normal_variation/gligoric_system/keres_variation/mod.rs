@@ -34,8 +34,12 @@ pub const KERES_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<53>(),
     },
-    name: "Nimzo-Indian Defense",
-    variation: &["Normal Variation", "Gligoric System", "Keres Variation"],
+    name: &[
+        "Nimzo-Indian Defense",
+        "Normal Variation",
+        "Gligoric System",
+        "Keres Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

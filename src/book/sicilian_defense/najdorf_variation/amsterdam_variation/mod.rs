@@ -34,8 +34,11 @@ pub const AMSTERDAM_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<93>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Najdorf Variation", "Amsterdam Variation"],
+    name: &[
+        "Sicilian Defense",
+        "Najdorf Variation",
+        "Amsterdam Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

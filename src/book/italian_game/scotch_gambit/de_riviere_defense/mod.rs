@@ -34,8 +34,7 @@ pub const DE_RIVIERE_DEFENSE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<56>(),
     },
-    name: "Italian Game",
-    variation: &["Scotch Gambit", "de Riviere Defense"],
+    name: &["Italian Game", "Scotch Gambit", "de Riviere Defense"],
     moves: &[
         Normal {
             role: Pawn,

@@ -35,8 +35,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
             volume: Volume::E,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Bogo-Indian Defense",
-        variation: &["Retreat Variation"],
+        name: &["Bogo-Indian Defense", "Retreat Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -129,8 +128,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
             volume: Volume::E,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Bogo-Indian Defense",
-        variation: &["Retreat Variation"],
+        name: &["Bogo-Indian Defense", "Retreat Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -295,8 +293,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
             volume: Volume::E,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Bogo-Indian Defense",
-        variation: &["Retreat Variation"],
+        name: &["Bogo-Indian Defense", "Retreat Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -454,8 +451,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
             volume: Volume::E,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Bogo-Indian Defense",
-        variation: &["Retreat Variation"],
+        name: &["Bogo-Indian Defense", "Retreat Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -571,8 +567,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
             volume: Volume::E,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Bogo-Indian Defense",
-        variation: &["Retreat Variation"],
+        name: &["Bogo-Indian Defense", "Retreat Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -702,8 +697,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
             volume: Volume::E,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Bogo-Indian Defense",
-        variation: &["Retreat Variation"],
+        name: &["Bogo-Indian Defense", "Retreat Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -818,8 +812,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
             volume: Volume::E,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Bogo-Indian Defense",
-        variation: &["Retreat Variation"],
+        name: &["Bogo-Indian Defense", "Retreat Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -956,8 +949,7 @@ pub const RETREAT_VARIATION: [Opening<'static, &str>; 8] = [
             volume: Volume::E,
             category: RangedU8::new_static::<11>(),
         },
-        name: "Bogo-Indian Defense",
-        variation: &["Retreat Variation"],
+        name: &["Bogo-Indian Defense", "Retreat Variation"],
         moves: &[
             Normal {
                 role: Pawn,

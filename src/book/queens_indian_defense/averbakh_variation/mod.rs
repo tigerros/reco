@@ -34,8 +34,7 @@ pub const AVERBAKH_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<14>(),
     },
-    name: "Queen's Indian Defense",
-    variation: &["Averbakh Variation"],
+    name: &["Queen's Indian Defense", "Averbakh Variation"],
     moves: &[
         Normal {
             role: Pawn,

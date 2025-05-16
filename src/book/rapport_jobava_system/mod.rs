@@ -35,8 +35,7 @@ pub const RAPPORT_JOBAVA_SYSTEM: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Rapport-Jobava System",
-        variation: &[],
+        name: &["Rapport-Jobava System"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -115,8 +114,7 @@ pub const RAPPORT_JOBAVA_SYSTEM: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Rapport-Jobava System",
-        variation: &[],
+        name: &["Rapport-Jobava System"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -195,8 +193,7 @@ pub const RAPPORT_JOBAVA_SYSTEM: [Opening<'static, &str>; 3] = [
             volume: Volume::D,
             category: RangedU8::new_static::<1>(),
         },
-        name: "Rapport-Jobava System",
-        variation: &[],
+        name: &["Rapport-Jobava System"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -264,3 +261,5 @@ pub const RAPPORT_JOBAVA_SYSTEM: [Opening<'static, &str>; 3] = [
         },
     },
 ];
+pub mod with_e6;
+pub use with_e6::WITH_E6;

@@ -34,8 +34,11 @@ pub const YUGOSLAV_VARIATION: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<65>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Fianchetto Variation", "Yugoslav Variation"],
+    name: &[
+        "King's Indian Defense",
+        "Fianchetto Variation",
+        "Yugoslav Variation",
+    ],
     moves: &[
         Normal {
             role: Pawn,

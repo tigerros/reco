@@ -34,8 +34,12 @@ pub const MILNER_BARRY_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::B,
         category: RangedU8::new_static::<22>(),
     },
-    name: "Sicilian Defense",
-    variation: &["Alapin Variation", "Barmen Defense", "Milner-Barry Attack"],
+    name: &[
+        "Sicilian Defense",
+        "Alapin Variation",
+        "Barmen Defense",
+        "Milner-Barry Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

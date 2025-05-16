@@ -34,8 +34,12 @@ pub const ARMENIAN_LINE: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<17>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Retreat Variation", "Armenian Line"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Retreat Variation",
+        "Armenian Line",
+    ],
     moves: &[
         Normal {
             role: Pawn,

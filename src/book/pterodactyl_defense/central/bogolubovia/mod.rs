@@ -34,8 +34,7 @@ pub const BOGOLUBOVIA: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::A,
         category: RangedU8::new_static::<42>(),
     },
-    name: "Pterodactyl Defense",
-    variation: &["Central", "Bogolubovia"],
+    name: &["Pterodactyl Defense", "Central", "Bogolubovia"],
     moves: &[
         Normal {
             role: Pawn,

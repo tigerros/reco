@@ -34,8 +34,12 @@ pub const CANAL_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<15>(),
     },
-    name: "French Defense",
-    variation: &["Winawer Variation", "Exchange Variation", "Canal Attack"],
+    name: &[
+        "French Defense",
+        "Winawer Variation",
+        "Exchange Variation",
+        "Canal Attack",
+    ],
     moves: &[
         Normal {
             role: Pawn,

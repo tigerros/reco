@@ -34,8 +34,7 @@ pub const YUGOSLAV_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<97>(),
     },
-    name: "Ruy Lopez",
-    variation: &["Closed", "Chigorin", "Yugoslav System"],
+    name: &["Ruy Lopez", "Closed", "Chigorin", "Yugoslav System"],
     moves: &[
         Normal {
             role: Pawn,

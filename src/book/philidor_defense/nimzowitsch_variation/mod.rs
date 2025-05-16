@@ -35,8 +35,7 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &["Nimzowitsch Variation"],
+        name: &["Philidor Defense", "Nimzowitsch Variation"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -122,8 +121,7 @@ pub const NIMZOWITSCH_VARIATION: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<41>(),
         },
-        name: "Philidor Defense",
-        variation: &["Nimzowitsch Variation"],
+        name: &["Philidor Defense", "Nimzowitsch Variation"],
         moves: &[
             Normal {
                 role: Pawn,

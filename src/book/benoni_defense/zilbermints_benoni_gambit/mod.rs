@@ -35,8 +35,7 @@ pub const ZILBERMINTS_BENONI_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Benoni Defense",
-        variation: &["Zilbermints-Benoni Gambit"],
+        name: &["Benoni Defense", "Zilbermints-Benoni Gambit"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -108,8 +107,7 @@ pub const ZILBERMINTS_BENONI_GAMBIT: [Opening<'static, &str>; 2] = [
             volume: Volume::A,
             category: RangedU8::new_static::<43>(),
         },
-        name: "Benoni Defense",
-        variation: &["Zilbermints-Benoni Gambit"],
+        name: &["Benoni Defense", "Zilbermints-Benoni Gambit"],
         moves: &[
             Normal {
                 role: Pawn,

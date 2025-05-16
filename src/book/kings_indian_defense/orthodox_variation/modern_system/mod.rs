@@ -34,8 +34,11 @@ pub const MODERN_SYSTEM: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::E,
         category: RangedU8::new_static::<97>(),
     },
-    name: "King's Indian Defense",
-    variation: &["Orthodox Variation", "Modern System"],
+    name: &[
+        "King's Indian Defense",
+        "Orthodox Variation",
+        "Modern System",
+    ],
     moves: &[
         Normal {
             role: Pawn,

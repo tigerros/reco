@@ -34,8 +34,7 @@ pub const NIMZOWITSCH_ATTACK: [Opening<'static, &str>; 1] = [Opening {
         volume: Volume::C,
         category: RangedU8::new_static::<40>(),
     },
-    name: "Latvian Gambit Accepted",
-    variation: &["Nimzowitsch Attack"],
+    name: &["Latvian Gambit Accepted", "Nimzowitsch Attack"],
     moves: &[
         Normal {
             role: Pawn,

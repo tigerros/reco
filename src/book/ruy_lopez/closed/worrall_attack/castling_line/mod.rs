@@ -35,8 +35,7 @@ pub const CASTLING_LINE: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<86>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Worrall Attack", "Castling Line"],
+        name: &["Ruy Lopez", "Closed", "Worrall Attack", "Castling Line"],
         moves: &[
             Normal {
                 role: Pawn,
@@ -159,8 +158,7 @@ pub const CASTLING_LINE: [Opening<'static, &str>; 2] = [
             volume: Volume::C,
             category: RangedU8::new_static::<86>(),
         },
-        name: "Ruy Lopez",
-        variation: &["Closed", "Worrall Attack", "Castling Line"],
+        name: &["Ruy Lopez", "Closed", "Worrall Attack", "Castling Line"],
         moves: &[
             Normal {
                 role: Pawn,
