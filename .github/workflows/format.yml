@@ -3,6 +3,12 @@ on: [push, pull_request]
 
 jobs:
   format:
+    strategy:
+      matrix:
+        manifest:
+          - "Cargo.toml"
+          - "librarian/Cargo.toml"
+
     runs-on: ubuntu-latest
 
     steps:
@@ -12,4 +18,4 @@ jobs:
           components: rustfmt
 
       - name: Format
-        run: cargo +nightly fmt --all --check
+        run: cargo +nightly fmt --manifest-path ${{ matrix.manifest }} --check

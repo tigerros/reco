@@ -7,8 +7,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Install cargo-hack
-        uses: taiki-e/install-action@cargo-hack
-
       - name: Check SemVer
-        run: cargo hack --feature-powerset semver-checks --workspace
+        uses: obi1kenobi/cargo-semver-checks-action@v2
+        with:
+          feature-group: all-features

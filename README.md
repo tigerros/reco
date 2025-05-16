@@ -15,10 +15,10 @@ No-std and no-alloc compatible.
 - `serde`: enables serde support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
 
 ## Sourcing
-The ECO entries are generated using the unpublished `reco-librarian` crate.
-To make sure they are up to date, there's a workflow that runs `reco-librarian` every day and makes a PR if any changes are detected.
+The ECO entries are generated using the unpublished `librarian` crate.
+To make sure they are up to date, there's a workflow that runs `librarian` every day and makes a PR if any changes are detected.
 
-See [`reco-librarian`'s README](https://github.com/tigerros/reco/tree/master/librarian/README.md) for more information.
+See [`librarian`'s README](https://github.com/tigerros/reco/tree/master/librarian/README.md) for information about running.
 
 ## Cloning
 If you clone this repository, **exclude the `src/book` directory from your IDE.**

@@ -3,6 +3,12 @@ on: [push, pull_request]
 
 jobs:
   sort:
+    strategy:
+      matrix:
+        cwd:
+          - "."
+          - "librarian"
+
     runs-on: ubuntu-latest
 
     steps:
@@ -13,4 +19,4 @@ jobs:
           tool: cargo-sort
 
       - name: Sort
-        run: cargo sort --check --workspace
+        run: cargo sort --check ${{ matrix.cwd }}
