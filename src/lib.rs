@@ -1,4 +1,4 @@
-#![no_std]
+//#![no_std]
 #![forbid(unsafe_code)]
 #![warn(
     clippy::pedantic,
@@ -59,8 +59,8 @@ pub use opening::Opening;
 #[cfg(feature = "alloc")]
 pub use opening::OpeningOwned;
 pub use volume::Volume;
-#[cfg(feature = "book")]
-pub mod book;
+//#[cfg(feature = "book")]
+//pub mod book;
 
 /// The 0-99 category of an opening.
 pub type Category = deranged::RangedU8<0, 99>;
