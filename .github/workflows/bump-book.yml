@@ -22,12 +22,14 @@ jobs:
       - name: Run librarian
         env:
           GITHUB_TOKEN: ${{ secrets.GET_GITHUB_PAT }}
-        run: cargo run --manifest-path librarian/Cargo.toml
+        run: |
+          echo "LIBRARIAN=$(cargo run --manifest-path librarian/Cargo.toml --quiet)" >> $GITHUB_ENV
 
       - name: Run cargo fmt
         run: cargo fmt --all
 
       - name: Check for changes
+        if: env.LIBRARIAN == 'success'
         run: |
           git config --global user.name "librarian"
           git config --global user.email "github-actions@users.noreply.github.com"
@@ -37,7 +39,7 @@ jobs:
           fi
 
       - name: Bump patch version if changes
-        if: env.CHANGED == 'true'
+        if: env.CHANGED == 'true' && env.LIBRARIAN == 'success'
         run: |
           file=Cargo.toml
           version_line=$(grep "^version" "$file")
@@ -48,13 +50,13 @@ jobs:
           sed -i "s/^version = \".*\"/version = \"$new_version\"/" "$file"
 
       - name: Read commit source SHA
-        if: env.CHANGED == 'true'
+        if: env.CHANGED == 'true' && env.LIBRARIAN == 'success'
         run: |
           echo "SHA=$(cat commit-source.txt)" >> $GITHUB_ENV
           echo "SHORT_SHA=$(cut -c1-7 < commit-source.txt)" >> $GITHUB_ENV
 
       - name: Create pull request
-        if: env.CHANGED == 'true'
+        if: env.CHANGED == 'true' && env.LIBRARIAN == 'success'
         uses: peter-evans/create-pull-request@v7
         with:
           title: 'Bump book using `${{ env.SHORT_SHA }}`'

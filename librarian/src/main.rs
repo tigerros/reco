@@ -25,9 +25,6 @@ use std::str::FromStr;
 use zip::ZipArchive;
 
 fn main() {
-    println!("commit anything in the openings directory before running this script");
-    println!("only commit results if this script prints out \"success\" and reco compiles");
-
     let (archive, commit_sha) = get_archive_and_commit();
     let mut archive = ZipArchive::new(Cursor::new(archive)).unwrap();
     let all_tsv = archive.by_name("all.tsv").unwrap();
