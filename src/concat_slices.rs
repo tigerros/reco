@@ -18,10 +18,7 @@ pub const fn concat_slices<'a, const LEN: usize, T: 'a>(slices: &'a [&'a [T]]) -
         let mut item_i = 0;
 
         while item_i < slice.len() {
-            // We reached LEN but there's another item to process
-            if out_i == LEN {
-                panic!("LEN lesser than length of all items");
-            }
+            assert!(out_i < LEN, "LEN lesser than length of all items");
 
             #[expect(
                 clippy::indexing_slicing,
@@ -44,12 +41,10 @@ pub const fn concat_slices<'a, const LEN: usize, T: 'a>(slices: &'a [&'a [T]]) -
         }
     }
 
-    // Index should normally not be equal to the length so you might think that <=
-    // would be applicable here, but remember that after the last item (index) is processed,
+    // Index should normally not be equal to the length
+    // but remember that after the last item (index) is processed,
     // we still increment out_i.
-    if out_i < LEN {
-        panic!("LEN greater than length of all items");
-    }
+    assert!(out_i == LEN, "LEN greater than length of all items");
 
     // SAFETY:
     // MaybeUninit<T> has the same size, alignment, and ABI as T.
@@ -131,13 +126,13 @@ mod tests {
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic = "specified LEN is greater than the length of all items"]
     fn len_greater_than_length_of_all_items() {
         concat_slices::<5, usize>(vec![&[4][..], &[2, 1][..]].as_slice());
     }
 
     #[test]
-    #[should_panic]
+    #[should_panic = "specified LEN is lesser than the length of all items"]
     fn len_lesser_than_length_of_all_items() {
         concat_slices::<1, usize>(vec![&[4][..], &[2, 1][..]].as_slice());
     }
