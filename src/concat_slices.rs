@@ -126,13 +126,13 @@ mod tests {
     }
 
     #[test]
-    #[should_panic = "specified LEN is greater than the length of all items"]
+    #[should_panic = "LEN greater than length of all items"]
     fn len_greater_than_length_of_all_items() {
         concat_slices::<5, usize>(vec![&[4][..], &[2, 1][..]].as_slice());
     }
 
     #[test]
-    #[should_panic = "specified LEN is lesser than the length of all items"]
+    #[should_panic = "LEN lesser than length of all items"]
     fn len_lesser_than_length_of_all_items() {
         concat_slices::<1, usize>(vec![&[4][..], &[2, 1][..]].as_slice());
     }
