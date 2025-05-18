@@ -68,14 +68,16 @@ pub const fn concat_slices<'a, const LEN: usize, T: 'a>(slices: &'a [&'a [T]]) -
     // The Rust compiler considers `[T; LEN]` a "dependent" type because of `LEN`
     // and doesn't try to verify it's the same size as `[U; LEN]`.
     #[expect(unsafe_code, reason = "see comment")]
-    unsafe { core::mem::transmute_copy(&out) }
+    unsafe {
+        core::mem::transmute_copy(&out)
+    }
 }
 
 #[cfg(test)]
 mod tests {
+    use crate::concat_slices;
     use alloc::vec;
     use alloc::vec::Vec;
-    use crate::concat_slices;
 
     #[test]
     fn empty() {
