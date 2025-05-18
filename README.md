@@ -23,7 +23,7 @@ See [`librarian`'s README](https://github.com/tigerros/reco/tree/master/libraria
 ## Safety
 `reco` uses unsafe code on two occasions:
 - `code.rs`: converting a string to a `Code` uses `deranged::RangedU8::new_unchecked` with primitive arithmetic.
-- `concat_slices.rs`: concatenating slices at compile time. This is only used to build `book::ALL`. Relatively simple and well-documented.
+- `concat_slices.rs`: concatenating slices at compile time. This is only used at compile time to build `book::ALL`. Relatively simple and well-documented.
 
 ## Cloning
 If you clone this repository, **exclude the `src/book` directory from your IDE.**
