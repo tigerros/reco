@@ -98,3 +98,60 @@ pub const fn concat_slices<'a, const LEN: usize, T: 'a>(
     #[expect(unsafe_code, reason = "see comment")]
     Ok(unsafe { core::mem::transmute_copy(&out) })
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use alloc::vec::Vec;
+
+    #[test]
+    fn empty() {
+        let mut slices = Vec::<&[usize]>::with_capacity(1000);
+
+        for _ in 0..1000 {
+            assert_eq!(concat_slices::<0, usize>(slices.as_slice()), Ok([]));
+            slices.push(&[]);
+        }
+    }
+
+    #[test]
+    fn equal_lengths() {
+        assert_eq!(
+            concat_slices::<6, usize>(&[&[1, 2], &[3, 4], &[5, 6]]),
+            Ok([&1, &2, &3, &4, &5, &6])
+        );
+    }
+
+    #[test]
+    fn different_lengths() {
+        let mut slices = Vec::<&[usize]>::with_capacity(1 + 6 + 2 + 1 + 3);
+
+        for _ in 0..1 {
+            slices.push(&[]);
+        }
+
+        assert_eq!(concat_slices::<0, usize>(slices.as_slice()), Ok([]));
+        slices.push(&[1, 2]);
+
+        for _ in 0..6 {
+            slices.push(&[]);
+        }
+
+        assert_eq!(concat_slices::<2, usize>(slices.as_slice()), Ok([&1, &2]));
+        slices.push(&[3]);
+
+        for _ in 0..2 {
+            slices.push(&[]);
+        }
+
+        assert_eq!(
+            concat_slices::<{ 2 + 1 }, usize>(slices.as_slice()),
+            Ok([&1, &2, &3])
+        );
+        slices.push(&[4, 5, 6]);
+        assert_eq!(
+            concat_slices::<{ 2 + 1 + 3 }, usize>(slices.as_slice()),
+            Ok([&1, &2, &3, &4, &5, &6])
+        );
+    }
+}

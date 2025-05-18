@@ -1,3 +1,9 @@
+[![tests](https://img.shields.io/github/actions/workflow/status/tigerros/reco/test.yml?label=tests)](https://github.com/tigerros/reco/actions/workflows/test.yml)
+[![clippy](https://img.shields.io/github/actions/workflow/status/tigerros/reco/clippy.yml?label=clippy)](https://github.com/tigerros/reco/actions/workflows/clippy.yml)
+[![coverage](https://img.shields.io/codecov/c/gh/tigerros/reco)](https://app.codecov.io/gh/tigerros/reco/)
+[![docs.rs](https://img.shields.io/docsrs/reco?logo=docs.rs&label=docs.rs)](https://docs.rs/reco/)
+[![crates.io](https://img.shields.io/crates/v/reco?logo=rust)](https://crates.io/crates/reco)
+
 # reco
 **R**ust **E**ncyclopaedia of **C**hess **O**penings.
 
@@ -22,7 +28,7 @@ See [`librarian`'s README](https://github.com/tigerros/reco/tree/master/libraria
 
 ## Safety
 `reco` uses unsafe code on two occasions:
-- `code.rs`: converting a string to a `Code` uses `deranged::RangedU8::new_unchecked` with primitive arithmetic.
+- `code.rs`: converting a string to a `Code` uses `deranged::RangedU8::new_unchecked` with primitive arithmetic. This is replaced with `.unwrap()` if `debug_assertions` are enabled.
 - `concat_slices.rs`: concatenating slices at compile time. This is only used at compile time to build `book::ALL`. Relatively simple and well-documented.
 
 ## Cloning

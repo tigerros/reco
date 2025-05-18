@@ -19,3 +19,11 @@ shakmaty = { git = "https://github.com/niklasf/shakmaty", default-features = fal
 [features]
 serde = ["dep:serde", "deranged/serde"]
 book = []
+
+[dev-dependencies]
+proptest = "1.6.0"
+proptest-derive = "0.5.1"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

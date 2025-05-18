@@ -1,4 +1,4 @@
-#![no_std]
+#![cfg_attr(not(test), no_std)]
 #![warn(
     clippy::pedantic,
     clippy::nursery,
@@ -57,6 +57,7 @@ pub use code::Code;
 pub use opening::Opening;
 pub use volume::Volume;
 #[cfg(feature = "book")]
+#[cfg_attr(docsrs, doc(cfg(feature = "book")))]
 pub mod book;
 #[cfg(feature = "book")]
 mod concat_slices;
