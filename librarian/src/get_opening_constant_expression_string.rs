@@ -1,10 +1,10 @@
-use reco::OpeningOwned;
+use reco::Opening;
 
 /// Returns a string of a const expression which represents the given opening.
 ///
 /// Uses the last variation layer for the constant identifier, or the opening name if the
 /// variation is unspecified.
-pub fn get_opening_constant_expression_string(opening: &OpeningOwned) -> String {
+pub fn get_opening_constant_expression_string(opening: &Opening<String>) -> String {
     let moves = &opening.moves;
     let volume = opening.code.volume;
     let category = opening.code.category;
@@ -30,9 +30,9 @@ pub fn get_opening_constant_expression_string(opening: &OpeningOwned) -> String 
         volume: Volume::{volume},
         category: RangedU8::new_static::<{category}>(),
     }},
-    name: &[{name_joined}],
-    moves: &{moves:#?},
-    setup: &Setup {{
+    name: Cow::Borrowed(&[{name_joined}]),
+    moves: Cow::Borrowed(&{moves:#?}),
+    setup: Cow::Owned(Setup {{
         board: Board::from_bitboards(
             ByRole {{
                 pawn: Bitboard({}),
@@ -55,7 +55,7 @@ pub fn get_opening_constant_expression_string(opening: &OpeningOwned) -> String 
         remaining_checks: {remaining_checks:#?},
         halfmoves: {halfmoves},
         fullmoves: if let Some(fullmoves) = NonZeroU32::new({fullmoves}) {{ fullmoves }} else {{ panic!("fullmoves is zero") }},
-    }},
+    }}),
 }}"#,
         by_role_bitboard.pawn.0,
         by_role_bitboard.knight.0,

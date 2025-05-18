@@ -18,5 +18,6 @@ use shakmaty::board::Board;
 use shakmaty::{ByRole, ByColor, Setup};
 use core::num::NonZeroU32;
 use crate::{Opening, Code, Volume};
+use alloc::borrow::Cow;
 use deranged::RangedU8;
 use core::panic;"#;

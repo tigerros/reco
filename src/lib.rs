@@ -1,5 +1,4 @@
-//#![no_std]
-#![forbid(unsafe_code)]
+#![no_std]
 #![warn(
     clippy::pedantic,
     clippy::nursery,
@@ -30,6 +29,7 @@
     clippy::tests_outside_test_module
 )]
 #![deny(
+    unsafe_code,
     clippy::unwrap_used,
     clippy::panic,
     clippy::exit,
@@ -48,7 +48,6 @@
     reason = "triggers only on the generated bitboards"
 )]
 
-#[cfg(feature = "alloc")]
 extern crate alloc;
 
 pub mod code;
@@ -56,11 +55,13 @@ mod opening;
 pub mod volume;
 pub use code::Code;
 pub use opening::Opening;
-#[cfg(feature = "alloc")]
-pub use opening::OpeningOwned;
 pub use volume::Volume;
-//#[cfg(feature = "book")]
-//pub mod book;
+#[cfg(feature = "book")]
+pub mod book;
+#[cfg(feature = "book")]
+mod concat_slices;
+#[cfg(feature = "book")]
+pub(crate) use concat_slices::concat_slices;
 
 /// The 0-99 category of an opening.
 pub type Category = deranged::RangedU8<0, 99>;

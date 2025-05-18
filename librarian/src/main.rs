@@ -15,8 +15,9 @@ use crate::get_opening_constant_item_string::get_opening_constant_item_string;
 use crate::get_uci::get_uci;
 use deunicode::deunicode;
 use heck::{ToShoutySnekCase, ToSnekCase};
-use reco::{Code, Opening, OpeningOwned};
+use reco::{Code, Opening};
 use shakmaty::{Chess, EnPassantMode, Position};
+use std::borrow::Cow;
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs::{File, create_dir_all, exists, remove_dir_all, write};
 use std::io::{Cursor, Write};
@@ -65,9 +66,10 @@ fn main() {
             moves.push(r#move);
         }
 
-        let setup = p.to_setup(EnPassantMode::Legal);
+        let moves = Cow::Owned(moves);
+        let setup = Cow::Owned(p.to_setup(EnPassantMode::Legal));
 
-        let mut identifier = name.clone();
+        let mut identifier = name.to_vec();
 
         for part in identifier.iter_mut() {
             *part = deunicode(part);
@@ -93,7 +95,7 @@ fn main() {
 
         if let Some((full_name, silent_variations)) = value {
             *full_name = name_raw.to_owned();
-            silent_variations.insert(get_opening_constant_expression_string(&OpeningOwned {
+            silent_variations.insert(get_opening_constant_expression_string(&Opening {
                 code,
                 name,
                 moves,
@@ -102,7 +104,7 @@ fn main() {
         } else {
             *value = Some((
                 name_raw.to_owned(),
-                BTreeSet::from([get_opening_constant_expression_string(&OpeningOwned {
+                BTreeSet::from([get_opening_constant_expression_string(&Opening {
                     code,
                     name,
                     moves,
@@ -267,9 +269,9 @@ fn main() {
             )]\
             use crate::Opening;\
             {top_level_opening_mods_and_uses}\
-            #[doc = \"Contains all openings and variations.\n\nThis is a static and not a constant because it's huge.\nIt contains {openings_count} openings, which is {} bytes.\"]
-            pub static ALL: &[Opening<'static, &str>] = constcat::concat_slices!([Opening<'static, &str>]: {all_openings});",
-            openings_count * size_of::<Opening<'static, &str>>()
+            #[doc = \"Contains references to all openings and variations.\n\nThis is not a constant because it is huge, so inlining it is not desired.\nIt contains {openings_count} references, which is {} bytes on 64-bit systems.\"]
+            pub static ALL: [&Opening<&str>; {openings_count}] = if let Ok(concat) = crate::concat_slices(&[{all_openings}]) {{ concat }} else {{ panic!(\"{openings_count} is not actually the number of openings\") }};",
+            openings_count * size_of::<u64>()
         ).as_bytes()
     )
     .unwrap();

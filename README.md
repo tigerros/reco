@@ -7,7 +7,7 @@ Contains:
 - Types to represent each part of an ECO entry.
 - ECO entries as constants, sourced from [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
 
-No-std and no-alloc compatible.
+`#![no_std]` compatible. Doesn't allocate, but exposes `alloc::borrow::Cow`.
 
 ## Features
 - `book`: adds ECO entries as constants. Because there's a lot of them, it might worsen compilation performance.
@@ -19,6 +19,11 @@ The ECO entries are generated using the unpublished `librarian` crate.
 To make sure they are up to date, there's a workflow that runs `librarian` every day and makes a PR if any changes are detected.
 
 See [`librarian`'s README](https://github.com/tigerros/reco/tree/master/librarian/README.md) for information about running.
+
+## Safety
+`reco` uses unsafe code on two occasions:
+- `code.rs`: converting a string to a `Code` uses `deranged::RangedU8::new_unchecked` with primitive arithmetic.
+- `concat_slices.rs`: concatenating slices at compile time. This is only used to build `book::ALL`. Relatively simple and well-documented.
 
 ## Cloning
 If you clone this repository, **exclude the `src/book` directory from your IDE.**
