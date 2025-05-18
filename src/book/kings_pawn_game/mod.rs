@@ -1,107 +1,134 @@
-#[allow(unused_imports, clippy::enum_glob_use, reason = "because the code is generated, we don't know if it's going to be used")]
-use shakmaty::Move::*;
-#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
-use shakmaty::Role::{Pawn, Knight, Bishop, Rook, Queen, King};
-#[allow(clippy::enum_glob_use, reason = "there's 64 variants in this enum, importing them all is stupid")]
-use shakmaty::Square::*;
-#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use crate::{Code, Opening, Volume};
+use alloc::borrow::Cow;
+use core::num::NonZeroU32;
+use core::panic;
+use deranged::RangedU8;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
 use shakmaty::Color::{Black, White};
+#[allow(
+    unused_imports,
+    clippy::enum_glob_use,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
+use shakmaty::Move::*;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
+use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
+#[allow(
+    clippy::enum_glob_use,
+    reason = "there's 64 variants in this enum, importing them all is stupid"
+)]
+use shakmaty::Square::*;
 use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
-use shakmaty::{ByRole, ByColor, Setup};
-use core::num::NonZeroU32;
-use crate::{Opening, Code, Volume};
-use alloc::borrow::Cow;
-use deranged::RangedU8;
-use core::panic;
+use shakmaty::{ByColor, ByRole, Setup};
 
-#[allow(clippy::doc_markdown, reason = "clippy confuses opening names for items")]/// King's Pawn Game.
-pub static KINGS_PAWN_GAME: [Opening<&str>; 2] = [Opening {
-    code: Code {
-        volume: Volume::B,
-        category: RangedU8::new_static::<0>(),
-    },
-    name: Cow::Borrowed(&["King's Pawn Game"]),
-    moves: Cow::Borrowed(&[
-    Normal {
-        role: Pawn,
-        from: E2,
-        capture: None,
-        to: E4,
-        promotion: None,
-    },
-]),
-    setup: Cow::Owned(Setup {
-        board: Board::from_bitboards(
-            ByRole {
-                pawn: Bitboard(71776119329713920),
-                knight: Bitboard(4755801206503243842),
-                bishop: Bitboard(2594073385365405732),
-                rook: Bitboard(9295429630892703873),
-                queen: Bitboard(576460752303423496),
-                king: Bitboard(1152921504606846992)
+#[allow(
+    clippy::doc_markdown,
+    reason = "clippy confuses opening names for items"
+)]
+/// King's Pawn Game.
+pub static KINGS_PAWN_GAME: [Opening<&str>; 2] = [
+    Opening {
+        code: Code {
+            volume: Volume::B,
+            category: RangedU8::new_static::<0>(),
+        },
+        name: Cow::Borrowed(&["King's Pawn Game"]),
+        moves: Cow::Borrowed(&[Normal {
+            role: Pawn,
+            from: E2,
+            capture: None,
+            to: E4,
+            promotion: None,
+        }]),
+        setup: Cow::Owned(Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(71776119329713920),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18446462598732840960),
+                    white: Bitboard(268496895),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(1) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
             },
-            ByColor {
-                black: Bitboard(18446462598732840960),
-                white: Bitboard(268496895)
-            }
-        ),
-        promoted: Bitboard(0),
-        pockets: None,
-        turn: Black,
-        castling_rights: Bitboard(9295429630892703873),
-        ep_square: None,
-        remaining_checks: None,
-        halfmoves: 0,
-        fullmoves: if let Some(fullmoves) = NonZeroU32::new(1) { fullmoves } else { panic!("fullmoves is zero") },
-    }),
-}, Opening {
-    code: Code {
-        volume: Volume::C,
-        category: RangedU8::new_static::<20>(),
+        }),
     },
-    name: Cow::Borrowed(&["King's Pawn Game"]),
-    moves: Cow::Borrowed(&[
-    Normal {
-        role: Pawn,
-        from: E2,
-        capture: None,
-        to: E4,
-        promotion: None,
-    },
-    Normal {
-        role: Pawn,
-        from: E7,
-        capture: None,
-        to: E5,
-        promotion: None,
-    },
-]),
-    setup: Cow::Owned(Setup {
-        board: Board::from_bitboards(
-            ByRole {
-                pawn: Bitboard(67272588421820160),
-                knight: Bitboard(4755801206503243842),
-                bishop: Bitboard(2594073385365405732),
-                rook: Bitboard(9295429630892703873),
-                queen: Bitboard(576460752303423496),
-                king: Bitboard(1152921504606846992)
+    Opening {
+        code: Code {
+            volume: Volume::C,
+            category: RangedU8::new_static::<20>(),
+        },
+        name: Cow::Borrowed(&["King's Pawn Game"]),
+        moves: Cow::Borrowed(&[
+            Normal {
+                role: Pawn,
+                from: E2,
+                capture: None,
+                to: E4,
+                promotion: None,
             },
-            ByColor {
-                black: Bitboard(18441959067824947200),
-                white: Bitboard(268496895)
-            }
-        ),
-        promoted: Bitboard(0),
-        pockets: None,
-        turn: White,
-        castling_rights: Bitboard(9295429630892703873),
-        ep_square: None,
-        remaining_checks: None,
-        halfmoves: 0,
-        fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) { fullmoves } else { panic!("fullmoves is zero") },
-    }),
-}];pub mod alapin_opening;
+            Normal {
+                role: Pawn,
+                from: E7,
+                capture: None,
+                to: E5,
+                promotion: None,
+            },
+        ]),
+        setup: Cow::Owned(Setup {
+            board: Board::from_bitboards(
+                ByRole {
+                    pawn: Bitboard(67272588421820160),
+                    knight: Bitboard(4755801206503243842),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18441959067824947200),
+                    white: Bitboard(268496895),
+                },
+            ),
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+                fullmoves
+            } else {
+                panic!("fullmoves is zero")
+            },
+        }),
+    },
+];
+pub mod alapin_opening;
 pub use alapin_opening::ALAPIN_OPENING;
 pub mod bavarian_gambit;
 pub use bavarian_gambit::BAVARIAN_GAMBIT;

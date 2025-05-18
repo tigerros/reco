@@ -1,4 +1,9 @@
-#![allow(clippy::allow_attributes,reason = "this module is generated, the allows don't know if they are going to be fulfilled")]use crate::Opening;pub mod alekhine_defense;
+#![allow(
+    clippy::allow_attributes,
+    reason = "this module is generated, the allows don't know if they are going to be fulfilled"
+)]
+use crate::Opening;
+pub mod alekhine_defense;
 pub use alekhine_defense::ALEKHINE_DEFENSE;
 pub mod amar_opening;
 pub use amar_opening::AMAR_OPENING;
@@ -267,7 +272,7 @@ pub use zukertort_opening::ZUKERTORT_OPENING;
 
 This is not a constant because it is huge, so inlining it is not desired.
 It contains 3518 references, which is 28144 bytes on 64-bit systems."]
-            pub static ALL: [&Opening<&str>; 3518] = if let Ok(concat) = crate::concat_slices(&[&ALEKHINE_DEFENSE,
+pub static ALL: [&Opening<&str>; 3518] = if let Ok(concat) = crate::concat_slices(&[&ALEKHINE_DEFENSE,
 &alekhine_defense::BALOGH_VARIATION,
 &alekhine_defense::BROOKLYN_VARIATION,
 &alekhine_defense::brooklyn_variation::EVERGLADES_VARIATION,
