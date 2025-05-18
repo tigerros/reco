@@ -1,38 +1,10 @@
-use core::error::Error;
-use core::fmt::Display;
 use core::mem::MaybeUninit;
-
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Hash)]
-pub enum ConcatError {
-    LenGreaterThanSum,
-    LenLesserThanSum,
-}
-
-impl ConcatError {
-    pub const fn as_str(self) -> &'static str {
-        match self {
-            Self::LenGreaterThanSum => "LEN greater than length of all items",
-            Self::LenLesserThanSum => "LEN lesser than length of all items",
-        }
-    }
-}
-
-impl Display for ConcatError {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.as_str().fmt(f)
-    }
-}
-
-impl Error for ConcatError {}
 
 /// Soundly concatenates all items in the given slices.
 /// References items, because we don't assume [`T`] is [`Copy`].
 ///
-/// # Errors
-/// Errors if the length of all items does not match [`LEN`].
-pub const fn concat_slices<'a, const LEN: usize, T: 'a>(
-    slices: &'a [&'a [T]],
-) -> Result<[&'a T; LEN], ConcatError> {
+/// **Only run this at compile time.**
+pub const fn concat_slices<'a, const LEN: usize, T: 'a>(slices: &'a [&'a [T]]) -> [&'a T; LEN] {
     let mut out: [MaybeUninit<&'a T>; LEN] = [MaybeUninit::uninit(); LEN];
     let mut out_i = 0;
     let mut slice_i = 0;
@@ -48,7 +20,7 @@ pub const fn concat_slices<'a, const LEN: usize, T: 'a>(
         while item_i < slice.len() {
             // We reached LEN but there's another item to process
             if out_i == LEN {
-                return Err(ConcatError::LenLesserThanSum);
+                panic!("LEN lesser than length of all items");
             }
 
             #[expect(
@@ -76,7 +48,7 @@ pub const fn concat_slices<'a, const LEN: usize, T: 'a>(
     // would be applicable here, but remember that after the last item (index) is processed,
     // we still increment out_i.
     if out_i < LEN {
-        return Err(ConcatError::LenGreaterThanSum);
+        panic!("LEN greater than length of all items");
     }
 
     // SAFETY:
@@ -96,20 +68,21 @@ pub const fn concat_slices<'a, const LEN: usize, T: 'a>(
     // The Rust compiler considers `[T; LEN]` a "dependent" type because of `LEN`
     // and doesn't try to verify it's the same size as `[U; LEN]`.
     #[expect(unsafe_code, reason = "see comment")]
-    Ok(unsafe { core::mem::transmute_copy(&out) })
+    unsafe { core::mem::transmute_copy(&out) }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use alloc::vec;
     use alloc::vec::Vec;
+    use crate::concat_slices;
 
     #[test]
     fn empty() {
         let mut slices = Vec::<&[usize]>::with_capacity(1000);
 
         for _ in 0..1000 {
-            assert_eq!(concat_slices::<0, usize>(slices.as_slice()), Ok([]));
+            assert_eq!(concat_slices::<0, usize>(slices.as_slice()), [&0; 0]);
             slices.push(&[]);
         }
     }
@@ -118,7 +91,7 @@ mod tests {
     fn equal_lengths() {
         assert_eq!(
             concat_slices::<6, usize>(&[&[1, 2], &[3, 4], &[5, 6]]),
-            Ok([&1, &2, &3, &4, &5, &6])
+            [&1, &2, &3, &4, &5, &6]
         );
     }
 
@@ -130,14 +103,14 @@ mod tests {
             slices.push(&[]);
         }
 
-        assert_eq!(concat_slices::<0, usize>(slices.as_slice()), Ok([]));
+        assert_eq!(concat_slices::<0, usize>(slices.as_slice()), [&0; 0]);
         slices.push(&[1, 2]);
 
         for _ in 0..6 {
             slices.push(&[]);
         }
 
-        assert_eq!(concat_slices::<2, usize>(slices.as_slice()), Ok([&1, &2]));
+        assert_eq!(concat_slices::<2, usize>(slices.as_slice()), [&1, &2]);
         slices.push(&[3]);
 
         for _ in 0..2 {
@@ -146,12 +119,24 @@ mod tests {
 
         assert_eq!(
             concat_slices::<{ 2 + 1 }, usize>(slices.as_slice()),
-            Ok([&1, &2, &3])
+            [&1, &2, &3]
         );
         slices.push(&[4, 5, 6]);
         assert_eq!(
             concat_slices::<{ 2 + 1 + 3 }, usize>(slices.as_slice()),
-            Ok([&1, &2, &3, &4, &5, &6])
+            [&1, &2, &3, &4, &5, &6]
         );
+    }
+
+    #[test]
+    #[should_panic]
+    fn len_greater_than_length_of_all_items() {
+        concat_slices::<5, usize>(vec![&[4][..], &[2, 1][..]].as_slice());
+    }
+
+    #[test]
+    #[should_panic]
+    fn len_lesser_than_length_of_all_items() {
+        concat_slices::<1, usize>(vec![&[4][..], &[2, 1][..]].as_slice());
     }
 }

@@ -263,7 +263,7 @@ fn main() {
             "{BOOK_MOD_INIT}\
             {top_level_opening_mods_and_uses}\
             #[doc = \"Contains references to all openings and variations.\n\nThis is not a constant because it is huge, so inlining it is not desired.\nIt contains {openings_count} references, which is {} bytes on 64-bit systems.\"]
-            pub static ALL: [&Opening<&str>; {openings_count}] = if let Ok(concat) = crate::concat_slices(&[{all_openings}]) {{ concat }} else {{ panic!(\"{openings_count} is not actually the number of openings\") }};",
+            pub static ALL: [&Opening<&str>; {openings_count}] = crate::concat_slices(&[{all_openings}]);",
             openings_count * size_of::<u64>()
         ).as_bytes()
     )

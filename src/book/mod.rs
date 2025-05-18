@@ -273,7 +273,7 @@ pub use zukertort_opening::ZUKERTORT_OPENING;
 
 This is not a constant because it is huge, so inlining it is not desired.
 It contains 3518 references, which is 28144 bytes on 64-bit systems."]
-pub static ALL: [&Opening<&str>; 3518] = if let Ok(concat) = crate::concat_slices(&[&ALEKHINE_DEFENSE,
+pub static ALL: [&Opening<&str>; 3518] = crate::concat_slices(&[&ALEKHINE_DEFENSE,
 &alekhine_defense::BALOGH_VARIATION,
 &alekhine_defense::BROOKLYN_VARIATION,
 &alekhine_defense::brooklyn_variation::EVERGLADES_VARIATION,
@@ -3380,4 +3380,4 @@ pub static ALL: [&Opening<&str>; 3518] = if let Ok(concat) = crate::concat_slice
 &zukertort_opening::VOS_GAMBIT,
 &zukertort_opening::WADE_DEFENSE,
 &zukertort_opening::wade_defense::CHIGORIN_PLAN,
-&zukertort_opening::WARE_DEFENSE]) { concat } else { panic!("3518 is not actually the number of openings") };
+&zukertort_opening::WARE_DEFENSE]);
