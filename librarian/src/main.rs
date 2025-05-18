@@ -7,7 +7,7 @@ mod get_opening_constant_expression_string;
 mod get_opening_constant_item_string;
 mod get_uci;
 
-use crate::constants::{COMMIT_SOURCE_OUT, GEN_DIR};
+use crate::constants::{BOOK_MOD_INIT, COMMIT_SOURCE_OUT, GEN_DIR};
 use crate::get_archive_and_commit::get_archive_and_commit;
 use crate::get_name::get_name;
 use crate::get_opening_constant_expression_string::get_opening_constant_expression_string;
@@ -260,11 +260,7 @@ fn main() {
     write(
         format!("{GEN_DIR}/mod.rs"),
         format!(
-            "#![allow(\
-                clippy::allow_attributes,\
-                reason = \"this module is generated, the allows don't know if they are going to be fulfilled\"\
-            )]\
-            use crate::Opening;\
+            "{BOOK_MOD_INIT}\
             {top_level_opening_mods_and_uses}\
             #[doc = \"Contains references to all openings and variations.\n\nThis is not a constant because it is huge, so inlining it is not desired.\nIt contains {openings_count} references, which is {} bytes on 64-bit systems.\"]
             pub static ALL: [&Opening<&str>; {openings_count}] = if let Ok(concat) = crate::concat_slices(&[{all_openings}]) {{ concat }} else {{ panic!(\"{openings_count} is not actually the number of openings\") }};",

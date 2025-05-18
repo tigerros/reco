@@ -21,3 +21,10 @@ use crate::{Opening, Code, Volume};
 use alloc::borrow::Cow;
 use deranged::RangedU8;
 use core::panic;"#;
+pub const BOOK_MOD_INIT: &str = r#"
+//! Each entry is an array of openings, because a lot of distinct entries have the same name.
+#![allow(
+    clippy::allow_attributes,
+    reason = "this module is generated, the allows don't know if they are going to be fulfilled"
+)]
+use crate::Opening;"#;
