@@ -2,7 +2,7 @@
 name = "reco"
 version = "0.1.0-alpha"
 edition = "2024"
-description = "An ECO (Encyclopaedia of Chess Openings) crate"
+description = "An ECO (Encyclopaedia of Chess Openings) crate."
 categories = ["data-structures", "game-development", "no-std", "api-bindings"]
 keywords = ["chess", "eco", "dataset", "lichess"]
 repository = "https://github.com/tigerros/reco"
