@@ -60,7 +60,12 @@ pub use volume::Volume;
 #[cfg_attr(docsrs, doc(cfg(feature = "book")))]
 pub mod book;
 #[cfg(feature = "book")]
+mod book_find;
+#[cfg(feature = "book")]
 mod concat_slices;
+#[cfg(feature = "book")]
+pub use book_find::*;
+
 #[cfg(feature = "book")]
 pub(crate) use concat_slices::concat_slices;
 

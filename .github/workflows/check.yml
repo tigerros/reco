@@ -2,15 +2,17 @@ name: Check
 on: [push, pull_request]
 
 jobs:
-  check-librarian:
+  check-others:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@nightly
 
-      - name: Check
+      - name: Check librarian
         run: cargo check --manifest-path librarian/Cargo.toml --all-targets -Z direct-minimal-versions
+      - name: Check reco except lib
+        run: cargo check --bins --examples --tests --benches -Z direct-minimal-versions
 
   check-reco:
     strategy:

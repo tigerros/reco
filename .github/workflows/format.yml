@@ -18,4 +18,4 @@ jobs:
           components: rustfmt
 
       - name: Format
-        run: cargo +nightly fmt --manifest-path ${{ matrix.manifest }} --check
+        run: cargo +nightly fmt --manifest-path ${{ matrix.manifest }} --check --all
