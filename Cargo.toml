@@ -37,4 +37,4 @@ rustdoc-args = ["--cfg", "docsrs"]
 # shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", default-features = false }
 
 # [patch.crates-io]
- #shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master" }
+# shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master" }
