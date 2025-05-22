@@ -10,7 +10,8 @@ const USER: &str = "german11"; // this guy is a beast
 fn main() {
     let mut latest_games = ureq::get(format!("https://lichess.org/api/games/user/{USER}"))
         .query("max", "1")
-        .header(http::header::ACCEPT, "application/x-ndjson")
+		.query("opening", "true")
+        .header(http::header::ACCEPT, "application/x-chess-pgn")
         .call()
         .unwrap()
         .into_body();
