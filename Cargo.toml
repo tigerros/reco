@@ -14,7 +14,7 @@ include = ["src", "README.md", "LICENSE"]
 [dependencies]
 deranged = { version = "0.4.0", default-features = false }
 serde = { version = "1.0.126", default-features = false, features = ["derive"], optional = true }
-shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", default-features = false }
+shakmaty = { workspace = true }
 
 [features]
 serde = ["dep:serde", "deranged/serde"]
@@ -28,13 +28,13 @@ proptest-derive = "0.5.1"
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
-# [workspace]
-# resolver = "3"
-# members = ["examples/find-opening"]
+[workspace]
+resolver = "3"
+members = ["examples/find-opening"]
 
-# [workspace.dependencies]
-# reco = { path = "." }
-# shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", default-features = false }
+[workspace.dependencies]
+reco = { path = "." }
+shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", default-features = false }
 
-# [patch.crates-io]
-# shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master" }
+[patch.crates-io]
+shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master" }

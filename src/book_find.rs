@@ -3,6 +3,7 @@ use crate::book;
 use alloc::collections::VecDeque;
 use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
 
+#[expect(clippy::result_large_err, reason = "both are big")]
 /// Finds the opening using [`book::ALL`] for the given game and initial position.
 ///
 /// # Errors
@@ -22,8 +23,8 @@ pub fn find_from_moves(
         rev_setups.push_front(current_position.to_setup(EnPassantMode::Legal));
     }
 
-    for opening in book::ALL {
-        for setup in &rev_setups {
+    for setup in &rev_setups {
+        for opening in book::ALL {
             if opening.setup.as_ref() == setup {
                 return Ok(Some(opening));
             }

@@ -12,7 +12,7 @@ jobs:
       - name: Check librarian
         run: cargo check --manifest-path librarian/Cargo.toml --all-targets -Z direct-minimal-versions
       - name: Check reco except lib
-        run: cargo check --bins --examples --tests --benches -Z direct-minimal-versions
+        run: cargo check --workspace --bins --examples --tests --benches -Z direct-minimal-versions
 
   check-reco:
     strategy:
