@@ -137,36 +137,29 @@ pub static MACIEJA_SYSTEM: [Opening<&str>; 1] = [Opening {
             to: B6,
             promotion: None,
         },
-        Normal {
-            role: Bishop,
-            from: C1,
-            capture: None,
-            to: F4,
-            promotion: None,
-        },
     ]),
     setup: Cow::Owned(Setup {
         board: Board::from_bitboards(
             ByRole {
                 pawn: Bitboard(65603460850119168),
                 knight: Bitboard(144150372450304000),
-                bishop: Bitboard(288230393868451872),
+                bishop: Bitboard(288230393331580964),
                 rook: Bitboard(2377900603251622017),
                 queen: Bitboard(576460752303424512),
                 king: Bitboard(4611686018427387920),
             },
             ByColor {
                 black: Bitboard(8064031600544841728),
-                white: Bitboard(606467761),
+                white: Bitboard(69596853),
             },
         ),
         promoted: Bitboard(0),
         pockets: None,
-        turn: Black,
+        turn: White,
         castling_rights: Bitboard(129),
         ep_square: None,
         remaining_checks: None,
-        halfmoves: 1,
+        halfmoves: 0,
         fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
             fullmoves
         } else {

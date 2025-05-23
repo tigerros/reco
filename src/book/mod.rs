@@ -272,8 +272,8 @@ pub use zukertort_opening::ZUKERTORT_OPENING;
 #[doc = "Contains references to all openings and variations.
 
 This is not a constant because it is huge, so inlining it is not desired.
-It contains 3518 references, which is 28144 bytes on 64-bit systems."]
-pub static ALL: [&Opening<&str>; 3518] = crate::concat_slices(&[&ALEKHINE_DEFENSE,
+It contains 3520 references, which is 28160 bytes on 64-bit systems."]
+pub static ALL: [&Opening<&str>; 3520] = crate::concat_slices(&[&ALEKHINE_DEFENSE,
 &alekhine_defense::BALOGH_VARIATION,
 &alekhine_defense::BROOKLYN_VARIATION,
 &alekhine_defense::brooklyn_variation::EVERGLADES_VARIATION,
@@ -1843,10 +1843,12 @@ pub static ALL: [&Opening<&str>; 3518] = crate::concat_slices(&[&ALEKHINE_DEFENS
 &nimzo_indian_defense::classical_variation::berlin_variation::STEINER_VARIATION,
 &nimzo_indian_defense::classical_variation::KERES_DEFENSE,
 &nimzo_indian_defense::classical_variation::MILNER_BARRY_VARIATION,
+&nimzo_indian_defense::classical_variation::MODERN_VARIATION,
 &nimzo_indian_defense::classical_variation::NOA_VARIATION,
 &nimzo_indian_defense::classical_variation::noa_variation::BOTVINNIK_VARIATION,
 &nimzo_indian_defense::classical_variation::noa_variation::MAIN_LINE,
 &nimzo_indian_defense::classical_variation::noa_variation::SAN_REMO_VARIATION,
+&nimzo_indian_defense::classical_variation::ROMANISHIN_GAMBIT,
 &nimzo_indian_defense::classical_variation::VITOLINS_ADORJAN_GAMBIT,
 &nimzo_indian_defense::classical_variation::ZURICH_VARIATION,
 &nimzo_indian_defense::DILWORTH_GAMBIT,
