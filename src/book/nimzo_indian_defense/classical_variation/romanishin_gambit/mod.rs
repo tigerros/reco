@@ -32,13 +32,17 @@ use shakmaty::{ByColor, ByRole, Setup};
     clippy::doc_markdown,
     reason = "clippy confuses opening names for items"
 )]
-/// Nimzo-Indian Defense: Classical Variation.
-pub static CLASSICAL_VARIATION: [Opening<&str>; 1] = [Opening {
+/// Nimzo-Indian Defense: Classical Variation, Romanishin Gambit.
+pub static ROMANISHIN_GAMBIT: [Opening<&str>; 1] = [Opening {
     code: Code {
         volume: Volume::E,
-        category: RangedU8::new_static::<32>(),
+        category: RangedU8::new_static::<36>(),
     },
-    name: Cow::Borrowed(&["Nimzo-Indian Defense", "Classical Variation"]),
+    name: Cow::Borrowed(&[
+        "Nimzo-Indian Defense",
+        "Classical Variation",
+        "Romanishin Gambit",
+    ]),
     moves: Cow::Borrowed(&[
         Normal {
             role: Pawn,
@@ -89,51 +93,68 @@ pub static CLASSICAL_VARIATION: [Opening<&str>; 1] = [Opening {
             to: C2,
             promotion: None,
         },
+        Normal {
+            role: Pawn,
+            from: D7,
+            capture: None,
+            to: D5,
+            promotion: None,
+        },
+        Normal {
+            role: Pawn,
+            from: A2,
+            capture: None,
+            to: A3,
+            promotion: None,
+        },
+        Normal {
+            role: Bishop,
+            from: B4,
+            capture: Some(Knight),
+            to: C3,
+            promotion: None,
+        },
+        Normal {
+            role: Queen,
+            from: C2,
+            capture: Some(Bishop),
+            to: C3,
+            promotion: None,
+        },
+        Normal {
+            role: Pawn,
+            from: C7,
+            capture: None,
+            to: C5,
+            promotion: None,
+        },
     ]),
     setup: Cow::Owned(Setup {
         board: Board::from_bitboards(
             ByRole {
-                pawn: Bitboard(67290111821280000),
-                knight: Bitboard(144150372448206912),
-                bishop: Bitboard(288230376185266212),
+                pawn: Bitboard(63912463640424960),
+                knight: Bitboard(144150372447944768),
+                bishop: Bitboard(288230376151711780),
                 rook: Bitboard(9295429630892703873),
-                queen: Bitboard(576460752303424512),
+                queen: Bitboard(576460752303685632),
                 king: Bitboard(1152921504606846992),
             },
             ByColor {
-                black: Bitboard(11524482748056076288),
-                white: Bitboard(201652213),
+                black: Bitboard(11521105099841601536),
+                white: Bitboard(201716469),
             },
         ),
         promoted: Bitboard(0),
         pockets: None,
-        turn: Black,
+        turn: White,
         castling_rights: Bitboard(9295429630892703873),
         ep_square: None,
         remaining_checks: None,
-        halfmoves: 3,
-        fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+        halfmoves: 0,
+        fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
             fullmoves
         } else {
             panic!("fullmoves is zero")
         },
     }),
 }];
-pub mod belyavsky_gambit;
-pub use belyavsky_gambit::BELYAVSKY_GAMBIT;
-pub mod berlin_variation;
-pub use berlin_variation::BERLIN_VARIATION;
-pub mod keres_defense;
-pub use keres_defense::KERES_DEFENSE;
-pub mod milner_barry_variation;
-pub use milner_barry_variation::MILNER_BARRY_VARIATION;
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
-pub mod noa_variation;
-pub use noa_variation::NOA_VARIATION;
-pub mod romanishin_gambit;
-pub use romanishin_gambit::ROMANISHIN_GAMBIT;
-pub mod vitolins_adorjan_gambit;
-pub use vitolins_adorjan_gambit::VITOLINS_ADORJAN_GAMBIT;
-pub mod zurich_variation;
-pub use zurich_variation::ZURICH_VARIATION;
