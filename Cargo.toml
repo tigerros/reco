@@ -11,19 +11,6 @@ rust-version = "1.85.1" # remember to update check.yml
 readme = "README.md"
 include = ["src", "README.md", "LICENSE"]
 
-[dependencies]
-deranged = { version = "0.4.0", default-features = false }
-serde = { version = "1.0.197", default-features = false, features = ["derive"], optional = true }
-shakmaty = { workspace = true }
-
-[features]
-serde = ["dep:serde", "deranged/serde"]
-book = []
-
-[dev-dependencies]
-proptest = "1.6.0"
-proptest-derive = "0.5.1"
-
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
@@ -36,6 +23,19 @@ members = ["examples/find-opening"]
 [workspace.dependencies]
 reco = { path = "." }
 shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", default-features = false }
+
+[features]
+serde = ["dep:serde", "deranged/serde"]
+book = []
+
+[dependencies]
+deranged = { version = "0.4.0", default-features = false }
+serde = { version = "1.0.197", default-features = false, features = ["derive"], optional = true }
+shakmaty = { workspace = true }
+
+[dev-dependencies]
+proptest = "1.6.0"
+proptest-derive = "0.5.1"
 
 [patch.crates-io]
 shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master" }
