@@ -48,23 +48,26 @@
     reason = "triggers only on the generated bitboards"
 )]
 
+#[cfg(test)]
 extern crate alloc;
 
 pub mod code;
-mod opening;
+mod line;
 pub mod volume;
 pub use code::Code;
-pub use opening::Opening;
+pub use line::Line;
 pub use volume::Volume;
 #[cfg(feature = "book")]
 #[cfg_attr(docsrs, doc(cfg(feature = "book")))]
 pub mod book;
-#[cfg(feature = "book")]
-mod book_find;
+//#[cfg(feature = "book")]
+//mod book_find;
 #[cfg(feature = "book")]
 mod concat_slices;
-#[cfg(feature = "book")]
-pub use book_find::*;
+mod variation;
+pub use variation::Variation;
+//#[cfg(feature = "book")]
+//pub use book_find::*;
 
 #[cfg(feature = "book")]
 pub(crate) use concat_slices::concat_slices;

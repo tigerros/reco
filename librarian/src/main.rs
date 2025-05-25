@@ -1,28 +1,93 @@
 #![forbid(unsafe_code)]
 
 mod constants;
+mod create_variation_files;
 mod get_archive_and_commit;
+mod get_line_expression_string;
 mod get_name;
-mod get_opening_constant_expression_string;
-mod get_opening_constant_item_string;
 mod get_uci;
+mod get_variation_item_string;
 
-use crate::constants::{BOOK_MOD_INIT, COMMIT_SOURCE_OUT, GEN_DIR};
+use crate::constants::{COMMIT_SOURCE_OUT, GEN_DIR};
+use crate::create_variation_files::create_variation_files;
 use crate::get_archive_and_commit::get_archive_and_commit;
 use crate::get_name::get_name;
-use crate::get_opening_constant_expression_string::get_opening_constant_expression_string;
-use crate::get_opening_constant_item_string::get_opening_constant_item_string;
 use crate::get_uci::get_uci;
-use deunicode::deunicode;
-use heck::{ToShoutySnekCase, ToSnekCase};
-use reco::{Code, Opening};
-use shakmaty::{Chess, EnPassantMode, Position};
-use std::borrow::Cow;
-use std::collections::{BTreeMap, BTreeSet};
-use std::fs::{File, create_dir_all, exists, remove_dir_all, write};
-use std::io::{Cursor, Write};
+use dotenvy::var;
+use reco::Code;
+use shakmaty::{Chess, EnPassantMode, Move, Position, Setup};
+use std::cell::RefCell;
+use std::collections::HashMap;
+use std::collections::HashSet;
+use std::collections::VecDeque;
+use std::fs::{exists, remove_dir_all, write};
+use std::io::Cursor;
+use std::rc::Rc;
 use std::str::FromStr;
 use zip::ZipArchive;
+
+#[derive(Debug, PartialEq, Eq, Hash)]
+pub struct LineMeta {
+    pub code: Code,
+    pub moves: Vec<Move>,
+    pub setup: Setup,
+}
+
+pub struct VariationMeta {
+    pub name: Rc<str>,
+    pub variations: RefCell<HashMap<Rc<str>, Rc<Self>>>,
+    pub parent: Option<Rc<Self>>,
+    pub lines: RefCell<HashSet<LineMeta>>,
+}
+
+impl VariationMeta {
+    pub fn full_name(&self) -> VecDeque<Rc<str>> {
+        let mut full_name = VecDeque::with_capacity(10);
+
+        full_name.push_front(self.name.clone());
+
+        let mut parent = self.parent.clone();
+
+        while let Some(current) = parent {
+            full_name.push_front(current.name.clone());
+            parent = current.parent.clone();
+        }
+
+        full_name
+    }
+}
+
+/*
+// sicilian/mod.rs
+
+pub mod najdorf;
+pub use najdorf::NAJDORF;
+
+pub SICILIAN = Opening {
+    name: "sicilian",
+    variations: &[NAJDORF],
+    parent: None
+}
+
+// sicilian/najdorf/mod.rs
+
+pub mod classical;
+pub use classical::CLASSICAL;
+
+pub NAJDORF = Opening {
+    name: "najdorf",
+    variations: &[CLASSICAL],
+    parent: Some(&super::SICILIAN)
+}
+
+// sicilian/najdorf/classical/mod.rs
+
+pub CLASSICAL = Opening {
+    name: "classical",
+    variations: &[],
+    parent: Some(&super::NAJDORF)
+}
+ */
 
 fn main() {
     let (archive, commit_sha) = get_archive_and_commit();
@@ -35,15 +100,7 @@ fn main() {
         .flexible(false)
         .from_reader(all_tsv);
 
-    // The key is the full identifier of the opening.
-    // A `None` value means the identifier is not the name of an opening.
-    // For example, pterodactlyl_defense::western is only a group of openings.
-    // That identifier would be `None`.
-    // The first value is the original full name of the opening.
-    // The second value are all the "silent variations", those being different entries but having the
-    // same identifier. Each item is already a string of a const expression.
-    let mut identifiers = BTreeMap::<Vec<String>, Option<(String, BTreeSet<String>)>>::new();
-    let mut openings_count = 0;
+    let mut variations = HashMap::new();
 
     for record in reader.records() {
         let record = record.unwrap();
@@ -52,7 +109,10 @@ fn main() {
         let uci_raw = &record[3];
 
         let code = Code::from_str(code_raw).unwrap();
-        let name = get_name(name_raw);
+        let mut full_name = get_name(name_raw);
+
+        assert!(!full_name.is_empty());
+
         let uci = get_uci(uci_raw);
         let mut moves = Vec::new();
         let mut p = Chess::new();
@@ -63,52 +123,46 @@ fn main() {
             moves.push(r#move);
         }
 
-        let moves = Cow::Owned(moves);
-        let setup = Cow::Owned(p.to_setup(EnPassantMode::Legal));
+        let setup = p.to_setup(EnPassantMode::Legal);
+        let root = full_name.remove(0);
 
-        let mut identifier = name.to_vec();
+        // Create root if it doesn't exist
+        let mut variation = variations
+            .entry(root)
+            .or_insert_with_key(|k| {
+                Rc::new(VariationMeta {
+                    name: k.clone(),
+                    variations: RefCell::new(HashMap::new()),
+                    parent: None,
+                    lines: RefCell::new(HashSet::new()),
+                })
+            })
+            .clone();
 
-        for part in identifier.iter_mut() {
-            *part = deunicode(part);
-            // Queen's Gambit should be converted to QUEENS_GAMBIT, not QUEEN_S_GAMBIT
-            *part = part.replace('\'', "");
-            *part = part.trim().to_owned();
+        for part in full_name {
+            let subvariation = variation
+                .variations
+                .borrow_mut()
+                // For each part (except first), look for a subvariation.
+                .entry(part)
+                // If it's vacant, insert an empty variation with `variation` parent.
+                .or_insert_with_key(|k| {
+                    Rc::new(VariationMeta {
+                        name: k.clone(),
+                        variations: RefCell::new(HashMap::new()),
+                        parent: Some(variation.clone()),
+                        lines: RefCell::new(HashSet::new()),
+                    })
+                })
+                .clone();
 
-            if part.starts_with(char::is_numeric) {
-                part.insert(0, 'N');
-            }
+            variation = subvariation;
         }
 
-        openings_count += 1;
-
-        // Insert an identifier for each possible variation
-        // For example, if identifier is `a, b, c`, this will insert
-        // `a`, `a, b` and `a, b, c` into identifiers.
-        for i in 1..=identifier.len() {
-            let _ = identifiers.entry(identifier[0..i].to_vec()).or_insert(None);
-        }
-
-        let value = identifiers.get_mut(&identifier).unwrap();
-
-        if let Some((full_name, silent_variations)) = value {
-            *full_name = name_raw.to_owned();
-            silent_variations.insert(get_opening_constant_expression_string(&Opening {
-                code,
-                name,
-                moves,
-                setup,
-            }));
-        } else {
-            *value = Some((
-                name_raw.to_owned(),
-                BTreeSet::from([get_opening_constant_expression_string(&Opening {
-                    code,
-                    name,
-                    moves,
-                    setup,
-                })]),
-            ));
-        }
+        variation
+            .lines
+            .borrow_mut()
+            .insert(LineMeta { code, moves, setup });
     }
 
     // Delete previous data
@@ -116,42 +170,7 @@ fn main() {
         remove_dir_all(GEN_DIR).unwrap();
     }
 
-    // Creates a directory for each opening and a module file, where the opening is stored.
-    for (identifier, (full_name, silent_variations)) in identifiers
-        .iter()
-        .filter_map(|(identifier, opening)| opening.as_ref().map(|opening| (identifier, opening)))
-    {
-        let directory_path = format!(
-            "{GEN_DIR}/{}",
-            identifier
-                .iter()
-                .map(|s| s.to_snek_case())
-                .collect::<Vec<_>>()
-                .join("/")
-        );
-
-        if !exists(&directory_path).unwrap() {
-            create_dir_all(&directory_path).unwrap();
-        }
-
-        let file_path = format!("{directory_path}/mod.rs");
-
-        if !exists(&file_path).unwrap() {
-            write(&file_path, constants::OPENING_FILE_INIT).unwrap();
-        }
-
-        let mut file = File::options().append(true).open(file_path).unwrap();
-
-        file.write_all(
-            get_opening_constant_item_string(
-                identifier.last().unwrap(),
-                full_name,
-                silent_variations,
-            )
-            .as_bytes(),
-        )
-        .unwrap();
-    }
+    create_variation_files(variations);
 
     // Each opening adds itself to the module file to the parent.
     // Example:
@@ -165,109 +184,109 @@ fn main() {
     // Unfortunately it will be written after the `sicilian::SICILIAN` constant item.
     // I don't see it as a huge problem because the files are generated anyway,
     // and doing it another way would probably make this script more complex.
-    for (identifier, opening) in &identifiers {
-        let mut identifier = identifier.clone();
-        // Removed because we want to work with the parent identifier
-        let Some(last_variation) = identifier.pop() else {
-            continue;
-        };
+    // for (identifier, opening) in &identifiers {
+    //     let mut identifier = identifier.clone();
+    //     // Removed because we want to work with the parent identifier
+    //     let Some(last_variation) = identifier.pop() else {
+    //         continue;
+    //     };
+    //
+    //     if identifier.is_empty() {
+    //         continue;
+    //     }
+    //
+    //     let parent_directory_path = format!(
+    //         "{GEN_DIR}/{}",
+    //         identifier
+    //             .iter()
+    //             .map(|s| s.to_snek_case())
+    //             .collect::<Vec<_>>()
+    //             .join("/")
+    //     );
+    //
+    //     if !exists(&parent_directory_path).unwrap() {
+    //         create_dir_all(&parent_directory_path).unwrap();
+    //     }
+    //
+    //     let parent_mod_path = format!("{parent_directory_path}/mod.rs");
+    //
+    //     let mut parent_mod = File::options()
+    //         .create(true)
+    //         .append(true)
+    //         .open(&parent_mod_path)
+    //         .unwrap_or_else(|_| panic!("{parent_mod_path} should exist"));
+    //
+    //     let r#use = if opening.is_some() {
+    //         format!(
+    //             "pub use {}::{};\n",
+    //             last_variation.to_snek_case(),
+    //             last_variation.TO_SHOUTY_SNEK_CASE()
+    //         )
+    //     } else {
+    //         String::new()
+    //     };
+    //
+    //     let mod_and_use = format!("pub mod {};\n{}", last_variation.to_snek_case(), r#use);
+    //
+    //     parent_mod.write_all(mod_and_use.as_bytes()).unwrap();
+    // }
 
-        if identifier.is_empty() {
-            continue;
-        }
-
-        let parent_directory_path = format!(
-            "{GEN_DIR}/{}",
-            identifier
-                .iter()
-                .map(|s| s.to_snek_case())
-                .collect::<Vec<_>>()
-                .join("/")
-        );
-
-        if !exists(&parent_directory_path).unwrap() {
-            create_dir_all(&parent_directory_path).unwrap();
-        }
-
-        let parent_mod_path = format!("{parent_directory_path}/mod.rs");
-
-        let mut parent_mod = File::options()
-            .create(true)
-            .append(true)
-            .open(&parent_mod_path)
-            .unwrap_or_else(|_| panic!("{parent_mod_path} should exist"));
-
-        let r#use = if opening.is_some() {
-            format!(
-                "pub use {}::{};\n",
-                last_variation.to_snek_case(),
-                last_variation.TO_SHOUTY_SNEK_CASE()
-            )
-        } else {
-            String::new()
-        };
-
-        let mod_and_use = format!("pub mod {};\n{}", last_variation.to_snek_case(), r#use);
-
-        parent_mod.write_all(mod_and_use.as_bytes()).unwrap();
-    }
-
-    let top_level_opening_mods_and_uses = identifiers
-        .iter()
-        .filter_map(|(identifier, opening)| {
-            if identifier.len() > 1 {
-                None
-            } else {
-                let r#use = if opening.is_some() {
-                    format!(
-                        "pub use {}::{};\n",
-                        identifier[0].to_snek_case(),
-                        identifier[0].TO_SHOUTY_SNEK_CASE()
-                    )
-                } else {
-                    String::new()
-                };
-
-                Some(format!(
-                    "pub mod {};\n{}",
-                    identifier[0].to_snek_case(),
-                    r#use
-                ))
-            }
-        })
-        .collect::<String>();
-
-    let all_openings = identifiers
-        .iter_mut()
-        .filter_map(|(identifier, opening)| {
-            if opening.is_none() {
-                return None;
-            }
-
-            let mut identifier = identifier.clone();
-
-            for part in identifier.iter_mut() {
-                *part = part.to_snek_case();
-            }
-
-            *identifier.last_mut().unwrap() = identifier.last().unwrap().TO_SHOUTY_SNEK_CASE();
-            identifier[0] = format!("&{}", identifier[0]);
-            Some(identifier.join("::"))
-        })
-        .collect::<Vec<_>>()
-        .join(",\n");
-
-    write(
-        format!("{GEN_DIR}/mod.rs"),
-        format!(
-            "{BOOK_MOD_INIT}\
-            {top_level_opening_mods_and_uses}\
-            #[doc = \"Contains references to all openings and variations.\n\nThis is not a constant because it is huge, so inlining it is not desired.\nIt contains {openings_count} references, which is {} bytes on 64-bit systems.\"]
-            pub static ALL: [&Opening<&str>; {openings_count}] = crate::concat_slices(&[{all_openings}]);",
-            openings_count * size_of::<u64>()
-        ).as_bytes()
-    )
-    .unwrap();
+    // let top_level_opening_mods_and_uses = identifiers
+    //     .iter()
+    //     .filter_map(|(identifier, opening)| {
+    //         if identifier.len() > 1 {
+    //             None
+    //         } else {
+    //             let r#use = if opening.is_some() {
+    //                 format!(
+    //                     "pub use {}::{};\n",
+    //                     identifier[0].to_snek_case(),
+    //                     identifier[0].TO_SHOUTY_SNEK_CASE()
+    //                 )
+    //             } else {
+    //                 String::new()
+    //             };
+    //
+    //             Some(format!(
+    //                 "pub mod {};\n{}",
+    //                 identifier[0].to_snek_case(),
+    //                 r#use
+    //             ))
+    //         }
+    //     })
+    //     .collect::<String>();
+    //
+    // let all_openings = identifiers
+    //     .iter_mut()
+    //     .filter_map(|(identifier, opening)| {
+    //         if opening.is_none() {
+    //             return None;
+    //         }
+    //
+    //         let mut identifier = identifier.clone();
+    //
+    //         for part in identifier.iter_mut() {
+    //             *part = part.to_snek_case();
+    //         }
+    //
+    //         *identifier.last_mut().unwrap() = identifier.last().unwrap().TO_SHOUTY_SNEK_CASE();
+    //         identifier[0] = format!("&{}", identifier[0]);
+    //         Some(identifier.join("::"))
+    //     })
+    //     .collect::<Vec<_>>()
+    //     .join(",\n");
+    //
+    // write(
+    //     format!("{GEN_DIR}/mod.rs"),
+    //     format!(
+    //         "{BOOK_MOD_INIT}\
+    //         {top_level_opening_mods_and_uses}\
+    //         #[doc = \"Contains references to all openings and variations.\n\nThis is not a constant because it is huge, so inlining it is not desired.\nIt contains {openings_count} references, which is {} bytes on 64-bit systems.\"]
+    //         pub static ALL: [&Opening<&str>; {openings_count}] = crate::concat_slices(&[{all_openings}]);",
+    //         openings_count * size_of::<u64>()
+    //     ).as_bytes()
+    // )
+    // .unwrap();
     write(COMMIT_SOURCE_OUT, commit_sha).unwrap();
 
     println!("success");
