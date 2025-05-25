@@ -170,7 +170,7 @@ fn main() {
         remove_dir_all(GEN_DIR).unwrap();
     }
 
-    create_variation_files(variations);
+    create_variation_files(&variations);
 
     // Each opening adds itself to the module file to the parent.
     // Example:

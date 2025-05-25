@@ -9,7 +9,7 @@ use std::io::Write;
 use std::rc::Rc;
 
 /// Creates a directory for each variation and a module file where the variation is stored.
-pub fn create_variation_files(variations: HashMap<Rc<str>, Rc<VariationMeta>>) {
+pub fn create_variation_files(variations: &HashMap<Rc<str>, Rc<VariationMeta>>) {
     for variation in variations.values() {
         let full_name = variation.full_name();
 
@@ -36,5 +36,7 @@ pub fn create_variation_files(variations: HashMap<Rc<str>, Rc<VariationMeta>>) {
 
         file.write_all(get_variation_item_string(variation).as_bytes())
             .unwrap();
+        
+        create_variation_files(&variation.variations.borrow());
     }
 }

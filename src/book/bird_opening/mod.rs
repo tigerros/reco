@@ -1,117 +1,76 @@
-use crate::{Code, Opening, Volume};
-use alloc::borrow::Cow;
-use core::num::NonZeroU32;
-use core::panic;
-use deranged::RangedU8;
-#[allow(
-    unused_imports,
-    reason = "because the code is generated, we don't know if it's going to be used"
-)]
-use shakmaty::Color::{Black, White};
-#[allow(
-    unused_imports,
-    clippy::enum_glob_use,
-    reason = "because the code is generated, we don't know if it's going to be used"
-)]
+#[allow(unused_imports, clippy::enum_glob_use, reason = "because the code is generated, we don't know if it's going to be used")]
 use shakmaty::Move::*;
-#[allow(
-    unused_imports,
-    reason = "because the code is generated, we don't know if it's going to be used"
-)]
-use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
-#[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
+#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use shakmaty::Role::{Pawn, Knight, Bishop, Rook, Queen, King};
+#[allow(clippy::enum_glob_use, reason = "there's 64 variants in this enum, importing them all is stupid")]
 use shakmaty::Square::*;
+#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use shakmaty::Color::{Black, White};
 use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
-use shakmaty::{ByColor, ByRole, Setup};
-
-#[allow(
-    clippy::doc_markdown,
-    reason = "clippy confuses opening names for items"
-)]
-/// Bird Opening.
-pub static BIRD_OPENING: [Opening<&str>; 1] = [Opening {
-    code: Code {
-        volume: Volume::A,
-        category: RangedU8::new_static::<2>(),
-    },
-    name: Cow::Borrowed(&["Bird Opening"]),
-    moves: Cow::Borrowed(&[Normal {
+use shakmaty::{ByRole, ByColor, Setup};
+use core::num::NonZeroU32;
+use crate::{Variation, Line, Code, Volume, Category};
+use core::panic;pub static BIRD_OPENING: Variation = Variation {
+        name: Bird Opening,
+        parent: None,
+        variations: &[&batavo_polish_attack,
+&sturm_gambit,
+&schlechter_gambit,
+&double_duck_formation,
+&myers_defense,
+&hobbs_zilbermints_gambit,
+&horsefly_defense,
+&williams_gambit,
+&mujannah,
+&from_s_gambit,
+&hobbs_gambit,
+&thomas_gambit,
+&williams_zilbermints_gambit,
+&swiss_gambit,
+&lasker_variation,
+&wagner_zwitersch_gambit,
+&dutch_variation,
+&lasker_gambit,
+&siegener_gambit,
+&platz_gambit],
+        lines: &[Line {
+            code: Code {
+                volume: Volume::A,
+                category: Category::new_static::<2>()
+            },
+            moves: &[
+    Normal {
         role: Pawn,
         from: F2,
         capture: None,
         to: F4,
         promotion: None,
-    }]),
-    setup: Cow::Owned(Setup {
-        board: Board::from_bitboards(
-            ByRole {
-                pawn: Bitboard(71776119598145280),
-                knight: Bitboard(4755801206503243842),
-                bishop: Bitboard(2594073385365405732),
-                rook: Bitboard(9295429630892703873),
-                queen: Bitboard(576460752303423496),
-                king: Bitboard(1152921504606846992),
-            },
-            ByColor {
-                black: Bitboard(18446462598732840960),
-                white: Bitboard(536928255),
-            },
-        ),
-        promoted: Bitboard(0),
-        pockets: None,
-        turn: Black,
-        castling_rights: Bitboard(9295429630892703873),
-        ep_square: None,
-        remaining_checks: None,
-        halfmoves: 0,
-        fullmoves: if let Some(fullmoves) = NonZeroU32::new(1) {
-            fullmoves
-        } else {
-            panic!("fullmoves is zero")
-        },
-    }),
-}];
-pub mod batavo_polish_attack;
-pub use batavo_polish_attack::BATAVO_POLISH_ATTACK;
-pub mod double_duck_formation;
-pub use double_duck_formation::DOUBLE_DUCK_FORMATION;
-pub mod dutch_variation;
-pub use dutch_variation::DUTCH_VARIATION;
-pub mod froms_gambit;
-pub use froms_gambit::FROMS_GAMBIT;
-pub mod hobbs_gambit;
-pub use hobbs_gambit::HOBBS_GAMBIT;
-pub mod hobbs_zilbermints_gambit;
-pub use hobbs_zilbermints_gambit::HOBBS_ZILBERMINTS_GAMBIT;
-pub mod horsefly_defense;
-pub use horsefly_defense::HORSEFLY_DEFENSE;
-pub mod lasker_gambit;
-pub use lasker_gambit::LASKER_GAMBIT;
-pub mod lasker_variation;
-pub use lasker_variation::LASKER_VARIATION;
-pub mod mujannah;
-pub use mujannah::MUJANNAH;
-pub mod myers_defense;
-pub use myers_defense::MYERS_DEFENSE;
-pub mod platz_gambit;
-pub use platz_gambit::PLATZ_GAMBIT;
-pub mod schlechter_gambit;
-pub use schlechter_gambit::SCHLECHTER_GAMBIT;
-pub mod siegener_gambit;
-pub use siegener_gambit::SIEGENER_GAMBIT;
-pub mod sturm_gambit;
-pub use sturm_gambit::STURM_GAMBIT;
-pub mod swiss_gambit;
-pub use swiss_gambit::SWISS_GAMBIT;
-pub mod thomas_gambit;
-pub use thomas_gambit::THOMAS_GAMBIT;
-pub mod wagner_zwitersch_gambit;
-pub use wagner_zwitersch_gambit::WAGNER_ZWITERSCH_GAMBIT;
-pub mod williams_gambit;
-pub use williams_gambit::WILLIAMS_GAMBIT;
-pub mod williams_zilbermints_gambit;
-pub use williams_zilbermints_gambit::WILLIAMS_ZILBERMINTS_GAMBIT;
+    },
+],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(71776119598145280),
+                        knight: Bitboard(4755801206503243842),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992)
+                    },
+                    ByColor {
+                        black: Bitboard(18446462598732840960),
+                        white: Bitboard(536928255)
+                    }
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(1) { fullmoves } else { unreachable!() }
+            }
+        }]
+    }

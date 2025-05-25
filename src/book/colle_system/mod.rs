@@ -1,6 +1,21 @@
-pub mod pterodactyl_variation;
-pub use pterodactyl_variation::PTERODACTYL_VARIATION;
-pub mod rhamphorhynchus_variation;
-pub use rhamphorhynchus_variation::RHAMPHORHYNCHUS_VARIATION;
-pub mod siroccopteryx_variation;
-pub use siroccopteryx_variation::SIROCCOPTERYX_VARIATION;
+#[allow(unused_imports, clippy::enum_glob_use, reason = "because the code is generated, we don't know if it's going to be used")]
+use shakmaty::Move::*;
+#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use shakmaty::Role::{Pawn, Knight, Bishop, Rook, Queen, King};
+#[allow(clippy::enum_glob_use, reason = "there's 64 variants in this enum, importing them all is stupid")]
+use shakmaty::Square::*;
+#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use shakmaty::Color::{Black, White};
+use shakmaty::bitboard::Bitboard;
+use shakmaty::board::Board;
+use shakmaty::{ByRole, ByColor, Setup};
+use core::num::NonZeroU32;
+use crate::{Variation, Line, Code, Volume, Category};
+use core::panic;pub static COLLE_SYSTEM: Variation = Variation {
+        name: Colle System,
+        parent: None,
+        variations: &[&rhamphorhynchus_variation,
+&siroccopteryx_variation,
+&pterodactyl_variation],
+        lines: &[]
+    }

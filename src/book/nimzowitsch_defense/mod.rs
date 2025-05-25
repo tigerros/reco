@@ -1,180 +1,133 @@
-use crate::{Code, Opening, Volume};
-use alloc::borrow::Cow;
-use core::num::NonZeroU32;
-use core::panic;
-use deranged::RangedU8;
-#[allow(
-    unused_imports,
-    reason = "because the code is generated, we don't know if it's going to be used"
-)]
-use shakmaty::Color::{Black, White};
-#[allow(
-    unused_imports,
-    clippy::enum_glob_use,
-    reason = "because the code is generated, we don't know if it's going to be used"
-)]
+#[allow(unused_imports, clippy::enum_glob_use, reason = "because the code is generated, we don't know if it's going to be used")]
 use shakmaty::Move::*;
-#[allow(
-    unused_imports,
-    reason = "because the code is generated, we don't know if it's going to be used"
-)]
-use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
-#[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
+#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use shakmaty::Role::{Pawn, Knight, Bishop, Rook, Queen, King};
+#[allow(clippy::enum_glob_use, reason = "there's 64 variants in this enum, importing them all is stupid")]
 use shakmaty::Square::*;
+#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use shakmaty::Color::{Black, White};
 use shakmaty::bitboard::Bitboard;
 use shakmaty::board::Board;
-use shakmaty::{ByColor, ByRole, Setup};
-
-#[allow(
-    clippy::doc_markdown,
-    reason = "clippy confuses opening names for items"
-)]
-/// Nimzowitsch Defense.
-pub static NIMZOWITSCH_DEFENSE: [Opening<&str>; 2] = [
-    Opening {
-        code: Code {
-            volume: Volume::B,
-            category: RangedU8::new_static::<0>(),
-        },
-        name: Cow::Borrowed(&["Nimzowitsch Defense"]),
-        moves: Cow::Borrowed(&[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
+use shakmaty::{ByRole, ByColor, Setup};
+use core::num::NonZeroU32;
+use crate::{Variation, Line, Code, Volume, Category};
+use core::panic;pub static NIMZOWITSCH_DEFENSE: Variation = Variation {
+        name: Nimzowitsch Defense,
+        parent: None,
+        variations: &[&colorado_countergambit,
+&scandinavian_variation,
+&franco_nimzowitsch_variation,
+&breyer_variation,
+&el_columpio_defense,
+&kennedy_variation,
+&french_connection,
+&hornung_gambit,
+&declined_variation,
+&pirc_connection,
+&williams_variation,
+&wheeler_gambit,
+&woodchuck_variation,
+&neo_mongoloid_defense,
+&colorado_countergambit_accepted,
+&pseudo_spanish_variation,
+&mikenas_variation],
+        lines: &[Line {
+            code: Code {
+                volume: Volume::B,
+                category: Category::new_static::<0>()
             },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: D2,
-                capture: None,
-                to: D4,
-                promotion: None,
-            },
-        ]),
-        setup: Cow::Owned(Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(71776119463929600),
-                    knight: Bitboard(4611690416473899074),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18302351808703496192),
-                    white: Bitboard(402712575),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: Black,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        }),
+            moves: &[
+    Normal {
+        role: Pawn,
+        from: E2,
+        capture: None,
+        to: E4,
+        promotion: None,
     },
-    Opening {
-        code: Code {
-            volume: Volume::B,
-            category: RangedU8::new_static::<0>(),
-        },
-        name: Cow::Borrowed(&["Nimzowitsch Defense"]),
-        moves: Cow::Borrowed(&[
-            Normal {
-                role: Pawn,
-                from: E2,
-                capture: None,
-                to: E4,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: B8,
-                capture: None,
-                to: C6,
-                promotion: None,
-            },
-        ]),
-        setup: Cow::Owned(Setup {
-            board: Board::from_bitboards(
-                ByRole {
-                    pawn: Bitboard(71776119329713920),
-                    knight: Bitboard(4611690416473899074),
-                    bishop: Bitboard(2594073385365405732),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
-                },
-                ByColor {
-                    black: Bitboard(18302351808703496192),
-                    white: Bitboard(268496895),
-                },
-            ),
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 1,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                fullmoves
-            } else {
-                panic!("fullmoves is zero")
-            },
-        }),
+    Normal {
+        role: Knight,
+        from: B8,
+        capture: None,
+        to: C6,
+        promotion: None,
     },
-];
-pub mod breyer_variation;
-pub use breyer_variation::BREYER_VARIATION;
-pub mod colorado_countergambit;
-pub use colorado_countergambit::COLORADO_COUNTERGAMBIT;
-pub mod colorado_countergambit_accepted;
-pub use colorado_countergambit_accepted::COLORADO_COUNTERGAMBIT_ACCEPTED;
-pub mod declined_variation;
-pub use declined_variation::DECLINED_VARIATION;
-pub mod el_columpio_defense;
-pub use el_columpio_defense::EL_COLUMPIO_DEFENSE;
-pub mod franco_nimzowitsch_variation;
-pub use franco_nimzowitsch_variation::FRANCO_NIMZOWITSCH_VARIATION;
-pub mod french_connection;
-pub use french_connection::FRENCH_CONNECTION;
-pub mod hornung_gambit;
-pub use hornung_gambit::HORNUNG_GAMBIT;
-pub mod kennedy_variation;
-pub use kennedy_variation::KENNEDY_VARIATION;
-pub mod mikenas_variation;
-pub use mikenas_variation::MIKENAS_VARIATION;
-pub mod neo_mongoloid_defense;
-pub use neo_mongoloid_defense::NEO_MONGOLOID_DEFENSE;
-pub mod pirc_connection;
-pub use pirc_connection::PIRC_CONNECTION;
-pub mod pseudo_spanish_variation;
-pub use pseudo_spanish_variation::PSEUDO_SPANISH_VARIATION;
-pub mod scandinavian_variation;
-pub use scandinavian_variation::SCANDINAVIAN_VARIATION;
-pub mod wheeler_gambit;
-pub use wheeler_gambit::WHEELER_GAMBIT;
-pub mod williams_variation;
-pub use williams_variation::WILLIAMS_VARIATION;
-pub mod woodchuck_variation;
-pub use woodchuck_variation::WOODCHUCK_VARIATION;
+    Normal {
+        role: Pawn,
+        from: D2,
+        capture: None,
+        to: D4,
+        promotion: None,
+    },
+],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(71776119463929600),
+                        knight: Bitboard(4611690416473899074),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992)
+                    },
+                    ByColor {
+                        black: Bitboard(18302351808703496192),
+                        white: Bitboard(402712575)
+                    }
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) { fullmoves } else { unreachable!() }
+            }
+        },
+Line {
+            code: Code {
+                volume: Volume::B,
+                category: Category::new_static::<0>()
+            },
+            moves: &[
+    Normal {
+        role: Pawn,
+        from: E2,
+        capture: None,
+        to: E4,
+        promotion: None,
+    },
+    Normal {
+        role: Knight,
+        from: B8,
+        capture: None,
+        to: C6,
+        promotion: None,
+    },
+],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(71776119329713920),
+                        knight: Bitboard(4611690416473899074),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992)
+                    },
+                    ByColor {
+                        black: Bitboard(18302351808703496192),
+                        white: Bitboard(268496895)
+                    }
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) { fullmoves } else { unreachable!() }
+            }
+        }]
+    }
