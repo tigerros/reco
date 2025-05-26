@@ -32,9 +32,11 @@ fn main() {
 
     let reco_opening = reco::find_from_moves(&moves, Chess::new())
         .expect("moves should be legal")
-        .expect("opening should be present")
-        .0
-        .original_name();
+        .expect("opening should be present");
+    
+    println!("{:?}", reco_opening.1.moves.iter().map(|m| m.to_string()).collect::<Vec<_>>().join(" "));
+    
+    let reco_opening = reco_opening.0.original_name();
 
     assert_eq!(
         pgn.other_headers[b"Opening".as_slice()].decode_utf8_lossy(),

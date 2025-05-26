@@ -28,6 +28,32 @@ pub struct Variation {
 }
 
 impl Variation {
+    /// Like [`Self::walk`], but also walks `self` initially.
+    pub fn walk_with_self<F, T>(&'static self, mut walker: F) -> Option<T> where F: FnMut(&'static Variation) -> Option<T> {
+        walker(self)?;
+
+        for variation in self.variations {
+            variation.walk_with_self(&mut walker)?;
+        }
+
+        None
+    }
+
+    /// Recursively walks [`Self.variations`](Self#structfield.variations), stopping if the
+    /// `walker` returns [`Some`].
+    ///
+    /// First, it walks a variation and then it's subvariations.
+    ///
+    /// See also [`Self::walk_with_self`].
+    pub fn walk<F, T>(&self, mut walker: F) -> Option<T> where F: FnMut(&'static Variation) -> Option<T> {
+        for variation in self.variations {
+            walker(variation)?;
+            variation.walk(&mut walker)?;
+        }
+
+        None
+    }
+
     #[cfg(feature = "alloc")]
     /// Gets the original name, as seen in [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
     ///

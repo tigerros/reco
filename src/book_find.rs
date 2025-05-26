@@ -25,11 +25,15 @@ pub fn find_from_moves(
 
     for setup in rev_setups {
         for variation in &book::ALL {
-            for line in variation.lines {
-                if line.setup == setup {
-                    return Ok(Some((variation, line)));
+            variation.walk_with_self(|subvariation| {
+                for line in subvariation.lines {
+                    if line.setup == setup {
+                        return Some((subvariation, line));
+                    }
                 }
-            }
+                
+                None
+            });
         }
     }
 
