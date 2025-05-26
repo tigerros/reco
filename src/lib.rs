@@ -48,7 +48,7 @@
     reason = "triggers only on the generated bitboards"
 )]
 
-#[cfg(test)]
+#[cfg(any(test, feature = "alloc"))]
 extern crate alloc;
 
 pub mod code;
@@ -57,20 +57,15 @@ pub mod volume;
 pub use code::Code;
 pub use line::Line;
 pub use volume::Volume;
-//#[cfg(feature = "book")]
-//#[cfg_attr(docsrs, doc(cfg(feature = "book")))]
-//pub mod book;
-//#[cfg(feature = "book")]
-//mod book_find;
 #[cfg(feature = "book")]
-mod concat_slices;
+#[cfg_attr(docsrs, doc(cfg(feature = "book")))]
+pub mod book;
+#[cfg(all(feature = "book", feature = "alloc"))]
+mod book_find;
 mod variation;
 pub use variation::Variation;
-//#[cfg(feature = "book")]
-//pub use book_find::*;
-
-#[cfg(feature = "book")]
-pub(crate) use concat_slices::concat_slices;
+#[cfg(all(feature = "book", feature = "alloc"))]
+pub use book_find::*;
 
 /// The 0-99 category of an opening.
 pub type Category = deranged::RangedU8<0, 99>;

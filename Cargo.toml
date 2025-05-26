@@ -27,6 +27,7 @@ shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", def
 [features]
 serde = ["dep:serde", "deranged/serde"]
 book = []
+alloc = []
 
 [dependencies]
 deranged = { version = "0.4.0", default-features = false }

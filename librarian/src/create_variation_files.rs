@@ -1,5 +1,5 @@
-use crate::HashMap;
 use crate::GEN_DIR;
+use crate::HashMap;
 use crate::get_variation_item_string::get_variation_item_string;
 use crate::{VariationMeta, constants};
 use deunicode::deunicode;
@@ -11,7 +11,7 @@ use std::rc::Rc;
 /// Creates a directory for each variation and a module file where the variation is stored.
 pub fn create_variation_files(variations: &HashMap<Rc<str>, Rc<VariationMeta>>) {
     for variation in variations.values() {
-        let full_name = variation.full_name();
+        let full_name = variation.full_snek_name();
 
         let directory_path = format!(
             "{GEN_DIR}/{}",
@@ -36,7 +36,21 @@ pub fn create_variation_files(variations: &HashMap<Rc<str>, Rc<VariationMeta>>) 
 
         file.write_all(get_variation_item_string(variation).as_bytes())
             .unwrap();
-        
-        create_variation_files(&variation.variations.borrow());
+
+        let subvariations = variation.variations.borrow();
+        let mods_and_uses = subvariations
+            .values()
+            .map(|subvariation| {
+                format!(
+                    "pub mod {0};\npub use {0}::{1};\n",
+                    subvariation.snek_name(),
+                    subvariation.SNEK_NAME(),
+                )
+            })
+            .collect::<String>();
+
+        file.write_all(mods_and_uses.as_bytes()).unwrap();
+
+        create_variation_files(&subvariations);
     }
 }

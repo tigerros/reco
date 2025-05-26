@@ -23,36 +23,41 @@ pub fn get_line_expression_string(line: &LineMeta) -> String {
 
     format!(
         r#"Line {{
-            code: Code {{
-                volume: Volume::{volume},
-                category: Category::new_static::<{category}>()
+    code: Code {{
+        volume: Volume::{volume},
+        category: Category::new_static::<{category}>()
+    }},
+    moves: &{moves:#?},
+    setup: Setup {{
+        board: Board::from_bitboards(
+            ByRole {{
+                pawn: Bitboard({}),
+                knight: Bitboard({}),
+                bishop: Bitboard({}),
+                rook: Bitboard({}),
+                queen: Bitboard({}),
+                king: Bitboard({})
             }},
-            moves: &{moves:#?},
-            setup: Setup {{
-                board: Board::from_bitboards(
-                    ByRole {{
-                        pawn: Bitboard({}),
-                        knight: Bitboard({}),
-                        bishop: Bitboard({}),
-                        rook: Bitboard({}),
-                        queen: Bitboard({}),
-                        king: Bitboard({})
-                    }},
-                    ByColor {{
-                        black: Bitboard({}),
-                        white: Bitboard({})
-                    }}
-                ),
-                promoted: Bitboard({promoted}),
-                pockets: {pockets:#?},
-                turn: {turn:#?},
-                castling_rights: Bitboard({castling_rights}),
-                ep_square: {ep_square:#?},
-                remaining_checks: {remaining_checks:#?},
-                halfmoves: {halfmoves},
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new({fullmoves}) {{ fullmoves }} else {{ unreachable!() }}
+            ByColor {{
+                black: Bitboard({}),
+                white: Bitboard({})
             }}
-        }}"#,
+        ),
+        promoted: Bitboard({promoted}),
+        pockets: {pockets:#?},
+        turn: {turn:#?},
+        castling_rights: Bitboard({castling_rights}),
+        ep_square: {ep_square:#?},
+        remaining_checks: {remaining_checks:#?},
+        halfmoves: {halfmoves},
+        fullmoves: if let Some(fullmoves) = NonZeroU32::new({fullmoves}) {{
+            fullmoves
+        }} else {{
+            #[expect(clippy::unreachable, reason = "intentional. It's in a const expression")]
+            {{ unreachable!() }}
+        }}
+    }}
+}}"#,
         by_role_bitboard.pawn.0,
         by_role_bitboard.knight.0,
         by_role_bitboard.bishop.0,

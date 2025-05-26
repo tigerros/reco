@@ -9,7 +9,7 @@ pub struct Line {
     /// The moves of the line.
     pub moves: &'static [Move],
     /// The position that occurs after the last move in [`Self.moves`](Self#structfield.moves) is played.
-    pub setup: Setup
+    pub setup: Setup,
 }
 
 //

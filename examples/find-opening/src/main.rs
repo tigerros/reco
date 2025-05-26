@@ -30,24 +30,15 @@ fn main() {
         moves.push(r#move);
     }
 
-    let mut reco_opening = reco::find_from_moves(&moves, Chess::new())
+    let reco_opening = reco::find_from_moves(&moves, Chess::new())
         .expect("moves should be legal")
         .expect("opening should be present")
-        .name
-        .to_vec();
-
-    let first = reco_opening.remove(0);
-    let mut rest_joined = reco_opening.join(", ");
-
-    if !rest_joined.is_empty() {
-        rest_joined.insert_str(0, ": ");
-    }
-
-    let reco_opening_string = format!("{first}{rest_joined}");
+        .0
+        .original_name();
 
     assert_eq!(
         pgn.other_headers[b"Opening".as_slice()].decode_utf8_lossy(),
-        reco_opening_string
+        reco_opening
     );
     println!("Opening finder correct");
 }
