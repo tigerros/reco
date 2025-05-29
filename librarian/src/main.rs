@@ -3,10 +3,8 @@
 mod constants;
 mod create_variation_files;
 mod get_archive_and_commit;
-mod get_line_expression_string;
 mod get_name;
 mod get_uci;
-mod get_variation_item_string;
 mod line_meta;
 mod variation_meta;
 

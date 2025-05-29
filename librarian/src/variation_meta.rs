@@ -92,4 +92,60 @@ impl VariationMeta {
             }
         )
     }
+
+    /// Returns a string that represents the item of this variation.
+    pub fn item_string(&self) -> String {
+        let original_name = self.original_name();
+        let identifier = self.SNEK_NAME();
+        let name = &self.name;
+
+        let parent = if let Some(parent) = &self.parent {
+            format!("Some(&super::{})", parent.SNEK_NAME())
+        } else {
+            "None".to_string()
+        };
+
+        let variations = self
+            .variations
+            .borrow()
+            .iter()
+            .map(|(name, variation)| {
+                assert_eq!(name, &variation.name);
+
+                format!("&{}", variation.SNEK_NAME())
+            })
+            .collect::<Vec<_>>()
+            .join(",\n");
+
+        let lines = self
+            .lines
+            .borrow()
+            .iter()
+            .map(|line| line.expression_string(&identifier))
+            .collect::<Vec<_>>()
+            .join(",\n");
+
+        // Get the module path
+        let path = self
+            .full_snek_name()
+            .into_iter()
+            .rev()
+            .skip(1)
+            .rev()
+            .map(|s| format!("{s}::"))
+            .collect::<String>();
+
+        format!(
+            r##"#[cfg_attr(feature = "alloc", doc = r#"```rust
+# use reco::book::{path}{identifier};
+assert_eq!({identifier}.original_name(), "{original_name}");
+```"#)]
+pub static {identifier}: Variation = Variation {{
+    name: "{name}",
+    parent: {parent},
+    variations: &[{variations}],
+    lines: &[{lines}]
+}};"##
+        )
+    }
 }

@@ -1,15 +1,35 @@
-use crate::Code;
+use crate::{Code, Variation};
 use core::fmt::Debug;
 use shakmaty::{Move, Setup};
 
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub struct Line {
+    pub(crate) parent: &'static Variation,
+    pub(crate) code: Code,
+    pub(crate) moves: &'static [Move],
+    pub(crate) setup: Setup,
+}
+
+impl Line {
+    /// The parent variation of this line.
+    pub const fn parent(&self) -> &'static Variation {
+        self.parent
+    }
+
     /// The ECO code of the line.
-    pub code: Code,
+    pub const fn code(&self) -> Code {
+        self.code
+    }
+
     /// The moves of the line.
-    pub moves: &'static [Move],
+    pub const fn moves(&self) -> &'static [Move] {
+        self.moves
+    }
+
     /// The position that occurs after the last move in [`Self.moves`](Self#structfield.moves) is played.
-    pub setup: Setup,
+    pub const fn setup(&self) -> &Setup {
+        &self.setup
+    }
 }
 
 //

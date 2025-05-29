@@ -30,7 +30,7 @@ fn main() {
         moves.push(r#move);
     }
 
-    let reco_opening = reco::find_from_moves(&moves, Chess::new())
+    let reco_opening = reco::book::find_line_from_moves(&moves, Chess::new())
         .expect("moves should be legal")
         .expect("opening should be present");
 

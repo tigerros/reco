@@ -1,6 +1,5 @@
 use crate::GEN_DIR;
 use crate::HashMap;
-use crate::get_variation_item_string::get_variation_item_string;
 use crate::{VariationMeta, constants};
 use deunicode::deunicode;
 use heck::ToSnekCase;
@@ -34,8 +33,7 @@ pub fn create_variation_files(variations: &HashMap<Rc<str>, Rc<VariationMeta>>) 
 
         let mut file = File::options().append(true).open(file_path).unwrap();
 
-        file.write_all(get_variation_item_string(variation).as_bytes())
-            .unwrap();
+        file.write_all(variation.item_string().as_bytes()).unwrap();
 
         let subvariations = variation.variations.borrow();
         let mods_and_uses = subvariations

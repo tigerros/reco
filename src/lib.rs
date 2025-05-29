@@ -59,13 +59,11 @@ pub use line::Line;
 pub use volume::Volume;
 #[cfg(feature = "book")]
 #[cfg_attr(docsrs, doc(cfg(feature = "book")))]
+mod book_gen;
+
+#[cfg(feature = "book")]
 pub mod book;
-#[cfg(feature = "book")]
-mod book_find;
 mod variation;
-#[cfg(feature = "book")]
-#[cfg_attr(docsrs, doc(cfg(feature = "book")))]
-pub use book_find::*;
 pub use variation::Variation;
 
 /// The 0-99 category of an opening.

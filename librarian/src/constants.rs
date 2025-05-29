@@ -1,5 +1,5 @@
 /// Where the script should generate the opening files.
-pub const GEN_DIR: &str = "src/book";
+pub const GEN_DIR: &str = "src/book_gen";
 /// Where the script should output the commit SHA of which the changes were sourced from.
 pub const COMMIT_SOURCE_OUT: &str = "commit-source.txt";
 /// The initial contents of each variation file.
