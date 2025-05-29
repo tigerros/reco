@@ -18,7 +18,7 @@ rustdoc-args = ["--cfg", "docsrs"]
 [workspace]
 exclude = ["librarian"]
 resolver = "3"
-members = ["examples/find-opening"]
+members = ["examples/find-opening", "librarian"]
 
 [workspace.dependencies]
 reco = { path = "." }

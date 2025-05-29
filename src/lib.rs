@@ -60,15 +60,13 @@ pub use volume::Volume;
 #[cfg(feature = "book")]
 #[cfg_attr(docsrs, doc(cfg(feature = "book")))]
 pub mod book;
-#[cfg(all(feature = "book", feature = "alloc"))]
+#[cfg(feature = "book")]
 mod book_find;
 mod variation;
-//mod opening;
-//
-//pub use opening::Opening;
-pub use variation::Variation;
-#[cfg(all(feature = "book", feature = "alloc"))]
+#[cfg(feature = "book")]
+#[cfg_attr(docsrs, doc(cfg(feature = "book")))]
 pub use book_find::*;
+pub use variation::Variation;
 
 /// The 0-99 category of an opening.
 pub type Category = deranged::RangedU8<0, 99>;

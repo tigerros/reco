@@ -1,9 +1,12 @@
-use crate::{Line, Variation};
 use crate::book;
-use alloc::collections::VecDeque;
-use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
+use crate::{Line, Variation};
+#[cfg(feature = "alloc")]
 use alloc::boxed::Box;
+#[cfg(feature = "alloc")]
+use alloc::collections::VecDeque;
+use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position, Setup};
 
+#[cfg(feature = "alloc")]
 /// Finds the variation and the line using [`book::ALL`] for the given game and initial position.
 ///
 /// # Errors
@@ -24,18 +27,30 @@ pub fn find_from_moves(
     }
 
     for setup in rev_setups {
-        for variation in &book::ALL {
-            variation.walk_with_self(|subvariation| {
-                for line in subvariation.lines {
-                    if line.setup == setup {
-                        return Some((subvariation, line));
-                    }
-                }
-                
-                None
-            });
+        if let Some(found) = find_from_setup(setup) {
+            return Ok(Some(found));
         }
     }
 
     Ok(None)
+}
+
+pub fn find_from_setup(setup: Setup) -> Option<(&'static Variation, &'static Line)> {
+    for variation in &book::ALL {
+        let result = variation.walk_with_self(&mut |subvariation| {
+            for line in subvariation.lines() {
+                if line.setup == setup {
+                    return Some((subvariation, line));
+                }
+            }
+
+            None
+        });
+
+        if result.is_some() {
+            return result;
+        }
+    }
+
+    None
 }

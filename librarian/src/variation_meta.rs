@@ -1,9 +1,9 @@
+use crate::LineMeta;
+use deunicode::deunicode;
 use heck::{ToShoutySnekCase, ToSnekCase};
 use std::cell::RefCell;
 use std::collections::{HashMap, HashSet, VecDeque};
 use std::rc::Rc;
-use deunicode::deunicode;
-use crate::LineMeta;
 
 pub struct VariationMeta {
     pub name: Rc<str>,
@@ -83,10 +83,13 @@ impl VariationMeta {
         let root = names.remove(0);
         let non_root_joined = names.join(", ");
 
-        format!("{root}{}", if non_root_joined.is_empty() {
-            String::new()
-        } else {
-            format!(": {non_root_joined}")
-        })
+        format!(
+            "{root}{}",
+            if non_root_joined.is_empty() {
+                String::new()
+            } else {
+                format!(": {non_root_joined}")
+            }
+        )
     }
 }

@@ -1,4 +1,3 @@
-use crate::constants::{BRANCH, OWNER, REPO, WORKFLOW};
 use http::header;
 use serde_json::Value;
 use std::time::Duration;
@@ -18,7 +17,7 @@ pub fn get_archive_and_commit() -> (Vec<u8>, String) {
         .into();
 
     let runs_url = format!(
-        "https://api.github.com/repos/{OWNER}/{REPO}/actions/workflows/{WORKFLOW}/runs?branch={BRANCH}"
+        "https://api.github.com/repos/lichess-org/chess-openings/actions/workflows/lint.yml/runs?branch=master"
     );
 
     let runs_res: Value = agent

@@ -7,17 +7,16 @@ mod get_line_expression_string;
 mod get_name;
 mod get_uci;
 mod get_variation_item_string;
-mod variation_meta;
 mod line_meta;
+mod variation_meta;
 
-use variation_meta::VariationMeta;
-use line_meta::LineMeta;
 use crate::constants::BOOK_MOD_INIT;
 use crate::constants::{COMMIT_SOURCE_OUT, GEN_DIR};
 use crate::create_variation_files::create_variation_files;
 use crate::get_archive_and_commit::get_archive_and_commit;
 use crate::get_name::get_name;
 use crate::get_uci::get_uci;
+use line_meta::LineMeta;
 use reco::Code;
 use shakmaty::{Chess, EnPassantMode, Position};
 use std::cell::RefCell;
@@ -27,6 +26,7 @@ use std::fs::{exists, remove_dir_all, write};
 use std::io::Cursor;
 use std::rc::Rc;
 use std::str::FromStr;
+use variation_meta::VariationMeta;
 use zip::ZipArchive;
 
 fn main() {
@@ -125,7 +125,7 @@ fn main() {
 
     let root_identifiers = variations
         .values()
-        .map(|v| v.SNEK_NAME())
+        .map(|v| format!("&{}", v.SNEK_NAME()))
         .collect::<Vec<_>>();
 
     write(COMMIT_SOURCE_OUT, commit_sha).unwrap();
@@ -135,7 +135,7 @@ fn main() {
             r#"{BOOK_MOD_INIT}
 {root_mods_and_uses}
 /// All root variations.
-pub static ALL: [Variation; {}] = [{}];"#,
+pub static ALL: [&'static Variation; {}] = [{}];"#,
             root_identifiers.len(),
             root_identifiers.join(",\n")
         )

@@ -33,14 +33,26 @@ pub fn get_variation_item_string(variation: &VariationMeta) -> String {
         .collect::<Vec<_>>()
         .join(",\n");
 
+    // Get the module path
+    let path = variation
+        .full_snek_name()
+        .into_iter()
+        .rev()
+        .skip(1)
+        .rev()
+        .map(|s| format!("{s}::"))
+        .collect::<String>();
+
     format!(
-        r#"#[allow(clippy::doc_markdown, reason = "clippy confuses opening names for items")]
-/// {original_name}
+        r##"#[cfg_attr(feature = "alloc", doc = r#"```rust
+# use reco::book::{path}{identifier};
+assert_eq!({identifier}.original_name(), "{original_name}");
+```"#)]
 pub static {identifier}: Variation = Variation {{
     name: "{name}",
-    parent: {parent},
     variations: &[{variations}],
+    parent: {parent},
     lines: &[{lines}]
-}};"#
+}};"##
     )
 }

@@ -1,5 +1,5 @@
-use shakmaty::{Move, Setup};
 use reco::Code;
+use shakmaty::{Move, Setup};
 
 #[derive(Debug, PartialEq, Eq, Hash)]
 pub struct LineMeta {

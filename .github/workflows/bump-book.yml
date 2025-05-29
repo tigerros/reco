@@ -23,7 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GET_GITHUB_PAT }}
         run: |
-          echo "LIBRARIAN=$(cargo run --manifest-path librarian/Cargo.toml --quiet)" >> $GITHUB_ENV
+          echo "LIBRARIAN=$(cargo run -p librarian --quiet)" >> $GITHUB_ENV
 
       - name: Run cargo fmt
         run: cargo fmt --all

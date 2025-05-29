@@ -9,8 +9,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@nightly
 
-      - name: Check librarian
-        run: cargo check --manifest-path librarian/Cargo.toml --all-targets -Z direct-minimal-versions
       - name: Check reco except lib
         run: cargo check --workspace --bins --examples --tests --benches -Z direct-minimal-versions
 
