@@ -69,7 +69,7 @@ impl Variation {
     /// Returns `self` if `self` is a root variation.
     pub const fn root(&self) -> &Self {
         let Some(mut parent) = self.parent else {
-            return &self;
+            return self;
         };
 
         while let Some(grandparent) = parent.parent {
@@ -116,7 +116,7 @@ impl Variation {
     /// Like [`Self::walk`], but also walks `self` initially.
     pub fn walk_with_self<F, T>(&'static self, walker: &mut F) -> Option<T>
     where
-        F: FnMut(&'static Variation) -> Option<T>,
+        F: FnMut(&Self) -> Option<T>,
     {
         walker(self)?;
 
@@ -133,7 +133,7 @@ impl Variation {
     /// See also [`Self::walk_with_self`].
     pub fn walk<F, T>(&self, walker: &mut F) -> Option<T>
     where
-        F: FnMut(&'static Variation) -> Option<T>,
+        F: FnMut(&Self) -> Option<T>,
     {
         for variation in self.variations {
             walker(variation)?;
@@ -145,21 +145,12 @@ impl Variation {
 
     /// Uses [`Self::walk_with_self`] to find the line that matches the given setup.
     pub fn find_line_from_setup(&'static self, setup: &Setup) -> Option<&'static Line> {
-        let result = self.walk_with_self(&mut |subvariation| {
-            for line in subvariation.lines() {
-                if &line.setup == setup {
-                    return Some(line);
-                }
-            }
-
-            None
-        });
-
-        if result.is_some() {
-            return result;
-        }
-
-        None
+        self.walk_with_self(&mut |subvariation| {
+            subvariation
+                .lines()
+                .iter()
+                .find(|&line| &line.setup == setup)
+        })
     }
 
     #[cfg(feature = "alloc")]
@@ -187,7 +178,7 @@ impl Variation {
 
         // Reverse them otherwise it just finds the root
         for setup in setups.iter().rev() {
-            if let Some(found) = self.find_line_from_setup(&setup) {
+            if let Some(found) = self.find_line_from_setup(setup) {
                 return Ok(Some(found));
             }
         }
@@ -216,15 +207,25 @@ impl Variation {
             parent = grandparent;
         }
 
-        let mut name = String::with_capacity((self.name.len() + parent.name.len()) * 3);
+        let mut name = String::with_capacity(
+            self.name
+                .len()
+                .saturating_add(parent.name.len())
+                .saturating_mul(3),
+        );
 
         #[expect(
             clippy::indexing_slicing,
+            clippy::arithmetic_side_effects,
             reason = "names is guaranteed to have self.name and parent.name"
         )]
         name.push_str(names[names.len() - 1]);
         name.push_str(": ");
 
+        #[expect(
+            clippy::arithmetic_side_effects,
+            reason = "names is guaranteed to have self.name and parent.name"
+        )]
         let mut i = names.len() - 2;
 
         loop {
@@ -237,7 +238,13 @@ impl Variation {
 
             name.push_str(", ");
 
-            i -= 1;
+            #[expect(
+                clippy::arithmetic_side_effects,
+                reason = "we check if i is 0 then break"
+            )]
+            {
+                i -= 1;
+            }
         }
 
         Cow::Owned(name)

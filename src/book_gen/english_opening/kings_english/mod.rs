@@ -58,10 +58,10 @@ assert_eq!(KINGS_ENGLISH.original_name(), "English Opening: King's English");
 pub static KINGS_ENGLISH: Variation = Variation {
     name: "King's English",
     parent: Some(&super::ENGLISH_OPENING),
-    variations: &[&MAZEDONISCH, &ERBENHEIMER_GAMBIT],
+    variations: &[&ERBENHEIMER_GAMBIT, &MAZEDONISCH],
     lines: &[],
 };
-pub mod mazedonisch;
-pub use mazedonisch::MAZEDONISCH;
 pub mod erbenheimer_gambit;
 pub use erbenheimer_gambit::ERBENHEIMER_GAMBIT;
+pub mod mazedonisch;
+pub use mazedonisch::MAZEDONISCH;

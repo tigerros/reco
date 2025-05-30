@@ -59,15 +59,15 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
     name: "Exchange Variation",
     parent: Some(&super::GRUNFELD_DEFENSE),
     variations: &[
-        &SIMAGINS_LESSER_VARIATION,
         &CLASSICAL_VARIATION,
-        &SEVILLE_VARIATION,
         &LARSEN_VARIATION,
-        &NADANIAN_ATTACK,
-        &SOKOLSKY_VARIATION,
-        &SIMAGINS_IMPROVED_VARIATION,
-        &SPASSKY_VARIATION,
         &MODERN_EXCHANGE_VARIATION,
+        &NADANIAN_ATTACK,
+        &SEVILLE_VARIATION,
+        &SIMAGINS_IMPROVED_VARIATION,
+        &SIMAGINS_LESSER_VARIATION,
+        &SOKOLSKY_VARIATION,
+        &SPASSKY_VARIATION,
     ],
     lines: &[Line {
         parent: &EXCHANGE_VARIATION,
@@ -169,21 +169,21 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod simagins_lesser_variation;
-pub use simagins_lesser_variation::SIMAGINS_LESSER_VARIATION;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
-pub mod seville_variation;
-pub use seville_variation::SEVILLE_VARIATION;
 pub mod larsen_variation;
 pub use larsen_variation::LARSEN_VARIATION;
-pub mod nadanian_attack;
-pub use nadanian_attack::NADANIAN_ATTACK;
-pub mod sokolsky_variation;
-pub use sokolsky_variation::SOKOLSKY_VARIATION;
-pub mod simagins_improved_variation;
-pub use simagins_improved_variation::SIMAGINS_IMPROVED_VARIATION;
-pub mod spassky_variation;
-pub use spassky_variation::SPASSKY_VARIATION;
 pub mod modern_exchange_variation;
 pub use modern_exchange_variation::MODERN_EXCHANGE_VARIATION;
+pub mod nadanian_attack;
+pub use nadanian_attack::NADANIAN_ATTACK;
+pub mod seville_variation;
+pub use seville_variation::SEVILLE_VARIATION;
+pub mod simagins_improved_variation;
+pub use simagins_improved_variation::SIMAGINS_IMPROVED_VARIATION;
+pub mod simagins_lesser_variation;
+pub use simagins_lesser_variation::SIMAGINS_LESSER_VARIATION;
+pub mod sokolsky_variation;
+pub use sokolsky_variation::SOKOLSKY_VARIATION;
+pub mod spassky_variation;
+pub use spassky_variation::SPASSKY_VARIATION;

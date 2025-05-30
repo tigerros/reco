@@ -60,20 +60,20 @@ pub static FIANCHETTO: Variation = Variation {
     parent: Some(&super::PTERODACTYL_DEFENSE),
     variations: &[
         &KING_PTERODACTYL,
-        &QUEEN_PTERODACTYL,
         &QUEEN_BENONI_PTERODACTYL,
         &QUEEN_PTERANODON,
+        &QUEEN_PTERODACTYL,
         &RHAMPHORHYNCHUS,
     ],
     lines: &[],
 };
 pub mod king_pterodactyl;
 pub use king_pterodactyl::KING_PTERODACTYL;
-pub mod queen_pterodactyl;
-pub use queen_pterodactyl::QUEEN_PTERODACTYL;
 pub mod queen_benoni_pterodactyl;
 pub use queen_benoni_pterodactyl::QUEEN_BENONI_PTERODACTYL;
 pub mod queen_pteranodon;
 pub use queen_pteranodon::QUEEN_PTERANODON;
+pub mod queen_pterodactyl;
+pub use queen_pterodactyl::QUEEN_PTERODACTYL;
 pub mod rhamphorhynchus;
 pub use rhamphorhynchus::RHAMPHORHYNCHUS;

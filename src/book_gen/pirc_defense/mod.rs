@@ -59,15 +59,15 @@ pub static PIRC_DEFENSE: Variation = Variation {
     name: "Pirc Defense",
     parent: None,
     variations: &[
-        &BAYONET_ATTACK,
-        &ROSCHER_GAMBIT,
-        &CHINESE_VARIATION,
-        &KHOLMOV_SYSTEM,
-        &AUSTRIAN_ATTACK,
-        &CLASSICAL_VARIATION,
-        &BYRNE_VARIATION,
-        &SVESHNIKOV_SYSTEM,
         &N150_ATTACK,
+        &AUSTRIAN_ATTACK,
+        &BAYONET_ATTACK,
+        &BYRNE_VARIATION,
+        &CHINESE_VARIATION,
+        &CLASSICAL_VARIATION,
+        &KHOLMOV_SYSTEM,
+        &ROSCHER_GAMBIT,
+        &SVESHNIKOV_SYSTEM,
     ],
     lines: &[
         Line {
@@ -349,21 +349,21 @@ pub static PIRC_DEFENSE: Variation = Variation {
         },
     ],
 };
-pub mod bayonet_attack;
-pub use bayonet_attack::BAYONET_ATTACK;
-pub mod roscher_gambit;
-pub use roscher_gambit::ROSCHER_GAMBIT;
-pub mod chinese_variation;
-pub use chinese_variation::CHINESE_VARIATION;
-pub mod kholmov_system;
-pub use kholmov_system::KHOLMOV_SYSTEM;
-pub mod austrian_attack;
-pub use austrian_attack::AUSTRIAN_ATTACK;
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-pub mod byrne_variation;
-pub use byrne_variation::BYRNE_VARIATION;
-pub mod sveshnikov_system;
-pub use sveshnikov_system::SVESHNIKOV_SYSTEM;
 pub mod n150_attack;
 pub use n150_attack::N150_ATTACK;
+pub mod austrian_attack;
+pub use austrian_attack::AUSTRIAN_ATTACK;
+pub mod bayonet_attack;
+pub use bayonet_attack::BAYONET_ATTACK;
+pub mod byrne_variation;
+pub use byrne_variation::BYRNE_VARIATION;
+pub mod chinese_variation;
+pub use chinese_variation::CHINESE_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod kholmov_system;
+pub use kholmov_system::KHOLMOV_SYSTEM;
+pub mod roscher_gambit;
+pub use roscher_gambit::ROSCHER_GAMBIT;
+pub mod sveshnikov_system;
+pub use sveshnikov_system::SVESHNIKOV_SYSTEM;

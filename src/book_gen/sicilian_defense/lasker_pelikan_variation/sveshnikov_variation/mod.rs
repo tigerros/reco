@@ -183,48 +183,20 @@ pub static SVESHNIKOV_VARIATION: Variation = Variation {
                     to: B5,
                     promotion: None,
                 },
-                Normal {
-                    role: Bishop,
-                    from: G5,
-                    capture: Some(Knight),
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G7,
-                    capture: Some(Bishop),
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: C3,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: F6,
-                    capture: None,
-                    to: F5,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(45046106895214336),
-                        knight: Bitboard(4432406315008),
-                        bishop: Bitboard(2594073385365405728),
+                        pawn: Bitboard(63060367965742848),
+                        knight: Bitboard(39582418927616),
+                        bishop: Bitboard(2594073660243312672),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13663935777841610752),
-                        white: Bitboard(34628298681),
+                        black: Bitboard(13681985223284228096),
+                        white: Bitboard(275146729401),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -234,7 +206,7 @@ pub static SVESHNIKOV_VARIATION: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(11) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                     fullmoves
                 } else {
                     #[expect(
@@ -366,20 +338,48 @@ pub static SVESHNIKOV_VARIATION: Variation = Variation {
                     to: B5,
                     promotion: None,
                 },
+                Normal {
+                    role: Bishop,
+                    from: G5,
+                    capture: Some(Knight),
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G7,
+                    capture: Some(Bishop),
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: C3,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: F6,
+                    capture: None,
+                    to: F5,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(63060367965742848),
-                        knight: Bitboard(39582418927616),
-                        bishop: Bitboard(2594073660243312672),
+                        pawn: Bitboard(45046106895214336),
+                        knight: Bitboard(4432406315008),
+                        bishop: Bitboard(2594073385365405728),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13681985223284228096),
-                        white: Bitboard(275146729401),
+                        black: Bitboard(13663935777841610752),
+                        white: Bitboard(34628298681),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -389,7 +389,7 @@ pub static SVESHNIKOV_VARIATION: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(11) {
                     fullmoves
                 } else {
                     #[expect(

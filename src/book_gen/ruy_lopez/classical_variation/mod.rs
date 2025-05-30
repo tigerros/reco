@@ -59,13 +59,13 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
     name: "Classical Variation",
     parent: Some(&super::RUY_LOPEZ),
     variations: &[
-        &CORDEL_GAMBIT,
-        &MODERN_MAIN_LINE,
-        &ZUKERTORT_GAMBIT,
         &CENTRAL_VARIATION,
-        &SPANISH_WING_GAMBIT,
         &CHAROUSEK_VARIATION,
+        &CORDEL_GAMBIT,
         &KONIKOWSKI_GAMBIT,
+        &MODERN_MAIN_LINE,
+        &SPANISH_WING_GAMBIT,
+        &ZUKERTORT_GAMBIT,
     ],
     lines: &[Line {
         parent: &CLASSICAL_VARIATION,
@@ -153,17 +153,17 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod cordel_gambit;
-pub use cordel_gambit::CORDEL_GAMBIT;
-pub mod modern_main_line;
-pub use modern_main_line::MODERN_MAIN_LINE;
-pub mod zukertort_gambit;
-pub use zukertort_gambit::ZUKERTORT_GAMBIT;
 pub mod central_variation;
 pub use central_variation::CENTRAL_VARIATION;
-pub mod spanish_wing_gambit;
-pub use spanish_wing_gambit::SPANISH_WING_GAMBIT;
 pub mod charousek_variation;
 pub use charousek_variation::CHAROUSEK_VARIATION;
+pub mod cordel_gambit;
+pub use cordel_gambit::CORDEL_GAMBIT;
 pub mod konikowski_gambit;
 pub use konikowski_gambit::KONIKOWSKI_GAMBIT;
+pub mod modern_main_line;
+pub use modern_main_line::MODERN_MAIN_LINE;
+pub mod spanish_wing_gambit;
+pub use spanish_wing_gambit::SPANISH_WING_GAMBIT;
+pub mod zukertort_gambit;
+pub use zukertort_gambit::ZUKERTORT_GAMBIT;

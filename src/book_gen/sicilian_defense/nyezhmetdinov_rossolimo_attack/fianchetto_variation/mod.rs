@@ -58,7 +58,7 @@ assert_eq!(FIANCHETTO_VARIATION.original_name(), "Sicilian Defense: Nyezhmetdino
 pub static FIANCHETTO_VARIATION: Variation = Variation {
     name: "Fianchetto Variation",
     parent: Some(&super::NYEZHMETDINOV_ROSSOLIMO_ATTACK),
-    variations: &[&LUTIKOV_GAMBIT, &GUFELD_GAMBIT, &TOTSKY_ATTACK],
+    variations: &[&GUFELD_GAMBIT, &LUTIKOV_GAMBIT, &TOTSKY_ATTACK],
     lines: &[Line {
         parent: &FIANCHETTO_VARIATION,
         code: Code {
@@ -145,9 +145,9 @@ pub static FIANCHETTO_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod lutikov_gambit;
-pub use lutikov_gambit::LUTIKOV_GAMBIT;
 pub mod gufeld_gambit;
 pub use gufeld_gambit::GUFELD_GAMBIT;
+pub mod lutikov_gambit;
+pub use lutikov_gambit::LUTIKOV_GAMBIT;
 pub mod totsky_attack;
 pub use totsky_attack::TOTSKY_ATTACK;

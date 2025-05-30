@@ -58,7 +58,7 @@ assert_eq!(PIN_VARIATION.original_name(), "Sicilian Defense: Pin Variation");
 pub static PIN_VARIATION: Variation = Variation {
     name: "Pin Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
-    variations: &[&KOCH_VARIATION, &JAFFE_VARIATION],
+    variations: &[&JAFFE_VARIATION, &KOCH_VARIATION],
     lines: &[Line {
         parent: &PIN_VARIATION,
         code: Code {
@@ -173,7 +173,7 @@ pub static PIN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod koch_variation;
-pub use koch_variation::KOCH_VARIATION;
 pub mod jaffe_variation;
 pub use jaffe_variation::JAFFE_VARIATION;
+pub mod koch_variation;
+pub use koch_variation::KOCH_VARIATION;

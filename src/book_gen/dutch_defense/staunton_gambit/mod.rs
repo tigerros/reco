@@ -59,11 +59,11 @@ pub static STAUNTON_GAMBIT: Variation = Variation {
     name: "Staunton Gambit",
     parent: Some(&super::DUTCH_DEFENSE),
     variations: &[
-        &LASKER_VARIATION,
-        &AMERICAN_ATTACK,
-        &NIMZOWITSCH_VARIATION,
         &ALEKHINE_VARIATION,
+        &AMERICAN_ATTACK,
         &CHIGORIN_VARIATION,
+        &LASKER_VARIATION,
+        &NIMZOWITSCH_VARIATION,
         &TARTAKOWER_VARIATION,
     ],
     lines: &[
@@ -225,15 +225,15 @@ pub static STAUNTON_GAMBIT: Variation = Variation {
         },
     ],
 };
-pub mod lasker_variation;
-pub use lasker_variation::LASKER_VARIATION;
-pub mod american_attack;
-pub use american_attack::AMERICAN_ATTACK;
-pub mod nimzowitsch_variation;
-pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
+pub mod american_attack;
+pub use american_attack::AMERICAN_ATTACK;
 pub mod chigorin_variation;
 pub use chigorin_variation::CHIGORIN_VARIATION;
+pub mod lasker_variation;
+pub use lasker_variation::LASKER_VARIATION;
+pub mod nimzowitsch_variation;
+pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
 pub mod tartakower_variation;
 pub use tartakower_variation::TARTAKOWER_VARIATION;

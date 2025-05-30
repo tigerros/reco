@@ -58,7 +58,7 @@ assert_eq!(STEINITZ_COUNTERGAMBIT.original_name(), "Queen's Pawn Game: Accelerat
 pub static STEINITZ_COUNTERGAMBIT: Variation = Variation {
     name: "Steinitz Countergambit",
     parent: Some(&super::ACCELERATED_LONDON_SYSTEM),
-    variations: &[&MORRIS_COUNTERGAMBIT_ACCEPTED, &MORRIS_COUNTERGAMBIT],
+    variations: &[&MORRIS_COUNTERGAMBIT, &MORRIS_COUNTERGAMBIT_ACCEPTED],
     lines: &[Line {
         parent: &STEINITZ_COUNTERGAMBIT,
         code: Code {
@@ -131,7 +131,7 @@ pub static STEINITZ_COUNTERGAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod morris_countergambit_accepted;
-pub use morris_countergambit_accepted::MORRIS_COUNTERGAMBIT_ACCEPTED;
 pub mod morris_countergambit;
 pub use morris_countergambit::MORRIS_COUNTERGAMBIT;
+pub mod morris_countergambit_accepted;
+pub use morris_countergambit_accepted::MORRIS_COUNTERGAMBIT_ACCEPTED;

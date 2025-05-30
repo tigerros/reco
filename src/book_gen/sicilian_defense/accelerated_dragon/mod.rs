@@ -59,11 +59,11 @@ pub static ACCELERATED_DRAGON: Variation = Variation {
     name: "Accelerated Dragon",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &SIMAGIN_VARIATION,
-        &MODERN_BC4_VARIATION,
-        &MODERN_VARIATION,
         &EXCHANGE_VARIATION,
         &MAROCZY_BIND,
+        &MODERN_BC4_VARIATION,
+        &MODERN_VARIATION,
+        &SIMAGIN_VARIATION,
     ],
     lines: &[Line {
         parent: &ACCELERATED_DRAGON,
@@ -165,13 +165,13 @@ pub static ACCELERATED_DRAGON: Variation = Variation {
         },
     }],
 };
-pub mod simagin_variation;
-pub use simagin_variation::SIMAGIN_VARIATION;
-pub mod modern_bc4_variation;
-pub use modern_bc4_variation::MODERN_BC4_VARIATION;
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod maroczy_bind;
 pub use maroczy_bind::MAROCZY_BIND;
+pub mod modern_bc4_variation;
+pub use modern_bc4_variation::MODERN_BC4_VARIATION;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
+pub mod simagin_variation;
+pub use simagin_variation::SIMAGIN_VARIATION;

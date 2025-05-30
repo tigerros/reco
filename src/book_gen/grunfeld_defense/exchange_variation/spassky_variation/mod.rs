@@ -64,6 +64,155 @@ pub static SPASSKY_VARIATION: Variation = Variation {
             parent: &SPASSKY_VARIATION,
             code: Code {
                 volume: Volume::D,
+                category: Category::new_static::<87>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G7,
+                    capture: None,
+                    to: G6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C4,
+                    capture: Some(Pawn),
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: F6,
+                    capture: Some(Pawn),
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: D5,
+                    capture: Some(Knight),
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: B2,
+                    capture: Some(Knight),
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F8,
+                    capture: None,
+                    to: G7,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F1,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: E2,
+                    promotion: None,
+                },
+                Castle { king: E8, rook: H8 },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(50454407158227200),
+                        knight: Bitboard(144115188075859968),
+                        bishop: Bitboard(306244774728302596),
+                        rook: Bitboard(2377900603251622017),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(4611686018427387920),
+                    },
+                    ByColor {
+                        black: Bitboard(8066861743474737152),
+                        white: Bitboard(470086045),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(129),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 2,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &SPASSKY_VARIATION,
+            code: Code {
+                volume: Volume::D,
                 category: Category::new_static::<88>(),
             },
             moves: &[
@@ -439,155 +588,6 @@ pub static SPASSKY_VARIATION: Variation = Variation {
                 remaining_checks: None,
                 halfmoves: 1,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(14) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &SPASSKY_VARIATION,
-            code: Code {
-                volume: Volume::D,
-                category: Category::new_static::<87>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G7,
-                    capture: None,
-                    to: G6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C4,
-                    capture: Some(Pawn),
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: F6,
-                    capture: Some(Pawn),
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: D5,
-                    capture: Some(Knight),
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: B2,
-                    capture: Some(Knight),
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F8,
-                    capture: None,
-                    to: G7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F1,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: E2,
-                    promotion: None,
-                },
-                Castle { king: E8, rook: H8 },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(50454407158227200),
-                        knight: Bitboard(144115188075859968),
-                        bishop: Bitboard(306244774728302596),
-                        rook: Bitboard(2377900603251622017),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(4611686018427387920),
-                    },
-                    ByColor {
-                        black: Bitboard(8066861743474737152),
-                        white: Bitboard(470086045),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(129),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 2,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                     fullmoves
                 } else {
                     #[expect(

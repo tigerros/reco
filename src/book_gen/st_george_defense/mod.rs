@@ -58,7 +58,7 @@ assert_eq!(ST_GEORGE_DEFENSE.original_name(), "St. George Defense");
 pub static ST_GEORGE_DEFENSE: Variation = Variation {
     name: "St. George Defense",
     parent: None,
-    variations: &[&SAN_JORGE_VARIATION, &ZILBERMINTS_GAMBIT, &POLISH_VARIATION],
+    variations: &[&POLISH_VARIATION, &SAN_JORGE_VARIATION, &ZILBERMINTS_GAMBIT],
     lines: &[Line {
         parent: &ST_GEORGE_DEFENSE,
         code: Code {
@@ -117,9 +117,9 @@ pub static ST_GEORGE_DEFENSE: Variation = Variation {
         },
     }],
 };
+pub mod polish_variation;
+pub use polish_variation::POLISH_VARIATION;
 pub mod san_jorge_variation;
 pub use san_jorge_variation::SAN_JORGE_VARIATION;
 pub mod zilbermints_gambit;
 pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
-pub mod polish_variation;
-pub use polish_variation::POLISH_VARIATION;

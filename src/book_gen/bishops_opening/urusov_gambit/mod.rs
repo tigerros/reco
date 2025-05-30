@@ -58,7 +58,7 @@ assert_eq!(URUSOV_GAMBIT.original_name(), "Bishop's Opening: Urusov Gambit");
 pub static URUSOV_GAMBIT: Variation = Variation {
     name: "Urusov Gambit",
     parent: Some(&super::BISHOPS_OPENING),
-    variations: &[&PANOV_VARIATION, &KEIDANSKY_GAMBIT],
+    variations: &[&KEIDANSKY_GAMBIT, &PANOV_VARIATION],
     lines: &[Line {
         parent: &URUSOV_GAMBIT,
         code: Code {
@@ -152,7 +152,7 @@ pub static URUSOV_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod panov_variation;
-pub use panov_variation::PANOV_VARIATION;
 pub mod keidansky_gambit;
 pub use keidansky_gambit::KEIDANSKY_GAMBIT;
+pub mod panov_variation;
+pub use panov_variation::PANOV_VARIATION;

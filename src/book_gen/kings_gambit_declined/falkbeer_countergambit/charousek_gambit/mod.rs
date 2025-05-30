@@ -58,7 +58,7 @@ assert_eq!(CHAROUSEK_GAMBIT.original_name(), "King's Gambit Declined: Falkbeer C
 pub static CHAROUSEK_GAMBIT: Variation = Variation {
     name: "Charousek Gambit",
     parent: Some(&super::FALKBEER_COUNTERGAMBIT),
-    variations: &[&MORPHY_DEFENSE, &KERES_VARIATION, &OLD_LINE, &MAIN_LINE],
+    variations: &[&KERES_VARIATION, &MAIN_LINE, &MORPHY_DEFENSE, &OLD_LINE],
     lines: &[
         Line {
             parent: &CHAROUSEK_GAMBIT,
@@ -274,11 +274,11 @@ pub static CHAROUSEK_GAMBIT: Variation = Variation {
         },
     ],
 };
-pub mod morphy_defense;
-pub use morphy_defense::MORPHY_DEFENSE;
 pub mod keres_variation;
 pub use keres_variation::KERES_VARIATION;
-pub mod old_line;
-pub use old_line::OLD_LINE;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod morphy_defense;
+pub use morphy_defense::MORPHY_DEFENSE;
+pub mod old_line;
+pub use old_line::OLD_LINE;

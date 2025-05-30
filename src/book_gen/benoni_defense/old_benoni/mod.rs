@@ -145,18 +145,11 @@ pub static OLD_BENONI: Variation = Variation {
                     to: D5,
                     promotion: None,
                 },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D6,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(68407266973382400),
+                        pawn: Bitboard(70650270694045440),
                         knight: Bitboard(4755801206503243842),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
@@ -164,18 +157,18 @@ pub static OLD_BENONI: Variation = Variation {
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18443093712285204480),
+                        black: Bitboard(18445336716005867520),
                         white: Bitboard(34359801855),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
+                turn: Black,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                     fullmoves
                 } else {
                     #[expect(
@@ -216,11 +209,18 @@ pub static OLD_BENONI: Variation = Variation {
                     to: D5,
                     promotion: None,
                 },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D6,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(70650270694045440),
+                        pawn: Bitboard(68407266973382400),
                         knight: Bitboard(4755801206503243842),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
@@ -228,18 +228,18 @@ pub static OLD_BENONI: Variation = Variation {
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18445336716005867520),
+                        black: Bitboard(18443093712285204480),
                         white: Bitboard(34359801855),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                     fullmoves
                 } else {
                     #[expect(

@@ -59,24 +59,24 @@ pub static ITALIAN_GAME: Variation = Variation {
     name: "Italian Game",
     parent: None,
     variations: &[
-        &ROUSSEAU_GAMBIT,
+        &ANTI_FRIED_LIVER_DEFENSE,
         &BIRDS_ATTACK,
-        &TWO_KNIGHTS_DEFENSE,
         &BLACKBURNE_KOSTIC_GAMBIT,
-        &PARIS_DEFENSE,
-        &JEROME_GAMBIT,
         &CLASSICAL_VARIATION,
         &DEUTZ_GAMBIT,
-        &GIUOCO_PIANISSIMO,
-        &ANTI_FRIED_LIVER_DEFENSE,
         &EVANS_GAMBIT,
-        &ROSENTRETER_GAMBIT,
-        &SCOTCH_INVITATION_DECLINED,
-        &HUNGARIAN_DEFENSE,
         &EVANS_GAMBIT_ACCEPTED,
-        &SCOTCH_GAMBIT,
-        &GIUOCO_PIANO,
         &EVANS_GAMBIT_DECLINED,
+        &GIUOCO_PIANISSIMO,
+        &GIUOCO_PIANO,
+        &HUNGARIAN_DEFENSE,
+        &JEROME_GAMBIT,
+        &PARIS_DEFENSE,
+        &ROSENTRETER_GAMBIT,
+        &ROUSSEAU_GAMBIT,
+        &SCOTCH_GAMBIT,
+        &SCOTCH_INVITATION_DECLINED,
+        &TWO_KNIGHTS_DEFENSE,
     ],
     lines: &[Line {
         parent: &ITALIAN_GAME,
@@ -157,39 +157,39 @@ pub static ITALIAN_GAME: Variation = Variation {
         },
     }],
 };
-pub mod rousseau_gambit;
-pub use rousseau_gambit::ROUSSEAU_GAMBIT;
+pub mod anti_fried_liver_defense;
+pub use anti_fried_liver_defense::ANTI_FRIED_LIVER_DEFENSE;
 pub mod birds_attack;
 pub use birds_attack::BIRDS_ATTACK;
-pub mod two_knights_defense;
-pub use two_knights_defense::TWO_KNIGHTS_DEFENSE;
 pub mod blackburne_kostic_gambit;
 pub use blackburne_kostic_gambit::BLACKBURNE_KOSTIC_GAMBIT;
-pub mod paris_defense;
-pub use paris_defense::PARIS_DEFENSE;
-pub mod jerome_gambit;
-pub use jerome_gambit::JEROME_GAMBIT;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
 pub mod deutz_gambit;
 pub use deutz_gambit::DEUTZ_GAMBIT;
-pub mod giuoco_pianissimo;
-pub use giuoco_pianissimo::GIUOCO_PIANISSIMO;
-pub mod anti_fried_liver_defense;
-pub use anti_fried_liver_defense::ANTI_FRIED_LIVER_DEFENSE;
 pub mod evans_gambit;
 pub use evans_gambit::EVANS_GAMBIT;
-pub mod rosentreter_gambit;
-pub use rosentreter_gambit::ROSENTRETER_GAMBIT;
-pub mod scotch_invitation_declined;
-pub use scotch_invitation_declined::SCOTCH_INVITATION_DECLINED;
-pub mod hungarian_defense;
-pub use hungarian_defense::HUNGARIAN_DEFENSE;
 pub mod evans_gambit_accepted;
 pub use evans_gambit_accepted::EVANS_GAMBIT_ACCEPTED;
-pub mod scotch_gambit;
-pub use scotch_gambit::SCOTCH_GAMBIT;
-pub mod giuoco_piano;
-pub use giuoco_piano::GIUOCO_PIANO;
 pub mod evans_gambit_declined;
 pub use evans_gambit_declined::EVANS_GAMBIT_DECLINED;
+pub mod giuoco_pianissimo;
+pub use giuoco_pianissimo::GIUOCO_PIANISSIMO;
+pub mod giuoco_piano;
+pub use giuoco_piano::GIUOCO_PIANO;
+pub mod hungarian_defense;
+pub use hungarian_defense::HUNGARIAN_DEFENSE;
+pub mod jerome_gambit;
+pub use jerome_gambit::JEROME_GAMBIT;
+pub mod paris_defense;
+pub use paris_defense::PARIS_DEFENSE;
+pub mod rosentreter_gambit;
+pub use rosentreter_gambit::ROSENTRETER_GAMBIT;
+pub mod rousseau_gambit;
+pub use rousseau_gambit::ROUSSEAU_GAMBIT;
+pub mod scotch_gambit;
+pub use scotch_gambit::SCOTCH_GAMBIT;
+pub mod scotch_invitation_declined;
+pub use scotch_invitation_declined::SCOTCH_INVITATION_DECLINED;
+pub mod two_knights_defense;
+pub use two_knights_defense::TWO_KNIGHTS_DEFENSE;

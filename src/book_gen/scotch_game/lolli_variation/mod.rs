@@ -109,51 +109,30 @@ pub static LOLLI_VARIATION: Variation = Variation {
                     to: D4,
                     promotion: None,
                 },
-                Normal {
-                    role: Knight,
-                    from: F3,
-                    capture: Some(Knight),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E5,
-                    capture: Some(Knight),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Queen,
-                    from: D1,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(67272519702341376),
-                        knight: Bitboard(4611686018427387906),
+                        pawn: Bitboard(67272588421818112),
+                        knight: Bitboard(4611686018563702786),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752437641216),
+                        queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18297843811029614592),
-                        white: Bitboard(402712503),
+                        black: Bitboard(18297843879883309056),
+                        white: Bitboard(270591935),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                     fullmoves
                 } else {
                     #[expect(
@@ -215,30 +194,51 @@ pub static LOLLI_VARIATION: Variation = Variation {
                     to: D4,
                     promotion: None,
                 },
+                Normal {
+                    role: Knight,
+                    from: F3,
+                    capture: Some(Knight),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E5,
+                    capture: Some(Knight),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Queen,
+                    from: D1,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(67272588421818112),
-                        knight: Bitboard(4611686018563702786),
+                        pawn: Bitboard(67272519702341376),
+                        knight: Bitboard(4611686018427387906),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
+                        queen: Bitboard(576460752437641216),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18297843879883309056),
-                        white: Bitboard(270591935),
+                        black: Bitboard(18297843811029614592),
+                        white: Bitboard(402712503),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
+                turn: Black,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                     fullmoves
                 } else {
                     #[expect(

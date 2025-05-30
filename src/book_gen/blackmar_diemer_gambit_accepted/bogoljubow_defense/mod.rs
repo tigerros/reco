@@ -60,9 +60,9 @@ pub static BOGOLJUBOW_DEFENSE: Variation = Variation {
     parent: Some(&super::BLACKMAR_DIEMER_GAMBIT_ACCEPTED),
     variations: &[
         &KLOSS_ATTACK,
-        &STUDIER_ATTACK,
         &MAD_DOG_ATTACK,
         &NIMZOWITSCH_ATTACK,
+        &STUDIER_ATTACK,
     ],
     lines: &[Line {
         parent: &BOGOLJUBOW_DEFENSE,
@@ -180,9 +180,9 @@ pub static BOGOLJUBOW_DEFENSE: Variation = Variation {
 };
 pub mod kloss_attack;
 pub use kloss_attack::KLOSS_ATTACK;
-pub mod studier_attack;
-pub use studier_attack::STUDIER_ATTACK;
 pub mod mad_dog_attack;
 pub use mad_dog_attack::MAD_DOG_ATTACK;
 pub mod nimzowitsch_attack;
 pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
+pub mod studier_attack;
+pub use studier_attack::STUDIER_ATTACK;

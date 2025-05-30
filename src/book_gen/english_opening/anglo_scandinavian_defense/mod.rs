@@ -58,7 +58,7 @@ assert_eq!(ANGLO_SCANDINAVIAN_DEFENSE.original_name(), "English Opening: Anglo-S
 pub static ANGLO_SCANDINAVIAN_DEFENSE: Variation = Variation {
     name: "Anglo-Scandinavian Defense",
     parent: Some(&super::ENGLISH_OPENING),
-    variations: &[&MALVINAS_VARIATION, &SCHULZ_GAMBIT, &LOHN_GAMBIT],
+    variations: &[&LOHN_GAMBIT, &MALVINAS_VARIATION, &SCHULZ_GAMBIT],
     lines: &[Line {
         parent: &ANGLO_SCANDINAVIAN_DEFENSE,
         code: Code {
@@ -117,9 +117,9 @@ pub static ANGLO_SCANDINAVIAN_DEFENSE: Variation = Variation {
         },
     }],
 };
+pub mod lohn_gambit;
+pub use lohn_gambit::LOHN_GAMBIT;
 pub mod malvinas_variation;
 pub use malvinas_variation::MALVINAS_VARIATION;
 pub mod schulz_gambit;
 pub use schulz_gambit::SCHULZ_GAMBIT;
-pub mod lohn_gambit;
-pub use lohn_gambit::LOHN_GAMBIT;

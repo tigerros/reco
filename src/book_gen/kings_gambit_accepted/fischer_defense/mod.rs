@@ -58,7 +58,7 @@ assert_eq!(FISCHER_DEFENSE.original_name(), "King's Gambit Accepted: Fischer Def
 pub static FISCHER_DEFENSE: Variation = Variation {
     name: "Fischer Defense",
     parent: Some(&super::KINGS_GAMBIT_ACCEPTED),
-    variations: &[&SPANISH_VARIATION, &SCHULDER_GAMBIT],
+    variations: &[&SCHULDER_GAMBIT, &SPANISH_VARIATION],
     lines: &[Line {
         parent: &FISCHER_DEFENSE,
         code: Code {
@@ -145,7 +145,7 @@ pub static FISCHER_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod spanish_variation;
-pub use spanish_variation::SPANISH_VARIATION;
 pub mod schulder_gambit;
 pub use schulder_gambit::SCHULDER_GAMBIT;
+pub mod spanish_variation;
+pub use spanish_variation::SPANISH_VARIATION;

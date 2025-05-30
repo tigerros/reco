@@ -60,17 +60,17 @@ pub static KIESERITZKY: Variation = Variation {
     parent: Some(&super::KINGS_GAMBIT_ACCEPTED),
     variations: &[
         &LONG_WHIP_DEFENSE,
+        &POLERIO_DEFENSE,
         &RICE_GAMBIT,
         &SALVIO_DEFENSE,
-        &POLERIO_DEFENSE,
     ],
     lines: &[],
 };
 pub mod long_whip_defense;
 pub use long_whip_defense::LONG_WHIP_DEFENSE;
+pub mod polerio_defense;
+pub use polerio_defense::POLERIO_DEFENSE;
 pub mod rice_gambit;
 pub use rice_gambit::RICE_GAMBIT;
 pub mod salvio_defense;
 pub use salvio_defense::SALVIO_DEFENSE;
-pub mod polerio_defense;
-pub use polerio_defense::POLERIO_DEFENSE;

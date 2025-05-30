@@ -59,14 +59,14 @@ pub static MODERN_ATTACK: Variation = Variation {
     name: "Modern Attack",
     parent: Some(&super::PETROVS_DEFENSE),
     variations: &[
+        &BARDELEBEN_VARIATION,
         &CENTER_ATTACK,
         &CENTER_VARIATION,
-        &SYMMETRICAL_VARIATION,
         &MURREY_VARIATION,
-        &TRIFUNOVIC_VARIATION,
         &STEINITZ_VARIATION,
+        &SYMMETRICAL_VARIATION,
         &TAL_GAMBIT,
-        &BARDELEBEN_VARIATION,
+        &TRIFUNOVIC_VARIATION,
     ],
     lines: &[
         Line {
@@ -234,19 +234,19 @@ pub static MODERN_ATTACK: Variation = Variation {
         },
     ],
 };
+pub mod bardeleben_variation;
+pub use bardeleben_variation::BARDELEBEN_VARIATION;
 pub mod center_attack;
 pub use center_attack::CENTER_ATTACK;
 pub mod center_variation;
 pub use center_variation::CENTER_VARIATION;
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
 pub mod murrey_variation;
 pub use murrey_variation::MURREY_VARIATION;
-pub mod trifunovic_variation;
-pub use trifunovic_variation::TRIFUNOVIC_VARIATION;
 pub mod steinitz_variation;
 pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
 pub mod tal_gambit;
 pub use tal_gambit::TAL_GAMBIT;
-pub mod bardeleben_variation;
-pub use bardeleben_variation::BARDELEBEN_VARIATION;
+pub mod trifunovic_variation;
+pub use trifunovic_variation::TRIFUNOVIC_VARIATION;

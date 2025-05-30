@@ -59,8 +59,8 @@ pub static TEICHMANN_DEFENSE: Variation = Variation {
     name: "Teichmann Defense",
     parent: Some(&super::BLACKMAR_DIEMER_GAMBIT_ACCEPTED),
     variations: &[
-        &CLASSICAL_VARIATION,
         &CIESIELSKI_VARIATION,
+        &CLASSICAL_VARIATION,
         &SEIDEL_HALL_ATTACK,
     ],
     lines: &[Line {
@@ -177,9 +177,9 @@ pub static TEICHMANN_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
 pub mod ciesielski_variation;
 pub use ciesielski_variation::CIESIELSKI_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
 pub mod seidel_hall_attack;
 pub use seidel_hall_attack::SEIDEL_HALL_ATTACK;

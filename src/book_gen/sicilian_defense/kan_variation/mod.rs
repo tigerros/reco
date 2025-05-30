@@ -59,13 +59,13 @@ pub static KAN_VARIATION: Variation = Variation {
     name: "Kan Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &MAROCZY_BIND,
-        &SWISS_CHEESE_VARIATION,
-        &WING_ATTACK,
+        &GIPSLIS_VARIATION,
         &KNIGHT_VARIATION,
+        &MAROCZY_BIND,
         &MODERN_VARIATION,
         &POLUGAEVSKY_VARIATION,
-        &GIPSLIS_VARIATION,
+        &SWISS_CHEESE_VARIATION,
+        &WING_ATTACK,
     ],
     lines: &[Line {
         parent: &KAN_VARIATION,
@@ -167,17 +167,17 @@ pub static KAN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod maroczy_bind;
-pub use maroczy_bind::MAROCZY_BIND;
-pub mod swiss_cheese_variation;
-pub use swiss_cheese_variation::SWISS_CHEESE_VARIATION;
-pub mod wing_attack;
-pub use wing_attack::WING_ATTACK;
+pub mod gipslis_variation;
+pub use gipslis_variation::GIPSLIS_VARIATION;
 pub mod knight_variation;
 pub use knight_variation::KNIGHT_VARIATION;
+pub mod maroczy_bind;
+pub use maroczy_bind::MAROCZY_BIND;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
 pub mod polugaevsky_variation;
 pub use polugaevsky_variation::POLUGAEVSKY_VARIATION;
-pub mod gipslis_variation;
-pub use gipslis_variation::GIPSLIS_VARIATION;
+pub mod swiss_cheese_variation;
+pub use swiss_cheese_variation::SWISS_CHEESE_VARIATION;
+pub mod wing_attack;
+pub use wing_attack::WING_ATTACK;

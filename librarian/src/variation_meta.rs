@@ -1,15 +1,17 @@
 use crate::LineMeta;
 use deunicode::deunicode;
 use heck::{ToShoutySnekCase, ToSnekCase};
+use indexmap::IndexSet;
 use std::cell::RefCell;
-use std::collections::{HashMap, HashSet, VecDeque};
+use std::collections::{BTreeMap, VecDeque};
 use std::rc::Rc;
 
+#[derive(PartialEq, Eq)]
 pub struct VariationMeta {
     pub name: Rc<str>,
-    pub variations: RefCell<HashMap<Rc<str>, Rc<Self>>>,
+    pub variations: RefCell<BTreeMap<Rc<str>, Rc<Self>>>,
     pub parent: Option<Rc<Self>>,
-    pub lines: RefCell<HashSet<LineMeta>>,
+    pub lines: RefCell<IndexSet<LineMeta>>,
 }
 
 impl VariationMeta {

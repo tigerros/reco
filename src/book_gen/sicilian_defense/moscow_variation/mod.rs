@@ -60,9 +60,9 @@ pub static MOSCOW_VARIATION: Variation = Variation {
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
         &DORFMAN_GAMBIT,
+        &HAAG_GAMBIT,
         &MAIN_LINE,
         &MOSCOW_GAMBIT,
-        &HAAG_GAMBIT,
         &SOKOLSKY_VARIATION,
     ],
     lines: &[Line {
@@ -146,11 +146,11 @@ pub static MOSCOW_VARIATION: Variation = Variation {
 };
 pub mod dorfman_gambit;
 pub use dorfman_gambit::DORFMAN_GAMBIT;
+pub mod haag_gambit;
+pub use haag_gambit::HAAG_GAMBIT;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod moscow_gambit;
 pub use moscow_gambit::MOSCOW_GAMBIT;
-pub mod haag_gambit;
-pub use haag_gambit::HAAG_GAMBIT;
 pub mod sokolsky_variation;
 pub use sokolsky_variation::SOKOLSKY_VARIATION;

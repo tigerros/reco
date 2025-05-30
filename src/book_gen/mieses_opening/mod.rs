@@ -58,7 +58,7 @@ assert_eq!(MIESES_OPENING.original_name(), "Mieses Opening");
 pub static MIESES_OPENING: Variation = Variation {
     name: "Mieses Opening",
     parent: None,
-    variations: &[&REVERSED_RAT, &MYERS_SPIKE_ATTACK, &VENEZOLANA_VARIATION],
+    variations: &[&MYERS_SPIKE_ATTACK, &REVERSED_RAT, &VENEZOLANA_VARIATION],
     lines: &[Line {
         parent: &MIESES_OPENING,
         code: Code {
@@ -108,9 +108,9 @@ pub static MIESES_OPENING: Variation = Variation {
         },
     }],
 };
-pub mod reversed_rat;
-pub use reversed_rat::REVERSED_RAT;
 pub mod myers_spike_attack;
 pub use myers_spike_attack::MYERS_SPIKE_ATTACK;
+pub mod reversed_rat;
+pub use reversed_rat::REVERSED_RAT;
 pub mod venezolana_variation;
 pub use venezolana_variation::VENEZOLANA_VARIATION;

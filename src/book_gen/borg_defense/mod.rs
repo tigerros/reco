@@ -58,7 +58,7 @@ assert_eq!(BORG_DEFENSE.original_name(), "Borg Defense");
 pub static BORG_DEFENSE: Variation = Variation {
     name: "Borg Defense",
     parent: None,
-    variations: &[&ZILBERMINTS_GAMBIT, &BORG_GAMBIT, &TROON_GAMBIT],
+    variations: &[&BORG_GAMBIT, &TROON_GAMBIT, &ZILBERMINTS_GAMBIT],
     lines: &[Line {
         parent: &BORG_DEFENSE,
         code: Code {
@@ -117,9 +117,9 @@ pub static BORG_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod zilbermints_gambit;
-pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
 pub mod borg_gambit;
 pub use borg_gambit::BORG_GAMBIT;
 pub mod troon_gambit;
 pub use troon_gambit::TROON_GAMBIT;
+pub mod zilbermints_gambit;
+pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;

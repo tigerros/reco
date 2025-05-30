@@ -58,7 +58,7 @@ assert_eq!(BERLIN_DEFENSE.original_name(), "King's Gambit Accepted: Kieseritzky 
 pub static BERLIN_DEFENSE: Variation = Variation {
     name: "Berlin Defense",
     parent: Some(&super::KIESERITZKY_GAMBIT),
-    variations: &[&DE_RIVIERE_VARIATION, &RUBINSTEIN_VARIATION],
+    variations: &[&RUBINSTEIN_VARIATION, &DE_RIVIERE_VARIATION],
     lines: &[Line {
         parent: &BERLIN_DEFENSE,
         code: Code {
@@ -173,7 +173,7 @@ pub static BERLIN_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod de_riviere_variation;
-pub use de_riviere_variation::DE_RIVIERE_VARIATION;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod de_riviere_variation;
+pub use de_riviere_variation::DE_RIVIERE_VARIATION;

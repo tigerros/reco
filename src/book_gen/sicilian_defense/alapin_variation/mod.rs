@@ -59,8 +59,8 @@ pub static ALAPIN_VARIATION: Variation = Variation {
     name: "Alapin Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &SHERZER_VARIATION,
         &BARMEN_DEFENSE,
+        &SHERZER_VARIATION,
         &SMITH_MORRA_DECLINED,
         &STOLTZ_ATTACK,
     ],
@@ -129,10 +129,10 @@ pub static ALAPIN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod sherzer_variation;
-pub use sherzer_variation::SHERZER_VARIATION;
 pub mod barmen_defense;
 pub use barmen_defense::BARMEN_DEFENSE;
+pub mod sherzer_variation;
+pub use sherzer_variation::SHERZER_VARIATION;
 pub mod smith_morra_declined;
 pub use smith_morra_declined::SMITH_MORRA_DECLINED;
 pub mod stoltz_attack;

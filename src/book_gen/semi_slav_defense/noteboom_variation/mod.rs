@@ -60,8 +60,8 @@ pub static NOTEBOOM_VARIATION: Variation = Variation {
     parent: Some(&super::SEMI_SLAV_DEFENSE),
     variations: &[
         &ABRAHAMS_VARIATION,
-        &ANTI_NOTEBOOM_VARIATION,
         &ANTI_NOTEBOOM_GAMBIT,
+        &ANTI_NOTEBOOM_VARIATION,
     ],
     lines: &[Line {
         parent: &NOTEBOOM_VARIATION,
@@ -165,7 +165,7 @@ pub static NOTEBOOM_VARIATION: Variation = Variation {
 };
 pub mod abrahams_variation;
 pub use abrahams_variation::ABRAHAMS_VARIATION;
-pub mod anti_noteboom_variation;
-pub use anti_noteboom_variation::ANTI_NOTEBOOM_VARIATION;
 pub mod anti_noteboom_gambit;
 pub use anti_noteboom_gambit::ANTI_NOTEBOOM_GAMBIT;
+pub mod anti_noteboom_variation;
+pub use anti_noteboom_variation::ANTI_NOTEBOOM_VARIATION;

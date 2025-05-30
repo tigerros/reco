@@ -58,12 +58,12 @@ assert_eq!(TORRE_ATTACK.original_name(), "Torre Attack");
 pub static TORRE_ATTACK: Variation = Variation {
     name: "Torre Attack",
     parent: None,
-    variations: &[&WAGNER_GAMBIT, &CLASSICAL_DEFENSE, &FIANCHETTO_DEFENSE],
+    variations: &[&CLASSICAL_DEFENSE, &FIANCHETTO_DEFENSE, &WAGNER_GAMBIT],
     lines: &[],
 };
-pub mod wagner_gambit;
-pub use wagner_gambit::WAGNER_GAMBIT;
 pub mod classical_defense;
 pub use classical_defense::CLASSICAL_DEFENSE;
 pub mod fianchetto_defense;
 pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod wagner_gambit;
+pub use wagner_gambit::WAGNER_GAMBIT;

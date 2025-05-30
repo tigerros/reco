@@ -59,30 +59,30 @@ pub static KINGS_PAWN_GAME: Variation = Variation {
     name: "King's Pawn Game",
     parent: None,
     variations: &[
-        &BAVARIAN_GAMBIT,
         &ALAPIN_OPENING,
-        &WAYWARD_QUEEN_ATTACK,
+        &BAVARIAN_GAMBIT,
+        &BEYER_GAMBIT,
         &BUSCH_GASS_GAMBIT,
+        &CLAM_VARIATION,
+        &DAMIANO_DEFENSE,
+        &DRESDEN_OPENING,
+        &GUNDERAM_DEFENSE,
+        &GUNDERAM_GAMBIT,
+        &KINGS_HEAD_OPENING,
+        &LA_BOURDONNAIS_GAMBIT,
+        &LEONARDIS_VARIATION,
+        &MAC_LEOD_ATTACK,
+        &MAROCZY_DEFENSE,
+        &MC_CONNELL_DEFENSE,
+        &MENGARINIS_OPENING,
+        &NAPOLEON_ATTACK,
+        &PACHMAN_WING_GAMBIT,
         &PHILIDOR_GAMBIT,
         &SCHULZE_MULLER_GAMBIT,
-        &WEBER_GAMBIT,
-        &GUNDERAM_GAMBIT,
-        &LEONARDIS_VARIATION,
-        &CLAM_VARIATION,
-        &LA_BOURDONNAIS_GAMBIT,
-        &NAPOLEON_ATTACK,
-        &KINGS_HEAD_OPENING,
-        &DAMIANO_DEFENSE,
-        &GUNDERAM_DEFENSE,
-        &DRESDEN_OPENING,
-        &BEYER_GAMBIT,
-        &MAROCZY_DEFENSE,
-        &PACHMAN_WING_GAMBIT,
-        &MC_CONNELL_DEFENSE,
-        &TORTOISE_OPENING,
-        &MAC_LEOD_ATTACK,
         &TAYLER_OPENING,
-        &MENGARINIS_OPENING,
+        &TORTOISE_OPENING,
+        &WAYWARD_QUEEN_ATTACK,
+        &WEBER_GAMBIT,
     ],
     lines: &[
         Line {
@@ -192,51 +192,51 @@ pub static KINGS_PAWN_GAME: Variation = Variation {
         },
     ],
 };
-pub mod bavarian_gambit;
-pub use bavarian_gambit::BAVARIAN_GAMBIT;
 pub mod alapin_opening;
 pub use alapin_opening::ALAPIN_OPENING;
-pub mod wayward_queen_attack;
-pub use wayward_queen_attack::WAYWARD_QUEEN_ATTACK;
+pub mod bavarian_gambit;
+pub use bavarian_gambit::BAVARIAN_GAMBIT;
+pub mod beyer_gambit;
+pub use beyer_gambit::BEYER_GAMBIT;
 pub mod busch_gass_gambit;
 pub use busch_gass_gambit::BUSCH_GASS_GAMBIT;
+pub mod clam_variation;
+pub use clam_variation::CLAM_VARIATION;
+pub mod damiano_defense;
+pub use damiano_defense::DAMIANO_DEFENSE;
+pub mod dresden_opening;
+pub use dresden_opening::DRESDEN_OPENING;
+pub mod gunderam_defense;
+pub use gunderam_defense::GUNDERAM_DEFENSE;
+pub mod gunderam_gambit;
+pub use gunderam_gambit::GUNDERAM_GAMBIT;
+pub mod kings_head_opening;
+pub use kings_head_opening::KINGS_HEAD_OPENING;
+pub mod la_bourdonnais_gambit;
+pub use la_bourdonnais_gambit::LA_BOURDONNAIS_GAMBIT;
+pub mod leonardis_variation;
+pub use leonardis_variation::LEONARDIS_VARIATION;
+pub mod mac_leod_attack;
+pub use mac_leod_attack::MAC_LEOD_ATTACK;
+pub mod maroczy_defense;
+pub use maroczy_defense::MAROCZY_DEFENSE;
+pub mod mc_connell_defense;
+pub use mc_connell_defense::MC_CONNELL_DEFENSE;
+pub mod mengarinis_opening;
+pub use mengarinis_opening::MENGARINIS_OPENING;
+pub mod napoleon_attack;
+pub use napoleon_attack::NAPOLEON_ATTACK;
+pub mod pachman_wing_gambit;
+pub use pachman_wing_gambit::PACHMAN_WING_GAMBIT;
 pub mod philidor_gambit;
 pub use philidor_gambit::PHILIDOR_GAMBIT;
 pub mod schulze_muller_gambit;
 pub use schulze_muller_gambit::SCHULZE_MULLER_GAMBIT;
-pub mod weber_gambit;
-pub use weber_gambit::WEBER_GAMBIT;
-pub mod gunderam_gambit;
-pub use gunderam_gambit::GUNDERAM_GAMBIT;
-pub mod leonardis_variation;
-pub use leonardis_variation::LEONARDIS_VARIATION;
-pub mod clam_variation;
-pub use clam_variation::CLAM_VARIATION;
-pub mod la_bourdonnais_gambit;
-pub use la_bourdonnais_gambit::LA_BOURDONNAIS_GAMBIT;
-pub mod napoleon_attack;
-pub use napoleon_attack::NAPOLEON_ATTACK;
-pub mod kings_head_opening;
-pub use kings_head_opening::KINGS_HEAD_OPENING;
-pub mod damiano_defense;
-pub use damiano_defense::DAMIANO_DEFENSE;
-pub mod gunderam_defense;
-pub use gunderam_defense::GUNDERAM_DEFENSE;
-pub mod dresden_opening;
-pub use dresden_opening::DRESDEN_OPENING;
-pub mod beyer_gambit;
-pub use beyer_gambit::BEYER_GAMBIT;
-pub mod maroczy_defense;
-pub use maroczy_defense::MAROCZY_DEFENSE;
-pub mod pachman_wing_gambit;
-pub use pachman_wing_gambit::PACHMAN_WING_GAMBIT;
-pub mod mc_connell_defense;
-pub use mc_connell_defense::MC_CONNELL_DEFENSE;
-pub mod tortoise_opening;
-pub use tortoise_opening::TORTOISE_OPENING;
-pub mod mac_leod_attack;
-pub use mac_leod_attack::MAC_LEOD_ATTACK;
 pub mod tayler_opening;
 pub use tayler_opening::TAYLER_OPENING;
-pub mod mengarinis_opening;
-pub use mengarinis_opening::MENGARINIS_OPENING;
+pub mod tortoise_opening;
+pub use tortoise_opening::TORTOISE_OPENING;
+pub mod wayward_queen_attack;
+pub use wayward_queen_attack::WAYWARD_QUEEN_ATTACK;
+pub mod weber_gambit;
+pub use weber_gambit::WEBER_GAMBIT;

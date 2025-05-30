@@ -58,12 +58,12 @@ assert_eq!(SEMI_SLAV.original_name(), "Queen's Gambit Declined: Semi-Slav");
 pub static SEMI_SLAV: Variation = Variation {
     name: "Semi-Slav",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
-    variations: &[&JUNGE_VARIATION, &KOOMEN_VARIATION, &ABRAHAMS_VARIATION],
+    variations: &[&ABRAHAMS_VARIATION, &JUNGE_VARIATION, &KOOMEN_VARIATION],
     lines: &[],
 };
+pub mod abrahams_variation;
+pub use abrahams_variation::ABRAHAMS_VARIATION;
 pub mod junge_variation;
 pub use junge_variation::JUNGE_VARIATION;
 pub mod koomen_variation;
 pub use koomen_variation::KOOMEN_VARIATION;
-pub mod abrahams_variation;
-pub use abrahams_variation::ABRAHAMS_VARIATION;

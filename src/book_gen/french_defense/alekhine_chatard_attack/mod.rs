@@ -59,11 +59,11 @@ pub static ALEKHINE_CHATARD_ATTACK: Variation = Variation {
     name: "Alekhine-Chatard Attack",
     parent: Some(&super::FRENCH_DEFENSE),
     variations: &[
-        &SPIELMANN_VARIATION,
-        &TEICHMANN_VARIATION,
+        &ALBIN_CHATARD_GAMBIT,
         &BREYER_VARIATION,
         &MAROCZY_VARIATION,
-        &ALBIN_CHATARD_GAMBIT,
+        &SPIELMANN_VARIATION,
+        &TEICHMANN_VARIATION,
     ],
     lines: &[Line {
         parent: &ALEKHINE_CHATARD_ATTACK,
@@ -186,13 +186,13 @@ pub static ALEKHINE_CHATARD_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod spielmann_variation;
-pub use spielmann_variation::SPIELMANN_VARIATION;
-pub mod teichmann_variation;
-pub use teichmann_variation::TEICHMANN_VARIATION;
+pub mod albin_chatard_gambit;
+pub use albin_chatard_gambit::ALBIN_CHATARD_GAMBIT;
 pub mod breyer_variation;
 pub use breyer_variation::BREYER_VARIATION;
 pub mod maroczy_variation;
 pub use maroczy_variation::MAROCZY_VARIATION;
-pub mod albin_chatard_gambit;
-pub use albin_chatard_gambit::ALBIN_CHATARD_GAMBIT;
+pub mod spielmann_variation;
+pub use spielmann_variation::SPIELMANN_VARIATION;
+pub mod teichmann_variation;
+pub use teichmann_variation::TEICHMANN_VARIATION;

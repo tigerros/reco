@@ -59,27 +59,27 @@ pub static SICILIAN: Variation = Variation {
     name: "Sicilian",
     parent: Some(&super::PTERODACTYL_DEFENSE),
     variations: &[
-        &RHAMPHORHYNCHUS,
-        &UNPIN,
         &ANHANGUERA,
-        &SIROCCOPTERYX,
-        &QUETZALCOATLUS,
         &BENONI_GAMBIT,
         &PTERANODON,
+        &QUETZALCOATLUS,
+        &RHAMPHORHYNCHUS,
+        &SIROCCOPTERYX,
+        &UNPIN,
     ],
     lines: &[],
 };
-pub mod rhamphorhynchus;
-pub use rhamphorhynchus::RHAMPHORHYNCHUS;
-pub mod unpin;
-pub use unpin::UNPIN;
 pub mod anhanguera;
 pub use anhanguera::ANHANGUERA;
-pub mod siroccopteryx;
-pub use siroccopteryx::SIROCCOPTERYX;
-pub mod quetzalcoatlus;
-pub use quetzalcoatlus::QUETZALCOATLUS;
 pub mod benoni_gambit;
 pub use benoni_gambit::BENONI_GAMBIT;
 pub mod pteranodon;
 pub use pteranodon::PTERANODON;
+pub mod quetzalcoatlus;
+pub use quetzalcoatlus::QUETZALCOATLUS;
+pub mod rhamphorhynchus;
+pub use rhamphorhynchus::RHAMPHORHYNCHUS;
+pub mod siroccopteryx;
+pub use siroccopteryx::SIROCCOPTERYX;
+pub mod unpin;
+pub use unpin::UNPIN;

@@ -59,25 +59,174 @@ pub static PHILIDOR_DEFENSE: Variation = Variation {
     name: "Philidor Defense",
     parent: None,
     variations: &[
-        &STEINITZ_VARIATION,
-        &PAULSEN_ATTACK,
+        &ALBIN_BLACKBURNE_GAMBIT,
         &BERGER_VARIATION,
-        &HANHAM_VARIATION,
-        &LION_VARIATION,
+        &BIRD_GAMBIT,
         &BODEN_VARIATION,
-        &LARSEN_VARIATION,
-        &PHILIDOR_COUNTERGAMBIT,
         &EXCHANGE_VARIATION,
         &HANHAM,
-        &ALBIN_BLACKBURNE_GAMBIT,
+        &HANHAM_VARIATION,
+        &LARSEN_VARIATION,
+        &LION_VARIATION,
+        &LOPEZ_COUNTERGAMBIT,
         &MORPHY_GAMBIT,
         &NIMZOWITSCH,
         &NIMZOWITSCH_VARIATION,
-        &LOPEZ_COUNTERGAMBIT,
+        &PAULSEN_ATTACK,
+        &PHILIDOR_COUNTERGAMBIT,
         &PHILIDOR_GAMBIT,
-        &BIRD_GAMBIT,
+        &STEINITZ_VARIATION,
     ],
     lines: &[
+        Line {
+            parent: &PHILIDOR_DEFENSE,
+            code: Code {
+                volume: Volume::C,
+                category: Category::new_static::<41>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D6,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(65029584701157120),
+                        knight: Bitboard(4755801206505340930),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18439716064104284160),
+                        white: Bitboard(270593983),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &PHILIDOR_DEFENSE,
+            code: Code {
+                volume: Volume::C,
+                category: Category::new_static::<41>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(65029584835372800),
+                        knight: Bitboard(4755801206505340930),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18439716064104284160),
+                        white: Bitboard(404809663),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &PHILIDOR_DEFENSE,
             code: Code {
@@ -241,188 +390,39 @@ pub static PHILIDOR_DEFENSE: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &PHILIDOR_DEFENSE,
-            code: Code {
-                volume: Volume::C,
-                category: Category::new_static::<41>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D6,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(65029584701157120),
-                        knight: Bitboard(4755801206505340930),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18439716064104284160),
-                        white: Bitboard(270593983),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &PHILIDOR_DEFENSE,
-            code: Code {
-                volume: Volume::C,
-                category: Category::new_static::<41>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(65029584835372800),
-                        knight: Bitboard(4755801206505340930),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18439716064104284160),
-                        white: Bitboard(404809663),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod paulsen_attack;
-pub use paulsen_attack::PAULSEN_ATTACK;
+pub mod albin_blackburne_gambit;
+pub use albin_blackburne_gambit::ALBIN_BLACKBURNE_GAMBIT;
 pub mod berger_variation;
 pub use berger_variation::BERGER_VARIATION;
-pub mod hanham_variation;
-pub use hanham_variation::HANHAM_VARIATION;
-pub mod lion_variation;
-pub use lion_variation::LION_VARIATION;
+pub mod bird_gambit;
+pub use bird_gambit::BIRD_GAMBIT;
 pub mod boden_variation;
 pub use boden_variation::BODEN_VARIATION;
-pub mod larsen_variation;
-pub use larsen_variation::LARSEN_VARIATION;
-pub mod philidor_countergambit;
-pub use philidor_countergambit::PHILIDOR_COUNTERGAMBIT;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod hanham;
 pub use hanham::HANHAM;
-pub mod albin_blackburne_gambit;
-pub use albin_blackburne_gambit::ALBIN_BLACKBURNE_GAMBIT;
+pub mod hanham_variation;
+pub use hanham_variation::HANHAM_VARIATION;
+pub mod larsen_variation;
+pub use larsen_variation::LARSEN_VARIATION;
+pub mod lion_variation;
+pub use lion_variation::LION_VARIATION;
+pub mod lopez_countergambit;
+pub use lopez_countergambit::LOPEZ_COUNTERGAMBIT;
 pub mod morphy_gambit;
 pub use morphy_gambit::MORPHY_GAMBIT;
 pub mod nimzowitsch;
 pub use nimzowitsch::NIMZOWITSCH;
 pub mod nimzowitsch_variation;
 pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
-pub mod lopez_countergambit;
-pub use lopez_countergambit::LOPEZ_COUNTERGAMBIT;
+pub mod paulsen_attack;
+pub use paulsen_attack::PAULSEN_ATTACK;
+pub mod philidor_countergambit;
+pub use philidor_countergambit::PHILIDOR_COUNTERGAMBIT;
 pub mod philidor_gambit;
 pub use philidor_gambit::PHILIDOR_GAMBIT;
-pub mod bird_gambit;
-pub use bird_gambit::BIRD_GAMBIT;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;

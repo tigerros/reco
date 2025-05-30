@@ -58,7 +58,7 @@ assert_eq!(SODIUM_ATTACK.original_name(), "Sodium Attack");
 pub static SODIUM_ATTACK: Variation = Variation {
     name: "Sodium Attack",
     parent: None,
-    variations: &[&CHENOBOSKION_VARIATION, &CELADON_VARIATION, &DURKIN_GAMBIT],
+    variations: &[&CELADON_VARIATION, &CHENOBOSKION_VARIATION, &DURKIN_GAMBIT],
     lines: &[Line {
         parent: &SODIUM_ATTACK,
         code: Code {
@@ -108,9 +108,9 @@ pub static SODIUM_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod chenoboskion_variation;
-pub use chenoboskion_variation::CHENOBOSKION_VARIATION;
 pub mod celadon_variation;
 pub use celadon_variation::CELADON_VARIATION;
+pub mod chenoboskion_variation;
+pub use chenoboskion_variation::CHENOBOSKION_VARIATION;
 pub mod durkin_gambit;
 pub use durkin_gambit::DURKIN_GAMBIT;

@@ -58,10 +58,10 @@ assert_eq!(STEINITZ_VARIATION.original_name(), "Queen's Gambit Accepted: Classic
 pub static STEINITZ_VARIATION: Variation = Variation {
     name: "Steinitz Variation",
     parent: Some(&super::CLASSICAL_DEFENSE),
-    variations: &[&EXCHANGE_VARIATION, &DEVELOPMENT_VARIATION],
+    variations: &[&DEVELOPMENT_VARIATION, &EXCHANGE_VARIATION],
     lines: &[],
 };
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod development_variation;
 pub use development_variation::DEVELOPMENT_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;

@@ -58,10 +58,10 @@ assert_eq!(BOTVINNIK_SYSTEM_REVERSED.original_name(), "English Opening: Symmetri
 pub static BOTVINNIK_SYSTEM_REVERSED: Variation = Variation {
     name: "Botvinnik System Reversed",
     parent: Some(&super::SYMMETRICAL_VARIATION),
-    variations: &[&WITH_E3, &WITH_NF3],
+    variations: &[&WITH_NF3, &WITH_E3],
     lines: &[],
 };
-pub mod with_e3;
-pub use with_e3::WITH_E3;
 pub mod with_nf3;
 pub use with_nf3::WITH_NF3;
+pub mod with_e3;
+pub use with_e3::WITH_E3;

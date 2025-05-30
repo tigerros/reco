@@ -58,7 +58,7 @@ assert_eq!(VIENNA_HYBRID.original_name(), "Bishop's Opening: Vienna Hybrid");
 pub static VIENNA_HYBRID: Variation = Variation {
     name: "Vienna Hybrid",
     parent: Some(&super::BISHOPS_OPENING),
-    variations: &[&SPIELMANN_ATTACK, &HROMADKA_VARIATION],
+    variations: &[&HROMADKA_VARIATION, &SPIELMANN_ATTACK],
     lines: &[Line {
         parent: &VIENNA_HYBRID,
         code: Code {
@@ -152,7 +152,7 @@ pub static VIENNA_HYBRID: Variation = Variation {
         },
     }],
 };
-pub mod spielmann_attack;
-pub use spielmann_attack::SPIELMANN_ATTACK;
 pub mod hromadka_variation;
 pub use hromadka_variation::HROMADKA_VARIATION;
+pub mod spielmann_attack;
+pub use spielmann_attack::SPIELMANN_ATTACK;

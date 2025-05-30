@@ -59,21 +59,21 @@ pub static FALKBEER_COUNTERGAMBIT: Variation = Variation {
     name: "Falkbeer Countergambit",
     parent: Some(&super::KINGS_GAMBIT_DECLINED),
     variations: &[
-        &TARRASCH_VARIATION,
-        &PICKLER_GAMBIT,
-        &CHAROUSEK_VARIATION,
-        &STAUNTON_LINE,
         &ALAPIN_VARIATION,
-        &CHAROUSEK_GAMBIT_ACCEPTED,
-        &MILNER_BARRY_VARIATION,
-        &BLACKBURNE_ATTACK,
-        &RUBINSTEIN_VARIATION,
-        &CHAROUSEK_GAMBIT,
-        &MODERN_TRANSFER,
         &ANDERSSEN_ATTACK,
-        &MILES_GAMBIT,
-        &NIMZOWITSCH_MARSHALL_COUNTERGAMBIT,
+        &BLACKBURNE_ATTACK,
+        &CHAROUSEK_GAMBIT,
+        &CHAROUSEK_GAMBIT_ACCEPTED,
+        &CHAROUSEK_VARIATION,
         &HINRICHSEN_GAMBIT,
+        &MILES_GAMBIT,
+        &MILNER_BARRY_VARIATION,
+        &MODERN_TRANSFER,
+        &NIMZOWITSCH_MARSHALL_COUNTERGAMBIT,
+        &PICKLER_GAMBIT,
+        &RUBINSTEIN_VARIATION,
+        &STAUNTON_LINE,
+        &TARRASCH_VARIATION,
     ],
     lines: &[Line {
         parent: &FALKBEER_COUNTERGAMBIT,
@@ -147,33 +147,33 @@ pub static FALKBEER_COUNTERGAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod tarrasch_variation;
-pub use tarrasch_variation::TARRASCH_VARIATION;
-pub mod pickler_gambit;
-pub use pickler_gambit::PICKLER_GAMBIT;
-pub mod charousek_variation;
-pub use charousek_variation::CHAROUSEK_VARIATION;
-pub mod staunton_line;
-pub use staunton_line::STAUNTON_LINE;
 pub mod alapin_variation;
 pub use alapin_variation::ALAPIN_VARIATION;
-pub mod charousek_gambit_accepted;
-pub use charousek_gambit_accepted::CHAROUSEK_GAMBIT_ACCEPTED;
-pub mod milner_barry_variation;
-pub use milner_barry_variation::MILNER_BARRY_VARIATION;
-pub mod blackburne_attack;
-pub use blackburne_attack::BLACKBURNE_ATTACK;
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-pub mod charousek_gambit;
-pub use charousek_gambit::CHAROUSEK_GAMBIT;
-pub mod modern_transfer;
-pub use modern_transfer::MODERN_TRANSFER;
 pub mod anderssen_attack;
 pub use anderssen_attack::ANDERSSEN_ATTACK;
-pub mod miles_gambit;
-pub use miles_gambit::MILES_GAMBIT;
-pub mod nimzowitsch_marshall_countergambit;
-pub use nimzowitsch_marshall_countergambit::NIMZOWITSCH_MARSHALL_COUNTERGAMBIT;
+pub mod blackburne_attack;
+pub use blackburne_attack::BLACKBURNE_ATTACK;
+pub mod charousek_gambit;
+pub use charousek_gambit::CHAROUSEK_GAMBIT;
+pub mod charousek_gambit_accepted;
+pub use charousek_gambit_accepted::CHAROUSEK_GAMBIT_ACCEPTED;
+pub mod charousek_variation;
+pub use charousek_variation::CHAROUSEK_VARIATION;
 pub mod hinrichsen_gambit;
 pub use hinrichsen_gambit::HINRICHSEN_GAMBIT;
+pub mod miles_gambit;
+pub use miles_gambit::MILES_GAMBIT;
+pub mod milner_barry_variation;
+pub use milner_barry_variation::MILNER_BARRY_VARIATION;
+pub mod modern_transfer;
+pub use modern_transfer::MODERN_TRANSFER;
+pub mod nimzowitsch_marshall_countergambit;
+pub use nimzowitsch_marshall_countergambit::NIMZOWITSCH_MARSHALL_COUNTERGAMBIT;
+pub mod pickler_gambit;
+pub use pickler_gambit::PICKLER_GAMBIT;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod staunton_line;
+pub use staunton_line::STAUNTON_LINE;
+pub mod tarrasch_variation;
+pub use tarrasch_variation::TARRASCH_VARIATION;

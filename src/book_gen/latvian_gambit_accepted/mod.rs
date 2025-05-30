@@ -60,13 +60,13 @@ pub static LATVIAN_GAMBIT_ACCEPTED: Variation = Variation {
     parent: None,
     variations: &[
         &BILGUER_VARIATION,
-        &FOLTYS_LEONHARDT_VARIATION,
+        &BRONSTEIN_ATTACK,
+        &BRONSTEIN_GAMBIT,
         &FOLTYS_VARIATION,
+        &FOLTYS_LEONHARDT_VARIATION,
         &LEONHARDT_VARIATION,
         &MAIN_LINE,
         &NIMZOWITSCH_ATTACK,
-        &BRONSTEIN_ATTACK,
-        &BRONSTEIN_GAMBIT,
     ],
     lines: &[Line {
         parent: &LATVIAN_GAMBIT_ACCEPTED,
@@ -149,17 +149,17 @@ pub static LATVIAN_GAMBIT_ACCEPTED: Variation = Variation {
 };
 pub mod bilguer_variation;
 pub use bilguer_variation::BILGUER_VARIATION;
-pub mod foltys_leonhardt_variation;
-pub use foltys_leonhardt_variation::FOLTYS_LEONHARDT_VARIATION;
+pub mod bronstein_attack;
+pub use bronstein_attack::BRONSTEIN_ATTACK;
+pub mod bronstein_gambit;
+pub use bronstein_gambit::BRONSTEIN_GAMBIT;
 pub mod foltys_variation;
 pub use foltys_variation::FOLTYS_VARIATION;
+pub mod foltys_leonhardt_variation;
+pub use foltys_leonhardt_variation::FOLTYS_LEONHARDT_VARIATION;
 pub mod leonhardt_variation;
 pub use leonhardt_variation::LEONHARDT_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod nimzowitsch_attack;
 pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
-pub mod bronstein_attack;
-pub use bronstein_attack::BRONSTEIN_ATTACK;
-pub mod bronstein_gambit;
-pub use bronstein_gambit::BRONSTEIN_GAMBIT;

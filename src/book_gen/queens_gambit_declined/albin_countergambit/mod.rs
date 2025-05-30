@@ -59,13 +59,13 @@ pub static ALBIN_COUNTERGAMBIT: Variation = Variation {
     name: "Albin Countergambit",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
-        &NORMAL_LINE,
-        &MODERN_LINE,
-        &FIANCHETTO_VARIATION,
-        &KRENOSZ_VARIATION,
         &BALOGH_VARIATION,
-        &LASKER_TRAP,
+        &FIANCHETTO_VARIATION,
         &JANOWSKI_VARIATION,
+        &KRENOSZ_VARIATION,
+        &LASKER_TRAP,
+        &MODERN_LINE,
+        &NORMAL_LINE,
         &TARTAKOWER_DEFENSE,
     ],
     lines: &[Line {
@@ -140,19 +140,19 @@ pub static ALBIN_COUNTERGAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod normal_line;
-pub use normal_line::NORMAL_LINE;
-pub mod modern_line;
-pub use modern_line::MODERN_LINE;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
-pub mod krenosz_variation;
-pub use krenosz_variation::KRENOSZ_VARIATION;
 pub mod balogh_variation;
 pub use balogh_variation::BALOGH_VARIATION;
-pub mod lasker_trap;
-pub use lasker_trap::LASKER_TRAP;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod janowski_variation;
 pub use janowski_variation::JANOWSKI_VARIATION;
+pub mod krenosz_variation;
+pub use krenosz_variation::KRENOSZ_VARIATION;
+pub mod lasker_trap;
+pub use lasker_trap::LASKER_TRAP;
+pub mod modern_line;
+pub use modern_line::MODERN_LINE;
+pub mod normal_line;
+pub use normal_line::NORMAL_LINE;
 pub mod tartakower_defense;
 pub use tartakower_defense::TARTAKOWER_DEFENSE;

@@ -59,16 +59,16 @@ pub static OPEN_DEFENSE: Variation = Variation {
     name: "Open Defense",
     parent: Some(&super::CATALAN_OPENING),
     variations: &[
-        &MODERN_SHARP_VARIATION,
         &ALEKHINE_VARIATION,
         &CLASSICAL_LINE,
+        &MODERN_SHARP_VARIATION,
     ],
     lines: &[
         Line {
             parent: &OPEN_DEFENSE,
             code: Code {
                 volume: Volume::E,
-                category: Category::new_static::<4>(),
+                category: Category::new_static::<2>(),
             },
             moves: &[
                 Normal {
@@ -100,20 +100,6 @@ pub static OPEN_DEFENSE: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
                     role: Pawn,
                     from: G2,
                     capture: None,
@@ -122,9 +108,9 @@ pub static OPEN_DEFENSE: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
-                    from: C7,
+                    from: D7,
                     capture: None,
-                    to: C6,
+                    to: D5,
                     promotion: None,
                 },
                 Normal {
@@ -145,16 +131,16 @@ pub static OPEN_DEFENSE: Variation = Variation {
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(63916810151441152),
-                        knight: Bitboard(144150372450041858),
+                        pawn: Bitboard(65038312011772672),
+                        knight: Bitboard(144150372447944770),
                         bishop: Bitboard(2594073385365422084),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13826952455629307904),
-                        white: Bitboard(140571551),
+                        black: Bitboard(13828073957489639424),
+                        white: Bitboard(138474463),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -164,112 +150,6 @@ pub static OPEN_DEFENSE: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &OPEN_DEFENSE,
-            code: Code {
-                volume: Volume::E,
-                category: Category::new_static::<4>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G2,
-                    capture: None,
-                    to: G3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F1,
-                    capture: None,
-                    to: G2,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D5,
-                    capture: Some(Pawn),
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(65038312011772672),
-                        knight: Bitboard(144150372450041858),
-                        bishop: Bitboard(2594073385365422084),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(13828073957489639424),
-                        white: Bitboard(140571551),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                     fullmoves
                 } else {
@@ -407,7 +287,7 @@ pub static OPEN_DEFENSE: Variation = Variation {
             parent: &OPEN_DEFENSE,
             code: Code {
                 volume: Volume::E,
-                category: Category::new_static::<2>(),
+                category: Category::new_static::<4>(),
             },
             moves: &[
                 Normal {
@@ -466,12 +346,19 @@ pub static OPEN_DEFENSE: Variation = Variation {
                     to: C4,
                     promotion: None,
                 },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(65038312011772672),
-                        knight: Bitboard(144150372447944770),
+                        knight: Bitboard(144150372450041858),
                         bishop: Bitboard(2594073385365422084),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
@@ -479,7 +366,120 @@ pub static OPEN_DEFENSE: Variation = Variation {
                     },
                     ByColor {
                         black: Bitboard(13828073957489639424),
-                        white: Bitboard(138474463),
+                        white: Bitboard(140571551),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &OPEN_DEFENSE,
+            code: Code {
+                volume: Volume::E,
+                category: Category::new_static::<4>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G2,
+                    capture: None,
+                    to: G3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F1,
+                    capture: None,
+                    to: G2,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D5,
+                    capture: Some(Pawn),
+                    to: C4,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(63916810151441152),
+                        knight: Bitboard(144150372450041858),
+                        bishop: Bitboard(2594073385365422084),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(13826952455629307904),
+                        white: Bitboard(140571551),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -489,7 +489,7 @@ pub static OPEN_DEFENSE: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                     fullmoves
                 } else {
                     #[expect(
@@ -504,9 +504,9 @@ pub static OPEN_DEFENSE: Variation = Variation {
         },
     ],
 };
-pub mod modern_sharp_variation;
-pub use modern_sharp_variation::MODERN_SHARP_VARIATION;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
 pub mod classical_line;
 pub use classical_line::CLASSICAL_LINE;
+pub mod modern_sharp_variation;
+pub use modern_sharp_variation::MODERN_SHARP_VARIATION;

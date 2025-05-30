@@ -58,7 +58,7 @@ assert_eq!(BARRY_ATTACK.original_name(), "Queen's Pawn Game: Barry Attack");
 pub static BARRY_ATTACK: Variation = Variation {
     name: "Barry Attack",
     parent: Some(&super::QUEENS_PAWN_GAME),
-    variations: &[&TARZAN_ATTACK, &GRUNFELD_VARIATION],
+    variations: &[&GRUNFELD_VARIATION, &TARZAN_ATTACK],
     lines: &[
         Line {
             parent: &BARRY_ATTACK,
@@ -253,7 +253,7 @@ pub static BARRY_ATTACK: Variation = Variation {
         },
     ],
 };
-pub mod tarzan_attack;
-pub use tarzan_attack::TARZAN_ATTACK;
 pub mod grunfeld_variation;
 pub use grunfeld_variation::GRUNFELD_VARIATION;
+pub mod tarzan_attack;
+pub use tarzan_attack::TARZAN_ATTACK;

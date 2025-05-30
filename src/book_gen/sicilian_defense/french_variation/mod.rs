@@ -58,7 +58,7 @@ assert_eq!(FRENCH_VARIATION.original_name(), "Sicilian Defense: French Variation
 pub static FRENCH_VARIATION: Variation = Variation {
     name: "French Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
-    variations: &[&WESTERINEN_ATTACK, &NORMAL, &OPEN],
+    variations: &[&NORMAL, &OPEN, &WESTERINEN_ATTACK],
     lines: &[Line {
         parent: &FRENCH_VARIATION,
         code: Code {
@@ -131,9 +131,9 @@ pub static FRENCH_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod westerinen_attack;
-pub use westerinen_attack::WESTERINEN_ATTACK;
 pub mod normal;
 pub use normal::NORMAL;
 pub mod open;
 pub use open::OPEN;
+pub mod westerinen_attack;
+pub use westerinen_attack::WESTERINEN_ATTACK;

@@ -59,12 +59,12 @@ pub static POLERIO_DEFENSE: Variation = Variation {
     name: "Polerio Defense",
     parent: Some(&super::TWO_KNIGHTS_DEFENSE),
     variations: &[
-        &SUHLE_DEFENSE,
         &BISHOP_CHECK_LINE,
-        &KIESERITZKY_VARIATION,
-        &YANKOVICH_VARIATION,
         &BOGOLJUBOW_VARIATION,
         &GORING_VARIATION,
+        &KIESERITZKY_VARIATION,
+        &SUHLE_DEFENSE,
+        &YANKOVICH_VARIATION,
     ],
     lines: &[Line {
         parent: &POLERIO_DEFENSE,
@@ -180,15 +180,15 @@ pub static POLERIO_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod suhle_defense;
-pub use suhle_defense::SUHLE_DEFENSE;
 pub mod bishop_check_line;
 pub use bishop_check_line::BISHOP_CHECK_LINE;
-pub mod kieseritzky_variation;
-pub use kieseritzky_variation::KIESERITZKY_VARIATION;
-pub mod yankovich_variation;
-pub use yankovich_variation::YANKOVICH_VARIATION;
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
 pub mod goring_variation;
 pub use goring_variation::GORING_VARIATION;
+pub mod kieseritzky_variation;
+pub use kieseritzky_variation::KIESERITZKY_VARIATION;
+pub mod suhle_defense;
+pub use suhle_defense::SUHLE_DEFENSE;
+pub mod yankovich_variation;
+pub use yankovich_variation::YANKOVICH_VARIATION;

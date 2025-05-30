@@ -59,12 +59,125 @@ pub static LASKER_DEFENSE: Variation = Variation {
     name: "Lasker Defense",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
-        &RUSSIAN_VARIATION,
-        &TEICHMANN_VARIATION,
         &BERNSTEIN_VARIATION,
         &MAIN_LINE,
+        &RUSSIAN_VARIATION,
+        &TEICHMANN_VARIATION,
     ],
     lines: &[
+        Line {
+            parent: &LASKER_DEFENSE,
+            code: Code {
+                volume: Volume::D,
+                category: Category::new_static::<53>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: G5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F8,
+                    capture: None,
+                    to: E7,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: F6,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(65038346368377600),
+                        knight: Bitboard(144115188344553536),
+                        bishop: Bitboard(292734250656989216),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(11526699398092292096),
+                        white: Bitboard(275080602617),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &LASKER_DEFENSE,
             code: Code {
@@ -200,126 +313,13 @@ pub static LASKER_DEFENSE: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &LASKER_DEFENSE,
-            code: Code {
-                volume: Volume::D,
-                category: Category::new_static::<53>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: G5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F8,
-                    capture: None,
-                    to: E7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: F6,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(65038346368377600),
-                        knight: Bitboard(144115188344553536),
-                        bishop: Bitboard(292734250656989216),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(11526699398092292096),
-                        white: Bitboard(275080602617),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
-pub mod russian_variation;
-pub use russian_variation::RUSSIAN_VARIATION;
-pub mod teichmann_variation;
-pub use teichmann_variation::TEICHMANN_VARIATION;
 pub mod bernstein_variation;
 pub use bernstein_variation::BERNSTEIN_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod russian_variation;
+pub use russian_variation::RUSSIAN_VARIATION;
+pub mod teichmann_variation;
+pub use teichmann_variation::TEICHMANN_VARIATION;

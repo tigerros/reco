@@ -64,7 +64,7 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
             parent: &DELAYED_EXCHANGE_VARIATION,
             code: Code {
                 volume: Volume::D,
-                category: Category::new_static::<75>(),
+                category: Category::new_static::<74>(),
             },
             moves: &[
                 Normal {
@@ -82,10 +82,10 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: G1,
+                    role: Pawn,
+                    from: C2,
                     capture: None,
-                    to: F3,
+                    to: C4,
                     promotion: None,
                 },
                 Normal {
@@ -96,10 +96,10 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Pawn,
-                    from: C2,
+                    role: Knight,
+                    from: G1,
                     capture: None,
-                    to: C4,
+                    to: F3,
                     promotion: None,
                 },
                 Normal {
@@ -146,25 +146,11 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Castle { king: E1, rook: H1 },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D4,
-                    capture: Some(Pawn),
-                    to: C5,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(50454406759494400),
+                        pawn: Bitboard(51580289620685568),
                         knight: Bitboard(144115222437691394),
                         bishop: Bitboard(306244774661210116),
                         rook: Bitboard(2377900603251621921),
@@ -172,8 +158,8 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                         king: Bitboard(4611686018427387968),
                     },
                     ByColor {
-                        black: Bitboard(8066861760654606336),
-                        white: Bitboard(17186222959),
+                        black: Bitboard(8067987660561448960),
+                        white: Bitboard(140571503),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -182,8 +168,8 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                 castling_rights: Bitboard(0),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                     fullmoves
                 } else {
                     #[expect(
@@ -336,7 +322,7 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
             parent: &DELAYED_EXCHANGE_VARIATION,
             code: Code {
                 volume: Volume::D,
-                category: Category::new_static::<74>(),
+                category: Category::new_static::<75>(),
             },
             moves: &[
                 Normal {
@@ -354,10 +340,10 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Pawn,
-                    from: C2,
+                    role: Knight,
+                    from: G1,
                     capture: None,
-                    to: C4,
+                    to: F3,
                     promotion: None,
                 },
                 Normal {
@@ -368,10 +354,10 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: G1,
+                    role: Pawn,
+                    from: C2,
                     capture: None,
-                    to: F3,
+                    to: C4,
                     promotion: None,
                 },
                 Normal {
@@ -418,11 +404,25 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Castle { king: E1, rook: H1 },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D4,
+                    capture: Some(Pawn),
+                    to: C5,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(51580289620685568),
+                        pawn: Bitboard(50454406759494400),
                         knight: Bitboard(144115222437691394),
                         bishop: Bitboard(306244774661210116),
                         rook: Bitboard(2377900603251621921),
@@ -430,8 +430,8 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                         king: Bitboard(4611686018427387968),
                     },
                     ByColor {
-                        black: Bitboard(8067987660561448960),
-                        white: Bitboard(140571503),
+                        black: Bitboard(8066861760654606336),
+                        white: Bitboard(17186222959),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -440,8 +440,8 @@ pub static DELAYED_EXCHANGE_VARIATION: Variation = Variation {
                 castling_rights: Bitboard(0),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                     fullmoves
                 } else {
                     #[expect(

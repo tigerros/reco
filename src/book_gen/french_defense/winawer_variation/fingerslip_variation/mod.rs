@@ -58,7 +58,7 @@ assert_eq!(FINGERSLIP_VARIATION.original_name(), "French Defense: Winawer Variat
 pub static FINGERSLIP_VARIATION: Variation = Variation {
     name: "Fingerslip Variation",
     parent: Some(&super::WINAWER_VARIATION),
-    variations: &[&SCHWARZS_LINE, &KUNIN_DOUBLE_GAMBIT, &MAIN_LINE],
+    variations: &[&KUNIN_DOUBLE_GAMBIT, &MAIN_LINE, &SCHWARZS_LINE],
     lines: &[Line {
         parent: &FINGERSLIP_VARIATION,
         code: Code {
@@ -152,9 +152,9 @@ pub static FINGERSLIP_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod schwarzs_line;
-pub use schwarzs_line::SCHWARZS_LINE;
 pub mod kunin_double_gambit;
 pub use kunin_double_gambit::KUNIN_DOUBLE_GAMBIT;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod schwarzs_line;
+pub use schwarzs_line::SCHWARZS_LINE;

@@ -59,14 +59,127 @@ pub static DRAGON_VARIATION: Variation = Variation {
     name: "Dragon Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &CLASSICAL_VARIATION,
-        &LEVENFISH_VARIATION,
-        &FIANCHETTO_VARIATION,
-        &YUGOSLAV_ATTACK,
-        &MODERN_BC4_VARIATION,
         &ACCELERATED_DRAGON,
+        &CLASSICAL_VARIATION,
+        &FIANCHETTO_VARIATION,
+        &LEVENFISH_VARIATION,
+        &MODERN_BC4_VARIATION,
+        &YUGOSLAV_ATTACK,
     ],
     lines: &[
+        Line {
+            parent: &DRAGON_VARIATION,
+            code: Code {
+                volume: Volume::B,
+                category: Category::new_static::<70>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C5,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: F3,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G7,
+                    capture: None,
+                    to: G6,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(50463185936901888),
+                        knight: Bitboard(144150372582424576),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(13813498831284731904),
+                        white: Bitboard(402974653),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &DRAGON_VARIATION,
             code: Code {
@@ -187,130 +300,17 @@ pub static DRAGON_VARIATION: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &DRAGON_VARIATION,
-            code: Code {
-                volume: Volume::B,
-                category: Category::new_static::<70>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C5,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: F3,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G7,
-                    capture: None,
-                    to: G6,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(50463185936901888),
-                        knight: Bitboard(144150372582424576),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(13813498831284731904),
-                        white: Bitboard(402974653),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-pub mod levenfish_variation;
-pub use levenfish_variation::LEVENFISH_VARIATION;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
-pub mod yugoslav_attack;
-pub use yugoslav_attack::YUGOSLAV_ATTACK;
-pub mod modern_bc4_variation;
-pub use modern_bc4_variation::MODERN_BC4_VARIATION;
 pub mod accelerated_dragon;
 pub use accelerated_dragon::ACCELERATED_DRAGON;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod levenfish_variation;
+pub use levenfish_variation::LEVENFISH_VARIATION;
+pub mod modern_bc4_variation;
+pub use modern_bc4_variation::MODERN_BC4_VARIATION;
+pub mod yugoslav_attack;
+pub use yugoslav_attack::YUGOSLAV_ATTACK;

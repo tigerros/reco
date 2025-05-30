@@ -58,7 +58,7 @@ assert_eq!(LENINGRAD_VARIATION.original_name(), "Nimzo-Indian Defense: Leningrad
 pub static LENINGRAD_VARIATION: Variation = Variation {
     name: "Leningrad Variation",
     parent: Some(&super::NIMZO_INDIAN_DEFENSE),
-    variations: &[&BENONI_DEFENSE, &AVERBAKH_GAMBIT],
+    variations: &[&AVERBAKH_GAMBIT, &BENONI_DEFENSE],
     lines: &[Line {
         parent: &LENINGRAD_VARIATION,
         code: Code {
@@ -152,7 +152,7 @@ pub static LENINGRAD_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod benoni_defense;
-pub use benoni_defense::BENONI_DEFENSE;
 pub mod averbakh_gambit;
 pub use averbakh_gambit::AVERBAKH_GAMBIT;
+pub mod benoni_defense;
+pub use benoni_defense::BENONI_DEFENSE;

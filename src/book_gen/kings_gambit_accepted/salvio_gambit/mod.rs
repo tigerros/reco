@@ -59,11 +59,11 @@ pub static SALVIO_GAMBIT: Variation = Variation {
     name: "Salvio Gambit",
     parent: Some(&super::KINGS_GAMBIT_ACCEPTED),
     variations: &[
-        &VIENNESE_VARIATION,
+        &ANDERSSEN_COUNTERATTACK,
         &COCHRANE_GAMBIT,
         &SANTA_MARIA_DEFENSE,
         &SILBERSCHMIDT_DEFENSE,
-        &ANDERSSEN_COUNTERATTACK,
+        &VIENNESE_VARIATION,
     ],
     lines: &[Line {
         parent: &SALVIO_GAMBIT,
@@ -172,13 +172,13 @@ pub static SALVIO_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod viennese_variation;
-pub use viennese_variation::VIENNESE_VARIATION;
+pub mod anderssen_counterattack;
+pub use anderssen_counterattack::ANDERSSEN_COUNTERATTACK;
 pub mod cochrane_gambit;
 pub use cochrane_gambit::COCHRANE_GAMBIT;
 pub mod santa_maria_defense;
 pub use santa_maria_defense::SANTA_MARIA_DEFENSE;
 pub mod silberschmidt_defense;
 pub use silberschmidt_defense::SILBERSCHMIDT_DEFENSE;
-pub mod anderssen_counterattack;
-pub use anderssen_counterattack::ANDERSSEN_COUNTERATTACK;
+pub mod viennese_variation;
+pub use viennese_variation::VIENNESE_VARIATION;

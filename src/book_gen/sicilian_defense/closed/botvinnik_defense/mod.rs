@@ -58,12 +58,12 @@ assert_eq!(BOTVINNIK_DEFENSE.original_name(), "Sicilian Defense: Closed, Botvinn
 pub static BOTVINNIK_DEFENSE: Variation = Variation {
     name: "Botvinnik Defense",
     parent: Some(&super::CLOSED),
-    variations: &[&WITH_NGE2, &WITH_F4, &EDGE_VARIATION],
+    variations: &[&EDGE_VARIATION, &WITH_NGE2, &WITH_F4],
     lines: &[],
 };
+pub mod edge_variation;
+pub use edge_variation::EDGE_VARIATION;
 pub mod with_nge2;
 pub use with_nge2::WITH_NGE2;
 pub mod with_f4;
 pub use with_f4::WITH_F4;
-pub mod edge_variation;
-pub use edge_variation::EDGE_VARIATION;

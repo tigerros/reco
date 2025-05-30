@@ -59,18 +59,18 @@ pub static CENTER_GAME: Variation = Variation {
     name: "Center Game",
     parent: None,
     variations: &[
-        &LANC_ARNOLD_GAMBIT,
-        &ROSS_GAMBIT,
-        &L_HERMET_VARIATION,
-        &KUPREICHIK_VARIATION,
-        &KIESERITZKY_VARIATION,
-        &VON_DER_LASA_GAMBIT,
-        &NORMAL_VARIATION,
+        &BERGER_VARIATION,
+        &CHAROUSEK_VARIATION,
         &HALASZ_MC_DONNELL_GAMBIT,
         &HALL_VARIATION,
+        &KIESERITZKY_VARIATION,
+        &KUPREICHIK_VARIATION,
+        &LANC_ARNOLD_GAMBIT,
+        &NORMAL_VARIATION,
         &PAULSEN_ATTACK_VARIATION,
-        &CHAROUSEK_VARIATION,
-        &BERGER_VARIATION,
+        &ROSS_GAMBIT,
+        &L_HERMET_VARIATION,
+        &VON_DER_LASA_GAMBIT,
     ],
     lines: &[
         Line {
@@ -217,27 +217,27 @@ pub static CENTER_GAME: Variation = Variation {
         },
     ],
 };
-pub mod lanc_arnold_gambit;
-pub use lanc_arnold_gambit::LANC_ARNOLD_GAMBIT;
-pub mod ross_gambit;
-pub use ross_gambit::ROSS_GAMBIT;
-pub mod l_hermet_variation;
-pub use l_hermet_variation::L_HERMET_VARIATION;
-pub mod kupreichik_variation;
-pub use kupreichik_variation::KUPREICHIK_VARIATION;
-pub mod kieseritzky_variation;
-pub use kieseritzky_variation::KIESERITZKY_VARIATION;
-pub mod von_der_lasa_gambit;
-pub use von_der_lasa_gambit::VON_DER_LASA_GAMBIT;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
+pub mod berger_variation;
+pub use berger_variation::BERGER_VARIATION;
+pub mod charousek_variation;
+pub use charousek_variation::CHAROUSEK_VARIATION;
 pub mod halasz_mc_donnell_gambit;
 pub use halasz_mc_donnell_gambit::HALASZ_MC_DONNELL_GAMBIT;
 pub mod hall_variation;
 pub use hall_variation::HALL_VARIATION;
+pub mod kieseritzky_variation;
+pub use kieseritzky_variation::KIESERITZKY_VARIATION;
+pub mod kupreichik_variation;
+pub use kupreichik_variation::KUPREICHIK_VARIATION;
+pub mod lanc_arnold_gambit;
+pub use lanc_arnold_gambit::LANC_ARNOLD_GAMBIT;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
 pub mod paulsen_attack_variation;
 pub use paulsen_attack_variation::PAULSEN_ATTACK_VARIATION;
-pub mod charousek_variation;
-pub use charousek_variation::CHAROUSEK_VARIATION;
-pub mod berger_variation;
-pub use berger_variation::BERGER_VARIATION;
+pub mod ross_gambit;
+pub use ross_gambit::ROSS_GAMBIT;
+pub mod l_hermet_variation;
+pub use l_hermet_variation::L_HERMET_VARIATION;
+pub mod von_der_lasa_gambit;
+pub use von_der_lasa_gambit::VON_DER_LASA_GAMBIT;

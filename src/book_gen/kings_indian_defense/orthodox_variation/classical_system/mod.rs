@@ -59,9 +59,9 @@ pub static CLASSICAL_SYSTEM: Variation = Variation {
     name: "Classical System",
     parent: Some(&super::ORTHODOX_VARIATION),
     variations: &[
-        &NEO_CLASSICAL_LINE,
-        &KOZUL_GAMBIT,
         &BENKO_ATTACK,
+        &KOZUL_GAMBIT,
+        &NEO_CLASSICAL_LINE,
         &TRADITIONAL_LINE,
     ],
     lines: &[Line {
@@ -215,11 +215,11 @@ pub static CLASSICAL_SYSTEM: Variation = Variation {
         },
     }],
 };
-pub mod neo_classical_line;
-pub use neo_classical_line::NEO_CLASSICAL_LINE;
-pub mod kozul_gambit;
-pub use kozul_gambit::KOZUL_GAMBIT;
 pub mod benko_attack;
 pub use benko_attack::BENKO_ATTACK;
+pub mod kozul_gambit;
+pub use kozul_gambit::KOZUL_GAMBIT;
+pub mod neo_classical_line;
+pub use neo_classical_line::NEO_CLASSICAL_LINE;
 pub mod traditional_line;
 pub use traditional_line::TRADITIONAL_LINE;

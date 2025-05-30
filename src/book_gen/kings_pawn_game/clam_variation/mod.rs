@@ -58,10 +58,10 @@ assert_eq!(CLAM_VARIATION.original_name(), "King's Pawn Game: Clam Variation");
 pub static CLAM_VARIATION: Variation = Variation {
     name: "Clam Variation",
     parent: Some(&super::KINGS_PAWN_GAME),
-    variations: &[&RADISCH_GAMBIT, &KINGS_GAMBIT_REVERSED],
+    variations: &[&KINGS_GAMBIT_REVERSED, &RADISCH_GAMBIT],
     lines: &[],
 };
-pub mod radisch_gambit;
-pub use radisch_gambit::RADISCH_GAMBIT;
 pub mod kings_gambit_reversed;
 pub use kings_gambit_reversed::KINGS_GAMBIT_REVERSED;
+pub mod radisch_gambit;
+pub use radisch_gambit::RADISCH_GAMBIT;

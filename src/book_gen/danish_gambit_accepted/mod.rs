@@ -60,10 +60,10 @@ pub static DANISH_GAMBIT_ACCEPTED: Variation = Variation {
     parent: None,
     variations: &[
         &CHIGORIN_DEFENSE,
+        &CLASSICAL_DEFENSE,
+        &COPENHAGEN_DEFENSE,
         &SCHLECHTER_DEFENSE,
         &SVENONIUS_DEFENSE,
-        &COPENHAGEN_DEFENSE,
-        &CLASSICAL_DEFENSE,
     ],
     lines: &[Line {
         parent: &DANISH_GAMBIT_ACCEPTED,
@@ -153,11 +153,11 @@ pub static DANISH_GAMBIT_ACCEPTED: Variation = Variation {
 };
 pub mod chigorin_defense;
 pub use chigorin_defense::CHIGORIN_DEFENSE;
+pub mod classical_defense;
+pub use classical_defense::CLASSICAL_DEFENSE;
+pub mod copenhagen_defense;
+pub use copenhagen_defense::COPENHAGEN_DEFENSE;
 pub mod schlechter_defense;
 pub use schlechter_defense::SCHLECHTER_DEFENSE;
 pub mod svenonius_defense;
 pub use svenonius_defense::SVENONIUS_DEFENSE;
-pub mod copenhagen_defense;
-pub use copenhagen_defense::COPENHAGEN_DEFENSE;
-pub mod classical_defense;
-pub use classical_defense::CLASSICAL_DEFENSE;

@@ -59,13 +59,13 @@ pub static FOUR_PAWNS_ATTACK: Variation = Variation {
     name: "Four Pawns Attack",
     parent: Some(&super::ALEKHINE_DEFENSE),
     variations: &[
-        &TARTAKOWER_VARIATION,
         &CAMBRIDGE_GAMBIT,
-        &MAIN_LINE,
-        &TRIFUNOVIC_VARIATION,
-        &KORCHNOI_VARIATION,
-        &ILYIN_ZHENEVSKY_VARIATION,
         &FIANCHETTO_VARIATION,
+        &ILYIN_ZHENEVSKY_VARIATION,
+        &KORCHNOI_VARIATION,
+        &MAIN_LINE,
+        &TARTAKOWER_VARIATION,
+        &TRIFUNOVIC_VARIATION,
     ],
     lines: &[Line {
         parent: &FOUR_PAWNS_ATTACK,
@@ -174,17 +174,17 @@ pub static FOUR_PAWNS_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod tartakower_variation;
-pub use tartakower_variation::TARTAKOWER_VARIATION;
 pub mod cambridge_gambit;
 pub use cambridge_gambit::CAMBRIDGE_GAMBIT;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod trifunovic_variation;
-pub use trifunovic_variation::TRIFUNOVIC_VARIATION;
-pub mod korchnoi_variation;
-pub use korchnoi_variation::KORCHNOI_VARIATION;
-pub mod ilyin_zhenevsky_variation;
-pub use ilyin_zhenevsky_variation::ILYIN_ZHENEVSKY_VARIATION;
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod ilyin_zhenevsky_variation;
+pub use ilyin_zhenevsky_variation::ILYIN_ZHENEVSKY_VARIATION;
+pub mod korchnoi_variation;
+pub use korchnoi_variation::KORCHNOI_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod tartakower_variation;
+pub use tartakower_variation::TARTAKOWER_VARIATION;
+pub mod trifunovic_variation;
+pub use trifunovic_variation::TRIFUNOVIC_VARIATION;

@@ -60,8 +60,8 @@ pub static TARRASCH_DEFENSE: Variation = Variation {
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
         &PSEUDO_TARRASCH,
-        &STOLTZ_VARIATION,
         &PSEUDO_TARRASCH_BISHOP_ATTACK,
+        &STOLTZ_VARIATION,
     ],
     lines: &[Line {
         parent: &TARRASCH_DEFENSE,
@@ -165,7 +165,7 @@ pub static TARRASCH_DEFENSE: Variation = Variation {
 };
 pub mod pseudo_tarrasch;
 pub use pseudo_tarrasch::PSEUDO_TARRASCH;
-pub mod stoltz_variation;
-pub use stoltz_variation::STOLTZ_VARIATION;
 pub mod pseudo_tarrasch_bishop_attack;
 pub use pseudo_tarrasch_bishop_attack::PSEUDO_TARRASCH_BISHOP_ATTACK;
+pub mod stoltz_variation;
+pub use stoltz_variation::STOLTZ_VARIATION;

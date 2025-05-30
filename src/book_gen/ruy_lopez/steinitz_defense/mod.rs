@@ -58,7 +58,7 @@ assert_eq!(STEINITZ_DEFENSE.original_name(), "Ruy Lopez: Steinitz Defense");
 pub static STEINITZ_DEFENSE: Variation = Variation {
     name: "Steinitz Defense",
     parent: Some(&super::RUY_LOPEZ),
-    variations: &[&NIMZOWITSCH_ATTACK, &CENTER_GAMBIT],
+    variations: &[&CENTER_GAMBIT, &NIMZOWITSCH_ATTACK],
     lines: &[Line {
         parent: &STEINITZ_DEFENSE,
         code: Code {
@@ -145,7 +145,7 @@ pub static STEINITZ_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod nimzowitsch_attack;
-pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
 pub mod center_gambit;
 pub use center_gambit::CENTER_GAMBIT;
+pub mod nimzowitsch_attack;
+pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;

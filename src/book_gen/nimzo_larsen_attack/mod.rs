@@ -59,18 +59,18 @@ pub static NIMZO_LARSEN_ATTACK: Variation = Variation {
     name: "Nimzo-Larsen Attack",
     parent: None,
     variations: &[
-        &ENGLISH_VARIATION,
-        &MODERN_VARIATION,
-        &POLISH_VARIATION,
-        &SYMMETRICAL_VARIATION,
-        &NORFOLK_GAMBIT,
-        &RINGELBACH_GAMBIT,
-        &INDIAN_VARIATION,
-        &DUTCH_VARIATION,
         &CLASSICAL_VARIATION,
-        &SPIKE_VARIATION,
-        &PACHMAN_GAMBIT,
+        &DUTCH_VARIATION,
+        &ENGLISH_VARIATION,
         &GRAZ_ATTACK,
+        &INDIAN_VARIATION,
+        &MODERN_VARIATION,
+        &NORFOLK_GAMBIT,
+        &PACHMAN_GAMBIT,
+        &POLISH_VARIATION,
+        &RINGELBACH_GAMBIT,
+        &SPIKE_VARIATION,
+        &SYMMETRICAL_VARIATION,
     ],
     lines: &[Line {
         parent: &NIMZO_LARSEN_ATTACK,
@@ -121,27 +121,27 @@ pub static NIMZO_LARSEN_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod english_variation;
-pub use english_variation::ENGLISH_VARIATION;
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
-pub mod polish_variation;
-pub use polish_variation::POLISH_VARIATION;
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
-pub mod norfolk_gambit;
-pub use norfolk_gambit::NORFOLK_GAMBIT;
-pub mod ringelbach_gambit;
-pub use ringelbach_gambit::RINGELBACH_GAMBIT;
-pub mod indian_variation;
-pub use indian_variation::INDIAN_VARIATION;
-pub mod dutch_variation;
-pub use dutch_variation::DUTCH_VARIATION;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
-pub mod spike_variation;
-pub use spike_variation::SPIKE_VARIATION;
-pub mod pachman_gambit;
-pub use pachman_gambit::PACHMAN_GAMBIT;
+pub mod dutch_variation;
+pub use dutch_variation::DUTCH_VARIATION;
+pub mod english_variation;
+pub use english_variation::ENGLISH_VARIATION;
 pub mod graz_attack;
 pub use graz_attack::GRAZ_ATTACK;
+pub mod indian_variation;
+pub use indian_variation::INDIAN_VARIATION;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
+pub mod norfolk_gambit;
+pub use norfolk_gambit::NORFOLK_GAMBIT;
+pub mod pachman_gambit;
+pub use pachman_gambit::PACHMAN_GAMBIT;
+pub mod polish_variation;
+pub use polish_variation::POLISH_VARIATION;
+pub mod ringelbach_gambit;
+pub use ringelbach_gambit::RINGELBACH_GAMBIT;
+pub mod spike_variation;
+pub use spike_variation::SPIKE_VARIATION;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;

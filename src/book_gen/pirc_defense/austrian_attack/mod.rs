@@ -59,11 +59,11 @@ pub static AUSTRIAN_ATTACK: Variation = Variation {
     name: "Austrian Attack",
     parent: Some(&super::PIRC_DEFENSE),
     variations: &[
-        &KURAJICA_VARIATION,
-        &WEISS_VARIATION,
-        &UNZICKER_ATTACK,
-        &LJUBOJEVIC_VARIATION,
         &DRAGON_FORMATION,
+        &KURAJICA_VARIATION,
+        &LJUBOJEVIC_VARIATION,
+        &UNZICKER_ATTACK,
+        &WEISS_VARIATION,
     ],
     lines: &[
         Line {
@@ -267,13 +267,13 @@ pub static AUSTRIAN_ATTACK: Variation = Variation {
         },
     ],
 };
-pub mod kurajica_variation;
-pub use kurajica_variation::KURAJICA_VARIATION;
-pub mod weiss_variation;
-pub use weiss_variation::WEISS_VARIATION;
-pub mod unzicker_attack;
-pub use unzicker_attack::UNZICKER_ATTACK;
-pub mod ljubojevic_variation;
-pub use ljubojevic_variation::LJUBOJEVIC_VARIATION;
 pub mod dragon_formation;
 pub use dragon_formation::DRAGON_FORMATION;
+pub mod kurajica_variation;
+pub use kurajica_variation::KURAJICA_VARIATION;
+pub mod ljubojevic_variation;
+pub use ljubojevic_variation::LJUBOJEVIC_VARIATION;
+pub mod unzicker_attack;
+pub use unzicker_attack::UNZICKER_ATTACK;
+pub mod weiss_variation;
+pub use weiss_variation::WEISS_VARIATION;

@@ -59,10 +59,10 @@ pub static HARRWITZ_ATTACK: Variation = Variation {
     name: "Harrwitz Attack",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
-        &TWO_KNIGHTS_DEFENSE,
-        &MAIN_LINE,
         &FIANCHETTO_DEFENSE,
+        &MAIN_LINE,
         &ORTHODOX_DEFENSE,
+        &TWO_KNIGHTS_DEFENSE,
     ],
     lines: &[
         Line {
@@ -145,6 +145,112 @@ pub static HARRWITZ_ATTACK: Variation = Variation {
                 remaining_checks: None,
                 halfmoves: 3,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &HARRWITZ_ATTACK,
+            code: Code {
+                volume: Volume::D,
+                category: Category::new_static::<37>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F8,
+                    capture: None,
+                    to: E7,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: F4,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(65038346367333120),
+                        knight: Bitboard(144150372450304000),
+                        bishop: Bitboard(292733976315953184),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(11526734582195945472),
+                        white: Bitboard(740619193),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 3,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                     fullmoves
                 } else {
                     #[expect(
@@ -491,119 +597,13 @@ pub static HARRWITZ_ATTACK: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &HARRWITZ_ATTACK,
-            code: Code {
-                volume: Volume::D,
-                category: Category::new_static::<37>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F8,
-                    capture: None,
-                    to: E7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: F4,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(65038346367333120),
-                        knight: Bitboard(144150372450304000),
-                        bishop: Bitboard(292733976315953184),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(11526734582195945472),
-                        white: Bitboard(740619193),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 3,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
-pub mod two_knights_defense;
-pub use two_knights_defense::TWO_KNIGHTS_DEFENSE;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod fianchetto_defense;
 pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod orthodox_defense;
 pub use orthodox_defense::ORTHODOX_DEFENSE;
+pub mod two_knights_defense;
+pub use two_knights_defense::TWO_KNIGHTS_DEFENSE;

@@ -64,7 +64,7 @@ pub static SICILIAN_VARIATION: Variation = Variation {
             parent: &SICILIAN_VARIATION,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<8>(),
+                category: Category::new_static::<7>(),
             },
             moves: &[
                 Normal {
@@ -93,113 +93,6 @@ pub static SICILIAN_VARIATION: Variation = Variation {
                     from: C7,
                     capture: None,
                     to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F1,
-                    capture: None,
-                    to: G2,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Castle { king: E1, rook: H1 },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D3,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(63912463443736320),
-                        knight: Bitboard(144150372450041858),
-                        bishop: Bitboard(2594073385365422084),
-                        rook: Bitboard(9295429630892703777),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606847040),
-                    },
-                    ByColor {
-                        black: Bitboard(13826948109055295488),
-                        white: Bitboard(6879087),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703744),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &SICILIAN_VARIATION,
-            code: Code {
-                volume: Volume::A,
-                category: Category::new_static::<8>(),
-            },
-            moves: &[
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G2,
-                    capture: None,
-                    to: G3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F1,
-                    capture: None,
-                    to: G2,
                     promotion: None,
                 },
             ],
@@ -208,23 +101,23 @@ pub static SICILIAN_VARIATION: Variation = Variation {
                     ByRole {
                         pawn: Bitboard(68398470884540160),
                         knight: Bitboard(4755801206505340930),
-                        bishop: Bitboard(2594073385365422084),
+                        bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
                         black: Bitboard(18443084950551920640),
-                        white: Bitboard(6356895),
+                        white: Bitboard(6340543),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 1,
+                halfmoves: 0,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                     fullmoves
                 } else {
@@ -378,7 +271,7 @@ pub static SICILIAN_VARIATION: Variation = Variation {
             parent: &SICILIAN_VARIATION,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<7>(),
+                category: Category::new_static::<8>(),
             },
             moves: &[
                 Normal {
@@ -409,30 +302,137 @@ pub static SICILIAN_VARIATION: Variation = Variation {
                     to: C5,
                     promotion: None,
                 },
+                Normal {
+                    role: Bishop,
+                    from: F1,
+                    capture: None,
+                    to: G2,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(68398470884540160),
                         knight: Bitboard(4755801206505340930),
-                        bishop: Bitboard(2594073385365405732),
+                        bishop: Bitboard(2594073385365422084),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
                         black: Bitboard(18443084950551920640),
-                        white: Bitboard(6340543),
+                        white: Bitboard(6356895),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
+                turn: Black,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
+                halfmoves: 1,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &SICILIAN_VARIATION,
+            code: Code {
+                volume: Volume::A,
+                category: Category::new_static::<8>(),
+            },
+            moves: &[
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G2,
+                    capture: None,
+                    to: G3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F1,
+                    capture: None,
+                    to: G2,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Castle { king: E1, rook: H1 },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D3,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(63912463443736320),
+                        knight: Bitboard(144150372450041858),
+                        bishop: Bitboard(2594073385365422084),
+                        rook: Bitboard(9295429630892703777),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606847040),
+                    },
+                    ByColor {
+                        black: Bitboard(13826948109055295488),
+                        white: Bitboard(6879087),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703744),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                     fullmoves
                 } else {
                     #[expect(

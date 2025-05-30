@@ -60,17 +60,17 @@ pub static ANTI_GRUNFELD: Variation = Variation {
     parent: Some(&super::INDIAN_DEFENSE),
     variations: &[
         &ADORJAN_GAMBIT,
-        &BASMAN_WILLIAMS_ATTACK,
         &ADVANCE_VARIATION,
         &ALEKHINE_VARIATION,
+        &BASMAN_WILLIAMS_ATTACK,
     ],
     lines: &[],
 };
 pub mod adorjan_gambit;
 pub use adorjan_gambit::ADORJAN_GAMBIT;
-pub mod basman_williams_attack;
-pub use basman_williams_attack::BASMAN_WILLIAMS_ATTACK;
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
+pub mod basman_williams_attack;
+pub use basman_williams_attack::BASMAN_WILLIAMS_ATTACK;

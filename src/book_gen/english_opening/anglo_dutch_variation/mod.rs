@@ -58,10 +58,10 @@ assert_eq!(ANGLO_DUTCH_VARIATION.original_name(), "English Opening: Anglo-Dutch 
 pub static ANGLO_DUTCH_VARIATION: Variation = Variation {
     name: "Anglo-Dutch Variation",
     parent: Some(&super::ENGLISH_OPENING),
-    variations: &[&FERENC_GAMBIT, &CHABANON_GAMBIT],
+    variations: &[&CHABANON_GAMBIT, &FERENC_GAMBIT],
     lines: &[],
 };
-pub mod ferenc_gambit;
-pub use ferenc_gambit::FERENC_GAMBIT;
 pub mod chabanon_gambit;
 pub use chabanon_gambit::CHABANON_GAMBIT;
+pub mod ferenc_gambit;
+pub use ferenc_gambit::FERENC_GAMBIT;

@@ -59,14 +59,14 @@ pub static PORTUGUESE_GAMBIT: Variation = Variation {
     name: "Portuguese Gambit",
     parent: Some(&super::SCANDINAVIAN_DEFENSE),
     variations: &[
+        &BANKER_VARIATION,
+        &CLASSICAL_VARIATION,
         &CORRESPONDENCE_REFUTATION,
         &ELBOW_VARIATION,
-        &WUSS_VARIATION,
         &JADOUL_VARIATION,
-        &CLASSICAL_VARIATION,
-        &MELBOURNE_SHUFFLE_VARIATION,
         &LUSOPHOBE_VARIATION,
-        &BANKER_VARIATION,
+        &MELBOURNE_SHUFFLE_VARIATION,
+        &WUSS_VARIATION,
     ],
     lines: &[Line {
         parent: &PORTUGUESE_GAMBIT,
@@ -154,19 +154,19 @@ pub static PORTUGUESE_GAMBIT: Variation = Variation {
         },
     }],
 };
+pub mod banker_variation;
+pub use banker_variation::BANKER_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
 pub mod correspondence_refutation;
 pub use correspondence_refutation::CORRESPONDENCE_REFUTATION;
 pub mod elbow_variation;
 pub use elbow_variation::ELBOW_VARIATION;
-pub mod wuss_variation;
-pub use wuss_variation::WUSS_VARIATION;
 pub mod jadoul_variation;
 pub use jadoul_variation::JADOUL_VARIATION;
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-pub mod melbourne_shuffle_variation;
-pub use melbourne_shuffle_variation::MELBOURNE_SHUFFLE_VARIATION;
 pub mod lusophobe_variation;
 pub use lusophobe_variation::LUSOPHOBE_VARIATION;
-pub mod banker_variation;
-pub use banker_variation::BANKER_VARIATION;
+pub mod melbourne_shuffle_variation;
+pub use melbourne_shuffle_variation::MELBOURNE_SHUFFLE_VARIATION;
+pub mod wuss_variation;
+pub use wuss_variation::WUSS_VARIATION;

@@ -59,17 +59,17 @@ pub static BLACKMAR_DIEMER_GAMBIT_ACCEPTED: Variation = Variation {
     name: "Blackmar-Diemer Gambit Accepted",
     parent: None,
     variations: &[
-        &GUNDERAM_DEFENSE,
-        &RITTER_DEFENSE,
-        &RYDER_GAMBIT,
-        &ZIEGLER_DEFENSE,
-        &HOLWELL_DEFENSE,
-        &PIETROWSKY_DEFENSE,
-        &TEICHMANN_DEFENSE,
         &BOGOLJUBOW_DEFENSE,
         &EUWE_DEFENSE,
-        &SCHLUTTER_DEFENSE,
+        &GUNDERAM_DEFENSE,
+        &HOLWELL_DEFENSE,
         &KAULICH_DEFENSE,
+        &PIETROWSKY_DEFENSE,
+        &RITTER_DEFENSE,
+        &RYDER_GAMBIT,
+        &SCHLUTTER_DEFENSE,
+        &TEICHMANN_DEFENSE,
+        &ZIEGLER_DEFENSE,
     ],
     lines: &[Line {
         parent: &BLACKMAR_DIEMER_GAMBIT_ACCEPTED,
@@ -171,25 +171,25 @@ pub static BLACKMAR_DIEMER_GAMBIT_ACCEPTED: Variation = Variation {
         },
     }],
 };
-pub mod gunderam_defense;
-pub use gunderam_defense::GUNDERAM_DEFENSE;
-pub mod ritter_defense;
-pub use ritter_defense::RITTER_DEFENSE;
-pub mod ryder_gambit;
-pub use ryder_gambit::RYDER_GAMBIT;
-pub mod ziegler_defense;
-pub use ziegler_defense::ZIEGLER_DEFENSE;
-pub mod holwell_defense;
-pub use holwell_defense::HOLWELL_DEFENSE;
-pub mod pietrowsky_defense;
-pub use pietrowsky_defense::PIETROWSKY_DEFENSE;
-pub mod teichmann_defense;
-pub use teichmann_defense::TEICHMANN_DEFENSE;
 pub mod bogoljubow_defense;
 pub use bogoljubow_defense::BOGOLJUBOW_DEFENSE;
 pub mod euwe_defense;
 pub use euwe_defense::EUWE_DEFENSE;
-pub mod schlutter_defense;
-pub use schlutter_defense::SCHLUTTER_DEFENSE;
+pub mod gunderam_defense;
+pub use gunderam_defense::GUNDERAM_DEFENSE;
+pub mod holwell_defense;
+pub use holwell_defense::HOLWELL_DEFENSE;
 pub mod kaulich_defense;
 pub use kaulich_defense::KAULICH_DEFENSE;
+pub mod pietrowsky_defense;
+pub use pietrowsky_defense::PIETROWSKY_DEFENSE;
+pub mod ritter_defense;
+pub use ritter_defense::RITTER_DEFENSE;
+pub mod ryder_gambit;
+pub use ryder_gambit::RYDER_GAMBIT;
+pub mod schlutter_defense;
+pub use schlutter_defense::SCHLUTTER_DEFENSE;
+pub mod teichmann_defense;
+pub use teichmann_defense::TEICHMANN_DEFENSE;
+pub mod ziegler_defense;
+pub use ziegler_defense::ZIEGLER_DEFENSE;

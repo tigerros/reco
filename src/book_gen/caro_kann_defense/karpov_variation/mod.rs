@@ -59,8 +59,8 @@ pub static KARPOV_VARIATION: Variation = Variation {
     name: "Karpov Variation",
     parent: Some(&super::CARO_KANN_DEFENSE),
     variations: &[
-        &MODERN_VARIATION,
         &MODERN_MAIN_LINE,
+        &MODERN_VARIATION,
         &SMYSLOV_VARIATION,
         &TIVIAKOV_FISCHER_ATTACK,
     ],
@@ -164,10 +164,10 @@ pub static KARPOV_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
 pub mod modern_main_line;
 pub use modern_main_line::MODERN_MAIN_LINE;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
 pub mod smyslov_variation;
 pub use smyslov_variation::SMYSLOV_VARIATION;
 pub mod tiviakov_fischer_attack;

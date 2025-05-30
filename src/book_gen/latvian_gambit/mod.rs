@@ -61,16 +61,16 @@ pub static LATVIAN_GAMBIT: Variation = Variation {
     variations: &[
         &BEHTING_VARIATION,
         &CLAM_GAMBIT,
-        &MASON_COUNTERGAMBIT,
-        &CORKSCREW_GAMBIT,
-        &SENECHAUD_GAMBIT,
-        &MAYET_ATTACK,
-        &LOBSTER_GAMBIT,
-        &GRECO_VARIATION,
-        &FRASER_DEFENSE,
-        &MLOTKOWSKI_VARIATION,
         &CORKSCREW_COUNTERGAMBIT,
+        &CORKSCREW_GAMBIT,
         &DIEPSTRATEN_COUNTERGAMBIT,
+        &FRASER_DEFENSE,
+        &GRECO_VARIATION,
+        &LOBSTER_GAMBIT,
+        &MASON_COUNTERGAMBIT,
+        &MAYET_ATTACK,
+        &MLOTKOWSKI_VARIATION,
+        &SENECHAUD_GAMBIT,
     ],
     lines: &[Line {
         parent: &LATVIAN_GAMBIT,
@@ -148,23 +148,23 @@ pub mod behting_variation;
 pub use behting_variation::BEHTING_VARIATION;
 pub mod clam_gambit;
 pub use clam_gambit::CLAM_GAMBIT;
-pub mod mason_countergambit;
-pub use mason_countergambit::MASON_COUNTERGAMBIT;
-pub mod corkscrew_gambit;
-pub use corkscrew_gambit::CORKSCREW_GAMBIT;
-pub mod senechaud_gambit;
-pub use senechaud_gambit::SENECHAUD_GAMBIT;
-pub mod mayet_attack;
-pub use mayet_attack::MAYET_ATTACK;
-pub mod lobster_gambit;
-pub use lobster_gambit::LOBSTER_GAMBIT;
-pub mod greco_variation;
-pub use greco_variation::GRECO_VARIATION;
-pub mod fraser_defense;
-pub use fraser_defense::FRASER_DEFENSE;
-pub mod mlotkowski_variation;
-pub use mlotkowski_variation::MLOTKOWSKI_VARIATION;
 pub mod corkscrew_countergambit;
 pub use corkscrew_countergambit::CORKSCREW_COUNTERGAMBIT;
+pub mod corkscrew_gambit;
+pub use corkscrew_gambit::CORKSCREW_GAMBIT;
 pub mod diepstraten_countergambit;
 pub use diepstraten_countergambit::DIEPSTRATEN_COUNTERGAMBIT;
+pub mod fraser_defense;
+pub use fraser_defense::FRASER_DEFENSE;
+pub mod greco_variation;
+pub use greco_variation::GRECO_VARIATION;
+pub mod lobster_gambit;
+pub use lobster_gambit::LOBSTER_GAMBIT;
+pub mod mason_countergambit;
+pub use mason_countergambit::MASON_COUNTERGAMBIT;
+pub mod mayet_attack;
+pub use mayet_attack::MAYET_ATTACK;
+pub mod mlotkowski_variation;
+pub use mlotkowski_variation::MLOTKOWSKI_VARIATION;
+pub mod senechaud_gambit;
+pub use senechaud_gambit::SENECHAUD_GAMBIT;

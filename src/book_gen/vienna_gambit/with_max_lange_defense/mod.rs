@@ -60,12 +60,12 @@ pub static WITH_MAX_LANGE_DEFENSE: Variation = Variation {
     parent: Some(&super::VIENNA_GAMBIT),
     variations: &[
         &CUNNINGHAM_DEFENSE,
-        &QUELLE_GAMBIT,
-        &PIERCE_GAMBIT,
-        &STEINITZ_GAMBIT,
         &HAMPPE_ALLGAIER_GAMBIT,
         &HAMPPE_MUZIO_GAMBIT,
         &KNIGHT_VARIATION,
+        &PIERCE_GAMBIT,
+        &QUELLE_GAMBIT,
+        &STEINITZ_GAMBIT,
     ],
     lines: &[Line {
         parent: &WITH_MAX_LANGE_DEFENSE,
@@ -148,15 +148,15 @@ pub static WITH_MAX_LANGE_DEFENSE: Variation = Variation {
 };
 pub mod cunningham_defense;
 pub use cunningham_defense::CUNNINGHAM_DEFENSE;
-pub mod quelle_gambit;
-pub use quelle_gambit::QUELLE_GAMBIT;
-pub mod pierce_gambit;
-pub use pierce_gambit::PIERCE_GAMBIT;
-pub mod steinitz_gambit;
-pub use steinitz_gambit::STEINITZ_GAMBIT;
 pub mod hamppe_allgaier_gambit;
 pub use hamppe_allgaier_gambit::HAMPPE_ALLGAIER_GAMBIT;
 pub mod hamppe_muzio_gambit;
 pub use hamppe_muzio_gambit::HAMPPE_MUZIO_GAMBIT;
 pub mod knight_variation;
 pub use knight_variation::KNIGHT_VARIATION;
+pub mod pierce_gambit;
+pub use pierce_gambit::PIERCE_GAMBIT;
+pub mod quelle_gambit;
+pub use quelle_gambit::QUELLE_GAMBIT;
+pub mod steinitz_gambit;
+pub use steinitz_gambit::STEINITZ_GAMBIT;

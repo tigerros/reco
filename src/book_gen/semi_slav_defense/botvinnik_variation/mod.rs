@@ -59,10 +59,10 @@ pub static BOTVINNIK_VARIATION: Variation = Variation {
     name: "Botvinnik Variation",
     parent: Some(&super::SEMI_SLAV_DEFENSE),
     variations: &[
-        &SZABO_VARIATION,
         &ALATORTSEV_SYSTEM,
         &EKSTROM_VARIATION,
         &LILIENTHAL_VARIATION,
+        &SZABO_VARIATION,
     ],
     lines: &[
         Line {
@@ -349,11 +349,11 @@ pub static BOTVINNIK_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod szabo_variation;
-pub use szabo_variation::SZABO_VARIATION;
 pub mod alatortsev_system;
 pub use alatortsev_system::ALATORTSEV_SYSTEM;
 pub mod ekstrom_variation;
 pub use ekstrom_variation::EKSTROM_VARIATION;
 pub mod lilienthal_variation;
 pub use lilienthal_variation::LILIENTHAL_VARIATION;
+pub mod szabo_variation;
+pub use szabo_variation::SZABO_VARIATION;

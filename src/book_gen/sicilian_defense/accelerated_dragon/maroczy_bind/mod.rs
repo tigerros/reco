@@ -64,7 +64,7 @@ pub static MAROCZY_BIND: Variation = Variation {
             parent: &MAROCZY_BIND,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<38>(),
+                category: Category::new_static::<36>(),
             },
             moves: &[
                 Normal {
@@ -130,34 +130,20 @@ pub static MAROCZY_BIND: Variation = Variation {
                     to: C4,
                     promotion: None,
                 },
-                Normal {
-                    role: Bishop,
-                    from: F8,
-                    capture: None,
-                    to: G7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: E3,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(52706189724672768),
                         knight: Bitboard(4611690416608116738),
-                        bishop: Bitboard(306244774662242336),
+                        bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(15995453268327137280),
-                        white: Bitboard(470868923),
+                        black: Bitboard(18283281879031349248),
+                        white: Bitboard(469820351),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -166,8 +152,8 @@ pub static MAROCZY_BIND: Variation = Variation {
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 2,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                     fullmoves
                 } else {
                     #[expect(
@@ -297,7 +283,7 @@ pub static MAROCZY_BIND: Variation = Variation {
             parent: &MAROCZY_BIND,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<36>(),
+                category: Category::new_static::<38>(),
             },
             moves: &[
                 Normal {
@@ -363,20 +349,34 @@ pub static MAROCZY_BIND: Variation = Variation {
                     to: C4,
                     promotion: None,
                 },
+                Normal {
+                    role: Bishop,
+                    from: F8,
+                    capture: None,
+                    to: G7,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: E3,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(52706189724672768),
                         knight: Bitboard(4611690416608116738),
-                        bishop: Bitboard(2594073385365405732),
+                        bishop: Bitboard(306244774662242336),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18283281879031349248),
-                        white: Bitboard(469820351),
+                        black: Bitboard(15995453268327137280),
+                        white: Bitboard(470868923),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -385,8 +385,8 @@ pub static MAROCZY_BIND: Variation = Variation {
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                halfmoves: 2,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
                     fullmoves
                 } else {
                     #[expect(

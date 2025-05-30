@@ -58,7 +58,7 @@ assert_eq!(ROSENTRETER_GAMBIT.original_name(), "King's Gambit Accepted: Rosentre
 pub static ROSENTRETER_GAMBIT: Variation = Variation {
     name: "Rosentreter Gambit",
     parent: Some(&super::KINGS_GAMBIT_ACCEPTED),
-    variations: &[&SORENSEN_GAMBIT, &TESTA_VARIATION, &BIRD_GAMBIT],
+    variations: &[&BIRD_GAMBIT, &SORENSEN_GAMBIT, &TESTA_VARIATION],
     lines: &[Line {
         parent: &ROSENTRETER_GAMBIT,
         code: Code {
@@ -152,9 +152,9 @@ pub static ROSENTRETER_GAMBIT: Variation = Variation {
         },
     }],
 };
+pub mod bird_gambit;
+pub use bird_gambit::BIRD_GAMBIT;
 pub mod sorensen_gambit;
 pub use sorensen_gambit::SORENSEN_GAMBIT;
 pub mod testa_variation;
 pub use testa_variation::TESTA_VARIATION;
-pub mod bird_gambit;
-pub use bird_gambit::BIRD_GAMBIT;

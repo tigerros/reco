@@ -59,18 +59,18 @@ pub static MAC_CUTCHEON_VARIATION: Variation = Variation {
     name: "MacCutcheon Variation",
     parent: Some(&super::FRENCH_DEFENSE),
     variations: &[
-        &BERNSTEIN_VARIATION,
-        &CHIGORIN_VARIATION,
-        &LASKER_VARIATION,
-        &WOLF_GAMBIT,
-        &DR_OLLAND_VARIATION,
-        &GRIGORIEV_VARIATION,
-        &TARTAKOWER_VARIATION,
-        &DURAS_VARIATION,
-        &JANOWSKI_VARIATION,
-        &EXCHANGE_VARIATION,
-        &BOGOLJUBOW_VARIATION,
         &ADVANCE_VARIATION,
+        &BERNSTEIN_VARIATION,
+        &BOGOLJUBOW_VARIATION,
+        &CHIGORIN_VARIATION,
+        &DR_OLLAND_VARIATION,
+        &DURAS_VARIATION,
+        &EXCHANGE_VARIATION,
+        &GRIGORIEV_VARIATION,
+        &JANOWSKI_VARIATION,
+        &LASKER_VARIATION,
+        &TARTAKOWER_VARIATION,
+        &WOLF_GAMBIT,
     ],
     lines: &[Line {
         parent: &MAC_CUTCHEON_VARIATION,
@@ -172,27 +172,27 @@ pub static MAC_CUTCHEON_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod bernstein_variation;
-pub use bernstein_variation::BERNSTEIN_VARIATION;
-pub mod chigorin_variation;
-pub use chigorin_variation::CHIGORIN_VARIATION;
-pub mod lasker_variation;
-pub use lasker_variation::LASKER_VARIATION;
-pub mod wolf_gambit;
-pub use wolf_gambit::WOLF_GAMBIT;
-pub mod dr_olland_variation;
-pub use dr_olland_variation::DR_OLLAND_VARIATION;
-pub mod grigoriev_variation;
-pub use grigoriev_variation::GRIGORIEV_VARIATION;
-pub mod tartakower_variation;
-pub use tartakower_variation::TARTAKOWER_VARIATION;
-pub mod duras_variation;
-pub use duras_variation::DURAS_VARIATION;
-pub mod janowski_variation;
-pub use janowski_variation::JANOWSKI_VARIATION;
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod bogoljubow_variation;
-pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
+pub mod bernstein_variation;
+pub use bernstein_variation::BERNSTEIN_VARIATION;
+pub mod bogoljubow_variation;
+pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
+pub mod chigorin_variation;
+pub use chigorin_variation::CHIGORIN_VARIATION;
+pub mod dr_olland_variation;
+pub use dr_olland_variation::DR_OLLAND_VARIATION;
+pub mod duras_variation;
+pub use duras_variation::DURAS_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod grigoriev_variation;
+pub use grigoriev_variation::GRIGORIEV_VARIATION;
+pub mod janowski_variation;
+pub use janowski_variation::JANOWSKI_VARIATION;
+pub mod lasker_variation;
+pub use lasker_variation::LASKER_VARIATION;
+pub mod tartakower_variation;
+pub use tartakower_variation::TARTAKOWER_VARIATION;
+pub mod wolf_gambit;
+pub use wolf_gambit::WOLF_GAMBIT;

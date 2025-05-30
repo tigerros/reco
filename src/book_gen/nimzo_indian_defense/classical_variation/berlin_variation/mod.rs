@@ -58,7 +58,7 @@ assert_eq!(BERLIN_VARIATION.original_name(), "Nimzo-Indian Defense: Classical Va
 pub static BERLIN_VARIATION: Variation = Variation {
     name: "Berlin Variation",
     parent: Some(&super::CLASSICAL_VARIATION),
-    variations: &[&PIRC_VARIATION, &STEINER_VARIATION, &MACIEJA_SYSTEM],
+    variations: &[&MACIEJA_SYSTEM, &PIRC_VARIATION, &STEINER_VARIATION],
     lines: &[Line {
         parent: &BERLIN_VARIATION,
         code: Code {
@@ -159,9 +159,9 @@ pub static BERLIN_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod macieja_system;
+pub use macieja_system::MACIEJA_SYSTEM;
 pub mod pirc_variation;
 pub use pirc_variation::PIRC_VARIATION;
 pub mod steiner_variation;
 pub use steiner_variation::STEINER_VARIATION;
-pub mod macieja_system;
-pub use macieja_system::MACIEJA_SYSTEM;

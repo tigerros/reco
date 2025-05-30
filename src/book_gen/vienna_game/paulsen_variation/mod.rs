@@ -102,6 +102,84 @@ pub static PAULSEN_VARIATION: Variation = Variation {
                     to: G3,
                     promotion: None,
                 },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(67272588425998080),
+                        knight: Bitboard(4611690416474161216),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18297848277795602432),
+                        white: Bitboard(272936957),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &PAULSEN_VARIATION,
+            code: Code {
+                volume: Volume::C,
+                category: Category::new_static::<25>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B8,
+                    capture: None,
+                    to: C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G2,
+                    capture: None,
+                    to: G3,
+                    promotion: None,
+                },
                 Normal {
                     role: Knight,
                     from: G8,
@@ -161,84 +239,6 @@ pub static PAULSEN_VARIATION: Variation = Variation {
                 remaining_checks: None,
                 halfmoves: 0,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &PAULSEN_VARIATION,
-            code: Code {
-                volume: Volume::C,
-                category: Category::new_static::<25>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B8,
-                    capture: None,
-                    to: C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G2,
-                    capture: None,
-                    to: G3,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(67272588425998080),
-                        knight: Bitboard(4611690416474161216),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18297848277795602432),
-                        white: Bitboard(272936957),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                     fullmoves
                 } else {
                     #[expect(

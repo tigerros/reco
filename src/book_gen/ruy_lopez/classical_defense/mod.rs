@@ -58,12 +58,12 @@ assert_eq!(CLASSICAL_DEFENSE.original_name(), "Ruy Lopez: Classical Defense");
 pub static CLASSICAL_DEFENSE: Variation = Variation {
     name: "Classical Defense",
     parent: Some(&super::RUY_LOPEZ),
-    variations: &[&BENELUX_VARIATION, &ZAITSEV_VARIATION, &BODEN_VARIATION],
+    variations: &[&BENELUX_VARIATION, &BODEN_VARIATION, &ZAITSEV_VARIATION],
     lines: &[],
 };
 pub mod benelux_variation;
 pub use benelux_variation::BENELUX_VARIATION;
-pub mod zaitsev_variation;
-pub use zaitsev_variation::ZAITSEV_VARIATION;
 pub mod boden_variation;
 pub use boden_variation::BODEN_VARIATION;
+pub mod zaitsev_variation;
+pub use zaitsev_variation::ZAITSEV_VARIATION;

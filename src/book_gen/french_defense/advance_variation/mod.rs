@@ -59,19 +59,19 @@ pub static ADVANCE_VARIATION: Variation = Variation {
     name: "Advance Variation",
     parent: Some(&super::FRENCH_DEFENSE),
     variations: &[
-        &MILNER_BARRY_GAMBIT,
-        &NIMZOWITSCH_GAMBIT,
         &EUWE_VARIATION,
-        &WADE_VARIATION,
+        &EXTENDED_BISHOP_SWAP,
+        &FRENKEL_GAMBIT,
         &LPUTIAN_VARIATION,
         &MAIN_LINE,
-        &FRENKEL_GAMBIT,
+        &MILNER_BARRY_GAMBIT,
         &NIMZOWITSCH_ATTACK,
+        &NIMZOWITSCH_GAMBIT,
         &NIMZOWITSCH_SYSTEM,
         &PAULSEN_ATTACK,
-        &EXTENDED_BISHOP_SWAP,
         &RUISDONK_GAMBIT,
         &STEINITZ_VARIATION,
+        &WADE_VARIATION,
     ],
     lines: &[
         Line {
@@ -116,25 +116,11 @@ pub static ADVANCE_VARIATION: Variation = Variation {
                     to: E5,
                     promotion: None,
                 },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(63912532292985600),
+                        pawn: Bitboard(65038415019697920),
                         knight: Bitboard(4755801206503243842),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
@@ -142,8 +128,8 @@ pub static ADVANCE_VARIATION: Variation = Variation {
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18438598943110594560),
-                        white: Bitboard(68854014975),
+                        black: Bitboard(18439724825837568000),
+                        white: Bitboard(68853753855),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -153,7 +139,7 @@ pub static ADVANCE_VARIATION: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                     fullmoves
                 } else {
                     #[expect(
@@ -293,11 +279,25 @@ pub static ADVANCE_VARIATION: Variation = Variation {
                     to: E5,
                     promotion: None,
                 },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(65038415019697920),
+                        pawn: Bitboard(63912532292985600),
                         knight: Bitboard(4755801206503243842),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
@@ -305,8 +305,8 @@ pub static ADVANCE_VARIATION: Variation = Variation {
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18439724825837568000),
-                        white: Bitboard(68853753855),
+                        black: Bitboard(18438598943110594560),
+                        white: Bitboard(68854014975),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -316,7 +316,7 @@ pub static ADVANCE_VARIATION: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                     fullmoves
                 } else {
                     #[expect(
@@ -430,29 +430,29 @@ pub static ADVANCE_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod milner_barry_gambit;
-pub use milner_barry_gambit::MILNER_BARRY_GAMBIT;
-pub mod nimzowitsch_gambit;
-pub use nimzowitsch_gambit::NIMZOWITSCH_GAMBIT;
 pub mod euwe_variation;
 pub use euwe_variation::EUWE_VARIATION;
-pub mod wade_variation;
-pub use wade_variation::WADE_VARIATION;
+pub mod extended_bishop_swap;
+pub use extended_bishop_swap::EXTENDED_BISHOP_SWAP;
+pub mod frenkel_gambit;
+pub use frenkel_gambit::FRENKEL_GAMBIT;
 pub mod lputian_variation;
 pub use lputian_variation::LPUTIAN_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-pub mod frenkel_gambit;
-pub use frenkel_gambit::FRENKEL_GAMBIT;
+pub mod milner_barry_gambit;
+pub use milner_barry_gambit::MILNER_BARRY_GAMBIT;
 pub mod nimzowitsch_attack;
 pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
+pub mod nimzowitsch_gambit;
+pub use nimzowitsch_gambit::NIMZOWITSCH_GAMBIT;
 pub mod nimzowitsch_system;
 pub use nimzowitsch_system::NIMZOWITSCH_SYSTEM;
 pub mod paulsen_attack;
 pub use paulsen_attack::PAULSEN_ATTACK;
-pub mod extended_bishop_swap;
-pub use extended_bishop_swap::EXTENDED_BISHOP_SWAP;
 pub mod ruisdonk_gambit;
 pub use ruisdonk_gambit::RUISDONK_GAMBIT;
 pub mod steinitz_variation;
 pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod wade_variation;
+pub use wade_variation::WADE_VARIATION;

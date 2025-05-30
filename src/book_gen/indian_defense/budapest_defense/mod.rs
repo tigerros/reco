@@ -59,14 +59,85 @@ pub static BUDAPEST_DEFENSE: Variation = Variation {
     name: "Budapest Defense",
     parent: Some(&super::INDIAN_DEFENSE),
     variations: &[
-        &FAJAROWICZ_STEINER_VARIATION,
         &ADLER_VARIATION,
-        &FAJAROWICZ_DEFENSE,
         &ALEKHINE_VARIATION,
-        &RUBINSTEIN_VARIATION,
+        &FAJAROWICZ_DEFENSE,
         &FAJAROWICZ_VARIATION,
+        &FAJAROWICZ_STEINER_VARIATION,
+        &RUBINSTEIN_VARIATION,
     ],
     lines: &[
+        Line {
+            parent: &BUDAPEST_DEFENSE,
+            code: Code {
+                volume: Volume::A,
+                category: Category::new_static::<51>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E5,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(67272588354712320),
+                        knight: Bitboard(144150372447944770),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(13830308233769648128),
+                        white: Bitboard(201389055),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &BUDAPEST_DEFENSE,
             code: Code {
@@ -152,88 +223,17 @@ pub static BUDAPEST_DEFENSE: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &BUDAPEST_DEFENSE,
-            code: Code {
-                volume: Volume::A,
-                category: Category::new_static::<51>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E5,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(67272588354712320),
-                        knight: Bitboard(144150372447944770),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(13830308233769648128),
-                        white: Bitboard(201389055),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
-pub mod fajarowicz_steiner_variation;
-pub use fajarowicz_steiner_variation::FAJAROWICZ_STEINER_VARIATION;
 pub mod adler_variation;
 pub use adler_variation::ADLER_VARIATION;
-pub mod fajarowicz_defense;
-pub use fajarowicz_defense::FAJAROWICZ_DEFENSE;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod fajarowicz_defense;
+pub use fajarowicz_defense::FAJAROWICZ_DEFENSE;
 pub mod fajarowicz_variation;
 pub use fajarowicz_variation::FAJAROWICZ_VARIATION;
+pub mod fajarowicz_steiner_variation;
+pub use fajarowicz_steiner_variation::FAJAROWICZ_STEINER_VARIATION;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;

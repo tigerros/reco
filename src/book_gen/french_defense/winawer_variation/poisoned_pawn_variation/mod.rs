@@ -58,7 +58,7 @@ assert_eq!(POISONED_PAWN_VARIATION.original_name(), "French Defense: Winawer Var
 pub static POISONED_PAWN_VARIATION: Variation = Variation {
     name: "Poisoned Pawn Variation",
     parent: Some(&super::WINAWER_VARIATION),
-    variations: &[&PAOLI_VARIATION, &MAIN_LINE],
+    variations: &[&MAIN_LINE, &PAOLI_VARIATION],
     lines: &[Line {
         parent: &POISONED_PAWN_VARIATION,
         code: Code {
@@ -201,7 +201,7 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod paoli_variation;
-pub use paoli_variation::PAOLI_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod paoli_variation;
+pub use paoli_variation::PAOLI_VARIATION;

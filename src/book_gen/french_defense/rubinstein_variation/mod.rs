@@ -59,12 +59,12 @@ pub static RUBINSTEIN_VARIATION: Variation = Variation {
     name: "Rubinstein Variation",
     parent: Some(&super::FRENCH_DEFENSE),
     variations: &[
-        &FORT_KNOX_VARIATION,
-        &KASPAROV_ATTACK,
         &BLACKBURNE_DEFENSE,
-        &MARIC_VARIATION,
         &CAPABLANCA_LINE,
         &ELLIS_GAMBIT,
+        &FORT_KNOX_VARIATION,
+        &KASPAROV_ATTACK,
+        &MARIC_VARIATION,
     ],
     lines: &[Line {
         parent: &RUBINSTEIN_VARIATION,
@@ -152,15 +152,15 @@ pub static RUBINSTEIN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod fort_knox_variation;
-pub use fort_knox_variation::FORT_KNOX_VARIATION;
-pub mod kasparov_attack;
-pub use kasparov_attack::KASPAROV_ATTACK;
 pub mod blackburne_defense;
 pub use blackburne_defense::BLACKBURNE_DEFENSE;
-pub mod maric_variation;
-pub use maric_variation::MARIC_VARIATION;
 pub mod capablanca_line;
 pub use capablanca_line::CAPABLANCA_LINE;
 pub mod ellis_gambit;
 pub use ellis_gambit::ELLIS_GAMBIT;
+pub mod fort_knox_variation;
+pub use fort_knox_variation::FORT_KNOX_VARIATION;
+pub mod kasparov_attack;
+pub use kasparov_attack::KASPAROV_ATTACK;
+pub mod maric_variation;
+pub use maric_variation::MARIC_VARIATION;

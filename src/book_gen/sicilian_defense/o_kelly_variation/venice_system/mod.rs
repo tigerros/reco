@@ -58,7 +58,7 @@ assert_eq!(VENICE_SYSTEM.original_name(), "Sicilian Defense: O'Kelly Variation, 
 pub static VENICE_SYSTEM: Variation = Variation {
     name: "Venice System",
     parent: Some(&super::O_KELLY_VARIATION),
-    variations: &[&LJUBOJEVIC_LINE, &GAMBIT_LINE, &STEINER_LINE, &BARCZA_LINE],
+    variations: &[&BARCZA_LINE, &GAMBIT_LINE, &LJUBOJEVIC_LINE, &STEINER_LINE],
     lines: &[Line {
         parent: &VENICE_SYSTEM,
         code: Code {
@@ -138,11 +138,11 @@ pub static VENICE_SYSTEM: Variation = Variation {
         },
     }],
 };
-pub mod ljubojevic_line;
-pub use ljubojevic_line::LJUBOJEVIC_LINE;
-pub mod gambit_line;
-pub use gambit_line::GAMBIT_LINE;
-pub mod steiner_line;
-pub use steiner_line::STEINER_LINE;
 pub mod barcza_line;
 pub use barcza_line::BARCZA_LINE;
+pub mod gambit_line;
+pub use gambit_line::GAMBIT_LINE;
+pub mod ljubojevic_line;
+pub use ljubojevic_line::LJUBOJEVIC_LINE;
+pub mod steiner_line;
+pub use steiner_line::STEINER_LINE;

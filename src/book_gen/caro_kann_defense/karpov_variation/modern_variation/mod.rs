@@ -58,7 +58,7 @@ assert_eq!(MODERN_VARIATION.original_name(), "Caro-Kann Defense: Karpov Variatio
 pub static MODERN_VARIATION: Variation = Variation {
     name: "Modern Variation",
     parent: Some(&super::KARPOV_VARIATION),
-    variations: &[&KASPAROV_ATTACK, &IVANCHUK_DEFENSE],
+    variations: &[&IVANCHUK_DEFENSE, &KASPAROV_ATTACK],
     lines: &[Line {
         parent: &MODERN_VARIATION,
         code: Code {
@@ -166,7 +166,7 @@ pub static MODERN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod kasparov_attack;
-pub use kasparov_attack::KASPAROV_ATTACK;
 pub mod ivanchuk_defense;
 pub use ivanchuk_defense::IVANCHUK_DEFENSE;
+pub mod kasparov_attack;
+pub use kasparov_attack::KASPAROV_ATTACK;

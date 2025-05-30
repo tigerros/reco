@@ -58,7 +58,7 @@ assert_eq!(LENINGRAD_VARIATION.original_name(), "Dutch Defense: Leningrad Variat
 pub static LENINGRAD_VARIATION: Variation = Variation {
     name: "Leningrad Variation",
     parent: Some(&super::DUTCH_DEFENSE),
-    variations: &[&WARSAW_VARIATION, &MATULOVIC_VARIATION, &CARLSBAD_VARIATION],
+    variations: &[&CARLSBAD_VARIATION, &MATULOVIC_VARIATION, &WARSAW_VARIATION],
     lines: &[
         Line {
             parent: &LENINGRAD_VARIATION,
@@ -253,9 +253,9 @@ pub static LENINGRAD_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod warsaw_variation;
-pub use warsaw_variation::WARSAW_VARIATION;
-pub mod matulovic_variation;
-pub use matulovic_variation::MATULOVIC_VARIATION;
 pub mod carlsbad_variation;
 pub use carlsbad_variation::CARLSBAD_VARIATION;
+pub mod matulovic_variation;
+pub use matulovic_variation::MATULOVIC_VARIATION;
+pub mod warsaw_variation;
+pub use warsaw_variation::WARSAW_VARIATION;

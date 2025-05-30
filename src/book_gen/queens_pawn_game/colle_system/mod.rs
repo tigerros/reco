@@ -58,7 +58,7 @@ assert_eq!(COLLE_SYSTEM.original_name(), "Queen's Pawn Game: Colle System");
 pub static COLLE_SYSTEM: Variation = Variation {
     name: "Colle System",
     parent: Some(&super::QUEENS_PAWN_GAME),
-    variations: &[&GRUNFELD_FORMATION, &ANTI_COLLE, &TRADITIONAL_COLLE],
+    variations: &[&ANTI_COLLE, &GRUNFELD_FORMATION, &TRADITIONAL_COLLE],
     lines: &[
         Line {
             parent: &COLLE_SYSTEM,
@@ -317,9 +317,9 @@ pub static COLLE_SYSTEM: Variation = Variation {
         },
     ],
 };
-pub mod grunfeld_formation;
-pub use grunfeld_formation::GRUNFELD_FORMATION;
 pub mod anti_colle;
 pub use anti_colle::ANTI_COLLE;
+pub mod grunfeld_formation;
+pub use grunfeld_formation::GRUNFELD_FORMATION;
 pub mod traditional_colle;
 pub use traditional_colle::TRADITIONAL_COLLE;

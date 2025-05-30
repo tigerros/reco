@@ -59,12 +59,12 @@ pub static PTERODACTYL_DEFENSE: Variation = Variation {
     name: "Pterodactyl Defense",
     parent: None,
     variations: &[
-        &CENTRAL,
-        &FIANCHETTO,
-        &SICILIAN,
-        &QUEEN_PTERODACTYL,
         &AUSTRIAN,
+        &CENTRAL,
         &EASTERN,
+        &FIANCHETTO,
+        &QUEEN_PTERODACTYL,
+        &SICILIAN,
         &WESTERN,
     ],
     lines: &[Line {
@@ -181,17 +181,17 @@ pub static PTERODACTYL_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod central;
-pub use central::CENTRAL;
-pub mod fianchetto;
-pub use fianchetto::FIANCHETTO;
-pub mod sicilian;
-pub use sicilian::SICILIAN;
-pub mod queen_pterodactyl;
-pub use queen_pterodactyl::QUEEN_PTERODACTYL;
 pub mod austrian;
 pub use austrian::AUSTRIAN;
+pub mod central;
+pub use central::CENTRAL;
 pub mod eastern;
 pub use eastern::EASTERN;
+pub mod fianchetto;
+pub use fianchetto::FIANCHETTO;
+pub mod queen_pterodactyl;
+pub use queen_pterodactyl::QUEEN_PTERODACTYL;
+pub mod sicilian;
+pub use sicilian::SICILIAN;
 pub mod western;
 pub use western::WESTERN;

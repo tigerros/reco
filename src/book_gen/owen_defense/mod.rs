@@ -59,13 +59,13 @@ pub static OWEN_DEFENSE: Variation = Variation {
     name: "Owen Defense",
     parent: None,
     variations: &[
-        &NASELWAUS_GAMBIT,
-        &MATOVINSKY_GAMBIT,
         &GUATEMALA_DEFENSE,
         &HEKILI_LOA_GAMBIT,
+        &MATOVINSKY_GAMBIT,
+        &NASELWAUS_GAMBIT,
         &SMITH_GAMBIT,
-        &WIND_GAMBIT,
         &UNICORN_VARIATION,
+        &WIND_GAMBIT,
     ],
     lines: &[Line {
         parent: &OWEN_DEFENSE,
@@ -125,17 +125,17 @@ pub static OWEN_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod naselwaus_gambit;
-pub use naselwaus_gambit::NASELWAUS_GAMBIT;
-pub mod matovinsky_gambit;
-pub use matovinsky_gambit::MATOVINSKY_GAMBIT;
 pub mod guatemala_defense;
 pub use guatemala_defense::GUATEMALA_DEFENSE;
 pub mod hekili_loa_gambit;
 pub use hekili_loa_gambit::HEKILI_LOA_GAMBIT;
+pub mod matovinsky_gambit;
+pub use matovinsky_gambit::MATOVINSKY_GAMBIT;
+pub mod naselwaus_gambit;
+pub use naselwaus_gambit::NASELWAUS_GAMBIT;
 pub mod smith_gambit;
 pub use smith_gambit::SMITH_GAMBIT;
-pub mod wind_gambit;
-pub use wind_gambit::WIND_GAMBIT;
 pub mod unicorn_variation;
 pub use unicorn_variation::UNICORN_VARIATION;
+pub mod wind_gambit;
+pub use wind_gambit::WIND_GAMBIT;

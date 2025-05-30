@@ -58,7 +58,7 @@ assert_eq!(PHILIDOR_COUNTERGAMBIT.original_name(), "Philidor Defense: Philidor C
 pub static PHILIDOR_COUNTERGAMBIT: Variation = Variation {
     name: "Philidor Countergambit",
     parent: Some(&super::PHILIDOR_DEFENSE),
-    variations: &[&BERGER_VARIATION, &DEL_RIO_ATTACK, &ZUKERTORT_VARIATION],
+    variations: &[&BERGER_VARIATION, &ZUKERTORT_VARIATION, &DEL_RIO_ATTACK],
     lines: &[Line {
         parent: &PHILIDOR_COUNTERGAMBIT,
         code: Code {
@@ -147,7 +147,7 @@ pub static PHILIDOR_COUNTERGAMBIT: Variation = Variation {
 };
 pub mod berger_variation;
 pub use berger_variation::BERGER_VARIATION;
-pub mod del_rio_attack;
-pub use del_rio_attack::DEL_RIO_ATTACK;
 pub mod zukertort_variation;
 pub use zukertort_variation::ZUKERTORT_VARIATION;
+pub mod del_rio_attack;
+pub use del_rio_attack::DEL_RIO_ATTACK;

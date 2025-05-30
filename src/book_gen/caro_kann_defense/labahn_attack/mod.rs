@@ -58,7 +58,7 @@ assert_eq!(LABAHN_ATTACK.original_name(), "Caro-Kann Defense: Labahn Attack");
 pub static LABAHN_ATTACK: Variation = Variation {
     name: "Labahn Attack",
     parent: Some(&super::CARO_KANN_DEFENSE),
-    variations: &[&POLISH_VARIATION, &DOUBLE_GAMBIT],
+    variations: &[&DOUBLE_GAMBIT, &POLISH_VARIATION],
     lines: &[Line {
         parent: &LABAHN_ATTACK,
         code: Code {
@@ -124,7 +124,7 @@ pub static LABAHN_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod polish_variation;
-pub use polish_variation::POLISH_VARIATION;
 pub mod double_gambit;
 pub use double_gambit::DOUBLE_GAMBIT;
+pub mod polish_variation;
+pub use polish_variation::POLISH_VARIATION;

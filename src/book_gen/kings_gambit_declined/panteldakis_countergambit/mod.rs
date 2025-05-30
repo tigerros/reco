@@ -59,11 +59,11 @@ pub static PANTELDAKIS_COUNTERGAMBIT: Variation = Variation {
     name: "Panteldakis Countergambit",
     parent: Some(&super::KINGS_GAMBIT_DECLINED),
     variations: &[
-        &PAWN_SACRIFICE_LINE,
-        &SHIRAZI_LINE,
-        &SCHILLERS_DEFENSE,
-        &SYMMETRICAL_VARIATION,
         &GRECO_VARIATION,
+        &PAWN_SACRIFICE_LINE,
+        &SCHILLERS_DEFENSE,
+        &SHIRAZI_LINE,
+        &SYMMETRICAL_VARIATION,
     ],
     lines: &[Line {
         parent: &PANTELDAKIS_COUNTERGAMBIT,
@@ -137,13 +137,13 @@ pub static PANTELDAKIS_COUNTERGAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod pawn_sacrifice_line;
-pub use pawn_sacrifice_line::PAWN_SACRIFICE_LINE;
-pub mod shirazi_line;
-pub use shirazi_line::SHIRAZI_LINE;
-pub mod schillers_defense;
-pub use schillers_defense::SCHILLERS_DEFENSE;
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
 pub mod greco_variation;
 pub use greco_variation::GRECO_VARIATION;
+pub mod pawn_sacrifice_line;
+pub use pawn_sacrifice_line::PAWN_SACRIFICE_LINE;
+pub mod schillers_defense;
+pub use schillers_defense::SCHILLERS_DEFENSE;
+pub mod shirazi_line;
+pub use shirazi_line::SHIRAZI_LINE;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;

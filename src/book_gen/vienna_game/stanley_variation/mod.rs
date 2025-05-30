@@ -59,12 +59,12 @@ pub static STANLEY_VARIATION: Variation = Variation {
     name: "Stanley Variation",
     parent: Some(&super::VIENNA_GAME),
     variations: &[
-        &BRONSTEIN_GAMBIT,
-        &MONSTER_DECLINED,
-        &EIFEL_GAMBIT,
-        &MEITNER_MIESES_GAMBIT,
-        &FRANKENSTEIN_DRACULA_VARIATION,
         &ALEKHINE_VARIATION,
+        &BRONSTEIN_GAMBIT,
+        &EIFEL_GAMBIT,
+        &FRANKENSTEIN_DRACULA_VARIATION,
+        &MEITNER_MIESES_GAMBIT,
+        &MONSTER_DECLINED,
         &REVERSED_SPANISH,
         &THREE_KNIGHTS_VARIATION,
     ],
@@ -147,18 +147,18 @@ pub static STANLEY_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod bronstein_gambit;
-pub use bronstein_gambit::BRONSTEIN_GAMBIT;
-pub mod monster_declined;
-pub use monster_declined::MONSTER_DECLINED;
-pub mod eifel_gambit;
-pub use eifel_gambit::EIFEL_GAMBIT;
-pub mod meitner_mieses_gambit;
-pub use meitner_mieses_gambit::MEITNER_MIESES_GAMBIT;
-pub mod frankenstein_dracula_variation;
-pub use frankenstein_dracula_variation::FRANKENSTEIN_DRACULA_VARIATION;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
+pub mod bronstein_gambit;
+pub use bronstein_gambit::BRONSTEIN_GAMBIT;
+pub mod eifel_gambit;
+pub use eifel_gambit::EIFEL_GAMBIT;
+pub mod frankenstein_dracula_variation;
+pub use frankenstein_dracula_variation::FRANKENSTEIN_DRACULA_VARIATION;
+pub mod meitner_mieses_gambit;
+pub use meitner_mieses_gambit::MEITNER_MIESES_GAMBIT;
+pub mod monster_declined;
+pub use monster_declined::MONSTER_DECLINED;
 pub mod reversed_spanish;
 pub use reversed_spanish::REVERSED_SPANISH;
 pub mod three_knights_variation;

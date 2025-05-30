@@ -165,8 +165,6 @@ pub static HUBNER_VARIATION: Variation = Variation {
                     to: D6,
                     promotion: None,
                 },
-                Castle { king: E1, rook: H1 },
-                Castle { king: E8, rook: H8 },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
@@ -174,23 +172,23 @@ pub static HUBNER_VARIATION: Variation = Variation {
                         pawn: Bitboard(63921225374949632),
                         knight: Bitboard(39582420697088),
                         bishop: Bitboard(288230376152236036),
-                        rook: Bitboard(2377900603251621921),
+                        rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
-                        king: Bitboard(4611686018427387968),
+                        king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(7918238557724999680),
-                        white: Bitboard(205316461),
+                        black: Bitboard(11377003071545540608),
+                        white: Bitboard(205316509),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
-                castling_rights: Bitboard(0),
+                castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 2,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                     fullmoves
                 } else {
                     #[expect(
@@ -308,6 +306,8 @@ pub static HUBNER_VARIATION: Variation = Variation {
                     to: D6,
                     promotion: None,
                 },
+                Castle { king: E1, rook: H1 },
+                Castle { king: E8, rook: H8 },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
@@ -315,23 +315,23 @@ pub static HUBNER_VARIATION: Variation = Variation {
                         pawn: Bitboard(63921225374949632),
                         knight: Bitboard(39582420697088),
                         bishop: Bitboard(288230376152236036),
-                        rook: Bitboard(9295429630892703873),
+                        rook: Bitboard(2377900603251621921),
                         queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
+                        king: Bitboard(4611686018427387968),
                     },
                     ByColor {
-                        black: Bitboard(11377003071545540608),
-                        white: Bitboard(205316509),
+                        black: Bitboard(7918238557724999680),
+                        white: Bitboard(205316461),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
-                castling_rights: Bitboard(9295429630892703873),
+                castling_rights: Bitboard(0),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+                halfmoves: 2,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
                     fullmoves
                 } else {
                     #[expect(

@@ -14,12 +14,12 @@ use crate::create_variation_files::create_variation_files;
 use crate::get_archive_and_commit::get_archive_and_commit;
 use crate::get_name::get_name;
 use crate::get_uci::get_uci;
+use indexmap::IndexSet;
 use line_meta::LineMeta;
 use reco::Code;
 use shakmaty::{Chess, EnPassantMode, Position};
 use std::cell::RefCell;
-use std::collections::HashMap;
-use std::collections::HashSet;
+use std::collections::BTreeMap;
 use std::fs::{exists, remove_dir_all, write};
 use std::io::Cursor;
 use std::rc::Rc;
@@ -38,7 +38,7 @@ fn main() {
         .flexible(false)
         .from_reader(all_tsv);
 
-    let mut variations = HashMap::new();
+    let mut variations = BTreeMap::new();
 
     for record in reader.records() {
         let record = record.unwrap();
@@ -70,9 +70,9 @@ fn main() {
             .or_insert_with_key(|k| {
                 Rc::new(VariationMeta {
                     name: k.clone(),
-                    variations: RefCell::new(HashMap::new()),
+                    variations: RefCell::new(BTreeMap::new()),
                     parent: None,
-                    lines: RefCell::new(HashSet::new()),
+                    lines: RefCell::new(IndexSet::new()),
                 })
             })
             .clone();
@@ -87,9 +87,9 @@ fn main() {
                 .or_insert_with_key(|k| {
                     Rc::new(VariationMeta {
                         name: k.clone(),
-                        variations: RefCell::new(HashMap::new()),
+                        variations: RefCell::new(BTreeMap::new()),
                         parent: Some(variation.clone()),
-                        lines: RefCell::new(HashSet::new()),
+                        lines: RefCell::new(IndexSet::new()),
                     })
                 })
                 .clone();
@@ -133,7 +133,7 @@ fn main() {
             r#"{BOOK_MOD_INIT}
 {root_mods_and_uses}
 /// All root variations.
-pub static ALL: [&'static Variation; {}] = [{}];"#,
+pub static ALL: [&Variation; {}] = [{}];"#,
             root_identifiers.len(),
             root_identifiers.join(",\n")
         )

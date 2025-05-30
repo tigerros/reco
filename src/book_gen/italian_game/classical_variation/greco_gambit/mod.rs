@@ -61,8 +61,8 @@ pub static GRECO_GAMBIT: Variation = Variation {
     variations: &[
         &ANDERSSEN_VARIATION,
         &GRECO_VARIATION,
-        &MOELLER_BAYONET_ATTACK,
         &MAIN_LINE,
+        &MOELLER_BAYONET_ATTACK,
         &MOELLER_THERKATZ_ATTACK,
         &TRADITIONAL_LINE,
     ],
@@ -198,10 +198,10 @@ pub mod anderssen_variation;
 pub use anderssen_variation::ANDERSSEN_VARIATION;
 pub mod greco_variation;
 pub use greco_variation::GRECO_VARIATION;
-pub mod moeller_bayonet_attack;
-pub use moeller_bayonet_attack::MOELLER_BAYONET_ATTACK;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod moeller_bayonet_attack;
+pub use moeller_bayonet_attack::MOELLER_BAYONET_ATTACK;
 pub mod moeller_therkatz_attack;
 pub use moeller_therkatz_attack::MOELLER_THERKATZ_ATTACK;
 pub mod traditional_line;

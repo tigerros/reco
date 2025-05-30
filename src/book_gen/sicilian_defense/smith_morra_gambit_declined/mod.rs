@@ -59,24 +59,24 @@ pub static SMITH_MORRA_GAMBIT_DECLINED: Variation = Variation {
     name: "Smith-Morra Gambit Declined",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
+        &ALAPIN_FORMATION,
+        &CENTER_FORMATION,
+        &DUBOIS_VARIATION,
         &PUSH_VARIATION,
         &SCANDINAVIAN_FORMATION,
-        &ALAPIN_FORMATION,
-        &DUBOIS_VARIATION,
         &WING_FORMATION,
-        &CENTER_FORMATION,
     ],
     lines: &[],
 };
+pub mod alapin_formation;
+pub use alapin_formation::ALAPIN_FORMATION;
+pub mod center_formation;
+pub use center_formation::CENTER_FORMATION;
+pub mod dubois_variation;
+pub use dubois_variation::DUBOIS_VARIATION;
 pub mod push_variation;
 pub use push_variation::PUSH_VARIATION;
 pub mod scandinavian_formation;
 pub use scandinavian_formation::SCANDINAVIAN_FORMATION;
-pub mod alapin_formation;
-pub use alapin_formation::ALAPIN_FORMATION;
-pub mod dubois_variation;
-pub use dubois_variation::DUBOIS_VARIATION;
 pub mod wing_formation;
 pub use wing_formation::WING_FORMATION;
-pub mod center_formation;
-pub use center_formation::CENTER_FORMATION;

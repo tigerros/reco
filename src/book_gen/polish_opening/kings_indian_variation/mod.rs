@@ -58,7 +58,7 @@ assert_eq!(KINGS_INDIAN_VARIATION.original_name(), "Polish Opening: King's India
 pub static KINGS_INDIAN_VARIATION: Variation = Variation {
     name: "King's Indian Variation",
     parent: Some(&super::POLISH_OPENING),
-    variations: &[&SOKOLSKY_ATTACK, &SCHIFFLER_ATTACK],
+    variations: &[&SCHIFFLER_ATTACK, &SOKOLSKY_ATTACK],
     lines: &[Line {
         parent: &KINGS_INDIAN_VARIATION,
         code: Code {
@@ -131,7 +131,7 @@ pub static KINGS_INDIAN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod sokolsky_attack;
-pub use sokolsky_attack::SOKOLSKY_ATTACK;
 pub mod schiffler_attack;
 pub use schiffler_attack::SCHIFFLER_ATTACK;
+pub mod sokolsky_attack;
+pub use sokolsky_attack::SOKOLSKY_ATTACK;

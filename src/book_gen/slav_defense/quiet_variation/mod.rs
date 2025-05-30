@@ -59,10 +59,10 @@ pub static QUIET_VARIATION: Variation = Variation {
     name: "Quiet Variation",
     parent: Some(&super::SLAV_DEFENSE),
     variations: &[
-        &SCHALLOPP_DEFENSE,
-        &PIN_DEFENSE,
-        &LANDAU_VARIATION,
         &AMSTERDAM_VARIATION,
+        &LANDAU_VARIATION,
+        &PIN_DEFENSE,
+        &SCHALLOPP_DEFENSE,
     ],
     lines: &[Line {
         parent: &QUIET_VARIATION,
@@ -157,11 +157,11 @@ pub static QUIET_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod schallopp_defense;
-pub use schallopp_defense::SCHALLOPP_DEFENSE;
-pub mod pin_defense;
-pub use pin_defense::PIN_DEFENSE;
-pub mod landau_variation;
-pub use landau_variation::LANDAU_VARIATION;
 pub mod amsterdam_variation;
 pub use amsterdam_variation::AMSTERDAM_VARIATION;
+pub mod landau_variation;
+pub use landau_variation::LANDAU_VARIATION;
+pub mod pin_defense;
+pub use pin_defense::PIN_DEFENSE;
+pub mod schallopp_defense;
+pub use schallopp_defense::SCHALLOPP_DEFENSE;

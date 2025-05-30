@@ -58,7 +58,7 @@ assert_eq!(MARSHALL_GAMBIT.original_name(), "Semi-Slav Defense: Marshall Gambit"
 pub static MARSHALL_GAMBIT: Variation = Variation {
     name: "Marshall Gambit",
     parent: Some(&super::SEMI_SLAV_DEFENSE),
-    variations: &[&TOLUSH_VARIATION, &FORGOTTEN_VARIATION, &MAIN_LINE],
+    variations: &[&FORGOTTEN_VARIATION, &MAIN_LINE, &TOLUSH_VARIATION],
     lines: &[Line {
         parent: &MARSHALL_GAMBIT,
         code: Code {
@@ -152,9 +152,9 @@ pub static MARSHALL_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod tolush_variation;
-pub use tolush_variation::TOLUSH_VARIATION;
 pub mod forgotten_variation;
 pub use forgotten_variation::FORGOTTEN_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod tolush_variation;
+pub use tolush_variation::TOLUSH_VARIATION;

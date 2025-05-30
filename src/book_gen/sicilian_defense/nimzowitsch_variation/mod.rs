@@ -59,10 +59,10 @@ pub static NIMZOWITSCH_VARIATION: Variation = Variation {
     name: "Nimzowitsch Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &MAIN_LINE,
-        &CLOSED_VARIATION,
         &ADVANCE_VARIATION,
+        &CLOSED_VARIATION,
         &EXCHANGE_VARIATION,
+        &MAIN_LINE,
     ],
     lines: &[Line {
         parent: &NIMZOWITSCH_VARIATION,
@@ -136,11 +136,11 @@ pub static NIMZOWITSCH_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod closed_variation;
-pub use closed_variation::CLOSED_VARIATION;
 pub mod advance_variation;
 pub use advance_variation::ADVANCE_VARIATION;
+pub mod closed_variation;
+pub use closed_variation::CLOSED_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;

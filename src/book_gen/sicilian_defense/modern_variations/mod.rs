@@ -59,11 +59,11 @@ pub static MODERN_VARIATIONS: Variation = Variation {
     name: "Modern Variations",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &GINSBERG_GAMBIT,
+        &ANTI_QXD4_MOVE_ORDER,
         &ANTI_QXD4_MOVE_ORDER_ACCEPTED,
+        &GINSBERG_GAMBIT,
         &MAIN_LINE,
         &TARTAKOWER,
-        &ANTI_QXD4_MOVE_ORDER,
     ],
     lines: &[Line {
         parent: &MODERN_VARIATIONS,
@@ -137,13 +137,13 @@ pub static MODERN_VARIATIONS: Variation = Variation {
         },
     }],
 };
-pub mod ginsberg_gambit;
-pub use ginsberg_gambit::GINSBERG_GAMBIT;
+pub mod anti_qxd4_move_order;
+pub use anti_qxd4_move_order::ANTI_QXD4_MOVE_ORDER;
 pub mod anti_qxd4_move_order_accepted;
 pub use anti_qxd4_move_order_accepted::ANTI_QXD4_MOVE_ORDER_ACCEPTED;
+pub mod ginsberg_gambit;
+pub use ginsberg_gambit::GINSBERG_GAMBIT;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod tartakower;
 pub use tartakower::TARTAKOWER;
-pub mod anti_qxd4_move_order;
-pub use anti_qxd4_move_order::ANTI_QXD4_MOVE_ORDER;

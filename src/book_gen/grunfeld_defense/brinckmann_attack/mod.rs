@@ -59,8 +59,8 @@ pub static BRINCKMANN_ATTACK: Variation = Variation {
     name: "Brinckmann Attack",
     parent: Some(&super::GRUNFELD_DEFENSE),
     variations: &[
-        &GRUNFELD_GAMBIT_ACCEPTED,
         &GRUNFELD_GAMBIT,
+        &GRUNFELD_GAMBIT_ACCEPTED,
         &RESHEVSKY_GAMBIT,
     ],
     lines: &[Line {
@@ -156,9 +156,9 @@ pub static BRINCKMANN_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod grunfeld_gambit_accepted;
-pub use grunfeld_gambit_accepted::GRUNFELD_GAMBIT_ACCEPTED;
 pub mod grunfeld_gambit;
 pub use grunfeld_gambit::GRUNFELD_GAMBIT;
+pub mod grunfeld_gambit_accepted;
+pub use grunfeld_gambit_accepted::GRUNFELD_GAMBIT_ACCEPTED;
 pub mod reshevsky_gambit;
 pub use reshevsky_gambit::RESHEVSKY_GAMBIT;

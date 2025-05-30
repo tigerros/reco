@@ -60,8 +60,8 @@ pub static DELAYED_ALAPIN_VARIATION: Variation = Variation {
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
         &BASMAN_PALATNIK_DOUBLE_GAMBIT,
-        &WITH_D6,
         &BASMAN_PALATNIK_GAMBIT,
+        &WITH_D6,
         &WITH_E6,
     ],
     lines: &[Line {
@@ -180,9 +180,9 @@ pub static DELAYED_ALAPIN_VARIATION: Variation = Variation {
 };
 pub mod basman_palatnik_double_gambit;
 pub use basman_palatnik_double_gambit::BASMAN_PALATNIK_DOUBLE_GAMBIT;
-pub mod with_d6;
-pub use with_d6::WITH_D6;
 pub mod basman_palatnik_gambit;
 pub use basman_palatnik_gambit::BASMAN_PALATNIK_GAMBIT;
+pub mod with_d6;
+pub use with_d6::WITH_D6;
 pub mod with_e6;
 pub use with_e6::WITH_E6;

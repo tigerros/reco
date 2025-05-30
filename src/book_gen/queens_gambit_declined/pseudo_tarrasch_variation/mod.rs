@@ -58,7 +58,7 @@ assert_eq!(PSEUDO_TARRASCH_VARIATION.original_name(), "Queen's Gambit Declined: 
 pub static PSEUDO_TARRASCH_VARIATION: Variation = Variation {
     name: "Pseudo-Tarrasch Variation",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
-    variations: &[&PRIMITIVE_PILLSBURY_VARIATION, &CANAL_VARIATION],
+    variations: &[&CANAL_VARIATION, &PRIMITIVE_PILLSBURY_VARIATION],
     lines: &[Line {
         parent: &PSEUDO_TARRASCH_VARIATION,
         code: Code {
@@ -166,7 +166,7 @@ pub static PSEUDO_TARRASCH_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod primitive_pillsbury_variation;
-pub use primitive_pillsbury_variation::PRIMITIVE_PILLSBURY_VARIATION;
 pub mod canal_variation;
 pub use canal_variation::CANAL_VARIATION;
+pub mod primitive_pillsbury_variation;
+pub use primitive_pillsbury_variation::PRIMITIVE_PILLSBURY_VARIATION;

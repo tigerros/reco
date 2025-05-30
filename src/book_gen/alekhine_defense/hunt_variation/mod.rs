@@ -58,7 +58,7 @@ assert_eq!(HUNT_VARIATION.original_name(), "Alekhine Defense: Hunt Variation");
 pub static HUNT_VARIATION: Variation = Variation {
     name: "Hunt Variation",
     parent: Some(&super::ALEKHINE_DEFENSE),
-    variations: &[&MATSUKEVICH_GAMBIT, &LASKER_SIMUL_GAMBIT, &MIKENAS_GAMBIT],
+    variations: &[&LASKER_SIMUL_GAMBIT, &MATSUKEVICH_GAMBIT, &MIKENAS_GAMBIT],
     lines: &[Line {
         parent: &HUNT_VARIATION,
         code: Code {
@@ -166,9 +166,9 @@ pub static HUNT_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod matsukevich_gambit;
-pub use matsukevich_gambit::MATSUKEVICH_GAMBIT;
 pub mod lasker_simul_gambit;
 pub use lasker_simul_gambit::LASKER_SIMUL_GAMBIT;
+pub mod matsukevich_gambit;
+pub use matsukevich_gambit::MATSUKEVICH_GAMBIT;
 pub mod mikenas_gambit;
 pub use mikenas_gambit::MIKENAS_GAMBIT;

@@ -58,7 +58,7 @@ assert_eq!(VALENCIAN_VARIATION.original_name(), "Scandinavian Defense: Valencian
 pub static VALENCIAN_VARIATION: Variation = Variation {
     name: "Valencian Variation",
     parent: Some(&super::SCANDINAVIAN_DEFENSE),
-    variations: &[&MAIN_LINE, &ILUNDAIN_VARIATION],
+    variations: &[&ILUNDAIN_VARIATION, &MAIN_LINE],
     lines: &[Line {
         parent: &VALENCIAN_VARIATION,
         code: Code {
@@ -145,7 +145,7 @@ pub static VALENCIAN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod ilundain_variation;
 pub use ilundain_variation::ILUNDAIN_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;

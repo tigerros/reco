@@ -59,14 +59,14 @@ pub static SCHLIEMANN_DEFENSE: Variation = Variation {
     name: "Schliemann Defense",
     parent: Some(&super::RUY_LOPEZ),
     variations: &[
-        &EXCHANGE_VARIATION,
-        &KOSTIC_DEFENSE,
+        &CLASSICAL_VARIATION,
         &DYCKHOFF_VARIATION,
-        &TARTAKOWER_VARIATION,
+        &EXCHANGE_VARIATION,
+        &JAENISCH_GAMBIT_ACCEPTED,
+        &KOSTIC_DEFENSE,
         &MOHRING_VARIATION,
         &SCHONEMANN_ATTACK,
-        &CLASSICAL_VARIATION,
-        &JAENISCH_GAMBIT_ACCEPTED,
+        &TARTAKOWER_VARIATION,
     ],
     lines: &[Line {
         parent: &SCHLIEMANN_DEFENSE,
@@ -154,19 +154,19 @@ pub static SCHLIEMANN_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod kostic_defense;
-pub use kostic_defense::KOSTIC_DEFENSE;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
 pub mod dyckhoff_variation;
 pub use dyckhoff_variation::DYCKHOFF_VARIATION;
-pub mod tartakower_variation;
-pub use tartakower_variation::TARTAKOWER_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod jaenisch_gambit_accepted;
+pub use jaenisch_gambit_accepted::JAENISCH_GAMBIT_ACCEPTED;
+pub mod kostic_defense;
+pub use kostic_defense::KOSTIC_DEFENSE;
 pub mod mohring_variation;
 pub use mohring_variation::MOHRING_VARIATION;
 pub mod schonemann_attack;
 pub use schonemann_attack::SCHONEMANN_ATTACK;
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-pub mod jaenisch_gambit_accepted;
-pub use jaenisch_gambit_accepted::JAENISCH_GAMBIT_ACCEPTED;
+pub mod tartakower_variation;
+pub use tartakower_variation::TARTAKOWER_VARIATION;

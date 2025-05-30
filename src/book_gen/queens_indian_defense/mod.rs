@@ -59,22 +59,22 @@ pub static QUEENS_INDIAN_DEFENSE: Variation = Variation {
     name: "Queen's Indian Defense",
     parent: None,
     variations: &[
-        &RIUMIN_VARIATION,
-        &OPOCENSKY_VARIATION,
-        &SPASSKY_SYSTEM,
+        &ANTI_QUEENS_INDIAN_SYSTEM,
+        &AVERBAKH_VARIATION,
+        &BUERGER_VARIATION,
+        &CAPABLANCA_VARIATION,
+        &CLASSICAL_VARIATION,
+        &EUWE_VARIATION,
         &FIANCHETTO_VARIATION,
+        &KASPAROV_VARIATION,
         &KASPAROV_PETROSIAN_VARIATION,
         &MILES_VARIATION,
-        &KASPAROV_VARIATION,
-        &AVERBAKH_VARIATION,
-        &CAPABLANCA_VARIATION,
-        &BUERGER_VARIATION,
-        &YATES_VARIATION,
-        &ANTI_QUEENS_INDIAN_SYSTEM,
-        &CLASSICAL_VARIATION,
+        &OPOCENSKY_VARIATION,
         &PETROSIAN_VARIATION,
-        &EUWE_VARIATION,
+        &RIUMIN_VARIATION,
+        &SPASSKY_SYSTEM,
         &TRADITIONAL_VARIATION,
+        &YATES_VARIATION,
     ],
     lines: &[Line {
         parent: &QUEENS_INDIAN_DEFENSE,
@@ -162,35 +162,35 @@ pub static QUEENS_INDIAN_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod riumin_variation;
-pub use riumin_variation::RIUMIN_VARIATION;
-pub mod opocensky_variation;
-pub use opocensky_variation::OPOCENSKY_VARIATION;
-pub mod spassky_system;
-pub use spassky_system::SPASSKY_SYSTEM;
+pub mod anti_queens_indian_system;
+pub use anti_queens_indian_system::ANTI_QUEENS_INDIAN_SYSTEM;
+pub mod averbakh_variation;
+pub use averbakh_variation::AVERBAKH_VARIATION;
+pub mod buerger_variation;
+pub use buerger_variation::BUERGER_VARIATION;
+pub mod capablanca_variation;
+pub use capablanca_variation::CAPABLANCA_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod euwe_variation;
+pub use euwe_variation::EUWE_VARIATION;
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod kasparov_variation;
+pub use kasparov_variation::KASPAROV_VARIATION;
 pub mod kasparov_petrosian_variation;
 pub use kasparov_petrosian_variation::KASPAROV_PETROSIAN_VARIATION;
 pub mod miles_variation;
 pub use miles_variation::MILES_VARIATION;
-pub mod kasparov_variation;
-pub use kasparov_variation::KASPAROV_VARIATION;
-pub mod averbakh_variation;
-pub use averbakh_variation::AVERBAKH_VARIATION;
-pub mod capablanca_variation;
-pub use capablanca_variation::CAPABLANCA_VARIATION;
-pub mod buerger_variation;
-pub use buerger_variation::BUERGER_VARIATION;
-pub mod yates_variation;
-pub use yates_variation::YATES_VARIATION;
-pub mod anti_queens_indian_system;
-pub use anti_queens_indian_system::ANTI_QUEENS_INDIAN_SYSTEM;
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
+pub mod opocensky_variation;
+pub use opocensky_variation::OPOCENSKY_VARIATION;
 pub mod petrosian_variation;
 pub use petrosian_variation::PETROSIAN_VARIATION;
-pub mod euwe_variation;
-pub use euwe_variation::EUWE_VARIATION;
+pub mod riumin_variation;
+pub use riumin_variation::RIUMIN_VARIATION;
+pub mod spassky_system;
+pub use spassky_system::SPASSKY_SYSTEM;
 pub mod traditional_variation;
 pub use traditional_variation::TRADITIONAL_VARIATION;
+pub mod yates_variation;
+pub use yates_variation::YATES_VARIATION;

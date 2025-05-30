@@ -59,11 +59,11 @@ pub static ENGLISH_DEFENSE: Variation = Variation {
     name: "English Defense",
     parent: None,
     variations: &[
+        &EASTBOURNE_GAMBIT,
         &HARTLAUB_GAMBIT_ACCEPTED,
         &HARTLAUB_GAMBIT_DECLINED,
-        &EASTBOURNE_GAMBIT,
-        &POLI_GAMBIT,
         &PERRIN_VARIATION,
+        &POLI_GAMBIT,
     ],
     lines: &[
         Line {
@@ -196,13 +196,13 @@ pub static ENGLISH_DEFENSE: Variation = Variation {
         },
     ],
 };
+pub mod eastbourne_gambit;
+pub use eastbourne_gambit::EASTBOURNE_GAMBIT;
 pub mod hartlaub_gambit_accepted;
 pub use hartlaub_gambit_accepted::HARTLAUB_GAMBIT_ACCEPTED;
 pub mod hartlaub_gambit_declined;
 pub use hartlaub_gambit_declined::HARTLAUB_GAMBIT_DECLINED;
-pub mod eastbourne_gambit;
-pub use eastbourne_gambit::EASTBOURNE_GAMBIT;
-pub mod poli_gambit;
-pub use poli_gambit::POLI_GAMBIT;
 pub mod perrin_variation;
 pub use perrin_variation::PERRIN_VARIATION;
+pub mod poli_gambit;
+pub use poli_gambit::POLI_GAMBIT;

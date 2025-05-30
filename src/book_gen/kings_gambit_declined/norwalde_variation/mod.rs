@@ -58,7 +58,7 @@ assert_eq!(NORWALDE_VARIATION.original_name(), "King's Gambit Declined: Norwalde
 pub static NORWALDE_VARIATION: Variation = Variation {
     name: "Norwalde Variation",
     parent: Some(&super::KINGS_GAMBIT_DECLINED),
-    variations: &[&SCHUBERT_VARIATION, &BUCKER_GAMBIT],
+    variations: &[&BUCKER_GAMBIT, &SCHUBERT_VARIATION],
     lines: &[Line {
         parent: &NORWALDE_VARIATION,
         code: Code {
@@ -131,7 +131,7 @@ pub static NORWALDE_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod schubert_variation;
-pub use schubert_variation::SCHUBERT_VARIATION;
 pub mod bucker_gambit;
 pub use bucker_gambit::BUCKER_GAMBIT;
+pub mod schubert_variation;
+pub use schubert_variation::SCHUBERT_VARIATION;

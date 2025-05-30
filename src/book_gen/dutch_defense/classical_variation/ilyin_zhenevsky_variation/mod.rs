@@ -59,9 +59,9 @@ pub static ILYIN_ZHENEVSKY_VARIATION: Variation = Variation {
     name: "Ilyin-Zhenevsky Variation",
     parent: Some(&super::CLASSICAL_VARIATION),
     variations: &[
-        &WINTER_VARIATION,
         &ALATORTSEV_LISITSYN_LINE,
         &MODERN_MAIN_LINE,
+        &WINTER_VARIATION,
     ],
     lines: &[Line {
         parent: &ILYIN_ZHENEVSKY_VARIATION,
@@ -193,9 +193,9 @@ pub static ILYIN_ZHENEVSKY_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod winter_variation;
-pub use winter_variation::WINTER_VARIATION;
 pub mod alatortsev_lisitsyn_line;
 pub use alatortsev_lisitsyn_line::ALATORTSEV_LISITSYN_LINE;
 pub mod modern_main_line;
 pub use modern_main_line::MODERN_MAIN_LINE;
+pub mod winter_variation;
+pub use winter_variation::WINTER_VARIATION;

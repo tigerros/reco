@@ -58,7 +58,7 @@ assert_eq!(MAX_LANGE_ATTACK.original_name(), "Italian Game: Scotch Gambit, Max L
 pub static MAX_LANGE_ATTACK: Variation = Variation {
     name: "Max Lange Attack",
     parent: Some(&super::SCOTCH_GAMBIT),
-    variations: &[&SPIELMANN_DEFENSE, &LONG_VARIATION],
+    variations: &[&LONG_VARIATION, &SPIELMANN_DEFENSE],
     lines: &[
         Line {
             parent: &MAX_LANGE_ATTACK,
@@ -296,7 +296,7 @@ pub static MAX_LANGE_ATTACK: Variation = Variation {
         },
     ],
 };
-pub mod spielmann_defense;
-pub use spielmann_defense::SPIELMANN_DEFENSE;
 pub mod long_variation;
 pub use long_variation::LONG_VARIATION;
+pub mod spielmann_defense;
+pub use spielmann_defense::SPIELMANN_DEFENSE;

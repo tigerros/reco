@@ -58,7 +58,7 @@ assert_eq!(KINGS_PAWN_OPENING.original_name(), "King's Pawn Opening");
 pub static KINGS_PAWN_OPENING: Variation = Variation {
     name: "King's Pawn Opening",
     parent: None,
-    variations: &[&VAN_HOOYDOON_GAMBIT, &SPEERS],
+    variations: &[&SPEERS, &VAN_HOOYDOON_GAMBIT],
     lines: &[Line {
         parent: &KINGS_PAWN_OPENING,
         code: Code {
@@ -124,7 +124,7 @@ pub static KINGS_PAWN_OPENING: Variation = Variation {
         },
     }],
 };
-pub mod van_hooydoon_gambit;
-pub use van_hooydoon_gambit::VAN_HOOYDOON_GAMBIT;
 pub mod speers;
 pub use speers::SPEERS;
+pub mod van_hooydoon_gambit;
+pub use van_hooydoon_gambit::VAN_HOOYDOON_GAMBIT;

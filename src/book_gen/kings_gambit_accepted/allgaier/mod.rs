@@ -59,21 +59,21 @@ pub static ALLGAIER: Variation = Variation {
     name: "Allgaier",
     parent: Some(&super::KINGS_GAMBIT_ACCEPTED),
     variations: &[
-        &HORNY_DEFENSE,
+        &BLACKBURNE_GAMBIT,
         &COOK_VARIATION,
+        &HORNY_DEFENSE,
         &SCHLECHTER_DEFENSE,
         &URUSOV_ATTACK,
-        &BLACKBURNE_GAMBIT,
     ],
     lines: &[],
 };
-pub mod horny_defense;
-pub use horny_defense::HORNY_DEFENSE;
+pub mod blackburne_gambit;
+pub use blackburne_gambit::BLACKBURNE_GAMBIT;
 pub mod cook_variation;
 pub use cook_variation::COOK_VARIATION;
+pub mod horny_defense;
+pub use horny_defense::HORNY_DEFENSE;
 pub mod schlechter_defense;
 pub use schlechter_defense::SCHLECHTER_DEFENSE;
 pub mod urusov_attack;
 pub use urusov_attack::URUSOV_ATTACK;
-pub mod blackburne_gambit;
-pub use blackburne_gambit::BLACKBURNE_GAMBIT;

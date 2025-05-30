@@ -59,10 +59,10 @@ pub static BARMEN_DEFENSE: Variation = Variation {
     name: "Barmen Defense",
     parent: Some(&super::ALAPIN_VARIATION),
     variations: &[
-        &MODERN_LINE,
+        &CENTRAL_EXCHANGE,
         &ENDGAME_VARIATION,
         &MILNER_BARRY_ATTACK,
-        &CENTRAL_EXCHANGE,
+        &MODERN_LINE,
     ],
     lines: &[Line {
         parent: &BARMEN_DEFENSE,
@@ -150,11 +150,11 @@ pub static BARMEN_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod modern_line;
-pub use modern_line::MODERN_LINE;
+pub mod central_exchange;
+pub use central_exchange::CENTRAL_EXCHANGE;
 pub mod endgame_variation;
 pub use endgame_variation::ENDGAME_VARIATION;
 pub mod milner_barry_attack;
 pub use milner_barry_attack::MILNER_BARRY_ATTACK;
-pub mod central_exchange;
-pub use central_exchange::CENTRAL_EXCHANGE;
+pub mod modern_line;
+pub use modern_line::MODERN_LINE;

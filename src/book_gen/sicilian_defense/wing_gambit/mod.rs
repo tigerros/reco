@@ -59,14 +59,14 @@ pub static WING_GAMBIT: Variation = Variation {
     name: "Wing Gambit",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &SANTASIERE_VARIATION,
+        &ABRAHAMS_VARIATION,
+        &CARLSBAD_VARIATION,
+        &DEFERRED_VARIATION,
+        &MARIENBAD_VARIATION,
         &MARSHALL_VARIATION,
         &NANU_GAMBIT,
-        &DEFERRED_VARIATION,
         &ROMANIAN_DEFENSE,
-        &MARIENBAD_VARIATION,
-        &CARLSBAD_VARIATION,
-        &ABRAHAMS_VARIATION,
+        &SANTASIERE_VARIATION,
     ],
     lines: &[Line {
         parent: &WING_GAMBIT,
@@ -133,19 +133,19 @@ pub static WING_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod santasiere_variation;
-pub use santasiere_variation::SANTASIERE_VARIATION;
+pub mod abrahams_variation;
+pub use abrahams_variation::ABRAHAMS_VARIATION;
+pub mod carlsbad_variation;
+pub use carlsbad_variation::CARLSBAD_VARIATION;
+pub mod deferred_variation;
+pub use deferred_variation::DEFERRED_VARIATION;
+pub mod marienbad_variation;
+pub use marienbad_variation::MARIENBAD_VARIATION;
 pub mod marshall_variation;
 pub use marshall_variation::MARSHALL_VARIATION;
 pub mod nanu_gambit;
 pub use nanu_gambit::NANU_GAMBIT;
-pub mod deferred_variation;
-pub use deferred_variation::DEFERRED_VARIATION;
 pub mod romanian_defense;
 pub use romanian_defense::ROMANIAN_DEFENSE;
-pub mod marienbad_variation;
-pub use marienbad_variation::MARIENBAD_VARIATION;
-pub mod carlsbad_variation;
-pub use carlsbad_variation::CARLSBAD_VARIATION;
-pub mod abrahams_variation;
-pub use abrahams_variation::ABRAHAMS_VARIATION;
+pub mod santasiere_variation;
+pub use santasiere_variation::SANTASIERE_VARIATION;

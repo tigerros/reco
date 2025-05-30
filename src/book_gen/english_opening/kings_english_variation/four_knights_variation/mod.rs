@@ -59,11 +59,11 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
     name: "Four Knights Variation",
     parent: Some(&super::KINGS_ENGLISH_VARIATION),
     variations: &[
-        &FLEXIBLE_LINE,
-        &QUIET_LINE,
-        &KORCHNOI_LINE,
-        &FIANCHETTO_LINE,
         &BRADLEY_BEACH_VARIATION,
+        &FIANCHETTO_LINE,
+        &FLEXIBLE_LINE,
+        &KORCHNOI_LINE,
+        &QUIET_LINE,
     ],
     lines: &[
         Line {
@@ -308,13 +308,13 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod flexible_line;
-pub use flexible_line::FLEXIBLE_LINE;
-pub mod quiet_line;
-pub use quiet_line::QUIET_LINE;
-pub mod korchnoi_line;
-pub use korchnoi_line::KORCHNOI_LINE;
-pub mod fianchetto_line;
-pub use fianchetto_line::FIANCHETTO_LINE;
 pub mod bradley_beach_variation;
 pub use bradley_beach_variation::BRADLEY_BEACH_VARIATION;
+pub mod fianchetto_line;
+pub use fianchetto_line::FIANCHETTO_LINE;
+pub mod flexible_line;
+pub use flexible_line::FLEXIBLE_LINE;
+pub mod korchnoi_line;
+pub use korchnoi_line::KORCHNOI_LINE;
+pub mod quiet_line;
+pub use quiet_line::QUIET_LINE;

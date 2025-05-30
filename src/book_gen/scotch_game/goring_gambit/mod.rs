@@ -58,7 +58,7 @@ assert_eq!(GORING_GAMBIT.original_name(), "Scotch Game: Göring Gambit");
 pub static GORING_GAMBIT: Variation = Variation {
     name: "Göring Gambit",
     parent: Some(&super::SCOTCH_GAME),
-    variations: &[&MAIN_LINE, &DOUBLE_PAWN_SACRIFICE, &BARDELEBEN_VARIATION],
+    variations: &[&BARDELEBEN_VARIATION, &DOUBLE_PAWN_SACRIFICE, &MAIN_LINE],
     lines: &[Line {
         parent: &GORING_GAMBIT,
         code: Code {
@@ -152,9 +152,9 @@ pub static GORING_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod double_pawn_sacrifice;
-pub use double_pawn_sacrifice::DOUBLE_PAWN_SACRIFICE;
 pub mod bardeleben_variation;
 pub use bardeleben_variation::BARDELEBEN_VARIATION;
+pub mod double_pawn_sacrifice;
+pub use double_pawn_sacrifice::DOUBLE_PAWN_SACRIFICE;
+pub mod main_line;
+pub use main_line::MAIN_LINE;

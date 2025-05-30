@@ -37,15 +37,14 @@ fn main() {
     println!(
         "{:?}",
         reco_opening
-            .1
-            .moves
+            .moves()
             .iter()
             .map(|m| m.to_string())
             .collect::<Vec<_>>()
             .join(" ")
     );
 
-    let reco_opening = reco_opening.0.original_name();
+    let reco_opening = reco_opening.parent().original_name();
 
     assert_eq!(
         pgn.other_headers[b"Opening".as_slice()].decode_utf8_lossy(),

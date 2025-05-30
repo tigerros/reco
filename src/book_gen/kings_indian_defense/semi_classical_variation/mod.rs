@@ -59,9 +59,9 @@ pub static SEMI_CLASSICAL_VARIATION: Variation = Variation {
     name: "Semi-Classical Variation",
     parent: Some(&super::KINGS_INDIAN_DEFENSE),
     variations: &[
-        &HOLLYWOOD_VARIATION,
-        &EXCHANGE_VARIATION,
         &BENONI_VARIATION,
+        &EXCHANGE_VARIATION,
+        &HOLLYWOOD_VARIATION,
         &QUEENSIDE_STORM_LINE,
     ],
     lines: &[Line {
@@ -179,11 +179,11 @@ pub static SEMI_CLASSICAL_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod hollywood_variation;
-pub use hollywood_variation::HOLLYWOOD_VARIATION;
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod benoni_variation;
 pub use benoni_variation::BENONI_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod hollywood_variation;
+pub use hollywood_variation::HOLLYWOOD_VARIATION;
 pub mod queenside_storm_line;
 pub use queenside_storm_line::QUEENSIDE_STORM_LINE;

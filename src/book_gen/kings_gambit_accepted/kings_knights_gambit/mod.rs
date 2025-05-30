@@ -64,7 +64,7 @@ pub static KINGS_KNIGHTS_GAMBIT: Variation = Variation {
             parent: &KINGS_KNIGHTS_GAMBIT,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<39>(),
+                category: Category::new_static::<34>(),
             },
             moves: &[
                 Normal {
@@ -109,18 +109,11 @@ pub static KINGS_KNIGHTS_GAMBIT: Variation = Variation {
                     to: G5,
                     promotion: None,
                 },
-                Normal {
-                    role: Pawn,
-                    from: H2,
-                    capture: None,
-                    to: H4,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(49258398755081984),
+                        pawn: Bitboard(49258396607631104),
                         knight: Bitboard(4755801206505340930),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
@@ -129,12 +122,12 @@ pub static KINGS_KNIGHTS_GAMBIT: Variation = Variation {
                     },
                     ByColor {
                         black: Bitboard(18423944876010766336),
-                        white: Bitboard(2418036671),
+                        white: Bitboard(270585791),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
@@ -326,7 +319,7 @@ pub static KINGS_KNIGHTS_GAMBIT: Variation = Variation {
             parent: &KINGS_KNIGHTS_GAMBIT,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<34>(),
+                category: Category::new_static::<39>(),
             },
             moves: &[
                 Normal {
@@ -371,11 +364,18 @@ pub static KINGS_KNIGHTS_GAMBIT: Variation = Variation {
                     to: G5,
                     promotion: None,
                 },
+                Normal {
+                    role: Pawn,
+                    from: H2,
+                    capture: None,
+                    to: H4,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(49258396607631104),
+                        pawn: Bitboard(49258398755081984),
                         knight: Bitboard(4755801206505340930),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
@@ -384,12 +384,12 @@ pub static KINGS_KNIGHTS_GAMBIT: Variation = Variation {
                     },
                     ByColor {
                         black: Bitboard(18423944876010766336),
-                        white: Bitboard(270585791),
+                        white: Bitboard(2418036671),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
+                turn: Black,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,

@@ -59,11 +59,11 @@ pub static CAMBRIDGE_SPRINGS_DEFENSE: Variation = Variation {
     name: "Cambridge Springs Defense",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
-        &RUBINSTEIN_VARIATION,
-        &YUGOSLAV_VARIATION,
         &ARGENTINE_VARIATION,
         &BOGOLJUBOW_VARIATION,
         &CAPABLANCA_VARIATION,
+        &RUBINSTEIN_VARIATION,
+        &YUGOSLAV_VARIATION,
     ],
     lines: &[
         Line {
@@ -329,13 +329,13 @@ pub static CAMBRIDGE_SPRINGS_DEFENSE: Variation = Variation {
         },
     ],
 };
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-pub mod yugoslav_variation;
-pub use yugoslav_variation::YUGOSLAV_VARIATION;
 pub mod argentine_variation;
 pub use argentine_variation::ARGENTINE_VARIATION;
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
 pub mod capablanca_variation;
 pub use capablanca_variation::CAPABLANCA_VARIATION;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod yugoslav_variation;
+pub use yugoslav_variation::YUGOSLAV_VARIATION;

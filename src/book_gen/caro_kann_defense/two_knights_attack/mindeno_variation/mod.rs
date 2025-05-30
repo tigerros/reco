@@ -58,7 +58,7 @@ assert_eq!(MINDENO_VARIATION.original_name(), "Caro-Kann Defense: Two Knights At
 pub static MINDENO_VARIATION: Variation = Variation {
     name: "Mindeno Variation",
     parent: Some(&super::TWO_KNIGHTS_ATTACK),
-    variations: &[&RETREAT_LINE, &EXCHANGE_LINE],
+    variations: &[&EXCHANGE_LINE, &RETREAT_LINE],
     lines: &[Line {
         parent: &MINDENO_VARIATION,
         code: Code {
@@ -145,7 +145,7 @@ pub static MINDENO_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod retreat_line;
-pub use retreat_line::RETREAT_LINE;
 pub mod exchange_line;
 pub use exchange_line::EXCHANGE_LINE;
+pub mod retreat_line;
+pub use retreat_line::RETREAT_LINE;

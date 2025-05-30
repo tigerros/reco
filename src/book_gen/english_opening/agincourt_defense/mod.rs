@@ -59,14 +59,14 @@ pub static AGINCOURT_DEFENSE: Variation = Variation {
     name: "Agincourt Defense",
     parent: Some(&super::ENGLISH_OPENING),
     variations: &[
-        &TARRASCH_DEFENSE,
-        &WIMPY_SYSTEM,
-        &KURAJICA_DEFENSE,
-        &KERES_DEFENSE,
+        &BOGOLJUBOW_DEFENSE,
         &CATALAN_DEFENSE,
         &CATALAN_DEFENSE_ACCEPTED,
-        &BOGOLJUBOW_DEFENSE,
+        &KERES_DEFENSE,
+        &KURAJICA_DEFENSE,
         &NEO_CATALAN_DECLINED,
+        &TARRASCH_DEFENSE,
+        &WIMPY_SYSTEM,
     ],
     lines: &[
         Line {
@@ -263,19 +263,19 @@ pub static AGINCOURT_DEFENSE: Variation = Variation {
         },
     ],
 };
-pub mod tarrasch_defense;
-pub use tarrasch_defense::TARRASCH_DEFENSE;
-pub mod wimpy_system;
-pub use wimpy_system::WIMPY_SYSTEM;
-pub mod kurajica_defense;
-pub use kurajica_defense::KURAJICA_DEFENSE;
-pub mod keres_defense;
-pub use keres_defense::KERES_DEFENSE;
+pub mod bogoljubow_defense;
+pub use bogoljubow_defense::BOGOLJUBOW_DEFENSE;
 pub mod catalan_defense;
 pub use catalan_defense::CATALAN_DEFENSE;
 pub mod catalan_defense_accepted;
 pub use catalan_defense_accepted::CATALAN_DEFENSE_ACCEPTED;
-pub mod bogoljubow_defense;
-pub use bogoljubow_defense::BOGOLJUBOW_DEFENSE;
+pub mod keres_defense;
+pub use keres_defense::KERES_DEFENSE;
+pub mod kurajica_defense;
+pub use kurajica_defense::KURAJICA_DEFENSE;
 pub mod neo_catalan_declined;
 pub use neo_catalan_declined::NEO_CATALAN_DECLINED;
+pub mod tarrasch_defense;
+pub use tarrasch_defense::TARRASCH_DEFENSE;
+pub mod wimpy_system;
+pub use wimpy_system::WIMPY_SYSTEM;

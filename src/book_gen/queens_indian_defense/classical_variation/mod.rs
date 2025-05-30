@@ -59,9 +59,9 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
     name: "Classical Variation",
     parent: Some(&super::QUEENS_INDIAN_DEFENSE),
     variations: &[
+        &POLUGAEVSKY_GAMBIT,
         &TAIMANOV_GAMBIT,
         &TIVIAKOV_DEFENSE,
-        &POLUGAEVSKY_GAMBIT,
         &TRADITIONAL_VARIATION,
     ],
     lines: &[Line {
@@ -179,11 +179,11 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod polugaevsky_gambit;
+pub use polugaevsky_gambit::POLUGAEVSKY_GAMBIT;
 pub mod taimanov_gambit;
 pub use taimanov_gambit::TAIMANOV_GAMBIT;
 pub mod tiviakov_defense;
 pub use tiviakov_defense::TIVIAKOV_DEFENSE;
-pub mod polugaevsky_gambit;
-pub use polugaevsky_gambit::POLUGAEVSKY_GAMBIT;
 pub mod traditional_variation;
 pub use traditional_variation::TRADITIONAL_VARIATION;

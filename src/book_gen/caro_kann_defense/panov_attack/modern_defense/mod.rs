@@ -59,10 +59,10 @@ pub static MODERN_DEFENSE: Variation = Variation {
     name: "Modern Defense",
     parent: Some(&super::PANOV_ATTACK),
     variations: &[
-        &MIESES_LINE,
         &CARLSBAD_LINE,
-        &REIFIR_SPIELMANN_LINE,
         &CZERNIAK_LINE,
+        &MIESES_LINE,
+        &REIFIR_SPIELMANN_LINE,
     ],
     lines: &[Line {
         parent: &MODERN_DEFENSE,
@@ -178,11 +178,11 @@ pub static MODERN_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod mieses_line;
-pub use mieses_line::MIESES_LINE;
 pub mod carlsbad_line;
 pub use carlsbad_line::CARLSBAD_LINE;
-pub mod reifir_spielmann_line;
-pub use reifir_spielmann_line::REIFIR_SPIELMANN_LINE;
 pub mod czerniak_line;
 pub use czerniak_line::CZERNIAK_LINE;
+pub mod mieses_line;
+pub use mieses_line::MIESES_LINE;
+pub mod reifir_spielmann_line;
+pub use reifir_spielmann_line::REIFIR_SPIELMANN_LINE;

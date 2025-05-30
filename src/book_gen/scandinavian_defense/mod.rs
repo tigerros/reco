@@ -59,29 +59,29 @@ pub static SCANDINAVIAN_DEFENSE: Variation = Variation {
     name: "Scandinavian Defense",
     parent: None,
     variations: &[
-        &SCHILLER_PYTEL_VARIATION,
-        &GRUNFELD_VARIATION,
-        &KIEL_VARIATION,
-        &MARSHALL_VARIATION,
-        &PANOV_TRANSFER,
-        &KLOOSTERBOER_GAMBIT,
+        &ANDERSSEN_COUNTERATTACK,
+        &BLACKBURNE_GAMBIT,
         &BLACKBURNE_KLOOSTERBOER_GAMBIT,
         &BOEHNKE_GAMBIT,
-        &PORTUGUESE_GAMBIT,
-        &GUBINSKY_MELTS_DEFENSE,
-        &MIESES_KOTROC_VARIATION,
         &BRONSTEIN_VARIATION,
-        &RICHTER_VARIATION,
-        &VALENCIAN_VARIATION,
-        &ZILBERMINTS_GAMBIT,
-        &ANDERSSEN_COUNTERATTACK,
+        &CLASSICAL_VARIATION,
+        &GRUNFELD_VARIATION,
+        &GUBINSKY_MELTS_DEFENSE,
+        &ICELANDIC_PALME_GAMBIT,
+        &KIEL_VARIATION,
+        &KLOOSTERBOER_GAMBIT,
+        &KADAS_GAMBIT,
         &LASKER_VARIATION,
         &MAIN_LINE,
+        &MARSHALL_VARIATION,
+        &MIESES_KOTROC_VARIATION,
         &MODERN_VARIATION,
-        &BLACKBURNE_GAMBIT,
-        &ICELANDIC_PALME_GAMBIT,
-        &KADAS_GAMBIT,
-        &CLASSICAL_VARIATION,
+        &PANOV_TRANSFER,
+        &PORTUGUESE_GAMBIT,
+        &RICHTER_VARIATION,
+        &SCHILLER_PYTEL_VARIATION,
+        &VALENCIAN_VARIATION,
+        &ZILBERMINTS_GAMBIT,
     ],
     lines: &[
         Line {
@@ -207,49 +207,49 @@ pub static SCANDINAVIAN_DEFENSE: Variation = Variation {
         },
     ],
 };
-pub mod schiller_pytel_variation;
-pub use schiller_pytel_variation::SCHILLER_PYTEL_VARIATION;
-pub mod grunfeld_variation;
-pub use grunfeld_variation::GRUNFELD_VARIATION;
-pub mod kiel_variation;
-pub use kiel_variation::KIEL_VARIATION;
-pub mod marshall_variation;
-pub use marshall_variation::MARSHALL_VARIATION;
-pub mod panov_transfer;
-pub use panov_transfer::PANOV_TRANSFER;
-pub mod kloosterboer_gambit;
-pub use kloosterboer_gambit::KLOOSTERBOER_GAMBIT;
+pub mod anderssen_counterattack;
+pub use anderssen_counterattack::ANDERSSEN_COUNTERATTACK;
+pub mod blackburne_gambit;
+pub use blackburne_gambit::BLACKBURNE_GAMBIT;
 pub mod blackburne_kloosterboer_gambit;
 pub use blackburne_kloosterboer_gambit::BLACKBURNE_KLOOSTERBOER_GAMBIT;
 pub mod boehnke_gambit;
 pub use boehnke_gambit::BOEHNKE_GAMBIT;
-pub mod portuguese_gambit;
-pub use portuguese_gambit::PORTUGUESE_GAMBIT;
-pub mod gubinsky_melts_defense;
-pub use gubinsky_melts_defense::GUBINSKY_MELTS_DEFENSE;
-pub mod mieses_kotroc_variation;
-pub use mieses_kotroc_variation::MIESES_KOTROC_VARIATION;
 pub mod bronstein_variation;
 pub use bronstein_variation::BRONSTEIN_VARIATION;
-pub mod richter_variation;
-pub use richter_variation::RICHTER_VARIATION;
-pub mod valencian_variation;
-pub use valencian_variation::VALENCIAN_VARIATION;
-pub mod zilbermints_gambit;
-pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
-pub mod anderssen_counterattack;
-pub use anderssen_counterattack::ANDERSSEN_COUNTERATTACK;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod grunfeld_variation;
+pub use grunfeld_variation::GRUNFELD_VARIATION;
+pub mod gubinsky_melts_defense;
+pub use gubinsky_melts_defense::GUBINSKY_MELTS_DEFENSE;
+pub mod icelandic_palme_gambit;
+pub use icelandic_palme_gambit::ICELANDIC_PALME_GAMBIT;
+pub mod kiel_variation;
+pub use kiel_variation::KIEL_VARIATION;
+pub mod kloosterboer_gambit;
+pub use kloosterboer_gambit::KLOOSTERBOER_GAMBIT;
+pub mod kadas_gambit;
+pub use kadas_gambit::KADAS_GAMBIT;
 pub mod lasker_variation;
 pub use lasker_variation::LASKER_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod marshall_variation;
+pub use marshall_variation::MARSHALL_VARIATION;
+pub mod mieses_kotroc_variation;
+pub use mieses_kotroc_variation::MIESES_KOTROC_VARIATION;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
-pub mod blackburne_gambit;
-pub use blackburne_gambit::BLACKBURNE_GAMBIT;
-pub mod icelandic_palme_gambit;
-pub use icelandic_palme_gambit::ICELANDIC_PALME_GAMBIT;
-pub mod kadas_gambit;
-pub use kadas_gambit::KADAS_GAMBIT;
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
+pub mod panov_transfer;
+pub use panov_transfer::PANOV_TRANSFER;
+pub mod portuguese_gambit;
+pub use portuguese_gambit::PORTUGUESE_GAMBIT;
+pub mod richter_variation;
+pub use richter_variation::RICHTER_VARIATION;
+pub mod schiller_pytel_variation;
+pub use schiller_pytel_variation::SCHILLER_PYTEL_VARIATION;
+pub mod valencian_variation;
+pub use valencian_variation::VALENCIAN_VARIATION;
+pub mod zilbermints_gambit;
+pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;

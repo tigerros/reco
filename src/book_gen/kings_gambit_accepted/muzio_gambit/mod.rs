@@ -59,21 +59,21 @@ pub static MUZIO_GAMBIT: Variation = Variation {
     name: "Muzio Gambit",
     parent: Some(&super::KINGS_GAMBIT_ACCEPTED),
     variations: &[
+        &BRENTANO_DEFENSE,
+        &HOLLOWAY_DEFENSE,
+        &KLING_AND_HORWITZ_COUNTERATTACK,
         &SARRATT_DEFENSE,
         &WILD_MUZIO_GAMBIT,
-        &HOLLOWAY_DEFENSE,
-        &BRENTANO_DEFENSE,
-        &KLING_AND_HORWITZ_COUNTERATTACK,
     ],
     lines: &[],
 };
+pub mod brentano_defense;
+pub use brentano_defense::BRENTANO_DEFENSE;
+pub mod holloway_defense;
+pub use holloway_defense::HOLLOWAY_DEFENSE;
+pub mod kling_and_horwitz_counterattack;
+pub use kling_and_horwitz_counterattack::KLING_AND_HORWITZ_COUNTERATTACK;
 pub mod sarratt_defense;
 pub use sarratt_defense::SARRATT_DEFENSE;
 pub mod wild_muzio_gambit;
 pub use wild_muzio_gambit::WILD_MUZIO_GAMBIT;
-pub mod holloway_defense;
-pub use holloway_defense::HOLLOWAY_DEFENSE;
-pub mod brentano_defense;
-pub use brentano_defense::BRENTANO_DEFENSE;
-pub mod kling_and_horwitz_counterattack;
-pub use kling_and_horwitz_counterattack::KLING_AND_HORWITZ_COUNTERATTACK;

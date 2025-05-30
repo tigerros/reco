@@ -59,23 +59,23 @@ pub static GRUNFELD_DEFENSE: Variation = Variation {
     name: "Grünfeld Defense",
     parent: None,
     variations: &[
-        &RUSSIAN_VARIATION,
-        &LUTIKOV_VARIATION,
-        &THREE_KNIGHTS_VARIATION,
-        &OPOCENSKY_VARIATION,
-        &BRINCKMANN_ATTACK,
-        &FLOHR_DEFENSE,
         &BOTVINNIK_VARIATION,
-        &GIBBON_GAMBIT,
-        &STOCKHOLM_VARIATION,
-        &MAKOGONOV_VARIATION,
-        &SMYSLOV_DEFENSE,
-        &PACHMAN_VARIATION,
-        &FLOHR_VARIATION,
+        &BRINCKMANN_ATTACK,
         &COUNTERTHRUST_VARIATION,
-        &ZAITSEV_GAMBIT,
         &EXCHANGE_VARIATION,
+        &FLOHR_DEFENSE,
+        &FLOHR_VARIATION,
+        &GIBBON_GAMBIT,
         &LUNDIN_VARIATION,
+        &LUTIKOV_VARIATION,
+        &MAKOGONOV_VARIATION,
+        &OPOCENSKY_VARIATION,
+        &PACHMAN_VARIATION,
+        &RUSSIAN_VARIATION,
+        &SMYSLOV_DEFENSE,
+        &STOCKHOLM_VARIATION,
+        &THREE_KNIGHTS_VARIATION,
+        &ZAITSEV_GAMBIT,
     ],
     lines: &[Line {
         parent: &GRUNFELD_DEFENSE,
@@ -163,37 +163,37 @@ pub static GRUNFELD_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod russian_variation;
-pub use russian_variation::RUSSIAN_VARIATION;
-pub mod lutikov_variation;
-pub use lutikov_variation::LUTIKOV_VARIATION;
-pub mod three_knights_variation;
-pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
-pub mod opocensky_variation;
-pub use opocensky_variation::OPOCENSKY_VARIATION;
-pub mod brinckmann_attack;
-pub use brinckmann_attack::BRINCKMANN_ATTACK;
-pub mod flohr_defense;
-pub use flohr_defense::FLOHR_DEFENSE;
 pub mod botvinnik_variation;
 pub use botvinnik_variation::BOTVINNIK_VARIATION;
-pub mod gibbon_gambit;
-pub use gibbon_gambit::GIBBON_GAMBIT;
-pub mod stockholm_variation;
-pub use stockholm_variation::STOCKHOLM_VARIATION;
-pub mod makogonov_variation;
-pub use makogonov_variation::MAKOGONOV_VARIATION;
-pub mod smyslov_defense;
-pub use smyslov_defense::SMYSLOV_DEFENSE;
-pub mod pachman_variation;
-pub use pachman_variation::PACHMAN_VARIATION;
-pub mod flohr_variation;
-pub use flohr_variation::FLOHR_VARIATION;
+pub mod brinckmann_attack;
+pub use brinckmann_attack::BRINCKMANN_ATTACK;
 pub mod counterthrust_variation;
 pub use counterthrust_variation::COUNTERTHRUST_VARIATION;
-pub mod zaitsev_gambit;
-pub use zaitsev_gambit::ZAITSEV_GAMBIT;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod flohr_defense;
+pub use flohr_defense::FLOHR_DEFENSE;
+pub mod flohr_variation;
+pub use flohr_variation::FLOHR_VARIATION;
+pub mod gibbon_gambit;
+pub use gibbon_gambit::GIBBON_GAMBIT;
 pub mod lundin_variation;
 pub use lundin_variation::LUNDIN_VARIATION;
+pub mod lutikov_variation;
+pub use lutikov_variation::LUTIKOV_VARIATION;
+pub mod makogonov_variation;
+pub use makogonov_variation::MAKOGONOV_VARIATION;
+pub mod opocensky_variation;
+pub use opocensky_variation::OPOCENSKY_VARIATION;
+pub mod pachman_variation;
+pub use pachman_variation::PACHMAN_VARIATION;
+pub mod russian_variation;
+pub use russian_variation::RUSSIAN_VARIATION;
+pub mod smyslov_defense;
+pub use smyslov_defense::SMYSLOV_DEFENSE;
+pub mod stockholm_variation;
+pub use stockholm_variation::STOCKHOLM_VARIATION;
+pub mod three_knights_variation;
+pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
+pub mod zaitsev_gambit;
+pub use zaitsev_gambit::ZAITSEV_GAMBIT;

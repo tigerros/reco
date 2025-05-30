@@ -61,8 +61,8 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
     variations: &[
         &EUWE_ATTACK,
         &ROTLEWI_COUNTERGAMBIT,
-        &WALTHOFFEN_ATTACK,
         &RUBINSTEIN_COUNTERGAMBIT,
+        &WALTHOFFEN_ATTACK,
     ],
     lines: &[
         Line {
@@ -234,7 +234,7 @@ pub mod euwe_attack;
 pub use euwe_attack::EUWE_ATTACK;
 pub mod rotlewi_countergambit;
 pub use rotlewi_countergambit::ROTLEWI_COUNTERGAMBIT;
-pub mod walthoffen_attack;
-pub use walthoffen_attack::WALTHOFFEN_ATTACK;
 pub mod rubinstein_countergambit;
 pub use rubinstein_countergambit::RUBINSTEIN_COUNTERGAMBIT;
+pub mod walthoffen_attack;
+pub use walthoffen_attack::WALTHOFFEN_ATTACK;

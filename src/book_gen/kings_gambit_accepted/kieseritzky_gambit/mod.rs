@@ -59,18 +59,18 @@ pub static KIESERITZKY_GAMBIT: Variation = Variation {
     name: "Kieseritzky Gambit",
     parent: Some(&super::KINGS_GAMBIT_ACCEPTED),
     variations: &[
-        &NEUMANN_DEFENSE,
         &ANDERSSEN_DEFENSE,
-        &BERLIN_DEFENSE,
-        &KOLISCH_DEFENSE,
-        &PAULSEN_DEFENSE_DEFERRED,
-        &COTTER_GAMBIT,
-        &ROSENTHAL_DEFENSE,
         &ANDERSSEN_CORDEL_GAMBIT,
+        &BERLIN_DEFENSE,
         &BRENTANO_DEFENSE,
+        &COTTER_GAMBIT,
+        &KOLISCH_DEFENSE,
         &LONG_WHIP,
-        &RICE_GAMBIT,
+        &NEUMANN_DEFENSE,
         &PAULSEN_DEFENSE,
+        &PAULSEN_DEFENSE_DEFERRED,
+        &RICE_GAMBIT,
+        &ROSENTHAL_DEFENSE,
     ],
     lines: &[Line {
         parent: &KIESERITZKY_GAMBIT,
@@ -179,27 +179,27 @@ pub static KIESERITZKY_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod neumann_defense;
-pub use neumann_defense::NEUMANN_DEFENSE;
 pub mod anderssen_defense;
 pub use anderssen_defense::ANDERSSEN_DEFENSE;
-pub mod berlin_defense;
-pub use berlin_defense::BERLIN_DEFENSE;
-pub mod kolisch_defense;
-pub use kolisch_defense::KOLISCH_DEFENSE;
-pub mod paulsen_defense_deferred;
-pub use paulsen_defense_deferred::PAULSEN_DEFENSE_DEFERRED;
-pub mod cotter_gambit;
-pub use cotter_gambit::COTTER_GAMBIT;
-pub mod rosenthal_defense;
-pub use rosenthal_defense::ROSENTHAL_DEFENSE;
 pub mod anderssen_cordel_gambit;
 pub use anderssen_cordel_gambit::ANDERSSEN_CORDEL_GAMBIT;
+pub mod berlin_defense;
+pub use berlin_defense::BERLIN_DEFENSE;
 pub mod brentano_defense;
 pub use brentano_defense::BRENTANO_DEFENSE;
+pub mod cotter_gambit;
+pub use cotter_gambit::COTTER_GAMBIT;
+pub mod kolisch_defense;
+pub use kolisch_defense::KOLISCH_DEFENSE;
 pub mod long_whip;
 pub use long_whip::LONG_WHIP;
-pub mod rice_gambit;
-pub use rice_gambit::RICE_GAMBIT;
+pub mod neumann_defense;
+pub use neumann_defense::NEUMANN_DEFENSE;
 pub mod paulsen_defense;
 pub use paulsen_defense::PAULSEN_DEFENSE;
+pub mod paulsen_defense_deferred;
+pub use paulsen_defense_deferred::PAULSEN_DEFENSE_DEFERRED;
+pub mod rice_gambit;
+pub use rice_gambit::RICE_GAMBIT;
+pub mod rosenthal_defense;
+pub use rosenthal_defense::ROSENTHAL_DEFENSE;

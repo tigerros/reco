@@ -60,23 +60,23 @@ pub static CENTRAL: Variation = Variation {
     parent: Some(&super::PTERODACTYL_DEFENSE),
     variations: &[
         &ANHANGUERA,
-        &BENONI_QUETZALCOATLUS,
-        &BENONI_PTERODACTYL,
         &BENONI_BEEFEATER_PTERODACTYL,
-        &QUETZALCOATLUS_GAMBIT,
+        &BENONI_PTERODACTYL,
+        &BENONI_QUETZALCOATLUS,
         &BOGOLUBOVIA,
+        &QUETZALCOATLUS_GAMBIT,
     ],
     lines: &[],
 };
 pub mod anhanguera;
 pub use anhanguera::ANHANGUERA;
-pub mod benoni_quetzalcoatlus;
-pub use benoni_quetzalcoatlus::BENONI_QUETZALCOATLUS;
-pub mod benoni_pterodactyl;
-pub use benoni_pterodactyl::BENONI_PTERODACTYL;
 pub mod benoni_beefeater_pterodactyl;
 pub use benoni_beefeater_pterodactyl::BENONI_BEEFEATER_PTERODACTYL;
-pub mod quetzalcoatlus_gambit;
-pub use quetzalcoatlus_gambit::QUETZALCOATLUS_GAMBIT;
+pub mod benoni_pterodactyl;
+pub use benoni_pterodactyl::BENONI_PTERODACTYL;
+pub mod benoni_quetzalcoatlus;
+pub use benoni_quetzalcoatlus::BENONI_QUETZALCOATLUS;
 pub mod bogolubovia;
 pub use bogolubovia::BOGOLUBOVIA;
+pub mod quetzalcoatlus_gambit;
+pub use quetzalcoatlus_gambit::QUETZALCOATLUS_GAMBIT;

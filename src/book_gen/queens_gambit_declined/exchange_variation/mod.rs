@@ -60,8 +60,8 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
         &CHAMELEON_VARIATION,
-        &RESHEVSKY_VARIATION,
         &POSITIONAL_VARIATION,
+        &RESHEVSKY_VARIATION,
         &SAMISCH_VARIATION,
     ],
     lines: &[Line {
@@ -159,9 +159,9 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
 };
 pub mod chameleon_variation;
 pub use chameleon_variation::CHAMELEON_VARIATION;
-pub mod reshevsky_variation;
-pub use reshevsky_variation::RESHEVSKY_VARIATION;
 pub mod positional_variation;
 pub use positional_variation::POSITIONAL_VARIATION;
+pub mod reshevsky_variation;
+pub use reshevsky_variation::RESHEVSKY_VARIATION;
 pub mod samisch_variation;
 pub use samisch_variation::SAMISCH_VARIATION;

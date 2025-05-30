@@ -58,7 +58,7 @@ assert_eq!(RUBINSTEIN_OPENING.original_name(), "Rubinstein Opening");
 pub static RUBINSTEIN_OPENING: Variation = Variation {
     name: "Rubinstein Opening",
     parent: None,
-    variations: &[&CLASSICAL_DEFENSE, &SEMI_SLAV_DEFENSE, &BOGOLJUBOW_DEFENSE],
+    variations: &[&BOGOLJUBOW_DEFENSE, &CLASSICAL_DEFENSE, &SEMI_SLAV_DEFENSE],
     lines: &[Line {
         parent: &RUBINSTEIN_OPENING,
         code: Code {
@@ -166,9 +166,9 @@ pub static RUBINSTEIN_OPENING: Variation = Variation {
         },
     }],
 };
+pub mod bogoljubow_defense;
+pub use bogoljubow_defense::BOGOLJUBOW_DEFENSE;
 pub mod classical_defense;
 pub use classical_defense::CLASSICAL_DEFENSE;
 pub mod semi_slav_defense;
 pub use semi_slav_defense::SEMI_SLAV_DEFENSE;
-pub mod bogoljubow_defense;
-pub use bogoljubow_defense::BOGOLJUBOW_DEFENSE;

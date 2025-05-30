@@ -58,7 +58,7 @@ assert_eq!(JANOWSKI_VARIATION.original_name(), "Old Indian Defense: Janowski Var
 pub static JANOWSKI_VARIATION: Variation = Variation {
     name: "Janowski Variation",
     parent: Some(&super::OLD_INDIAN_DEFENSE),
-    variations: &[&FIANCHETTO_VARIATION, &MAIN_LINE, &GRINBERG_GAMBIT],
+    variations: &[&FIANCHETTO_VARIATION, &GRINBERG_GAMBIT, &MAIN_LINE],
     lines: &[Line {
         parent: &JANOWSKI_VARIATION,
         code: Code {
@@ -147,7 +147,7 @@ pub static JANOWSKI_VARIATION: Variation = Variation {
 };
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod grinberg_gambit;
 pub use grinberg_gambit::GRINBERG_GAMBIT;
+pub mod main_line;
+pub use main_line::MAIN_LINE;

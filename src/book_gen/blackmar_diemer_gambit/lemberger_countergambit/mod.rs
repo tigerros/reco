@@ -59,11 +59,11 @@ pub static LEMBERGER_COUNTERGAMBIT: Variation = Variation {
     name: "Lemberger Countergambit",
     parent: Some(&super::BLACKMAR_DIEMER_GAMBIT),
     variations: &[
-        &SOLLER_ATTACK,
         &ENDGAME_VARIATION,
         &LANGE_GAMBIT,
         &RASMUSSEN_ATTACK,
         &SNEIDERS_ATTACK,
+        &SOLLER_ATTACK,
     ],
     lines: &[Line {
         parent: &LEMBERGER_COUNTERGAMBIT,
@@ -151,8 +151,6 @@ pub static LEMBERGER_COUNTERGAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod soller_attack;
-pub use soller_attack::SOLLER_ATTACK;
 pub mod endgame_variation;
 pub use endgame_variation::ENDGAME_VARIATION;
 pub mod lange_gambit;
@@ -161,3 +159,5 @@ pub mod rasmussen_attack;
 pub use rasmussen_attack::RASMUSSEN_ATTACK;
 pub mod sneiders_attack;
 pub use sneiders_attack::SNEIDERS_ATTACK;
+pub mod soller_attack;
+pub use soller_attack::SOLLER_ATTACK;

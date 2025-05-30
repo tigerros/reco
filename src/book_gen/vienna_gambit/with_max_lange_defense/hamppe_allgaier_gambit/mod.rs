@@ -58,7 +58,7 @@ assert_eq!(HAMPPE_ALLGAIER_GAMBIT.original_name(), "Vienna Gambit: with Max Lang
 pub static HAMPPE_ALLGAIER_GAMBIT: Variation = Variation {
     name: "Hamppe-Allgaier Gambit",
     parent: Some(&super::WITH_MAX_LANGE_DEFENSE),
-    variations: &[&THOROLD_VARIATION, &ALAPIN_VARIATION],
+    variations: &[&ALAPIN_VARIATION, &THOROLD_VARIATION],
     lines: &[Line {
         parent: &HAMPPE_ALLGAIER_GAMBIT,
         code: Code {
@@ -180,7 +180,7 @@ pub static HAMPPE_ALLGAIER_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod thorold_variation;
-pub use thorold_variation::THOROLD_VARIATION;
 pub mod alapin_variation;
 pub use alapin_variation::ALAPIN_VARIATION;
+pub mod thorold_variation;
+pub use thorold_variation::THOROLD_VARIATION;

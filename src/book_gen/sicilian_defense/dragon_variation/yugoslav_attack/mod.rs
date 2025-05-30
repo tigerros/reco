@@ -59,18 +59,153 @@ pub static YUGOSLAV_ATTACK: Variation = Variation {
     name: "Yugoslav Attack",
     parent: Some(&super::DRAGON_VARIATION),
     variations: &[
-        &EARLY_DEVIATIONS,
-        &PANOV_VARIATION,
-        &SOLTIS_VARIATION,
         &BELEZKY_LINE,
-        &MAIN_LINE,
         &BYRNE_VARIATION,
         &CZERNIAK_VARIATION,
+        &EARLY_DEVIATIONS,
+        &MAIN_LINE,
         &MODERN_LINE,
-        &SOSONKO_VARIATION,
         &OLD_LINE,
+        &PANOV_VARIATION,
+        &SOLTIS_VARIATION,
+        &SOSONKO_VARIATION,
     ],
     lines: &[
+        Line {
+            parent: &YUGOSLAV_ATTACK,
+            code: Code {
+                volume: Volume::B,
+                category: Category::new_static::<76>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C5,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: F3,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G7,
+                    capture: None,
+                    to: G6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: E3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F8,
+                    capture: None,
+                    to: G7,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: F2,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Castle { king: E8, rook: H8 },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(50463185938990848),
+                        knight: Bitboard(144150372582424576),
+                        bishop: Bitboard(306244774662242336),
+                        rook: Bitboard(2377900603251622017),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(4611686018427387920),
+                    },
+                    ByColor {
+                        black: Bitboard(8066905706759979008),
+                        white: Bitboard(406112185),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(129),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &YUGOSLAV_ATTACK,
             code: Code {
@@ -208,141 +343,6 @@ pub static YUGOSLAV_ATTACK: Variation = Variation {
                 remaining_checks: None,
                 halfmoves: 3,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &YUGOSLAV_ATTACK,
-            code: Code {
-                volume: Volume::B,
-                category: Category::new_static::<76>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C5,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: F3,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G7,
-                    capture: None,
-                    to: G6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: E3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F8,
-                    capture: None,
-                    to: G7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: F2,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Castle { king: E8, rook: H8 },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(50463185938990848),
-                        knight: Bitboard(144150372582424576),
-                        bishop: Bitboard(306244774662242336),
-                        rook: Bitboard(2377900603251622017),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(4611686018427387920),
-                    },
-                    ByColor {
-                        black: Bitboard(8066905706759979008),
-                        white: Bitboard(406112185),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(129),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                     fullmoves
                 } else {
                     #[expect(
@@ -876,23 +876,23 @@ pub static YUGOSLAV_ATTACK: Variation = Variation {
         },
     ],
 };
-pub mod early_deviations;
-pub use early_deviations::EARLY_DEVIATIONS;
-pub mod panov_variation;
-pub use panov_variation::PANOV_VARIATION;
-pub mod soltis_variation;
-pub use soltis_variation::SOLTIS_VARIATION;
 pub mod belezky_line;
 pub use belezky_line::BELEZKY_LINE;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod byrne_variation;
 pub use byrne_variation::BYRNE_VARIATION;
 pub mod czerniak_variation;
 pub use czerniak_variation::CZERNIAK_VARIATION;
+pub mod early_deviations;
+pub use early_deviations::EARLY_DEVIATIONS;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod modern_line;
 pub use modern_line::MODERN_LINE;
-pub mod sosonko_variation;
-pub use sosonko_variation::SOSONKO_VARIATION;
 pub mod old_line;
 pub use old_line::OLD_LINE;
+pub mod panov_variation;
+pub use panov_variation::PANOV_VARIATION;
+pub mod soltis_variation;
+pub use soltis_variation::SOLTIS_VARIATION;
+pub mod sosonko_variation;
+pub use sosonko_variation::SOSONKO_VARIATION;

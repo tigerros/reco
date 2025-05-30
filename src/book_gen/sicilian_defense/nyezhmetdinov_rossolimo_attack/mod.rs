@@ -60,9 +60,9 @@ pub static NYEZHMETDINOV_ROSSOLIMO_ATTACK: Variation = Variation {
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
         &BROOKLYN_RETREAT_DEFENSE,
-        &SAN_FRANCISCO_GAMBIT,
         &FIANCHETTO_VARIATION,
         &GURGENIDZE_VARIATION,
+        &SAN_FRANCISCO_GAMBIT,
     ],
     lines: &[Line {
         parent: &NYEZHMETDINOV_ROSSOLIMO_ATTACK,
@@ -145,9 +145,9 @@ pub static NYEZHMETDINOV_ROSSOLIMO_ATTACK: Variation = Variation {
 };
 pub mod brooklyn_retreat_defense;
 pub use brooklyn_retreat_defense::BROOKLYN_RETREAT_DEFENSE;
-pub mod san_francisco_gambit;
-pub use san_francisco_gambit::SAN_FRANCISCO_GAMBIT;
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod gurgenidze_variation;
 pub use gurgenidze_variation::GURGENIDZE_VARIATION;
+pub mod san_francisco_gambit;
+pub use san_francisco_gambit::SAN_FRANCISCO_GAMBIT;

@@ -59,14 +59,14 @@ pub static ENGLUND_GAMBIT: Variation = Variation {
     name: "Englund Gambit",
     parent: None,
     variations: &[
+        &FELBECKER_GAMBIT,
+        &HARTLAUB_CHARLICK_GAMBIT,
         &MAIN_LINE,
         &MOSQUITO_GAMBIT,
         &SOLLER_GAMBIT,
-        &STOCKHOLM_VARIATION,
-        &FELBECKER_GAMBIT,
         &SOLLER_GAMBIT_DEFERRED,
+        &STOCKHOLM_VARIATION,
         &ZILBERMINTS_GAMBIT,
-        &HARTLAUB_CHARLICK_GAMBIT,
     ],
     lines: &[Line {
         parent: &ENGLUND_GAMBIT,
@@ -126,19 +126,19 @@ pub static ENGLUND_GAMBIT: Variation = Variation {
         },
     }],
 };
+pub mod felbecker_gambit;
+pub use felbecker_gambit::FELBECKER_GAMBIT;
+pub mod hartlaub_charlick_gambit;
+pub use hartlaub_charlick_gambit::HARTLAUB_CHARLICK_GAMBIT;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod mosquito_gambit;
 pub use mosquito_gambit::MOSQUITO_GAMBIT;
 pub mod soller_gambit;
 pub use soller_gambit::SOLLER_GAMBIT;
-pub mod stockholm_variation;
-pub use stockholm_variation::STOCKHOLM_VARIATION;
-pub mod felbecker_gambit;
-pub use felbecker_gambit::FELBECKER_GAMBIT;
 pub mod soller_gambit_deferred;
 pub use soller_gambit_deferred::SOLLER_GAMBIT_DEFERRED;
+pub mod stockholm_variation;
+pub use stockholm_variation::STOCKHOLM_VARIATION;
 pub mod zilbermints_gambit;
 pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;
-pub mod hartlaub_charlick_gambit;
-pub use hartlaub_charlick_gambit::HARTLAUB_CHARLICK_GAMBIT;

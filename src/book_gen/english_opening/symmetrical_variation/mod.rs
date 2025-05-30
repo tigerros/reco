@@ -59,26 +59,83 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
     name: "Symmetrical Variation",
     parent: Some(&super::ENGLISH_OPENING),
     variations: &[
-        &FOUR_KNIGHTS_VARIATION,
-        &FIANCHETTO_VARIATION,
-        &THREE_KNIGHTS_VARIATION,
-        &TWO_KNIGHTS,
-        &RUBINSTEIN_VARIATION,
-        &DOUBLE_FIANCHETTO,
-        &TWO_KNIGHTS_VARIATION,
-        &NORMAL_VARIATION,
-        &MECKING_VARIATION,
-        &HEDGEHOG_DEFENSE,
-        &NAPOLITANO_GAMBIT,
-        &BOTVINNIK_SYSTEM_REVERSED,
         &ANTI_BENONI_VARIATION,
         &BOTVINNIK_SYSTEM,
-        &ULTRA_SYMMETRICAL_VARIATION,
-        &THREE_KNIGHTS,
+        &BOTVINNIK_SYSTEM_REVERSED,
+        &DOUBLE_FIANCHETTO,
         &DUCHAMP_VARIATION,
+        &FIANCHETTO_VARIATION,
+        &FOUR_KNIGHTS_VARIATION,
         &FULL_SYMMETRY_LINE,
+        &HEDGEHOG_DEFENSE,
+        &MECKING_VARIATION,
+        &NAPOLITANO_GAMBIT,
+        &NORMAL_VARIATION,
+        &RUBINSTEIN_VARIATION,
+        &THREE_KNIGHTS,
+        &THREE_KNIGHTS_VARIATION,
+        &TWO_KNIGHTS,
+        &TWO_KNIGHTS_VARIATION,
+        &ULTRA_SYMMETRICAL_VARIATION,
     ],
     lines: &[
+        Line {
+            parent: &SYMMETRICAL_VARIATION,
+            code: Code {
+                volume: Volume::A,
+                category: Category::new_static::<30>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(70650236401416960),
+                        knight: Bitboard(4755801206503243842),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18445336716005867520),
+                        white: Bitboard(67173375),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &SYMMETRICAL_VARIATION,
             code: Code {
@@ -260,63 +317,6 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
             parent: &SYMMETRICAL_VARIATION,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<30>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(70650236401416960),
-                        knight: Bitboard(4755801206503243842),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18445336716005867520),
-                        white: Bitboard(67173375),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &SYMMETRICAL_VARIATION,
-            code: Code {
-                volume: Volume::A,
                 category: Category::new_static::<35>(),
             },
             moves: &[
@@ -400,39 +400,39 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod four_knights_variation;
-pub use four_knights_variation::FOUR_KNIGHTS_VARIATION;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
-pub mod three_knights_variation;
-pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
-pub mod two_knights;
-pub use two_knights::TWO_KNIGHTS;
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-pub mod double_fianchetto;
-pub use double_fianchetto::DOUBLE_FIANCHETTO;
-pub mod two_knights_variation;
-pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
-pub mod mecking_variation;
-pub use mecking_variation::MECKING_VARIATION;
-pub mod hedgehog_defense;
-pub use hedgehog_defense::HEDGEHOG_DEFENSE;
-pub mod napolitano_gambit;
-pub use napolitano_gambit::NAPOLITANO_GAMBIT;
-pub mod botvinnik_system_reversed;
-pub use botvinnik_system_reversed::BOTVINNIK_SYSTEM_REVERSED;
 pub mod anti_benoni_variation;
 pub use anti_benoni_variation::ANTI_BENONI_VARIATION;
 pub mod botvinnik_system;
 pub use botvinnik_system::BOTVINNIK_SYSTEM;
-pub mod ultra_symmetrical_variation;
-pub use ultra_symmetrical_variation::ULTRA_SYMMETRICAL_VARIATION;
-pub mod three_knights;
-pub use three_knights::THREE_KNIGHTS;
+pub mod botvinnik_system_reversed;
+pub use botvinnik_system_reversed::BOTVINNIK_SYSTEM_REVERSED;
+pub mod double_fianchetto;
+pub use double_fianchetto::DOUBLE_FIANCHETTO;
 pub mod duchamp_variation;
 pub use duchamp_variation::DUCHAMP_VARIATION;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod four_knights_variation;
+pub use four_knights_variation::FOUR_KNIGHTS_VARIATION;
 pub mod full_symmetry_line;
 pub use full_symmetry_line::FULL_SYMMETRY_LINE;
+pub mod hedgehog_defense;
+pub use hedgehog_defense::HEDGEHOG_DEFENSE;
+pub mod mecking_variation;
+pub use mecking_variation::MECKING_VARIATION;
+pub mod napolitano_gambit;
+pub use napolitano_gambit::NAPOLITANO_GAMBIT;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod three_knights;
+pub use three_knights::THREE_KNIGHTS;
+pub mod three_knights_variation;
+pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
+pub mod two_knights;
+pub use two_knights::TWO_KNIGHTS;
+pub mod two_knights_variation;
+pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
+pub mod ultra_symmetrical_variation;
+pub use ultra_symmetrical_variation::ULTRA_SYMMETRICAL_VARIATION;

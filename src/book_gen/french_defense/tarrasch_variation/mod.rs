@@ -59,17 +59,17 @@ pub static TARRASCH_VARIATION: Variation = Variation {
     name: "Tarrasch Variation",
     parent: Some(&super::FRENCH_DEFENSE),
     variations: &[
-        &MOROZEVICH_VARIATION,
-        &CLOSED_VARIATION,
         &BOTVINNIK_VARIATION,
-        &ELISKASES_VARIATION,
-        &OPEN_SYSTEM,
-        &LENINGRAD_VARIATION,
-        &HABERDITZ_VARIATION,
-        &MODERN_SYSTEM,
-        &GUIMARD_DEFENSE,
-        &PAWN_CENTER_VARIATION,
         &CHISTYAKOV_DEFENSE,
+        &CLOSED_VARIATION,
+        &ELISKASES_VARIATION,
+        &GUIMARD_DEFENSE,
+        &HABERDITZ_VARIATION,
+        &LENINGRAD_VARIATION,
+        &MODERN_SYSTEM,
+        &MOROZEVICH_VARIATION,
+        &OPEN_SYSTEM,
+        &PAWN_CENTER_VARIATION,
     ],
     lines: &[Line {
         parent: &TARRASCH_VARIATION,
@@ -150,25 +150,25 @@ pub static TARRASCH_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod morozevich_variation;
-pub use morozevich_variation::MOROZEVICH_VARIATION;
-pub mod closed_variation;
-pub use closed_variation::CLOSED_VARIATION;
 pub mod botvinnik_variation;
 pub use botvinnik_variation::BOTVINNIK_VARIATION;
-pub mod eliskases_variation;
-pub use eliskases_variation::ELISKASES_VARIATION;
-pub mod open_system;
-pub use open_system::OPEN_SYSTEM;
-pub mod leningrad_variation;
-pub use leningrad_variation::LENINGRAD_VARIATION;
-pub mod haberditz_variation;
-pub use haberditz_variation::HABERDITZ_VARIATION;
-pub mod modern_system;
-pub use modern_system::MODERN_SYSTEM;
-pub mod guimard_defense;
-pub use guimard_defense::GUIMARD_DEFENSE;
-pub mod pawn_center_variation;
-pub use pawn_center_variation::PAWN_CENTER_VARIATION;
 pub mod chistyakov_defense;
 pub use chistyakov_defense::CHISTYAKOV_DEFENSE;
+pub mod closed_variation;
+pub use closed_variation::CLOSED_VARIATION;
+pub mod eliskases_variation;
+pub use eliskases_variation::ELISKASES_VARIATION;
+pub mod guimard_defense;
+pub use guimard_defense::GUIMARD_DEFENSE;
+pub mod haberditz_variation;
+pub use haberditz_variation::HABERDITZ_VARIATION;
+pub mod leningrad_variation;
+pub use leningrad_variation::LENINGRAD_VARIATION;
+pub mod modern_system;
+pub use modern_system::MODERN_SYSTEM;
+pub mod morozevich_variation;
+pub use morozevich_variation::MOROZEVICH_VARIATION;
+pub mod open_system;
+pub use open_system::OPEN_SYSTEM;
+pub mod pawn_center_variation;
+pub use pawn_center_variation::PAWN_CENTER_VARIATION;

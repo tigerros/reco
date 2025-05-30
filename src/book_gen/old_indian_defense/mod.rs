@@ -59,14 +59,14 @@ pub static OLD_INDIAN_DEFENSE: Variation = Variation {
     name: "Old Indian Defense",
     parent: None,
     variations: &[
-        &DUZ_KHOTIMIRSKY_VARIATION,
         &AGED_GIBBON_GAMBIT,
-        &TWO_KNIGHTS_VARIATION,
-        &TARTAKOWER_INDIAN,
-        &JANOWSKI_VARIATION,
-        &UKRAINIAN_VARIATION,
-        &NORMAL_VARIATION,
         &CZECH_VARIATION,
+        &DUZ_KHOTIMIRSKY_VARIATION,
+        &JANOWSKI_VARIATION,
+        &NORMAL_VARIATION,
+        &TARTAKOWER_INDIAN,
+        &TWO_KNIGHTS_VARIATION,
+        &UKRAINIAN_VARIATION,
     ],
     lines: &[
         Line {
@@ -206,19 +206,19 @@ pub static OLD_INDIAN_DEFENSE: Variation = Variation {
         },
     ],
 };
-pub mod duz_khotimirsky_variation;
-pub use duz_khotimirsky_variation::DUZ_KHOTIMIRSKY_VARIATION;
 pub mod aged_gibbon_gambit;
 pub use aged_gibbon_gambit::AGED_GIBBON_GAMBIT;
-pub mod two_knights_variation;
-pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
-pub mod tartakower_indian;
-pub use tartakower_indian::TARTAKOWER_INDIAN;
-pub mod janowski_variation;
-pub use janowski_variation::JANOWSKI_VARIATION;
-pub mod ukrainian_variation;
-pub use ukrainian_variation::UKRAINIAN_VARIATION;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
 pub mod czech_variation;
 pub use czech_variation::CZECH_VARIATION;
+pub mod duz_khotimirsky_variation;
+pub use duz_khotimirsky_variation::DUZ_KHOTIMIRSKY_VARIATION;
+pub mod janowski_variation;
+pub use janowski_variation::JANOWSKI_VARIATION;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod tartakower_indian;
+pub use tartakower_indian::TARTAKOWER_INDIAN;
+pub mod two_knights_variation;
+pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
+pub mod ukrainian_variation;
+pub use ukrainian_variation::UKRAINIAN_VARIATION;

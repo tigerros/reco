@@ -60,16 +60,16 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
     parent: Some(&super::DRAGON_VARIATION),
     variations: &[
         &ALEKHINE_LINE,
-        &TARTAKOWER_LINE,
-        &BATTERY_VARIATION,
         &AMSTERDAM_VARIATION,
-        &GRIGORIEV_VARIATION,
+        &BATTERY_VARIATION,
         &BERNARD_DEFENSE,
-        &ZOLLNER_GAMBIT,
+        &GRIGORIEV_VARIATION,
         &MAROCZY_LINE,
-        &SPIELMANN_VARIATION,
         &NORMAL_LINE,
+        &SPIELMANN_VARIATION,
         &STOCKHOLM_ATTACK,
+        &TARTAKOWER_LINE,
+        &ZOLLNER_GAMBIT,
     ],
     lines: &[
         Line {
@@ -180,148 +180,6 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
                 remaining_checks: None,
                 halfmoves: 1,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &CLASSICAL_VARIATION,
-            code: Code {
-                volume: Volume::B,
-                category: Category::new_static::<73>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C5,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: F3,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G7,
-                    capture: None,
-                    to: G6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F1,
-                    capture: None,
-                    to: E2,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F8,
-                    capture: None,
-                    to: G7,
-                    promotion: None,
-                },
-                Castle { king: E1, rook: H1 },
-                Normal {
-                    role: Knight,
-                    from: B8,
-                    capture: None,
-                    to: C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: E3,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(50463185936901888),
-                        knight: Bitboard(39582553079808),
-                        bishop: Bitboard(306244774662246400),
-                        rook: Bitboard(9295429630892703777),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606847040),
-                    },
-                    ByColor {
-                        black: Bitboard(11381559430551175168),
-                        white: Bitboard(404027241),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703744),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 5,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                     fullmoves
                 } else {
                     #[expect(
@@ -757,27 +615,169 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
                 },
             },
         },
+        Line {
+            parent: &CLASSICAL_VARIATION,
+            code: Code {
+                volume: Volume::B,
+                category: Category::new_static::<73>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C5,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: F3,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G7,
+                    capture: None,
+                    to: G6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F1,
+                    capture: None,
+                    to: E2,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F8,
+                    capture: None,
+                    to: G7,
+                    promotion: None,
+                },
+                Castle { king: E1, rook: H1 },
+                Normal {
+                    role: Knight,
+                    from: B8,
+                    capture: None,
+                    to: C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: E3,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(50463185936901888),
+                        knight: Bitboard(39582553079808),
+                        bishop: Bitboard(306244774662246400),
+                        rook: Bitboard(9295429630892703777),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606847040),
+                    },
+                    ByColor {
+                        black: Bitboard(11381559430551175168),
+                        white: Bitboard(404027241),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703744),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 5,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
     ],
 };
 pub mod alekhine_line;
 pub use alekhine_line::ALEKHINE_LINE;
-pub mod tartakower_line;
-pub use tartakower_line::TARTAKOWER_LINE;
-pub mod battery_variation;
-pub use battery_variation::BATTERY_VARIATION;
 pub mod amsterdam_variation;
 pub use amsterdam_variation::AMSTERDAM_VARIATION;
-pub mod grigoriev_variation;
-pub use grigoriev_variation::GRIGORIEV_VARIATION;
+pub mod battery_variation;
+pub use battery_variation::BATTERY_VARIATION;
 pub mod bernard_defense;
 pub use bernard_defense::BERNARD_DEFENSE;
-pub mod zollner_gambit;
-pub use zollner_gambit::ZOLLNER_GAMBIT;
+pub mod grigoriev_variation;
+pub use grigoriev_variation::GRIGORIEV_VARIATION;
 pub mod maroczy_line;
 pub use maroczy_line::MAROCZY_LINE;
-pub mod spielmann_variation;
-pub use spielmann_variation::SPIELMANN_VARIATION;
 pub mod normal_line;
 pub use normal_line::NORMAL_LINE;
+pub mod spielmann_variation;
+pub use spielmann_variation::SPIELMANN_VARIATION;
 pub mod stockholm_attack;
 pub use stockholm_attack::STOCKHOLM_ATTACK;
+pub mod tartakower_line;
+pub use tartakower_line::TARTAKOWER_LINE;
+pub mod zollner_gambit;
+pub use zollner_gambit::ZOLLNER_GAMBIT;

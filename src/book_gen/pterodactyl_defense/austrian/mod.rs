@@ -59,15 +59,15 @@ pub static AUSTRIAN: Variation = Variation {
     name: "Austrian",
     parent: Some(&super::PTERODACTYL_DEFENSE),
     variations: &[
-        &GRAND_PRIX_PTERODACTYL,
         &AUSTRIADACTYLUS_WESTERN,
+        &GRAND_PRIX_PTERODACTYL,
         &PTERANODON,
     ],
     lines: &[],
 };
-pub mod grand_prix_pterodactyl;
-pub use grand_prix_pterodactyl::GRAND_PRIX_PTERODACTYL;
 pub mod austriadactylus_western;
 pub use austriadactylus_western::AUSTRIADACTYLUS_WESTERN;
+pub mod grand_prix_pterodactyl;
+pub use grand_prix_pterodactyl::GRAND_PRIX_PTERODACTYL;
 pub mod pteranodon;
 pub use pteranodon::PTERANODON;

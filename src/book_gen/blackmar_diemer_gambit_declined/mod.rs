@@ -60,29 +60,29 @@ pub static BLACKMAR_DIEMER_GAMBIT_DECLINED: Variation = Variation {
     parent: None,
     variations: &[
         &BROMBACHER_COUNTERGAMBIT,
-        &WEINSBACH_DEFENSE,
+        &ELBERT_COUNTERGAMBIT,
+        &GEDULT_DEFENSE,
         &LAMB_DEFENSE,
         &LANGEHEINICKE_DEFENSE,
-        &GEDULT_DEFENSE,
-        &VIENNA_DEFENSE,
-        &ELBERT_COUNTERGAMBIT,
         &O_KELLY_DEFENSE,
+        &VIENNA_DEFENSE,
+        &WEINSBACH_DEFENSE,
     ],
     lines: &[],
 };
 pub mod brombacher_countergambit;
 pub use brombacher_countergambit::BROMBACHER_COUNTERGAMBIT;
-pub mod weinsbach_defense;
-pub use weinsbach_defense::WEINSBACH_DEFENSE;
+pub mod elbert_countergambit;
+pub use elbert_countergambit::ELBERT_COUNTERGAMBIT;
+pub mod gedult_defense;
+pub use gedult_defense::GEDULT_DEFENSE;
 pub mod lamb_defense;
 pub use lamb_defense::LAMB_DEFENSE;
 pub mod langeheinicke_defense;
 pub use langeheinicke_defense::LANGEHEINICKE_DEFENSE;
-pub mod gedult_defense;
-pub use gedult_defense::GEDULT_DEFENSE;
-pub mod vienna_defense;
-pub use vienna_defense::VIENNA_DEFENSE;
-pub mod elbert_countergambit;
-pub use elbert_countergambit::ELBERT_COUNTERGAMBIT;
 pub mod o_kelly_defense;
 pub use o_kelly_defense::O_KELLY_DEFENSE;
+pub mod vienna_defense;
+pub use vienna_defense::VIENNA_DEFENSE;
+pub mod weinsbach_defense;
+pub use weinsbach_defense::WEINSBACH_DEFENSE;

@@ -60,14 +60,14 @@ pub static GIUOCO_PIANO: Variation = Variation {
     parent: Some(&super::ITALIAN_GAME),
     variations: &[
         &AITKEN_VARIATION,
-        &HOLZHAUSEN_ATTACK,
-        &STEINITZ_VARIATION,
-        &THERKATZ_HERZOG_VARIATION,
+        &BERNSTEIN_VARIATION,
         &CRACOW_VARIATION,
         &GRECOS_ATTACK,
-        &BERNSTEIN_VARIATION,
-        &ROSENTRETER_VARIATION,
+        &HOLZHAUSEN_ATTACK,
         &KRAUSE_VARIATION,
+        &ROSENTRETER_VARIATION,
+        &STEINITZ_VARIATION,
+        &THERKATZ_HERZOG_VARIATION,
     ],
     lines: &[Line {
         parent: &GIUOCO_PIANO,
@@ -157,19 +157,19 @@ pub static GIUOCO_PIANO: Variation = Variation {
 };
 pub mod aitken_variation;
 pub use aitken_variation::AITKEN_VARIATION;
-pub mod holzhausen_attack;
-pub use holzhausen_attack::HOLZHAUSEN_ATTACK;
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod therkatz_herzog_variation;
-pub use therkatz_herzog_variation::THERKATZ_HERZOG_VARIATION;
+pub mod bernstein_variation;
+pub use bernstein_variation::BERNSTEIN_VARIATION;
 pub mod cracow_variation;
 pub use cracow_variation::CRACOW_VARIATION;
 pub mod grecos_attack;
 pub use grecos_attack::GRECOS_ATTACK;
-pub mod bernstein_variation;
-pub use bernstein_variation::BERNSTEIN_VARIATION;
-pub mod rosentreter_variation;
-pub use rosentreter_variation::ROSENTRETER_VARIATION;
+pub mod holzhausen_attack;
+pub use holzhausen_attack::HOLZHAUSEN_ATTACK;
 pub mod krause_variation;
 pub use krause_variation::KRAUSE_VARIATION;
+pub mod rosentreter_variation;
+pub use rosentreter_variation::ROSENTRETER_VARIATION;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod therkatz_herzog_variation;
+pub use therkatz_herzog_variation::THERKATZ_HERZOG_VARIATION;

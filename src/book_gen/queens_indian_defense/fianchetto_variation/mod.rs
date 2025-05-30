@@ -59,12 +59,12 @@ pub static FIANCHETTO_VARIATION: Variation = Variation {
     name: "Fianchetto Variation",
     parent: Some(&super::QUEENS_INDIAN_DEFENSE),
     variations: &[
-        &SAMISCH_VARIATION,
-        &TRADITIONAL_LINE,
         &CHECK_VARIATION,
+        &KRAMNIK_VARIATION,
         &NIMZOWITSCH_VARIATION,
         &RUBINSTEIN_VARIATION,
-        &KRAMNIK_VARIATION,
+        &SAMISCH_VARIATION,
+        &TRADITIONAL_LINE,
     ],
     lines: &[Line {
         parent: &FIANCHETTO_VARIATION,
@@ -159,15 +159,15 @@ pub static FIANCHETTO_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod samisch_variation;
-pub use samisch_variation::SAMISCH_VARIATION;
-pub mod traditional_line;
-pub use traditional_line::TRADITIONAL_LINE;
 pub mod check_variation;
 pub use check_variation::CHECK_VARIATION;
+pub mod kramnik_variation;
+pub use kramnik_variation::KRAMNIK_VARIATION;
 pub mod nimzowitsch_variation;
 pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
-pub mod kramnik_variation;
-pub use kramnik_variation::KRAMNIK_VARIATION;
+pub mod samisch_variation;
+pub use samisch_variation::SAMISCH_VARIATION;
+pub mod traditional_line;
+pub use traditional_line::TRADITIONAL_LINE;

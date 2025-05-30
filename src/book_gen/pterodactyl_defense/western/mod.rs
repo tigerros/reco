@@ -58,14 +58,14 @@ assert_eq!(WESTERN.original_name(), "Pterodactyl Defense: Western");
 pub static WESTERN: Variation = Variation {
     name: "Western",
     parent: Some(&super::PTERODACTYL_DEFENSE),
-    variations: &[&ANHANGUERA, &SIROCCOPTERYX, &PTERODACTYL, &RHAMPHORHYNCHUS],
+    variations: &[&ANHANGUERA, &PTERODACTYL, &RHAMPHORHYNCHUS, &SIROCCOPTERYX],
     lines: &[],
 };
 pub mod anhanguera;
 pub use anhanguera::ANHANGUERA;
-pub mod siroccopteryx;
-pub use siroccopteryx::SIROCCOPTERYX;
 pub mod pterodactyl;
 pub use pterodactyl::PTERODACTYL;
 pub mod rhamphorhynchus;
 pub use rhamphorhynchus::RHAMPHORHYNCHUS;
+pub mod siroccopteryx;
+pub use siroccopteryx::SIROCCOPTERYX;

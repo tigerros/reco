@@ -59,12 +59,12 @@ pub static KADAS_OPENING: Variation = Variation {
     name: "Kádas Opening",
     parent: None,
     variations: &[
-        &MYERS_VARIATION,
-        &STEINBOK_GAMBIT,
-        &KOOLA_KOOLA_VARIATION,
-        &SCHNEIDER_GAMBIT,
-        &KADAS_GAMBIT,
         &BEGINNERS_TRAP,
+        &KOOLA_KOOLA_VARIATION,
+        &KADAS_GAMBIT,
+        &MYERS_VARIATION,
+        &SCHNEIDER_GAMBIT,
+        &STEINBOK_GAMBIT,
     ],
     lines: &[Line {
         parent: &KADAS_OPENING,
@@ -115,15 +115,15 @@ pub static KADAS_OPENING: Variation = Variation {
         },
     }],
 };
-pub mod myers_variation;
-pub use myers_variation::MYERS_VARIATION;
-pub mod steinbok_gambit;
-pub use steinbok_gambit::STEINBOK_GAMBIT;
-pub mod koola_koola_variation;
-pub use koola_koola_variation::KOOLA_KOOLA_VARIATION;
-pub mod schneider_gambit;
-pub use schneider_gambit::SCHNEIDER_GAMBIT;
-pub mod kadas_gambit;
-pub use kadas_gambit::KADAS_GAMBIT;
 pub mod beginners_trap;
 pub use beginners_trap::BEGINNERS_TRAP;
+pub mod koola_koola_variation;
+pub use koola_koola_variation::KOOLA_KOOLA_VARIATION;
+pub mod kadas_gambit;
+pub use kadas_gambit::KADAS_GAMBIT;
+pub mod myers_variation;
+pub use myers_variation::MYERS_VARIATION;
+pub mod schneider_gambit;
+pub use schneider_gambit::SCHNEIDER_GAMBIT;
+pub mod steinbok_gambit;
+pub use steinbok_gambit::STEINBOK_GAMBIT;

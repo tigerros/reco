@@ -60,9 +60,9 @@ pub static OLD_VARIATION: Variation = Variation {
     parent: Some(&super::QUEENS_GAMBIT_ACCEPTED),
     variations: &[
         &BILLINGER_GAMBIT,
+        &CHRISTENSEN_GAMBIT,
         &KORCHNOI_GAMBIT,
         &NOVIKOV_GAMBIT,
-        &CHRISTENSEN_GAMBIT,
     ],
     lines: &[Line {
         parent: &OLD_VARIATION,
@@ -145,9 +145,9 @@ pub static OLD_VARIATION: Variation = Variation {
 };
 pub mod billinger_gambit;
 pub use billinger_gambit::BILLINGER_GAMBIT;
+pub mod christensen_gambit;
+pub use christensen_gambit::CHRISTENSEN_GAMBIT;
 pub mod korchnoi_gambit;
 pub use korchnoi_gambit::KORCHNOI_GAMBIT;
 pub mod novikov_gambit;
 pub use novikov_gambit::NOVIKOV_GAMBIT;
-pub mod christensen_gambit;
-pub use christensen_gambit::CHRISTENSEN_GAMBIT;

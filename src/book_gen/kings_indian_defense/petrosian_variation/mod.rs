@@ -58,7 +58,7 @@ assert_eq!(PETROSIAN_VARIATION.original_name(), "King's Indian Defense: Petrosia
 pub static PETROSIAN_VARIATION: Variation = Variation {
     name: "Petrosian Variation",
     parent: Some(&super::KINGS_INDIAN_DEFENSE),
-    variations: &[&STEIN_DEFENSE, &KERES_DEFENSE, &NORMAL_DEFENSE],
+    variations: &[&KERES_DEFENSE, &NORMAL_DEFENSE, &STEIN_DEFENSE],
     lines: &[Line {
         parent: &PETROSIAN_VARIATION,
         code: Code {
@@ -188,9 +188,9 @@ pub static PETROSIAN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod stein_defense;
-pub use stein_defense::STEIN_DEFENSE;
 pub mod keres_defense;
 pub use keres_defense::KERES_DEFENSE;
 pub mod normal_defense;
 pub use normal_defense::NORMAL_DEFENSE;
+pub mod stein_defense;
+pub use stein_defense::STEIN_DEFENSE;

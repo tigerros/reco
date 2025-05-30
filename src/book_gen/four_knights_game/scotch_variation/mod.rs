@@ -59,10 +59,10 @@ pub static SCOTCH_VARIATION: Variation = Variation {
     name: "Scotch Variation",
     parent: Some(&super::FOUR_KNIGHTS_GAME),
     variations: &[
-        &KRAUSE_GAMBIT,
         &BELGRADE_GAMBIT,
-        &SCHMID_DEFENSE,
+        &KRAUSE_GAMBIT,
         &OXFORD_GAMBIT,
+        &SCHMID_DEFENSE,
     ],
     lines: &[Line {
         parent: &SCOTCH_VARIATION,
@@ -157,11 +157,11 @@ pub static SCOTCH_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod krause_gambit;
-pub use krause_gambit::KRAUSE_GAMBIT;
 pub mod belgrade_gambit;
 pub use belgrade_gambit::BELGRADE_GAMBIT;
-pub mod schmid_defense;
-pub use schmid_defense::SCHMID_DEFENSE;
+pub mod krause_gambit;
+pub use krause_gambit::KRAUSE_GAMBIT;
 pub mod oxford_gambit;
 pub use oxford_gambit::OXFORD_GAMBIT;
+pub mod schmid_defense;
+pub use schmid_defense::SCHMID_DEFENSE;

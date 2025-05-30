@@ -182,16 +182,16 @@ pub static RAPPORT_JOBAVA_SYSTEM: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
-                    from: G7,
+                    from: E7,
                     capture: None,
-                    to: G6,
+                    to: E6,
                     promotion: None,
                 },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(51580323976247040),
+                        pawn: Bitboard(65038346300225280),
                         knight: Bitboard(144150372448206912),
                         bishop: Bitboard(2594073385902276640),
                         rook: Bitboard(9295429630892703873),
@@ -199,7 +199,7 @@ pub static RAPPORT_JOBAVA_SYSTEM: Variation = Variation {
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13814615969458290688),
+                        black: Bitboard(13828073991782268928),
                         white: Bitboard(671414265),
                     },
                 ),
@@ -267,16 +267,16 @@ pub static RAPPORT_JOBAVA_SYSTEM: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: G7,
                     capture: None,
-                    to: E6,
+                    to: G6,
                     promotion: None,
                 },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(65038346300225280),
+                        pawn: Bitboard(51580323976247040),
                         knight: Bitboard(144150372448206912),
                         bishop: Bitboard(2594073385902276640),
                         rook: Bitboard(9295429630892703873),
@@ -284,7 +284,7 @@ pub static RAPPORT_JOBAVA_SYSTEM: Variation = Variation {
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13828073991782268928),
+                        black: Bitboard(13814615969458290688),
                         white: Bitboard(671414265),
                     },
                 ),

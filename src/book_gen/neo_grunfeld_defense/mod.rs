@@ -59,27 +59,27 @@ pub static NEO_GRUNFELD_DEFENSE: Variation = Variation {
     name: "Neo-Grünfeld Defense",
     parent: None,
     variations: &[
-        &GOGLIDZE_ATTACK,
-        &WITH_G3,
-        &EXCHANGE_VARIATION,
-        &DELAYED_EXCHANGE_VARIATION,
-        &WITH_NF3,
         &CLASSICAL_VARIATION,
+        &DELAYED_EXCHANGE_VARIATION,
+        &EXCHANGE_VARIATION,
+        &GOGLIDZE_ATTACK,
         &ULTRA_DELAYED_EXCHANGE_VARIATION,
+        &WITH_NF3,
+        &WITH_G3,
     ],
     lines: &[],
 };
-pub mod goglidze_attack;
-pub use goglidze_attack::GOGLIDZE_ATTACK;
-pub mod with_g3;
-pub use with_g3::WITH_G3;
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod delayed_exchange_variation;
-pub use delayed_exchange_variation::DELAYED_EXCHANGE_VARIATION;
-pub mod with_nf3;
-pub use with_nf3::WITH_NF3;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
+pub mod delayed_exchange_variation;
+pub use delayed_exchange_variation::DELAYED_EXCHANGE_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod goglidze_attack;
+pub use goglidze_attack::GOGLIDZE_ATTACK;
 pub mod ultra_delayed_exchange_variation;
 pub use ultra_delayed_exchange_variation::ULTRA_DELAYED_EXCHANGE_VARIATION;
+pub mod with_nf3;
+pub use with_nf3::WITH_NF3;
+pub mod with_g3;
+pub use with_g3::WITH_G3;

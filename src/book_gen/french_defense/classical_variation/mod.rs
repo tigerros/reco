@@ -59,20 +59,20 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
     name: "Classical Variation",
     parent: Some(&super::FRENCH_DEFENSE),
     variations: &[
-        &STAHLBERG_VARIATION,
-        &STEINITZ_VARIATION,
-        &TARRASCH_VARIATION,
-        &TARTAKOWER_VARIATION,
+        &ALAPIN_VARIATION,
+        &BURN_VARIATION,
+        &DELAYED_EXCHANGE_VARIATION,
+        &FRANKFURT_VARIATION,
         &NORMAL_VARIATION,
         &POLLOCK_VARIATION,
-        &ALAPIN_VARIATION,
-        &DELAYED_EXCHANGE_VARIATION,
-        &SWISS_VARIATION,
         &RICHTER_ATTACK,
-        &BURN_VARIATION,
-        &FRANKFURT_VARIATION,
-        &VISTANECKIS_VARIATION,
         &RUBINSTEIN_VARIATION,
+        &STAHLBERG_VARIATION,
+        &STEINITZ_VARIATION,
+        &SWISS_VARIATION,
+        &TARRASCH_VARIATION,
+        &TARTAKOWER_VARIATION,
+        &VISTANECKIS_VARIATION,
     ],
     lines: &[
         Line {
@@ -409,31 +409,31 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod stahlberg_variation;
-pub use stahlberg_variation::STAHLBERG_VARIATION;
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod tarrasch_variation;
-pub use tarrasch_variation::TARRASCH_VARIATION;
-pub mod tartakower_variation;
-pub use tartakower_variation::TARTAKOWER_VARIATION;
+pub mod alapin_variation;
+pub use alapin_variation::ALAPIN_VARIATION;
+pub mod burn_variation;
+pub use burn_variation::BURN_VARIATION;
+pub mod delayed_exchange_variation;
+pub use delayed_exchange_variation::DELAYED_EXCHANGE_VARIATION;
+pub mod frankfurt_variation;
+pub use frankfurt_variation::FRANKFURT_VARIATION;
 pub mod normal_variation;
 pub use normal_variation::NORMAL_VARIATION;
 pub mod pollock_variation;
 pub use pollock_variation::POLLOCK_VARIATION;
-pub mod alapin_variation;
-pub use alapin_variation::ALAPIN_VARIATION;
-pub mod delayed_exchange_variation;
-pub use delayed_exchange_variation::DELAYED_EXCHANGE_VARIATION;
-pub mod swiss_variation;
-pub use swiss_variation::SWISS_VARIATION;
 pub mod richter_attack;
 pub use richter_attack::RICHTER_ATTACK;
-pub mod burn_variation;
-pub use burn_variation::BURN_VARIATION;
-pub mod frankfurt_variation;
-pub use frankfurt_variation::FRANKFURT_VARIATION;
-pub mod vistaneckis_variation;
-pub use vistaneckis_variation::VISTANECKIS_VARIATION;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod stahlberg_variation;
+pub use stahlberg_variation::STAHLBERG_VARIATION;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod swiss_variation;
+pub use swiss_variation::SWISS_VARIATION;
+pub mod tarrasch_variation;
+pub use tarrasch_variation::TARRASCH_VARIATION;
+pub mod tartakower_variation;
+pub use tartakower_variation::TARTAKOWER_VARIATION;
+pub mod vistaneckis_variation;
+pub use vistaneckis_variation::VISTANECKIS_VARIATION;

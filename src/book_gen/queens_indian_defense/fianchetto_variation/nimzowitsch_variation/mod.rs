@@ -58,7 +58,7 @@ assert_eq!(NIMZOWITSCH_VARIATION.original_name(), "Queen's Indian Defense: Fianc
 pub static NIMZOWITSCH_VARIATION: Variation = Variation {
     name: "Nimzowitsch Variation",
     parent: Some(&super::FIANCHETTO_VARIATION),
-    variations: &[&TIMMANS_LINE, &QUIET_LINE, &NIMZOWITSCH_ATTACK],
+    variations: &[&NIMZOWITSCH_ATTACK, &QUIET_LINE, &TIMMANS_LINE],
     lines: &[Line {
         parent: &NIMZOWITSCH_VARIATION,
         code: Code {
@@ -159,9 +159,9 @@ pub static NIMZOWITSCH_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod timmans_line;
-pub use timmans_line::TIMMANS_LINE;
-pub mod quiet_line;
-pub use quiet_line::QUIET_LINE;
 pub mod nimzowitsch_attack;
 pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
+pub mod quiet_line;
+pub use quiet_line::QUIET_LINE;
+pub mod timmans_line;
+pub use timmans_line::TIMMANS_LINE;

@@ -58,7 +58,7 @@ assert_eq!(CHECK_VARIATION.original_name(), "Queen's Indian Defense: Fianchetto 
 pub static CHECK_VARIATION: Variation = Variation {
     name: "Check Variation",
     parent: Some(&super::FIANCHETTO_VARIATION),
-    variations: &[&MODERN_LINE, &INTERMEZZO_LINE],
+    variations: &[&INTERMEZZO_LINE, &MODERN_LINE],
     lines: &[Line {
         parent: &CHECK_VARIATION,
         code: Code {
@@ -173,7 +173,7 @@ pub static CHECK_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod modern_line;
-pub use modern_line::MODERN_LINE;
 pub mod intermezzo_line;
 pub use intermezzo_line::INTERMEZZO_LINE;
+pub mod modern_line;
+pub use modern_line::MODERN_LINE;

@@ -81,51 +81,30 @@ pub static MODERN_VARIATION: Variation = Variation {
                     to: E5,
                     promotion: None,
                 },
-                Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: B2,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B8,
-                    capture: None,
-                    to: C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E3,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(67272588154563840),
-                        knight: Bitboard(4611690416473899074),
-                        bishop: Bitboard(2594073385365406240),
+                        pawn: Bitboard(67272588153519360),
+                        knight: Bitboard(4755801206503243842),
+                        bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18297848277795602432),
-                        white: Bitboard(1241083),
+                        black: Bitboard(18441959067824947200),
+                        white: Bitboard(196095),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
                     fullmoves
                 } else {
                     #[expect(
@@ -230,30 +209,51 @@ pub static MODERN_VARIATION: Variation = Variation {
                     to: E5,
                     promotion: None,
                 },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: B2,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B8,
+                    capture: None,
+                    to: C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E3,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(67272588153519360),
-                        knight: Bitboard(4755801206503243842),
-                        bishop: Bitboard(2594073385365405732),
+                        pawn: Bitboard(67272588154563840),
+                        knight: Bitboard(4611690416473899074),
+                        bishop: Bitboard(2594073385365406240),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18441959067824947200),
-                        white: Bitboard(196095),
+                        black: Bitboard(18297848277795602432),
+                        white: Bitboard(1241083),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
+                turn: Black,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                     fullmoves
                 } else {
                     #[expect(

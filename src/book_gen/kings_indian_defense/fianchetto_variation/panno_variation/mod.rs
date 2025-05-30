@@ -58,7 +58,7 @@ assert_eq!(PANNO_VARIATION.original_name(), "King's Indian Defense: Fianchetto V
 pub static PANNO_VARIATION: Variation = Variation {
     name: "Panno Variation",
     parent: Some(&super::FIANCHETTO_VARIATION),
-    variations: &[&KORCHNOI_LINE, &DONNER_LINE, &BLOCKADE_LINE],
+    variations: &[&BLOCKADE_LINE, &DONNER_LINE, &KORCHNOI_LINE],
     lines: &[Line {
         parent: &PANNO_VARIATION,
         code: Code {
@@ -189,9 +189,9 @@ pub static PANNO_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod korchnoi_line;
-pub use korchnoi_line::KORCHNOI_LINE;
-pub mod donner_line;
-pub use donner_line::DONNER_LINE;
 pub mod blockade_line;
 pub use blockade_line::BLOCKADE_LINE;
+pub mod donner_line;
+pub use donner_line::DONNER_LINE;
+pub mod korchnoi_line;
+pub use korchnoi_line::KORCHNOI_LINE;

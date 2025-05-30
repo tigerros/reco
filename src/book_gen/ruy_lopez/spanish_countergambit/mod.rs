@@ -58,7 +58,7 @@ assert_eq!(SPANISH_COUNTERGAMBIT.original_name(), "Ruy Lopez: Spanish Countergam
 pub static SPANISH_COUNTERGAMBIT: Variation = Variation {
     name: "Spanish Countergambit",
     parent: Some(&super::RUY_LOPEZ),
-    variations: &[&HARDING_GAMBIT, &HARDING_COUNTERGAMBIT],
+    variations: &[&HARDING_COUNTERGAMBIT, &HARDING_GAMBIT],
     lines: &[Line {
         parent: &SPANISH_COUNTERGAMBIT,
         code: Code {
@@ -145,7 +145,7 @@ pub static SPANISH_COUNTERGAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod harding_gambit;
-pub use harding_gambit::HARDING_GAMBIT;
 pub mod harding_countergambit;
 pub use harding_countergambit::HARDING_COUNTERGAMBIT;
+pub mod harding_gambit;
+pub use harding_gambit::HARDING_GAMBIT;

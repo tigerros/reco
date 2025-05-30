@@ -58,7 +58,7 @@ assert_eq!(TORRE_ATTACK.original_name(), "Queen's Pawn Game: Torre Attack");
 pub static TORRE_ATTACK: Variation = Variation {
     name: "Torre Attack",
     parent: Some(&super::QUEENS_PAWN_GAME),
-    variations: &[&GRUNFELD_VARIATION, &BREYER_VARIATION, &GOSSIP_VARIATION],
+    variations: &[&BREYER_VARIATION, &GOSSIP_VARIATION, &GRUNFELD_VARIATION],
     lines: &[Line {
         parent: &TORRE_ATTACK,
         code: Code {
@@ -138,9 +138,9 @@ pub static TORRE_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod grunfeld_variation;
-pub use grunfeld_variation::GRUNFELD_VARIATION;
 pub mod breyer_variation;
 pub use breyer_variation::BREYER_VARIATION;
 pub mod gossip_variation;
 pub use gossip_variation::GOSSIP_VARIATION;
+pub mod grunfeld_variation;
+pub use grunfeld_variation::GRUNFELD_VARIATION;

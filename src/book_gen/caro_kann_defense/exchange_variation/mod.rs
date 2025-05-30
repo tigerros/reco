@@ -58,7 +58,7 @@ assert_eq!(EXCHANGE_VARIATION.original_name(), "Caro-Kann Defense: Exchange Vari
 pub static EXCHANGE_VARIATION: Variation = Variation {
     name: "Exchange Variation",
     parent: Some(&super::CARO_KANN_DEFENSE),
-    variations: &[&RUBINSTEIN_VARIATION, &BULLA_ATTACK],
+    variations: &[&BULLA_ATTACK, &RUBINSTEIN_VARIATION],
     lines: &[
         Line {
             parent: &EXCHANGE_VARIATION,
@@ -239,7 +239,7 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod bulla_attack;
 pub use bulla_attack::BULLA_ATTACK;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;

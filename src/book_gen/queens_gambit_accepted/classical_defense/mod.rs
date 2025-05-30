@@ -59,12 +59,12 @@ pub static CLASSICAL_DEFENSE: Variation = Variation {
     name: "Classical Defense",
     parent: Some(&super::QUEENS_GAMBIT_ACCEPTED),
     variations: &[
-        &RUBINSTEIN_VARIATION,
         &ALEKHINE_SYSTEM,
+        &MAIN_LINE,
         &NORMAL_LINE,
+        &RUBINSTEIN_VARIATION,
         &RUSSIAN_GAMBIT,
         &STEINITZ_VARIATION,
-        &MAIN_LINE,
     ],
     lines: &[Line {
         parent: &CLASSICAL_DEFENSE,
@@ -180,15 +180,15 @@ pub static CLASSICAL_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod alekhine_system;
 pub use alekhine_system::ALEKHINE_SYSTEM;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod normal_line;
 pub use normal_line::NORMAL_LINE;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod russian_gambit;
 pub use russian_gambit::RUSSIAN_GAMBIT;
 pub mod steinitz_variation;
 pub use steinitz_variation::STEINITZ_VARIATION;
-pub mod main_line;
-pub use main_line::MAIN_LINE;

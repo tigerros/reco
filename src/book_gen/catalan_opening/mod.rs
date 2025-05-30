@@ -58,8 +58,86 @@ assert_eq!(CATALAN_OPENING.original_name(), "Catalan Opening");
 pub static CATALAN_OPENING: Variation = Variation {
     name: "Catalan Opening",
     parent: None,
-    variations: &[&OPEN_DEFENSE, &HUNGARIAN_GAMBIT, &CLOSED_VARIATION, &CLOSED],
+    variations: &[&CLOSED, &CLOSED_VARIATION, &HUNGARIAN_GAMBIT, &OPEN_DEFENSE],
     lines: &[
+        Line {
+            parent: &CATALAN_OPENING,
+            code: Code {
+                volume: Volume::E,
+                category: Category::new_static::<0>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: G2,
+                    capture: None,
+                    to: G3,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(67290111825457920),
+                        knight: Bitboard(144150372447944770),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(13830325757236215808),
+                        white: Bitboard(205566975),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &CATALAN_OPENING,
             code: Code {
@@ -145,91 +223,13 @@ pub static CATALAN_OPENING: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &CATALAN_OPENING,
-            code: Code {
-                volume: Volume::E,
-                category: Category::new_static::<0>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: G2,
-                    capture: None,
-                    to: G3,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(67290111825457920),
-                        knight: Bitboard(144150372447944770),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(13830325757236215808),
-                        white: Bitboard(205566975),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
-pub mod open_defense;
-pub use open_defense::OPEN_DEFENSE;
-pub mod hungarian_gambit;
-pub use hungarian_gambit::HUNGARIAN_GAMBIT;
-pub mod closed_variation;
-pub use closed_variation::CLOSED_VARIATION;
 pub mod closed;
 pub use closed::CLOSED;
+pub mod closed_variation;
+pub use closed_variation::CLOSED_VARIATION;
+pub mod hungarian_gambit;
+pub use hungarian_gambit::HUNGARIAN_GAMBIT;
+pub mod open_defense;
+pub use open_defense::OPEN_DEFENSE;

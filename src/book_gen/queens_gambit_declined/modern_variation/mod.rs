@@ -58,7 +58,7 @@ assert_eq!(MODERN_VARIATION.original_name(), "Queen's Gambit Declined: Modern Va
 pub static MODERN_VARIATION: Variation = Variation {
     name: "Modern Variation",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
-    variations: &[&KNIGHT_DEFENSE, &HERAL_VARIATION, &NORMAL_LINE],
+    variations: &[&HERAL_VARIATION, &KNIGHT_DEFENSE, &NORMAL_LINE],
     lines: &[Line {
         parent: &MODERN_VARIATION,
         code: Code {
@@ -152,9 +152,9 @@ pub static MODERN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod knight_defense;
-pub use knight_defense::KNIGHT_DEFENSE;
 pub mod heral_variation;
 pub use heral_variation::HERAL_VARIATION;
+pub mod knight_defense;
+pub use knight_defense::KNIGHT_DEFENSE;
 pub mod normal_line;
 pub use normal_line::NORMAL_LINE;

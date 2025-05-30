@@ -58,7 +58,7 @@ assert_eq!(RAGOZIN_DEFENSE.original_name(), "Queen's Gambit Declined: Ragozin De
 pub static RAGOZIN_DEFENSE: Variation = Variation {
     name: "Ragozin Defense",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
-    variations: &[&VIENNA_VARIATION, &ALEKHINE_VARIATION],
+    variations: &[&ALEKHINE_VARIATION, &VIENNA_VARIATION],
     lines: &[Line {
         parent: &RAGOZIN_DEFENSE,
         code: Code {
@@ -159,7 +159,7 @@ pub static RAGOZIN_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod vienna_variation;
-pub use vienna_variation::VIENNA_VARIATION;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
+pub mod vienna_variation;
+pub use vienna_variation::VIENNA_VARIATION;

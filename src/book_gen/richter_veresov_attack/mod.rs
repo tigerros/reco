@@ -60,12 +60,90 @@ pub static RICHTER_VERESOV_ATTACK: Variation = Variation {
     parent: None,
     variations: &[
         &BOYCE_DEFENSE,
-        &RICHTER_VARIATION,
         &MALICH_GAMBIT,
+        &RICHTER_VARIATION,
         &TWO_KNIGHTS_SYSTEM,
         &VERESOV_VARIATION,
     ],
     lines: &[
+        Line {
+            parent: &RICHTER_VERESOV_ATTACK,
+            code: Code {
+                volume: Volume::D,
+                category: Category::new_static::<1>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: G5,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(69524353741551360),
+                        knight: Bitboard(144150372448206912),
+                        bishop: Bitboard(2594073660243312672),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(13832559999223595008),
+                        white: Bitboard(275012450297),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &RICHTER_VERESOV_ATTACK,
             code: Code {
@@ -151,92 +229,14 @@ pub static RICHTER_VERESOV_ATTACK: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &RICHTER_VERESOV_ATTACK,
-            code: Code {
-                volume: Volume::D,
-                category: Category::new_static::<1>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: G5,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(69524353741551360),
-                        knight: Bitboard(144150372448206912),
-                        bishop: Bitboard(2594073660243312672),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(13832559999223595008),
-                        white: Bitboard(275012450297),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
 pub mod boyce_defense;
 pub use boyce_defense::BOYCE_DEFENSE;
-pub mod richter_variation;
-pub use richter_variation::RICHTER_VARIATION;
 pub mod malich_gambit;
 pub use malich_gambit::MALICH_GAMBIT;
+pub mod richter_variation;
+pub use richter_variation::RICHTER_VARIATION;
 pub mod two_knights_system;
 pub use two_knights_system::TWO_KNIGHTS_SYSTEM;
 pub mod veresov_variation;

@@ -59,9 +59,9 @@ pub static RUBINSTEIN_VARIATION: Variation = Variation {
     name: "Rubinstein Variation",
     parent: Some(&super::SPANISH_VARIATION),
     variations: &[
+        &HENNEBERGER_VARIATION,
         &MARSHALL_GAMBIT,
         &MARSHALL_VARIATION,
-        &HENNEBERGER_VARIATION,
         &MAROCZY_VARIATION,
     ],
     lines: &[
@@ -392,11 +392,11 @@ pub static RUBINSTEIN_VARIATION: Variation = Variation {
         },
     ],
 };
+pub mod henneberger_variation;
+pub use henneberger_variation::HENNEBERGER_VARIATION;
 pub mod marshall_gambit;
 pub use marshall_gambit::MARSHALL_GAMBIT;
 pub mod marshall_variation;
 pub use marshall_variation::MARSHALL_VARIATION;
-pub mod henneberger_variation;
-pub use henneberger_variation::HENNEBERGER_VARIATION;
 pub mod maroczy_variation;
 pub use maroczy_variation::MAROCZY_VARIATION;

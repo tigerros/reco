@@ -61,12 +61,83 @@ pub static CHIGORIN_DEFENSE: Variation = Variation {
     variations: &[
         &EXCHANGE_VARIATION,
         &JANOWSKI_VARIATION,
-        &MODERN_GAMBIT,
-        &TARTAKOWER_GAMBIT,
         &LAZARD_GAMBIT,
         &MAIN_LINE,
+        &MODERN_GAMBIT,
+        &TARTAKOWER_GAMBIT,
     ],
     lines: &[
+        Line {
+            parent: &CHIGORIN_DEFENSE,
+            code: Code {
+                volume: Volume::D,
+                category: Category::new_static::<7>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C2,
+                    capture: None,
+                    to: C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B8,
+                    capture: None,
+                    to: C6,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(69524353808659200),
+                        knight: Bitboard(4611690416473899074),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18300100043249549312),
+                        white: Bitboard(201389055),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &CHIGORIN_DEFENSE,
             code: Code {
@@ -230,88 +301,17 @@ pub static CHIGORIN_DEFENSE: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &CHIGORIN_DEFENSE,
-            code: Code {
-                volume: Volume::D,
-                category: Category::new_static::<7>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C2,
-                    capture: None,
-                    to: C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B8,
-                    capture: None,
-                    to: C6,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(69524353808659200),
-                        knight: Bitboard(4611690416473899074),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18300100043249549312),
-                        white: Bitboard(201389055),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod janowski_variation;
 pub use janowski_variation::JANOWSKI_VARIATION;
-pub mod modern_gambit;
-pub use modern_gambit::MODERN_GAMBIT;
-pub mod tartakower_gambit;
-pub use tartakower_gambit::TARTAKOWER_GAMBIT;
 pub mod lazard_gambit;
 pub use lazard_gambit::LAZARD_GAMBIT;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod modern_gambit;
+pub use modern_gambit::MODERN_GAMBIT;
+pub mod tartakower_gambit;
+pub use tartakower_gambit::TARTAKOWER_GAMBIT;

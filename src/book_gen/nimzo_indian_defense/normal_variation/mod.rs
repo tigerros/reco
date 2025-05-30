@@ -60,12 +60,12 @@ pub static NORMAL_VARIATION: Variation = Variation {
     parent: Some(&super::NIMZO_INDIAN_DEFENSE),
     variations: &[
         &BERNSTEIN_DEFENSE,
+        &BOTVINNIK_SYSTEM,
+        &CLASSICAL_DEFENSE,
+        &GLIGORIC_SYSTEM,
         &RAGOZIN_VARIATION,
         &SCHLECHTER_DEFENSE,
-        &CLASSICAL_DEFENSE,
-        &BOTVINNIK_SYSTEM,
         &SAMISCH_DEFERRED,
-        &GLIGORIC_SYSTEM,
     ],
     lines: &[
         Line {
@@ -265,15 +265,15 @@ pub static NORMAL_VARIATION: Variation = Variation {
 };
 pub mod bernstein_defense;
 pub use bernstein_defense::BERNSTEIN_DEFENSE;
+pub mod botvinnik_system;
+pub use botvinnik_system::BOTVINNIK_SYSTEM;
+pub mod classical_defense;
+pub use classical_defense::CLASSICAL_DEFENSE;
+pub mod gligoric_system;
+pub use gligoric_system::GLIGORIC_SYSTEM;
 pub mod ragozin_variation;
 pub use ragozin_variation::RAGOZIN_VARIATION;
 pub mod schlechter_defense;
 pub use schlechter_defense::SCHLECHTER_DEFENSE;
-pub mod classical_defense;
-pub use classical_defense::CLASSICAL_DEFENSE;
-pub mod botvinnik_system;
-pub use botvinnik_system::BOTVINNIK_SYSTEM;
 pub mod samisch_deferred;
 pub use samisch_deferred::SAMISCH_DEFERRED;
-pub mod gligoric_system;
-pub use gligoric_system::GLIGORIC_SYSTEM;

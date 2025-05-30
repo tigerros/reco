@@ -60,9 +60,9 @@ pub static HANHAM_VARIATION: Variation = Variation {
     parent: Some(&super::PHILIDOR_DEFENSE),
     variations: &[
         &DELMAR_VARIATION,
-        &SHARP_VARIATION,
         &KRAUSE_VARIATION,
         &SCHLECHTER_VARIATION,
+        &SHARP_VARIATION,
         &STEINER_VARIATION,
     ],
     lines: &[Line {
@@ -153,11 +153,11 @@ pub static HANHAM_VARIATION: Variation = Variation {
 };
 pub mod delmar_variation;
 pub use delmar_variation::DELMAR_VARIATION;
-pub mod sharp_variation;
-pub use sharp_variation::SHARP_VARIATION;
 pub mod krause_variation;
 pub use krause_variation::KRAUSE_VARIATION;
 pub mod schlechter_variation;
 pub use schlechter_variation::SCHLECHTER_VARIATION;
+pub mod sharp_variation;
+pub use sharp_variation::SHARP_VARIATION;
 pub mod steiner_variation;
 pub use steiner_variation::STEINER_VARIATION;

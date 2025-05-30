@@ -59,10 +59,10 @@ pub static GROB_GAMBIT: Variation = Variation {
     name: "Grob Gambit",
     parent: Some(&super::GROB_OPENING),
     variations: &[
-        &RICHTER_GROB_GAMBIT,
-        &FRITZ_GAMBIT,
         &BASMAN_GAMBIT,
+        &FRITZ_GAMBIT,
         &KERES_GAMBIT,
+        &RICHTER_GROB_GAMBIT,
     ],
     lines: &[Line {
         parent: &GROB_GAMBIT,
@@ -129,11 +129,11 @@ pub static GROB_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod richter_grob_gambit;
-pub use richter_grob_gambit::RICHTER_GROB_GAMBIT;
-pub mod fritz_gambit;
-pub use fritz_gambit::FRITZ_GAMBIT;
 pub mod basman_gambit;
 pub use basman_gambit::BASMAN_GAMBIT;
+pub mod fritz_gambit;
+pub use fritz_gambit::FRITZ_GAMBIT;
 pub mod keres_gambit;
 pub use keres_gambit::KERES_GAMBIT;
+pub mod richter_grob_gambit;
+pub use richter_grob_gambit::RICHTER_GROB_GAMBIT;

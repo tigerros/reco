@@ -58,7 +58,7 @@ assert_eq!(L_HERMET_VARIATION.original_name(), "Ruy Lopez: Berlin Defense, l'Her
 pub static L_HERMET_VARIATION: Variation = Variation {
     name: "l'Hermet Variation",
     parent: Some(&super::BERLIN_DEFENSE),
-    variations: &[&WESTERINEN_LINE, &BERLIN_WALL_DEFENSE],
+    variations: &[&BERLIN_WALL_DEFENSE, &WESTERINEN_LINE],
     lines: &[Line {
         parent: &L_HERMET_VARIATION,
         code: Code {
@@ -167,7 +167,7 @@ pub static L_HERMET_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod westerinen_line;
-pub use westerinen_line::WESTERINEN_LINE;
 pub mod berlin_wall_defense;
 pub use berlin_wall_defense::BERLIN_WALL_DEFENSE;
+pub mod westerinen_line;
+pub use westerinen_line::WESTERINEN_LINE;

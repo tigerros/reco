@@ -59,14 +59,113 @@ pub static TAIMANOV_VARIATION: Variation = Variation {
     name: "Taimanov Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &BASTRIKOV_VARIATION,
-        &SZEN_VARIATION,
         &AMERICAN_ATTACK,
+        &BASTRIKOV_VARIATION,
+        &GARY_GAMBIT,
         &MODERN_LINE,
         &NORMAL_VARIATION,
-        &GARY_GAMBIT,
+        &SZEN_VARIATION,
     ],
     lines: &[
+        Line {
+            parent: &TAIMANOV_VARIATION,
+            code: Code {
+                volume: Volume::B,
+                category: Category::new_static::<44>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C7,
+                    capture: None,
+                    to: C5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C5,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: F3,
+                    capture: Some(Pawn),
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B8,
+                    capture: None,
+                    to: C6,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(66164211981543168),
+                        knight: Bitboard(4611690416608116738),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18296739901355327488),
+                        white: Bitboard(402712511),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &TAIMANOV_VARIATION,
             code: Code {
@@ -180,116 +279,17 @@ pub static TAIMANOV_VARIATION: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &TAIMANOV_VARIATION,
-            code: Code {
-                volume: Volume::B,
-                category: Category::new_static::<44>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C7,
-                    capture: None,
-                    to: C5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C5,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: F3,
-                    capture: Some(Pawn),
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B8,
-                    capture: None,
-                    to: C6,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(66164211981543168),
-                        knight: Bitboard(4611690416608116738),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18296739901355327488),
-                        white: Bitboard(402712511),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
-pub mod bastrikov_variation;
-pub use bastrikov_variation::BASTRIKOV_VARIATION;
-pub mod szen_variation;
-pub use szen_variation::SZEN_VARIATION;
 pub mod american_attack;
 pub use american_attack::AMERICAN_ATTACK;
+pub mod bastrikov_variation;
+pub use bastrikov_variation::BASTRIKOV_VARIATION;
+pub mod gary_gambit;
+pub use gary_gambit::GARY_GAMBIT;
 pub mod modern_line;
 pub use modern_line::MODERN_LINE;
 pub mod normal_variation;
 pub use normal_variation::NORMAL_VARIATION;
-pub mod gary_gambit;
-pub use gary_gambit::GARY_GAMBIT;
+pub mod szen_variation;
+pub use szen_variation::SZEN_VARIATION;

@@ -60,13 +60,91 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
     parent: Some(&super::SCANDINAVIAN_VARIATION),
     variations: &[
         &BRANDICS_GAMBIT,
-        &NIMZOWITSCH_GAMBIT,
         &ERBEN_GAMBIT,
+        &HEINOLA_DEPPE_GAMBIT,
+        &NIMZOWITSCH_GAMBIT,
         &RICHTER_GAMBIT,
         &VEHRE_VARIATION,
-        &HEINOLA_DEPPE_GAMBIT,
     ],
     lines: &[
+        Line {
+            parent: &BOGOLJUBOW_VARIATION,
+            code: Code {
+                volume: Volume::B,
+                category: Category::new_static::<0>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B8,
+                    capture: None,
+                    to: C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D2,
+                    capture: None,
+                    to: D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(69524354009982720),
+                        knight: Bitboard(4611690416474161216),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18300100043249549312),
+                        white: Bitboard(402974717),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &BOGOLJUBOW_VARIATION,
             code: Code {
@@ -152,95 +230,17 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &BOGOLJUBOW_VARIATION,
-            code: Code {
-                volume: Volume::B,
-                category: Category::new_static::<0>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B8,
-                    capture: None,
-                    to: C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D2,
-                    capture: None,
-                    to: D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(69524354009982720),
-                        knight: Bitboard(4611690416474161216),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18300100043249549312),
-                        white: Bitboard(402974717),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
 pub mod brandics_gambit;
 pub use brandics_gambit::BRANDICS_GAMBIT;
-pub mod nimzowitsch_gambit;
-pub use nimzowitsch_gambit::NIMZOWITSCH_GAMBIT;
 pub mod erben_gambit;
 pub use erben_gambit::ERBEN_GAMBIT;
+pub mod heinola_deppe_gambit;
+pub use heinola_deppe_gambit::HEINOLA_DEPPE_GAMBIT;
+pub mod nimzowitsch_gambit;
+pub use nimzowitsch_gambit::NIMZOWITSCH_GAMBIT;
 pub mod richter_gambit;
 pub use richter_gambit::RICHTER_GAMBIT;
 pub mod vehre_variation;
 pub use vehre_variation::VEHRE_VARIATION;
-pub mod heinola_deppe_gambit;
-pub use heinola_deppe_gambit::HEINOLA_DEPPE_GAMBIT;

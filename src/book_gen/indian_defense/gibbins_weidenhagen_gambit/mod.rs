@@ -58,7 +58,7 @@ assert_eq!(GIBBINS_WEIDENHAGEN_GAMBIT.original_name(), "Indian Defense: Gibbins-
 pub static GIBBINS_WEIDENHAGEN_GAMBIT: Variation = Variation {
     name: "Gibbins-Weidenhagen Gambit",
     parent: Some(&super::INDIAN_DEFENSE),
-    variations: &[&STUMMER_GAMBIT, &OSHIMA_DEFENSE, &MALTESE_FALCON],
+    variations: &[&MALTESE_FALCON, &OSHIMA_DEFENSE, &STUMMER_GAMBIT],
     lines: &[Line {
         parent: &GIBBINS_WEIDENHAGEN_GAMBIT,
         code: Code {
@@ -124,9 +124,9 @@ pub static GIBBINS_WEIDENHAGEN_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod stummer_gambit;
-pub use stummer_gambit::STUMMER_GAMBIT;
-pub mod oshima_defense;
-pub use oshima_defense::OSHIMA_DEFENSE;
 pub mod maltese_falcon;
 pub use maltese_falcon::MALTESE_FALCON;
+pub mod oshima_defense;
+pub use oshima_defense::OSHIMA_DEFENSE;
+pub mod stummer_gambit;
+pub use stummer_gambit::STUMMER_GAMBIT;

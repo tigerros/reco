@@ -58,10 +58,10 @@ assert_eq!(CLOSED_VARIATION.original_name(), "Catalan Opening: Closed Variation"
 pub static CLOSED_VARIATION: Variation = Variation {
     name: "Closed Variation",
     parent: Some(&super::CATALAN_OPENING),
-    variations: &[&TRADITIONAL_VARIATION, &RABINOVICH_VARIATION],
+    variations: &[&RABINOVICH_VARIATION, &TRADITIONAL_VARIATION],
     lines: &[],
 };
-pub mod traditional_variation;
-pub use traditional_variation::TRADITIONAL_VARIATION;
 pub mod rabinovich_variation;
 pub use rabinovich_variation::RABINOVICH_VARIATION;
+pub mod traditional_variation;
+pub use traditional_variation::TRADITIONAL_VARIATION;

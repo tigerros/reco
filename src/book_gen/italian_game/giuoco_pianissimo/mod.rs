@@ -62,8 +62,8 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
         &CANAL_VARIATION,
         &DUBOIS_VARIATION,
         &ITALIAN_FOUR_KNIGHTS_VARIATION,
-        &NORMAL,
         &LUCCHINI_GAMBIT,
+        &NORMAL,
     ],
     lines: &[
         Line {
@@ -280,7 +280,7 @@ pub mod dubois_variation;
 pub use dubois_variation::DUBOIS_VARIATION;
 pub mod italian_four_knights_variation;
 pub use italian_four_knights_variation::ITALIAN_FOUR_KNIGHTS_VARIATION;
-pub mod normal;
-pub use normal::NORMAL;
 pub mod lucchini_gambit;
 pub use lucchini_gambit::LUCCHINI_GAMBIT;
+pub mod normal;
+pub use normal::NORMAL;

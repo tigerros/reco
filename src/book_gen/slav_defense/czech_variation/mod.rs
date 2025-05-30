@@ -59,13 +59,13 @@ pub static CZECH_VARIATION: Variation = Variation {
     name: "Czech Variation",
     parent: Some(&super::SLAV_DEFENSE),
     variations: &[
-        &KRAUSE_ATTACK,
         &BLED_ATTACK,
-        &WIESBADEN_VARIATION,
-        &CLASSICAL_SYSTEM,
         &CARLSBAD_VARIATION,
-        &LASKER_VARIATION,
+        &CLASSICAL_SYSTEM,
         &DUTCH_VARIATION,
+        &KRAUSE_ATTACK,
+        &LASKER_VARIATION,
+        &WIESBADEN_VARIATION,
     ],
     lines: &[Line {
         parent: &CZECH_VARIATION,
@@ -181,17 +181,17 @@ pub static CZECH_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod krause_attack;
-pub use krause_attack::KRAUSE_ATTACK;
 pub mod bled_attack;
 pub use bled_attack::BLED_ATTACK;
-pub mod wiesbaden_variation;
-pub use wiesbaden_variation::WIESBADEN_VARIATION;
-pub mod classical_system;
-pub use classical_system::CLASSICAL_SYSTEM;
 pub mod carlsbad_variation;
 pub use carlsbad_variation::CARLSBAD_VARIATION;
-pub mod lasker_variation;
-pub use lasker_variation::LASKER_VARIATION;
+pub mod classical_system;
+pub use classical_system::CLASSICAL_SYSTEM;
 pub mod dutch_variation;
 pub use dutch_variation::DUTCH_VARIATION;
+pub mod krause_attack;
+pub use krause_attack::KRAUSE_ATTACK;
+pub mod lasker_variation;
+pub use lasker_variation::LASKER_VARIATION;
+pub mod wiesbaden_variation;
+pub use wiesbaden_variation::WIESBADEN_VARIATION;

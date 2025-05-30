@@ -59,8 +59,8 @@ pub static TRAXLER_COUNTERATTACK: Variation = Variation {
     name: "Traxler Counterattack",
     parent: Some(&super::TWO_KNIGHTS_DEFENSE),
     variations: &[
-        &KING_MARCH_LINE,
         &BISHOP_SACRIFICE_LINE,
+        &KING_MARCH_LINE,
         &KNIGHT_SACRIFICE_LINE,
     ],
     lines: &[Line {
@@ -163,9 +163,9 @@ pub static TRAXLER_COUNTERATTACK: Variation = Variation {
         },
     }],
 };
-pub mod king_march_line;
-pub use king_march_line::KING_MARCH_LINE;
 pub mod bishop_sacrifice_line;
 pub use bishop_sacrifice_line::BISHOP_SACRIFICE_LINE;
+pub mod king_march_line;
+pub use king_march_line::KING_MARCH_LINE;
 pub mod knight_sacrifice_line;
 pub use knight_sacrifice_line::KNIGHT_SACRIFICE_LINE;

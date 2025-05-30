@@ -33,7 +33,7 @@ pub fn find_line_from_moves(
 
     // Reverse them otherwise it just finds the root
     for setup in setups.iter().rev() {
-        if let Some(found) = find_line_from_setup(&setup) {
+        if let Some(found) = find_line_from_setup(setup) {
             return Ok(Some(found));
         }
     }

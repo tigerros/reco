@@ -58,7 +58,7 @@ assert_eq!(NIMZOWITSCH_VARIATION.original_name(), "Philidor Defense: Nimzowitsch
 pub static NIMZOWITSCH_VARIATION: Variation = Variation {
     name: "Nimzowitsch Variation",
     parent: Some(&super::PHILIDOR_DEFENSE),
-    variations: &[&SOKOLSKY_VARIATION, &KLEIN_VARIATION, &RELLSTAB_VARIATION],
+    variations: &[&KLEIN_VARIATION, &RELLSTAB_VARIATION, &SOKOLSKY_VARIATION],
     lines: &[
         Line {
             parent: &NIMZOWITSCH_VARIATION,
@@ -239,9 +239,9 @@ pub static NIMZOWITSCH_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod sokolsky_variation;
-pub use sokolsky_variation::SOKOLSKY_VARIATION;
 pub mod klein_variation;
 pub use klein_variation::KLEIN_VARIATION;
 pub mod rellstab_variation;
 pub use rellstab_variation::RELLSTAB_VARIATION;
+pub mod sokolsky_variation;
+pub use sokolsky_variation::SOKOLSKY_VARIATION;

@@ -59,15 +59,15 @@ pub static BLACKMAR_DIEMER_GAMBIT: Variation = Variation {
     name: "Blackmar-Diemer Gambit",
     parent: None,
     variations: &[
+        &BLACKMAR_GAMBIT,
+        &DIEMER_ROSENBERG_ATTACK,
         &FRITZ_ATTACK,
+        &LEMBERGER_COUNTERGAMBIT,
+        &NETHERLANDS_VARIATION,
         &RASA_STUDIER_GAMBIT,
         &REVERSED_ALBIN_COUNTERGAMBIT,
-        &VON_POPIEL_GAMBIT,
-        &DIEMER_ROSENBERG_ATTACK,
-        &BLACKMAR_GAMBIT,
         &ZELLER_DEFENSE,
-        &NETHERLANDS_VARIATION,
-        &LEMBERGER_COUNTERGAMBIT,
+        &VON_POPIEL_GAMBIT,
     ],
     lines: &[
         Line {
@@ -221,21 +221,21 @@ pub static BLACKMAR_DIEMER_GAMBIT: Variation = Variation {
         },
     ],
 };
+pub mod blackmar_gambit;
+pub use blackmar_gambit::BLACKMAR_GAMBIT;
+pub mod diemer_rosenberg_attack;
+pub use diemer_rosenberg_attack::DIEMER_ROSENBERG_ATTACK;
 pub mod fritz_attack;
 pub use fritz_attack::FRITZ_ATTACK;
+pub mod lemberger_countergambit;
+pub use lemberger_countergambit::LEMBERGER_COUNTERGAMBIT;
+pub mod netherlands_variation;
+pub use netherlands_variation::NETHERLANDS_VARIATION;
 pub mod rasa_studier_gambit;
 pub use rasa_studier_gambit::RASA_STUDIER_GAMBIT;
 pub mod reversed_albin_countergambit;
 pub use reversed_albin_countergambit::REVERSED_ALBIN_COUNTERGAMBIT;
-pub mod von_popiel_gambit;
-pub use von_popiel_gambit::VON_POPIEL_GAMBIT;
-pub mod diemer_rosenberg_attack;
-pub use diemer_rosenberg_attack::DIEMER_ROSENBERG_ATTACK;
-pub mod blackmar_gambit;
-pub use blackmar_gambit::BLACKMAR_GAMBIT;
 pub mod zeller_defense;
 pub use zeller_defense::ZELLER_DEFENSE;
-pub mod netherlands_variation;
-pub use netherlands_variation::NETHERLANDS_VARIATION;
-pub mod lemberger_countergambit;
-pub use lemberger_countergambit::LEMBERGER_COUNTERGAMBIT;
+pub mod von_popiel_gambit;
+pub use von_popiel_gambit::VON_POPIEL_GAMBIT;

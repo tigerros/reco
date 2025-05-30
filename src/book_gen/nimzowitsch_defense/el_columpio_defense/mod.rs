@@ -58,7 +58,7 @@ assert_eq!(EL_COLUMPIO_DEFENSE.original_name(), "Nimzowitsch Defense: El Columpi
 pub static EL_COLUMPIO_DEFENSE: Variation = Variation {
     name: "El Columpio Defense",
     parent: Some(&super::NIMZOWITSCH_DEFENSE),
-    variations: &[&EXCHANGE_VARIATION, &EL_COLUMPIO_GAMBIT, &PIN_VARIATION],
+    variations: &[&EL_COLUMPIO_GAMBIT, &EXCHANGE_VARIATION, &PIN_VARIATION],
     lines: &[Line {
         parent: &EL_COLUMPIO_DEFENSE,
         code: Code {
@@ -145,9 +145,9 @@ pub static EL_COLUMPIO_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod el_columpio_gambit;
 pub use el_columpio_gambit::EL_COLUMPIO_GAMBIT;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod pin_variation;
 pub use pin_variation::PIN_VARIATION;

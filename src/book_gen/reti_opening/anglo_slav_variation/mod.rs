@@ -59,24 +59,24 @@ pub static ANGLO_SLAV_VARIATION: Variation = Variation {
     name: "Anglo-Slav Variation",
     parent: Some(&super::RETI_OPENING),
     variations: &[
+        &BLED_VARIATION,
         &BOGOLJUBOW_VARIATION,
         &CAPABLANCA_VARIATION,
         &LONDON_DEFENSIVE_SYSTEM,
-        &BLED_VARIATION,
-        &TORRE_SYSTEM,
         &NEW_YORK_SYSTEM,
+        &TORRE_SYSTEM,
     ],
     lines: &[],
 };
+pub mod bled_variation;
+pub use bled_variation::BLED_VARIATION;
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
 pub mod capablanca_variation;
 pub use capablanca_variation::CAPABLANCA_VARIATION;
 pub mod london_defensive_system;
 pub use london_defensive_system::LONDON_DEFENSIVE_SYSTEM;
-pub mod bled_variation;
-pub use bled_variation::BLED_VARIATION;
-pub mod torre_system;
-pub use torre_system::TORRE_SYSTEM;
 pub mod new_york_system;
 pub use new_york_system::NEW_YORK_SYSTEM;
+pub mod torre_system;
+pub use torre_system::TORRE_SYSTEM;

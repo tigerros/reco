@@ -58,7 +58,7 @@ assert_eq!(QUIET_SYSTEM.original_name(), "Pirc Defense: Classical Variation, Qui
 pub static QUIET_SYSTEM: Variation = Variation {
     name: "Quiet System",
     parent: Some(&super::CLASSICAL_VARIATION),
-    variations: &[&CZECH_DEFENSE, &CHIGORIN_LINE, &PARMA_DEFENSE],
+    variations: &[&CHIGORIN_LINE, &CZECH_DEFENSE, &PARMA_DEFENSE],
     lines: &[Line {
         parent: &QUIET_SYSTEM,
         code: Code {
@@ -166,9 +166,9 @@ pub static QUIET_SYSTEM: Variation = Variation {
         },
     }],
 };
-pub mod czech_defense;
-pub use czech_defense::CZECH_DEFENSE;
 pub mod chigorin_line;
 pub use chigorin_line::CHIGORIN_LINE;
+pub mod czech_defense;
+pub use czech_defense::CZECH_DEFENSE;
 pub mod parma_defense;
 pub use parma_defense::PARMA_DEFENSE;

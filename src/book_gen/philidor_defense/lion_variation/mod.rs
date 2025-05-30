@@ -59,12 +59,12 @@ pub static LION_VARIATION: Variation = Variation {
     name: "Lion Variation",
     parent: Some(&super::PHILIDOR_DEFENSE),
     variations: &[
-        &DELAYED_BISHOP_SACRIFICE,
-        &SHIROV_GAMBIT,
-        &LIONS_CLAW,
-        &SOZIN_VARIATION,
         &BISHOP_SACRIFICE,
+        &DELAYED_BISHOP_SACRIFICE,
         &FORCING_LINE,
+        &LIONS_CLAW,
+        &SHIROV_GAMBIT,
+        &SOZIN_VARIATION,
     ],
     lines: &[Line {
         parent: &LION_VARIATION,
@@ -166,15 +166,15 @@ pub static LION_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod delayed_bishop_sacrifice;
-pub use delayed_bishop_sacrifice::DELAYED_BISHOP_SACRIFICE;
-pub mod shirov_gambit;
-pub use shirov_gambit::SHIROV_GAMBIT;
-pub mod lions_claw;
-pub use lions_claw::LIONS_CLAW;
-pub mod sozin_variation;
-pub use sozin_variation::SOZIN_VARIATION;
 pub mod bishop_sacrifice;
 pub use bishop_sacrifice::BISHOP_SACRIFICE;
+pub mod delayed_bishop_sacrifice;
+pub use delayed_bishop_sacrifice::DELAYED_BISHOP_SACRIFICE;
 pub mod forcing_line;
 pub use forcing_line::FORCING_LINE;
+pub mod lions_claw;
+pub use lions_claw::LIONS_CLAW;
+pub mod shirov_gambit;
+pub use shirov_gambit::SHIROV_GAMBIT;
+pub mod sozin_variation;
+pub use sozin_variation::SOZIN_VARIATION;

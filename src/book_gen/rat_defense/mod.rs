@@ -59,33 +59,33 @@ pub static RAT_DEFENSE: Variation = Variation {
     name: "Rat Defense",
     parent: None,
     variations: &[
-        &PETRUCCIOLI_ATTACK,
-        &SPIKE_ATTACK,
-        &SMALL_CENTER_DEFENSE,
-        &ANTAL_DEFENSE,
-        &ENGLISH_RAT,
         &ACCELERATED_GURGENIDZE,
+        &ANTAL_DEFENSE,
         &BALOGH_DEFENSE,
+        &ENGLISH_RAT,
         &FULLER_GAMBIT,
         &HARMONIST,
+        &PETRUCCIOLI_ATTACK,
+        &SMALL_CENTER_DEFENSE,
+        &SPIKE_ATTACK,
     ],
     lines: &[],
 };
-pub mod petruccioli_attack;
-pub use petruccioli_attack::PETRUCCIOLI_ATTACK;
-pub mod spike_attack;
-pub use spike_attack::SPIKE_ATTACK;
-pub mod small_center_defense;
-pub use small_center_defense::SMALL_CENTER_DEFENSE;
-pub mod antal_defense;
-pub use antal_defense::ANTAL_DEFENSE;
-pub mod english_rat;
-pub use english_rat::ENGLISH_RAT;
 pub mod accelerated_gurgenidze;
 pub use accelerated_gurgenidze::ACCELERATED_GURGENIDZE;
+pub mod antal_defense;
+pub use antal_defense::ANTAL_DEFENSE;
 pub mod balogh_defense;
 pub use balogh_defense::BALOGH_DEFENSE;
+pub mod english_rat;
+pub use english_rat::ENGLISH_RAT;
 pub mod fuller_gambit;
 pub use fuller_gambit::FULLER_GAMBIT;
 pub mod harmonist;
 pub use harmonist::HARMONIST;
+pub mod petruccioli_attack;
+pub use petruccioli_attack::PETRUCCIOLI_ATTACK;
+pub mod small_center_defense;
+pub use small_center_defense::SMALL_CENTER_DEFENSE;
+pub mod spike_attack;
+pub use spike_attack::SPIKE_ATTACK;

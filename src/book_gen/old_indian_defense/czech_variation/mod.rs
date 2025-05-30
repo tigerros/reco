@@ -58,10 +58,10 @@ assert_eq!(CZECH_VARIATION.original_name(), "Old Indian Defense: Czech Variation
 pub static CZECH_VARIATION: Variation = Variation {
     name: "Czech Variation",
     parent: Some(&super::OLD_INDIAN_DEFENSE),
-    variations: &[&WITH_NF3, &WITH_NC3],
+    variations: &[&WITH_NC3, &WITH_NF3],
     lines: &[],
 };
-pub mod with_nf3;
-pub use with_nf3::WITH_NF3;
 pub mod with_nc3;
 pub use with_nc3::WITH_NC3;
+pub mod with_nf3;
+pub use with_nf3::WITH_NF3;

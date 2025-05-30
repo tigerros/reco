@@ -58,7 +58,7 @@ assert_eq!(CLASSICAL_VARIATION.original_name(), "Neo-Grünfeld Defense: Classica
 pub static CLASSICAL_VARIATION: Variation = Variation {
     name: "Classical Variation",
     parent: Some(&super::NEO_GRUNFELD_DEFENSE),
-    variations: &[&MODERN_DEFENSE, &POLGAR_VARIATION, &ORIGINAL_DEFENSE],
+    variations: &[&MODERN_DEFENSE, &ORIGINAL_DEFENSE, &POLGAR_VARIATION],
     lines: &[Line {
         parent: &CLASSICAL_VARIATION,
         code: Code {
@@ -170,7 +170,7 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
 };
 pub mod modern_defense;
 pub use modern_defense::MODERN_DEFENSE;
-pub mod polgar_variation;
-pub use polgar_variation::POLGAR_VARIATION;
 pub mod original_defense;
 pub use original_defense::ORIGINAL_DEFENSE;
+pub mod polgar_variation;
+pub use polgar_variation::POLGAR_VARIATION;

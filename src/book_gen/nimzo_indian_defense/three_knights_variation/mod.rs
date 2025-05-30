@@ -58,7 +58,7 @@ assert_eq!(THREE_KNIGHTS_VARIATION.original_name(), "Nimzo-Indian Defense: Three
 pub static THREE_KNIGHTS_VARIATION: Variation = Variation {
     name: "Three Knights Variation",
     parent: Some(&super::NIMZO_INDIAN_DEFENSE),
-    variations: &[&KORCHNOI_VARIATION, &SHOCRON_GAMBIT, &EUWE_VARIATION],
+    variations: &[&EUWE_VARIATION, &KORCHNOI_VARIATION, &SHOCRON_GAMBIT],
     lines: &[Line {
         parent: &THREE_KNIGHTS_VARIATION,
         code: Code {
@@ -152,9 +152,9 @@ pub static THREE_KNIGHTS_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod euwe_variation;
+pub use euwe_variation::EUWE_VARIATION;
 pub mod korchnoi_variation;
 pub use korchnoi_variation::KORCHNOI_VARIATION;
 pub mod shocron_gambit;
 pub use shocron_gambit::SHOCRON_GAMBIT;
-pub mod euwe_variation;
-pub use euwe_variation::EUWE_VARIATION;

@@ -59,10 +59,10 @@ pub static MAX_LANGE_ATTACK: Variation = Variation {
     name: "Max Lange Attack",
     parent: Some(&super::TWO_KNIGHTS_DEFENSE),
     variations: &[
-        &KRAUSE_VARIATION,
-        &RUBINSTEIN_VARIATION,
         &BERGER_VARIATION,
+        &KRAUSE_VARIATION,
         &LOMAN_DEFENSE,
+        &RUBINSTEIN_VARIATION,
     ],
     lines: &[Line {
         parent: &MAX_LANGE_ATTACK,
@@ -179,11 +179,11 @@ pub static MAX_LANGE_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod krause_variation;
-pub use krause_variation::KRAUSE_VARIATION;
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod berger_variation;
 pub use berger_variation::BERGER_VARIATION;
+pub mod krause_variation;
+pub use krause_variation::KRAUSE_VARIATION;
 pub mod loman_defense;
 pub use loman_defense::LOMAN_DEFENSE;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;

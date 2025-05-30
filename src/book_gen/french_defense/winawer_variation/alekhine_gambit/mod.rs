@@ -58,10 +58,10 @@ assert_eq!(ALEKHINE_GAMBIT.original_name(), "French Defense: Winawer Variation, 
 pub static ALEKHINE_GAMBIT: Variation = Variation {
     name: "Alekhine Gambit",
     parent: Some(&super::WINAWER_VARIATION),
-    variations: &[&KAN_VARIATION, &ALATORTSEV_VARIATION],
+    variations: &[&ALATORTSEV_VARIATION, &KAN_VARIATION],
     lines: &[],
 };
-pub mod kan_variation;
-pub use kan_variation::KAN_VARIATION;
 pub mod alatortsev_variation;
 pub use alatortsev_variation::ALATORTSEV_VARIATION;
+pub mod kan_variation;
+pub use kan_variation::KAN_VARIATION;

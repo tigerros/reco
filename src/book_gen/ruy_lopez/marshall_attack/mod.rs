@@ -60,9 +60,9 @@ pub static MARSHALL_ATTACK: Variation = Variation {
     parent: Some(&super::RUY_LOPEZ),
     variations: &[
         &MAIN_LINE,
+        &MODERN_MAIN_LINE,
         &MODERN_VARIATION,
         &ORIGINAL_MARSHALL_ATTACK,
-        &MODERN_MAIN_LINE,
         &RE3_VARIATION,
         &STEINER_VARIATION,
     ],
@@ -212,12 +212,12 @@ pub static MARSHALL_ATTACK: Variation = Variation {
 };
 pub mod main_line;
 pub use main_line::MAIN_LINE;
+pub mod modern_main_line;
+pub use modern_main_line::MODERN_MAIN_LINE;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
 pub mod original_marshall_attack;
 pub use original_marshall_attack::ORIGINAL_MARSHALL_ATTACK;
-pub mod modern_main_line;
-pub use modern_main_line::MODERN_MAIN_LINE;
 pub mod re3_variation;
 pub use re3_variation::RE3_VARIATION;
 pub mod steiner_variation;

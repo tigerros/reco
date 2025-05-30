@@ -58,7 +58,7 @@ assert_eq!(CLASSICAL_DEFENSE.original_name(), "Torre Attack: Classical Defense")
 pub static CLASSICAL_DEFENSE: Variation = Variation {
     name: "Classical Defense",
     parent: Some(&super::TORRE_ATTACK),
-    variations: &[&PETROSIAN_GAMBIT, &NIMZOWITSCH_VARIATION],
+    variations: &[&NIMZOWITSCH_VARIATION, &PETROSIAN_GAMBIT],
     lines: &[Line {
         parent: &CLASSICAL_DEFENSE,
         code: Code {
@@ -138,7 +138,7 @@ pub static CLASSICAL_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod petrosian_gambit;
-pub use petrosian_gambit::PETROSIAN_GAMBIT;
 pub mod nimzowitsch_variation;
 pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
+pub mod petrosian_gambit;
+pub use petrosian_gambit::PETROSIAN_GAMBIT;

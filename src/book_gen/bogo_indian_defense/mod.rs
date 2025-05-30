@@ -60,14 +60,14 @@ pub static BOGO_INDIAN_DEFENSE: Variation = Variation {
     parent: None,
     variations: &[
         &EXCHANGE_VARIATION,
-        &WADE_SMYSLOV_VARIATION,
-        &HAITI_VARIATION,
-        &RETREAT_VARIATION,
-        &MONTICELLI_TRAP,
-        &VITOLINS_VARIATION,
-        &NIMZOWITSCH_VARIATION,
         &GRUNFELD_VARIATION,
+        &HAITI_VARIATION,
+        &MONTICELLI_TRAP,
         &NEW_ENGLAND_VARIATION,
+        &NIMZOWITSCH_VARIATION,
+        &RETREAT_VARIATION,
+        &VITOLINS_VARIATION,
+        &WADE_SMYSLOV_VARIATION,
     ],
     lines: &[Line {
         parent: &BOGO_INDIAN_DEFENSE,
@@ -157,19 +157,19 @@ pub static BOGO_INDIAN_DEFENSE: Variation = Variation {
 };
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod wade_smyslov_variation;
-pub use wade_smyslov_variation::WADE_SMYSLOV_VARIATION;
-pub mod haiti_variation;
-pub use haiti_variation::HAITI_VARIATION;
-pub mod retreat_variation;
-pub use retreat_variation::RETREAT_VARIATION;
-pub mod monticelli_trap;
-pub use monticelli_trap::MONTICELLI_TRAP;
-pub mod vitolins_variation;
-pub use vitolins_variation::VITOLINS_VARIATION;
-pub mod nimzowitsch_variation;
-pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
 pub mod grunfeld_variation;
 pub use grunfeld_variation::GRUNFELD_VARIATION;
+pub mod haiti_variation;
+pub use haiti_variation::HAITI_VARIATION;
+pub mod monticelli_trap;
+pub use monticelli_trap::MONTICELLI_TRAP;
 pub mod new_england_variation;
 pub use new_england_variation::NEW_ENGLAND_VARIATION;
+pub mod nimzowitsch_variation;
+pub use nimzowitsch_variation::NIMZOWITSCH_VARIATION;
+pub mod retreat_variation;
+pub use retreat_variation::RETREAT_VARIATION;
+pub mod vitolins_variation;
+pub use vitolins_variation::VITOLINS_VARIATION;
+pub mod wade_smyslov_variation;
+pub use wade_smyslov_variation::WADE_SMYSLOV_VARIATION;

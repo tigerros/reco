@@ -58,10 +58,10 @@ assert_eq!(ENGLISH_ATTACK.original_name(), "Sicilian Defense: Scheveningen Varia
 pub static ENGLISH_ATTACK: Variation = Variation {
     name: "English Attack",
     parent: Some(&super::SCHEVENINGEN_VARIATION),
-    variations: &[&WITH_F3, &WITH_QD2],
+    variations: &[&WITH_QD2, &WITH_F3],
     lines: &[],
 };
-pub mod with_f3;
-pub use with_f3::WITH_F3;
 pub mod with_qd2;
 pub use with_qd2::WITH_QD2;
+pub mod with_f3;
+pub use with_f3::WITH_F3;

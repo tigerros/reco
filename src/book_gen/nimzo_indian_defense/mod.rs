@@ -59,22 +59,22 @@ pub static NIMZO_INDIAN_DEFENSE: Variation = Variation {
     name: "Nimzo-Indian Defense",
     parent: None,
     variations: &[
-        &RAGOZIN_VARIATION,
-        &ST_PETERSBURG_VARIATION,
-        &NORMAL_VARIATION,
-        &SIMAGIN_VARIATION,
-        &RAGOZIN_DEFENSE,
-        &SPIELMANN_VARIATION,
-        &RUBINSTEIN_SYSTEM,
-        &SAMISCH_VARIATION,
-        &LENINGRAD_VARIATION,
-        &DILWORTH_GAMBIT,
         &CLASSICAL_VARIATION,
-        &ROMANISHIN_VARIATION,
-        &MIKENAS_ATTACK,
-        &THREE_KNIGHTS_VARIATION,
+        &DILWORTH_GAMBIT,
         &KMOCH_VARIATION,
+        &LENINGRAD_VARIATION,
+        &MIKENAS_ATTACK,
+        &NORMAL_VARIATION,
+        &RAGOZIN_DEFENSE,
+        &RAGOZIN_VARIATION,
         &RESHEVSKY_VARIATION,
+        &ROMANISHIN_VARIATION,
+        &RUBINSTEIN_SYSTEM,
+        &SIMAGIN_VARIATION,
+        &SPIELMANN_VARIATION,
+        &ST_PETERSBURG_VARIATION,
+        &SAMISCH_VARIATION,
+        &THREE_KNIGHTS_VARIATION,
     ],
     lines: &[
         Line {
@@ -264,35 +264,35 @@ pub static NIMZO_INDIAN_DEFENSE: Variation = Variation {
         },
     ],
 };
-pub mod ragozin_variation;
-pub use ragozin_variation::RAGOZIN_VARIATION;
-pub mod st_petersburg_variation;
-pub use st_petersburg_variation::ST_PETERSBURG_VARIATION;
-pub mod normal_variation;
-pub use normal_variation::NORMAL_VARIATION;
-pub mod simagin_variation;
-pub use simagin_variation::SIMAGIN_VARIATION;
-pub mod ragozin_defense;
-pub use ragozin_defense::RAGOZIN_DEFENSE;
-pub mod spielmann_variation;
-pub use spielmann_variation::SPIELMANN_VARIATION;
-pub mod rubinstein_system;
-pub use rubinstein_system::RUBINSTEIN_SYSTEM;
-pub mod samisch_variation;
-pub use samisch_variation::SAMISCH_VARIATION;
-pub mod leningrad_variation;
-pub use leningrad_variation::LENINGRAD_VARIATION;
-pub mod dilworth_gambit;
-pub use dilworth_gambit::DILWORTH_GAMBIT;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
-pub mod romanishin_variation;
-pub use romanishin_variation::ROMANISHIN_VARIATION;
-pub mod mikenas_attack;
-pub use mikenas_attack::MIKENAS_ATTACK;
-pub mod three_knights_variation;
-pub use three_knights_variation::THREE_KNIGHTS_VARIATION;
+pub mod dilworth_gambit;
+pub use dilworth_gambit::DILWORTH_GAMBIT;
 pub mod kmoch_variation;
 pub use kmoch_variation::KMOCH_VARIATION;
+pub mod leningrad_variation;
+pub use leningrad_variation::LENINGRAD_VARIATION;
+pub mod mikenas_attack;
+pub use mikenas_attack::MIKENAS_ATTACK;
+pub mod normal_variation;
+pub use normal_variation::NORMAL_VARIATION;
+pub mod ragozin_defense;
+pub use ragozin_defense::RAGOZIN_DEFENSE;
+pub mod ragozin_variation;
+pub use ragozin_variation::RAGOZIN_VARIATION;
 pub mod reshevsky_variation;
 pub use reshevsky_variation::RESHEVSKY_VARIATION;
+pub mod romanishin_variation;
+pub use romanishin_variation::ROMANISHIN_VARIATION;
+pub mod rubinstein_system;
+pub use rubinstein_system::RUBINSTEIN_SYSTEM;
+pub mod simagin_variation;
+pub use simagin_variation::SIMAGIN_VARIATION;
+pub mod spielmann_variation;
+pub use spielmann_variation::SPIELMANN_VARIATION;
+pub mod st_petersburg_variation;
+pub use st_petersburg_variation::ST_PETERSBURG_VARIATION;
+pub mod samisch_variation;
+pub use samisch_variation::SAMISCH_VARIATION;
+pub mod three_knights_variation;
+pub use three_knights_variation::THREE_KNIGHTS_VARIATION;

@@ -59,9 +59,9 @@ pub static MIKENAS_DEFENSE: Variation = Variation {
     name: "Mikenas Defense",
     parent: None,
     variations: &[
+        &CANNSTATTER_VARIATION,
         &LITHUANIAN_VARIATION,
         &POZAREK_GAMBIT,
-        &CANNSTATTER_VARIATION,
     ],
     lines: &[Line {
         parent: &MIKENAS_DEFENSE,
@@ -121,9 +121,9 @@ pub static MIKENAS_DEFENSE: Variation = Variation {
         },
     }],
 };
+pub mod cannstatter_variation;
+pub use cannstatter_variation::CANNSTATTER_VARIATION;
 pub mod lithuanian_variation;
 pub use lithuanian_variation::LITHUANIAN_VARIATION;
 pub mod pozarek_gambit;
 pub use pozarek_gambit::POZAREK_GAMBIT;
-pub mod cannstatter_variation;
-pub use cannstatter_variation::CANNSTATTER_VARIATION;

@@ -58,7 +58,7 @@ assert_eq!(FIANCHETTO_VARIATION.original_name(), "Queen's Gambit Declined: Albin
 pub static FIANCHETTO_VARIATION: Variation = Variation {
     name: "Fianchetto Variation",
     parent: Some(&super::ALBIN_COUNTERGAMBIT),
-    variations: &[&BG4_LINE, &BE6_LINE, &BF5_LINE],
+    variations: &[&BE6_LINE, &BF5_LINE, &BG4_LINE],
     lines: &[Line {
         parent: &FIANCHETTO_VARIATION,
         code: Code {
@@ -166,9 +166,9 @@ pub static FIANCHETTO_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod bg4_line;
-pub use bg4_line::BG4_LINE;
 pub mod be6_line;
 pub use be6_line::BE6_LINE;
 pub mod bf5_line;
 pub use bf5_line::BF5_LINE;
+pub mod bg4_line;
+pub use bg4_line::BG4_LINE;

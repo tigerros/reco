@@ -59,21 +59,21 @@ pub static ORTHODOX_DEFENSE: Variation = Variation {
     name: "Orthodox Defense",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
-        &CLASSICAL_VARIATION,
-        &JANOWSKI_VARIATION,
+        &ALEKHINE_VARIATION,
         &BD3_LINE,
         &BOTVINNIK_VARIATION,
-        &RAUZER_VARIATION,
-        &ALEKHINE_VARIATION,
-        &RUBINSTEIN_VARIATION,
         &CAPABLANCA_SYSTEM,
         &CAPABLANCA_VARIATION,
-        &PILLSBURY_VARIATION,
-        &RUBINSTEIN_ATTACK,
-        &MAIN_LINE,
-        &SWISS,
-        &HENNEBERGER_VARIATION,
+        &CLASSICAL_VARIATION,
         &FIANCHETTO_VARIATION,
+        &HENNEBERGER_VARIATION,
+        &JANOWSKI_VARIATION,
+        &MAIN_LINE,
+        &PILLSBURY_VARIATION,
+        &RAUZER_VARIATION,
+        &RUBINSTEIN_ATTACK,
+        &RUBINSTEIN_VARIATION,
+        &SWISS,
     ],
     lines: &[Line {
         parent: &ORTHODOX_DEFENSE,
@@ -197,33 +197,33 @@ pub static ORTHODOX_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-pub mod janowski_variation;
-pub use janowski_variation::JANOWSKI_VARIATION;
+pub mod alekhine_variation;
+pub use alekhine_variation::ALEKHINE_VARIATION;
 pub mod bd3_line;
 pub use bd3_line::BD3_LINE;
 pub mod botvinnik_variation;
 pub use botvinnik_variation::BOTVINNIK_VARIATION;
-pub mod rauzer_variation;
-pub use rauzer_variation::RAUZER_VARIATION;
-pub mod alekhine_variation;
-pub use alekhine_variation::ALEKHINE_VARIATION;
-pub mod rubinstein_variation;
-pub use rubinstein_variation::RUBINSTEIN_VARIATION;
 pub mod capablanca_system;
 pub use capablanca_system::CAPABLANCA_SYSTEM;
 pub mod capablanca_variation;
 pub use capablanca_variation::CAPABLANCA_VARIATION;
-pub mod pillsbury_variation;
-pub use pillsbury_variation::PILLSBURY_VARIATION;
-pub mod rubinstein_attack;
-pub use rubinstein_attack::RUBINSTEIN_ATTACK;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod swiss;
-pub use swiss::SWISS;
-pub mod henneberger_variation;
-pub use henneberger_variation::HENNEBERGER_VARIATION;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod henneberger_variation;
+pub use henneberger_variation::HENNEBERGER_VARIATION;
+pub mod janowski_variation;
+pub use janowski_variation::JANOWSKI_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod pillsbury_variation;
+pub use pillsbury_variation::PILLSBURY_VARIATION;
+pub mod rauzer_variation;
+pub use rauzer_variation::RAUZER_VARIATION;
+pub mod rubinstein_attack;
+pub use rubinstein_attack::RUBINSTEIN_ATTACK;
+pub mod rubinstein_variation;
+pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod swiss;
+pub use swiss::SWISS;

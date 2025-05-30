@@ -59,10 +59,10 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
     name: "Exchange Variation",
     parent: Some(&super::SLAV_DEFENSE),
     variations: &[
-        &SCHALLOPP_VARIATION,
-        &TRIFUNOVIC_VARIATION,
         &BOOR_ATTACK,
+        &SCHALLOPP_VARIATION,
         &SYMMETRICAL_LINE,
+        &TRIFUNOVIC_VARIATION,
     ],
     lines: &[
         Line {
@@ -244,11 +244,11 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod schallopp_variation;
-pub use schallopp_variation::SCHALLOPP_VARIATION;
-pub mod trifunovic_variation;
-pub use trifunovic_variation::TRIFUNOVIC_VARIATION;
 pub mod boor_attack;
 pub use boor_attack::BOOR_ATTACK;
+pub mod schallopp_variation;
+pub use schallopp_variation::SCHALLOPP_VARIATION;
 pub mod symmetrical_line;
 pub use symmetrical_line::SYMMETRICAL_LINE;
+pub mod trifunovic_variation;
+pub use trifunovic_variation::TRIFUNOVIC_VARIATION;

@@ -116,37 +116,30 @@ pub static REVERSED_GRUNFELD: Variation = Variation {
                     to: D4,
                     promotion: None,
                 },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(68398471018755840),
-                        knight: Bitboard(39582420697090),
+                        knight: Bitboard(4611690416475996162),
                         bishop: Bitboard(2594073385365422084),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13687323326467276800),
+                        black: Bitboard(18298974160522575872),
                         white: Bitboard(140572575),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
+                turn: Black,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                     fullmoves
                 } else {
                     #[expect(
@@ -215,30 +208,37 @@ pub static REVERSED_GRUNFELD: Variation = Variation {
                     to: D4,
                     promotion: None,
                 },
+                Normal {
+                    role: Knight,
+                    from: G8,
+                    capture: None,
+                    to: F6,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(68398471018755840),
-                        knight: Bitboard(4611690416475996162),
+                        knight: Bitboard(39582420697090),
                         bishop: Bitboard(2594073385365422084),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18298974160522575872),
+                        black: Bitboard(13687323326467276800),
                         white: Bitboard(140572575),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                     fullmoves
                 } else {
                     #[expect(

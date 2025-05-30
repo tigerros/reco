@@ -59,19 +59,19 @@ pub static TARRASCH_DEFENSE: Variation = Variation {
     name: "Tarrasch Defense",
     parent: None,
     variations: &[
-        &GRUNFELD_GAMBIT,
-        &DUBOV_TARRASCH,
-        &SWEDISH_VARIATION,
-        &RUBINSTEIN_SYSTEM,
-        &WAGNER_VARIATION,
-        &TWO_KNIGHTS_VARIATION,
-        &SCHARA_GAMBIT,
-        &SYMMETRICAL_VARIATION,
-        &VON_HENNIG_GAMBIT,
-        &PRAGUE_VARIATION,
-        &MARSHALL_GAMBIT,
         &CLASSICAL_VARIATION,
+        &DUBOV_TARRASCH,
+        &GRUNFELD_GAMBIT,
+        &MARSHALL_GAMBIT,
+        &PRAGUE_VARIATION,
+        &RUBINSTEIN_SYSTEM,
+        &SCHARA_GAMBIT,
+        &SWEDISH_VARIATION,
+        &SYMMETRICAL_VARIATION,
         &TARRASCH_GAMBIT,
+        &TWO_KNIGHTS_VARIATION,
+        &WAGNER_VARIATION,
+        &VON_HENNIG_GAMBIT,
     ],
     lines: &[Line {
         parent: &TARRASCH_DEFENSE,
@@ -159,29 +159,29 @@ pub static TARRASCH_DEFENSE: Variation = Variation {
         },
     }],
 };
-pub mod grunfeld_gambit;
-pub use grunfeld_gambit::GRUNFELD_GAMBIT;
-pub mod dubov_tarrasch;
-pub use dubov_tarrasch::DUBOV_TARRASCH;
-pub mod swedish_variation;
-pub use swedish_variation::SWEDISH_VARIATION;
-pub mod rubinstein_system;
-pub use rubinstein_system::RUBINSTEIN_SYSTEM;
-pub mod wagner_variation;
-pub use wagner_variation::WAGNER_VARIATION;
-pub mod two_knights_variation;
-pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
-pub mod schara_gambit;
-pub use schara_gambit::SCHARA_GAMBIT;
-pub mod symmetrical_variation;
-pub use symmetrical_variation::SYMMETRICAL_VARIATION;
-pub mod von_hennig_gambit;
-pub use von_hennig_gambit::VON_HENNIG_GAMBIT;
-pub mod prague_variation;
-pub use prague_variation::PRAGUE_VARIATION;
-pub mod marshall_gambit;
-pub use marshall_gambit::MARSHALL_GAMBIT;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
+pub mod dubov_tarrasch;
+pub use dubov_tarrasch::DUBOV_TARRASCH;
+pub mod grunfeld_gambit;
+pub use grunfeld_gambit::GRUNFELD_GAMBIT;
+pub mod marshall_gambit;
+pub use marshall_gambit::MARSHALL_GAMBIT;
+pub mod prague_variation;
+pub use prague_variation::PRAGUE_VARIATION;
+pub mod rubinstein_system;
+pub use rubinstein_system::RUBINSTEIN_SYSTEM;
+pub mod schara_gambit;
+pub use schara_gambit::SCHARA_GAMBIT;
+pub mod swedish_variation;
+pub use swedish_variation::SWEDISH_VARIATION;
+pub mod symmetrical_variation;
+pub use symmetrical_variation::SYMMETRICAL_VARIATION;
 pub mod tarrasch_gambit;
 pub use tarrasch_gambit::TARRASCH_GAMBIT;
+pub mod two_knights_variation;
+pub use two_knights_variation::TWO_KNIGHTS_VARIATION;
+pub mod wagner_variation;
+pub use wagner_variation::WAGNER_VARIATION;
+pub mod von_hennig_gambit;
+pub use von_hennig_gambit::VON_HENNIG_GAMBIT;

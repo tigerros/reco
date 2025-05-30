@@ -59,14 +59,14 @@ pub static VIENNA_GAMBIT: Variation = Variation {
     name: "Vienna Gambit",
     parent: Some(&super::VIENNA_GAME),
     variations: &[
-        &MAIN_LINE,
+        &BARDELEBEN_VARIATION,
         &BREYER_VARIATION,
-        &STEINITZ_VARIATION,
+        &KAUFMANN_VARIATION,
+        &MAIN_LINE,
         &MODERN_VARIATION,
         &PAULSEN_ATTACK,
-        &KAUFMANN_VARIATION,
+        &STEINITZ_VARIATION,
         &WURZBURGER_TRAP,
-        &BARDELEBEN_VARIATION,
     ],
     lines: &[Line {
         parent: &VIENNA_GAMBIT,
@@ -147,19 +147,19 @@ pub static VIENNA_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod main_line;
-pub use main_line::MAIN_LINE;
+pub mod bardeleben_variation;
+pub use bardeleben_variation::BARDELEBEN_VARIATION;
 pub mod breyer_variation;
 pub use breyer_variation::BREYER_VARIATION;
-pub mod steinitz_variation;
-pub use steinitz_variation::STEINITZ_VARIATION;
+pub mod kaufmann_variation;
+pub use kaufmann_variation::KAUFMANN_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
 pub mod paulsen_attack;
 pub use paulsen_attack::PAULSEN_ATTACK;
-pub mod kaufmann_variation;
-pub use kaufmann_variation::KAUFMANN_VARIATION;
+pub mod steinitz_variation;
+pub use steinitz_variation::STEINITZ_VARIATION;
 pub mod wurzburger_trap;
 pub use wurzburger_trap::WURZBURGER_TRAP;
-pub mod bardeleben_variation;
-pub use bardeleben_variation::BARDELEBEN_VARIATION;

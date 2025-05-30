@@ -59,11 +59,11 @@ pub static TROMPOWSKY_ATTACK: Variation = Variation {
     name: "Trompowsky Attack",
     parent: None,
     variations: &[
-        &POISONED_PAWN_VARIATION,
-        &RAPTOR_VARIATION,
-        &EDGE_VARIATION,
         &BORG_VARIATION,
         &CLASSICAL_DEFENSE,
+        &EDGE_VARIATION,
+        &POISONED_PAWN_VARIATION,
+        &RAPTOR_VARIATION,
     ],
     lines: &[Line {
         parent: &TROMPOWSKY_ATTACK,
@@ -130,13 +130,13 @@ pub static TROMPOWSKY_ATTACK: Variation = Variation {
         },
     }],
 };
-pub mod poisoned_pawn_variation;
-pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;
-pub mod raptor_variation;
-pub use raptor_variation::RAPTOR_VARIATION;
-pub mod edge_variation;
-pub use edge_variation::EDGE_VARIATION;
 pub mod borg_variation;
 pub use borg_variation::BORG_VARIATION;
 pub mod classical_defense;
 pub use classical_defense::CLASSICAL_DEFENSE;
+pub mod edge_variation;
+pub use edge_variation::EDGE_VARIATION;
+pub mod poisoned_pawn_variation;
+pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;
+pub mod raptor_variation;
+pub use raptor_variation::RAPTOR_VARIATION;

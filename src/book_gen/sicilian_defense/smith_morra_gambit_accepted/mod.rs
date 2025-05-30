@@ -59,21 +59,21 @@ pub static SMITH_MORRA_GAMBIT_ACCEPTED: Variation = Variation {
     name: "Smith-Morra Gambit Accepted",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &LARSEN_DEFENSE,
-        &TAIMANOV_FORMATION,
-        &MORPHY_DEFENSE,
-        &CLASSICAL_FORMATION,
-        &SIBERIAN_VARIATION,
         &CHICAGO_DEFENSE,
-        &SCHEVENINGEN_FORMATION,
-        &KAN_FORMATION,
-        &FINEGOLD_DEFENSE,
-        &FIANCHETTO_DEFENSE,
-        &PIN_DEFENSE,
+        &CLASSICAL_FORMATION,
         &DANISH_VARIATION,
+        &FIANCHETTO_DEFENSE,
+        &FINEGOLD_DEFENSE,
+        &KAN_FORMATION,
+        &LARSEN_DEFENSE,
+        &MORPHY_DEFENSE,
         &MORPHY_DEFENSE_DEFERRED,
         &PAULSEN_FORMATION,
+        &PIN_DEFENSE,
+        &SCHEVENINGEN_FORMATION,
+        &SIBERIAN_VARIATION,
         &SOZIN_FORMATION,
+        &TAIMANOV_FORMATION,
     ],
     lines: &[Line {
         parent: &SMITH_MORRA_GAMBIT_ACCEPTED,
@@ -161,33 +161,33 @@ pub static SMITH_MORRA_GAMBIT_ACCEPTED: Variation = Variation {
         },
     }],
 };
-pub mod larsen_defense;
-pub use larsen_defense::LARSEN_DEFENSE;
-pub mod taimanov_formation;
-pub use taimanov_formation::TAIMANOV_FORMATION;
-pub mod morphy_defense;
-pub use morphy_defense::MORPHY_DEFENSE;
-pub mod classical_formation;
-pub use classical_formation::CLASSICAL_FORMATION;
-pub mod siberian_variation;
-pub use siberian_variation::SIBERIAN_VARIATION;
 pub mod chicago_defense;
 pub use chicago_defense::CHICAGO_DEFENSE;
-pub mod scheveningen_formation;
-pub use scheveningen_formation::SCHEVENINGEN_FORMATION;
-pub mod kan_formation;
-pub use kan_formation::KAN_FORMATION;
-pub mod finegold_defense;
-pub use finegold_defense::FINEGOLD_DEFENSE;
-pub mod fianchetto_defense;
-pub use fianchetto_defense::FIANCHETTO_DEFENSE;
-pub mod pin_defense;
-pub use pin_defense::PIN_DEFENSE;
+pub mod classical_formation;
+pub use classical_formation::CLASSICAL_FORMATION;
 pub mod danish_variation;
 pub use danish_variation::DANISH_VARIATION;
+pub mod fianchetto_defense;
+pub use fianchetto_defense::FIANCHETTO_DEFENSE;
+pub mod finegold_defense;
+pub use finegold_defense::FINEGOLD_DEFENSE;
+pub mod kan_formation;
+pub use kan_formation::KAN_FORMATION;
+pub mod larsen_defense;
+pub use larsen_defense::LARSEN_DEFENSE;
+pub mod morphy_defense;
+pub use morphy_defense::MORPHY_DEFENSE;
 pub mod morphy_defense_deferred;
 pub use morphy_defense_deferred::MORPHY_DEFENSE_DEFERRED;
 pub mod paulsen_formation;
 pub use paulsen_formation::PAULSEN_FORMATION;
+pub mod pin_defense;
+pub use pin_defense::PIN_DEFENSE;
+pub mod scheveningen_formation;
+pub use scheveningen_formation::SCHEVENINGEN_FORMATION;
+pub mod siberian_variation;
+pub use siberian_variation::SIBERIAN_VARIATION;
 pub mod sozin_formation;
 pub use sozin_formation::SOZIN_FORMATION;
+pub mod taimanov_formation;
+pub use taimanov_formation::TAIMANOV_FORMATION;

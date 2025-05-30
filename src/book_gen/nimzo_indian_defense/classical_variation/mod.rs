@@ -59,15 +59,15 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
     name: "Classical Variation",
     parent: Some(&super::NIMZO_INDIAN_DEFENSE),
     variations: &[
-        &KERES_DEFENSE,
-        &MODERN_VARIATION,
         &BELYAVSKY_GAMBIT,
-        &ZURICH_VARIATION,
-        &ROMANISHIN_GAMBIT,
-        &MILNER_BARRY_VARIATION,
-        &NOA_VARIATION,
         &BERLIN_VARIATION,
+        &KERES_DEFENSE,
+        &MILNER_BARRY_VARIATION,
+        &MODERN_VARIATION,
+        &NOA_VARIATION,
+        &ROMANISHIN_GAMBIT,
         &VITOLINS_ADORJAN_GAMBIT,
+        &ZURICH_VARIATION,
     ],
     lines: &[Line {
         parent: &CLASSICAL_VARIATION,
@@ -162,21 +162,21 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod keres_defense;
-pub use keres_defense::KERES_DEFENSE;
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
 pub mod belyavsky_gambit;
 pub use belyavsky_gambit::BELYAVSKY_GAMBIT;
-pub mod zurich_variation;
-pub use zurich_variation::ZURICH_VARIATION;
-pub mod romanishin_gambit;
-pub use romanishin_gambit::ROMANISHIN_GAMBIT;
-pub mod milner_barry_variation;
-pub use milner_barry_variation::MILNER_BARRY_VARIATION;
-pub mod noa_variation;
-pub use noa_variation::NOA_VARIATION;
 pub mod berlin_variation;
 pub use berlin_variation::BERLIN_VARIATION;
+pub mod keres_defense;
+pub use keres_defense::KERES_DEFENSE;
+pub mod milner_barry_variation;
+pub use milner_barry_variation::MILNER_BARRY_VARIATION;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
+pub mod noa_variation;
+pub use noa_variation::NOA_VARIATION;
+pub mod romanishin_gambit;
+pub use romanishin_gambit::ROMANISHIN_GAMBIT;
 pub mod vitolins_adorjan_gambit;
 pub use vitolins_adorjan_gambit::VITOLINS_ADORJAN_GAMBIT;
+pub mod zurich_variation;
+pub use zurich_variation::ZURICH_VARIATION;

@@ -58,7 +58,7 @@ assert_eq!(ANDERSSEN_COUNTERATTACK.original_name(), "Scandinavian Defense: Ander
 pub static ANDERSSEN_COUNTERATTACK: Variation = Variation {
     name: "Anderssen Counterattack",
     parent: Some(&super::SCANDINAVIAN_DEFENSE),
-    variations: &[&ORTHODOX_ATTACK, &COLLIJN_VARIATION, &GOTEBORG_SYSTEM],
+    variations: &[&COLLIJN_VARIATION, &GOTEBORG_SYSTEM, &ORTHODOX_ATTACK],
     lines: &[Line {
         parent: &ANDERSSEN_COUNTERATTACK,
         code: Code {
@@ -159,9 +159,9 @@ pub static ANDERSSEN_COUNTERATTACK: Variation = Variation {
         },
     }],
 };
-pub mod orthodox_attack;
-pub use orthodox_attack::ORTHODOX_ATTACK;
 pub mod collijn_variation;
 pub use collijn_variation::COLLIJN_VARIATION;
 pub mod goteborg_system;
 pub use goteborg_system::GOTEBORG_SYSTEM;
+pub mod orthodox_attack;
+pub use orthodox_attack::ORTHODOX_ATTACK;

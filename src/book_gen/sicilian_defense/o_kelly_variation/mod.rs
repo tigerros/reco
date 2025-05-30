@@ -59,14 +59,14 @@ pub static O_KELLY_VARIATION: Variation = Variation {
     name: "O'Kelly Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &KIESERITZKY_SYSTEM,
-        &RETI_SYSTEM,
-        &QUIET_SYSTEM,
-        &VENICE_SYSTEM,
-        &NORMAL_SYSTEM,
-        &WING_GAMBIT,
-        &MAROCZY_BIND,
         &ARONIN_SYSTEM,
+        &KIESERITZKY_SYSTEM,
+        &MAROCZY_BIND,
+        &NORMAL_SYSTEM,
+        &QUIET_SYSTEM,
+        &RETI_SYSTEM,
+        &VENICE_SYSTEM,
+        &WING_GAMBIT,
         &YEREVAN_SYSTEM,
     ],
     lines: &[Line {
@@ -141,21 +141,21 @@ pub static O_KELLY_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod kieseritzky_system;
-pub use kieseritzky_system::KIESERITZKY_SYSTEM;
-pub mod reti_system;
-pub use reti_system::RETI_SYSTEM;
-pub mod quiet_system;
-pub use quiet_system::QUIET_SYSTEM;
-pub mod venice_system;
-pub use venice_system::VENICE_SYSTEM;
-pub mod normal_system;
-pub use normal_system::NORMAL_SYSTEM;
-pub mod wing_gambit;
-pub use wing_gambit::WING_GAMBIT;
-pub mod maroczy_bind;
-pub use maroczy_bind::MAROCZY_BIND;
 pub mod aronin_system;
 pub use aronin_system::ARONIN_SYSTEM;
+pub mod kieseritzky_system;
+pub use kieseritzky_system::KIESERITZKY_SYSTEM;
+pub mod maroczy_bind;
+pub use maroczy_bind::MAROCZY_BIND;
+pub mod normal_system;
+pub use normal_system::NORMAL_SYSTEM;
+pub mod quiet_system;
+pub use quiet_system::QUIET_SYSTEM;
+pub mod reti_system;
+pub use reti_system::RETI_SYSTEM;
+pub mod venice_system;
+pub use venice_system::VENICE_SYSTEM;
+pub mod wing_gambit;
+pub use wing_gambit::WING_GAMBIT;
 pub mod yerevan_system;
 pub use yerevan_system::YEREVAN_SYSTEM;

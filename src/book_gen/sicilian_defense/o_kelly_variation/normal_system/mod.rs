@@ -59,10 +59,10 @@ pub static NORMAL_SYSTEM: Variation = Variation {
     name: "Normal System",
     parent: Some(&super::O_KELLY_VARIATION),
     variations: &[
-        &ZAGOROVSKY_LINE,
         &CORTLEVER_GAMBIT,
         &SMITH_MORRA_LINE,
         &TAIMANOV_LINE,
+        &ZAGOROVSKY_LINE,
     ],
     lines: &[Line {
         parent: &NORMAL_SYSTEM,
@@ -143,11 +143,11 @@ pub static NORMAL_SYSTEM: Variation = Variation {
         },
     }],
 };
-pub mod zagorovsky_line;
-pub use zagorovsky_line::ZAGOROVSKY_LINE;
 pub mod cortlever_gambit;
 pub use cortlever_gambit::CORTLEVER_GAMBIT;
 pub mod smith_morra_line;
 pub use smith_morra_line::SMITH_MORRA_LINE;
 pub mod taimanov_line;
 pub use taimanov_line::TAIMANOV_LINE;
+pub mod zagorovsky_line;
+pub use zagorovsky_line::ZAGOROVSKY_LINE;

@@ -59,11 +59,11 @@ pub static STEINITZ_GAMBIT: Variation = Variation {
     name: "Steinitz Gambit",
     parent: Some(&super::WITH_MAX_LANGE_DEFENSE),
     variations: &[
-        &ZUKERTORT_DEFENSE,
-        &MAIN_LINE,
         &FRASER_MINCKWITZ_DEFENSE,
+        &MAIN_LINE,
         &PAULSEN_DEFENSE,
         &SORENSEN_DEFENSE,
+        &ZUKERTORT_DEFENSE,
     ],
     lines: &[Line {
         parent: &STEINITZ_GAMBIT,
@@ -158,13 +158,13 @@ pub static STEINITZ_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod zukertort_defense;
-pub use zukertort_defense::ZUKERTORT_DEFENSE;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
 pub mod fraser_minckwitz_defense;
 pub use fraser_minckwitz_defense::FRASER_MINCKWITZ_DEFENSE;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
 pub mod paulsen_defense;
 pub use paulsen_defense::PAULSEN_DEFENSE;
 pub mod sorensen_defense;
 pub use sorensen_defense::SORENSEN_DEFENSE;
+pub mod zukertort_defense;
+pub use zukertort_defense::ZUKERTORT_DEFENSE;

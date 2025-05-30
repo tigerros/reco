@@ -60,15 +60,15 @@ pub static RICHTER_RAUZER_VARIATION: Variation = Variation {
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
         &CLASSICAL_VARIATION,
-        &PODEBRADY_VARIATION,
-        &NEO_MODERN_VARIATION,
-        &RAUZER_ATTACK,
-        &IVANOV_VARIATION,
-        &VITOLINS_VARIATION,
-        &TRADITIONAL_VARIATION,
-        &EXCHANGE_VARIATION,
         &DRAGON_VARIATION,
+        &EXCHANGE_VARIATION,
+        &IVANOV_VARIATION,
         &MODERN_VARIATION,
+        &NEO_MODERN_VARIATION,
+        &PODEBRADY_VARIATION,
+        &RAUZER_ATTACK,
+        &TRADITIONAL_VARIATION,
+        &VITOLINS_VARIATION,
     ],
     lines: &[
         Line {
@@ -282,13 +282,6 @@ pub static RICHTER_RAUZER_VARIATION: Variation = Variation {
                     to: E6,
                     promotion: None,
                 },
-                Normal {
-                    role: Queen,
-                    from: D1,
-                    capture: None,
-                    to: D3,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
@@ -297,21 +290,21 @@ pub static RICHTER_RAUZER_VARIATION: Variation = Variation {
                         knight: Bitboard(39582553079808),
                         bishop: Bitboard(2594073660243312672),
                         rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303947776),
+                        queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
                         black: Bitboard(13682846063579365376),
-                        white: Bitboard(275281405873),
+                        white: Bitboard(275280881593),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 1,
+                halfmoves: 0,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                     fullmoves
                 } else {
@@ -416,6 +409,13 @@ pub static RICHTER_RAUZER_VARIATION: Variation = Variation {
                     to: E6,
                     promotion: None,
                 },
+                Normal {
+                    role: Queen,
+                    from: D1,
+                    capture: None,
+                    to: D3,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
@@ -424,21 +424,21 @@ pub static RICHTER_RAUZER_VARIATION: Variation = Variation {
                         knight: Bitboard(39582553079808),
                         bishop: Bitboard(2594073660243312672),
                         rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
+                        queen: Bitboard(576460752303947776),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
                         black: Bitboard(13682846063579365376),
-                        white: Bitboard(275280881593),
+                        white: Bitboard(275281405873),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
+                turn: Black,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
+                halfmoves: 1,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                     fullmoves
                 } else {
@@ -456,21 +456,21 @@ pub static RICHTER_RAUZER_VARIATION: Variation = Variation {
 };
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
-pub mod podebrady_variation;
-pub use podebrady_variation::PODEBRADY_VARIATION;
-pub mod neo_modern_variation;
-pub use neo_modern_variation::NEO_MODERN_VARIATION;
-pub mod rauzer_attack;
-pub use rauzer_attack::RAUZER_ATTACK;
-pub mod ivanov_variation;
-pub use ivanov_variation::IVANOV_VARIATION;
-pub mod vitolins_variation;
-pub use vitolins_variation::VITOLINS_VARIATION;
-pub mod traditional_variation;
-pub use traditional_variation::TRADITIONAL_VARIATION;
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod dragon_variation;
 pub use dragon_variation::DRAGON_VARIATION;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod ivanov_variation;
+pub use ivanov_variation::IVANOV_VARIATION;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
+pub mod neo_modern_variation;
+pub use neo_modern_variation::NEO_MODERN_VARIATION;
+pub mod podebrady_variation;
+pub use podebrady_variation::PODEBRADY_VARIATION;
+pub mod rauzer_attack;
+pub use rauzer_attack::RAUZER_ATTACK;
+pub mod traditional_variation;
+pub use traditional_variation::TRADITIONAL_VARIATION;
+pub mod vitolins_variation;
+pub use vitolins_variation::VITOLINS_VARIATION;

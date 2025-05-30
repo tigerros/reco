@@ -59,21 +59,21 @@ pub static CENTRAL_VARIATION: Variation = Variation {
     name: "Central Variation",
     parent: Some(&super::QUEENS_GAMBIT_ACCEPTED),
     variations: &[
-        &RUBINSTEIN_DEFENSE,
-        &MC_DONNELL_DEFENSE,
-        &GRECO_VARIATION,
         &ALEKHINE_SYSTEM,
+        &GRECO_VARIATION,
+        &MC_DONNELL_DEFENSE,
         &MODERN_DEFENSE,
+        &RUBINSTEIN_DEFENSE,
     ],
     lines: &[],
 };
-pub mod rubinstein_defense;
-pub use rubinstein_defense::RUBINSTEIN_DEFENSE;
-pub mod mc_donnell_defense;
-pub use mc_donnell_defense::MC_DONNELL_DEFENSE;
-pub mod greco_variation;
-pub use greco_variation::GRECO_VARIATION;
 pub mod alekhine_system;
 pub use alekhine_system::ALEKHINE_SYSTEM;
+pub mod greco_variation;
+pub use greco_variation::GRECO_VARIATION;
+pub mod mc_donnell_defense;
+pub use mc_donnell_defense::MC_DONNELL_DEFENSE;
 pub mod modern_defense;
 pub use modern_defense::MODERN_DEFENSE;
+pub mod rubinstein_defense;
+pub use rubinstein_defense::RUBINSTEIN_DEFENSE;

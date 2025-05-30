@@ -59,11 +59,11 @@ pub static FOUR_PAWNS_ATTACK: Variation = Variation {
     name: "Four Pawns Attack",
     parent: Some(&super::KINGS_INDIAN_DEFENSE),
     variations: &[
-        &MODERN_DEFENSE,
-        &EXCHANGE_VARIATION,
-        &FLUID_ATTACK,
-        &FLORENTINE_GAMBIT,
         &DYNAMIC_ATTACK,
+        &EXCHANGE_VARIATION,
+        &FLORENTINE_GAMBIT,
+        &FLUID_ATTACK,
+        &MODERN_DEFENSE,
         &NORMAL_ATTACK,
     ],
     lines: &[
@@ -289,15 +289,15 @@ pub static FOUR_PAWNS_ATTACK: Variation = Variation {
         },
     ],
 };
-pub mod modern_defense;
-pub use modern_defense::MODERN_DEFENSE;
-pub mod exchange_variation;
-pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod fluid_attack;
-pub use fluid_attack::FLUID_ATTACK;
-pub mod florentine_gambit;
-pub use florentine_gambit::FLORENTINE_GAMBIT;
 pub mod dynamic_attack;
 pub use dynamic_attack::DYNAMIC_ATTACK;
+pub mod exchange_variation;
+pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod florentine_gambit;
+pub use florentine_gambit::FLORENTINE_GAMBIT;
+pub mod fluid_attack;
+pub use fluid_attack::FLUID_ATTACK;
+pub mod modern_defense;
+pub use modern_defense::MODERN_DEFENSE;
 pub mod normal_attack;
 pub use normal_attack::NORMAL_ATTACK;

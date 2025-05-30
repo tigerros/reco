@@ -58,7 +58,7 @@ assert_eq!(TAYLER_OPENING.original_name(), "King's Pawn Game: Tayler Opening");
 pub static TAYLER_OPENING: Variation = Variation {
     name: "Tayler Opening",
     parent: Some(&super::KINGS_PAWN_GAME),
-    variations: &[&INVERTED_HANHAM, &BASMAN_GAMBIT],
+    variations: &[&BASMAN_GAMBIT, &INVERTED_HANHAM],
     lines: &[
         Line {
             parent: &TAYLER_OPENING,
@@ -232,7 +232,7 @@ pub static TAYLER_OPENING: Variation = Variation {
         },
     ],
 };
-pub mod inverted_hanham;
-pub use inverted_hanham::INVERTED_HANHAM;
 pub mod basman_gambit;
 pub use basman_gambit::BASMAN_GAMBIT;
+pub mod inverted_hanham;
+pub use inverted_hanham::INVERTED_HANHAM;

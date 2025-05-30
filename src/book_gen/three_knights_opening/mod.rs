@@ -61,10 +61,88 @@ pub static THREE_KNIGHTS_OPENING: Variation = Variation {
     variations: &[
         &SCHLECHTER_VARIATION,
         &STEINITZ_DEFENSE,
-        &WINAWER_DEFENSE,
         &STEINITZ_ROSENTHAL_VARIATION,
+        &WINAWER_DEFENSE,
     ],
     lines: &[
+        Line {
+            parent: &THREE_KNIGHTS_OPENING,
+            code: Code {
+                volume: Volume::C,
+                category: Category::new_static::<46>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: E2,
+                    capture: None,
+                    to: E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: E7,
+                    capture: None,
+                    to: E5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B8,
+                    capture: None,
+                    to: C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: Board::from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(67272588421820160),
+                        knight: Bitboard(4611690416476258304),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18297848277795602432),
+                        white: Bitboard(270856125),
+                    },
+                ),
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 3,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
         Line {
             parent: &THREE_KNIGHTS_OPENING,
             code: Code {
@@ -150,91 +228,13 @@ pub static THREE_KNIGHTS_OPENING: Variation = Variation {
                 },
             },
         },
-        Line {
-            parent: &THREE_KNIGHTS_OPENING,
-            code: Code {
-                volume: Volume::C,
-                category: Category::new_static::<46>(),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: E2,
-                    capture: None,
-                    to: E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E7,
-                    capture: None,
-                    to: E5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B8,
-                    capture: None,
-                    to: C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: Board::from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(67272588421820160),
-                        knight: Bitboard(4611690416476258304),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18297848277795602432),
-                        white: Bitboard(270856125),
-                    },
-                ),
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 3,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
     ],
 };
 pub mod schlechter_variation;
 pub use schlechter_variation::SCHLECHTER_VARIATION;
 pub mod steinitz_defense;
 pub use steinitz_defense::STEINITZ_DEFENSE;
-pub mod winawer_defense;
-pub use winawer_defense::WINAWER_DEFENSE;
 pub mod steinitz_rosenthal_variation;
 pub use steinitz_rosenthal_variation::STEINITZ_ROSENTHAL_VARIATION;
+pub mod winawer_defense;
+pub use winawer_defense::WINAWER_DEFENSE;

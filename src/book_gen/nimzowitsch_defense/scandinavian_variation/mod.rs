@@ -60,9 +60,9 @@ pub static SCANDINAVIAN_VARIATION: Variation = Variation {
     parent: Some(&super::NIMZOWITSCH_DEFENSE),
     variations: &[
         &AACHEN_GAMBIT,
+        &ADVANCE_VARIATION,
         &BOGOLJUBOW_VARIATION,
         &EXCHANGE_VARIATION,
-        &ADVANCE_VARIATION,
     ],
     lines: &[Line {
         parent: &SCANDINAVIAN_VARIATION,
@@ -138,9 +138,9 @@ pub static SCANDINAVIAN_VARIATION: Variation = Variation {
 };
 pub mod aachen_gambit;
 pub use aachen_gambit::AACHEN_GAMBIT;
+pub mod advance_variation;
+pub use advance_variation::ADVANCE_VARIATION;
 pub mod bogoljubow_variation;
 pub use bogoljubow_variation::BOGOLJUBOW_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
-pub mod advance_variation;
-pub use advance_variation::ADVANCE_VARIATION;

@@ -59,12 +59,12 @@ pub static THREE_KNIGHTS_VARIATION: Variation = Variation {
     name: "Three Knights Variation",
     parent: Some(&super::GRUNFELD_DEFENSE),
     variations: &[
-        &VIENNA_VARIATION,
-        &PETROSIAN_SYSTEM,
         &BURILLE_VARIATION,
         &HUNGARIAN_ATTACK,
         &HUNGARIAN_VARIATION,
         &PARIS_VARIATION,
+        &PETROSIAN_SYSTEM,
+        &VIENNA_VARIATION,
     ],
     lines: &[
         Line {
@@ -260,10 +260,6 @@ pub static THREE_KNIGHTS_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod vienna_variation;
-pub use vienna_variation::VIENNA_VARIATION;
-pub mod petrosian_system;
-pub use petrosian_system::PETROSIAN_SYSTEM;
 pub mod burille_variation;
 pub use burille_variation::BURILLE_VARIATION;
 pub mod hungarian_attack;
@@ -272,3 +268,7 @@ pub mod hungarian_variation;
 pub use hungarian_variation::HUNGARIAN_VARIATION;
 pub mod paris_variation;
 pub use paris_variation::PARIS_VARIATION;
+pub mod petrosian_system;
+pub use petrosian_system::PETROSIAN_SYSTEM;
+pub mod vienna_variation;
+pub use vienna_variation::VIENNA_VARIATION;

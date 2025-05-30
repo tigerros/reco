@@ -59,13 +59,13 @@ pub static FOUR_KNIGHTS_GAME: Variation = Variation {
     name: "Four Knights Game",
     parent: None,
     variations: &[
+        &GLEK_SYSTEM,
+        &GUNSBERG_VARIATION,
+        &HALLOWEEN_GAMBIT,
         &ITALIAN_VARIATION,
         &SCOTCH_VARIATION,
-        &GLEK_SYSTEM,
-        &HALLOWEEN_GAMBIT,
         &SCOTCH_VARIATION_ACCEPTED,
         &SPANISH_VARIATION,
-        &GUNSBERG_VARIATION,
     ],
     lines: &[Line {
         parent: &FOUR_KNIGHTS_GAME,
@@ -153,17 +153,17 @@ pub static FOUR_KNIGHTS_GAME: Variation = Variation {
         },
     }],
 };
+pub mod glek_system;
+pub use glek_system::GLEK_SYSTEM;
+pub mod gunsberg_variation;
+pub use gunsberg_variation::GUNSBERG_VARIATION;
+pub mod halloween_gambit;
+pub use halloween_gambit::HALLOWEEN_GAMBIT;
 pub mod italian_variation;
 pub use italian_variation::ITALIAN_VARIATION;
 pub mod scotch_variation;
 pub use scotch_variation::SCOTCH_VARIATION;
-pub mod glek_system;
-pub use glek_system::GLEK_SYSTEM;
-pub mod halloween_gambit;
-pub use halloween_gambit::HALLOWEEN_GAMBIT;
 pub mod scotch_variation_accepted;
 pub use scotch_variation_accepted::SCOTCH_VARIATION_ACCEPTED;
 pub mod spanish_variation;
 pub use spanish_variation::SPANISH_VARIATION;
-pub mod gunsberg_variation;
-pub use gunsberg_variation::GUNSBERG_VARIATION;

@@ -59,12 +59,12 @@ pub static ENGLUND_GAMBIT_DECLINED: Variation = Variation {
     name: "Englund Gambit Declined",
     parent: None,
     variations: &[
-        &REVERSED_MOKELE_MBEMBE,
-        &REVERSED_KREBS,
         &DIEMER_COUNTERATTACK,
-        &REVERSED_FRENCH,
         &REVERSED_ALEKHINE,
         &REVERSED_BROOKLYN,
+        &REVERSED_FRENCH,
+        &REVERSED_KREBS,
+        &REVERSED_MOKELE_MBEMBE,
     ],
     lines: &[Line {
         parent: &ENGLUND_GAMBIT_DECLINED,
@@ -131,15 +131,15 @@ pub static ENGLUND_GAMBIT_DECLINED: Variation = Variation {
         },
     }],
 };
-pub mod reversed_mokele_mbembe;
-pub use reversed_mokele_mbembe::REVERSED_MOKELE_MBEMBE;
-pub mod reversed_krebs;
-pub use reversed_krebs::REVERSED_KREBS;
 pub mod diemer_counterattack;
 pub use diemer_counterattack::DIEMER_COUNTERATTACK;
-pub mod reversed_french;
-pub use reversed_french::REVERSED_FRENCH;
 pub mod reversed_alekhine;
 pub use reversed_alekhine::REVERSED_ALEKHINE;
 pub mod reversed_brooklyn;
 pub use reversed_brooklyn::REVERSED_BROOKLYN;
+pub mod reversed_french;
+pub use reversed_french::REVERSED_FRENCH;
+pub mod reversed_krebs;
+pub use reversed_krebs::REVERSED_KREBS;
+pub mod reversed_mokele_mbembe;
+pub use reversed_mokele_mbembe::REVERSED_MOKELE_MBEMBE;

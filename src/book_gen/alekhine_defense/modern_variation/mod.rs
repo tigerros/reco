@@ -59,16 +59,16 @@ pub static MODERN_VARIATION: Variation = Variation {
     name: "Modern Variation",
     parent: Some(&super::ALEKHINE_DEFENSE),
     variations: &[
+        &ALBURT_VARIATION,
+        &ALEKHINE_GAMBIT,
         &ALEKHINE_VARIATION,
         &FLOHR_VARIATION,
-        &ALEKHINE_GAMBIT,
         &KERES_VARIATION,
-        &MAIN_LINE,
-        &SCHMID_VARIATION,
-        &ALBURT_VARIATION,
         &LARSEN_VARIATION,
-        &PANOV_VARIATION,
         &LARSEN_HAAKERT_VARIATION,
+        &MAIN_LINE,
+        &PANOV_VARIATION,
+        &SCHMID_VARIATION,
         &VITOLINS_ATTACK,
     ],
     lines: &[Line {
@@ -164,25 +164,25 @@ pub static MODERN_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod alburt_variation;
+pub use alburt_variation::ALBURT_VARIATION;
+pub mod alekhine_gambit;
+pub use alekhine_gambit::ALEKHINE_GAMBIT;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
 pub mod flohr_variation;
 pub use flohr_variation::FLOHR_VARIATION;
-pub mod alekhine_gambit;
-pub use alekhine_gambit::ALEKHINE_GAMBIT;
 pub mod keres_variation;
 pub use keres_variation::KERES_VARIATION;
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod schmid_variation;
-pub use schmid_variation::SCHMID_VARIATION;
-pub mod alburt_variation;
-pub use alburt_variation::ALBURT_VARIATION;
 pub mod larsen_variation;
 pub use larsen_variation::LARSEN_VARIATION;
-pub mod panov_variation;
-pub use panov_variation::PANOV_VARIATION;
 pub mod larsen_haakert_variation;
 pub use larsen_haakert_variation::LARSEN_HAAKERT_VARIATION;
+pub mod main_line;
+pub use main_line::MAIN_LINE;
+pub mod panov_variation;
+pub use panov_variation::PANOV_VARIATION;
+pub mod schmid_variation;
+pub use schmid_variation::SCHMID_VARIATION;
 pub mod vitolins_attack;
 pub use vitolins_attack::VITOLINS_ATTACK;

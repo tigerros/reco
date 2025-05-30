@@ -59,13 +59,13 @@ pub static ADVANCE_VARIATION: Variation = Variation {
     name: "Advance Variation",
     parent: Some(&super::CARO_KANN_DEFENSE),
     variations: &[
-        &VAN_DER_WIEL_ATTACK,
-        &BOTVINNIK_CARLS_DEFENSE,
-        &SHORT_VARIATION,
         &BAYONET_ATTACK,
-        &PRINS_ATTACK,
-        &TAL_VARIATION,
+        &BOTVINNIK_CARLS_DEFENSE,
         &BRONSTEIN_VARIATION,
+        &PRINS_ATTACK,
+        &SHORT_VARIATION,
+        &TAL_VARIATION,
+        &VAN_DER_WIEL_ATTACK,
     ],
     lines: &[Line {
         parent: &ADVANCE_VARIATION,
@@ -146,17 +146,17 @@ pub static ADVANCE_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod van_der_wiel_attack;
-pub use van_der_wiel_attack::VAN_DER_WIEL_ATTACK;
-pub mod botvinnik_carls_defense;
-pub use botvinnik_carls_defense::BOTVINNIK_CARLS_DEFENSE;
-pub mod short_variation;
-pub use short_variation::SHORT_VARIATION;
 pub mod bayonet_attack;
 pub use bayonet_attack::BAYONET_ATTACK;
-pub mod prins_attack;
-pub use prins_attack::PRINS_ATTACK;
-pub mod tal_variation;
-pub use tal_variation::TAL_VARIATION;
+pub mod botvinnik_carls_defense;
+pub use botvinnik_carls_defense::BOTVINNIK_CARLS_DEFENSE;
 pub mod bronstein_variation;
 pub use bronstein_variation::BRONSTEIN_VARIATION;
+pub mod prins_attack;
+pub use prins_attack::PRINS_ATTACK;
+pub mod short_variation;
+pub use short_variation::SHORT_VARIATION;
+pub mod tal_variation;
+pub use tal_variation::TAL_VARIATION;
+pub mod van_der_wiel_attack;
+pub use van_der_wiel_attack::VAN_DER_WIEL_ATTACK;

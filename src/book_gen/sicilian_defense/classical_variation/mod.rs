@@ -59,10 +59,10 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
     name: "Classical Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
+        &ANTI_SOZIN_VARIATION,
         &DRAGON_TRANSFER,
         &FIANCHETTO_VARIATION,
         &SOZIN_ATTACK,
-        &ANTI_SOZIN_VARIATION,
     ],
     lines: &[
         Line {
@@ -300,11 +300,11 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
         },
     ],
 };
+pub mod anti_sozin_variation;
+pub use anti_sozin_variation::ANTI_SOZIN_VARIATION;
 pub mod dragon_transfer;
 pub use dragon_transfer::DRAGON_TRANSFER;
 pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod sozin_attack;
 pub use sozin_attack::SOZIN_ATTACK;
-pub mod anti_sozin_variation;
-pub use anti_sozin_variation::ANTI_SOZIN_VARIATION;

@@ -59,16 +59,16 @@ pub static SCHEVENINGEN_VARIATION: Variation = Variation {
     name: "Scheveningen Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
-        &DELAYED_KERES_ATTACK,
-        &KERES_ATTACK,
-        &CLASSICAL_VARIATION,
-        &TAL_VARIATION,
-        &FIANCHETTO_VARIATION,
-        &MATANOVIC_ATTACK,
-        &VITOLINS_VARIATION,
-        &ENGLISH_ATTACK,
-        &MODERN_VARIATION,
         &CLASSICAL_MAIN_LINE,
+        &CLASSICAL_VARIATION,
+        &DELAYED_KERES_ATTACK,
+        &ENGLISH_ATTACK,
+        &FIANCHETTO_VARIATION,
+        &KERES_ATTACK,
+        &MATANOVIC_ATTACK,
+        &MODERN_VARIATION,
+        &TAL_VARIATION,
+        &VITOLINS_VARIATION,
     ],
     lines: &[Line {
         parent: &SCHEVENINGEN_VARIATION,
@@ -184,23 +184,23 @@ pub static SCHEVENINGEN_VARIATION: Variation = Variation {
         },
     }],
 };
-pub mod delayed_keres_attack;
-pub use delayed_keres_attack::DELAYED_KERES_ATTACK;
-pub mod keres_attack;
-pub use keres_attack::KERES_ATTACK;
-pub mod classical_variation;
-pub use classical_variation::CLASSICAL_VARIATION;
-pub mod tal_variation;
-pub use tal_variation::TAL_VARIATION;
-pub mod fianchetto_variation;
-pub use fianchetto_variation::FIANCHETTO_VARIATION;
-pub mod matanovic_attack;
-pub use matanovic_attack::MATANOVIC_ATTACK;
-pub mod vitolins_variation;
-pub use vitolins_variation::VITOLINS_VARIATION;
-pub mod english_attack;
-pub use english_attack::ENGLISH_ATTACK;
-pub mod modern_variation;
-pub use modern_variation::MODERN_VARIATION;
 pub mod classical_main_line;
 pub use classical_main_line::CLASSICAL_MAIN_LINE;
+pub mod classical_variation;
+pub use classical_variation::CLASSICAL_VARIATION;
+pub mod delayed_keres_attack;
+pub use delayed_keres_attack::DELAYED_KERES_ATTACK;
+pub mod english_attack;
+pub use english_attack::ENGLISH_ATTACK;
+pub mod fianchetto_variation;
+pub use fianchetto_variation::FIANCHETTO_VARIATION;
+pub mod keres_attack;
+pub use keres_attack::KERES_ATTACK;
+pub mod matanovic_attack;
+pub use matanovic_attack::MATANOVIC_ATTACK;
+pub mod modern_variation;
+pub use modern_variation::MODERN_VARIATION;
+pub mod tal_variation;
+pub use tal_variation::TAL_VARIATION;
+pub mod vitolins_variation;
+pub use vitolins_variation::VITOLINS_VARIATION;

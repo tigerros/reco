@@ -59,11 +59,11 @@ pub static GLIGORIC_SYSTEM: Variation = Variation {
     name: "Gligoric System",
     parent: Some(&super::NORMAL_VARIATION),
     variations: &[
-        &SMYSLOV_VARIATION,
         &BERNSTEIN_DEFENSE,
+        &BRONSTEIN_VARIATION,
         &EXCHANGE_VARIATION,
         &KERES_VARIATION,
-        &BRONSTEIN_VARIATION,
+        &SMYSLOV_VARIATION,
     ],
     lines: &[
         Line {
@@ -318,13 +318,13 @@ pub static GLIGORIC_SYSTEM: Variation = Variation {
         },
     ],
 };
-pub mod smyslov_variation;
-pub use smyslov_variation::SMYSLOV_VARIATION;
 pub mod bernstein_defense;
 pub use bernstein_defense::BERNSTEIN_DEFENSE;
+pub mod bronstein_variation;
+pub use bronstein_variation::BRONSTEIN_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod keres_variation;
 pub use keres_variation::KERES_VARIATION;
-pub mod bronstein_variation;
-pub use bronstein_variation::BRONSTEIN_VARIATION;
+pub mod smyslov_variation;
+pub use smyslov_variation::SMYSLOV_VARIATION;

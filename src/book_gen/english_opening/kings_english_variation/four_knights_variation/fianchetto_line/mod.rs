@@ -82,10 +82,10 @@ pub static FIANCHETTO_LINE: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Pawn,
-                    from: G2,
+                    role: Knight,
+                    from: B1,
                     capture: None,
-                    to: G3,
+                    to: C3,
                     promotion: None,
                 },
                 Normal {
@@ -93,34 +93,6 @@ pub static FIANCHETTO_LINE: Variation = Variation {
                     from: G8,
                     capture: None,
                     to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: F1,
-                    capture: None,
-                    to: G2,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: C4,
-                    capture: Some(Pawn),
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: F6,
-                    capture: Some(Pawn),
-                    to: D5,
                     promotion: None,
                 },
                 Normal {
@@ -139,44 +111,35 @@ pub static FIANCHETTO_LINE: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: G2,
                     capture: None,
-                    to: D3,
+                    to: G3,
                     promotion: None,
                 },
-                Normal {
-                    role: Bishop,
-                    from: F8,
-                    capture: None,
-                    to: E7,
-                    promotion: None,
-                },
-                Castle { king: E1, rook: H1 },
-                Castle { king: E8, rook: H8 },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(65020788344402688),
-                        knight: Bitboard(4432408346626),
-                        bishop: Bitboard(292733975779098628),
-                        rook: Bitboard(2377900603251621921),
+                        pawn: Bitboard(67272588224674560),
+                        knight: Bitboard(39582420959232),
+                        bishop: Bitboard(2594073385365405732),
+                        rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
-                        king: Bitboard(4611686018427387968),
+                        king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(7923806570507403264),
-                        white: Bitboard(6878063),
+                        black: Bitboard(13686197443740303360),
+                        white: Bitboard(73710525),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
-                castling_rights: Bitboard(0),
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 3,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                     fullmoves
                 } else {
                     #[expect(
@@ -444,10 +407,10 @@ pub static FIANCHETTO_LINE: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: B1,
+                    role: Pawn,
+                    from: G2,
                     capture: None,
-                    to: C3,
+                    to: G3,
                     promotion: None,
                 },
                 Normal {
@@ -455,6 +418,34 @@ pub static FIANCHETTO_LINE: Variation = Variation {
                     from: G8,
                     capture: None,
                     to: F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: F1,
+                    capture: None,
+                    to: G2,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: C4,
+                    capture: Some(Pawn),
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: F6,
+                    capture: Some(Pawn),
+                    to: D5,
                     promotion: None,
                 },
                 Normal {
@@ -473,35 +464,44 @@ pub static FIANCHETTO_LINE: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
-                    from: G2,
+                    from: D2,
                     capture: None,
-                    to: G3,
+                    to: D3,
                     promotion: None,
                 },
+                Normal {
+                    role: Bishop,
+                    from: F8,
+                    capture: None,
+                    to: E7,
+                    promotion: None,
+                },
+                Castle { king: E1, rook: H1 },
+                Castle { king: E8, rook: H8 },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(67272588224674560),
-                        knight: Bitboard(39582420959232),
-                        bishop: Bitboard(2594073385365405732),
-                        rook: Bitboard(9295429630892703873),
+                        pawn: Bitboard(65020788344402688),
+                        knight: Bitboard(4432408346626),
+                        bishop: Bitboard(292733975779098628),
+                        rook: Bitboard(2377900603251621921),
                         queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
+                        king: Bitboard(4611686018427387968),
                     },
                     ByColor {
-                        black: Bitboard(13686197443740303360),
-                        white: Bitboard(73710525),
+                        black: Bitboard(7923806570507403264),
+                        white: Bitboard(6878063),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
-                castling_rights: Bitboard(9295429630892703873),
+                turn: White,
+                castling_rights: Bitboard(0),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                halfmoves: 3,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                     fullmoves
                 } else {
                     #[expect(

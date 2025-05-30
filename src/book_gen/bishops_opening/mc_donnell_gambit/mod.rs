@@ -58,7 +58,7 @@ assert_eq!(MC_DONNELL_GAMBIT.original_name(), "Bishop's Opening: McDonnell Gambi
 pub static MC_DONNELL_GAMBIT: Variation = Variation {
     name: "McDonnell Gambit",
     parent: Some(&super::BISHOPS_OPENING),
-    variations: &[&MC_DONNELL_DOUBLE_GAMBIT, &LA_BOURDONNAIS_DENKER_GAMBIT],
+    variations: &[&LA_BOURDONNAIS_DENKER_GAMBIT, &MC_DONNELL_DOUBLE_GAMBIT],
     lines: &[Line {
         parent: &MC_DONNELL_GAMBIT,
         code: Code {
@@ -138,7 +138,7 @@ pub static MC_DONNELL_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod mc_donnell_double_gambit;
-pub use mc_donnell_double_gambit::MC_DONNELL_DOUBLE_GAMBIT;
 pub mod la_bourdonnais_denker_gambit;
 pub use la_bourdonnais_denker_gambit::LA_BOURDONNAIS_DENKER_GAMBIT;
+pub mod mc_donnell_double_gambit;
+pub use mc_donnell_double_gambit::MC_DONNELL_DOUBLE_GAMBIT;

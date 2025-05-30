@@ -59,15 +59,15 @@ pub static KENNEDY_VARIATION: Variation = Variation {
     name: "Kennedy Variation",
     parent: Some(&super::NIMZOWITSCH_DEFENSE),
     variations: &[
+        &BIELEFELDER_GAMBIT,
+        &HAMMER_GAMBIT,
         &HERFORD_GAMBIT,
         &KERES_ATTACK,
         &LINKSSPRINGER_VARIATION,
         &MAIN_LINE,
-        &HAMMER_GAMBIT,
-        &BIELEFELDER_GAMBIT,
+        &PAULSEN_ATTACK,
         &RIEMANN_DEFENSE,
         &DE_SMET_GAMBIT,
-        &PAULSEN_ATTACK,
     ],
     lines: &[Line {
         parent: &KENNEDY_VARIATION,
@@ -141,6 +141,10 @@ pub static KENNEDY_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod bielefelder_gambit;
+pub use bielefelder_gambit::BIELEFELDER_GAMBIT;
+pub mod hammer_gambit;
+pub use hammer_gambit::HAMMER_GAMBIT;
 pub mod herford_gambit;
 pub use herford_gambit::HERFORD_GAMBIT;
 pub mod keres_attack;
@@ -149,13 +153,9 @@ pub mod linksspringer_variation;
 pub use linksspringer_variation::LINKSSPRINGER_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
-pub mod hammer_gambit;
-pub use hammer_gambit::HAMMER_GAMBIT;
-pub mod bielefelder_gambit;
-pub use bielefelder_gambit::BIELEFELDER_GAMBIT;
+pub mod paulsen_attack;
+pub use paulsen_attack::PAULSEN_ATTACK;
 pub mod riemann_defense;
 pub use riemann_defense::RIEMANN_DEFENSE;
 pub mod de_smet_gambit;
 pub use de_smet_gambit::DE_SMET_GAMBIT;
-pub mod paulsen_attack;
-pub use paulsen_attack::PAULSEN_ATTACK;

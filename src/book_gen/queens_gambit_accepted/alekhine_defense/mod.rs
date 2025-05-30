@@ -59,9 +59,9 @@ pub static ALEKHINE_DEFENSE: Variation = Variation {
     name: "Alekhine Defense",
     parent: Some(&super::QUEENS_GAMBIT_ACCEPTED),
     variations: &[
+        &ALATORTSEV_VARIATION,
         &BORISENKO_FURMAN_VARIATION,
         &HABERDITZ_VARIATION,
-        &ALATORTSEV_VARIATION,
     ],
     lines: &[Line {
         parent: &ALEKHINE_DEFENSE,
@@ -149,9 +149,9 @@ pub static ALEKHINE_DEFENSE: Variation = Variation {
         },
     }],
 };
+pub mod alatortsev_variation;
+pub use alatortsev_variation::ALATORTSEV_VARIATION;
 pub mod borisenko_furman_variation;
 pub use borisenko_furman_variation::BORISENKO_FURMAN_VARIATION;
 pub mod haberditz_variation;
 pub use haberditz_variation::HABERDITZ_VARIATION;
-pub mod alatortsev_variation;
-pub use alatortsev_variation::ALATORTSEV_VARIATION;

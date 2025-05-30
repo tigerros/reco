@@ -95,34 +95,20 @@ pub static DE_BRUYCKER_DEFENSE: Variation = Variation {
                     to: A6,
                     promotion: None,
                 },
-                Normal {
-                    role: Knight,
-                    from: B1,
-                    capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: A6,
-                    capture: None,
-                    to: C7,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(70654617603598080),
-                        knight: Bitboard(4612811918334492736),
+                        knight: Bitboard(4611687117939015746),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18302351808703496192),
-                        white: Bitboard(402974717),
+                        black: Bitboard(18301227008308281344),
+                        white: Bitboard(402712575),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -131,8 +117,8 @@ pub static DE_BRUYCKER_DEFENSE: Variation = Variation {
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 3,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                     fullmoves
                 } else {
                     #[expect(
@@ -180,20 +166,34 @@ pub static DE_BRUYCKER_DEFENSE: Variation = Variation {
                     to: A6,
                     promotion: None,
                 },
+                Normal {
+                    role: Knight,
+                    from: B1,
+                    capture: None,
+                    to: C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: A6,
+                    capture: None,
+                    to: C7,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(70654617603598080),
-                        knight: Bitboard(4611687117939015746),
+                        knight: Bitboard(4612811918334492736),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18301227008308281344),
-                        white: Bitboard(402712575),
+                        black: Bitboard(18302351808703496192),
+                        white: Bitboard(402974717),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -202,8 +202,8 @@ pub static DE_BRUYCKER_DEFENSE: Variation = Variation {
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                halfmoves: 3,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                     fullmoves
                 } else {
                     #[expect(

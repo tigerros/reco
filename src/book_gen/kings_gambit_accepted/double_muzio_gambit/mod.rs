@@ -59,10 +59,10 @@ pub static DOUBLE_MUZIO_GAMBIT: Variation = Variation {
     name: "Double Muzio Gambit",
     parent: Some(&super::KINGS_GAMBIT_ACCEPTED),
     variations: &[
-        &YOUNG_GAMBIT,
-        &PAULSEN_DEFENSE,
         &BALDWIN_GAMBIT,
         &BELLO_GAMBIT,
+        &PAULSEN_DEFENSE,
+        &YOUNG_GAMBIT,
     ],
     lines: &[Line {
         parent: &DOUBLE_MUZIO_GAMBIT,
@@ -207,11 +207,11 @@ pub static DOUBLE_MUZIO_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod young_gambit;
-pub use young_gambit::YOUNG_GAMBIT;
-pub mod paulsen_defense;
-pub use paulsen_defense::PAULSEN_DEFENSE;
 pub mod baldwin_gambit;
 pub use baldwin_gambit::BALDWIN_GAMBIT;
 pub mod bello_gambit;
 pub use bello_gambit::BELLO_GAMBIT;
+pub mod paulsen_defense;
+pub use paulsen_defense::PAULSEN_DEFENSE;
+pub mod young_gambit;
+pub use young_gambit::YOUNG_GAMBIT;

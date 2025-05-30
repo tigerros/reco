@@ -103,6 +103,20 @@ pub static RICHTER_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
+                    role: Knight,
+                    from: F6,
+                    capture: Some(Pawn),
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: G1,
+                    capture: None,
+                    to: F3,
+                    promotion: None,
+                },
+                Normal {
                     role: Pawn,
                     from: G7,
                     capture: None,
@@ -113,16 +127,16 @@ pub static RICHTER_VARIATION: Variation = Variation {
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(51580323976242944),
-                        knight: Bitboard(144150372447944770),
+                        pawn: Bitboard(51580289616504576),
+                        knight: Bitboard(144115222437691394),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13814615935098552320),
-                        white: Bitboard(34494015487),
+                        black: Bitboard(13814580785086201856),
+                        white: Bitboard(136374207),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -132,7 +146,7 @@ pub static RICHTER_VARIATION: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                     fullmoves
                 } else {
                     #[expect(
@@ -188,20 +202,6 @@ pub static RICHTER_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: F6,
-                    capture: Some(Pawn),
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G1,
-                    capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
                     role: Pawn,
                     from: G7,
                     capture: None,
@@ -212,16 +212,16 @@ pub static RICHTER_VARIATION: Variation = Variation {
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
-                        pawn: Bitboard(51580289616504576),
-                        knight: Bitboard(144115222437691394),
+                        pawn: Bitboard(51580323976242944),
+                        knight: Bitboard(144150372447944770),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13814580785086201856),
-                        white: Bitboard(136374207),
+                        black: Bitboard(13814615935098552320),
+                        white: Bitboard(34494015487),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -231,7 +231,7 @@ pub static RICHTER_VARIATION: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                     fullmoves
                 } else {
                     #[expect(

@@ -139,19 +139,12 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
                     to: D6,
                     promotion: None,
                 },
-                Normal {
-                    role: Knight,
-                    from: C3,
-                    capture: None,
-                    to: E2,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(65029584701679360),
-                        knight: Bitboard(39582420701184),
+                        knight: Bitboard(39582420959232),
                         bishop: Bitboard(288230384775200772),
                         rook: Bitboard(2377900603251621921),
                         queen: Bitboard(576460752303423496),
@@ -159,16 +152,16 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
                     },
                     ByColor {
                         black: Bitboard(7919346917018959872),
-                        white: Bitboard(8861054829),
+                        white: Bitboard(8861312877),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(0),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 1,
+                halfmoves: 0,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                     fullmoves
                 } else {
@@ -432,20 +425,34 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
                     to: D6,
                     promotion: None,
                 },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: G5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: C6,
+                    capture: None,
+                    to: E7,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(65029584701679360),
-                        knight: Bitboard(39582420959232),
-                        bishop: Bitboard(288230384775200772),
+                        knight: Bitboard(4538784001818624),
+                        bishop: Bitboard(288230659653107712),
                         rook: Bitboard(2377900603251621921),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(4611686018427387968),
                     },
                     ByColor {
-                        black: Bitboard(7919346917018959872),
-                        white: Bitboard(8861312877),
+                        black: Bitboard(7923846118599819264),
+                        white: Bitboard(283739219817),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -454,8 +461,8 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
                 castling_rights: Bitboard(0),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+                halfmoves: 2,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                     fullmoves
                 } else {
                     #[expect(
@@ -548,17 +555,10 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: G5,
-                    promotion: None,
-                },
-                Normal {
                     role: Knight,
-                    from: C6,
+                    from: C3,
                     capture: None,
-                    to: E7,
+                    to: E2,
                     promotion: None,
                 },
             ],
@@ -566,25 +566,25 @@ pub static SYMMETRICAL_VARIATION: Variation = Variation {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(65029584701679360),
-                        knight: Bitboard(4538784001818624),
-                        bishop: Bitboard(288230659653107712),
+                        knight: Bitboard(39582420701184),
+                        bishop: Bitboard(288230384775200772),
                         rook: Bitboard(2377900603251621921),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(4611686018427387968),
                     },
                     ByColor {
-                        black: Bitboard(7923846118599819264),
-                        white: Bitboard(283739219817),
+                        black: Bitboard(7919346917018959872),
+                        white: Bitboard(8861054829),
                     },
                 ),
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
+                turn: Black,
                 castling_rights: Bitboard(0),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 2,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                     fullmoves
                 } else {
                     #[expect(

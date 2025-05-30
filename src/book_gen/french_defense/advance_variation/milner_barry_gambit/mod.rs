@@ -58,7 +58,7 @@ assert_eq!(MILNER_BARRY_GAMBIT.original_name(), "French Defense: Advance Variati
 pub static MILNER_BARRY_GAMBIT: Variation = Variation {
     name: "Milner-Barry Gambit",
     parent: Some(&super::ADVANCE_VARIATION),
-    variations: &[&MAIN_LINE, &SORENSEN_VARIATION, &HECTOR_VARIATION],
+    variations: &[&HECTOR_VARIATION, &MAIN_LINE, &SORENSEN_VARIATION],
     lines: &[Line {
         parent: &MILNER_BARRY_GAMBIT,
         code: Code {
@@ -180,9 +180,9 @@ pub static MILNER_BARRY_GAMBIT: Variation = Variation {
         },
     }],
 };
+pub mod hector_variation;
+pub use hector_variation::HECTOR_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod sorensen_variation;
 pub use sorensen_variation::SORENSEN_VARIATION;
-pub mod hector_variation;
-pub use hector_variation::HECTOR_VARIATION;

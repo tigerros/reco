@@ -58,7 +58,7 @@ assert_eq!(ELEPHANT_GAMBIT.original_name(), "Elephant Gambit");
 pub static ELEPHANT_GAMBIT: Variation = Variation {
     name: "Elephant Gambit",
     parent: None,
-    variations: &[&WASP_VARIATION, &MAROCZY_GAMBIT, &PAULSEN_COUNTERGAMBIT],
+    variations: &[&MAROCZY_GAMBIT, &PAULSEN_COUNTERGAMBIT, &WASP_VARIATION],
     lines: &[Line {
         parent: &ELEPHANT_GAMBIT,
         code: Code {
@@ -131,9 +131,9 @@ pub static ELEPHANT_GAMBIT: Variation = Variation {
         },
     }],
 };
-pub mod wasp_variation;
-pub use wasp_variation::WASP_VARIATION;
 pub mod maroczy_gambit;
 pub use maroczy_gambit::MAROCZY_GAMBIT;
 pub mod paulsen_countergambit;
 pub use paulsen_countergambit::PAULSEN_COUNTERGAMBIT;
+pub mod wasp_variation;
+pub use wasp_variation::WASP_VARIATION;

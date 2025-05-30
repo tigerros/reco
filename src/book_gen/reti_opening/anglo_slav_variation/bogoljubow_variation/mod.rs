@@ -75,10 +75,10 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: G8,
+                    role: Pawn,
+                    from: D7,
                     capture: None,
-                    to: F6,
+                    to: D5,
                     promotion: None,
                 },
                 Normal {
@@ -102,34 +102,20 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                     to: B3,
                     promotion: None,
                 },
-                Normal {
-                    role: Pawn,
-                    from: D7,
-                    capture: None,
-                    to: D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: C1,
-                    capture: None,
-                    to: B2,
-                    promotion: None,
-                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(68402851814242560),
-                        knight: Bitboard(144150372450041858),
-                        bishop: Bitboard(2594073385365406240),
+                        knight: Bitboard(4755801206505340930),
+                        bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(13831438497363263488),
-                        white: Bitboard(69401531),
+                        black: Bitboard(18443089331418562560),
+                        white: Bitboard(69401023),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -138,8 +124,8 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                     fullmoves
                 } else {
                     #[expect(
@@ -252,10 +238,10 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Pawn,
-                    from: D7,
+                    role: Knight,
+                    from: G8,
                     capture: None,
-                    to: D5,
+                    to: F6,
                     promotion: None,
                 },
                 Normal {
@@ -279,20 +265,34 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                     to: B3,
                     promotion: None,
                 },
+                Normal {
+                    role: Pawn,
+                    from: D7,
+                    capture: None,
+                    to: D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: C1,
+                    capture: None,
+                    to: B2,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: Board::from_bitboards(
                     ByRole {
                         pawn: Bitboard(68402851814242560),
-                        knight: Bitboard(4755801206505340930),
-                        bishop: Bitboard(2594073385365405732),
+                        knight: Bitboard(144150372450041858),
+                        bishop: Bitboard(2594073385365406240),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18443089331418562560),
-                        white: Bitboard(69401023),
+                        black: Bitboard(13831438497363263488),
+                        white: Bitboard(69401531),
                     },
                 ),
                 promoted: Bitboard(0),
@@ -301,8 +301,8 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                     fullmoves
                 } else {
                     #[expect(
