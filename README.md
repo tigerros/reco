@@ -27,9 +27,7 @@ To make sure they are up to date, there's a workflow that runs `librarian` every
 See [`librarian`'s README](https://github.com/tigerros/reco/tree/master/librarian/README.md) for information about running.
 
 ## Safety
-`reco` uses unsafe code on two occasions:
-- `code.rs`: converting a string to a `Code` uses `deranged::RangedU8::new_unchecked` with primitive arithmetic. This is replaced with `.unwrap()` if `debug_assertions` are enabled.
-- `concat_slices.rs`: concatenating slices at compile time. This is only used at compile time to build `book::ALL`. Relatively simple and well-documented.
+`reco` declares `#![forbid(unsafe_code)]`.
 
 ## Cloning
 If you clone this repository, **exclude the `src/book` directory from your IDE.**

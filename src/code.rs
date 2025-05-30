@@ -98,18 +98,13 @@ impl FromStr for Code {
         Ok(Self {
             volume,
             #[expect(
-                unsafe_code,
                 clippy::arithmetic_side_effects,
                 clippy::cast_possible_truncation,
                 clippy::as_conversions,
                 clippy::unwrap_used,
                 reason = "both numbers are 0-9. They can't be larger than 99 in this calculation"
             )]
-            category: if cfg!(debug_assertions) {
-                RangedU8::new((digit_one * 10 + digit_two) as u8).unwrap()
-            } else {
-                unsafe { RangedU8::new_unchecked((digit_one * 10 + digit_two) as u8) }
-            },
+            category: RangedU8::new((digit_one * 10 + digit_two) as u8).unwrap(),
         })
     }
 }

@@ -28,8 +28,8 @@
     clippy::unnecessary_safety_doc,
     clippy::tests_outside_test_module
 )]
+#![forbid(unsafe_code)]
 #![deny(
-    unsafe_code,
     clippy::unwrap_used,
     clippy::panic,
     clippy::exit,
@@ -37,7 +37,8 @@
     clippy::unreachable,
     clippy::panic_in_result_fn,
     clippy::indexing_slicing,
-    clippy::string_slice
+    clippy::string_slice,
+    clippy::get_unwrap
 )]
 #![allow(
     clippy::must_use_candidate,

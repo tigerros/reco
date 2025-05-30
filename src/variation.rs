@@ -219,17 +219,17 @@ impl Variation {
         let mut name = String::with_capacity((self.name.len() + parent.name.len()) * 3);
 
         #[expect(
-            unsafe_code,
+            clippy::indexing_slicing,
             reason = "names is guaranteed to have self.name and parent.name"
         )]
-        name.push_str(unsafe { names.get_unchecked(names.len() - 1) });
+        name.push_str(names[names.len() - 1]);
         name.push_str(": ");
 
         let mut i = names.len() - 2;
 
         loop {
-            #[expect(unsafe_code, reason = "i is within bounds")]
-            name.push_str(unsafe { names.get_unchecked(i) });
+            #[expect(clippy::indexing_slicing, reason = "i is within bounds")]
+            name.push_str(names[i]);
 
             if i == 0 {
                 break;
