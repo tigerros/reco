@@ -1,4 +1,5 @@
 use crate::{Category, Volume, volume};
+use core::cmp::Ordering;
 use core::fmt::{Display, Formatter};
 use core::str::FromStr;
 use deranged::RangedU8;
@@ -9,6 +10,60 @@ use deranged::RangedU8;
 pub struct Code {
     pub volume: Volume,
     pub category: Category,
+}
+
+impl From<Code> for u16 {
+    /// Gets a 0-499 value representing the code, by multiplying the volume by 100 and adding the category.
+    ///
+    /// # Examples
+    /// ```rust
+    /// use reco::{Code, Volume, Category};
+    /// assert_eq!(
+    ///     u16::from(Code {
+    ///         volume: Volume::A,
+    ///         category: Category::new_static::<37>()
+    ///     }),
+    ///     37 // 0 * 100 + 37
+    /// );
+    ///
+    /// assert_eq!(
+    ///     u16::from(Code {
+    ///         volume: Volume::E,
+    ///         category: Category::new_static::<6>()
+    ///     }),
+    ///     406 // 4 * 100 + 6
+    /// );
+    /// ```
+    fn from(code: Code) -> Self {
+        #[expect(
+            clippy::arithmetic_side_effects,
+            reason = "u8 * 100 + u8 is not even close to u16::MAX"
+        )]
+        {
+            Self::from(u8::from(code.volume)) * 100 + Self::from(code.category.get())
+        }
+    }
+}
+
+impl PartialOrd for Code {
+    /// Uses <a href="#impl-Ord-for-Code">`impl Ord for Code`</a>, so it's guaranteed to be
+    /// [`Some`].
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        Some(self.cmp(other))
+    }
+}
+
+impl Ord for Code {
+    /// Compares the volume first, then the category.
+    fn cmp(&self, other: &Self) -> Ordering {
+        let volume_cmp = self.volume.cmp(&other.volume);
+
+        if volume_cmp != Ordering::Equal {
+            return volume_cmp;
+        }
+
+        self.category.cmp(&other.category)
+    }
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]

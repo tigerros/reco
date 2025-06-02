@@ -1,5 +1,7 @@
+use core::cmp::Ordering;
 use core::fmt::{Display, Formatter, Write};
 use core::str::FromStr;
+use deranged::RangedU8;
 
 /// The A-E volume of an opening.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -7,15 +9,88 @@ use core::str::FromStr;
 #[cfg_attr(test, derive(proptest_derive::Arbitrary))]
 #[repr(u8)]
 pub enum Volume {
-    A,
+    A = 0,
     B,
     C,
     D,
     E,
 }
 
+impl PartialOrd for Volume {
+    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
+        Some(self.cmp(other))
+    }
+}
+
+impl Ord for Volume {
+    fn cmp(&self, other: &Self) -> Ordering {
+        u8::from(*self).cmp(&u8::from(*other))
+    }
+}
+
 impl Volume {
     pub const ALL: [Self; 5] = [Self::A, Self::B, Self::C, Self::D, Self::E];
+}
+
+impl From<Volume> for u8 {
+    /// Guaranteed to be `<= 4`.
+    ///
+    /// # Examples
+    /// ```rust
+    /// use reco::Volume;
+    /// assert_eq!(u8::from(Volume::A), 0);
+    /// assert_eq!(u8::from(Volume::B), 1);
+    /// assert_eq!(u8::from(Volume::C), 2);
+    /// assert_eq!(u8::from(Volume::D), 3);
+    /// assert_eq!(u8::from(Volume::E), 4);
+    /// ```
+    fn from(volume: Volume) -> Self {
+        #[expect(clippy::as_conversions, reason = "Volume is repr(u8)")]
+        {
+            volume as Self
+        }
+    }
+}
+
+#[expect(
+    clippy::fallible_impl_from,
+    reason = "not actually fallible, see below"
+)]
+impl From<Volume> for RangedU8<0, 4> {
+    fn from(volume: Volume) -> Self {
+        #[expect(
+            clippy::unwrap_used,
+            reason = "conversion is guaranteed to be in 0..=4 range by tests"
+        )]
+        Self::new(u8::from(volume)).unwrap()
+    }
+}
+
+impl From<RangedU8<0, 4>> for Volume {
+    /// Infallibly converts a [`RangedU8`] to a [`Volume`].
+    /// 
+    /// # Examples
+    /// ```rust
+    /// use reco::Volume;
+    /// use deranged::RangedU8;
+    ///
+    /// assert_eq!(Volume::from(RangedU8::new_static::<0>()), Volume::A);
+    /// assert_eq!(Volume::from(RangedU8::new_static::<1>()), Volume::B);
+    /// assert_eq!(Volume::from(RangedU8::new_static::<2>()), Volume::C);
+    /// assert_eq!(Volume::from(RangedU8::new_static::<3>()), Volume::D);
+    /// assert_eq!(Volume::from(RangedU8::new_static::<4>()), Volume::E);
+    /// ```
+    fn from(value: RangedU8<0, 4>) -> Self {
+        match value.get() {
+            0 => Self::A,
+            1 => Self::B,
+            2 => Self::C,
+            3 => Self::D,
+            4 => Self::E,
+            #[expect(clippy::unreachable, reason = "guaranteed to be in 0..=4 range")]
+            _ => unreachable!(),
+        }
+    }
 }
 
 impl From<Volume> for char {
@@ -138,6 +213,18 @@ mod tests {
         #[test]
         fn display_eq_to_char(volume in any::<Volume>()) {
             assert_eq!(volume.to_string(), char::from(volume).to_string());
+        }
+
+        /// Tests that [`Volume`] falls within `0..=4`.
+        #[test]
+        fn within_range(volume in any::<Volume>()) {
+            assert!((0..=4).contains(&u8::from(volume)));
+        }
+
+        /// Similar to [`within_range`], but tests that [`From<Volume>`] for [`RangedU8`] doesn't panic.
+        #[test]
+        fn ranged_doesnt_panic(volume in any::<Volume>()) {
+            let _ = RangedU8::<0, 4>::from(volume);
         }
     }
 }
