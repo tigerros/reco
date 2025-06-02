@@ -48,6 +48,8 @@
     clippy::unreadable_literal,
     reason = "triggers only on the generated bitboards"
 )]
+// build docs.rs-like documentation locally with cargo +nightly doc --all-features --no-deps --open
+#![cfg_attr(docsrs, feature(doc_cfg))]
 
 #[cfg(any(test, feature = "alloc"))]
 extern crate alloc;
@@ -63,6 +65,7 @@ pub use volume::Volume;
 mod book_gen;
 
 #[cfg(feature = "book")]
+#[cfg_attr(docsrs, doc(cfg(feature = "book")))]
 pub mod book;
 mod variation;
 pub use variation::{ValidityError, Variation};

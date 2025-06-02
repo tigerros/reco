@@ -68,7 +68,7 @@ impl From<Volume> for RangedU8<0, 4> {
 
 impl From<RangedU8<0, 4>> for Volume {
     /// Infallibly converts a [`RangedU8`] to a [`Volume`].
-    /// 
+    ///
     /// # Examples
     /// ```rust
     /// use reco::Volume;

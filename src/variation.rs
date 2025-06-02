@@ -79,40 +79,6 @@ impl Variation {
         parent
     }
 
-    /// Like [`Self::validity`], but doesn't error on a non-root variation.
-    ///
-    /// [`ValidityError::NonRoot`] is guaranteed not to occur.
-    fn non_root_validity(&self) -> Result<(), ValidityError> {
-        for variation in self.variations {
-            let Some(parent) = variation.parent else {
-                return Err(ValidityError::MissingParent(variation));
-            };
-
-            if !core::ptr::eq(parent, self) {
-                return Err(ValidityError::IncorrectParent(variation));
-            }
-
-            variation.non_root_validity()?;
-        }
-
-        Ok(())
-    }
-
-    /// Recursively checks if [`Self::variations`] all have `self` as the parent.
-    /// Can only be called on a root variation.
-    ///
-    /// # Errors
-    /// See [`ValidityError`].
-    pub fn validity(&self) -> Result<(), ValidityError> {
-        if self.parent.is_some() {
-            return Err(ValidityError::NonRoot);
-        }
-
-        self.non_root_validity()?;
-
-        Ok(())
-    }
-
     /// Like [`Self::walk`], but also walks `self` initially.
     pub fn walk_with_self<F, T>(&'static self, walker: &mut F) -> Option<T>
     where
@@ -153,7 +119,42 @@ impl Variation {
         })
     }
 
+    /// Like [`Self::validity`], but doesn't error on a non-root variation.
+    ///
+    /// [`ValidityError::NonRoot`] is guaranteed not to occur.
+    fn non_root_validity(&self) -> Result<(), ValidityError> {
+        for variation in self.variations {
+            let Some(parent) = variation.parent else {
+                return Err(ValidityError::MissingParent(variation));
+            };
+
+            if !core::ptr::eq(parent, self) {
+                return Err(ValidityError::IncorrectParent(variation));
+            }
+
+            variation.non_root_validity()?;
+        }
+
+        Ok(())
+    }
+
+    /// Recursively checks if [`Self::variations`] all have `self` as the parent.
+    /// Can only be called on a root variation.
+    ///
+    /// # Errors
+    /// See [`ValidityError`].
+    pub fn validity(&self) -> Result<(), ValidityError> {
+        if self.parent.is_some() {
+            return Err(ValidityError::NonRoot);
+        }
+
+        self.non_root_validity()?;
+
+        Ok(())
+    }
+
     #[cfg(feature = "alloc")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "alloc")))]
     /// Uses [`Self::walk_with_self`] to find a line that matches the given "game".
     ///
     /// That is, the given list of moves played on the given initial position.
@@ -187,6 +188,7 @@ impl Variation {
     }
 
     #[cfg(feature = "alloc")]
+    #[cfg_attr(docsrs, doc(cfg(feature = "alloc")))]
     /// Gets the original name, as seen in [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
     ///
     /// For example, `"Sicilian Defense: Najdorf Variation, Main Line"`.

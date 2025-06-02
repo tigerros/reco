@@ -11,6 +11,7 @@ use shakmaty::Setup;
 use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
 
 #[cfg(feature = "alloc")]
+#[cfg_attr(docsrs, doc(cfg(feature = "alloc")))]
 /// Like [`Variation::find_line_from_moves`](crate::Variation::find_line_from_moves), but
 /// looks through [`book::ALL`].
 ///
