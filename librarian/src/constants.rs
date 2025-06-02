@@ -1,3 +1,5 @@
+/// The source of the runs where to get the artifacts from.
+pub const RUNS_URL: &str = "https://api.github.com/repos/lichess-org/chess-openings/actions/workflows/lint.yml/runs?branch=master";
 /// Where the script should generate the opening files.
 pub const GEN_DIR: &str = "src/book_gen";
 /// Where the script should output the commit SHA of which the changes were sourced from.

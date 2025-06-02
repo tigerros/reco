@@ -1,10 +1,11 @@
+use crate::constants::RUNS_URL;
 use http::header;
 use serde_json::Value;
 use std::time::Duration;
 use ureq::Agent;
 
 /// Fetches the latest workflow artifact archive and corresponding commit using
-/// the [`OWNER`], [`REPO`], [`WORKFLOW`] and [`BRANCH`] constants.
+/// [`RUNS_URL`].
 ///
 /// Requires a `GITHUB_TOKEN` environment variable to download the artifact archive.
 pub fn get_archive_and_commit() -> (Vec<u8>, String) {
@@ -16,12 +17,8 @@ pub fn get_archive_and_commit() -> (Vec<u8>, String) {
         .build()
         .into();
 
-    let runs_url = format!(
-        "https://api.github.com/repos/lichess-org/chess-openings/actions/workflows/lint.yml/runs?branch=master"
-    );
-
     let runs_res: Value = agent
-        .get(runs_url)
+        .get(RUNS_URL)
         .header(header::AUTHORIZATION, &token)
         .call()
         .unwrap()

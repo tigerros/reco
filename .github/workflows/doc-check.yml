@@ -3,12 +3,6 @@ on: [push, pull_request]
 
 jobs:
   doc-check:
-    strategy:
-      matrix:
-        manifest:
-          - "Cargo.toml"
-          - "librarian/Cargo.toml"
-
     runs-on: ubuntu-latest
     env:
       RUSTDOCFLAGS: "-D warnings"
@@ -18,4 +12,4 @@ jobs:
       - uses: taiki-e/install-action@cargo-hack
 
       - name: Doc check
-        run: cargo hack --feature-powerset doc --manifest-path ${{ matrix.manifest }}
+        run: cargo hack --feature-powerset doc --workspace

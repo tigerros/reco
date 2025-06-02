@@ -65,7 +65,7 @@ mod book_gen;
 #[cfg(feature = "book")]
 pub mod book;
 mod variation;
-pub use variation::Variation;
+pub use variation::{ValidityError, Variation};
 
 /// The 0-99 category of an opening.
 pub type Category = deranged::RangedU8<0, 99>;

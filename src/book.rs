@@ -12,7 +12,7 @@ use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
 
 #[cfg(feature = "alloc")]
 /// Like [`Variation::find_line_from_moves`](crate::Variation::find_line_from_moves), but
-/// looks through [`book::ALL`](crate::book::ALL).
+/// looks through [`book::ALL`].
 ///
 /// # Errors
 /// See [`Variation::find_line_from_moves`](crate::Variation::find_line_from_moves).
@@ -42,7 +42,7 @@ pub fn find_line_from_moves(
 }
 
 /// Like [`Variation::find_line_from_setup`](crate::Variation::find_line_from_setup), but
-/// looks through [`book::ALL`](crate::book::ALL).
+/// looks through [`book::ALL`].
 pub fn find_line_from_setup(setup: &Setup) -> Option<&'static Line> {
     for variation in &book::ALL {
         if let Some(found) = variation.find_line_from_setup(setup) {
