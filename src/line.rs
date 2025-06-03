@@ -32,111 +32,33 @@ impl Line {
     }
 }
 
-//
-// #[cfg(test)]
-// mod tests {
-//     use super::*;
-//     use crate::Volume;
-//     use alloc::string::{String, ToString};
-//     use alloc::{format, vec};
-//     use deranged::RangedU8;
-//     use shakmaty::Square;
-//
-//     /// Returns the same opening but with different name types and mixed [`Cow`] variants.
-//     fn opening() -> (
-//         Opening<'static, String>,
-//         Opening<'static, Cow<'static, str>>,
-//     ) {
-//         const SETUP: &Setup = &Setup::initial();
-//
-//         (
-//             Opening {
-//                 code: Code {
-//                     volume: Volume::A,
-//                     category: RangedU8::new_static::<67>(),
-//                 },
-//                 name: Cow::Owned(vec!["Grünfeld".to_string(), "Smyslov".to_string()]),
-//                 moves: Cow::Borrowed(&[Move::Castle {
-//                     king: Square::A2,
-//                     rook: Square::H8,
-//                 }]),
-//                 setup: Cow::Owned(Setup::initial()),
-//             },
-//             Opening {
-//                 code: Code {
-//                     volume: Volume::A,
-//                     category: RangedU8::new_static::<67>(),
-//                 },
-//                 name: Cow::Borrowed(&[Cow::Borrowed("Grünfeld"), Cow::Borrowed("Smyslov")]),
-//                 moves: Cow::Owned(vec![Move::Castle {
-//                     king: Square::A2,
-//                     rook: Square::H8,
-//                 }]),
-//                 setup: Cow::<'static, Setup>::Borrowed(SETUP),
-//             },
-//         )
-//     }
-//
-//     #[test]
-//     fn eq() {
-//         assert_eq!(opening().0, opening().1);
-//     }
-//
-//     #[test]
-//     fn debug() {
-//         assert_eq!(
-//             format!("{:#?}", opening().0),
-//             r#"Opening {
-//     code: Code {
-//         volume: A,
-//         category: 67,
-//     },
-//     name: [
-//         "Grünfeld",
-//         "Smyslov",
-//     ],
-//     moves: [
-//         Castle {
-//             king: A2,
-//             rook: H8,
-//         },
-//     ],
-//     setup: Setup {
-//         board: r n b q k b n r
-//         p p p p p p p p
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         P P P P P P P P
-//         R N B Q K B N R
-//         ,
-//         promoted: . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         ,
-//         pockets: None,
-//         turn: White,
-//         castling_rights: 1 . . . . . . 1
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         . . . . . . . .
-//         1 . . . . . . 1
-//         ,
-//         ep_square: None,
-//         remaining_checks: None,
-//         halfmoves: 0,
-//         fullmoves: 1,
-//     },
-// }"#
-//         );
-//     }
-// }
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use proptest::prelude::*;
+
+    /// Tests that the getters correspond to the fields.
+    #[test]
+    #[cfg(feature = "book")]
+    fn getters() {
+        for variation in crate::book::ALL {
+            variation.walk_with_self(&mut |variation| {
+                for line in variation.lines() {
+                    let Line {
+                        parent,
+                        code,
+                        moves,
+                        setup,
+                    } = line;
+
+                    assert_eq!(line.parent(), *parent);
+                    assert_eq!(line.code(), *code);
+                    assert_eq!(line.moves(), *moves);
+                    assert_eq!(line.setup(), setup);
+                }
+
+                None::<()>
+            });
+        }
+    }
+}

@@ -16,13 +16,25 @@ use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
     reason = "copy semantics conflict with the tree structure"
 )]
 /// A named variation.
-#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+#[derive(Debug, Clone, Hash)]
 pub struct Variation {
     pub(crate) name: &'static str,
     pub(crate) parent: Option<&'static Self>,
     pub(crate) variations: &'static [&'static Self],
     pub(crate) lines: &'static [Line],
 }
+
+impl PartialEq for Variation {
+    /// Uses pointer equality, that is, uses [`core::ptr::eq`].
+    ///
+    /// This is necessary due to the fact that comparing by value will overflow the stack, because
+    /// of the tree structure.
+    fn eq(&self, other: &Self) -> bool {
+        core::ptr::eq(self, other)
+    }
+}
+
+impl Eq for Variation {}
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 /// See [`Variation::validity`].
@@ -39,19 +51,19 @@ impl Variation {
     /// The name of this variation.
     ///
     /// This is not the full name, you'll need to look at all the parents to get that.
-    pub const fn name(&self) -> &'static str {
+    pub const fn name(&'static self) -> &'static str {
         self.name
     }
 
     /// The parent variation of this variation.
     ///
     /// [`None`] if this is a root variation.
-    pub const fn parent(&self) -> Option<&'static Self> {
+    pub const fn parent(&'static self) -> Option<&'static Self> {
         self.parent
     }
 
     /// The variations of this variation.
-    pub const fn variations(&self) -> &'static [&'static Self] {
+    pub const fn variations(&'static self) -> &'static [&'static Self] {
         self.variations
     }
 
@@ -60,14 +72,23 @@ impl Variation {
     /// For example, A05 Zukertort has two lines:
     /// - `1. Nf3 Nf6`
     /// - `1. Nf3 Nf6 2. Nc3 Nc6`
-    pub const fn lines(&self) -> &'static [Line] {
+    pub const fn lines(&'static self) -> &'static [Line] {
         self.lines
     }
 
     /// Finds the root of this variation.
     ///
     /// Returns `self` if `self` is a root variation.
-    pub const fn root(&self) -> &Self {
+    ///
+    /// # Examples
+    /// ```rust
+    /// use reco::book::SICILIAN_DEFENSE;
+    /// use reco::book::sicilian_defense::accelerated_dragon::maroczy_bind::BREYER_VARIATION;
+    ///
+    /// assert_eq!(BREYER_VARIATION.root(), &SICILIAN_DEFENSE);
+    /// assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
+    /// ```
+    pub const fn root(&'static self) -> &'static Self {
         let Some(mut parent) = self.parent else {
             return self;
         };
@@ -79,31 +100,38 @@ impl Variation {
         parent
     }
 
-    /// Like [`Self::walk`], but also walks `self` initially.
-    pub fn walk_with_self<F, T>(&'static self, walker: &mut F) -> Option<T>
-    where
-        F: FnMut(&Self) -> Option<T>,
-    {
-        walker(self)?;
-
-        self.walk(walker)?;
-
-        None
-    }
-
     /// Recursively walks [`Self::variations`], stopping if the
-    /// `walker` returns [`Some`].
+    /// `walker` returns [`Some`], while returning that value.
     ///
     /// First, it walks a variation and then it's subvariations.
     ///
     /// See also [`Self::walk_with_self`].
-    pub fn walk<F, T>(&self, walker: &mut F) -> Option<T>
+    pub fn walk<F, T>(&'static self, walker: &mut F) -> Option<T>
     where
-        F: FnMut(&Self) -> Option<T>,
+        F: FnMut(&'static Self) -> Option<T>,
     {
         for variation in self.variations {
-            walker(variation)?;
-            variation.walk(walker)?;
+            if let Some(value) = variation.walk_with_self(walker) {
+                return Some(value);
+            }
+        }
+
+        None
+    }
+
+    /// Like [`Self::walk`], but also walks `self` initially.
+    pub fn walk_with_self<F, T>(&'static self, walker: &mut F) -> Option<T>
+    where
+        F: FnMut(&'static Self) -> Option<T>,
+    {
+        if let Some(t) = walker(self) {
+            return Some(t);
+        }
+
+        for variation in self.variations {
+            if let Some(t) = variation.walk_with_self(walker) {
+                return Some(t);
+            }
         }
 
         None
@@ -122,7 +150,7 @@ impl Variation {
     /// Like [`Self::validity`], but doesn't error on a non-root variation.
     ///
     /// [`ValidityError::NonRoot`] is guaranteed not to occur.
-    fn non_root_validity(&self) -> Result<(), ValidityError> {
+    fn non_root_validity(&'static self) -> Result<(), ValidityError> {
         for variation in self.variations {
             let Some(parent) = variation.parent else {
                 return Err(ValidityError::MissingParent(variation));
@@ -143,7 +171,7 @@ impl Variation {
     ///
     /// # Errors
     /// See [`ValidityError`].
-    pub fn validity(&self) -> Result<(), ValidityError> {
+    pub fn validity(&'static self) -> Result<(), ValidityError> {
         if self.parent.is_some() {
             return Err(ValidityError::NonRoot);
         }
@@ -187,6 +215,7 @@ impl Variation {
         Ok(None)
     }
 
+    // TODO: Tests seem alarmingly slow.
     #[cfg(feature = "alloc")]
     #[cfg_attr(docsrs, doc(cfg(feature = "alloc")))]
     /// Gets the original name, as seen in [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
@@ -194,7 +223,7 @@ impl Variation {
     /// For example, `"Sicilian Defense: Najdorf Variation, Main Line"`.
     ///
     /// If `self` is a root variation, [`Self::name`] is returned and nothing is allocated.
-    pub fn original_name(&self) -> Cow<'static, str> {
+    pub fn original_name(&'static self) -> Cow<'static, str> {
         let Some(mut parent) = self.parent else {
             return Cow::Borrowed(self.name);
         };
@@ -250,5 +279,84 @@ impl Variation {
         }
 
         Cow::Owned(name)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[cfg(feature = "book")]
+    use crate::book;
+
+    /// Tests that the getters correspond to the fields.
+    #[test]
+    #[cfg(feature = "book")]
+    fn getters() {
+        for variation in book::ALL {
+            variation.walk_with_self(&mut |variation| {
+                let Variation {
+                    name,
+                    parent,
+                    variations,
+                    lines,
+                } = variation;
+
+                assert_eq!(variation.name(), *name);
+                assert_eq!(variation.parent(), *parent);
+                assert_eq!(variation.variations(), *variations);
+                assert_eq!(variation.lines(), *lines);
+
+                None::<()>
+            });
+        }
+    }
+
+    /// A double test; tests that [`Variation::root`] is correct, using [`Variation::walk_with_self`].
+    #[test]
+    #[cfg(feature = "book")]
+    fn root() {
+        for root in book::ALL {
+            root.walk_with_self(&mut |variation| {
+                assert_eq!(variation.root(), root);
+
+                None::<()>
+            });
+        }
+    }
+
+    /// A double test; tests that [`Variation::walk`] used on [`book::ALL`] records the same number
+    /// of variations as [`book::VARIATION_COUNT`] minus `book::ALL.len()`.
+    #[test]
+    #[cfg(feature = "book")]
+    fn walk() {
+        let mut variation_count = 0;
+
+        for root in book::ALL {
+            root.walk(&mut |_| {
+                variation_count += 1;
+
+                None::<()>
+            });
+        }
+
+        assert_eq!(book::VARIATION_COUNT - book::ALL.len(), variation_count);
+    }
+
+    /// A double test; tests that [`Variation::walk_with_self`] used on [`book::ALL`]
+    /// records the same number of variations as [`book::VARIATION_COUNT`].
+    #[test]
+    #[cfg(feature = "book")]
+    fn walk_with_self() {
+        let mut variation_count = 0;
+
+        for root in book::ALL {
+            root.walk_with_self(&mut |_| {
+                variation_count += 1;
+
+                None::<()>
+            });
+        }
+
+        assert_eq!(book::VARIATION_COUNT, variation_count);
     }
 }

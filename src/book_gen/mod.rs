@@ -295,6 +295,9 @@ pub use zukertort_defense::ZUKERTORT_DEFENSE;
 pub mod zukertort_opening;
 pub use zukertort_opening::ZUKERTORT_OPENING;
 
+/// The total amount of variations.
+pub const VARIATION_COUNT: usize = 3223;
+
 /// All root variations.
 pub static ALL: [&Variation; 140] = [
     &ALEKHINE_DEFENSE,

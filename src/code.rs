@@ -18,6 +18,7 @@ impl From<Code> for u16 {
     /// # Examples
     /// ```rust
     /// use reco::{Code, Volume, Category};
+    ///
     /// assert_eq!(
     ///     u16::from(Code {
     ///         volume: Volume::A,
@@ -55,6 +56,31 @@ impl PartialOrd for Code {
 
 impl Ord for Code {
     /// Compares the volume first, then the category.
+    ///
+    /// # Examples
+    /// ```rust
+    /// use reco::{Code, Volume, Category};
+    ///
+    /// assert!(
+    ///     Code {
+    ///         volume: Volume::C,
+    ///         category: Category::new_static::<50>()
+    ///     } < Code {
+    ///         volume: Volume::D,
+    ///         category: Category::new_static::<10>()
+    ///     },
+    /// );
+    ///
+    /// assert!(
+    ///     Code {
+    ///         volume: Volume::D,
+    ///         category: Category::new_static::<40>()
+    ///     } > Code {
+    ///         volume: Volume::D,
+    ///         category: Category::new_static::<20>()
+    ///     },
+    /// );
+    /// ```
     fn cmp(&self, other: &Self) -> Ordering {
         let volume_cmp = self.volume.cmp(&other.volume);
 
@@ -207,10 +233,20 @@ mod tests {
 
         /// Tests that the [`Display`] implementation is correct.
         #[test]
-        fn display(volume in any::<Volume>(), category in 0u8..99) {
+        fn display(volume in any::<Volume>(), category in 0u8..=99) {
             let category = Category::new(category).unwrap();
 
             assert_eq!(Code { volume, category }.to_string(), format!("{volume}{:02}", category.get()));
+        }
+
+        #[test]
+        fn ord(volume1 in any::<Volume>(), category1 in 0u8..=99, volume2 in any::<Volume>(), category2 in 0u8..=99) {
+            let category1 = Category::new(category1).unwrap();
+            let category2 = Category::new(category2).unwrap();
+            let code1 = Code { volume: volume1, category: category1 };
+            let code2 = Code { volume: volume2, category: category2 };
+
+            assert_eq!(code1.cmp(&code2), u16::from(code1).cmp(&u16::from(code2)));
         }
     }
 }

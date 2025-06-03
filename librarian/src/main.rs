@@ -39,6 +39,8 @@ fn main() {
         .from_reader(all_tsv);
 
     let mut variations = BTreeMap::new();
+    // The total amount of variations
+    let mut variation_count = 0;
 
     for record in reader.records() {
         let record = record.unwrap();
@@ -68,6 +70,8 @@ fn main() {
         let mut variation = variations
             .entry(root)
             .or_insert_with_key(|k| {
+                variation_count += 1;
+
                 Rc::new(VariationMeta {
                     name: k.clone(),
                     variations: RefCell::new(BTreeMap::new()),
@@ -85,6 +89,8 @@ fn main() {
                 .entry(part)
                 // If it's vacant, insert an empty variation with `variation` parent.
                 .or_insert_with_key(|k| {
+                    variation_count += 1;
+
                     Rc::new(VariationMeta {
                         name: k.clone(),
                         variations: RefCell::new(BTreeMap::new()),
@@ -132,6 +138,9 @@ fn main() {
         format!(
             r#"{BOOK_MOD_INIT}
 {root_mods_and_uses}
+/// The total amount of variations.
+pub const VARIATION_COUNT: usize = {variation_count};
+
 /// All root variations.
 pub static ALL: [&Variation; {}] = [{}];"#,
             root_identifiers.len(),

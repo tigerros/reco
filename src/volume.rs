@@ -59,6 +59,7 @@ impl From<Volume> for u8 {
     /// # Examples
     /// ```rust
     /// use reco::Volume;
+    ///
     /// assert_eq!(u8::from(Volume::A), 0);
     /// assert_eq!(u8::from(Volume::B), 1);
     /// assert_eq!(u8::from(Volume::C), 2);
@@ -118,6 +119,7 @@ impl From<Volume> for char {
     /// # Examples
     /// ```rust
     /// use reco::Volume;
+    ///
     /// assert_eq!(char::from(Volume::A), 'A');
     /// assert_eq!(char::from(Volume::B), 'B');
     /// assert_eq!(char::from(Volume::C), 'C');
@@ -175,8 +177,8 @@ impl FromStr for Volume {
     /// # Examples
     /// ```rust
     /// use reco::Volume;
-    /// use reco::volume;
     /// use core::str::FromStr;
+    ///
     /// assert_eq!(Volume::from_str("A"), Ok(Volume::A));
     /// assert_eq!(Volume::from_str("B"), Ok(Volume::B));
     /// assert_eq!(Volume::from_str("C"), Ok(Volume::C));
