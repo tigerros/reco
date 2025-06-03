@@ -32,14 +32,12 @@ impl Line {
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "book"))]
 mod tests {
-    use super::*;
-    use proptest::prelude::*;
+    use super::Line;
 
     /// Tests that the getters correspond to the fields.
     #[test]
-    #[cfg(feature = "book")]
     fn getters() {
         for variation in crate::book::ALL {
             variation.walk_with_self(&mut |variation| {

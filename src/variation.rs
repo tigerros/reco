@@ -291,15 +291,13 @@ impl Variation {
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "book"))]
 mod tests {
-    use super::*;
-    #[cfg(feature = "book")]
+    use super::Variation;
     use crate::book;
 
     /// Tests that the getters correspond to the fields.
     #[test]
-    #[cfg(feature = "book")]
     fn getters() {
         for variation in book::ALL {
             variation.walk_with_self(&mut |variation| {
@@ -322,7 +320,6 @@ mod tests {
 
     /// A double test; tests that [`Variation::root`] is correct, using [`Variation::walk_with_self`].
     #[test]
-    #[cfg(feature = "book")]
     fn root() {
         for root in book::ALL {
             root.walk_with_self(&mut |variation| {
@@ -336,7 +333,6 @@ mod tests {
     /// A double test; tests that [`Variation::walk`] used on [`book::ALL`] records the same number
     /// of variations as [`book::VARIATION_COUNT`] minus `book::ALL.len()`.
     #[test]
-    #[cfg(feature = "book")]
     fn walk() {
         let mut variation_count = 0;
 
@@ -354,7 +350,6 @@ mod tests {
     /// A double test; tests that [`Variation::walk_with_self`] used on [`book::ALL`]
     /// records the same number of variations as [`book::VARIATION_COUNT`].
     #[test]
-    #[cfg(feature = "book")]
     fn walk_with_self() {
         let mut variation_count = 0;
 
