@@ -3,12 +3,6 @@ on: [push, pull_request]
 
 jobs:
   test:
-    strategy:
-      matrix:
-        manifest:
-          - "Cargo.toml"
-          - "librarian/Cargo.toml"
-
     runs-on: ubuntu-latest
 
     steps:
@@ -18,4 +12,7 @@ jobs:
           tool: cargo-hack
 
       - name: Test
-        run: cargo hack test --feature-powerset --manifest-path ${{ matrix.manifest }} --all-targets -q
+        run: cargo hack test --feature-powerset --workspace --all-targets -q
+
+      - name: Doctest
+        run: cargo hack test --feature-powerset --workspace --doc -q
