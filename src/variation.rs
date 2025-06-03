@@ -41,7 +41,7 @@ impl Hash for Variation {
     /// Hashes are generated from pointers due to using pointer equality in
     /// <a href="#impl-PartialEq-for-Variation">`impl PartialEq for Variation`</a>.
     fn hash<H: Hasher>(&self, state: &mut H) {
-        (self as *const Self).hash(state);
+        core::ptr::hash(self, state);
     }
 }
 
