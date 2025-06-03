@@ -3,12 +3,6 @@ on: [push, pull_request]
 
 jobs:
   clippy:
-    strategy:
-      matrix:
-        manifest:
-          - "Cargo.toml"
-          - "librarian/Cargo.toml"
-
     runs-on: ubuntu-latest
 
     steps:
@@ -18,4 +12,4 @@ jobs:
           tool: cargo-hack
 
       - name: Clippy
-        run: cargo hack clippy --feature-powerset --manifest-path ${{ matrix.manifest }} --all-targets -- --deny warnings
+        run: cargo hack clippy --feature-powerset --workspace --all-targets -- --deny warnings
