@@ -21,7 +21,7 @@ jobs:
 
       - name: Generate code coverage
         run: |
-          cargo tarpaulin --verbose --doc --tests --all-features --timeout 120 --out xml
+          cargo tarpaulin --verbose --doc --tests --all-features --out xml
 
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v5

@@ -7,6 +7,7 @@ use alloc::boxed::Box;
 use alloc::string::String;
 #[cfg(feature = "alloc")]
 use alloc::vec::Vec;
+use core::hash::{Hash, Hasher};
 use shakmaty::Setup;
 #[cfg(feature = "alloc")]
 use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
@@ -16,7 +17,7 @@ use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
     reason = "copy semantics conflict with the tree structure"
 )]
 /// A named variation.
-#[derive(Debug, Clone, Hash)]
+#[derive(Debug, Clone)]
 pub struct Variation {
     pub(crate) name: &'static str,
     pub(crate) parent: Option<&'static Self>,
@@ -35,6 +36,14 @@ impl PartialEq for Variation {
 }
 
 impl Eq for Variation {}
+
+impl Hash for Variation {
+    /// Hashes are generated from pointers due to using pointer equality in
+    /// <a href="#impl-PartialEq-for-Variation">`impl PartialEq for Variation`</a>.
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        (self as *const Self).hash(state);
+    }
+}
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 /// See [`Variation::validity`].
