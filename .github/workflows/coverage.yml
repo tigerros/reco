@@ -16,9 +16,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Use nightly
+        run: rustup default nightly
+
       - name: Generate code coverage
         run: |
-          cargo +nightly tarpaulin --verbose --all-features --timeout 120 --out xml
+          cargo tarpaulin --verbose --doc --tests --all-features --timeout 120 --out xml
 
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v5

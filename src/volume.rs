@@ -17,12 +17,33 @@ pub enum Volume {
 }
 
 impl PartialOrd for Volume {
+    /// Uses <a href="#impl-Ord-for-Volume">`impl Ord for Volume`</a>, so it's guaranteed to be
+    /// [`Some`].
+    ///
+    /// # Examples
+    /// ```rust
+    /// use reco::Volume;
+    /// use core::cmp::Ordering;
+    ///
+    /// assert_eq!(Volume::D.partial_cmp(&Volume::D), Some(Ordering::Equal));
+    /// assert_eq!(Volume::D.partial_cmp(&Volume::A), Some(Ordering::Greater));
+    /// assert_eq!(Volume::D.partial_cmp(&Volume::E), Some(Ordering::Less));
+    /// ```
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         Some(self.cmp(other))
     }
 }
 
 impl Ord for Volume {
+    /// # Examples
+    /// ```rust
+    /// use reco::Volume;
+    /// use core::cmp::Ordering;
+    ///
+    /// assert_eq!(Volume::B.cmp(&Volume::B), Ordering::Equal);
+    /// assert_eq!(Volume::B.cmp(&Volume::A), Ordering::Greater);
+    /// assert_eq!(Volume::B.cmp(&Volume::C), Ordering::Less);
+    /// ```
     fn cmp(&self, other: &Self) -> Ordering {
         u8::from(*self).cmp(&u8::from(*other))
     }
