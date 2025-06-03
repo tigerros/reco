@@ -227,7 +227,6 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
         Ok(None)
     }
 
-    // TODO: Tests seem alarmingly slow.
     #[cfg(feature = "alloc")]
     #[cfg_attr(docsrs, doc(cfg(feature = "alloc")))]
     /// Gets the original name, as seen in [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
