@@ -176,7 +176,7 @@ impl FromStr for Volume {
     ///
     /// # Examples
     /// ```rust
-    /// use reco::Volume;
+    /// use reco::{Volume, volume};
     /// use core::str::FromStr;
     ///
     /// assert_eq!(Volume::from_str("A"), Ok(Volume::A));

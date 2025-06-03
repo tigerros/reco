@@ -60,19 +60,19 @@ impl Variation {
     /// The name of this variation.
     ///
     /// This is not the full name, you'll need to look at all the parents to get that.
-    pub const fn name(&'static self) -> &'static str {
+    pub const fn name(&self) -> &'static str {
         self.name
     }
 
     /// The parent variation of this variation.
     ///
     /// [`None`] if this is a root variation.
-    pub const fn parent(&'static self) -> Option<&'static Self> {
+    pub const fn parent(&self) -> Option<&'static Self> {
         self.parent
     }
 
     /// The variations of this variation.
-    pub const fn variations(&'static self) -> &'static [&'static Self] {
+    pub const fn variations(&self) -> &'static [&'static Self] {
         self.variations
     }
 
@@ -81,23 +81,26 @@ impl Variation {
     /// For example, A05 Zukertort has two lines:
     /// - `1. Nf3 Nf6`
     /// - `1. Nf3 Nf6 2. Nc3 Nc6`
-    pub const fn lines(&'static self) -> &'static [Line] {
+    pub const fn lines(&self) -> &'static [Line] {
         self.lines
     }
 
     /// Finds the root of this variation.
     ///
     /// Returns `self` if `self` is a root variation.
-    ///
-    /// # Examples
-    /// ```rust
-    /// use reco::book::SICILIAN_DEFENSE;
-    /// use reco::book::sicilian_defense::accelerated_dragon::maroczy_bind::BREYER_VARIATION;
-    ///
-    /// assert_eq!(BREYER_VARIATION.root(), &SICILIAN_DEFENSE);
-    /// assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
-    /// ```
-    pub const fn root(&'static self) -> &'static Self {
+    #[cfg_attr(
+        feature = "book",
+        doc = r"
+# Examples
+```rust
+use reco::book::SICILIAN_DEFENSE;
+use reco::book::sicilian_defense::accelerated_dragon::maroczy_bind::BREYER_VARIATION;
+
+assert_eq!(BREYER_VARIATION.root(), &SICILIAN_DEFENSE);
+assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
+```"
+    )]
+    pub const fn root(&self) -> &Self {
         let Some(mut parent) = self.parent else {
             return self;
         };
@@ -115,9 +118,9 @@ impl Variation {
     /// First, it walks a variation and then it's subvariations.
     ///
     /// See also [`Self::walk_with_self`].
-    pub fn walk<F, T>(&'static self, walker: &mut F) -> Option<T>
+    pub fn walk<F, T>(&self, walker: &mut F) -> Option<T>
     where
-        F: FnMut(&'static Self) -> Option<T>,
+        F: FnMut(&Self) -> Option<T>,
     {
         for variation in self.variations {
             if let Some(value) = variation.walk_with_self(walker) {
@@ -129,9 +132,9 @@ impl Variation {
     }
 
     /// Like [`Self::walk`], but also walks `self` initially.
-    pub fn walk_with_self<F, T>(&'static self, walker: &mut F) -> Option<T>
+    pub fn walk_with_self<F, T>(&self, walker: &mut F) -> Option<T>
     where
-        F: FnMut(&'static Self) -> Option<T>,
+        F: FnMut(&Self) -> Option<T>,
     {
         if let Some(t) = walker(self) {
             return Some(t);
@@ -147,7 +150,7 @@ impl Variation {
     }
 
     /// Uses [`Self::walk_with_self`] to find the line that matches the given setup.
-    pub fn find_line_from_setup(&'static self, setup: &Setup) -> Option<&'static Line> {
+    pub fn find_line_from_setup(&self, setup: &Setup) -> Option<&'static Line> {
         self.walk_with_self(&mut |subvariation| {
             subvariation
                 .lines()
@@ -159,7 +162,7 @@ impl Variation {
     /// Like [`Self::validity`], but doesn't error on a non-root variation.
     ///
     /// [`ValidityError::NonRoot`] is guaranteed not to occur.
-    fn non_root_validity(&'static self) -> Result<(), ValidityError> {
+    fn non_root_validity(&self) -> Result<(), ValidityError> {
         for variation in self.variations {
             let Some(parent) = variation.parent else {
                 return Err(ValidityError::MissingParent(variation));
@@ -180,7 +183,7 @@ impl Variation {
     ///
     /// # Errors
     /// See [`ValidityError`].
-    pub fn validity(&'static self) -> Result<(), ValidityError> {
+    pub fn validity(&self) -> Result<(), ValidityError> {
         if self.parent.is_some() {
             return Err(ValidityError::NonRoot);
         }
@@ -199,7 +202,7 @@ impl Variation {
     /// # Errors
     /// A move is illegal.
     pub fn find_line_from_moves(
-        &'static self,
+        &self,
         game: &[Move],
         initial_position: Chess,
     ) -> Result<Option<&'static Line>, Box<PlayError<Chess>>> {
@@ -232,7 +235,7 @@ impl Variation {
     /// For example, `"Sicilian Defense: Najdorf Variation, Main Line"`.
     ///
     /// If `self` is a root variation, [`Self::name`] is returned and nothing is allocated.
-    pub fn original_name(&'static self) -> Cow<'static, str> {
+    pub fn original_name(&self) -> Cow<'static, str> {
         let Some(mut parent) = self.parent else {
             return Cow::Borrowed(self.name);
         };
@@ -291,7 +294,8 @@ impl Variation {
     }
 }
 
-#[cfg(all(test, feature = "book"))]
+#[cfg(test)]
+#[cfg(feature = "book")]
 mod tests {
     use super::Variation;
     use crate::book;

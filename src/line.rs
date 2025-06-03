@@ -32,7 +32,8 @@ impl Line {
     }
 }
 
-#[cfg(all(test, feature = "book"))]
+#[cfg(test)]
+#[cfg(feature = "book")]
 mod tests {
     use super::Line;
 
