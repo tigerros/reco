@@ -17,6 +17,14 @@ use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
     reason = "copy semantics conflict with the tree structure"
 )]
 /// A named variation.
+///
+/// In order to improve performance, correctness, and usability (for most users), [`Variation`]
+/// cannot be constructed outside of `reco`.
+///
+/// The only situation I can think of where this might
+/// be a problem, is if you want to use your own source instead of [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
+/// However, I'm not aware of any better source, and if your source contains data not present here,
+/// you wouldn't be able to use this struct anyway.
 #[derive(Debug, Clone)]
 pub struct Variation {
     pub(crate) name: &'static str,
@@ -60,19 +68,19 @@ impl Variation {
     /// The name of this variation.
     ///
     /// This is not the full name, you'll need to look at all the parents to get that.
-    pub const fn name(&self) -> &'static str {
+    pub const fn name(&'static self) -> &'static str {
         self.name
     }
 
     /// The parent variation of this variation.
     ///
     /// [`None`] if this is a root variation.
-    pub const fn parent(&self) -> Option<&'static Self> {
+    pub const fn parent(&'static self) -> Option<&'static Self> {
         self.parent
     }
 
     /// The variations of this variation.
-    pub const fn variations(&self) -> &'static [&'static Self] {
+    pub const fn variations(&'static self) -> &'static [&'static Self] {
         self.variations
     }
 
@@ -81,7 +89,7 @@ impl Variation {
     /// For example, A05 Zukertort has two lines:
     /// - `1. Nf3 Nf6`
     /// - `1. Nf3 Nf6 2. Nc3 Nc6`
-    pub const fn lines(&self) -> &'static [Line] {
+    pub const fn lines(&'static self) -> &'static [Line] {
         self.lines
     }
 
@@ -100,7 +108,7 @@ assert_eq!(BREYER_VARIATION.root(), &SICILIAN_DEFENSE);
 assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
 ```"
     )]
-    pub const fn root(&self) -> &Self {
+    pub const fn root(&'static self) -> &'static Self {
         let Some(mut parent) = self.parent else {
             return self;
         };
@@ -113,14 +121,14 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
     }
 
     /// Recursively walks [`Self::variations`], stopping if the
-    /// `walker` returns [`Some`], while returning that value.
+    /// `walker` returns [`Some`], returning that value.
     ///
     /// First, it walks a variation and then it's subvariations.
     ///
     /// See also [`Self::walk_with_self`].
-    pub fn walk<F, T>(&self, walker: &mut F) -> Option<T>
+    pub fn walk<F, T>(&'static self, walker: &mut F) -> Option<T>
     where
-        F: FnMut(&Self) -> Option<T>,
+        F: FnMut(&'static Self) -> Option<T>,
     {
         for variation in self.variations {
             if let Some(value) = variation.walk_with_self(walker) {
@@ -132,9 +140,9 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
     }
 
     /// Like [`Self::walk`], but also walks `self` initially.
-    pub fn walk_with_self<F, T>(&self, walker: &mut F) -> Option<T>
+    pub fn walk_with_self<F, T>(&'static self, walker: &mut F) -> Option<T>
     where
-        F: FnMut(&Self) -> Option<T>,
+        F: FnMut(&'static Self) -> Option<T>,
     {
         if let Some(t) = walker(self) {
             return Some(t);
@@ -149,20 +157,10 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
         None
     }
 
-    /// Uses [`Self::walk_with_self`] to find the line that matches the given setup.
-    pub fn find_line_from_setup(&self, setup: &Setup) -> Option<&'static Line> {
-        self.walk_with_self(&mut |subvariation| {
-            subvariation
-                .lines()
-                .iter()
-                .find(|&line| &line.setup == setup)
-        })
-    }
-
     /// Like [`Self::validity`], but doesn't error on a non-root variation.
     ///
     /// [`ValidityError::NonRoot`] is guaranteed not to occur.
-    fn non_root_validity(&self) -> Result<(), ValidityError> {
+    fn non_root_validity(&'static self) -> Result<(), ValidityError> {
         for variation in self.variations {
             let Some(parent) = variation.parent else {
                 return Err(ValidityError::MissingParent(variation));
@@ -183,7 +181,7 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
     ///
     /// # Errors
     /// See [`ValidityError`].
-    pub fn validity(&self) -> Result<(), ValidityError> {
+    pub fn validity(&'static self) -> Result<(), ValidityError> {
         if self.parent.is_some() {
             return Err(ValidityError::NonRoot);
         }
@@ -191,6 +189,16 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
         self.non_root_validity()?;
 
         Ok(())
+    }
+
+    /// Uses [`Self::walk_with_self`] to find the line that matches the given setup.
+    pub fn find_line_from_setup(&'static self, setup: &Setup) -> Option<&'static Line> {
+        self.walk_with_self(&mut |subvariation| {
+            subvariation
+                .lines()
+                .iter()
+                .find(|line| &line.setup == setup)
+        })
     }
 
     #[cfg(feature = "alloc")]
@@ -202,9 +210,9 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
     /// # Errors
     /// A move is illegal.
     pub fn find_line_from_moves(
-        &self,
-        game: &[Move],
+        &'static self,
         initial_position: Chess,
+        game: &[Move],
     ) -> Result<Option<&'static Line>, Box<PlayError<Chess>>> {
         // Positions of the game
         let mut setups = Vec::with_capacity(game.len());
@@ -234,7 +242,7 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
     /// For example, `"Sicilian Defense: Najdorf Variation, Main Line"`.
     ///
     /// If `self` is a root variation, [`Self::name`] is returned and nothing is allocated.
-    pub fn original_name(&self) -> Cow<'static, str> {
+    pub fn original_name(&'static self) -> Cow<'static, str> {
         let Some(mut parent) = self.parent else {
             return Cow::Borrowed(self.name);
         };
@@ -298,6 +306,8 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
 mod tests {
     use super::Variation;
     use crate::book;
+    #[cfg(feature = "alloc")]
+    use alloc::vec::Vec;
 
     /// Tests that the getters correspond to the fields.
     #[test]
@@ -365,5 +375,135 @@ mod tests {
         }
 
         assert_eq!(book::VARIATION_COUNT, variation_count);
+    }
+
+    /// A double test; tests that [`Variation::walk`] short-circuits when the `walker` function returns [`Some`]
+    /// and that [`book::walk_all`] works as expected.
+    #[test]
+    fn walk_short_circuit() {
+        const MAX_VARIATIONS: usize = 1123;
+        let mut variation_count = 0;
+        let mut walked = Vec::new();
+
+        book::walk_all(&mut |variation| {
+            variation_count += 1;
+
+            walked.push(variation);
+
+            if variation_count == MAX_VARIATIONS {
+                return Some(variation_count);
+            }
+
+            None
+        });
+
+        assert_eq!(variation_count, MAX_VARIATIONS);
+
+        for walked in walked {
+            // Make sure the book *doesn't* contain walked, because we *didn't* use `_with_self`.
+            assert!(!book::ALL.contains(&walked));
+        }
+    }
+
+    /// A double test; tests that [`Variation::walk_with_self`] short-circuits when the `walker` function returns [`Some`]
+    /// and that [`book::walk_all_with_self`] works as expected.
+    #[test]
+    fn walk_with_self_short_circuit() {
+        const MAX_VARIATIONS: usize = 1123;
+        let mut variation_count = 0;
+        let mut walked = Vec::new();
+
+        book::walk_all_with_self(&mut |variation| {
+            variation_count += 1;
+
+            walked.push(variation);
+
+            if variation_count == MAX_VARIATIONS {
+                return Some(variation_count);
+            }
+
+            None
+        });
+
+        assert_eq!(variation_count, MAX_VARIATIONS);
+
+        for walked in walked {
+            // Make sure the book *does* contain walked, because we *did* use `_with_self`.
+            assert!(book::ALL.contains(&walked));
+        }
+    }
+
+    /// Tests that [`Variation::find_line_from_setup`] finds the correct line,
+    /// using [`book::ALL`].
+    #[test]
+    fn find_line_from_setup() {
+        for root in book::ALL {
+            root.walk_with_self(&mut |variation| {
+                for line in variation.lines() {
+                    assert_eq!(variation.find_line_from_setup(&line.setup), Some(line));
+                }
+
+                None::<()>
+            });
+        }
+    }
+
+    /// Tests that [`Variation::find_line_from_moves`] finds the correct line,
+    /// using [`book::ALL`].
+    ///
+    /// Since [`Variation::find_line_from_moves`] accept both an initial position and a move history,
+    /// each combination is tested.
+    ///
+    /// For example, if we check the line `1. e4 e5 2. d4`, we test that
+    /// [`Variation::find_line_from_moves`] finds the correct line in these cases:
+    /// - `position = @[], moves = [e4, e5, d4]`
+    /// - `position = @[e4], moves = [e5, d4]`
+    /// - `position = @[e4, e5], moves = [d4]`
+    /// - `position = @[e4, e5, d4], moves = []`
+    ///
+    /// Where `@[m1, m2]` is just the position of the given continuation.
+    #[cfg(feature = "alloc")]
+    #[test]
+    fn find_line_from_moves() {
+        use shakmaty::Position;
+
+        for root in book::ALL {
+            root.walk_with_self(&mut |variation| {
+                for line in variation.lines() {
+                    // We need to build a history of positions and histories of moves.
+                    // We make "games", where each game is a tuple of a position and a move history,
+                    // where each position gets the necessary move history to get to the line position.
+                    //
+                    // For example, the initial position gets the full move history.
+                    // The final position (that is, the line position) doesn't get any moves.
+                    let mut games = Vec::with_capacity(line.moves().len() + 1);
+                    let mut current_move_history = line.moves().to_vec();
+                    let mut current_position = shakmaty::Chess::new();
+
+                    // We start out with the initial position and then the full move history.
+                    games.push((current_position.clone(), current_move_history.clone()));
+
+                    // For each move, we play it on the position, and remove the first move from the move history.
+                    for &r#move in line.moves() {
+                        current_position =
+                            current_position.play(r#move).expect("move should be legal");
+                        current_move_history.remove(0);
+
+                        games.push((current_position.clone(), current_move_history.clone()));
+                    }
+
+                    for (position, move_history) in games {
+                        assert_eq!(
+                            variation
+                                .find_line_from_moves(position, &move_history)
+                                .expect("move_history should be legal"),
+                            Some(line)
+                        );
+                    }
+                }
+
+                None::<()>
+            });
+        }
     }
 }

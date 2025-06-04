@@ -20,7 +20,8 @@ no-std and no-alloc compatible.
 ## Features
 - `book`: adds ECO entries as statics.
 - `alloc`: adds functionality which requires the `alloc` crate.
-- `serde`: enables serde support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
+- `serde`: enables [`serde`](https://crates.io/crates/proptest) support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
+- `proptest`: enables some [`proptest`](https://crates.io/crates/proptest) support. Requires `std`.
 
 ## Sourcing
 The ECO entries are generated using the unpublished `librarian` crate.

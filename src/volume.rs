@@ -2,11 +2,12 @@ use core::cmp::Ordering;
 use core::fmt::{Display, Formatter, Write};
 use core::str::FromStr;
 use deranged::RangedU8;
+#[cfg(feature = "proptest")]
+use proptest::prelude::*;
 
 /// The A-E volume of an opening.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-#[cfg_attr(test, derive(proptest_derive::Arbitrary))]
 #[repr(u8)]
 pub enum Volume {
     A = 0,
@@ -137,12 +138,42 @@ impl From<Volume> for char {
     }
 }
 
+#[cfg(feature = "proptest")]
+impl Arbitrary for Volume {
+    type Parameters = ();
+    type Strategy = BoxedStrategy<Self>;
+
+    fn arbitrary_with((): Self::Parameters) -> Self::Strategy {
+        prop_oneof![
+            Just(Self::A),
+            Just(Self::B),
+            Just(Self::C),
+            Just(Self::D),
+            Just(Self::E),
+        ]
+        .boxed()
+    }
+}
+
+/// Parsing a volume failed.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub struct Error;
 
+impl Error {
+    /// ```rust
+    /// use reco::volume;
+    ///
+    /// assert_eq!(volume::Error.as_str(), "invalid volume, expected A-E");
+    /// assert_eq!(volume::Error.to_string(), volume::Error.as_str());
+    /// ```
+    pub const fn as_str(self) -> &'static str {
+        "invalid volume, expected A-E"
+    }
+}
+
 impl Display for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
-        f.write_str("invalid volume, expected A-E")
+        f.write_str(self.as_str())
     }
 }
 
@@ -209,9 +240,9 @@ impl Display for Volume {
 }
 
 #[cfg(test)]
+#[cfg(feature = "proptest")]
 mod tests {
     use super::*;
-    use proptest::prelude::*;
 
     proptest! {
         /// Tests that it doesn't panic.

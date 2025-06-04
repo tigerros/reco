@@ -29,20 +29,19 @@ members = ["examples/find-opening", "librarian"]
 [workspace.dependencies]
 reco = { path = "." }
 shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", default-features = false }
+proptest = { version = "1", default-features = false }
 
 [features]
 serde = ["dep:serde", "deranged/serde"]
 book = []
 alloc = []
+proptest = ["dep:proptest"]
 
 [dependencies]
 deranged = { version = "0.4.0", default-features = false }
 serde = { version = "1.0.197", default-features = false, features = ["derive"], optional = true }
 shakmaty = { workspace = true }
-
-[dev-dependencies]
-proptest = "1.6.0"
-proptest-derive = "0.5.1"
+proptest = { version = "1", optional = true }
 
 [patch.crates-io]
 shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master" }

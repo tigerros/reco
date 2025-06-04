@@ -3,6 +3,8 @@ use core::cmp::Ordering;
 use core::fmt::{Display, Formatter};
 use core::str::FromStr;
 use deranged::RangedU8;
+#[cfg(feature = "proptest")]
+use proptest::prelude::*;
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
@@ -92,6 +94,22 @@ impl Ord for Code {
     }
 }
 
+#[cfg(feature = "proptest")]
+impl Arbitrary for Code {
+    type Parameters = ();
+    type Strategy = BoxedStrategy<Self>;
+
+    fn arbitrary_with((): Self::Parameters) -> Self::Strategy {
+        (
+            Volume::arbitrary(),
+            #[expect(clippy::unwrap_used, reason = "Category range is 0-99")]
+            (0u8..=99).prop_map(|n| Category::new(n).unwrap()),
+        )
+            .prop_map(|(volume, category)| Self { volume, category })
+            .boxed()
+    }
+}
+
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum Error {
     /// There's no first character.
@@ -116,6 +134,22 @@ impl Display for Error {
 }
 
 impl core::error::Error for Error {}
+
+#[cfg(feature = "proptest")]
+impl Arbitrary for Error {
+    type Parameters = ();
+    type Strategy = BoxedStrategy<Self>;
+
+    fn arbitrary_with((): Self::Parameters) -> Self::Strategy {
+        prop_oneof![
+            Just(Self::MissingVolume),
+            Just(Self::InvalidVolume(volume::Error)),
+            Just(Self::MissingCategory),
+            Just(Self::InvalidCategory),
+        ]
+        .boxed()
+    }
+}
 
 impl FromStr for Code {
     type Err = Error;
@@ -206,11 +240,11 @@ impl Display for Code {
 }
 
 #[cfg(test)]
+#[cfg(feature = "proptest")]
 #[expect(clippy::unwrap_used, reason = "it's fine and helpful in tests")]
 mod tests {
     use super::*;
     use alloc::format;
-    use proptest::prelude::*;
 
     proptest! {
         /// Tests that it doesn't panic.

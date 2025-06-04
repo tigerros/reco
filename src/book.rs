@@ -1,7 +1,7 @@
 pub use crate::book_gen::*;
 
-use crate::Line;
 use crate::book;
+use crate::{Line, Variation};
 #[cfg(feature = "alloc")]
 use alloc::boxed::Box;
 #[cfg(feature = "alloc")]
@@ -9,6 +9,37 @@ use alloc::vec::Vec;
 use shakmaty::Setup;
 #[cfg(feature = "alloc")]
 use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
+
+/// Uses [`Variation::walk`] on each of the [`book::ALL`] root variations.
+/// Does not walk root variations themselves.
+///
+/// See also [`walk_all_with_self`].
+pub fn walk_all<F, T>(walker: &mut F) -> Option<T>
+where
+    F: FnMut(&'static Variation) -> Option<T>,
+{
+    for root in book::ALL {
+        if let Some(t) = root.walk(walker) {
+            return Some(t);
+        }
+    }
+
+    None
+}
+
+/// Like [`walk_all`], but also walks the root variations of [`book::ALL`].
+pub fn walk_all_with_self<F, T>(walker: &mut F) -> Option<T>
+where
+    F: FnMut(&'static Variation) -> Option<T>,
+{
+    for root in book::ALL {
+        if let Some(t) = root.walk_with_self(walker) {
+            return Some(t);
+        }
+    }
+
+    None
+}
 
 #[cfg(feature = "alloc")]
 #[cfg_attr(docsrs, doc(cfg(feature = "alloc")))]

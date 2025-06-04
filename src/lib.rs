@@ -1,4 +1,4 @@
-#![cfg_attr(not(test), no_std)]
+#![cfg_attr(all(not(test), not(feature = "proptest")), no_std)]
 #![warn(
     clippy::pedantic,
     clippy::nursery,
