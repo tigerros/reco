@@ -400,23 +400,19 @@ mod tests {
         assert_eq!(variation_count, MAX_VARIATIONS);
 
         for walked in walked {
-            // Make sure the book *doesn't* contain walked, because we *didn't* use `_with_self`.
+            // Make sure the book doesn't contain walked, because we didn't use `_with_self`.
             assert!(!book::ALL.contains(&walked));
         }
     }
 
-    /// A double test; tests that [`Variation::walk_with_self`] short-circuits when the `walker` function returns [`Some`]
-    /// and that [`book::walk_all_with_self`] works as expected.
+    /// Tests that [`Variation::walk_with_self`] short-circuits when the `walker` function returns [`Some`].
     #[test]
     fn walk_with_self_short_circuit() {
         const MAX_VARIATIONS: usize = 1123;
         let mut variation_count = 0;
-        let mut walked = Vec::new();
 
-        book::walk_all_with_self(&mut |variation| {
+        book::walk_all_with_self(&mut |_| {
             variation_count += 1;
-
-            walked.push(variation);
 
             if variation_count == MAX_VARIATIONS {
                 return Some(variation_count);
@@ -426,11 +422,6 @@ mod tests {
         });
 
         assert_eq!(variation_count, MAX_VARIATIONS);
-
-        for walked in walked {
-            // Make sure the book *does* contain walked, because we *did* use `_with_self`.
-            assert!(book::ALL.contains(&walked));
-        }
     }
 
     /// Tests that [`Variation::find_line_from_setup`] finds the correct line,

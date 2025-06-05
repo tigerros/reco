@@ -84,3 +84,34 @@ pub fn find_line_from_setup(setup: &Setup) -> Option<&'static Line> {
 
     None
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn walk_all() {
+        let mut variation_count = 0;
+
+        book::walk_all(&mut |_| {
+            variation_count += 1;
+
+            None::<()>
+        });
+
+        assert_eq!(variation_count, book::VARIATION_COUNT - book::ALL.len());
+    }
+
+    #[test]
+    fn walk_all_with_self() {
+        let mut variation_count = 0;
+
+        book::walk_all_with_self(&mut |_| {
+            variation_count += 1;
+
+            None::<()>
+        });
+
+        assert_eq!(variation_count, book::VARIATION_COUNT);
+    }
+}
