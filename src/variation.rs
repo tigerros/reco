@@ -307,7 +307,6 @@ mod tests {
     use crate::book;
     #[cfg(feature = "alloc")]
     use alloc::vec::Vec;
-    use shakmaty::CastlingMode;
 
     /// Tests that the getters correspond to the fields.
     #[test]
@@ -516,7 +515,7 @@ mod tests {
         let position: Chess =
             Fen::from_ascii(b"rnbqkbnr/pp1ppppp/8/2p5/P7/N7/1PPPPPPP/R1BQKBNR b KQkq - 1 2")
                 .unwrap()
-                .into_position(CastlingMode::Standard)
+                .into_position(shakmaty::CastlingMode::Standard)
                 .unwrap();
 
         for root in book::ALL {
