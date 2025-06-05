@@ -241,7 +241,6 @@ impl Display for Code {
 
 #[cfg(test)]
 #[cfg(feature = "proptest")]
-#[expect(clippy::unwrap_used, reason = "it's fine and helpful in tests")]
 mod tests {
     use super::*;
     use alloc::format;

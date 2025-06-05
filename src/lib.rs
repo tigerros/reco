@@ -29,16 +29,20 @@
     clippy::tests_outside_test_module
 )]
 #![forbid(unsafe_code)]
-#![deny(
-    clippy::unwrap_used,
-    clippy::panic,
-    clippy::exit,
-    clippy::todo,
-    clippy::unreachable,
-    clippy::panic_in_result_fn,
-    clippy::indexing_slicing,
-    clippy::string_slice,
-    clippy::get_unwrap
+#![cfg_attr(
+    not(test),
+    deny(
+        clippy::unwrap_used,
+        clippy::expect_used,
+        clippy::panic,
+        clippy::exit,
+        clippy::todo,
+        clippy::unreachable,
+        clippy::panic_in_result_fn,
+        clippy::indexing_slicing,
+        clippy::string_slice,
+        clippy::get_unwrap
+    )
 )]
 #![allow(
     clippy::must_use_candidate,
@@ -57,8 +61,15 @@ extern crate alloc;
 pub mod code;
 mod line;
 pub mod volume;
+
+#[cfg(feature = "alloc")]
+use alloc::boxed::Box;
+#[cfg(feature = "alloc")]
+use alloc::vec::Vec;
 pub use code::Code;
 pub use line::Line;
+#[cfg(feature = "alloc")]
+use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position, Setup};
 pub use volume::Volume;
 #[cfg(feature = "book")]
 #[cfg_attr(docsrs, doc(cfg(feature = "book")))]
@@ -72,3 +83,31 @@ pub use variation::{ValidityError, Variation};
 
 /// The 0-99 category of an opening.
 pub type Category = deranged::RangedU8<0, 99>;
+
+#[cfg(feature = "alloc")]
+/// Generates a setup for each point in the given game.
+/// The first setup is the `initial_position`.
+///
+/// This is useful if you want to find a [`Line`] based on a list of moves.
+/// Iterate over the setups in reverse, look for the line where the setup matches, and
+/// that's the closest matching line.
+///
+/// # Errors
+/// A move is illegal.
+pub fn generate_game_setups(
+    initial_position: Chess,
+    game: &[Move],
+) -> Result<Vec<Setup>, Box<PlayError<Chess>>> {
+    #[expect(clippy::arithmetic_side_effects, reason = "it won't ever be this big")]
+    let mut setups = Vec::with_capacity(game.len() + 1);
+
+    setups.push(initial_position.to_setup(EnPassantMode::Legal));
+    let mut current_position = initial_position;
+
+    for r#move in game {
+        current_position = current_position.play(*r#move).map_err(Box::new)?;
+        setups.push(current_position.to_setup(EnPassantMode::Legal));
+    }
+
+    Ok(setups)
+}

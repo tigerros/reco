@@ -1,5 +1,7 @@
 use crate::Line;
 #[cfg(feature = "alloc")]
+use crate::generate_game_setups;
+#[cfg(feature = "alloc")]
 use alloc::borrow::Cow;
 #[cfg(feature = "alloc")]
 use alloc::boxed::Box;
@@ -10,7 +12,7 @@ use alloc::vec::Vec;
 use core::hash::{Hash, Hasher};
 use shakmaty::Setup;
 #[cfg(feature = "alloc")]
-use shakmaty::{Chess, EnPassantMode, Move, PlayError, Position};
+use shakmaty::{Chess, Move, PlayError};
 
 #[expect(
     missing_copy_implementations,
@@ -203,30 +205,27 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
 
     #[cfg(feature = "alloc")]
     #[cfg_attr(docsrs, doc(cfg(feature = "alloc")))]
-    /// Uses [`Self::walk_with_self`] to find a line that matches the given "game".
+    /// Uses [`Self::walk_with_self`] to find a line that most closely matches the given "game".
+    /// That is, an initial position and a list of moves.
     ///
-    /// That is, the given list of moves played on the given initial position.
+    /// Starts by looking for the final position of the game, going backwards until the initial
+    /// position. For example, let's say we have the game `[e4, e5, d4]`. This function will:
+    /// - Look for the position obtained by playing `[e4, e5, d4]`.
+    /// - Look for the position obtained by playing `[e4, e5]`.
+    /// - Look for the position obtained by playing `[e4]`.
+    /// - Look for `initial_position`.
+    ///
+    /// This ensures that the most specific line is found.
     ///
     /// # Errors
     /// A move is illegal.
     pub fn find_line_from_moves(
         &'static self,
         initial_position: Chess,
-        game: &[Move],
+        moves: &[Move],
     ) -> Result<Option<&'static Line>, Box<PlayError<Chess>>> {
-        // Positions of the game
-        let mut setups = Vec::with_capacity(game.len());
-
-        setups.push(initial_position.to_setup(EnPassantMode::Legal));
-        let mut current_position = initial_position;
-
-        for r#move in game {
-            current_position = current_position.play(*r#move).map_err(Box::new)?;
-            setups.push(current_position.to_setup(EnPassantMode::Legal));
-        }
-
         // Reverse them otherwise it just finds the root
-        for setup in setups.iter().rev() {
+        for setup in generate_game_setups(initial_position, moves)?.iter().rev() {
             if let Some(found) = self.find_line_from_setup(setup) {
                 return Ok(Some(found));
             }
@@ -308,6 +307,7 @@ mod tests {
     use crate::book;
     #[cfg(feature = "alloc")]
     use alloc::vec::Vec;
+    use shakmaty::CastlingMode;
 
     /// Tests that the getters correspond to the fields.
     #[test]
@@ -424,14 +424,15 @@ mod tests {
         assert_eq!(variation_count, MAX_VARIATIONS);
     }
 
-    /// Tests that [`Variation::find_line_from_setup`] finds the correct line,
-    /// using [`book::ALL`].
+    /// Tests that [`Variation::find_line_from_setup`] and [`book::find_line_from_setup`]
+    /// find the correct line, using [`book::ALL`].
     #[test]
     fn find_line_from_setup() {
         for root in book::ALL {
             root.walk_with_self(&mut |variation| {
                 for line in variation.lines() {
                     assert_eq!(variation.find_line_from_setup(&line.setup), Some(line));
+                    assert_eq!(book::find_line_from_setup(&line.setup), Some(line));
                 }
 
                 None::<()>
@@ -439,8 +440,8 @@ mod tests {
         }
     }
 
-    /// Tests that [`Variation::find_line_from_moves`] finds the correct line,
-    /// using [`book::ALL`].
+    /// Tests that [`Variation::find_line_from_moves`] and [`book::find_line_from_moves`]
+    /// find the correct line, using [`book::ALL`].
     ///
     /// Since [`Variation::find_line_from_moves`] accept both an initial position and a move history,
     /// each combination is tested.
@@ -456,7 +457,7 @@ mod tests {
     #[cfg(feature = "alloc")]
     #[test]
     fn find_line_from_moves() {
-        use shakmaty::Position;
+        use shakmaty::{Chess, Position};
 
         for root in book::ALL {
             root.walk_with_self(&mut |variation| {
@@ -469,7 +470,7 @@ mod tests {
                     // The final position (that is, the line position) doesn't get any moves.
                     let mut games = Vec::with_capacity(line.moves().len() + 1);
                     let mut current_move_history = line.moves().to_vec();
-                    let mut current_position = shakmaty::Chess::new();
+                    let mut current_position = Chess::new();
 
                     // We start out with the initial position and then the full move history.
                     games.push((current_position.clone(), current_move_history.clone()));
@@ -486,12 +487,51 @@ mod tests {
                     for (position, move_history) in games {
                         assert_eq!(
                             variation
-                                .find_line_from_moves(position, &move_history)
+                                .find_line_from_moves(position.clone(), &move_history)
+                                .expect("move_history should be legal"),
+                            Some(line)
+                        );
+
+                        assert_eq!(
+                            book::find_line_from_moves(position.clone(), &move_history)
                                 .expect("move_history should be legal"),
                             Some(line)
                         );
                     }
                 }
+
+                None::<()>
+            });
+        }
+    }
+
+    /// Tests that [`Variation::find_line_from_moves`] and [`book::find_line_from_moves`]
+    /// return `Ok(None)` when appropriate.
+    #[cfg(feature = "alloc")]
+    #[test]
+    fn dont_find_line_from_moves() {
+        use shakmaty::{Chess, fen::Fen};
+
+        // No opening
+        let position: Chess =
+            Fen::from_ascii(b"rnbqkbnr/pp1ppppp/8/2p5/P7/N7/1PPPPPPP/R1BQKBNR b KQkq - 1 2")
+                .unwrap()
+                .into_position(CastlingMode::Standard)
+                .unwrap();
+
+        for root in book::ALL {
+            root.walk_with_self(&mut |variation| {
+                assert_eq!(
+                    variation
+                        .find_line_from_moves(position.clone(), &[])
+                        .expect("moves are empty"),
+                    None
+                );
+
+                assert_eq!(
+                    book::find_line_from_moves(position.clone(), &[]).expect("moves are empty"),
+                    None
+                );
 
                 None::<()>
             });
