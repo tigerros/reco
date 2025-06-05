@@ -240,11 +240,17 @@ impl Display for Code {
 }
 
 #[cfg(test)]
-#[cfg(feature = "proptest")]
 mod tests {
     use super::*;
+    #[cfg(feature = "proptest")]
     use alloc::format;
 
+    #[test]
+    fn missing_volume() {
+        assert_eq!(Code::from_str(""), Err(Error::MissingVolume));
+    }
+
+    #[cfg(feature = "proptest")]
     proptest! {
         /// Tests that it doesn't panic.
         #[test]
@@ -280,6 +286,37 @@ mod tests {
             let code2 = Code { volume: volume2, category: category2 };
 
             assert_eq!(code1.cmp(&code2), u16::from(code1).cmp(&u16::from(code2)));
+        }
+
+        /// Tests that a [`Code`] can be converted to a string and back.
+        #[test]
+        fn to_str_from_str(code in any::<Code>()) {
+            Code::from_str(&code.to_string()).unwrap();
+        }
+
+        #[test]
+        fn invalid_volume(s in "[^A-E][0-9][0-9]") {
+            assert_eq!(Code::from_str(&s), Err(Error::InvalidVolume(volume::Error)));
+        }
+
+        #[test]
+        fn missing_category(s in "[A-E]") {
+            assert_eq!(Code::from_str(&s), Err(Error::MissingCategory));
+        }
+
+        #[test]
+        fn missing_category2(s in "[A-E][0-9]") {
+            assert_eq!(Code::from_str(&s), Err(Error::MissingCategory));
+        }
+
+        #[test]
+        fn invalid_category(s in "[A-E][^0-9][0-9]") {
+            assert_eq!(Code::from_str(&s), Err(Error::InvalidCategory));
+        }
+
+        #[test]
+        fn invalid_category2(s in "[A-E][0-9][^0-9]") {
+            assert_eq!(Code::from_str(&s), Err(Error::InvalidCategory));
         }
     }
 }

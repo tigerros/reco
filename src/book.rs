@@ -1,7 +1,7 @@
 pub use crate::book_gen::*;
 
-use crate::{Line, Variation};
 use crate::book;
+use crate::{Line, Variation};
 #[cfg(feature = "alloc")]
 use alloc::boxed::Box;
 use shakmaty::Setup;
@@ -51,7 +51,10 @@ pub fn find_line_from_moves(
     game: &[Move],
 ) -> Result<Option<&'static Line>, Box<PlayError<Chess>>> {
     // Reverse them otherwise it just finds the root
-    for setup in crate::generate_game_setups(initial_position, game)?.iter().rev() {
+    for setup in crate::generate_game_setups(initial_position, game)?
+        .iter()
+        .rev()
+    {
         if let Some(found) = find_line_from_setup(setup) {
             return Ok(Some(found));
         }

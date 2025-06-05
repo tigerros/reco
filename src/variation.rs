@@ -307,6 +307,7 @@ mod tests {
     use crate::book;
     #[cfg(feature = "alloc")]
     use alloc::vec::Vec;
+    use std::collections::HashSet;
 
     /// Tests that the getters correspond to the fields.
     #[test]
@@ -346,34 +347,35 @@ mod tests {
     /// of variations as [`book::VARIATION_COUNT`] minus `book::ALL.len()`.
     #[test]
     fn walk() {
-        let mut variation_count = 0;
+        // Use HashSet to make sure the walkers don't walk duplicates.
+        let mut walked = HashSet::new();
 
         for root in book::ALL {
-            root.walk(&mut |_| {
-                variation_count += 1;
+            root.walk(&mut |variation| {
+                walked.insert(variation);
 
                 None::<()>
             });
         }
 
-        assert_eq!(book::VARIATION_COUNT - book::ALL.len(), variation_count);
+        assert_eq!(walked.len(), book::VARIATION_COUNT - book::ALL.len());
     }
 
     /// A double test; tests that [`Variation::walk_with_self`] used on [`book::ALL`]
     /// records the same number of variations as [`book::VARIATION_COUNT`].
     #[test]
     fn walk_with_self() {
-        let mut variation_count = 0;
+        let mut walked = HashSet::new();
 
         for root in book::ALL {
-            root.walk_with_self(&mut |_| {
-                variation_count += 1;
+            root.walk_with_self(&mut |variation| {
+                walked.insert(variation);
 
                 None::<()>
             });
         }
 
-        assert_eq!(book::VARIATION_COUNT, variation_count);
+        assert_eq!(walked.len(), book::VARIATION_COUNT);
     }
 
     /// A double test; tests that [`Variation::walk`] short-circuits when the `walker` function returns [`Some`]
@@ -381,22 +383,19 @@ mod tests {
     #[test]
     fn walk_short_circuit() {
         const MAX_VARIATIONS: usize = 1123;
-        let mut variation_count = 0;
-        let mut walked = Vec::new();
+        let mut walked = HashSet::new();
 
         book::walk_all(&mut |variation| {
-            variation_count += 1;
+            walked.insert(variation);
 
-            walked.push(variation);
-
-            if variation_count == MAX_VARIATIONS {
-                return Some(variation_count);
+            if walked.len() == MAX_VARIATIONS {
+                return Some(walked.len());
             }
 
             None
         });
 
-        assert_eq!(variation_count, MAX_VARIATIONS);
+        assert_eq!(walked.len(), MAX_VARIATIONS);
 
         for walked in walked {
             // Make sure the book doesn't contain walked, because we didn't use `_with_self`.
@@ -408,19 +407,19 @@ mod tests {
     #[test]
     fn walk_with_self_short_circuit() {
         const MAX_VARIATIONS: usize = 1123;
-        let mut variation_count = 0;
+        let mut walked = HashSet::new();
 
-        book::walk_all_with_self(&mut |_| {
-            variation_count += 1;
+        book::walk_all_with_self(&mut |variation| {
+            walked.insert(variation);
 
-            if variation_count == MAX_VARIATIONS {
-                return Some(variation_count);
+            if walked.len() == MAX_VARIATIONS {
+                return Some(walked.len());
             }
 
             None
         });
 
-        assert_eq!(variation_count, MAX_VARIATIONS);
+        assert_eq!(walked.len(), MAX_VARIATIONS);
     }
 
     /// Tests that [`Variation::find_line_from_setup`] and [`book::find_line_from_setup`]
