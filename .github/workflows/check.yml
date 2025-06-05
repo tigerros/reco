@@ -33,5 +33,8 @@ jobs:
           toolchain: ${{ matrix.toolchain }}
           targets: x86_64-unknown-none
 
-      - name: Check
-        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --target x86_64-unknown-none ${{ matrix.flags }}
+      - name: No-std
+        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --skip proptest --target x86_64-unknown-none ${{ matrix.flags }}
+
+      - name: Std
+        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset ${{ matrix.flags }}
