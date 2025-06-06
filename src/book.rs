@@ -7,6 +7,10 @@ use alloc::boxed::Box;
 use shakmaty::Setup;
 #[cfg(feature = "alloc")]
 use shakmaty::{Chess, Move, PlayError};
+#[cfg(feature = "book-lookup")]
+use std::collections::HashMap;
+#[cfg(feature = "book-lookup")]
+use std::sync::LazyLock;
 
 /// Uses [`Variation::walk`] on each of the [`book::ALL`] root variations.
 /// Does not walk root variations themselves.
@@ -74,6 +78,14 @@ pub fn find_line_from_setup(setup: &Setup) -> Option<&'static Line> {
 
     None
 }
+
+#[cfg(feature = "book-lookup")]
+pub static LOOKUP: LazyLock<HashMap<&'static Setup, &'static Variation>> = LazyLock::new(|| {
+    HashMap::from([(
+        book::SICILIAN_DEFENSE.lines[0].setup(),
+        &book::SICILIAN_DEFENSE,
+    )])
+});
 
 #[cfg(test)]
 mod tests {
