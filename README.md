@@ -19,6 +19,8 @@ no-std and no-alloc compatible.
 
 ## Features
 - `book`: adds ECO entries as statics.
+- `book-setup-to-line`: adds a lazily evaluated `book::SETUP_TO_LINE` static that maps `shakmaty::Setup`s to `Line`s drastically improving opening lookup time. Requires `std`.
+- `book-flattened`: adds a compile time evaluated `book::FLATTENED` static that flattens the tree structure of `book::ALL`.
 - `alloc`: adds functionality which requires the `alloc` crate.
 - `serde`: enables [`serde`](https://crates.io/crates/proptest) support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
 - `proptest`: enables some [`proptest`](https://crates.io/crates/proptest) support. Requires `std`.
@@ -27,7 +29,7 @@ no-std and no-alloc compatible.
 The ECO entries are generated using the unpublished `librarian` crate.
 To make sure they are up to date, there's a workflow that runs `librarian` every day and makes a PR if any changes are detected.
 
-See [`librarian`'s README](https://github.com/tigerros/reco/tree/master/librarian/README.md) for information about running.
+See [`librarian`'s README](librarian/README.md) for information about running.
 
 ## Safety
 `reco` declares `#![forbid(unsafe_code)]`.

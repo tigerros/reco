@@ -34,9 +34,10 @@ shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", def
 [features]
 serde = ["dep:serde", "deranged/serde"]
 book = []
+book-setup-to-line = []
+book-flattened = []
 alloc = []
 proptest = ["dep:proptest"]
-book-lookup = []
 
 [dependencies]
 deranged = { version = "0.4.0", default-features = false }
@@ -46,6 +47,3 @@ shakmaty = { workspace = true }
 
 [patch.crates-io]
 shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master" }
-
-[[bench]]
-name = "find_line_from_setup"

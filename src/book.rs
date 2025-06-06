@@ -7,9 +7,9 @@ use alloc::boxed::Box;
 use shakmaty::Setup;
 #[cfg(feature = "alloc")]
 use shakmaty::{Chess, Move, PlayError};
-#[cfg(feature = "book-lookup")]
+#[cfg(feature = "book-setup-to-line")]
 use std::collections::HashMap;
-#[cfg(feature = "book-lookup")]
+#[cfg(feature = "book-setup-to-line")]
 use std::sync::LazyLock;
 
 /// Uses [`Variation::walk`] on each of the [`book::ALL`] root variations.
@@ -69,23 +69,87 @@ pub fn find_line_from_moves(
 
 /// Like [`Variation::find_line_from_setup`](crate::Variation::find_line_from_setup), but
 /// looks through [`book::ALL`].
+///
+/// Automatically uses [`SETUP_TO_LINE`] if the `book-setup-to-line` feature is enabled.
 pub fn find_line_from_setup(setup: &Setup) -> Option<&'static Line> {
-    for variation in &book::ALL {
-        if let Some(found) = variation.find_line_from_setup(setup) {
-            return Some(found);
+    #[cfg(feature = "book-setup-to-line")]
+    {
+        SETUP_TO_LINE.get(setup).copied()
+    }
+
+    #[cfg(not(feature = "book-setup-to-line"))]
+    {
+        for variation in &book::ALL {
+            if let Some(found) = variation.find_line_from_setup(setup) {
+                return Some(found);
+            }
+        }
+
+        None
+    }
+}
+
+/// Maps every [`Setup`] to a [`Line`] to drastically improve lookup times.
+#[cfg(feature = "book-setup-to-line")]
+pub static SETUP_TO_LINE: LazyLock<HashMap<&'static Setup, &'static Line>> = LazyLock::new(|| {
+    // Assume every variation has 5 lines on average.
+    // Shrunk at the end.
+    let mut map = HashMap::with_capacity(book::VARIATION_COUNT * 5);
+
+    book::walk_all_with_self(&mut |variation| {
+        for line in variation.lines() {
+            map.insert(line.setup(), line);
+        }
+
+        None::<()>
+    });
+
+    map.shrink_to_fit();
+
+    map
+});
+
+/// Contains every single [`Variation`] in the [`book::ALL`] tree.
+#[cfg(feature = "book-flattened")]
+pub static FLATTENED: [&Variation; VARIATION_COUNT] = {
+    const fn add_variation(
+        flattened: &mut [&Variation; VARIATION_COUNT],
+        index: &mut usize,
+        variation: &'static Variation,
+    ) {
+        #[expect(clippy::indexing_slicing, reason = "build will fail if this panics")]
+        {
+            flattened[*index] = variation;
+        }
+        *index += 1;
+
+        // Add all child variations recursively
+        let mut i = 0;
+        while i < variation.variations.len() {
+            #[expect(clippy::indexing_slicing, reason = "build will fail if this panics")]
+            add_variation(flattened, index, variation.variations[i]);
+            i += 1;
         }
     }
 
-    None
-}
+    let mut flattened: [&Variation; VARIATION_COUNT] = [&Variation {
+        name: "",
+        parent: None,
+        variations: &[],
+        lines: &[],
+    }; VARIATION_COUNT];
 
-#[cfg(feature = "book-lookup")]
-pub static LOOKUP: LazyLock<HashMap<&'static Setup, &'static Variation>> = LazyLock::new(|| {
-    HashMap::from([(
-        book::SICILIAN_DEFENSE.lines[0].setup(),
-        &book::SICILIAN_DEFENSE,
-    )])
-});
+    let mut index = 0;
+
+    let mut root_index = 0;
+    while root_index < book::ALL.len() {
+        #[expect(clippy::indexing_slicing, reason = "build will fail if this panics")]
+        add_variation(&mut flattened, &mut index, book::ALL[root_index]);
+        root_index += 1;
+    }
+
+    flattened
+};
 
 #[cfg(test)]
 mod tests {
@@ -115,5 +179,33 @@ mod tests {
         });
 
         assert_eq!(variation_count, book::VARIATION_COUNT);
+    }
+
+    /// Tests that the contents of [`SETUP_TO_LINE`] are correct.
+    #[cfg(feature = "book-setup-to-line")]
+    #[test]
+    fn setup_to_line() {
+        book::walk_all_with_self(&mut |variation| {
+            for line in variation.lines() {
+                assert_eq!(SETUP_TO_LINE.get(line.setup()).copied(), Some(line));
+            }
+
+            None::<()>
+        });
+    }
+
+    /// Tests that the contents of [`FLATTENED`] are correct.
+    #[cfg(feature = "book-flattened")]
+    #[test]
+    fn flattened() {
+        let mut flattened = alloc::vec::Vec::new();
+
+        book::walk_all_with_self(&mut |variation| {
+            flattened.push(variation);
+
+            None::<()>
+        });
+
+        assert_eq!(FLATTENED.as_slice(), flattened);
     }
 }

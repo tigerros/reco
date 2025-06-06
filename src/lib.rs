@@ -1,5 +1,9 @@
 #![cfg_attr(
-    all(not(test), not(feature = "proptest"), not(feature = "book-lookup")),
+    all(
+        not(test),
+        not(feature = "proptest"),
+        not(feature = "book-setup-to-line")
+    ),
     no_std
 )]
 #![warn(
