@@ -7,9 +7,9 @@ use alloc::boxed::Box;
 use shakmaty::Setup;
 #[cfg(feature = "alloc")]
 use shakmaty::{Chess, Move, PlayError};
-#[cfg(feature = "book-setup-to-line")]
+#[cfg(feature = "std")]
 use std::collections::HashMap;
-#[cfg(feature = "book-setup-to-line")]
+#[cfg(feature = "std")]
 use std::sync::LazyLock;
 
 /// Uses [`Variation::walk`] on each of the [`book::ALL`] root variations.
@@ -70,14 +70,14 @@ pub fn find_line_from_moves(
 /// Like [`Variation::find_line_from_setup`](crate::Variation::find_line_from_setup), but
 /// looks through [`book::ALL`].
 ///
-/// Automatically uses [`SETUP_TO_LINE`] if the `book-setup-to-line` feature is enabled.
+/// Automatically uses [`SETUP_TO_LINE`] if the `std` feature is enabled.
 pub fn find_line_from_setup(setup: &Setup) -> Option<&'static Line> {
-    #[cfg(feature = "book-setup-to-line")]
+    #[cfg(feature = "std")]
     {
         SETUP_TO_LINE.get(setup).copied()
     }
 
-    #[cfg(not(feature = "book-setup-to-line"))]
+    #[cfg(not(feature = "std"))]
     {
         for variation in &book::ALL {
             if let Some(found) = variation.find_line_from_setup(setup) {
@@ -90,7 +90,7 @@ pub fn find_line_from_setup(setup: &Setup) -> Option<&'static Line> {
 }
 
 /// Maps every [`Setup`] to a [`Line`] to drastically improve lookup times.
-#[cfg(feature = "book-setup-to-line")]
+#[cfg(feature = "std")]
 pub static SETUP_TO_LINE: LazyLock<HashMap<&'static Setup, &'static Line>> = LazyLock::new(|| {
     // Assume every variation has 5 lines on average.
     // Shrunk at the end.
@@ -182,7 +182,7 @@ mod tests {
     }
 
     /// Tests that the contents of [`SETUP_TO_LINE`] are correct.
-    #[cfg(feature = "book-setup-to-line")]
+    #[cfg(feature = "std")]
     #[test]
     fn setup_to_line() {
         book::walk_all_with_self(&mut |variation| {

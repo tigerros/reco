@@ -18,10 +18,10 @@ Contains:
 no-std and no-alloc compatible.
 
 ## Features
-- `book`: adds ECO entries as statics.
-- `book-setup-to-line`: adds a lazily evaluated `book::SETUP_TO_LINE` static that maps `shakmaty::Setup`s to `Line`s drastically improving opening lookup time. Requires `std`.
-- `book-flattened`: adds a compile time evaluated `book::FLATTENED` static that flattens the tree structure of `book::ALL`.
 - `alloc`: adds functionality which requires the `alloc` crate.
+- `std` (default): adds functionality which requires `std`. Highly recommended if `std` is available. Most notably, it adds a lazily evaluated `book::SETUP_TO_LINE` static that maps `shakmaty::Setup`s to `Line`s drastically improving opening lookup time.
+- `book`: adds ECO entries as statics.
+- `book-flattened`: adds a compile time evaluated `book::FLATTENED` static that flattens the tree structure of `book::ALL`.
 - `serde`: adds [`serde`](https://crates.io/crates/serde) support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
 - `proptest`: adds some [`proptest`](https://crates.io/crates/proptest) support. Requires `std`.
 
@@ -29,11 +29,11 @@ no-std and no-alloc compatible.
 The ECO entries are generated using the unpublished `librarian` crate.
 To make sure they are up to date, there's a workflow that runs `librarian` every day and makes a PR if any changes are detected.
 
-See [`librarian`'s README](librarian/README.md) for information about running.
+See [`librarian`'s README](https://github.com/tigerros/reco/blob/master/librarian/README.md) for information about running.
 
 ## Safety
 `reco` declares `#![forbid(unsafe_code)]`.
 
 ## Cloning
-If you clone this repository, **exclude the `src/book` directory from your IDE.**
+If you clone this repository, **exclude the `src/book_gen` directory from your IDE.**
 Open the files in there with a well optimized text editor.

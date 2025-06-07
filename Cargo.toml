@@ -32,18 +32,19 @@ reco = { path = "." }
 shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", default-features = false }
 
 [features]
+default = ["std"]
+# Adds functionality which requires `alloc`.
+alloc = []
+# Adds functionality which requires `std`. Highly recommended if `std` is available. Most notably, it adds a lazily evaluated `book::SETUP_TO_LINE` static that maps `shakmaty::Setup`s to `Line`s drastically improving opening lookup time.
+std = ["alloc"]
 # Adds ECO entries as statics.
 book = []
-# Adds a lazily evaluated `book::SETUP_TO_LINE` static that maps `shakmaty::Setup`s to `Line`s drastically improving opening lookup time. Requires `std`.
-book-setup-to-line = []
 # Adds a compile time evaluated `book::FLATTENED` static that flattens the tree structure of `book::ALL`.
 book-flattened = []
-# Adds functionality which requires the `alloc` crate.
-alloc = []
 # Adds `serde` support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
 serde = ["dep:serde", "deranged/serde"]
 # Adds some `proptest` support. Requires `std`.
-proptest = ["dep:proptest"]
+proptest = ["dep:proptest", "std"]
 
 [dependencies]
 deranged = { version = "0.4.0", default-features = false }

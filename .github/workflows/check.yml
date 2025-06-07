@@ -34,7 +34,7 @@ jobs:
           targets: x86_64-unknown-none
 
       - name: No-std
-        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --skip proptest,book-setup-to-line --target x86_64-unknown-none ${{ matrix.flags }}
+        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --skip proptest,std --target x86_64-unknown-none ${{ matrix.flags }}
 
       - name: Std
         run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset ${{ matrix.flags }}

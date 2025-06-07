@@ -1,11 +1,13 @@
 //! Gets the latest game of a user and asserts that the opening found by `reco`
 //! is the same as the opening in Lichess.
+//!
+//! Panics if the latest game is a variant, or otherwise doesn't have an opening attached to it.
 
 use rpgn::{Pgn, Sans};
 use shakmaty::san::San;
 use shakmaty::{Chess, Position};
 
-const USER: &str = "tigerros_gh";
+const USER: &str = "DrNykterstein";
 
 fn main() {
     let mut latest_games = ureq::get(format!("https://lichess.org/api/games/user/{USER}"))

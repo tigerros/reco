@@ -1,11 +1,4 @@
-#![cfg_attr(
-    all(
-        not(test),
-        not(feature = "proptest"),
-        not(feature = "book-setup-to-line")
-    ),
-    no_std
-)]
+#![cfg_attr(all(not(test), not(feature = "std")), no_std)]
 #![warn(
     clippy::pedantic,
     clippy::nursery,
