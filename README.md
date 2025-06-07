@@ -22,8 +22,8 @@ no-std and no-alloc compatible.
 - `book-setup-to-line`: adds a lazily evaluated `book::SETUP_TO_LINE` static that maps `shakmaty::Setup`s to `Line`s drastically improving opening lookup time. Requires `std`.
 - `book-flattened`: adds a compile time evaluated `book::FLATTENED` static that flattens the tree structure of `book::ALL`.
 - `alloc`: adds functionality which requires the `alloc` crate.
-- `serde`: enables [`serde`](https://crates.io/crates/proptest) support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
-- `proptest`: enables some [`proptest`](https://crates.io/crates/proptest) support. Requires `std`.
+- `serde`: adds [`serde`](https://crates.io/crates/serde) support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
+- `proptest`: adds some [`proptest`](https://crates.io/crates/proptest) support. Requires `std`.
 
 ## Sourcing
 The ECO entries are generated using the unpublished `librarian` crate.

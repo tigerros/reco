@@ -3,7 +3,7 @@ This is an unpublished crate used to generate files for [`reco`](https://crates.
 [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
 
 Run in the root `reco` directory, with `cargo run -p librarian`.
-Before running, commit any changes in `src/book`, as that directory will be deleted and replaced.
+The `src/book_gen` directory will be deleted and replaced.
 Only commit changes if `librarian` prints `success` and `reco` compiles.
 Additionally, `librarian` requires a `GITHUB_TOKEN` environment variable, which is used to download the artifacts
 from workflow runs in [lichess-org/chess-openings](https://github.com/lichess-org/chess-openings).
