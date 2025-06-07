@@ -18,9 +18,8 @@ Contains:
 no-std and no-alloc compatible.
 
 ## Features
-Unless you're working in a no-std or no-alloc context, it is highly recommended to leave the respective features on.
 - `alloc` (default): adds functionality which requires `alloc`.
-- `std` (default): adds functionality which requires `std`. Most notably, it adds a lazily evaluated `book::SETUP_TO_LINE` static that maps `shakmaty::Setup`s to `Line`s drastically improving opening lookup time.
+- `std` (default): adds functionality which requires `std`. Highly recommended. Most notably, it adds a lazily evaluated `book::SETUP_TO_LINE` static that maps `shakmaty::Setup`s to `Line`s drastically improving opening lookup time.
 - `book` (default): adds ECO entries as statics.
 - `book-flattened`: adds a compile time evaluated `book::FLATTENED` static that flattens the tree structure of `book::ALL`.
 - `serde`: adds [`serde`](https://crates.io/crates/serde) support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
