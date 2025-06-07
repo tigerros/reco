@@ -9,7 +9,7 @@
 # reco
 **R**ust **E**ncyclopaedia of **C**hess **O**penings.
 
-This crate is an implementation of the [ECO](https://en.wikipedia.org/wiki/Encyclopaedia_of_Chess_Openings) standard using [`shakmaty`](https://crates.io/crates/shakmaty) for relevant types.
+This crate is an implementation of the [ECO](https://en.wikipedia.org/wiki/Encyclopaedia_of_Chess_Openings) database using [`shakmaty`](https://crates.io/crates/shakmaty) for relevant types.
 
 Contains:
 - Types to represent each part of an ECO entry.
