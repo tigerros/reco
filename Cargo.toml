@@ -12,6 +12,7 @@ categories = [
 ]
 keywords = ["chess", "eco", "dataset", "lichess"]
 repository = "https://github.com/tigerros/reco"
+authors = ["Leonard D."]
 license = "GPL-3.0+"
 readme = "README.md"
 include = ["src", "README.md", "LICENSE"]
