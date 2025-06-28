@@ -1,5 +1,3 @@
-**Not released yet due to a crucial feature in shakmaty not being published yet ([shakmaty/#92](https://github.com/niklasf/shakmaty/pull/92)).**
-
 [![tests](https://img.shields.io/github/actions/workflow/status/tigerros/reco/test.yml?label=tests)](https://github.com/tigerros/reco/actions/workflows/test.yml)
 [![clippy](https://img.shields.io/github/actions/workflow/status/tigerros/reco/clippy.yml?label=clippy)](https://github.com/tigerros/reco/actions/workflows/clippy.yml)
 [![coverage](https://img.shields.io/codecov/c/gh/tigerros/reco)](https://app.codecov.io/gh/tigerros/reco/)
