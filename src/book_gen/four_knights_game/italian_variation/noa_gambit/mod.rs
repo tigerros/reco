@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,75 +59,75 @@ pub static NOA_GAMBIT: Variation = Variation {
         parent: &NOA_GAMBIT,
         code: Code {
             volume: Volume::C,
-            category: Category::new_static::<47>(),
+            category: Category::new_static::<4>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E7,
+                from: Square::E7,
                 capture: None,
-                to: E5,
+                to: Square::E5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G1,
+                from: Square::G1,
                 capture: None,
-                to: F3,
+                to: Square::F3,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B8,
+                from: Square::B8,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F1,
+                from: Square::F1,
                 capture: None,
-                to: C4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G8,
+                from: Square::G8,
                 capture: None,
-                to: F6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B1,
+                from: Square::B1,
                 capture: None,
-                to: C3,
+                to: Square::C3,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: F6,
+                from: Square::F6,
                 capture: Some(Pawn),
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C4,
+                from: Square::C4,
                 capture: Some(Pawn),
-                to: F7,
+                to: Square::F7,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(58265388898643712),
                     knight: Bitboard(4398317305856),
@@ -144,7 +140,17 @@ pub static NOA_GAMBIT: Variation = Variation {
                     black: Bitboard(13677155060381908992),
                     white: Bitboard(9007199257161629),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,

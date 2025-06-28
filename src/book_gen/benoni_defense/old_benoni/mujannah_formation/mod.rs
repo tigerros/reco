@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,40 +59,40 @@ pub static MUJANNAH_FORMATION: Variation = Variation {
         parent: &MUJANNAH_FORMATION,
         code: Code {
             volume: Volume::A,
-            category: Category::new_static::<43>(),
+            category: Category::new_static::<4>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: D2,
+                from: Square::D2,
                 capture: None,
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C7,
+                from: Square::C7,
                 capture: None,
-                to: C5,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D4,
+                from: Square::D4,
                 capture: None,
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: F7,
+                from: Square::F7,
                 capture: None,
-                to: F5,
+                to: Square::F5,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(61643208878257920),
                     knight: Bitboard(4755801206503243842),
@@ -109,7 +105,17 @@ pub static MUJANNAH_FORMATION: Variation = Variation {
                     black: Bitboard(18436329654190080000),
                     white: Bitboard(34359801855),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

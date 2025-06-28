@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -64,26 +60,26 @@ pub static OLD_BENONI: Variation = Variation {
             parent: &OLD_BENONI,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<43>(),
+                category: Category::new_static::<4>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C7,
+                    from: Square::C7,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(70650236468524800),
                         knight: Bitboard(4755801206503243842),
@@ -96,7 +92,17 @@ pub static OLD_BENONI: Variation = Variation {
                         black: Bitboard(18445336716005867520),
                         white: Bitboard(134281215),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -121,33 +127,33 @@ pub static OLD_BENONI: Variation = Variation {
             parent: &OLD_BENONI,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<43>(),
+                category: Category::new_static::<4>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C7,
+                    from: Square::C7,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D4,
+                    from: Square::D4,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(70650270694045440),
                         knight: Bitboard(4755801206503243842),
@@ -160,7 +166,17 @@ pub static OLD_BENONI: Variation = Variation {
                         black: Bitboard(18445336716005867520),
                         white: Bitboard(34359801855),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,
@@ -185,40 +201,40 @@ pub static OLD_BENONI: Variation = Variation {
             parent: &OLD_BENONI,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<43>(),
+                category: Category::new_static::<4>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C7,
+                    from: Square::C7,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D4,
+                    from: Square::D4,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D6,
+                    to: Square::D6,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(68407266973382400),
                         knight: Bitboard(4755801206503243842),
@@ -231,7 +247,17 @@ pub static OLD_BENONI: Variation = Variation {
                         black: Bitboard(18443093712285204480),
                         white: Bitboard(34359801855),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -256,40 +282,40 @@ pub static OLD_BENONI: Variation = Variation {
             parent: &OLD_BENONI,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<44>(),
+                category: Category::new_static::<4>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C7,
+                    from: Square::C7,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D4,
+                    from: Square::D4,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E5,
+                    to: Square::E5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(66146739786151680),
                         knight: Bitboard(4755801206503243842),
@@ -302,12 +328,22 @@ pub static OLD_BENONI: Variation = Variation {
                         black: Bitboard(18440833185097973760),
                         white: Bitboard(34359801855),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
                 castling_rights: Bitboard(9295429630892703873),
-                ep_square: Some(E6),
+                ep_square: Some(Square::E6),
                 remaining_checks: None,
                 halfmoves: 0,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {

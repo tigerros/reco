@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,54 +59,54 @@ pub static PSEUDO_SCANDINAVIAN: Variation = Variation {
         parent: &PSEUDO_SCANDINAVIAN,
         code: Code {
             volume: Volume::B,
-            category: Category::new_static::<10>(),
+            category: Category::new_static::<1>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C7,
+                from: Square::C7,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C2,
+                from: Square::C2,
                 capture: None,
-                to: C4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D7,
+                from: Square::D7,
                 capture: None,
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E4,
+                from: Square::E4,
                 capture: Some(Pawn),
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
             Normal {
                 role: Queen,
-                from: D8,
+                from: Square::D8,
                 capture: Some(Pawn),
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(68402817454369536),
                     knight: Bitboard(4755801206503243842),
@@ -123,7 +119,17 @@ pub static PSEUDO_SCANDINAVIAN: Variation = Variation {
                     black: Bitboard(17866628579115139072),
                     white: Bitboard(67169279),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

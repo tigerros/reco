@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,112 +59,118 @@ pub static REVERSED_TARRASCH: Variation = Variation {
         parent: &REVERSED_TARRASCH,
         code: Code {
             volume: Volume::A,
-            category: Category::new_static::<56>(),
+            category: Category::new_static::<5>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: D2,
+                from: Square::D2,
                 capture: None,
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G8,
+                from: Square::G8,
                 capture: None,
-                to: F6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C2,
+                from: Square::C2,
                 capture: None,
-                to: C4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C7,
+                from: Square::C7,
                 capture: None,
-                to: C5,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E3,
+                to: Square::E3,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: G7,
+                from: Square::G7,
                 capture: None,
-                to: G6,
+                to: Square::G6,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B1,
+                from: Square::B1,
                 capture: None,
-                to: C3,
+                to: Square::C3,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F8,
+                from: Square::F8,
                 capture: None,
-                to: G7,
+                to: Square::G7,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G1,
+                from: Square::G1,
                 capture: None,
-                to: F3,
+                to: Square::F3,
                 promotion: None,
             },
-            Castle { king: E8, rook: H8 },
+            Castle {
+                king: Square::E8,
+                rook: Square::H8,
+            },
             Normal {
                 role: Bishop,
-                from: F1,
+                from: Square::F1,
                 capture: None,
-                to: E2,
+                to: Square::E2,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C5,
+                from: Square::C5,
                 capture: Some(Pawn),
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E3,
+                from: Square::E3,
                 capture: Some(Pawn),
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D7,
+                from: Square::D7,
                 capture: None,
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
-            Castle { king: E1, rook: H1 },
+            Castle {
+                king: Square::E1,
+                rook: Square::H1,
+            },
             Normal {
                 role: Knight,
-                from: B8,
+                from: Square::B8,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(50454424136508160),
                     knight: Bitboard(39582420959232),
@@ -181,7 +183,17 @@ pub static REVERSED_TARRASCH: Variation = Variation {
                     black: Bitboard(7922786154997350400),
                     white: Bitboard(203748205),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

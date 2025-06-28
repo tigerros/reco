@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -68,21 +64,21 @@ pub static KARNIEWSKI_VARIATION: Variation = Variation {
         moves: &[
             Normal {
                 role: Pawn,
-                from: B2,
+                from: Square::B2,
                 capture: None,
-                to: B4,
+                to: Square::B4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G8,
+                from: Square::G8,
                 capture: None,
-                to: H6,
+                to: Square::H6,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(71776119094836480),
                     knight: Bitboard(144255925564211266),
@@ -95,7 +91,17 @@ pub static KARNIEWSKI_VARIATION: Variation = Variation {
                     black: Bitboard(13834917317793808384),
                     white: Bitboard(33619455),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

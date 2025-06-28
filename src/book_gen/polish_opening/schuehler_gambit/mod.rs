@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -68,56 +64,56 @@ pub static SCHUEHLER_GAMBIT: Variation = Variation {
         moves: &[
             Normal {
                 role: Pawn,
-                from: B2,
+                from: Square::B2,
                 capture: None,
-                to: B4,
+                to: Square::B4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C7,
+                from: Square::C7,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C1,
+                from: Square::C1,
                 capture: None,
-                to: B2,
+                to: Square::B2,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: A7,
+                from: Square::A7,
                 capture: None,
-                to: A5,
+                to: Square::A5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: B4,
+                from: Square::B4,
                 capture: None,
-                to: B5,
+                to: Square::B5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C6,
+                from: Square::C6,
                 capture: Some(Pawn),
-                to: B5,
+                to: Square::B5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(70368757331062016),
                     knight: Bitboard(4755801206503243842),
@@ -130,7 +126,17 @@ pub static SCHUEHLER_GAMBIT: Variation = Variation {
                     black: Bitboard(18445055236734189568),
                     white: Bitboard(268496891),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,

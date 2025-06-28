@@ -16,14 +16,12 @@ use crate::get_name::get_name;
 use crate::get_uci::get_uci;
 use indexmap::IndexSet;
 use line_meta::LineMeta;
-use reco::Code;
 use shakmaty::{Chess, EnPassantMode, Position};
 use std::cell::RefCell;
 use std::collections::BTreeMap;
 use std::fs::{exists, remove_dir_all, write};
 use std::io::Cursor;
 use std::rc::Rc;
-use std::str::FromStr;
 use variation_meta::VariationMeta;
 use zip::ZipArchive;
 
@@ -48,7 +46,8 @@ fn main() {
         let name_raw = &record[1];
         let uci_raw = &record[3];
 
-        let code = Code::from_str(code_raw).unwrap();
+        let volume = code_raw[0..1].to_string();
+        let category = code_raw[1..2].to_string();
         let mut full_name = get_name(name_raw);
 
         assert!(!full_name.is_empty());
@@ -103,10 +102,12 @@ fn main() {
             variation = subvariation;
         }
 
-        variation
-            .lines
-            .borrow_mut()
-            .insert(LineMeta { code, moves, setup });
+        variation.lines.borrow_mut().insert(LineMeta {
+            volume,
+            category,
+            moves,
+            setup,
+        });
     }
 
     // Delete previous data

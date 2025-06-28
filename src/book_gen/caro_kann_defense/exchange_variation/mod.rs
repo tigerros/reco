@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -64,47 +60,47 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
             parent: &EXCHANGE_VARIATION,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<13>(),
+                category: Category::new_static::<1>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C7,
+                    from: Square::C7,
                     capture: None,
-                    to: C6,
+                    to: Square::C6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E4,
+                    from: Square::E4,
                     capture: Some(Pawn),
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(68402851881215744),
                         knight: Bitboard(4755801206503243842),
@@ -117,7 +113,17 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
                         black: Bitboard(18443089297058824192),
                         white: Bitboard(34494015487),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,
@@ -142,68 +148,68 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
             parent: &EXCHANGE_VARIATION,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<13>(),
+                category: Category::new_static::<1>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C7,
+                    from: Square::C7,
                     capture: None,
-                    to: C6,
+                    to: Square::C6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E4,
+                    from: Square::E4,
                     capture: Some(Pawn),
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C6,
+                    from: Square::C6,
                     capture: Some(Pawn),
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G1,
+                    from: Square::G1,
                     capture: None,
-                    to: F3,
+                    to: Square::F3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B8,
+                    from: Square::B8,
                     capture: None,
-                    to: C6,
+                    to: Square::C6,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(68398453834704640),
                         knight: Bitboard(4611690416475996162),
@@ -216,7 +222,17 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
                         black: Bitboard(18298974143342706688),
                         white: Bitboard(136374207),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,

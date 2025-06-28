@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -65,7 +61,6 @@ pub static FRENCH_DEFENSE: Variation = Variation {
         &BAEUERLE_GAMBIT,
         &BANZAI_LEONG_GAMBIT,
         &BIRD_INVITATION,
-        &BURN_VARIATION,
         &CARLSON_GAMBIT,
         &CHIGORIN_VARIATION,
         &CLASSICAL_VARIATION,
@@ -75,7 +70,6 @@ pub static FRENCH_DEFENSE: Variation = Variation {
         &FRANCO_HIVA_GAMBIT,
         &FRANCO_HIVA_GAMBIT_ACCEPTED,
         &FRANCO_SICILIAN_DEFENSE,
-        &GUIMARD_VARIATION,
         &HECHT_REEFSCHLAGER_VARIATION,
         &HENNEBERGER_VARIATION,
         &HOFFMANN_GAMBIT,
@@ -83,8 +77,8 @@ pub static FRENCH_DEFENSE: Variation = Variation {
         &KINGS_INDIAN_ATTACK,
         &KNIGHT_VARIATION,
         &LA_BOURDONNAIS_VARIATION,
-        &MAC_CUTCHEON_VARIATION,
         &MARSHALL_GAMBIT,
+        &MC_CUTCHEON_VARIATION,
         &MEDITERRANEAN_DEFENSE,
         &MORPHY_GAMBIT,
         &NORMAL_VARIATION,
@@ -116,21 +110,21 @@ pub static FRENCH_DEFENSE: Variation = Variation {
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(67290111888387840),
                         knight: Bitboard(4755801206503243842),
@@ -143,7 +137,17 @@ pub static FRENCH_DEFENSE: Variation = Variation {
                         black: Bitboard(18441976591291514880),
                         white: Bitboard(268496895),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -173,35 +177,35 @@ pub static FRENCH_DEFENSE: Variation = Variation {
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65038346568656640),
                         knight: Bitboard(4755801206503243842),
@@ -214,7 +218,17 @@ pub static FRENCH_DEFENSE: Variation = Variation {
                         black: Bitboard(18439724825837568000),
                         white: Bitboard(402712575),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -249,8 +263,6 @@ pub mod banzai_leong_gambit;
 pub use banzai_leong_gambit::BANZAI_LEONG_GAMBIT;
 pub mod bird_invitation;
 pub use bird_invitation::BIRD_INVITATION;
-pub mod burn_variation;
-pub use burn_variation::BURN_VARIATION;
 pub mod carlson_gambit;
 pub use carlson_gambit::CARLSON_GAMBIT;
 pub mod chigorin_variation;
@@ -269,8 +281,6 @@ pub mod franco_hiva_gambit_accepted;
 pub use franco_hiva_gambit_accepted::FRANCO_HIVA_GAMBIT_ACCEPTED;
 pub mod franco_sicilian_defense;
 pub use franco_sicilian_defense::FRANCO_SICILIAN_DEFENSE;
-pub mod guimard_variation;
-pub use guimard_variation::GUIMARD_VARIATION;
 pub mod hecht_reefschlager_variation;
 pub use hecht_reefschlager_variation::HECHT_REEFSCHLAGER_VARIATION;
 pub mod henneberger_variation;
@@ -285,10 +295,10 @@ pub mod knight_variation;
 pub use knight_variation::KNIGHT_VARIATION;
 pub mod la_bourdonnais_variation;
 pub use la_bourdonnais_variation::LA_BOURDONNAIS_VARIATION;
-pub mod mac_cutcheon_variation;
-pub use mac_cutcheon_variation::MAC_CUTCHEON_VARIATION;
 pub mod marshall_gambit;
 pub use marshall_gambit::MARSHALL_GAMBIT;
+pub mod mc_cutcheon_variation;
+pub use mc_cutcheon_variation::MC_CUTCHEON_VARIATION;
 pub mod mediterranean_defense;
 pub use mediterranean_defense::MEDITERRANEAN_DEFENSE;
 pub mod morphy_gambit;

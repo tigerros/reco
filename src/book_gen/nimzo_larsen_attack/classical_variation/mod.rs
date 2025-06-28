@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -64,26 +60,26 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
             parent: &CLASSICAL_VARIATION,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<1>(),
+                category: Category::new_static::<0>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: B2,
+                    from: Square::B2,
                     capture: None,
-                    to: B3,
+                    to: Square::B3,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(69524353607466240),
                         knight: Bitboard(4755801206503243842),
@@ -96,7 +92,17 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
                         black: Bitboard(18444210833278894080),
                         white: Bitboard(196095),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -121,33 +127,33 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
             parent: &CLASSICAL_VARIATION,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<6>(),
+                category: Category::new_static::<0>(),
             },
             moves: &[
                 Normal {
                     role: Knight,
-                    from: G1,
+                    from: Square::G1,
                     capture: None,
-                    to: F3,
+                    to: Square::F3,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: B2,
+                    from: Square::B2,
                     capture: None,
-                    to: B3,
+                    to: Square::B3,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(69524353607466240),
                         knight: Bitboard(4755801206505340930),
@@ -160,7 +166,17 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
                         black: Bitboard(18444210833278894080),
                         white: Bitboard(2293183),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,

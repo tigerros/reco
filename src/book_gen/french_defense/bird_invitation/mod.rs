@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -68,28 +64,28 @@ pub static BIRD_INVITATION: Variation = Variation {
         moves: &[
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E7,
+                from: Square::E7,
                 capture: None,
-                to: E6,
+                to: Square::E6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F1,
+                from: Square::F1,
                 capture: None,
-                to: B5,
+                to: Square::B5,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(67290111888387840),
                     knight: Bitboard(4755801206503243842),
@@ -102,7 +98,17 @@ pub static BIRD_INVITATION: Variation = Variation {
                     black: Bitboard(18441976591291514880),
                     white: Bitboard(8858431455),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,

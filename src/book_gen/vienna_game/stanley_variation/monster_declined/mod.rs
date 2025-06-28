@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,82 +59,82 @@ pub static MONSTER_DECLINED: Variation = Variation {
         parent: &MONSTER_DECLINED,
         code: Code {
             volume: Volume::C,
-            category: Category::new_static::<27>(),
+            category: Category::new_static::<2>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E7,
+                from: Square::E7,
                 capture: None,
-                to: E5,
+                to: Square::E5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B1,
+                from: Square::B1,
                 capture: None,
-                to: C3,
+                to: Square::C3,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G8,
+                from: Square::G8,
                 capture: None,
-                to: F6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F1,
+                from: Square::F1,
                 capture: None,
-                to: C4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: F6,
+                from: Square::F6,
                 capture: Some(Pawn),
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Queen,
-                from: D1,
+                from: Square::D1,
                 capture: None,
-                to: H5,
+                to: Square::H5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: E4,
+                from: Square::E4,
                 capture: None,
-                to: D6,
+                to: Square::D6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C4,
+                from: Square::C4,
                 capture: None,
-                to: B3,
+                to: Square::B3,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F8,
+                from: Square::F8,
                 capture: None,
-                to: E7,
+                to: Square::E7,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272588153384704),
                     knight: Bitboard(144123984169140288),
@@ -151,7 +147,17 @@ pub static MONSTER_DECLINED: Variation = Variation {
                     black: Bitboard(11528942435904258048),
                     white: Bitboard(549756268501),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

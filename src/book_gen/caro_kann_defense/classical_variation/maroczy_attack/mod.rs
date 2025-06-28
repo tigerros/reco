@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,89 +59,89 @@ pub static MAROCZY_ATTACK: Variation = Variation {
         parent: &MAROCZY_ATTACK,
         code: Code {
             volume: Volume::B,
-            category: Category::new_static::<18>(),
+            category: Category::new_static::<1>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C7,
+                from: Square::C7,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D2,
+                from: Square::D2,
                 capture: None,
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D7,
+                from: Square::D7,
                 capture: None,
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B1,
+                from: Square::B1,
                 capture: None,
-                to: D2,
+                to: Square::D2,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D5,
+                from: Square::D5,
                 capture: Some(Pawn),
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: D2,
+                from: Square::D2,
                 capture: Some(Pawn),
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C8,
+                from: Square::C8,
                 capture: None,
-                to: F5,
+                to: Square::F5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: E4,
+                from: Square::E4,
                 capture: None,
-                to: G3,
+                to: Square::G3,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F5,
+                from: Square::F5,
                 capture: None,
-                to: G6,
+                to: Square::G6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: F2,
+                from: Square::F2,
                 capture: None,
-                to: F4,
+                to: Square::F4,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(68402818058340096),
                     knight: Bitboard(4755801206507438144),
@@ -158,7 +154,17 @@ pub static MAROCZY_ATTACK: Variation = Variation {
                     black: Bitboard(18154929289651290112),
                     white: Bitboard(675334141),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,

@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,173 +59,173 @@ pub static KRAUSE_VARIATION: Variation = Variation {
         parent: &KRAUSE_VARIATION,
         code: Code {
             volume: Volume::C,
-            category: Category::new_static::<54>(),
+            category: Category::new_static::<5>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E7,
+                from: Square::E7,
                 capture: None,
-                to: E5,
+                to: Square::E5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G1,
+                from: Square::G1,
                 capture: None,
-                to: F3,
+                to: Square::F3,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B8,
+                from: Square::B8,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F1,
+                from: Square::F1,
                 capture: None,
-                to: C4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F8,
+                from: Square::F8,
                 capture: None,
-                to: C5,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C2,
+                from: Square::C2,
                 capture: None,
-                to: C3,
+                to: Square::C3,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G8,
+                from: Square::G8,
                 capture: None,
-                to: F6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D2,
+                from: Square::D2,
                 capture: None,
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E5,
+                from: Square::E5,
                 capture: Some(Pawn),
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C3,
+                from: Square::C3,
                 capture: Some(Pawn),
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C5,
+                from: Square::C5,
                 capture: None,
-                to: B4,
+                to: Square::B4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C1,
+                from: Square::C1,
                 capture: None,
-                to: D2,
+                to: Square::D2,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: F6,
+                from: Square::F6,
                 capture: Some(Pawn),
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: D2,
+                from: Square::D2,
                 capture: Some(Bishop),
-                to: B4,
+                to: Square::B4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: C6,
+                from: Square::C6,
                 capture: Some(Bishop),
-                to: B4,
+                to: Square::B4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C4,
+                from: Square::C4,
                 capture: Some(Pawn),
-                to: F7,
+                to: Square::F7,
                 promotion: None,
             },
             Normal {
                 role: King,
-                from: E8,
+                from: Square::E8,
                 capture: Some(Bishop),
-                to: F7,
+                to: Square::F7,
                 promotion: None,
             },
             Normal {
                 role: Queen,
-                from: D1,
+                from: Square::D1,
                 capture: None,
-                to: B3,
+                to: Square::B3,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D7,
+                from: Square::D7,
                 capture: None,
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: F3,
+                from: Square::F3,
                 capture: None,
-                to: E5,
+                to: Square::E5,
                 promotion: None,
             },
             Normal {
                 role: King,
-                from: F7,
+                from: Square::F7,
                 capture: None,
-                to: F6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: F2,
+                from: Square::F2,
                 capture: None,
-                to: F3,
+                to: Square::F3,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(56013554861523712),
                     knight: Bitboard(69021466626),
@@ -242,7 +238,17 @@ pub static KRAUSE_VARIATION: Variation = Variation {
                     black: Bitboard(10216169498747076608),
                     white: Bitboard(68855972755),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,

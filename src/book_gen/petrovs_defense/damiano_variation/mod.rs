@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,54 +59,54 @@ pub static DAMIANO_VARIATION: Variation = Variation {
         parent: &DAMIANO_VARIATION,
         code: Code {
             volume: Volume::C,
-            category: Category::new_static::<42>(),
+            category: Category::new_static::<4>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E7,
+                from: Square::E7,
                 capture: None,
-                to: E5,
+                to: Square::E5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G1,
+                from: Square::G1,
                 capture: None,
-                to: F3,
+                to: Square::F3,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G8,
+                from: Square::G8,
                 capture: None,
-                to: F6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: F3,
+                from: Square::F3,
                 capture: Some(Pawn),
-                to: E5,
+                to: Square::E5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: F6,
+                from: Square::F6,
                 capture: Some(Pawn),
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272519433907968),
                     knight: Bitboard(144115257063768066),
@@ -123,7 +119,17 @@ pub static DAMIANO_VARIATION: Variation = Variation {
                     black: Bitboard(13830272980946518016),
                     white: Bitboard(68719538111),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,40 +59,40 @@ pub static TWO_KNIGHTS_VARIATION: Variation = Variation {
         parent: &TWO_KNIGHTS_VARIATION,
         code: Code {
             volume: Volume::A,
-            category: Category::new_static::<35>(),
+            category: Category::new_static::<3>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: C2,
+                from: Square::C2,
                 capture: None,
-                to: C4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C7,
+                from: Square::C7,
                 capture: None,
-                to: C5,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B1,
+                from: Square::B1,
                 capture: None,
-                to: C3,
+                to: Square::C3,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B8,
+                from: Square::B8,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(70650236401416960),
                     knight: Bitboard(4611690416474161216),
@@ -109,7 +105,17 @@ pub static TWO_KNIGHTS_VARIATION: Variation = Variation {
                     black: Bitboard(18301225925976522752),
                     white: Bitboard(67435517),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

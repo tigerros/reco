@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -67,6 +63,7 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
         &POLLOCK_VARIATION,
         &RICHTER_ATTACK,
         &RUBINSTEIN_VARIATION,
+        &SHIROV_ANAND_VARIATION,
         &STAHLBERG_VARIATION,
         &STEINITZ_VARIATION,
         &SWISS_VARIATION,
@@ -79,54 +76,54 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
             parent: &CLASSICAL_VARIATION,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<11>(),
+                category: Category::new_static::<1>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65038346568656640),
                         knight: Bitboard(144150372448206912),
@@ -139,7 +136,17 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
                         black: Bitboard(13828073991782268928),
                         white: Bitboard(402974717),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -164,89 +171,191 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
             parent: &CLASSICAL_VARIATION,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<14>(),
+                category: Category::new_static::<1>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: A7,
-                    capture: None,
-                    to: A6,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G1,
+                    from: Square::G8,
                     capture: None,
-                    to: F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: G8,
-                    capture: None,
-                    to: F6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: E4,
-                    capture: None,
-                    to: E5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: F6,
-                    capture: None,
-                    to: D7,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: C1,
+                    from: Square::C1,
                     capture: None,
-                    to: G5,
+                    to: Square::G5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(65038346568656640),
+                        knight: Bitboard(144150372448206912),
+                        bishop: Bitboard(2594073660243312672),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(13828073991782268928),
+                        white: Bitboard(275280881657),
+                    },
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 3,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &CLASSICAL_VARIATION,
+            code: Code {
+                volume: Volume::C,
+                category: Category::new_static::<1>(),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: Square::E2,
+                    capture: None,
+                    to: Square::E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::E7,
+                    capture: None,
+                    to: Square::E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D2,
+                    capture: None,
+                    to: Square::D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D7,
+                    capture: None,
+                    to: Square::D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::B1,
+                    capture: None,
+                    to: Square::C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::A7,
+                    capture: None,
+                    to: Square::A6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::G1,
+                    capture: None,
+                    to: Square::F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::G8,
+                    capture: None,
+                    to: Square::F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::E4,
+                    capture: None,
+                    to: Square::E5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::F6,
+                    capture: None,
+                    to: Square::D7,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::C1,
+                    capture: None,
+                    to: Square::G5,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(64758039554615040),
                         knight: Bitboard(146366987891900416),
@@ -259,7 +368,17 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
                         black: Bitboard(13830010231758782464),
                         white: Bitboard(343734020025),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,
@@ -284,96 +403,96 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
             parent: &CLASSICAL_VARIATION,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<14>(),
+                category: Category::new_static::<1>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: C1,
+                    from: Square::C1,
                     capture: None,
-                    to: G5,
+                    to: Square::G5,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: E7,
+                    to: Square::E7,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E4,
+                    from: Square::E4,
                     capture: None,
-                    to: E5,
+                    to: Square::E5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: F6,
+                    from: Square::F6,
                     capture: None,
-                    to: D7,
+                    to: Square::D7,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: G5,
+                    from: Square::G5,
                     capture: Some(Bishop),
-                    to: E7,
+                    to: Square::E7,
                     promotion: None,
                 },
                 Normal {
                     role: Queen,
-                    from: D8,
+                    from: Square::D8,
                     capture: Some(Bishop),
-                    to: E7,
+                    to: Square::E7,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65038415019697920),
                         knight: Bitboard(146366987889803328),
@@ -386,7 +505,17 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
                         black: Bitboard(10952490445334118400),
                         white: Bitboard(68854015993),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -425,6 +554,8 @@ pub mod richter_attack;
 pub use richter_attack::RICHTER_ATTACK;
 pub mod rubinstein_variation;
 pub use rubinstein_variation::RUBINSTEIN_VARIATION;
+pub mod shirov_anand_variation;
+pub use shirov_anand_variation::SHIROV_ANAND_VARIATION;
 pub mod stahlberg_variation;
 pub use stahlberg_variation::STAHLBERG_VARIATION;
 pub mod steinitz_variation;

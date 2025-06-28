@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,139 +59,142 @@ pub static SIX_PAWNS_ATTACK: Variation = Variation {
         parent: &SIX_PAWNS_ATTACK,
         code: Code {
             volume: Volume::E,
-            category: Category::new_static::<77>(),
+            category: Category::new_static::<7>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: D2,
+                from: Square::D2,
                 capture: None,
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G8,
+                from: Square::G8,
                 capture: None,
-                to: F6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C2,
+                from: Square::C2,
                 capture: None,
-                to: C4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: G7,
+                from: Square::G7,
                 capture: None,
-                to: G6,
+                to: Square::G6,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B1,
+                from: Square::B1,
                 capture: None,
-                to: C3,
+                to: Square::C3,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F8,
+                from: Square::F8,
                 capture: None,
-                to: G7,
+                to: Square::G7,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D7,
+                from: Square::D7,
                 capture: None,
-                to: D6,
+                to: Square::D6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: F2,
+                from: Square::F2,
                 capture: None,
-                to: F4,
+                to: Square::F4,
                 promotion: None,
             },
-            Castle { king: E8, rook: H8 },
+            Castle {
+                king: Square::E8,
+                rook: Square::H8,
+            },
             Normal {
                 role: Bishop,
-                from: F1,
+                from: Square::F1,
                 capture: None,
-                to: E2,
+                to: Square::E2,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C7,
+                from: Square::C7,
                 capture: None,
-                to: C5,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D4,
+                from: Square::D4,
                 capture: None,
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E7,
+                from: Square::E7,
                 capture: None,
-                to: E6,
+                to: Square::E6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D5,
+                from: Square::D5,
                 capture: Some(Pawn),
-                to: E6,
+                to: Square::E6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: F7,
+                from: Square::F7,
                 capture: Some(Pawn),
-                to: E6,
+                to: Square::E6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: G2,
+                from: Square::G2,
                 capture: None,
-                to: G4,
+                to: Square::G4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B8,
+                from: Square::B8,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: H2,
+                from: Square::H2,
                 capture: None,
-                to: H4,
+                to: Square::H4,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(36970000245850880),
                     knight: Bitboard(39582418862144),
@@ -208,7 +207,17 @@ pub static SIX_PAWNS_ATTACK: Variation = Variation {
                     black: Bitboard(7909301727214436352),
                     white: Bitboard(4093907933),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,

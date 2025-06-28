@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -68,42 +64,42 @@ pub static SCHIFFLER_ATTACK: Variation = Variation {
         moves: &[
             Normal {
                 role: Pawn,
-                from: B2,
+                from: Square::B2,
                 capture: None,
-                to: B4,
+                to: Square::B4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G8,
+                from: Square::G8,
                 capture: None,
-                to: F6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C1,
+                from: Square::C1,
                 capture: None,
-                to: B2,
+                to: Square::B2,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: G7,
+                from: Square::G7,
                 capture: None,
-                to: G6,
+                to: Square::G6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(53832089597963520),
                     knight: Bitboard(144150372447944770),
@@ -116,7 +112,17 @@ pub static SCHIFFLER_ATTACK: Variation = Variation {
                     black: Bitboard(13816867734912237568),
                     white: Bitboard(302051323),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,

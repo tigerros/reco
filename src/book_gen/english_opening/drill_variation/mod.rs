@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,40 +59,40 @@ pub static DRILL_VARIATION: Variation = Variation {
         parent: &DRILL_VARIATION,
         code: Code {
             volume: Volume::A,
-            category: Category::new_static::<20>(),
+            category: Category::new_static::<2>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: C2,
+                from: Square::C2,
                 capture: None,
-                to: C4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E7,
+                from: Square::E7,
                 capture: None,
-                to: E5,
+                to: Square::E5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: G2,
+                from: Square::G2,
                 capture: None,
-                to: G3,
+                to: Square::G3,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: H7,
+                from: Square::H7,
                 capture: None,
-                to: H5,
+                to: Square::H5,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(31244340961524480),
                     knight: Bitboard(4755801206503243842),
@@ -109,7 +105,17 @@ pub static DRILL_VARIATION: Variation = Variation {
                     black: Bitboard(18405930820561797120),
                     white: Bitboard(71351295),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,132 +59,135 @@ pub static ROSENTHAL_VARIATION: Variation = Variation {
         parent: &ROSENTHAL_VARIATION,
         code: Code {
             volume: Volume::C,
-            category: Category::new_static::<45>(),
+            category: Category::new_static::<4>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: E2,
+                from: Square::E2,
                 capture: None,
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E7,
+                from: Square::E7,
                 capture: None,
-                to: E5,
+                to: Square::E5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G1,
+                from: Square::G1,
                 capture: None,
-                to: F3,
+                to: Square::F3,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B8,
+                from: Square::B8,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D2,
+                from: Square::D2,
                 capture: None,
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: E5,
+                from: Square::E5,
                 capture: Some(Pawn),
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: F3,
+                from: Square::F3,
                 capture: Some(Pawn),
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Queen,
-                from: D8,
+                from: Square::D8,
                 capture: None,
-                to: H4,
+                to: Square::H4,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: D4,
+                from: Square::D4,
                 capture: None,
-                to: B5,
+                to: Square::B5,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F8,
+                from: Square::F8,
                 capture: None,
-                to: B4,
+                to: Square::B4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C1,
+                from: Square::C1,
                 capture: None,
-                to: D2,
+                to: Square::D2,
                 promotion: None,
             },
             Normal {
                 role: Queen,
-                from: H4,
+                from: Square::H4,
                 capture: Some(Pawn),
-                to: E4,
+                to: Square::E4,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: F1,
+                from: Square::F1,
                 capture: None,
-                to: E2,
+                to: Square::E2,
                 promotion: None,
             },
             Normal {
                 role: King,
-                from: E8,
+                from: Square::E8,
                 capture: None,
-                to: D8,
+                to: Square::D8,
                 promotion: None,
             },
-            Castle { king: E1, rook: H1 },
+            Castle {
+                king: Square::E1,
+                rook: Square::H1,
+            },
             Normal {
                 role: Bishop,
-                from: B4,
+                from: Square::B4,
                 capture: Some(Bishop),
-                to: D2,
+                to: Square::D2,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: B1,
+                from: Square::B1,
                 capture: Some(Bishop),
-                to: D2,
+                to: Square::D2,
                 promotion: None,
             },
             Normal {
                 role: Queen,
-                from: E4,
+                from: Square::E4,
                 capture: None,
-                to: G6,
+                to: Square::G6,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(67272519433905920),
                     knight: Bitboard(4611690425063835648),
@@ -201,7 +200,17 @@ pub static ROSENTHAL_VARIATION: Variation = Variation {
                     black: Bitboard(14839154063999762432),
                     white: Bitboard(8589999977),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

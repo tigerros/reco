@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -71,75 +67,75 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
             parent: &GIUOCO_PIANISSIMO,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<54>(),
+                category: Category::new_static::<5>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E5,
+                    to: Square::E5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G1,
+                    from: Square::G1,
                     capture: None,
-                    to: F3,
+                    to: Square::F3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B8,
+                    from: Square::B8,
                     capture: None,
-                    to: C6,
+                    to: Square::C6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F1,
+                    from: Square::F1,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D3,
+                    to: Square::D3,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(67272588422603520),
                         knight: Bitboard(39582420697090),
@@ -152,7 +148,17 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
                         black: Bitboard(11380354451706478592),
                         white: Bitboard(338486175),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,
@@ -177,91 +183,97 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
             parent: &GIUOCO_PIANISSIMO,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<54>(),
+                category: Category::new_static::<5>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E5,
+                    to: Square::E5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G1,
+                    from: Square::G1,
                     capture: None,
-                    to: F3,
+                    to: Square::F3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B8,
+                    from: Square::B8,
                     capture: None,
-                    to: C6,
+                    to: Square::C6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F1,
+                    from: Square::F1,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D3,
+                    to: Square::D3,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D6,
+                    to: Square::D6,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: D2,
+                    to: Square::D2,
                     promotion: None,
                 },
-                Castle { king: E8, rook: H8 },
-                Castle { king: E1, rook: H1 },
+                Castle {
+                    king: Square::E8,
+                    rook: Square::H8,
+                },
+                Castle {
+                    king: Square::E1,
+                    rook: Square::H1,
+                },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65029584701940480),
                         knight: Bitboard(39582420699136),
@@ -274,7 +286,17 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
                         black: Bitboard(7919346934165274624),
                         white: Bitboard(338488173),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,
@@ -299,84 +321,90 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
             parent: &GIUOCO_PIANISSIMO,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<54>(),
+                category: Category::new_static::<5>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E5,
+                    to: Square::E5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G1,
+                    from: Square::G1,
                     capture: None,
-                    to: F3,
+                    to: Square::F3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B8,
+                    from: Square::B8,
                     capture: None,
-                    to: C6,
+                    to: Square::C6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F1,
+                    from: Square::F1,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D3,
+                    to: Square::D3,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D6,
+                    to: Square::D6,
                     promotion: None,
                 },
-                Castle { king: E1, rook: H1 },
-                Castle { king: E8, rook: H8 },
+                Castle {
+                    king: Square::E1,
+                    rook: Square::H1,
+                },
+                Castle {
+                    king: Square::E8,
+                    rook: Square::H8,
+                },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65029584701940480),
                         knight: Bitboard(39582420697090),
@@ -389,7 +417,17 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
                         black: Bitboard(7919346934165274624),
                         white: Bitboard(338486127),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -414,83 +452,86 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
             parent: &GIUOCO_PIANISSIMO,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<54>(),
+                category: Category::new_static::<5>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E5,
+                    to: Square::E5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G1,
+                    from: Square::G1,
                     capture: None,
-                    to: F3,
+                    to: Square::F3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B8,
+                    from: Square::B8,
                     capture: None,
-                    to: C6,
+                    to: Square::C6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F1,
+                    from: Square::F1,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
-                Castle { king: E1, rook: H1 },
+                Castle {
+                    king: Square::E1,
+                    rook: Square::H1,
+                },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D3,
+                    to: Square::D3,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: H7,
+                    from: Square::H7,
                     capture: None,
-                    to: H6,
+                    to: Square::H6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(31384528891994880),
                         knight: Bitboard(39582420697090),
@@ -503,7 +544,17 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
                         black: Bitboard(11344466392175869952),
                         white: Bitboard(338486127),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,
@@ -528,90 +579,93 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
             parent: &GIUOCO_PIANISSIMO,
             code: Code {
                 volume: Volume::C,
-                category: Category::new_static::<54>(),
+                category: Category::new_static::<5>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E5,
+                    to: Square::E5,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G1,
+                    from: Square::G1,
                     capture: None,
-                    to: F3,
+                    to: Square::F3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B8,
+                    from: Square::B8,
                     capture: None,
-                    to: C6,
+                    to: Square::C6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F1,
+                    from: Square::F1,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: C5,
+                    to: Square::C5,
                     promotion: None,
                 },
-                Castle { king: E1, rook: H1 },
+                Castle {
+                    king: Square::E1,
+                    rook: Square::H1,
+                },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D3,
+                    to: Square::D3,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D6,
+                    to: Square::D6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: A7,
+                    from: Square::A7,
                     capture: None,
-                    to: A6,
+                    to: Square::A6,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(64749209236857600),
                         knight: Bitboard(39582420697090),
@@ -624,7 +678,17 @@ pub static GIUOCO_PIANISSIMO: Variation = Variation {
                         black: Bitboard(11377831072520732672),
                         white: Bitboard(338486127),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,

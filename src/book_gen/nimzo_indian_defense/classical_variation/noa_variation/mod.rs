@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -64,68 +60,68 @@ pub static NOA_VARIATION: Variation = Variation {
             parent: &NOA_VARIATION,
             code: Code {
                 volume: Volume::E,
-                category: Category::new_static::<34>(),
+                category: Category::new_static::<3>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: B4,
+                    to: Square::B4,
                     promotion: None,
                 },
                 Normal {
                     role: Queen,
-                    from: D1,
+                    from: Square::D1,
                     capture: None,
-                    to: C2,
+                    to: Square::C2,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65038346367333120),
                         knight: Bitboard(144150372448206912),
@@ -138,7 +134,17 @@ pub static NOA_VARIATION: Variation = Variation {
                         black: Bitboard(11522230982602129408),
                         white: Bitboard(201652213),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -163,82 +169,82 @@ pub static NOA_VARIATION: Variation = Variation {
             parent: &NOA_VARIATION,
             code: Code {
                 volume: Volume::E,
-                category: Category::new_static::<35>(),
+                category: Category::new_static::<3>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: B4,
+                    to: Square::B4,
                     promotion: None,
                 },
                 Normal {
                     role: Queen,
-                    from: D1,
+                    from: Square::D1,
                     capture: None,
-                    to: C2,
+                    to: Square::C2,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C4,
+                    from: Square::C4,
                     capture: Some(Pawn),
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E6,
+                    from: Square::E6,
                     capture: Some(Pawn),
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65020754114179840),
                         knight: Bitboard(144150372448206912),
@@ -251,7 +257,17 @@ pub static NOA_VARIATION: Variation = Variation {
                         black: Bitboard(11522213390416084992),
                         white: Bitboard(134543349),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: White,
@@ -276,75 +292,75 @@ pub static NOA_VARIATION: Variation = Variation {
             parent: &NOA_VARIATION,
             code: Code {
                 volume: Volume::E,
-                category: Category::new_static::<36>(),
+                category: Category::new_static::<3>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: B4,
+                    to: Square::B4,
                     promotion: None,
                 },
                 Normal {
                     role: Queen,
-                    from: D1,
+                    from: Square::D1,
                     capture: None,
-                    to: C2,
+                    to: Square::C2,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: A2,
+                    from: Square::A2,
                     capture: None,
-                    to: A3,
+                    to: Square::A3,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65038346367398400),
                         knight: Bitboard(144150372448206912),
@@ -357,7 +373,17 @@ pub static NOA_VARIATION: Variation = Variation {
                         black: Bitboard(11522230982602129408),
                         white: Bitboard(201717493),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,
@@ -382,103 +408,103 @@ pub static NOA_VARIATION: Variation = Variation {
             parent: &NOA_VARIATION,
             code: Code {
                 volume: Volume::E,
-                category: Category::new_static::<37>(),
+                category: Category::new_static::<3>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: C2,
+                    from: Square::C2,
                     capture: None,
-                    to: C4,
+                    to: Square::C4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E7,
+                    from: Square::E7,
                     capture: None,
-                    to: E6,
+                    to: Square::E6,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: F8,
+                    from: Square::F8,
                     capture: None,
-                    to: B4,
+                    to: Square::B4,
                     promotion: None,
                 },
                 Normal {
                     role: Queen,
-                    from: D1,
+                    from: Square::D1,
                     capture: None,
-                    to: C2,
+                    to: Square::C2,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: D7,
+                    from: Square::D7,
                     capture: None,
-                    to: D5,
+                    to: Square::D5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: A2,
+                    from: Square::A2,
                     capture: None,
-                    to: A3,
+                    to: Square::A3,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: B4,
+                    from: Square::B4,
                     capture: Some(Knight),
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Queen,
-                    from: C2,
+                    from: Square::C2,
                     capture: Some(Bishop),
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: F6,
+                    from: Square::F6,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Queen,
-                    from: C3,
+                    from: Square::C3,
                     capture: None,
-                    to: C2,
+                    to: Square::C2,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(65038346367398400),
                         knight: Bitboard(144115188344291392),
@@ -491,7 +517,17 @@ pub static NOA_VARIATION: Variation = Variation {
                         black: Bitboard(11522195798464921600),
                         white: Bitboard(201455349),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,

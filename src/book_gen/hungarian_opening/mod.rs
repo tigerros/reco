@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -87,13 +83,13 @@ pub static HUNGARIAN_OPENING: Variation = Variation {
         },
         moves: &[Normal {
             role: Pawn,
-            from: G2,
+            from: Square::G2,
             capture: None,
-            to: G3,
+            to: Square::G3,
             promotion: None,
         }],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(71776119065460480),
                     knight: Bitboard(4755801206503243842),
@@ -106,7 +102,17 @@ pub static HUNGARIAN_OPENING: Variation = Variation {
                     black: Bitboard(18446462598732840960),
                     white: Bitboard(4243455),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: Black,

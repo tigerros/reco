@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -71,33 +67,33 @@ pub static STAUNTON_GAMBIT: Variation = Variation {
             parent: &STAUNTON_GAMBIT,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<82>(),
+                category: Category::new_static::<8>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: F7,
+                    from: Square::F7,
                     capture: None,
-                    to: F5,
+                    to: Square::F5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(62769057648142080),
                         knight: Bitboard(4755801206503243842),
@@ -110,7 +106,17 @@ pub static STAUNTON_GAMBIT: Variation = Variation {
                         black: Bitboard(18437455536917053440),
                         white: Bitboard(402712575),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,
@@ -135,61 +141,61 @@ pub static STAUNTON_GAMBIT: Variation = Variation {
             parent: &STAUNTON_GAMBIT,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<83>(),
+                category: Category::new_static::<8>(),
             },
             moves: &[
                 Normal {
                     role: Pawn,
-                    from: D2,
+                    from: Square::D2,
                     capture: None,
-                    to: D4,
+                    to: Square::D4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: F7,
+                    from: Square::F7,
                     capture: None,
-                    to: F5,
+                    to: Square::F5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: E2,
+                    from: Square::E2,
                     capture: None,
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: F5,
+                    from: Square::F5,
                     capture: Some(Pawn),
-                    to: E4,
+                    to: Square::E4,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: B1,
+                    from: Square::B1,
                     capture: None,
-                    to: C3,
+                    to: Square::C3,
                     promotion: None,
                 },
                 Normal {
                     role: Knight,
-                    from: G8,
+                    from: Square::G8,
                     capture: None,
-                    to: F6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: C1,
+                    from: Square::C1,
                     capture: None,
-                    to: G5,
+                    to: Square::G5,
                     promotion: None,
                 },
             ],
             setup: Setup {
-                board: Board::from_bitboards(
+                board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(62768920209188608),
                         knight: Bitboard(144150372448206912),
@@ -202,7 +208,17 @@ pub static STAUNTON_GAMBIT: Variation = Variation {
                         black: Bitboard(13825804565691236352),
                         white: Bitboard(275012446201),
                     },
-                ),
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
                 promoted: Bitboard(0),
                 pockets: None,
                 turn: Black,

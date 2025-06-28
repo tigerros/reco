@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,68 +59,68 @@ pub static MODERN_LINE: Variation = Variation {
         parent: &MODERN_LINE,
         code: Code {
             volume: Volume::D,
-            category: Category::new_static::<2>(),
+            category: Category::new_static::<0>(),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: D2,
+                from: Square::D2,
                 capture: None,
-                to: D4,
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: D7,
+                from: Square::D7,
                 capture: None,
-                to: D5,
+                to: Square::D5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: G1,
+                from: Square::G1,
                 capture: None,
-                to: F3,
+                to: Square::F3,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: C7,
+                from: Square::C7,
                 capture: None,
-                to: C6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: C1,
+                from: Square::C1,
                 capture: None,
-                to: G5,
+                to: Square::G5,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: H7,
+                from: Square::H7,
                 capture: None,
-                to: H6,
+                to: Square::H6,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: G5,
+                from: Square::G5,
                 capture: None,
-                to: H4,
+                to: Square::H4,
                 promotion: None,
             },
             Normal {
                 role: Queen,
-                from: D8,
+                from: Square::D8,
                 capture: None,
-                to: B6,
+                to: Square::B6,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(32514792350611200),
                     knight: Bitboard(4755801206505340930),
@@ -137,7 +133,17 @@ pub static MODERN_LINE: Variation = Variation {
                     black: Bitboard(17830742718607785984),
                     white: Bitboard(2283861947),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

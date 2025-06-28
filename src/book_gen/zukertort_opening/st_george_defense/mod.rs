@@ -25,14 +25,10 @@ use shakmaty::Move::*;
 )]
 use shakmaty::Role::{Bishop, King, Knight, Pawn, Queen, Rook};
 #[allow(
-    clippy::enum_glob_use,
-    reason = "there's 64 variants in this enum, importing them all is stupid"
-)]
-#[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
-use shakmaty::Square::*;
+use shakmaty::Square;
 #[allow(
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
@@ -63,26 +59,26 @@ pub static ST_GEORGE_DEFENSE: Variation = Variation {
         parent: &ST_GEORGE_DEFENSE,
         code: Code {
             volume: Volume::A,
-            category: Category::new_static::<4>(),
+            category: Category::new_static::<0>(),
         },
         moves: &[
             Normal {
                 role: Knight,
-                from: G1,
+                from: Square::G1,
                 capture: None,
-                to: F3,
+                to: Square::F3,
                 promotion: None,
             },
             Normal {
                 role: Pawn,
-                from: A7,
+                from: Square::A7,
                 capture: None,
-                to: A6,
+                to: Square::A6,
                 promotion: None,
             },
         ],
         setup: Setup {
-            board: Board::from_bitboards(
+            board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
                     pawn: Bitboard(71495743596199680),
                     knight: Bitboard(4755801206505340930),
@@ -95,7 +91,17 @@ pub static ST_GEORGE_DEFENSE: Variation = Variation {
                     black: Bitboard(18446182223267758080),
                     white: Bitboard(2162623),
                 },
-            ),
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
             promoted: Bitboard(0),
             pockets: None,
             turn: White,

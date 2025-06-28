@@ -29,7 +29,7 @@ members = ["examples/find-opening", "librarian"]
 [workspace.dependencies]
 proptest = { version = "1", default-features = false }
 reco = { path = "." }
-shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master", default-features = false }
+shakmaty = { version = "0.28.0", default-features = false }
 
 [features]
 default = ["book", "std"]
@@ -52,5 +52,3 @@ proptest = { version = "1", optional = true }
 serde = { version = "1.0.197", default-features = false, features = ["derive"], optional = true }
 shakmaty = { workspace = true }
 
-[patch.crates-io]
-shakmaty = { git = "https://github.com/niklasf/shakmaty", branch = "master" }
