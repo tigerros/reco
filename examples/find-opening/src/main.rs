@@ -3,11 +3,38 @@
 //!
 //! Panics if the latest game is a variant, or otherwise doesn't have an opening attached to it.
 
-use rpgn::{Pgn, Sans};
-use shakmaty::san::San;
+use pgn_reader::{RawTag, San, SanPlus, Skip, Visitor};
 use shakmaty::{Chess, Position};
 
 const USER: &str = "DrNykterstein";
+
+#[derive(Default)]
+struct SansAndOpening {
+    pub sans: Vec<San>,
+    pub opening: Option<String>,
+}
+
+impl Visitor for SansAndOpening {
+    type Result = Self;
+
+    fn tag(&mut self, name: &[u8], value: RawTag<'_>) {
+        if name == b"Opening" {
+            self.opening = Some(value.decode_utf8_lossy().to_string());
+        }
+    }
+
+    fn begin_variation(&mut self) -> Skip {
+        Skip(true)
+    }
+
+    fn san(&mut self, san_plus: SanPlus) {
+        self.sans.push(san_plus.san);
+    }
+
+    fn end_game(&mut self) -> Self::Result {
+        std::mem::take(self)
+    }
+}
 
 fn main() {
     let mut latest_games = ureq::get(format!("https://lichess.org/api/games/user/{USER}"))
@@ -19,14 +46,14 @@ fn main() {
         .into_body();
 
     let mut latest_games_reader = pgn_reader::BufferedReader::new(latest_games.as_reader());
-
-    let pgn: Pgn<Sans<San>> = Pgn::from_reader(&mut latest_games_reader).unwrap().unwrap();
-
+    let SansAndOpening { sans, opening } = latest_games_reader
+        .read_game(&mut SansAndOpening::default())
+        .unwrap()
+        .unwrap();
     let mut position = Chess::new();
+    let mut moves = Vec::with_capacity(sans.len());
 
-    let mut moves = Vec::with_capacity(pgn.movetext.0.len());
-
-    for san in pgn.movetext.0 {
+    for san in sans {
         let r#move = san.to_move(&position).expect("sans should be legal");
         position = position.play(r#move).unwrap();
         moves.push(r#move);
@@ -48,9 +75,6 @@ fn main() {
 
     let reco_opening = reco_opening.parent().original_name();
 
-    assert_eq!(
-        pgn.other_headers[b"Opening".as_slice()].decode_utf8_lossy(),
-        reco_opening
-    );
+    assert_eq!(opening.unwrap(), reco_opening);
     println!("Opening finder correct");
 }
