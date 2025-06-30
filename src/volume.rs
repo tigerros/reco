@@ -1,4 +1,3 @@
-use core::cmp::Ordering;
 use core::fmt::{Display, Formatter, Write};
 use core::str::FromStr;
 use deranged::RangedU8;
@@ -6,7 +5,7 @@ use deranged::RangedU8;
 use proptest::prelude::*;
 
 /// The A-E volume of an opening.
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[repr(u8)]
 pub enum Volume {
@@ -17,82 +16,66 @@ pub enum Volume {
     E,
 }
 
-impl PartialOrd for Volume {
-    /// Uses <a href="#impl-Ord-for-Volume">`impl Ord for Volume`</a>, so it's guaranteed to be
-    /// [`Some`].
-    ///
-    /// # Examples
-    /// ```rust
-    /// use reco::Volume;
-    /// use core::cmp::Ordering;
-    ///
-    /// assert_eq!(Volume::D.partial_cmp(&Volume::D), Some(Ordering::Equal));
-    /// assert_eq!(Volume::D.partial_cmp(&Volume::A), Some(Ordering::Greater));
-    /// assert_eq!(Volume::D.partial_cmp(&Volume::E), Some(Ordering::Less));
-    /// ```
-    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        Some(self.cmp(other))
-    }
-}
-
-impl Ord for Volume {
-    /// # Examples
-    /// ```rust
-    /// use reco::Volume;
-    /// use core::cmp::Ordering;
-    ///
-    /// assert_eq!(Volume::B.cmp(&Volume::B), Ordering::Equal);
-    /// assert_eq!(Volume::B.cmp(&Volume::A), Ordering::Greater);
-    /// assert_eq!(Volume::B.cmp(&Volume::C), Ordering::Less);
-    /// ```
-    fn cmp(&self, other: &Self) -> Ordering {
-        u8::from(*self).cmp(&u8::from(*other))
-    }
-}
-
 impl Volume {
     pub const ALL: [Self; 5] = [Self::A, Self::B, Self::C, Self::D, Self::E];
-}
 
-impl From<Volume> for u8 {
-    /// Guaranteed to be `<= 4`.
+    /// Converts an ASCII byte to a [`Volume`].
     ///
     /// # Examples
+    ///
+    /// ```rust
+    /// use reco::{Volume, volume};
+    /// use core::str::FromStr;
+    ///
+    /// assert_eq!(Volume::from_ascii(b'A'), Ok(Volume::A));
+    /// assert_eq!(Volume::from_ascii(b'B'), Ok(Volume::B));
+    /// assert_eq!(Volume::from_ascii(b'C'), Ok(Volume::C));
+    /// assert_eq!(Volume::from_ascii(b'D'), Ok(Volume::D));
+    /// assert_eq!(Volume::from_ascii(b'E'), Ok(Volume::E));
+    /// assert_eq!(Volume::from_ascii(b'F'), Err(volume::ParseError));
+    /// ```
+    ///
+    /// # Errors
+    ///
+    /// See [`ParseError`].
+    pub const fn from_ascii(s: u8) -> Result<Self, ParseError> {
+        match s {
+            b'A' => Ok(Self::A),
+            b'B' => Ok(Self::B),
+            b'C' => Ok(Self::C),
+            b'D' => Ok(Self::D),
+            b'E' => Ok(Self::E),
+            _ => Err(ParseError),
+        }
+    }
+
+    /// Converts a [`Volume`] into an ASCII byte.
+    ///
+    /// # Examples
+    ///
     /// ```rust
     /// use reco::Volume;
     ///
-    /// assert_eq!(u8::from(Volume::A), 0);
-    /// assert_eq!(u8::from(Volume::B), 1);
-    /// assert_eq!(u8::from(Volume::C), 2);
-    /// assert_eq!(u8::from(Volume::D), 3);
-    /// assert_eq!(u8::from(Volume::E), 4);
+    /// assert_eq!(Volume::A.as_ascii(), b'A');
+    /// assert_eq!(Volume::B.as_ascii(), b'B');
+    /// assert_eq!(Volume::C.as_ascii(), b'C');
+    /// assert_eq!(Volume::D.as_ascii(), b'D');
+    /// assert_eq!(Volume::E.as_ascii(), b'E');
     /// ```
-    fn from(volume: Volume) -> Self {
-        #[expect(clippy::as_conversions, reason = "Volume is repr(u8)")]
-        {
-            volume as Self
+    pub const fn as_ascii(self) -> u8 {
+        match self {
+            Self::A => b'A',
+            Self::B => b'B',
+            Self::C => b'C',
+            Self::D => b'D',
+            Self::E => b'E',
         }
     }
 }
 
-#[expect(
-    clippy::fallible_impl_from,
-    reason = "not actually fallible, see below"
-)]
-impl From<Volume> for RangedU8<0, 4> {
-    fn from(volume: Volume) -> Self {
-        #[expect(
-            clippy::unwrap_used,
-            reason = "conversion is guaranteed to be in 0..=4 range by tests"
-        )]
-        Self::new(u8::from(volume)).unwrap()
-    }
-}
-
 impl From<RangedU8<0, 4>> for Volume {
-    /// Infallibly converts a [`RangedU8`] to a [`Volume`].
-    ///
     /// # Examples
+    ///
     /// ```rust
     /// use reco::Volume;
     /// use deranged::RangedU8;
@@ -116,25 +99,64 @@ impl From<RangedU8<0, 4>> for Volume {
     }
 }
 
-impl From<Volume> for char {
+impl From<Volume> for RangedU8<0, 4> {
     /// # Examples
+    ///
     /// ```rust
     /// use reco::Volume;
+    /// use deranged::RangedU8;
     ///
-    /// assert_eq!(char::from(Volume::A), 'A');
-    /// assert_eq!(char::from(Volume::B), 'B');
-    /// assert_eq!(char::from(Volume::C), 'C');
-    /// assert_eq!(char::from(Volume::D), 'D');
-    /// assert_eq!(char::from(Volume::E), 'E');
+    /// assert_eq!(RangedU8::from(Volume::A), RangedU8::new_static::<0>());
+    /// assert_eq!(RangedU8::from(Volume::B), RangedU8::new_static::<1>());
+    /// assert_eq!(RangedU8::from(Volume::C), RangedU8::new_static::<2>());
+    /// assert_eq!(RangedU8::from(Volume::D), RangedU8::new_static::<3>());
+    /// assert_eq!(RangedU8::from(Volume::E), RangedU8::new_static::<4>());
     /// ```
     fn from(volume: Volume) -> Self {
         match volume {
-            Volume::A => 'A',
-            Volume::B => 'B',
-            Volume::C => 'C',
-            Volume::D => 'D',
-            Volume::E => 'E',
+            Volume::A => Self::new_static::<0>(),
+            Volume::B => Self::new_static::<1>(),
+            Volume::C => Self::new_static::<2>(),
+            Volume::D => Self::new_static::<3>(),
+            Volume::E => Self::new_static::<4>(),
         }
+    }
+}
+
+impl TryFrom<char> for Volume {
+    type Error = ParseError;
+
+    /// See [`Self::from_ascii`].
+    fn try_from(c: char) -> Result<Self, Self::Error> {
+        Self::from_ascii(u8::try_from(c).map_err(|_| ParseError)?)
+    }
+}
+
+impl From<Volume> for char {
+    /// See [`Self::as_ascii`].
+    fn from(volume: Volume) -> Self {
+        Self::from(volume.as_ascii())
+    }
+}
+
+impl FromStr for Volume {
+    type Err = ParseError;
+
+    /// See [`Self::from_ascii`].
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        if s.len() != 1 {
+            return Err(ParseError);
+        }
+
+        #[expect(clippy::indexing_slicing, reason = "s.len() == 1")]
+        Self::from_ascii(s.as_bytes()[0])
+    }
+}
+
+impl Display for Volume {
+    /// See [`Self::as_ascii`].
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+        f.write_char(char::from(self.as_ascii()))
     }
 }
 
@@ -155,89 +177,31 @@ impl Arbitrary for Volume {
     }
 }
 
-/// Parsing a volume failed.
+/// Parsing a [`Volume`] failed.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub struct Error;
+pub struct ParseError;
 
-impl Error {
+impl ParseError {
+    /// # Examples
+    ///
     /// ```rust
     /// use reco::volume;
     ///
-    /// assert_eq!(volume::Error.as_str(), "invalid volume, expected A-E");
-    /// assert_eq!(volume::Error.to_string(), volume::Error.as_str());
+    /// assert_eq!(volume::ParseError.as_str(), "invalid volume; expected A-E");
+    /// assert_eq!(volume::ParseError.to_string(), volume::ParseError.as_str());
     /// ```
     pub const fn as_str(self) -> &'static str {
-        "invalid volume, expected A-E"
+        "invalid volume; expected A-E"
     }
 }
 
-impl Display for Error {
+impl Display for ParseError {
     fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
         f.write_str(self.as_str())
     }
 }
 
-impl core::error::Error for Error {}
-
-impl TryFrom<char> for Volume {
-    type Error = Error;
-
-    /// The char must match a volume exactly.
-    ///
-    /// # Examples
-    /// See [`Volume::from_str`].
-    fn try_from(c: char) -> Result<Self, Self::Error> {
-        let volume = match c {
-            'A' => Self::A,
-            'B' => Self::B,
-            'C' => Self::C,
-            'D' => Self::D,
-            'E' => Self::E,
-            _ => return Err(Error),
-        };
-
-        Ok(volume)
-    }
-}
-
-impl FromStr for Volume {
-    type Err = Error;
-
-    /// The string must match a volume exactly.
-    ///
-    /// # Examples
-    /// ```rust
-    /// use reco::{Volume, volume};
-    /// use core::str::FromStr;
-    ///
-    /// assert_eq!(Volume::from_str("A"), Ok(Volume::A));
-    /// assert_eq!(Volume::from_str("B"), Ok(Volume::B));
-    /// assert_eq!(Volume::from_str("C"), Ok(Volume::C));
-    /// assert_eq!(Volume::from_str("D"), Ok(Volume::D));
-    /// assert_eq!(Volume::from_str("E"), Ok(Volume::E));
-    ///
-    /// assert_eq!(Volume::from_str(" A"), Err(volume::Error));
-    /// assert_eq!(Volume::from_str("A "), Err(volume::Error));
-    /// ```
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let volume = match s {
-            "A" => Self::A,
-            "B" => Self::B,
-            "C" => Self::C,
-            "D" => Self::D,
-            "E" => Self::E,
-            _ => return Err(Error),
-        };
-
-        Ok(volume)
-    }
-}
-
-impl Display for Volume {
-    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
-        f.write_char((*self).into())
-    }
-}
+impl core::error::Error for ParseError {}
 
 #[cfg(test)]
 #[cfg(feature = "proptest")]
@@ -269,16 +233,15 @@ mod tests {
             assert_eq!(volume.to_string(), char::from(volume).to_string());
         }
 
-        /// Tests that [`Volume`] falls within `0..=4`.
-        #[test]
-        fn within_range(volume in any::<Volume>()) {
-            assert!((0..=4).contains(&u8::from(volume)));
-        }
-
         /// Similar to [`within_range`], but tests that [`From<Volume>`] for [`RangedU8`] doesn't panic.
         #[test]
         fn ranged_doesnt_panic(volume in any::<Volume>()) {
             let _ = RangedU8::<0, 4>::from(volume);
+        }
+
+         #[test]
+        fn from_str_eq_from_ascii(volume in any::<Volume>()) {
+            assert_eq!(Volume::from_str(&volume.to_string()), Volume::from_ascii(volume.as_ascii()));
         }
     }
 }

@@ -2,7 +2,7 @@ use crate::{Category, Volume, volume};
 use core::cmp::Ordering;
 use core::fmt::{Display, Formatter};
 use core::str::FromStr;
-use deranged::RangedU8;
+use deranged::{RangedU8, RangedU16};
 #[cfg(feature = "proptest")]
 use proptest::prelude::*;
 
@@ -14,43 +14,106 @@ pub struct Code {
     pub category: Category,
 }
 
-impl From<Code> for u16 {
-    /// Gets a 0-499 value representing the code, by multiplying the volume by 100 and adding the category.
+impl Code {
+    #[expect(clippy::missing_panics_doc, reason = "doesn't actually panic")]
+    /// Converts an ASCII slice to a [`Code`].
     ///
     /// # Examples
     /// ```rust
-    /// use reco::{Code, Volume, Category};
+    /// use reco::{Category, Code, Volume, code, volume};
     ///
     /// assert_eq!(
-    ///     u16::from(Code {
+    ///     Code::from_ascii(b"A00"),
+    ///     Ok(Code {
     ///         volume: Volume::A,
-    ///         category: Category::new_static::<37>()
-    ///     }),
-    ///     37 // 0 * 100 + 37
+    ///         category: Category::new_static::<0>()
+    ///     })
     /// );
     ///
     /// assert_eq!(
-    ///     u16::from(Code {
-    ///         volume: Volume::E,
-    ///         category: Category::new_static::<6>()
-    ///     }),
-    ///     406 // 4 * 100 + 6
+    ///     Code::from_ascii(b"A0"),
+    ///     Err(code::ParseError::InvalidLength)
+    /// );
+    ///
+    /// assert_eq!(
+    ///     Code::from_ascii(b"A 00"),
+    ///     Err(code::ParseError::InvalidLength)
+    /// );
+    ///
+    /// assert_eq!(
+    ///     Code::from_ascii(b"F80"),
+    ///     Err(code::ParseError::InvalidVolume(volume::ParseError))
+    /// );
+    ///
+    /// assert_eq!(
+    ///     Code::from_ascii(b""),
+    ///     Err(code::ParseError::InvalidLength)
     /// );
     /// ```
-    fn from(code: Code) -> Self {
+    ///
+    /// # Errors
+    ///
+    /// See [`ParseError`].
+    pub const fn from_ascii(s: &[u8]) -> Result<Self, ParseError> {
+        if s.len() != 3 {
+            return Err(ParseError::InvalidLength);
+        }
+
+        #[expect(clippy::indexing_slicing, reason = "check length above")]
+        let volume = match Volume::from_ascii(s[0]) {
+            Ok(volume) => volume,
+            Err(e) => return Err(ParseError::InvalidVolume(e)),
+        };
+        #[expect(clippy::indexing_slicing, reason = "check length above")]
+        let digit1 = s[1].saturating_sub(b'0');
+
+        if digit1 > 9 {
+            return Err(ParseError::InvalidCategory);
+        }
+
+        #[expect(clippy::indexing_slicing, reason = "check length above")]
+        let digit2 = s[2].saturating_sub(b'0');
+
+        if digit2 > 9 {
+            return Err(ParseError::InvalidCategory);
+        }
+
+        Ok(Self {
+            volume,
+            #[expect(
+                clippy::arithmetic_side_effects,
+                clippy::unwrap_used,
+                reason = "both numbers are 0-9. They can't be larger than 99 in this calculation"
+            )]
+            category: RangedU8::new(digit1 * 10 + digit2).unwrap(),
+        })
+    }
+
+    /// Converts a [`Code`] into an ASCII array.
+    pub const fn as_ascii(self) -> [u8; 3] {
+        let mut bytes = [0u8; 3];
+
+        bytes[0] = self.volume.as_ascii();
         #[expect(
             clippy::arithmetic_side_effects,
-            reason = "u8 * 100 + u8 is not even close to u16::MAX"
+            reason = "(0..=99) / 10 <= 10, +b'0' makes it a valid ASCII digit within u8 range"
         )]
         {
-            Self::from(u8::from(code.volume)) * 100 + Self::from(code.category.get())
+            bytes[1] = (self.category.get() / 10) + b'0';
         }
+        #[expect(
+            clippy::arithmetic_side_effects,
+            reason = "(0..=99) % 10 <= 10, +b'0' makes it a valid ASCII digit within u8 range"
+        )]
+        {
+            bytes[2] = (self.category.get() % 10) + b'0';
+        }
+
+        bytes
     }
 }
 
 impl PartialOrd for Code {
-    /// Uses <a href="#impl-Ord-for-Code">`impl Ord for Code`</a>, so it's guaranteed to be
-    /// [`Some`].
     fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
         Some(self.cmp(other))
     }
@@ -94,6 +157,112 @@ impl Ord for Code {
     }
 }
 
+#[expect(
+    clippy::fallible_impl_from,
+    reason = "not actually fallible, see below"
+)]
+impl From<Code> for RangedU16<0, 499> {
+    /// Converts a [`Code`] to a `0..500` integer, by multiplying the volume by 100 and adding the category.
+    ///
+    /// # Examples
+    /// ```rust
+    /// use reco::{Code, Volume, Category};
+    /// use deranged::RangedU16;
+    ///
+    /// assert_eq!(
+    ///     RangedU16::from(Code {
+    ///         volume: Volume::A,
+    ///         category: Category::new_static::<37>()
+    ///     }).get(),
+    ///     37 // 0 * 100 + 37
+    /// );
+    ///
+    /// assert_eq!(
+    ///     RangedU16::from(Code {
+    ///         volume: Volume::E,
+    ///         category: Category::new_static::<6>()
+    ///     }).get(),
+    ///     406 // 4 * 100 + 6
+    /// );
+    /// ```
+    fn from(code: Code) -> Self {
+        #[expect(
+            clippy::arithmetic_side_effects,
+            clippy::unwrap_used,
+            reason = "[0, 4] * 100 + [0, 99] <= 499"
+        )]
+        {
+            Self::new(
+                u16::from(RangedU8::from(code.volume).get()) * 100 + u16::from(code.category.get()),
+            )
+            .unwrap()
+        }
+    }
+}
+
+#[expect(
+    clippy::fallible_impl_from,
+    reason = "not actually fallible, see below"
+)]
+impl From<RangedU16<0, 499>> for Code {
+    /// Converts a `0..500` integer to a [`Volume`] by dividing by 100 and a [`Category`] from the remainder.
+    ///
+    /// # Examples
+    /// ```rust
+    /// use reco::{Code, Volume, Category};
+    /// use deranged::RangedU16;
+    ///
+    /// assert_eq!(
+    ///     RangedU16::new_static::<127>(),
+    ///     Code {
+    ///         volume: Volume::B, // 127 / 100 = 1
+    ///         category: Category::new_static::<27>() // 127 % 100 = 27
+    ///     },
+    /// );
+    ///
+    /// assert_eq!(
+    ///     RangedU16::new_static::<0>(),
+    ///     Code {
+    ///         volume: Volume::A,
+    ///         category: Category::new_static::<0>()
+    ///     }
+    /// );
+    /// ```
+    fn from(integer: RangedU16<0, 499>) -> Self {
+        Self {
+            #[expect(
+                clippy::arithmetic_side_effects,
+                clippy::unwrap_used,
+                reason = "[0, 499] / 100 <= 4"
+            )]
+            volume: Volume::from(RangedU8::new((integer.get() / 100) as u8).unwrap()),
+            #[expect(
+                clippy::arithmetic_side_effects,
+                clippy::unwrap_used,
+                reason = "[0, 499] % 100 <= 99"
+            )]
+            category: Category::new((integer.get() % 100) as u8).unwrap(),
+        }
+    }
+}
+
+impl FromStr for Code {
+    type Err = ParseError;
+
+    /// See [`Self::from_ascii`].
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        Self::from_ascii(s.as_bytes())
+    }
+}
+
+impl Display for Code {
+    /// See [`Self::as_ascii`].
+    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
+        #[expect(clippy::unwrap_used, reason = "always valid ASCII")]
+        f.write_str(str::from_utf8(&self.as_ascii()).unwrap())
+    }
+}
+
 #[cfg(feature = "proptest")]
 impl Arbitrary for Code {
     type Parameters = ();
@@ -110,147 +279,50 @@ impl Arbitrary for Code {
     }
 }
 
+/// Parsing a [`Code`] failed.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum Error {
-    /// There's no first character.
-    MissingVolume,
-    /// First character is present, but not a [`Volume`].
-    InvalidVolume(volume::Error),
-    /// Second or third character is missing.
-    MissingCategory,
-    /// Second or third character present, but not a base 10 digit.
+pub enum ParseError {
+    /// The byte string was shorter/longer than 3 bytes.
+    InvalidLength,
+    /// First character is not a [`Volume`].
+    InvalidVolume(volume::ParseError),
+    /// Second or third character is not a base 10 digit.
     InvalidCategory,
 }
 
-impl Display for Error {
+impl Display for ParseError {
     fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
         match self {
-            Self::MissingVolume => f.write_str("missing volume"),
+            Self::InvalidLength => f.write_str("invalid length; expected 3"),
             Self::InvalidVolume(e) => write!(f, "invalid volume: {e}"),
-            Self::MissingCategory => f.write_str("missing category"),
             Self::InvalidCategory => f.write_str("invalid category"),
         }
     }
 }
 
-impl core::error::Error for Error {}
+impl core::error::Error for ParseError {}
 
 #[cfg(feature = "proptest")]
-impl Arbitrary for Error {
+impl Arbitrary for ParseError {
     type Parameters = ();
     type Strategy = BoxedStrategy<Self>;
 
     fn arbitrary_with((): Self::Parameters) -> Self::Strategy {
         prop_oneof![
-            Just(Self::MissingVolume),
-            Just(Self::InvalidVolume(volume::Error)),
-            Just(Self::MissingCategory),
+            Just(Self::InvalidLength),
+            Just(Self::InvalidVolume(volume::ParseError)),
             Just(Self::InvalidCategory),
         ]
         .boxed()
     }
 }
 
-impl FromStr for Code {
-    type Err = Error;
-
-    /// Converts a string to a [`Code`].
-    ///
-    /// The string must be in this form: `{volume}{category:02}`,
-    /// where `{:02}` specifies that `category` is always two digits.
-    ///
-    /// # Examples
-    /// ```rust
-    /// use reco::{Category, Code, Volume, code, volume};
-    /// use core::str::FromStr;
-    ///
-    /// assert_eq!(
-    ///     Code::from_str("A00"),
-    ///     Ok(Code {
-    ///         volume: Volume::A,
-    ///         category: Category::new_static::<0>()
-    ///     })
-    /// );
-    ///
-    /// assert_eq!(
-    ///     Code::from_str("A0"),
-    ///     Err(code::Error::MissingCategory)
-    /// );
-    ///
-    /// assert_eq!(
-    ///     Code::from_str("A 00"),
-    ///     Err(code::Error::InvalidCategory)
-    /// );
-    ///
-    /// assert_eq!(
-    ///     Code::from_str("F80"),
-    ///     Err(code::Error::InvalidVolume(volume::Error))
-    /// );
-    ///
-    /// assert_eq!(
-    ///     Code::from_str(""),
-    ///     Err(code::Error::MissingVolume)
-    /// );
-    /// ```
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let mut chars = s.chars();
-
-        let volume = Volume::try_from(chars.next().ok_or(Error::MissingVolume)?)
-            .map_err(Error::InvalidVolume)?;
-
-        let digit_one = chars
-            .next()
-            .ok_or(Error::MissingCategory)?
-            .to_digit(10)
-            .ok_or(Error::InvalidCategory)?;
-
-        let digit_two = chars
-            .next()
-            .ok_or(Error::MissingCategory)?
-            .to_digit(10)
-            .ok_or(Error::InvalidCategory)?;
-
-        Ok(Self {
-            volume,
-            #[expect(
-                clippy::arithmetic_side_effects,
-                clippy::cast_possible_truncation,
-                clippy::as_conversions,
-                clippy::unwrap_used,
-                reason = "both numbers are 0-9. They can't be larger than 99 in this calculation"
-            )]
-            category: RangedU8::new((digit_one * 10 + digit_two) as u8).unwrap(),
-        })
-    }
-}
-
-impl Display for Code {
-    fn fmt(&self, f: &mut Formatter<'_>) -> core::fmt::Result {
-        self.volume.fmt(f)?;
-
-        // Probably faster than write!(f, "{:02}", self.category.get())
-        // but I haven't checked
-        let category = self.category.get();
-        let digit_one = category / 10;
-        let digit_two = category % 10;
-
-        digit_one.fmt(f)?;
-        digit_two.fmt(f)
-    }
-}
-
 #[cfg(test)]
+#[cfg(feature = "proptest")]
 mod tests {
     use super::*;
-    #[cfg(feature = "proptest")]
     use alloc::format;
 
-    #[test]
-    fn missing_volume() {
-        assert_eq!(Code::from_str(""), Err(Error::MissingVolume));
-    }
-
-    #[cfg(feature = "proptest")]
     proptest! {
         /// Tests that it doesn't panic.
         #[test]
@@ -279,13 +351,8 @@ mod tests {
         }
 
         #[test]
-        fn ord(volume1 in any::<Volume>(), category1 in 0u8..=99, volume2 in any::<Volume>(), category2 in 0u8..=99) {
-            let category1 = Category::new(category1).unwrap();
-            let category2 = Category::new(category2).unwrap();
-            let code1 = Code { volume: volume1, category: category1 };
-            let code2 = Code { volume: volume2, category: category2 };
-
-            assert_eq!(code1.cmp(&code2), u16::from(code1).cmp(&u16::from(code2)));
+        fn ord(code1 in any::<Code>(), code2 in any::<Code>()) {
+            assert_eq!(code1.cmp(&code2), RangedU16::from(code1).cmp(&RangedU16::from(code2)));
         }
 
         /// Tests that a [`Code`] can be converted to a string and back.
@@ -296,27 +363,37 @@ mod tests {
 
         #[test]
         fn invalid_volume(s in "[^A-E][0-9][0-9]") {
-            assert_eq!(Code::from_str(&s), Err(Error::InvalidVolume(volume::Error)));
+            assert_eq!(Code::from_str(&s), Err(ParseError::InvalidVolume(volume::ParseError)));
         }
 
         #[test]
         fn missing_category(s in "[A-E]") {
-            assert_eq!(Code::from_str(&s), Err(Error::MissingCategory));
+            assert_eq!(Code::from_str(&s), Err(ParseError::InvalidLength));
         }
 
         #[test]
         fn missing_category2(s in "[A-E][0-9]") {
-            assert_eq!(Code::from_str(&s), Err(Error::MissingCategory));
+            assert_eq!(Code::from_str(&s), Err(ParseError::InvalidLength));
         }
 
         #[test]
         fn invalid_category(s in "[A-E][^0-9][0-9]") {
-            assert_eq!(Code::from_str(&s), Err(Error::InvalidCategory));
+            assert_eq!(Code::from_str(&s), Err(ParseError::InvalidCategory));
         }
 
         #[test]
         fn invalid_category2(s in "[A-E][0-9][^0-9]") {
-            assert_eq!(Code::from_str(&s), Err(Error::InvalidCategory));
+            assert_eq!(Code::from_str(&s), Err(ParseError::InvalidCategory));
+        }
+
+        #[test]
+        fn from_str_eq_from_bytes(s in "\\PC*") {
+            assert_eq!(Code::from_str(&s), Code::from_ascii(s.as_bytes()));
+        }
+
+         #[test]
+        fn from_str_eq_from_bytes_valid(code in any::<Code>()) {
+            assert_eq!(Code::from_str(&code.to_string()), Code::from_ascii(&code.as_ascii()));
         }
     }
 }
