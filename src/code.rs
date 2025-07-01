@@ -161,14 +161,14 @@ impl Code {
         ascii[0] = self.volume.as_ascii();
         #[expect(
             clippy::arithmetic_side_effects,
-            reason = "(0..=99) / 10 <= 9, +b'0' makes it a valid ASCII digit within u8 range"
+            reason = "[0, 99] / 10 <= 9, +b'0' makes it a valid ASCII digit within u8 range"
         )]
         {
             ascii[1] = (self.category.0.get() / 10) + b'0';
         }
         #[expect(
             clippy::arithmetic_side_effects,
-            reason = "(0..=99) % 10 <= 9, +b'0' makes it a valid ASCII digit within u8 range"
+            reason = "[0, 99] % 10 <= 9, +b'0' makes it a valid ASCII digit within u8 range"
         )]
         {
             ascii[2] = (self.category.0.get() % 10) + b'0';
