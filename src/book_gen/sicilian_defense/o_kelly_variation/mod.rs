@@ -12,6 +12,11 @@ use core::num::NonZeroU32;
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
+use deranged::RangedU8;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
 use shakmaty::Color::{Black, White};
 #[allow(
     unused_imports,
@@ -69,7 +74,7 @@ pub static O_KELLY_VARIATION: Variation = Variation {
         parent: &O_KELLY_VARIATION,
         code: Code {
             volume: Volume::B,
-            category: Category::new_static::<2>(),
+            category: Category(RangedU8::new_static::<2>()),
         },
         moves: &[
             Normal {

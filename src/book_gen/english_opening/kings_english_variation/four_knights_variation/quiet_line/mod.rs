@@ -12,6 +12,11 @@ use core::num::NonZeroU32;
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
+use deranged::RangedU8;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
 use shakmaty::Color::{Black, White};
 #[allow(
     unused_imports,
@@ -60,7 +65,7 @@ pub static QUIET_LINE: Variation = Variation {
             parent: &QUIET_LINE,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<2>(),
+                category: Category(RangedU8::new_static::<2>()),
             },
             moves: &[
                 Normal {
@@ -162,7 +167,7 @@ pub static QUIET_LINE: Variation = Variation {
             parent: &QUIET_LINE,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<2>(),
+                category: Category(RangedU8::new_static::<2>()),
             },
             moves: &[
                 Normal {
@@ -285,7 +290,7 @@ pub static QUIET_LINE: Variation = Variation {
             parent: &QUIET_LINE,
             code: Code {
                 volume: Volume::A,
-                category: Category::new_static::<2>(),
+                category: Category(RangedU8::new_static::<2>()),
             },
             moves: &[
                 Normal {

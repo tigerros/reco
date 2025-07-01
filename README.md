@@ -21,7 +21,8 @@ no-std and no-alloc compatible.
 - `book` (default): adds ECO entries as statics.
 - `book-flattened`: adds a compile time evaluated `book::FLATTENED` static that flattens the tree structure of `book::ALL`.
 - `serde`: adds [`serde`](https://crates.io/crates/serde) support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
-- `proptest`: adds some [`proptest`](https://crates.io/crates/proptest) support. Requires `std`.
+- `arbitrary`: adds [`arbitrary`](https://crates.io/crates/arbitrary) support. Requires `std`.
+- `proptest`: adds [`proptest`](https://crates.io/crates/proptest) support. Requires `std`.
 
 ## Sourcing
 The ECO entries are generated using the unpublished `librarian` crate.

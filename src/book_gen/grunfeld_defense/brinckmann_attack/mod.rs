@@ -12,6 +12,11 @@ use core::num::NonZeroU32;
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
+use deranged::RangedU8;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
 use shakmaty::Color::{Black, White};
 #[allow(
     unused_imports,
@@ -63,7 +68,7 @@ pub static BRINCKMANN_ATTACK: Variation = Variation {
         parent: &BRINCKMANN_ATTACK,
         code: Code {
             volume: Volume::D,
-            category: Category::new_static::<8>(),
+            category: Category(RangedU8::new_static::<8>()),
         },
         moves: &[
             Normal {

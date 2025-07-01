@@ -1,12 +1,12 @@
 use core::fmt::{Display, Formatter, Write};
 use core::str::FromStr;
 use deranged::RangedU8;
-#[cfg(feature = "proptest")]
-use proptest::prelude::*;
 
 /// The A-E volume of an opening.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "arbitrary", derive(arbitrary::Arbitrary))]
+#[cfg_attr(feature = "proptest", derive(proptest_derive::Arbitrary))]
 #[repr(u8)]
 pub enum Volume {
     A = 0,
@@ -17,6 +17,7 @@ pub enum Volume {
 }
 
 impl Volume {
+    /// An array of all possible volumes in ascending order.
     pub const ALL: [Self; 5] = [Self::A, Self::B, Self::C, Self::D, Self::E];
 
     /// Converts an ASCII byte to a [`Volume`].
@@ -160,25 +161,11 @@ impl Display for Volume {
     }
 }
 
-#[cfg(feature = "proptest")]
-impl Arbitrary for Volume {
-    type Parameters = ();
-    type Strategy = BoxedStrategy<Self>;
-
-    fn arbitrary_with((): Self::Parameters) -> Self::Strategy {
-        prop_oneof![
-            Just(Self::A),
-            Just(Self::B),
-            Just(Self::C),
-            Just(Self::D),
-            Just(Self::E),
-        ]
-        .boxed()
-    }
-}
-
 /// Parsing a [`Volume`] failed.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "arbitrary", derive(arbitrary::Arbitrary))]
+#[cfg_attr(feature = "proptest", derive(proptest_derive::Arbitrary))]
 pub struct ParseError;
 
 impl ParseError {
@@ -204,44 +191,119 @@ impl Display for ParseError {
 impl core::error::Error for ParseError {}
 
 #[cfg(test)]
-#[cfg(feature = "proptest")]
+#[expect(clippy::unwrap_used, clippy::indexing_slicing, reason = "tests")]
 mod tests {
     use super::*;
+    #[cfg(feature = "proptest")]
+    use proptest::prelude::*;
 
+    /// Asserts that [`Ord`] reflects the integer representation of [`Volume`].
+    #[test]
+    fn ord() {
+        for volume1 in Volume::ALL {
+            for volume2 in Volume::ALL {
+                assert_eq!(
+                    volume1.cmp(&volume2),
+                    RangedU8::from(volume1).cmp(&RangedU8::from(volume2))
+                );
+            }
+        }
+    }
+
+    /// Asserts that [`PartialOrd`] is the same as [`Ord`].
+    #[test]
+    fn partial_ord_eq_ord() {
+        for volume1 in Volume::ALL {
+            for volume2 in Volume::ALL {
+                assert_eq!(volume1.partial_cmp(&volume2), Some(volume1.cmp(&volume2)));
+            }
+        }
+    }
+
+    /// Asserts that turning a [`Volume`] into a [`RangedU8`] doesn't panic.
+    #[test]
+    fn to_integer_does_not_panic() {
+        for volume in Volume::ALL {
+            let _ = RangedU8::<0, 4>::from(volume);
+        }
+    }
+
+    /// Asserts that turning a [`RangedU8`] into a [`Volume`] doesn't panic.
+    #[test]
+    fn from_integer_does_not_panic() {
+        for i in 0..=4 {
+            let _ = Volume::from(RangedU8::new(i).unwrap());
+        }
+    }
+
+    /// Asserts that [`Volume`] can be converted to an ASCII byte and back to the same value.
+    #[test]
+    fn ascii_roundtrip() {
+        for volume in Volume::ALL {
+            assert_eq!(Volume::from_ascii(volume.as_ascii()), Ok(volume));
+        }
+    }
+
+    /// Asserts that [`Volume`] can be converted to a string and back to the same value.
+    #[test]
+    fn str_roundtrip() {
+        for volume in Volume::ALL {
+            assert_eq!(Volume::from_str(&volume.to_string()), Ok(volume));
+        }
+    }
+
+    /// Asserts that [`Volume::as_ascii`] returns valid ASCII.
+    #[test]
+    fn is_ascii() {
+        for volume in Volume::ALL {
+            let ascii = [volume.as_ascii()];
+            let str = str::from_utf8(&ascii);
+            assert!(str.is_ok());
+            assert!(str.unwrap().is_ascii());
+        }
+    }
+
+    /// Asserts that [`Volume::as_ascii`], [`Volume::to_string`] and [`Volume::from_ascii`], [`Volume::from_str`] are equivalent.
+    #[test]
+    fn ascii_eq_str() {
+        for volume in Volume::ALL {
+            let ascii = volume.as_ascii();
+            let string = volume.to_string();
+
+            assert_eq!(&[ascii], string.as_bytes());
+        }
+    }
+
+    #[cfg(feature = "proptest")]
     proptest! {
-        /// Tests that it doesn't panic.
+        /// Asserts that it doesn't panic.
         #[test]
         fn parse_random_string(s in "\\PC*") {
             let _ = Volume::from_str(&s);
         }
 
-        /// Tests that it succeeds.
+        /// Asserts that it succeeds.
         #[test]
         fn parse_every_valid_string(s in "[A-E]") {
             assert!(Volume::from_str(&s).is_ok());
         }
 
-        /// Tests that it errors.
+        /// Asserts that it errors.
+        ///
+        /// `\x00-\x40\x46-\x7F` is the ASCII set minus `A-E`. This is necessary otherwise we
+        /// would get either [`ParseError::InvalidLength`] errors as well.
         #[test]
-        fn parse_every_invalid_string(s in ".*[^A-E].*") {
+        fn parse_every_invalid_string(s in ".*[\x00-\x40\x46-\x7F].*") {
             assert!(Volume::from_str(&s).is_err());
         }
 
-        /// Tests that the [`Display`] implementation is equivalent to converting to a char.
+        /// Asserts that [`Volume::from_str`] and [`Volume::from_ascii`] return the same value
+        /// (even if it is an error).
         #[test]
-        fn display_eq_to_char(volume in any::<Volume>()) {
-            assert_eq!(volume.to_string(), char::from(volume).to_string());
-        }
-
-        /// Similar to [`within_range`], but tests that [`From<Volume>`] for [`RangedU8`] doesn't panic.
-        #[test]
-        fn ranged_doesnt_panic(volume in any::<Volume>()) {
-            let _ = RangedU8::<0, 4>::from(volume);
-        }
-
-         #[test]
-        fn from_str_eq_from_ascii(volume in any::<Volume>()) {
-            assert_eq!(Volume::from_str(&volume.to_string()), Volume::from_ascii(volume.as_ascii()));
+        fn from_str_eq_from_ascii(s in "\\PC*") {
+            if s.len() == 1 {
+                assert_eq!(Volume::from_str(&s), Volume::from_ascii(s.as_bytes()[0]));
+            }
         }
     }
 }

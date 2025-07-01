@@ -43,12 +43,15 @@ std = ["alloc"]
 book-flattened = ["book"]
 # Adds `serde` support for applicable types. **All implementations are derived with no parameters. This includes types that have a `FromStr` and `Display` implementation.**
 serde = ["dep:serde", "deranged/serde"]
-# Adds some `proptest` support. Requires `std`.
-proptest = ["dep:proptest", "std"]
+# Adds `arbitrary` support. Requires `std`.
+arbitrary = ["dep:arbitrary", "std"]
+# Adds `proptest` support. Requires `std`.
+proptest = ["dep:proptest", "std", "dep:proptest-derive"]
 
 [dependencies]
+arbitrary = { version = "1", default-features = false, features = ["derive_arbitrary"], optional = true }
 deranged = { version = "0.4.0", default-features = false }
-proptest = { version = "1", optional = true }
+proptest = { workspace = true, features = ["std"], optional = true }
+proptest-derive = { version = "0.6.0", default-features = false, optional = true }
 serde = { version = "1.0.197", default-features = false, features = ["derive"], optional = true }
 shakmaty = { workspace = true }
-

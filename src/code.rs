@@ -3,18 +3,65 @@ use core::cmp::Ordering;
 use core::fmt::{Display, Formatter};
 use core::str::FromStr;
 use deranged::{RangedU8, RangedU16};
-#[cfg(feature = "proptest")]
-use proptest::prelude::*;
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "arbitrary", derive(arbitrary::Arbitrary))]
+#[cfg_attr(feature = "proptest", derive(proptest_derive::Arbitrary))]
 /// The A00-E99 code of an opening.
 pub struct Code {
     pub volume: Volume,
     pub category: Category,
 }
 
+static ALL: [Code; 500] = {
+    let mut all = [Code {
+        volume: Volume::A,
+        category: Category(RangedU8::new_static::<0>()),
+    }; 500];
+
+    let mut i = 0u16;
+
+    while i < 500 {
+        #[expect(
+            clippy::indexing_slicing,
+            clippy::as_conversions,
+            reason = "const expr"
+        )]
+        {
+            all[i as usize] = Code {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "[0, 499] / 100 <= 4; it's also a const expr"
+                )]
+                volume: match i / 100 {
+                    0 => Volume::A,
+                    1 => Volume::B,
+                    2 => Volume::C,
+                    3 => Volume::D,
+                    4 => Volume::E,
+                    _ => unreachable!(),
+                },
+                #[expect(
+                    clippy::as_conversions,
+                    reason = "[0, 499] % 100 <= 99; it's also a const expr"
+                )]
+                category: Category(RangedU8::new((i % 100) as u8).unwrap()),
+            };
+        }
+
+        i += 1;
+    }
+
+    all
+};
+
 impl Code {
+    /// An array of all codes in ascending order.
+    pub const fn all() -> &'static [Self; 500] {
+        &ALL
+    }
+
     #[expect(clippy::missing_panics_doc, reason = "doesn't actually panic")]
     /// Converts an ASCII slice to a [`Code`].
     ///
@@ -64,19 +111,37 @@ impl Code {
             Ok(volume) => volume,
             Err(e) => return Err(ParseError::InvalidVolume(e)),
         };
-        #[expect(clippy::indexing_slicing, reason = "check length above")]
-        let digit1 = s[1].saturating_sub(b'0');
-
-        if digit1 > 9 {
+        #[expect(
+            clippy::indexing_slicing,
+            clippy::as_conversions,
+            reason = "check length above, u8 as char is safe"
+        )]
+        let Some(digit1) = (s[1] as char).to_digit(10) else {
             return Err(ParseError::InvalidCategory);
-        }
+        };
 
-        #[expect(clippy::indexing_slicing, reason = "check length above")]
-        let digit2 = s[2].saturating_sub(b'0');
+        #[expect(
+            clippy::cast_possible_truncation,
+            clippy::as_conversions,
+            reason = "base 10 digit always u8"
+        )]
+        let digit1 = digit1 as u8;
 
-        if digit2 > 9 {
+        #[expect(
+            clippy::indexing_slicing,
+            clippy::as_conversions,
+            reason = "check length above, u8 as char is safe"
+        )]
+        let Some(digit2) = (s[2] as char).to_digit(10) else {
             return Err(ParseError::InvalidCategory);
-        }
+        };
+
+        #[expect(
+            clippy::cast_possible_truncation,
+            clippy::as_conversions,
+            reason = "base 10 digit always u8"
+        )]
+        let digit2 = digit2 as u8;
 
         Ok(Self {
             volume,
@@ -85,7 +150,7 @@ impl Code {
                 clippy::unwrap_used,
                 reason = "both numbers are 0-9. They can't be larger than 99 in this calculation"
             )]
-            category: RangedU8::new(digit1 * 10 + digit2).unwrap(),
+            category: Category(RangedU8::new(digit1 * 10 + digit2).unwrap()),
         })
     }
 
@@ -99,14 +164,14 @@ impl Code {
             reason = "(0..=99) / 10 <= 10, +b'0' makes it a valid ASCII digit within u8 range"
         )]
         {
-            bytes[1] = (self.category.get() / 10) + b'0';
+            bytes[1] = (self.category.0.get() / 10) + b'0';
         }
         #[expect(
             clippy::arithmetic_side_effects,
             reason = "(0..=99) % 10 <= 10, +b'0' makes it a valid ASCII digit within u8 range"
         )]
         {
-            bytes[2] = (self.category.get() % 10) + b'0';
+            bytes[2] = (self.category.0.get() % 10) + b'0';
         }
 
         bytes
@@ -231,17 +296,18 @@ impl From<RangedU16<0, 499>> for Code {
     fn from(integer: RangedU16<0, 499>) -> Self {
         Self {
             #[expect(
-                clippy::arithmetic_side_effects,
                 clippy::unwrap_used,
+                clippy::as_conversions,
+                clippy::cast_possible_truncation,
                 reason = "[0, 499] / 100 <= 4"
             )]
             volume: Volume::from(RangedU8::new((integer.get() / 100) as u8).unwrap()),
             #[expect(
-                clippy::arithmetic_side_effects,
                 clippy::unwrap_used,
+                clippy::as_conversions,
                 reason = "[0, 499] % 100 <= 99"
             )]
-            category: Category::new((integer.get() % 100) as u8).unwrap(),
+            category: RangedU8::new((integer.get() % 100) as u8).unwrap().into(),
         }
     }
 }
@@ -263,24 +329,11 @@ impl Display for Code {
     }
 }
 
-#[cfg(feature = "proptest")]
-impl Arbitrary for Code {
-    type Parameters = ();
-    type Strategy = BoxedStrategy<Self>;
-
-    fn arbitrary_with((): Self::Parameters) -> Self::Strategy {
-        (
-            Volume::arbitrary(),
-            #[expect(clippy::unwrap_used, reason = "Category range is 0-99")]
-            (0u8..=99).prop_map(|n| Category::new(n).unwrap()),
-        )
-            .prop_map(|(volume, category)| Self { volume, category })
-            .boxed()
-    }
-}
-
 /// Parsing a [`Code`] failed.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[cfg_attr(feature = "arbitrary", derive(arbitrary::Arbitrary))]
+#[cfg_attr(feature = "proptest", derive(proptest_derive::Arbitrary))]
 pub enum ParseError {
     /// The byte string was shorter/longer than 3 bytes.
     InvalidLength,
@@ -302,98 +355,153 @@ impl Display for ParseError {
 
 impl core::error::Error for ParseError {}
 
-#[cfg(feature = "proptest")]
-impl Arbitrary for ParseError {
-    type Parameters = ();
-    type Strategy = BoxedStrategy<Self>;
-
-    fn arbitrary_with((): Self::Parameters) -> Self::Strategy {
-        prop_oneof![
-            Just(Self::InvalidLength),
-            Just(Self::InvalidVolume(volume::ParseError)),
-            Just(Self::InvalidCategory),
-        ]
-        .boxed()
-    }
-}
-
 #[cfg(test)]
-#[cfg(feature = "proptest")]
+#[expect(clippy::unwrap_used, reason = "tests")]
 mod tests {
     use super::*;
     use alloc::format;
+    #[cfg(feature = "proptest")]
+    use proptest::prelude::*;
 
+    /// Asserts that [`Ord`] reflects the integer representation of [`Code`].
+    #[test]
+    fn ord() {
+        // low tech fuzzing/property testing
+        // seems kind of funky but it's much better! exhaustive, simple, fast
+        // assuming you have a teeny tiny input space
+        for code1 in Code::all() {
+            for code2 in Code::all() {
+                assert_eq!(
+                    code1.cmp(code2),
+                    RangedU16::from(*code1).cmp(&RangedU16::from(*code2))
+                );
+            }
+        }
+    }
+
+    /// Asserts that [`PartialOrd`] is the same as [`Ord`].
+    #[test]
+    fn partial_ord_eq_ord() {
+        for code1 in Code::all() {
+            for code2 in Code::all() {
+                assert_eq!(code1.partial_cmp(code2), Some(code1.cmp(code2)));
+            }
+        }
+    }
+
+    /// Asserts that [`Display`] is correct.
+    #[test]
+    fn display() {
+        for code in Code::all() {
+            assert_eq!(
+                code.to_string(),
+                format!("{}{:02}", code.volume, code.category.get())
+            );
+        }
+    }
+
+    /// Asserts that [`Code`] can be converted to an ASCII string and back to the same value.
+    #[test]
+    fn ascii_roundtrip() {
+        for code in Code::all() {
+            assert_eq!(Code::from_ascii(&code.as_ascii()), Ok(*code));
+        }
+    }
+
+    /// Asserts that [`Code`] can be converted to a string and back to the same value.
+    #[test]
+    fn str_roundtrip() {
+        for code in Code::all() {
+            assert_eq!(Code::from_str(&code.to_string()), Ok(*code));
+        }
+    }
+
+    /// Asserts that [`Code::as_ascii`] returns valid ASCII.
+    #[test]
+    fn is_ascii() {
+        for code in Code::all() {
+            let ascii = code.as_ascii();
+            let str = str::from_utf8(&ascii);
+            assert!(str.is_ok());
+            assert!(str.unwrap().is_ascii());
+        }
+    }
+
+    /// Asserts that [`Code::as_ascii`], [`Code::to_string`] and [`Code::from_ascii`], [`Code::from_str`] are equivalent.
+    #[test]
+    fn ascii_eq_str() {
+        for code in Code::all() {
+            let ascii = code.as_ascii();
+            let string = code.to_string();
+
+            assert_eq!(&ascii, string.as_bytes());
+        }
+    }
+
+    #[cfg(feature = "proptest")]
     proptest! {
-        /// Tests that it doesn't panic.
+        /// Asserts that it doesn't panic.
         #[test]
         fn parse_random_string(s in "\\PC*") {
             let _ = Code::from_str(&s);
         }
 
-        /// Tests that it succeeds.
+        /// Asserts that it succeeds.
         #[test]
         fn parse_every_valid_string(s in "[A-E][0-9][0-9]") {
             assert!(Code::from_str(&s).is_ok());
         }
 
-        /// Tests that it errors.
+        /// Asserts that it errors.
         #[test]
         fn parse_every_invalid_string(s in ".*[^A-E][^0-9][^0-9].*") {
             assert!(Code::from_str(&s).is_err());
         }
 
-        /// Tests that the [`Display`] implementation is correct.
+        /// Asserts that it errors.
+        ///
+        /// `\x00-\x40\x46-\x7F` is the ASCII set minus `A-E`. This is necessary otherwise we
+        /// would get either [`ParseError::InvalidLength`] errors as well.
         #[test]
-        fn display(volume in any::<Volume>(), category in 0u8..=99) {
-            let category = Category::new(category).unwrap();
-
-            assert_eq!(Code { volume, category }.to_string(), format!("{volume}{:02}", category.get()));
-        }
-
-        #[test]
-        fn ord(code1 in any::<Code>(), code2 in any::<Code>()) {
-            assert_eq!(code1.cmp(&code2), RangedU16::from(code1).cmp(&RangedU16::from(code2)));
-        }
-
-        /// Tests that a [`Code`] can be converted to a string and back.
-        #[test]
-        fn to_str_from_str(code in any::<Code>()) {
-            Code::from_str(&code.to_string()).unwrap();
-        }
-
-        #[test]
-        fn invalid_volume(s in "[^A-E][0-9][0-9]") {
+        fn invalid_volume(s in "[\x00-\x40\x46-\x7F][0-9][0-9]") {
             assert_eq!(Code::from_str(&s), Err(ParseError::InvalidVolume(volume::ParseError)));
         }
 
+        /// Asserts that it errors.
         #[test]
         fn missing_category(s in "[A-E]") {
             assert_eq!(Code::from_str(&s), Err(ParseError::InvalidLength));
         }
 
+        /// Asserts that it errors.
         #[test]
         fn missing_category2(s in "[A-E][0-9]") {
             assert_eq!(Code::from_str(&s), Err(ParseError::InvalidLength));
         }
 
+        /// Asserts that it errors.
+        ///
+        /// `\x00-/:-\x7F` is the ASCII set minus `0-9`.  This is necessary otherwise we
+        /// would get either [`ParseError::InvalidLength`] errors as well.
         #[test]
-        fn invalid_category(s in "[A-E][^0-9][0-9]") {
+        fn invalid_category(s in "[A-E][\x00-/:-\x7F][0-9]") {
             assert_eq!(Code::from_str(&s), Err(ParseError::InvalidCategory));
         }
 
+        /// Asserts that it errors.
+        ///
+        /// `\x00-/:-\x7F` is the ASCII set minus `0-9`.  This is necessary otherwise we
+        /// would get either [`ParseError::InvalidLength`] errors as well.
         #[test]
-        fn invalid_category2(s in "[A-E][0-9][^0-9]") {
+        fn invalid_category2(s in "[A-E][0-9][\x00-/:-\x7F]") {
             assert_eq!(Code::from_str(&s), Err(ParseError::InvalidCategory));
         }
 
+        /// Asserts that [`Code::from_str`] and [`Code::from_ascii`] return the same value
+        /// (even if it is an error).
         #[test]
-        fn from_str_eq_from_bytes(s in "\\PC*") {
+        fn from_str_eq_from_ascii(s in "\\PC*") {
             assert_eq!(Code::from_str(&s), Code::from_ascii(s.as_bytes()));
-        }
-
-         #[test]
-        fn from_str_eq_from_bytes_valid(code in any::<Code>()) {
-            assert_eq!(Code::from_str(&code.to_string()), Code::from_ascii(&code.as_ascii()));
         }
     }
 }

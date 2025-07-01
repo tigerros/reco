@@ -29,20 +29,17 @@
     clippy::tests_outside_test_module
 )]
 #![forbid(unsafe_code)]
-#![cfg_attr(
-    not(test),
-    deny(
-        clippy::unwrap_used,
-        clippy::expect_used,
-        clippy::panic,
-        clippy::exit,
-        clippy::todo,
-        clippy::unreachable,
-        clippy::panic_in_result_fn,
-        clippy::indexing_slicing,
-        clippy::string_slice,
-        clippy::get_unwrap
-    )
+#![deny(
+    clippy::unwrap_used,
+    clippy::expect_used,
+    clippy::panic,
+    clippy::exit,
+    clippy::todo,
+    clippy::unreachable,
+    clippy::panic_in_result_fn,
+    clippy::indexing_slicing,
+    clippy::string_slice,
+    clippy::get_unwrap
 )]
 #![allow(
     clippy::must_use_candidate,
@@ -78,11 +75,11 @@ mod book_gen;
 #[cfg(feature = "book")]
 #[cfg_attr(docsrs, doc(cfg(feature = "book")))]
 pub mod book;
+mod category;
 mod variation;
-pub use variation::{ValidityError, Variation};
 
-/// The 0-99 category of an opening.
-pub type Category = deranged::RangedU8<0, 99>;
+pub use category::Category;
+pub use variation::{ValidityError, Variation};
 
 #[cfg(feature = "alloc")]
 /// Generates a setup for each point in the given game.

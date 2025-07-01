@@ -12,6 +12,11 @@ use core::num::NonZeroU32;
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
+use deranged::RangedU8;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
 use shakmaty::Color::{Black, White};
 #[allow(
     unused_imports,
@@ -105,7 +110,7 @@ pub static CARO_KANN_DEFENSE: Variation = Variation {
             parent: &CARO_KANN_DEFENSE,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<1>(),
+                category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
                 Normal {
@@ -172,7 +177,7 @@ pub static CARO_KANN_DEFENSE: Variation = Variation {
             parent: &CARO_KANN_DEFENSE,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<1>(),
+                category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
                 Normal {
@@ -246,7 +251,7 @@ pub static CARO_KANN_DEFENSE: Variation = Variation {
             parent: &CARO_KANN_DEFENSE,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<1>(),
+                category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
                 Normal {
@@ -327,7 +332,7 @@ pub static CARO_KANN_DEFENSE: Variation = Variation {
             parent: &CARO_KANN_DEFENSE,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<1>(),
+                category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
                 Normal {
@@ -401,7 +406,7 @@ pub static CARO_KANN_DEFENSE: Variation = Variation {
             parent: &CARO_KANN_DEFENSE,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<1>(),
+                category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
                 Normal {
@@ -482,7 +487,7 @@ pub static CARO_KANN_DEFENSE: Variation = Variation {
             parent: &CARO_KANN_DEFENSE,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<1>(),
+                category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
                 Normal {
@@ -570,7 +575,7 @@ pub static CARO_KANN_DEFENSE: Variation = Variation {
             parent: &CARO_KANN_DEFENSE,
             code: Code {
                 volume: Volume::B,
-                category: Category::new_static::<1>(),
+                category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
                 Normal {

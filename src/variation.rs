@@ -14,10 +14,7 @@ use shakmaty::Setup;
 #[cfg(feature = "alloc")]
 use shakmaty::{Chess, Move, PlayError};
 
-#[expect(
-    missing_copy_implementations,
-    reason = "copy semantics conflict with the tree structure"
-)]
+#[expect(missing_copy_implementations, reason = "too big")]
 /// A named variation.
 ///
 /// In order to improve performance, correctness, and usability (for most users), [`Variation`]
@@ -302,6 +299,7 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
 
 #[cfg(test)]
 #[cfg(feature = "book")]
+#[expect(clippy::unwrap_used, clippy::expect_used, reason = "tests")]
 mod tests {
     use super::Variation;
     use crate::book;

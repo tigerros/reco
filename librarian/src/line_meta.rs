@@ -47,7 +47,7 @@ impl LineMeta {
     parent: &{parent_path},
     code: Code {{
         volume: Volume::{volume},
-        category: Category::new_static::<{category}>()
+        category: Category(RangedU8::new_static::<{category}>())
     }},
     moves: &{moves},
     setup: Setup {{

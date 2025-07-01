@@ -12,6 +12,11 @@ use core::num::NonZeroU32;
     unused_imports,
     reason = "because the code is generated, we don't know if it's going to be used"
 )]
+use deranged::RangedU8;
+#[allow(
+    unused_imports,
+    reason = "because the code is generated, we don't know if it's going to be used"
+)]
 use shakmaty::Color::{Black, White};
 #[allow(
     unused_imports,
@@ -60,7 +65,7 @@ pub static SEMI_SLAV_DEFENSE: Variation = Variation {
             parent: &SEMI_SLAV_DEFENSE,
             code: Code {
                 volume: Volume::D,
-                category: Category::new_static::<0>(),
+                category: Category(RangedU8::new_static::<0>()),
             },
             moves: &[
                 Normal {
@@ -198,7 +203,7 @@ pub static SEMI_SLAV_DEFENSE: Variation = Variation {
             parent: &SEMI_SLAV_DEFENSE,
             code: Code {
                 volume: Volume::D,
-                category: Category::new_static::<0>(),
+                category: Category(RangedU8::new_static::<0>()),
             },
             moves: &[
                 Normal {
@@ -343,7 +348,7 @@ pub static SEMI_SLAV_DEFENSE: Variation = Variation {
             parent: &SEMI_SLAV_DEFENSE,
             code: Code {
                 volume: Volume::D,
-                category: Category::new_static::<0>(),
+                category: Category(RangedU8::new_static::<0>()),
             },
             moves: &[
                 Normal {

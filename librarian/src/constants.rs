@@ -22,7 +22,9 @@ use shakmaty::{ByRole, ByColor, Setup};
 #[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
 use core::num::NonZeroU32;
 #[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
-use crate::{Variation, Line, Code, Volume, Category};"#;
+use crate::{Variation, Line, Code, Volume, Category};
+#[allow(unused_imports, reason = "because the code is generated, we don't know if it's going to be used")]
+use deranged::RangedU8;"#;
 /// The initial contents of `book/mod.rs`.
 pub const BOOK_MOD_INIT: &str = r#"#![allow(
     clippy::allow_attributes,
