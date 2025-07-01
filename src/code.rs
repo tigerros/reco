@@ -156,25 +156,25 @@ impl Code {
 
     /// Converts a [`Code`] into an ASCII array.
     pub const fn as_ascii(self) -> [u8; 3] {
-        let mut bytes = [0u8; 3];
+        let mut ascii = [0u8; 3];
 
-        bytes[0] = self.volume.as_ascii();
+        ascii[0] = self.volume.as_ascii();
         #[expect(
             clippy::arithmetic_side_effects,
             reason = "(0..=99) / 10 <= 10, +b'0' makes it a valid ASCII digit within u8 range"
         )]
         {
-            bytes[1] = (self.category.0.get() / 10) + b'0';
+            ascii[1] = (self.category.0.get() / 10) + b'0';
         }
         #[expect(
             clippy::arithmetic_side_effects,
             reason = "(0..=99) % 10 <= 10, +b'0' makes it a valid ASCII digit within u8 range"
         )]
         {
-            bytes[2] = (self.category.0.get() % 10) + b'0';
+            ascii[2] = (self.category.0.get() % 10) + b'0';
         }
 
-        bytes
+        ascii
     }
 }
 
