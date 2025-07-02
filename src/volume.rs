@@ -191,7 +191,7 @@ impl Display for ParseError {
 impl core::error::Error for ParseError {}
 
 #[cfg(test)]
-#[expect(clippy::unwrap_used, clippy::indexing_slicing, reason = "tests")]
+#[expect(clippy::unwrap_used, reason = "tests")]
 mod tests {
     use super::*;
     #[cfg(feature = "proptest")]
