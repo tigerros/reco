@@ -303,7 +303,9 @@ mod tests {
         fn from_str_eq_from_ascii(s in "\\PC*") {
             if s.len() == 1 {
                 #[expect(clippy::indexing_slicing, reason = "test")]
-                assert_eq!(Volume::from_str(&s), Volume::from_ascii(s.as_bytes()[0]));
+                {
+                    assert_eq!(Volume::from_str(&s), Volume::from_ascii(s.as_bytes()[0]));
+                }
             }
         }
     }
