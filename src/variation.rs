@@ -299,7 +299,7 @@ assert_eq!(SICILIAN_DEFENSE.root(), &SICILIAN_DEFENSE);
 
 #[cfg(test)]
 #[cfg(feature = "book")]
-#[expect(clippy::unwrap_used, clippy::expect_used, reason = "tests")]
+#[cfg_attr(feature = "alloc", expect(clippy::unwrap_used, clippy::expect_used, reason = "tests"))]
 mod tests {
     use super::Variation;
     use crate::book;
