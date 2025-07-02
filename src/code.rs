@@ -68,12 +68,13 @@ impl Code {
     /// # Examples
     /// ```rust
     /// use reco::{Category, Code, Volume, code, volume};
+    /// use deranged::RangedU8;
     ///
     /// assert_eq!(
     ///     Code::from_ascii(b"A00"),
     ///     Ok(Code {
     ///         volume: Volume::A,
-    ///         category: Category::new_static::<0>()
+    ///         category: Category(RangedU8::new_static::<0>())
     ///     })
     /// );
     ///
@@ -190,24 +191,25 @@ impl Ord for Code {
     /// # Examples
     /// ```rust
     /// use reco::{Code, Volume, Category};
+    /// use deranged::RangedU8;
     ///
     /// assert!(
     ///     Code {
     ///         volume: Volume::C,
-    ///         category: Category::new_static::<50>()
+    ///         category: Category(RangedU8::new_static::<50>())
     ///     } < Code {
     ///         volume: Volume::D,
-    ///         category: Category::new_static::<10>()
+    ///         category: Category(RangedU8::new_static::<10>())
     ///     },
     /// );
     ///
     /// assert!(
     ///     Code {
     ///         volume: Volume::D,
-    ///         category: Category::new_static::<40>()
+    ///         category: Category(RangedU8::new_static::<40>())
     ///     } > Code {
     ///         volume: Volume::D,
-    ///         category: Category::new_static::<20>()
+    ///         category: Category(RangedU8::new_static::<20>())
     ///     },
     /// );
     /// ```
@@ -232,12 +234,12 @@ impl From<Code> for RangedU16<0, 499> {
     /// # Examples
     /// ```rust
     /// use reco::{Code, Volume, Category};
-    /// use deranged::RangedU16;
+    /// use deranged::{RangedU16, RangedU8};
     ///
     /// assert_eq!(
     ///     RangedU16::from(Code {
     ///         volume: Volume::A,
-    ///         category: Category::new_static::<37>()
+    ///         category: Category(RangedU8::new_static::<37>())
     ///     }).get(),
     ///     37 // 0 * 100 + 37
     /// );
@@ -245,7 +247,7 @@ impl From<Code> for RangedU16<0, 499> {
     /// assert_eq!(
     ///     RangedU16::from(Code {
     ///         volume: Volume::E,
-    ///         category: Category::new_static::<6>()
+    ///         category: Category(RangedU8::new_static::<6>())
     ///     }).get(),
     ///     406 // 4 * 100 + 6
     /// );
@@ -275,22 +277,22 @@ impl From<RangedU16<0, 499>> for Code {
     /// # Examples
     /// ```rust
     /// use reco::{Code, Volume, Category};
-    /// use deranged::RangedU16;
+    /// use deranged::{RangedU16, RangedU8};
     ///
     /// assert_eq!(
-    ///     RangedU16::new_static::<127>(),
+    ///     RangedU16::<0, 499>::new_static::<127>(),
     ///     Code {
     ///         volume: Volume::B, // 127 / 100 = 1
-    ///         category: Category::new_static::<27>() // 127 % 100 = 27
-    ///     },
+    ///         category: Category(RangedU8::new_static::<27>()) // 127 % 100 = 27
+    ///     }.into()
     /// );
     ///
     /// assert_eq!(
-    ///     RangedU16::new_static::<0>(),
+    ///     RangedU16::<0, 499>::new_static::<0>(),
     ///     Code {
     ///         volume: Volume::A,
-    ///         category: Category::new_static::<0>()
-    ///     }
+    ///         category: Category(RangedU8::new_static::<0>())
+    ///     }.into()
     /// );
     /// ```
     fn from(integer: RangedU16<0, 499>) -> Self {

@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@nightly
 
-      - name: Check reco except lib
-        run: cargo check --workspace --bins --examples --tests --benches -Z direct-minimal-versions
+      - name: Check except reco lib
+        run: cargo check --workspace --bins --examples --tests --benches
 
   check-reco:
     strategy:
@@ -33,7 +33,7 @@ jobs:
           targets: x86_64-unknown-none
 
       - name: No-std
-        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --skip proptest,std --target x86_64-unknown-none ${{ matrix.flags }}
+        run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset --skip proptest,arbitrary,std --target x86_64-unknown-none ${{ matrix.flags }}
 
       - name: Std
         run: rustup run ${{ matrix.toolchain }} cargo hack check --feature-powerset ${{ matrix.flags }}

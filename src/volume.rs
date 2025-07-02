@@ -107,11 +107,11 @@ impl From<Volume> for RangedU8<0, 4> {
     /// use reco::Volume;
     /// use deranged::RangedU8;
     ///
-    /// assert_eq!(RangedU8::from(Volume::A), RangedU8::new_static::<0>());
-    /// assert_eq!(RangedU8::from(Volume::B), RangedU8::new_static::<1>());
-    /// assert_eq!(RangedU8::from(Volume::C), RangedU8::new_static::<2>());
-    /// assert_eq!(RangedU8::from(Volume::D), RangedU8::new_static::<3>());
-    /// assert_eq!(RangedU8::from(Volume::E), RangedU8::new_static::<4>());
+    /// assert_eq!(RangedU8::from(Volume::A), RangedU8::<0, 4>::new_static::<0>());
+    /// assert_eq!(RangedU8::from(Volume::B), RangedU8::<0, 4>::new_static::<1>());
+    /// assert_eq!(RangedU8::from(Volume::C), RangedU8::<0, 4>::new_static::<2>());
+    /// assert_eq!(RangedU8::from(Volume::D), RangedU8::<0, 4>::new_static::<3>());
+    /// assert_eq!(RangedU8::from(Volume::E), RangedU8::<0, 4>::new_static::<4>());
     /// ```
     fn from(volume: Volume) -> Self {
         match volume {
@@ -191,7 +191,7 @@ impl Display for ParseError {
 impl core::error::Error for ParseError {}
 
 #[cfg(test)]
-#[expect(clippy::unwrap_used, clippy::indexing_slicing, reason = "tests")]
+#[expect(clippy::unwrap_used, reason = "tests")]
 mod tests {
     use super::*;
     #[cfg(feature = "proptest")]
