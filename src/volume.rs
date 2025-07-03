@@ -1,5 +1,6 @@
 use core::fmt::{Display, Formatter, Write};
 use core::str::FromStr;
+use core::unreachable;
 use deranged::RangedU8;
 
 /// The A-E volume of an opening.

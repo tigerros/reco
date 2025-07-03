@@ -2,6 +2,7 @@ use crate::{Category, Volume, volume};
 use core::cmp::Ordering;
 use core::fmt::{Display, Formatter};
 use core::str::FromStr;
+use core::unreachable;
 use deranged::{RangedU8, RangedU16};
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
