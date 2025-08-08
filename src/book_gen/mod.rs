@@ -296,7 +296,7 @@ pub mod zukertort_opening;
 pub use zukertort_opening::ZUKERTORT_OPENING;
 
 /// The total amount of variations.
-pub const VARIATION_COUNT: usize = 3229;
+pub const VARIATION_COUNT: usize = 3230;
 
 /// All root variations.
 pub static ALL: [&Variation; 140] = [
