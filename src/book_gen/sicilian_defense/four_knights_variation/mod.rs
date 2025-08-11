@@ -64,7 +64,7 @@ assert_eq!(FOUR_KNIGHTS_VARIATION.original_name(), "Sicilian Defense: Four Knigh
 pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
     name: "Four Knights Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
-    variations: &[&COBRA_VARIATION, &EXCHANGE_VARIATION],
+    variations: &[&AMERICAN_ATTACK, &COBRA_VARIATION, &EXCHANGE_VARIATION],
     lines: &[Line {
         parent: &FOUR_KNIGHTS_VARIATION,
         code: Code {
@@ -123,9 +123,9 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
             },
             Normal {
                 role: Knight,
-                from: Square::G8,
+                from: Square::B8,
                 capture: None,
-                to: Square::F6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
@@ -137,9 +137,9 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
             },
             Normal {
                 role: Knight,
-                from: Square::B8,
+                from: Square::G8,
                 capture: None,
-                to: Square::C6,
+                to: Square::F6,
                 promotion: None,
             },
         ],
@@ -189,6 +189,8 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod american_attack;
+pub use american_attack::AMERICAN_ATTACK;
 pub mod cobra_variation;
 pub use cobra_variation::COBRA_VARIATION;
 pub mod exchange_variation;
