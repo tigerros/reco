@@ -57,13 +57,13 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::sicilian_defense::taimanov_variation::AMERICAN_ATTACK;
-assert_eq!(AMERICAN_ATTACK.original_name(), "Sicilian Defense: Taimanov Variation, American Attack");
+# use reco::book::sicilian_defense::four_knights_variation::AMERICAN_ATTACK;
+assert_eq!(AMERICAN_ATTACK.original_name(), "Sicilian Defense: Four Knights Variation, American Attack");
 ```"#
 )]
 pub static AMERICAN_ATTACK: Variation = Variation {
     name: "American Attack",
-    parent: Some(&super::TAIMANOV_VARIATION),
+    parent: Some(&super::FOUR_KNIGHTS_VARIATION),
     variations: &[],
     lines: &[Line {
         parent: &AMERICAN_ATTACK,
