@@ -22,13 +22,12 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [workspace]
-exclude = ["librarian"]
 resolver = "3"
 members = ["examples/find-opening", "librarian"]
 
 [workspace.dependencies]
 reco = { path = "." }
-shakmaty = { version = "0.28.0", default-features = false }
+shakmaty = { version = "0.29.0", default-features = false }
 
 [features]
 default = ["book", "std"]
@@ -48,9 +47,9 @@ arbitrary = ["dep:arbitrary", "std"]
 proptest = ["dep:proptest", "std", "dep:proptest-derive"]
 
 [dependencies]
-arbitrary = { version = "1.4.1", default-features = false, features = ["derive_arbitrary"], optional = true }
-deranged = { version = "0.4.0", default-features = false }
+arbitrary = { version = "1.4.2", default-features = false, features = ["derive"], optional = true }
+deranged = { version = "0.5.0", default-features = false }
 proptest = { version = "1", default-features = false, features = ["std"], optional = true }
-proptest-derive = { version = "0", default-features = false, optional = true }
+proptest-derive = { version = "0.6.0", default-features = false, optional = true }
 serde = { version = "1.0.197", default-features = false, features = ["derive"], optional = true }
 shakmaty = { workspace = true }

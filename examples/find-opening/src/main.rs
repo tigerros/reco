@@ -3,8 +3,9 @@
 //!
 //! Panics if the latest game is a variant, or otherwise doesn't have an opening attached to it.
 
-use pgn_reader::{RawTag, San, SanPlus, Skip, Visitor};
-use shakmaty::{Chess, Position};
+use pgn_reader::{RawTag, SanPlus, Skip, Visitor};
+use shakmaty::{Chess, Position, san::San};
+use std::ops::ControlFlow;
 
 const USER: &str = "DrNykterstein";
 
@@ -15,23 +16,36 @@ struct SansAndOpening {
 }
 
 impl Visitor for SansAndOpening {
-    type Result = Self;
+    type Tags = ();
+    type Movetext = ();
+    type Output = Self;
 
-    fn tag(&mut self, name: &[u8], value: RawTag<'_>) {
+    fn begin_tags(&mut self) -> ControlFlow<Self> {
+        ControlFlow::Continue(())
+    }
+
+    fn begin_movetext(&mut self, (): ()) -> ControlFlow<Self> {
+        ControlFlow::Continue(())
+    }
+
+    fn tag(&mut self, (): &mut (), name: &[u8], value: RawTag<'_>) -> ControlFlow<Self> {
         if name == b"Opening" {
             self.opening = Some(value.decode_utf8_lossy().to_string());
         }
+
+        ControlFlow::Continue(())
     }
 
-    fn begin_variation(&mut self) -> Skip {
-        Skip(true)
+    fn begin_variation(&mut self, (): &mut ()) -> ControlFlow<Self, Skip> {
+        ControlFlow::Continue(Skip(true))
     }
 
-    fn san(&mut self, san_plus: SanPlus) {
+    fn san(&mut self, (): &mut (), san_plus: SanPlus) -> ControlFlow<Self> {
         self.sans.push(san_plus.san);
+        ControlFlow::Continue(())
     }
 
-    fn end_game(&mut self) -> Self::Result {
+    fn end_game(&mut self, (): ()) -> Self {
         std::mem::take(self)
     }
 }
@@ -45,7 +59,7 @@ fn main() {
         .unwrap()
         .into_body();
 
-    let mut latest_games_reader = pgn_reader::BufferedReader::new(latest_games.as_reader());
+    let mut latest_games_reader = pgn_reader::Reader::new(latest_games.as_reader());
     let SansAndOpening { sans, opening } = latest_games_reader
         .read_game(&mut SansAndOpening::default())
         .unwrap()
