@@ -57,17 +57,17 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::french_defense::winawer_variation::POISONED_PAWN_VARIATION;
-assert_eq!(POISONED_PAWN_VARIATION.original_name(), "French Defense: Winawer Variation, Poisoned Pawn Variation");
+# use reco::book::french_defense::winawer_variation::advance_variation::SMYSLOV_VARIATION;
+assert_eq!(SMYSLOV_VARIATION.original_name(), "French Defense: Winawer Variation, Advance Variation, Smyslov Variation");
 ```"#
 )]
-pub static POISONED_PAWN_VARIATION: Variation = Variation {
-    name: "Poisoned Pawn Variation",
-    parent: Some(&super::WINAWER_VARIATION),
-    variations: &[&MAIN_LINE, &PAOLI_VARIATION],
+pub static SMYSLOV_VARIATION: Variation = Variation {
+    name: "Smyslov Variation",
+    parent: Some(&super::ADVANCE_VARIATION),
+    variations: &[],
     lines: &[
         Line {
-            parent: &POISONED_PAWN_VARIATION,
+            parent: &SMYSLOV_VARIATION,
             code: Code {
                 volume: Volume::C,
                 category: Category(RangedU8::new_static::<1>()),
@@ -123,10 +123,10 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Pawn,
-                    from: Square::C7,
+                    role: Knight,
+                    from: Square::G8,
                     capture: None,
-                    to: Square::C5,
+                    to: Square::E7,
                     promotion: None,
                 },
                 Normal {
@@ -151,129 +151,6 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: Square::G8,
-                    capture: None,
-                    to: Square::E7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Queen,
-                    from: Square::D1,
-                    capture: None,
-                    to: Square::G4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Queen,
-                    from: Square::D8,
-                    capture: None,
-                    to: Square::C7,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: if let Ok(board) = Board::try_from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(63912532293051392),
-                        knight: Bitboard(148618787703226432),
-                        bishop: Bitboard(288230376151711780),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(1125900980584448),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(10950238662700302336),
-                        white: Bitboard(69927822581),
-                    },
-                ) {
-                    board
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 3,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &POISONED_PAWN_VARIATION,
-            code: Code {
-                volume: Volume::C,
-                category: Category(RangedU8::new_static::<1>()),
-            },
-            moves: &[
-                Normal {
-                    role: Pawn,
-                    from: Square::E2,
-                    capture: None,
-                    to: Square::E4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::E7,
-                    capture: None,
-                    to: Square::E6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::D2,
-                    capture: None,
-                    to: Square::D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::D7,
-                    capture: None,
-                    to: Square::D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: Square::B1,
-                    capture: None,
-                    to: Square::C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: Square::F8,
-                    capture: None,
-                    to: Square::B4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::E4,
-                    capture: None,
-                    to: Square::E5,
-                    promotion: None,
-                },
-                Normal {
                     role: Pawn,
                     from: Square::C7,
                     capture: None,
@@ -282,67 +159,25 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
-                    from: Square::A2,
+                    from: Square::A3,
                     capture: None,
-                    to: Square::A3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: Square::B4,
-                    capture: Some(Knight),
-                    to: Square::C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::B2,
-                    capture: Some(Bishop),
-                    to: Square::C3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: Square::G8,
-                    capture: None,
-                    to: Square::E7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Queen,
-                    from: Square::D1,
-                    capture: None,
-                    to: Square::G4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::C5,
-                    capture: Some(Pawn),
-                    to: Square::D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Queen,
-                    from: Square::G4,
-                    capture: Some(Pawn),
-                    to: Square::G7,
+                    to: Square::A4,
                     promotion: None,
                 },
             ],
             setup: Setup {
                 board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
-                        pawn: Bitboard(45898116603700224),
+                        pawn: Bitboard(63912532309763072),
                         knight: Bitboard(148618787703226432),
                         bishop: Bitboard(288230376151711780),
                         rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(594475150812905472),
+                        queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(11507559099541749760),
-                        white: Bitboard(18014467229345013),
+                        black: Bitboard(11525573515096883200),
+                        white: Bitboard(68870792445),
                     },
                 ) {
                     board
@@ -362,7 +197,7 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                     fullmoves
                 } else {
                     #[expect(
@@ -376,7 +211,7 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
             },
         },
         Line {
-            parent: &POISONED_PAWN_VARIATION,
+            parent: &SMYSLOV_VARIATION,
             code: Code {
                 volume: Volume::C,
                 category: Category(RangedU8::new_static::<1>()),
@@ -432,10 +267,10 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Pawn,
-                    from: Square::C7,
+                    role: Knight,
+                    from: Square::G8,
                     capture: None,
-                    to: Square::C5,
+                    to: Square::E7,
                     promotion: None,
                 },
                 Normal {
@@ -460,45 +295,17 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: Square::G8,
+                    role: Pawn,
+                    from: Square::C7,
                     capture: None,
-                    to: Square::E7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Queen,
-                    from: Square::D1,
-                    capture: None,
-                    to: Square::G4,
+                    to: Square::C5,
                     promotion: None,
                 },
                 Normal {
                     role: Pawn,
-                    from: Square::C5,
-                    capture: Some(Pawn),
-                    to: Square::D4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Queen,
-                    from: Square::G4,
-                    capture: Some(Pawn),
-                    to: Square::G7,
-                    promotion: None,
-                },
-                Normal {
-                    role: Rook,
-                    from: Square::H8,
+                    from: Square::A3,
                     capture: None,
-                    to: Square::G8,
-                    promotion: None,
-                },
-                Normal {
-                    role: Queen,
-                    from: Square::G7,
-                    capture: Some(Pawn),
-                    to: Square::H7,
+                    to: Square::A4,
                     promotion: None,
                 },
                 Normal {
@@ -508,20 +315,27 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
                     to: Square::C6,
                     promotion: None,
                 },
+                Normal {
+                    role: Knight,
+                    from: Square::G1,
+                    capture: None,
+                    to: Square::F3,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
-                        pawn: Bitboard(9869319584736256),
-                        knight: Bitboard(4507997673881664),
+                        pawn: Bitboard(63912532309763072),
+                        knight: Bitboard(4507997675978752),
                         bishop: Bitboard(288230376151711780),
-                        rook: Bitboard(4683743612465315969),
-                        queen: Bitboard(612489549322387456),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(6715733494066053120),
-                        white: Bitboard(36028865738826997),
+                        black: Bitboard(11381462725067538432),
+                        white: Bitboard(68872889533),
                     },
                 ) {
                     board
@@ -536,12 +350,12 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
                 },
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: White,
-                castling_rights: Bitboard(72057594037928065),
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(10) {
+                halfmoves: 2,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                     fullmoves
                 } else {
                     #[expect(
@@ -556,7 +370,3 @@ pub static POISONED_PAWN_VARIATION: Variation = Variation {
         },
     ],
 };
-pub mod main_line;
-pub use main_line::MAIN_LINE;
-pub mod paoli_variation;
-pub use paoli_variation::PAOLI_VARIATION;
