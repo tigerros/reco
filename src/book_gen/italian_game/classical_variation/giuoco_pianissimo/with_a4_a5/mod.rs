@@ -57,16 +57,16 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::italian_game::classical_variation::giuoco_pianissimo::WITH_D6;
-assert_eq!(WITH_D6.original_name(), "Italian Game: Classical Variation, Giuoco Pianissimo, with d6");
+# use reco::book::italian_game::classical_variation::giuoco_pianissimo::WITH_A4_A5;
+assert_eq!(WITH_A4_A5.original_name(), "Italian Game: Classical Variation, Giuoco Pianissimo, with a4 a5");
 ```"#
 )]
-pub static WITH_D6: Variation = Variation {
-    name: "with d6",
+pub static WITH_A4_A5: Variation = Variation {
+    name: "with a4 a5",
     parent: Some(&super::GIUOCO_PIANISSIMO),
     variations: &[],
     lines: &[Line {
-        parent: &WITH_D6,
+        parent: &WITH_A4_A5,
         code: Code {
             volume: Volume::C,
             category: Category(RangedU8::new_static::<5>()),
@@ -142,20 +142,42 @@ pub static WITH_D6: Variation = Variation {
                 to: Square::D6,
                 promotion: None,
             },
+            Castle {
+                king: Square::E1,
+                rook: Square::H1,
+            },
+            Castle {
+                king: Square::E8,
+                rook: Square::H8,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::A2,
+                capture: None,
+                to: Square::A4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::A7,
+                capture: None,
+                to: Square::A5,
+                promotion: None,
+            },
         ],
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65029584701940480),
+                    pawn: Bitboard(64748114036974080),
                     knight: Bitboard(39582420697090),
                     bishop: Bitboard(288230393398689796),
-                    rook: Bitboard(9295429630892703873),
+                    rook: Bitboard(2377900603251621921),
                     queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+                    king: Bitboard(4611686018427387968),
                 },
                 ByColor {
-                    black: Bitboard(11378111447985815552),
-                    white: Bitboard(338486175),
+                    black: Bitboard(7919065463483531264),
+                    white: Bitboard(355263087),
                 },
             ) {
                 board
@@ -171,11 +193,11 @@ pub static WITH_D6: Variation = Variation {
             promoted: Bitboard(0),
             pockets: None,
             turn: White,
-            castling_rights: Bitboard(9295429630892703873),
+            castling_rights: Bitboard(0),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                 fullmoves
             } else {
                 #[expect(
