@@ -86,7 +86,108 @@ pub static FIANCHETTO_VARIATION: Variation = Variation {
         &YUGOSLAV_SYSTEM,
         &YUGOSLAV_VARIATION,
     ],
-    lines: &[],
+    lines: &[Line {
+        parent: &FIANCHETTO_VARIATION,
+        code: Code {
+            volume: Volume::E,
+            category: Category(RangedU8::new_static::<6>()),
+        },
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: Square::D2,
+                capture: None,
+                to: Square::D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: Square::G8,
+                capture: None,
+                to: Square::F6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::C2,
+                capture: None,
+                to: Square::C4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::G7,
+                capture: None,
+                to: Square::G6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: Square::G1,
+                capture: None,
+                to: Square::F3,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: Square::F8,
+                capture: None,
+                to: Square::G7,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::G2,
+                capture: None,
+                to: Square::G3,
+                promotion: None,
+            },
+        ],
+        setup: Setup {
+            board: if let Ok(board) = Board::try_from_bitboards(
+                ByRole {
+                    pawn: Bitboard(53832089501479680),
+                    knight: Bitboard(144150372450041858),
+                    bishop: Bitboard(306244774661193764),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(11529039124208025600),
+                    white: Bitboard(207664063),
+                },
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: Black,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                fullmoves
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
+        },
+    }],
 };
 pub mod benjamin_defense;
 pub use benjamin_defense::BENJAMIN_DEFENSE;
