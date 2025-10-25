@@ -57,22 +57,36 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::reti_opening::anglo_slav_variation::BOGOLJUBOW_VARIATION;
-assert_eq!(BOGOLJUBOW_VARIATION.original_name(), "Réti Opening: Anglo-Slav Variation, Bogoljubow Variation");
+# use reco::book::reti_opening::anglo_slav_variation::WITH_G3;
+assert_eq!(WITH_G3.original_name(), "Réti Opening: Anglo-Slav Variation, with g3");
 ```"#
 )]
-pub static BOGOLJUBOW_VARIATION: Variation = Variation {
-    name: "Bogoljubow Variation",
+pub static WITH_G3: Variation = Variation {
+    name: "with g3",
     parent: Some(&super::ANGLO_SLAV_VARIATION),
-    variations: &[&STONEWALL_LINE],
+    variations: &[],
     lines: &[
         Line {
-            parent: &BOGOLJUBOW_VARIATION,
+            parent: &WITH_G3,
             code: Code {
                 volume: Volume::A,
                 category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
+                Normal {
+                    role: Pawn,
+                    from: Square::C2,
+                    capture: None,
+                    to: Square::C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::C7,
+                    capture: None,
+                    to: Square::C6,
+                    promotion: None,
+                },
                 Normal {
                     role: Knight,
                     from: Square::G1,
@@ -89,16 +103,16 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
-                    from: Square::C2,
+                    from: Square::G2,
                     capture: None,
-                    to: Square::C4,
+                    to: Square::G3,
                     promotion: None,
                 },
                 Normal {
-                    role: Pawn,
-                    from: Square::C7,
+                    role: Knight,
+                    from: Square::G8,
                     capture: None,
-                    to: Square::C6,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
@@ -108,20 +122,27 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                     to: Square::B3,
                     promotion: None,
                 },
+                Normal {
+                    role: Pawn,
+                    from: Square::G7,
+                    capture: None,
+                    to: Square::G6,
+                    promotion: None,
+                },
             ],
             setup: Setup {
                 board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
-                        pawn: Bitboard(68402851814242560),
-                        knight: Bitboard(4755801206505340930),
+                        pawn: Bitboard(50458822053116160),
+                        knight: Bitboard(144150372450041858),
                         bishop: Bitboard(2594073385365405732),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18443089331418562560),
-                        white: Bitboard(69401023),
+                        black: Bitboard(13813494467597959168),
+                        white: Bitboard(73578943),
                     },
                 ) {
                     board
@@ -136,12 +157,12 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                 },
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
                 halfmoves: 0,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                     fullmoves
                 } else {
                     #[expect(
@@ -155,12 +176,26 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
             },
         },
         Line {
-            parent: &BOGOLJUBOW_VARIATION,
+            parent: &WITH_G3,
             code: Code {
                 volume: Volume::A,
                 category: Category(RangedU8::new_static::<1>()),
             },
             moves: &[
+                Normal {
+                    role: Pawn,
+                    from: Square::C2,
+                    capture: None,
+                    to: Square::C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::C7,
+                    capture: None,
+                    to: Square::C6,
+                    promotion: None,
+                },
                 Normal {
                     role: Knight,
                     from: Square::G1,
@@ -177,243 +212,39 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
-                    from: Square::C2,
+                    from: Square::G2,
                     capture: None,
-                    to: Square::C4,
+                    to: Square::G3,
                     promotion: None,
                 },
-                Normal {
-                    role: Pawn,
-                    from: Square::C7,
-                    capture: None,
-                    to: Square::C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::B2,
-                    capture: None,
-                    to: Square::B3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: Square::C8,
-                    capture: None,
-                    to: Square::G4,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: if let Ok(board) = Board::try_from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(68402851814242560),
-                        knight: Bitboard(4755801206505340930),
-                        bishop: Bitboard(2305843010287435812),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18154858956340592640),
-                        white: Bitboard(69401023),
-                    },
-                ) {
-                    board
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &BOGOLJUBOW_VARIATION,
-            code: Code {
-                volume: Volume::A,
-                category: Category(RangedU8::new_static::<1>()),
-            },
-            moves: &[
                 Normal {
                     role: Knight,
-                    from: Square::G1,
+                    from: Square::G8,
                     capture: None,
-                    to: Square::F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::D7,
-                    capture: None,
-                    to: Square::D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::C2,
-                    capture: None,
-                    to: Square::C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::C7,
-                    capture: None,
-                    to: Square::C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::B2,
-                    capture: None,
-                    to: Square::B3,
+                    to: Square::F6,
                     promotion: None,
                 },
                 Normal {
                     role: Bishop,
-                    from: Square::C8,
+                    from: Square::F1,
                     capture: None,
-                    to: Square::F5,
+                    to: Square::G2,
                     promotion: None,
                 },
             ],
             setup: Setup {
                 board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
-                        pawn: Bitboard(68402851814242560),
-                        knight: Bitboard(4755801206505340930),
-                        bishop: Bitboard(2305843146652647460),
+                        pawn: Bitboard(68402851818289920),
+                        knight: Bitboard(144150372450041858),
+                        bishop: Bitboard(2594073385365422084),
                         rook: Bitboard(9295429630892703873),
                         queen: Bitboard(576460752303423496),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(18154859092705804288),
-                        white: Bitboard(69401023),
-                    },
-                ) {
-                    board
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-                promoted: Bitboard(0),
-                pockets: None,
-                turn: White,
-                castling_rights: Bitboard(9295429630892703873),
-                ep_square: None,
-                remaining_checks: None,
-                halfmoves: 1,
-                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
-                    fullmoves
-                } else {
-                    #[expect(
-                        clippy::unreachable,
-                        reason = "intentional. It's in a const expression"
-                    )]
-                    {
-                        unreachable!()
-                    }
-                },
-            },
-        },
-        Line {
-            parent: &BOGOLJUBOW_VARIATION,
-            code: Code {
-                volume: Volume::A,
-                category: Category(RangedU8::new_static::<1>()),
-            },
-            moves: &[
-                Normal {
-                    role: Knight,
-                    from: Square::G1,
-                    capture: None,
-                    to: Square::F3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::D7,
-                    capture: None,
-                    to: Square::D5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::C2,
-                    capture: None,
-                    to: Square::C4,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::C7,
-                    capture: None,
-                    to: Square::C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Pawn,
-                    from: Square::B2,
-                    capture: None,
-                    to: Square::B3,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: Square::C8,
-                    capture: None,
-                    to: Square::F5,
-                    promotion: None,
-                },
-                Normal {
-                    role: Bishop,
-                    from: Square::C1,
-                    capture: None,
-                    to: Square::B2,
-                    promotion: None,
-                },
-            ],
-            setup: Setup {
-                board: if let Ok(board) = Board::try_from_bitboards(
-                    ByRole {
-                        pawn: Bitboard(68402851814242560),
-                        knight: Bitboard(4755801206505340930),
-                        bishop: Bitboard(2305843146652647968),
-                        rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
-                        king: Bitboard(1152921504606846992),
-                    },
-                    ByColor {
-                        black: Bitboard(18154859092705804288),
-                        white: Bitboard(69401531),
+                        black: Bitboard(13831438497363263488),
+                        white: Bitboard(73464735),
                     },
                 ) {
                     board
@@ -446,7 +277,266 @@ pub static BOGOLJUBOW_VARIATION: Variation = Variation {
                 },
             },
         },
+        Line {
+            parent: &WITH_G3,
+            code: Code {
+                volume: Volume::A,
+                category: Category(RangedU8::new_static::<1>()),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: Square::C2,
+                    capture: None,
+                    to: Square::C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::C7,
+                    capture: None,
+                    to: Square::C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::G1,
+                    capture: None,
+                    to: Square::F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D7,
+                    capture: None,
+                    to: Square::D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::G2,
+                    capture: None,
+                    to: Square::G3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::G8,
+                    capture: None,
+                    to: Square::F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::F1,
+                    capture: None,
+                    to: Square::G2,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::C8,
+                    capture: None,
+                    to: Square::F5,
+                    promotion: None,
+                },
+                Castle {
+                    king: Square::E1,
+                    rook: Square::H1,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::E7,
+                    capture: None,
+                    to: Square::E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D2,
+                    capture: None,
+                    to: Square::D3,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: if let Ok(board) = Board::try_from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(63916844377486080),
+                        knight: Bitboard(144150372450041858),
+                        bishop: Bitboard(2305843146652663812),
+                        rook: Bitboard(9295429630892703777),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606847040),
+                    },
+                    ByColor {
+                        black: Bitboard(13538722251209179136),
+                        white: Bitboard(73986927),
+                    },
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703744),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &WITH_G3,
+            code: Code {
+                volume: Volume::A,
+                category: Category(RangedU8::new_static::<1>()),
+            },
+            moves: &[
+                Normal {
+                    role: Knight,
+                    from: Square::G1,
+                    capture: None,
+                    to: Square::F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::G8,
+                    capture: None,
+                    to: Square::F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::G2,
+                    capture: None,
+                    to: Square::G3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D7,
+                    capture: None,
+                    to: Square::D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::F1,
+                    capture: None,
+                    to: Square::G2,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::C7,
+                    capture: None,
+                    to: Square::C6,
+                    promotion: None,
+                },
+                Castle {
+                    king: Square::E1,
+                    rook: Square::H1,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::C8,
+                    capture: None,
+                    to: Square::F5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D2,
+                    capture: None,
+                    to: Square::D3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::H7,
+                    capture: None,
+                    to: Square::H6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::C2,
+                    capture: None,
+                    to: Square::C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::E7,
+                    capture: None,
+                    to: Square::E6,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: if let Ok(board) = Board::try_from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(28028784846877440),
+                        knight: Bitboard(144150372450041858),
+                        bishop: Bitboard(2305843146652663812),
+                        rook: Bitboard(9295429630892703777),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606847040),
+                    },
+                    ByColor {
+                        black: Bitboard(13502834191678570496),
+                        white: Bitboard(73986927),
+                    },
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703744),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
     ],
 };
-pub mod stonewall_line;
-pub use stonewall_line::STONEWALL_LINE;
