@@ -57,26 +57,26 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::indian_defense::kings_indian_variation::FIANCHETTO_VARIATION;
-assert_eq!(FIANCHETTO_VARIATION.original_name(), "Indian Defense: King's Indian Variation, Fianchetto Variation");
+# use reco::book::reti_opening::anglo_slav_variation::WITH_DXC4;
+assert_eq!(WITH_DXC4.original_name(), "Réti Opening: Anglo-Slav Variation, with dxc4");
 ```"#
 )]
-pub static FIANCHETTO_VARIATION: Variation = Variation {
-    name: "Fianchetto Variation",
-    parent: Some(&super::KINGS_INDIAN_VARIATION),
+pub static WITH_DXC4: Variation = Variation {
+    name: "with dxc4",
+    parent: Some(&super::ANGLO_SLAV_VARIATION),
     variations: &[],
     lines: &[Line {
-        parent: &FIANCHETTO_VARIATION,
+        parent: &WITH_DXC4,
         code: Code {
-            volume: Volume::E,
-            category: Category(RangedU8::new_static::<6>()),
+            volume: Volume::A,
+            category: Category(RangedU8::new_static::<1>()),
         },
         moves: &[
             Normal {
                 role: Pawn,
-                from: Square::D2,
+                from: Square::C2,
                 capture: None,
-                to: Square::D4,
+                to: Square::C4,
                 promotion: None,
             },
             Normal {
@@ -88,53 +88,60 @@ pub static FIANCHETTO_VARIATION: Variation = Variation {
             },
             Normal {
                 role: Pawn,
-                from: Square::C2,
-                capture: None,
-                to: Square::C4,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: Square::G7,
-                capture: None,
-                to: Square::G6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
                 from: Square::G2,
                 capture: None,
                 to: Square::G3,
                 promotion: None,
             },
             Normal {
-                role: Bishop,
-                from: Square::F8,
+                role: Pawn,
+                from: Square::C7,
                 capture: None,
-                to: Square::G7,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
-                role: Bishop,
-                from: Square::F1,
+                role: Knight,
+                from: Square::G1,
                 capture: None,
-                to: Square::G2,
+                to: Square::F3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::D7,
+                capture: None,
+                to: Square::D5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::B2,
+                capture: None,
+                to: Square::B3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::D5,
+                capture: Some(Pawn),
+                to: Square::C4,
                 promotion: None,
             },
         ],
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(53832089501479680),
-                    knight: Bitboard(144150372447944770),
-                    bishop: Bitboard(306244774661210116),
+                    pawn: Bitboard(68402817458682112),
+                    knight: Bitboard(144150372450041858),
+                    bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11529039124208025600),
-                    white: Bitboard(205583327),
+                    black: Bitboard(13831438463070633984),
+                    white: Bitboard(6470079),
                 },
             ) {
                 board
@@ -149,12 +156,12 @@ pub static FIANCHETTO_VARIATION: Variation = Variation {
             },
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 #[expect(
