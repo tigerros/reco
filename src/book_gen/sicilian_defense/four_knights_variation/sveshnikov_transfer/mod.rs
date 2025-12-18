@@ -57,19 +57,19 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::ruy_lopez::berlin_defense::ANDERSSEN_VARIATION;
-assert_eq!(ANDERSSEN_VARIATION.original_name(), "Ruy Lopez: Berlin Defense, Anderssen Variation");
+# use reco::book::sicilian_defense::four_knights_variation::SVESHNIKOV_TRANSFER;
+assert_eq!(SVESHNIKOV_TRANSFER.original_name(), "Sicilian Defense: Four Knights Variation, Sveshnikov Transfer");
 ```"#
 )]
-pub static ANDERSSEN_VARIATION: Variation = Variation {
-    name: "Anderssen Variation",
-    parent: Some(&super::BERLIN_DEFENSE),
+pub static SVESHNIKOV_TRANSFER: Variation = Variation {
+    name: "Sveshnikov Transfer",
+    parent: Some(&super::FOUR_KNIGHTS_VARIATION),
     variations: &[],
     lines: &[Line {
-        parent: &ANDERSSEN_VARIATION,
+        parent: &SVESHNIKOV_TRANSFER,
         code: Code {
-            volume: Volume::C,
-            category: Category(RangedU8::new_static::<6>()),
+            volume: Volume::B,
+            category: Category(RangedU8::new_static::<4>()),
         },
         moves: &[
             Normal {
@@ -81,9 +81,9 @@ pub static ANDERSSEN_VARIATION: Variation = Variation {
             },
             Normal {
                 role: Pawn,
-                from: Square::E7,
+                from: Square::C7,
                 capture: None,
-                to: Square::E5,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
@@ -94,6 +94,34 @@ pub static ANDERSSEN_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
+                role: Pawn,
+                from: Square::E7,
+                capture: None,
+                to: Square::E6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::D2,
+                capture: None,
+                to: Square::D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::C5,
+                capture: Some(Pawn),
+                to: Square::D4,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: Square::F3,
+                capture: Some(Pawn),
+                to: Square::D4,
+                promotion: None,
+            },
+            Normal {
                 role: Knight,
                 from: Square::B8,
                 capture: None,
@@ -101,10 +129,10 @@ pub static ANDERSSEN_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Bishop,
-                from: Square::F1,
+                role: Knight,
+                from: Square::B1,
                 capture: None,
-                to: Square::B5,
+                to: Square::C3,
                 promotion: None,
             },
             Normal {
@@ -115,10 +143,10 @@ pub static ANDERSSEN_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: Square::D2,
+                role: Knight,
+                from: Square::D4,
                 capture: None,
-                to: Square::D3,
+                to: Square::B5,
                 promotion: None,
             },
             Normal {
@@ -128,27 +156,20 @@ pub static ANDERSSEN_VARIATION: Variation = Variation {
                 to: Square::D6,
                 promotion: None,
             },
-            Normal {
-                role: Bishop,
-                from: Square::B5,
-                capture: Some(Knight),
-                to: Square::C6,
-                promotion: None,
-            },
         ],
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65029584701679360),
-                    knight: Bitboard(35184374185986),
-                    bishop: Bitboard(2594077783411916804),
+                    pawn: Bitboard(63921208260880128),
+                    knight: Bitboard(39591008796672),
+                    bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13683950041973129216),
-                    white: Bitboard(4398317627295),
+                    black: Bitboard(13682846063579365376),
+                    white: Bitboard(8858691517),
                 },
             ) {
                 board
@@ -163,12 +184,12 @@ pub static ANDERSSEN_VARIATION: Variation = Variation {
             },
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 #[expect(
