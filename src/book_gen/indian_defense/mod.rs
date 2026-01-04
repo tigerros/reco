@@ -65,6 +65,7 @@ pub static INDIAN_DEFENSE: Variation = Variation {
     name: "Indian Defense",
     parent: None,
     variations: &[
+        &ACCELERATED_LONDON_SYSTEM,
         &ANTI_GRUNFELD,
         &ANTI_NIMZO_INDIAN,
         &BUDAPEST_DEFENSE,
@@ -255,6 +256,8 @@ pub static INDIAN_DEFENSE: Variation = Variation {
         },
     ],
 };
+pub mod accelerated_london_system;
+pub use accelerated_london_system::ACCELERATED_LONDON_SYSTEM;
 pub mod anti_grunfeld;
 pub use anti_grunfeld::ANTI_GRUNFELD;
 pub mod anti_nimzo_indian;
