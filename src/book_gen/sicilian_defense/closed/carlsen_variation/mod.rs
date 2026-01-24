@@ -57,19 +57,19 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::ruy_lopez::berlin_defense::KAUFMANN_VARIATION;
-assert_eq!(KAUFMANN_VARIATION.original_name(), "Ruy Lopez: Berlin Defense, Kaufmann Variation");
+# use reco::book::sicilian_defense::closed::CARLSEN_VARIATION;
+assert_eq!(CARLSEN_VARIATION.original_name(), "Sicilian Defense: Closed, Carlsen Variation");
 ```"#
 )]
-pub static KAUFMANN_VARIATION: Variation = Variation {
-    name: "Kaufmann Variation",
-    parent: Some(&super::BERLIN_DEFENSE),
+pub static CARLSEN_VARIATION: Variation = Variation {
+    name: "Carlsen Variation",
+    parent: Some(&super::CLOSED),
     variations: &[],
     lines: &[Line {
-        parent: &KAUFMANN_VARIATION,
+        parent: &CARLSEN_VARIATION,
         code: Code {
-            volume: Volume::C,
-            category: Category(RangedU8::new_static::<6>()),
+            volume: Volume::B,
+            category: Category(RangedU8::new_static::<2>()),
         },
         moves: &[
             Normal {
@@ -81,16 +81,44 @@ pub static KAUFMANN_VARIATION: Variation = Variation {
             },
             Normal {
                 role: Pawn,
-                from: Square::E7,
+                from: Square::C7,
                 capture: None,
-                to: Square::E5,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
                 role: Knight,
-                from: Square::G1,
+                from: Square::B1,
                 capture: None,
-                to: Square::F3,
+                to: Square::C3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::D7,
+                capture: None,
+                to: Square::D6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::D2,
+                capture: None,
+                to: Square::D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::C5,
+                capture: Some(Pawn),
+                to: Square::D4,
+                promotion: None,
+            },
+            Normal {
+                role: Queen,
+                from: Square::D1,
+                capture: Some(Pawn),
+                to: Square::D4,
                 promotion: None,
             },
             Normal {
@@ -101,54 +129,26 @@ pub static KAUFMANN_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Bishop,
-                from: Square::F1,
+                role: Queen,
+                from: Square::D4,
                 capture: None,
-                to: Square::B5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: Square::G8,
-                capture: None,
-                to: Square::F6,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: Square::D2,
-                capture: None,
-                to: Square::D3,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: Square::F8,
-                capture: None,
-                to: Square::C5,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: Square::C1,
-                capture: None,
-                to: Square::E3,
+                to: Square::D2,
                 promotion: None,
             },
         ],
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(67272588422342400),
-                    knight: Bitboard(39582420697090),
-                    bishop: Bitboard(288230401922564096),
+                    pawn: Bitboard(68407215702206208),
+                    knight: Bitboard(4611690416474161216),
+                    bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
+                    queen: Bitboard(576460752303425536),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(11380354451706478592),
-                    white: Bitboard(8862099355),
+                    black: Bitboard(18298982905075990528),
+                    white: Bitboard(268759029),
                 },
             ) {
                 board
