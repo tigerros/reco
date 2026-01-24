@@ -67,8 +67,10 @@ pub static YUGOSLAV_ATTACK: Variation = Variation {
     variations: &[
         &BELEZKY_LINE,
         &BYRNE_VARIATION,
+        &CHINESE_DRAGON,
         &CZERNIAK_VARIATION,
         &EARLY_DEVIATIONS,
+        &HUNGARIAN_DRAGON,
         &MAIN_LINE,
         &MODERN_LINE,
         &OLD_LINE,
@@ -957,10 +959,14 @@ pub mod belezky_line;
 pub use belezky_line::BELEZKY_LINE;
 pub mod byrne_variation;
 pub use byrne_variation::BYRNE_VARIATION;
+pub mod chinese_dragon;
+pub use chinese_dragon::CHINESE_DRAGON;
 pub mod czerniak_variation;
 pub use czerniak_variation::CZERNIAK_VARIATION;
 pub mod early_deviations;
 pub use early_deviations::EARLY_DEVIATIONS;
+pub mod hungarian_dragon;
+pub use hungarian_dragon::HUNGARIAN_DRAGON;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod modern_line;

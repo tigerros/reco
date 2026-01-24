@@ -57,16 +57,16 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::ruy_lopez::berlin_defense::MORTIMER_TRAP;
-assert_eq!(MORTIMER_TRAP.original_name(), "Ruy Lopez: Berlin Defense, Mortimer Trap");
+# use reco::book::ruy_lopez::berlin_defense::anti_berlin_variation::ANDERSSEN_VARIATION;
+assert_eq!(ANDERSSEN_VARIATION.original_name(), "Ruy Lopez: Berlin Defense, Anti-Berlin Variation, Anderssen Variation");
 ```"#
 )]
-pub static MORTIMER_TRAP: Variation = Variation {
-    name: "Mortimer Trap",
-    parent: Some(&super::BERLIN_DEFENSE),
+pub static ANDERSSEN_VARIATION: Variation = Variation {
+    name: "Anderssen Variation",
+    parent: Some(&super::ANTI_BERLIN_VARIATION),
     variations: &[],
     lines: &[Line {
-        parent: &MORTIMER_TRAP,
+        parent: &ANDERSSEN_VARIATION,
         code: Code {
             volume: Volume::C,
             category: Category(RangedU8::new_static::<6>()),
@@ -122,23 +122,16 @@ pub static MORTIMER_TRAP: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Knight,
-                from: Square::C6,
-                capture: None,
-                to: Square::E7,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: Square::F3,
-                capture: Some(Pawn),
-                to: Square::E5,
-                promotion: None,
-            },
-            Normal {
                 role: Pawn,
-                from: Square::C7,
+                from: Square::D7,
                 capture: None,
+                to: Square::D6,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: Square::B5,
+                capture: Some(Knight),
                 to: Square::C6,
                 promotion: None,
             },
@@ -146,16 +139,16 @@ pub static MORTIMER_TRAP: Variation = Variation {
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(66151017842534144),
-                    knight: Bitboard(4538852718936066),
-                    bishop: Bitboard(2594073393955340292),
+                    pawn: Bitboard(65029584701679360),
+                    knight: Bitboard(35184374185986),
+                    bishop: Bitboard(2594077783411916804),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13689575074741354496),
-                    white: Bitboard(77578430367),
+                    black: Bitboard(13683950041973129216),
+                    white: Bitboard(4398317627295),
                 },
             ) {
                 board
@@ -170,12 +163,12 @@ pub static MORTIMER_TRAP: Variation = Variation {
             },
             promoted: Bitboard(0),
             pockets: None,
-            turn: White,
+            turn: Black,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 #[expect(

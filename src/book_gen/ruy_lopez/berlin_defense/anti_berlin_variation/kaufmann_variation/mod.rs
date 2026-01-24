@@ -57,16 +57,16 @@ use shakmaty::{ByColor, ByRole, Setup};
 #[cfg_attr(
     feature = "alloc",
     doc = r#"```rust
-# use reco::book::ruy_lopez::berlin_defense::ANDERSSEN_VARIATION;
-assert_eq!(ANDERSSEN_VARIATION.original_name(), "Ruy Lopez: Berlin Defense, Anderssen Variation");
+# use reco::book::ruy_lopez::berlin_defense::anti_berlin_variation::KAUFMANN_VARIATION;
+assert_eq!(KAUFMANN_VARIATION.original_name(), "Ruy Lopez: Berlin Defense, Anti-Berlin Variation, Kaufmann Variation");
 ```"#
 )]
-pub static ANDERSSEN_VARIATION: Variation = Variation {
-    name: "Anderssen Variation",
-    parent: Some(&super::BERLIN_DEFENSE),
+pub static KAUFMANN_VARIATION: Variation = Variation {
+    name: "Kaufmann Variation",
+    parent: Some(&super::ANTI_BERLIN_VARIATION),
     variations: &[],
     lines: &[Line {
-        parent: &ANDERSSEN_VARIATION,
+        parent: &KAUFMANN_VARIATION,
         code: Code {
             volume: Volume::C,
             category: Category(RangedU8::new_static::<6>()),
@@ -122,33 +122,33 @@ pub static ANDERSSEN_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: Square::D7,
+                role: Bishop,
+                from: Square::F8,
                 capture: None,
-                to: Square::D6,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
                 role: Bishop,
-                from: Square::B5,
-                capture: Some(Knight),
-                to: Square::C6,
+                from: Square::C1,
+                capture: None,
+                to: Square::E3,
                 promotion: None,
             },
         ],
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(65029584701679360),
-                    knight: Bitboard(35184374185986),
-                    bishop: Bitboard(2594077783411916804),
+                    pawn: Bitboard(67272588422342400),
+                    knight: Bitboard(39582420697090),
+                    bishop: Bitboard(288230401922564096),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13683950041973129216),
-                    white: Bitboard(4398317627295),
+                    black: Bitboard(11380354451706478592),
+                    white: Bitboard(8862099355),
                 },
             ) {
                 board
@@ -167,7 +167,7 @@ pub static ANDERSSEN_VARIATION: Variation = Variation {
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
+            halfmoves: 2,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
