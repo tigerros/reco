@@ -64,7 +64,7 @@ assert_eq!(SAMISCH_GAMBIT.original_name(), "King's Indian Defense: Sämisch Vari
 pub static SAMISCH_GAMBIT: Variation = Variation {
     name: "Sämisch Gambit",
     parent: Some(&super::SAMISCH_VARIATION),
-    variations: &[],
+    variations: &[&SAMISCH_GAMBIT_ACCEPTED],
     lines: &[Line {
         parent: &SAMISCH_GAMBIT,
         code: Code {
@@ -200,3 +200,5 @@ pub static SAMISCH_GAMBIT: Variation = Variation {
         },
     }],
 };
+pub mod samisch_gambit_accepted;
+pub use samisch_gambit_accepted::SAMISCH_GAMBIT_ACCEPTED;
