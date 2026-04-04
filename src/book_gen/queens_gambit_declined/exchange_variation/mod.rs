@@ -65,6 +65,7 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
     name: "Exchange Variation",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
+        &CARLSEN_VARIATION,
         &CHAMELEON_VARIATION,
         &POSITIONAL_VARIATION,
         &RESHEVSKY_VARIATION,
@@ -173,6 +174,8 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod carlsen_variation;
+pub use carlsen_variation::CARLSEN_VARIATION;
 pub mod chameleon_variation;
 pub use chameleon_variation::CHAMELEON_VARIATION;
 pub mod positional_variation;
