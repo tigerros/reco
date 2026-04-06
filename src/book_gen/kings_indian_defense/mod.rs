@@ -70,6 +70,7 @@ pub static KINGS_INDIAN_DEFENSE: Variation = Variation {
         &EXCHANGE_VARIATION,
         &FIANCHETTO_VARIATION,
         &FOUR_PAWNS_ATTACK,
+        &KARPOV_SYSTEM,
         &KAZAKH_VARIATION,
         &KRAMER_VARIATION,
         &LARSEN_VARIATION,
@@ -186,6 +187,8 @@ pub mod fianchetto_variation;
 pub use fianchetto_variation::FIANCHETTO_VARIATION;
 pub mod four_pawns_attack;
 pub use four_pawns_attack::FOUR_PAWNS_ATTACK;
+pub mod karpov_system;
+pub use karpov_system::KARPOV_SYSTEM;
 pub mod kazakh_variation;
 pub use kazakh_variation::KAZAKH_VARIATION;
 pub mod kramer_variation;
