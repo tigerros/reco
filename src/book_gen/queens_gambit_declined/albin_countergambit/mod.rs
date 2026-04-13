@@ -72,6 +72,7 @@ pub static ALBIN_COUNTERGAMBIT: Variation = Variation {
         &LASKER_TRAP,
         &MODERN_LINE,
         &NORMAL_LINE,
+        &SPASSKY_VARIATION,
         &TARTAKOWER_DEFENSE,
     ],
     lines: &[Line {
@@ -170,5 +171,7 @@ pub mod modern_line;
 pub use modern_line::MODERN_LINE;
 pub mod normal_line;
 pub use normal_line::NORMAL_LINE;
+pub mod spassky_variation;
+pub use spassky_variation::SPASSKY_VARIATION;
 pub mod tartakower_defense;
 pub use tartakower_defense::TARTAKOWER_DEFENSE;
