@@ -76,6 +76,7 @@ pub static CARO_KANN_DEFENSE: Variation = Variation {
         &CAMPOMANES_ATTACK,
         &CLASSICAL_VARIATION,
         &DE_BRUYCKER_DEFENSE,
+        &DINIC_GAMBIT,
         &EDINBURGH_VARIATION,
         &ENDGAME_OFFER,
         &ENDGAME_VARIATION,
@@ -695,6 +696,8 @@ pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
 pub mod de_bruycker_defense;
 pub use de_bruycker_defense::DE_BRUYCKER_DEFENSE;
+pub mod dinic_gambit;
+pub use dinic_gambit::DINIC_GAMBIT;
 pub mod edinburgh_variation;
 pub use edinburgh_variation::EDINBURGH_VARIATION;
 pub mod endgame_offer;
