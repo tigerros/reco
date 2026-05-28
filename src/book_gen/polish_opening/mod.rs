@@ -86,6 +86,7 @@ pub static POLISH_OPENING: Variation = Variation {
         &TARTAKOWER_GAMBIT,
         &WOLFERTS_GAMBIT,
         &ZUKERTORT_SYSTEM,
+        &WITH_D5,
     ],
     lines: &[Line {
         parent: &POLISH_OPENING,
@@ -188,3 +189,5 @@ pub mod wolferts_gambit;
 pub use wolferts_gambit::WOLFERTS_GAMBIT;
 pub mod zukertort_system;
 pub use zukertort_system::ZUKERTORT_SYSTEM;
+pub mod with_d5;
+pub use with_d5::WITH_D5;
