@@ -65,6 +65,7 @@ pub static SEMI_TARRASCH_DEFENSE: Variation = Variation {
     name: "Semi-Tarrasch Defense",
     parent: Some(&super::QUEENS_GAMBIT_DECLINED),
     variations: &[
+        &ENDGAME_VARIATION,
         &EXCHANGE_VARIATION,
         &KMOCH_VARIATION,
         &KRAUSE_VARIATION,
@@ -425,6 +426,8 @@ pub static SEMI_TARRASCH_DEFENSE: Variation = Variation {
         },
     ],
 };
+pub mod endgame_variation;
+pub use endgame_variation::ENDGAME_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
 pub mod kmoch_variation;
