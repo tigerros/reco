@@ -76,8 +76,8 @@ pub static SAMISCH_VARIATION: Variation = Variation {
         &PANNO_MAIN_LINE,
         &RUBAN_VARIATION,
         &SAMISCH_GAMBIT,
+        &SAMISCH_GAMBIT_ACCEPTED,
         &YATES_DEFENSE,
-        &WITH_BG5,
     ],
     lines: &[
         Line {
@@ -368,7 +368,7 @@ pub mod ruban_variation;
 pub use ruban_variation::RUBAN_VARIATION;
 pub mod samisch_gambit;
 pub use samisch_gambit::SAMISCH_GAMBIT;
+pub mod samisch_gambit_accepted;
+pub use samisch_gambit_accepted::SAMISCH_GAMBIT_ACCEPTED;
 pub mod yates_defense;
 pub use yates_defense::YATES_DEFENSE;
-pub mod with_bg5;
-pub use with_bg5::WITH_BG5;
