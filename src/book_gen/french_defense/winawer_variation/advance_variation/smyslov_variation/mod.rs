@@ -309,17 +309,10 @@ pub static SMYSLOV_VARIATION: Variation = Variation {
                     promotion: None,
                 },
                 Normal {
-                    role: Knight,
-                    from: Square::B8,
+                    role: Queen,
+                    from: Square::D8,
                     capture: None,
-                    to: Square::C6,
-                    promotion: None,
-                },
-                Normal {
-                    role: Knight,
-                    from: Square::G1,
-                    capture: None,
-                    to: Square::F3,
+                    to: Square::C7,
                     promotion: None,
                 },
             ],
@@ -327,15 +320,15 @@ pub static SMYSLOV_VARIATION: Variation = Variation {
                 board: if let Ok(board) = Board::try_from_bitboards(
                     ByRole {
                         pawn: Bitboard(63912532309763072),
-                        knight: Bitboard(4507997675978752),
+                        knight: Bitboard(148618787703226432),
                         bishop: Bitboard(288230376151711780),
                         rook: Bitboard(9295429630892703873),
-                        queen: Bitboard(576460752303423496),
+                        queen: Bitboard(1125899906842632),
                         king: Bitboard(1152921504606846992),
                     },
                     ByColor {
-                        black: Bitboard(11381462725067538432),
-                        white: Bitboard(68872889533),
+                        black: Bitboard(10950238662700302336),
+                        white: Bitboard(68870792445),
                     },
                 ) {
                     board
@@ -350,11 +343,11 @@ pub static SMYSLOV_VARIATION: Variation = Variation {
                 },
                 promoted: Bitboard(0),
                 pockets: None,
-                turn: Black,
+                turn: White,
                 castling_rights: Bitboard(9295429630892703873),
                 ep_square: None,
                 remaining_checks: None,
-                halfmoves: 2,
+                halfmoves: 1,
                 fullmoves: if let Some(fullmoves) = NonZeroU32::new(8) {
                     fullmoves
                 } else {
