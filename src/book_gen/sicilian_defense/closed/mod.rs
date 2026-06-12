@@ -67,10 +67,12 @@ pub static CLOSED: Variation = Variation {
     variations: &[
         &ANTI_SVESHNIKOV_VARIATION,
         &BOTVINNIK_DEFENSE,
+        &CARLSEN_VARIATION,
         &CHAMELEON_VARIATION,
         &FIANCHETTO_VARIATION,
         &GROB_ATTACK,
         &KORCHNOI_DEFENSE,
+        &PORTLAND_ATTACK,
         &SMYSLOV_VARIATION,
         &TRADITIONAL,
     ],
@@ -911,6 +913,8 @@ pub mod anti_sveshnikov_variation;
 pub use anti_sveshnikov_variation::ANTI_SVESHNIKOV_VARIATION;
 pub mod botvinnik_defense;
 pub use botvinnik_defense::BOTVINNIK_DEFENSE;
+pub mod carlsen_variation;
+pub use carlsen_variation::CARLSEN_VARIATION;
 pub mod chameleon_variation;
 pub use chameleon_variation::CHAMELEON_VARIATION;
 pub mod fianchetto_variation;
@@ -919,6 +923,8 @@ pub mod grob_attack;
 pub use grob_attack::GROB_ATTACK;
 pub mod korchnoi_defense;
 pub use korchnoi_defense::KORCHNOI_DEFENSE;
+pub mod portland_attack;
+pub use portland_attack::PORTLAND_ATTACK;
 pub mod smyslov_variation;
 pub use smyslov_variation::SMYSLOV_VARIATION;
 pub mod traditional;

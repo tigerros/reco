@@ -64,7 +64,7 @@ assert_eq!(MC_DONNELL_ATTACK.original_name(), "Sicilian Defense: McDonnell Attac
 pub static MC_DONNELL_ATTACK: Variation = Variation {
     name: "McDonnell Attack",
     parent: Some(&super::SICILIAN_DEFENSE),
-    variations: &[&TAL_GAMBIT],
+    variations: &[&TAL_GAMBIT, &TOILET_VARIATION],
     lines: &[Line {
         parent: &MC_DONNELL_ATTACK,
         code: Code {
@@ -142,3 +142,5 @@ pub static MC_DONNELL_ATTACK: Variation = Variation {
 };
 pub mod tal_gambit;
 pub use tal_gambit::TAL_GAMBIT;
+pub mod toilet_variation;
+pub use toilet_variation::TOILET_VARIATION;
