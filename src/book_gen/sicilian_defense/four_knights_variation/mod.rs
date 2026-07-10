@@ -64,7 +64,12 @@ assert_eq!(FOUR_KNIGHTS_VARIATION.original_name(), "Sicilian Defense: Four Knigh
 pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
     name: "Four Knights Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
-    variations: &[&AMERICAN_ATTACK, &COBRA_VARIATION, &EXCHANGE_VARIATION],
+    variations: &[
+        &AMERICAN_ATTACK,
+        &COBRA_VARIATION,
+        &EXCHANGE_VARIATION,
+        &SVESHNIKOV_TRANSFER,
+    ],
     lines: &[Line {
         parent: &FOUR_KNIGHTS_VARIATION,
         code: Code {
@@ -195,3 +200,5 @@ pub mod cobra_variation;
 pub use cobra_variation::COBRA_VARIATION;
 pub mod exchange_variation;
 pub use exchange_variation::EXCHANGE_VARIATION;
+pub mod sveshnikov_transfer;
+pub use sveshnikov_transfer::SVESHNIKOV_TRANSFER;
