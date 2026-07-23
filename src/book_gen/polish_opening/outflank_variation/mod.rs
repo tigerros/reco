@@ -64,7 +64,7 @@ assert_eq!(OUTFLANK_VARIATION.original_name(), "Polish Opening: Outflank Variati
 pub static OUTFLANK_VARIATION: Variation = Variation {
     name: "Outflank Variation",
     parent: Some(&super::POLISH_OPENING),
-    variations: &[],
+    variations: &[&SCHUEHLER_GAMBIT],
     lines: &[Line {
         parent: &OUTFLANK_VARIATION,
         code: Code {
@@ -133,3 +133,5 @@ pub static OUTFLANK_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod schuehler_gambit;
+pub use schuehler_gambit::SCHUEHLER_GAMBIT;
