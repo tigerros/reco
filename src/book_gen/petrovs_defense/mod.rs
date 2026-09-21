@@ -79,6 +79,7 @@ pub static PETROVS_DEFENSE: Variation = Variation {
         &NIMZOWITSCH_ATTACK,
         &PAULSEN_ATTACK,
         &STAFFORD_GAMBIT,
+        &STAFFORD_GAMBIT_ACCEPTED,
         &THREE_KNIGHTS_GAME,
     ],
     lines: &[
@@ -587,5 +588,7 @@ pub mod paulsen_attack;
 pub use paulsen_attack::PAULSEN_ATTACK;
 pub mod stafford_gambit;
 pub use stafford_gambit::STAFFORD_GAMBIT;
+pub mod stafford_gambit_accepted;
+pub use stafford_gambit_accepted::STAFFORD_GAMBIT_ACCEPTED;
 pub mod three_knights_game;
 pub use three_knights_game::THREE_KNIGHTS_GAME;

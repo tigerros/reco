@@ -65,7 +65,115 @@ pub static STONEWALL_VARIATION: Variation = Variation {
     name: "Stonewall Variation",
     parent: Some(&super::ANTI_NOTEBOOM),
     variations: &[&PORTISCH_GAMBIT],
-    lines: &[],
+    lines: &[Line {
+        parent: &STONEWALL_VARIATION,
+        code: Code {
+            volume: Volume::D,
+            category: Category(RangedU8::new_static::<3>()),
+        },
+        moves: &[
+            Normal {
+                role: Pawn,
+                from: Square::D2,
+                capture: None,
+                to: Square::D4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::D7,
+                capture: None,
+                to: Square::D5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::C2,
+                capture: None,
+                to: Square::C4,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::E7,
+                capture: None,
+                to: Square::E6,
+                promotion: None,
+            },
+            Normal {
+                role: Knight,
+                from: Square::B1,
+                capture: None,
+                to: Square::C3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::C7,
+                capture: None,
+                to: Square::C6,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::E2,
+                capture: None,
+                to: Square::E3,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::F7,
+                capture: None,
+                to: Square::F5,
+                promotion: None,
+            },
+        ],
+        setup: Setup {
+            board: if let Ok(board) = Board::try_from_bitboards(
+                ByRole {
+                    pawn: Bitboard(54909782692258560),
+                    knight: Bitboard(4755801206503505984),
+                    bishop: Bitboard(2594073385365405732),
+                    rook: Bitboard(9295429630892703873),
+                    queen: Bitboard(576460752303423496),
+                    king: Bitboard(1152921504606846992),
+                },
+                ByColor {
+                    black: Bitboard(18429596262161448960),
+                    white: Bitboard(202695677),
+                },
+            ) {
+                board
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
+            promoted: Bitboard(0),
+            pockets: None,
+            turn: White,
+            castling_rights: Bitboard(9295429630892703873),
+            ep_square: None,
+            remaining_checks: None,
+            halfmoves: 0,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
+                fullmoves
+            } else {
+                #[expect(
+                    clippy::unreachable,
+                    reason = "intentional. It's in a const expression"
+                )]
+                {
+                    unreachable!()
+                }
+            },
+        },
+    }],
 };
 pub mod portisch_gambit;
 pub use portisch_gambit::PORTISCH_GAMBIT;

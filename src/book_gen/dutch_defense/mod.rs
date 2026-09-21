@@ -67,6 +67,7 @@ pub static DUTCH_DEFENSE: Variation = Variation {
     variations: &[
         &ALAPIN_VARIATION,
         &ALEKHINE_VARIATION,
+        &BARCZA_VARIATION,
         &BELLON_GAMBIT,
         &BLACKBURNE_VARIATION,
         &BLACKMARS_SECOND_GAMBIT,
@@ -246,6 +247,8 @@ pub mod alapin_variation;
 pub use alapin_variation::ALAPIN_VARIATION;
 pub mod alekhine_variation;
 pub use alekhine_variation::ALEKHINE_VARIATION;
+pub mod barcza_variation;
+pub use barcza_variation::BARCZA_VARIATION;
 pub mod bellon_gambit;
 pub use bellon_gambit::BELLON_GAMBIT;
 pub mod blackburne_variation;

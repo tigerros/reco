@@ -64,7 +64,7 @@ assert_eq!(GUNSBERG_VARIATION.original_name(), "Four Knights Game: Gunsberg Vari
 pub static GUNSBERG_VARIATION: Variation = Variation {
     name: "Gunsberg Variation",
     parent: Some(&super::FOUR_KNIGHTS_GAME),
-    variations: &[],
+    variations: &[&PROVINCIAL_OPENING],
     lines: &[Line {
         parent: &GUNSBERG_VARIATION,
         code: Code {
@@ -168,3 +168,5 @@ pub static GUNSBERG_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod provincial_opening;
+pub use provincial_opening::PROVINCIAL_OPENING;
