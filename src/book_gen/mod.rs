@@ -30,6 +30,8 @@ pub mod barnes_defense;
 pub use barnes_defense::BARNES_DEFENSE;
 pub mod barnes_opening;
 pub use barnes_opening::BARNES_OPENING;
+pub mod basque_opening;
+pub use basque_opening::BASQUE_OPENING;
 pub mod benko_gambit;
 pub use benko_gambit::BENKO_GAMBIT;
 pub mod benko_gambit_accepted;
@@ -296,10 +298,10 @@ pub mod zukertort_opening;
 pub use zukertort_opening::ZUKERTORT_OPENING;
 
 /// The total amount of variations.
-pub const VARIATION_COUNT: usize = 3235;
+pub const VARIATION_COUNT: usize = 3279;
 
 /// All root variations.
-pub static ALL: [&Variation; 140] = [
+pub static ALL: [&Variation; 141] = [
     &ALEKHINE_DEFENSE,
     &AMAR_OPENING,
     &AMAZON_ATTACK,
@@ -308,6 +310,7 @@ pub static ALL: [&Variation; 140] = [
     &AUSTRALIAN_DEFENSE,
     &BARNES_DEFENSE,
     &BARNES_OPENING,
+    &BASQUE_OPENING,
     &BENKO_GAMBIT,
     &BENKO_GAMBIT_ACCEPTED,
     &BENKO_GAMBIT_DECLINED,
