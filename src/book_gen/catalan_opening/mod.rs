@@ -64,7 +64,13 @@ assert_eq!(CATALAN_OPENING.original_name(), "Catalan Opening");
 pub static CATALAN_OPENING: Variation = Variation {
     name: "Catalan Opening",
     parent: None,
-    variations: &[&CLOSED, &CLOSED_VARIATION, &HUNGARIAN_GAMBIT, &OPEN_DEFENSE],
+    variations: &[
+        &CLOSED,
+        &CLOSED_VARIATION,
+        &HUNGARIAN_GAMBIT,
+        &OPEN_DEFENSE,
+        &TARRASCH_DEFENSE,
+    ],
     lines: &[
         Line {
             parent: &CATALAN_OPENING,
@@ -259,3 +265,5 @@ pub mod hungarian_gambit;
 pub use hungarian_gambit::HUNGARIAN_GAMBIT;
 pub mod open_defense;
 pub use open_defense::OPEN_DEFENSE;
+pub mod tarrasch_defense;
+pub use tarrasch_defense::TARRASCH_DEFENSE;
