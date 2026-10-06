@@ -121,6 +121,13 @@ pub static RHAMPHORHYNCHUS: Variation = Variation {
                 to: Square::C5,
                 promotion: None,
             },
+            Normal {
+                role: Queen,
+                from: Square::D8,
+                capture: None,
+                to: Square::A5,
+                promotion: None,
+            },
         ],
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
@@ -129,11 +136,11 @@ pub static RHAMPHORHYNCHUS: Variation = Variation {
                     knight: Bitboard(4755801206503505984),
                     bishop: Bitboard(306244774661193764),
                     rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
+                    queen: Bitboard(4294967304),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(16139564058356482048),
+                    black: Bitboard(15563103310348025856),
                     white: Bitboard(17448626173),
                 },
             ) {
@@ -149,12 +156,12 @@ pub static RHAMPHORHYNCHUS: Variation = Variation {
             },
             promoted: Bitboard(0),
             pockets: None,
-            turn: Black,
+            turn: White,
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 #[expect(
