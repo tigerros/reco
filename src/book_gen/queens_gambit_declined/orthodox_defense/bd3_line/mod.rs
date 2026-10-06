@@ -332,6 +332,175 @@ pub static BD3_LINE: Variation = Variation {
                 },
                 Normal {
                     role: Pawn,
+                    from: Square::H7,
+                    capture: None,
+                    to: Square::H6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::G5,
+                    capture: None,
+                    to: Square::H4,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: if let Ok(board) = Board::try_from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(28028784977437440),
+                        knight: Bitboard(2286984188133376),
+                        bishop: Bitboard(292733977927090176),
+                        rook: Bitboard(2377900603251622020),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(4611686018427387920),
+                    },
+                    ByColor {
+                        black: Bitboard(7889097118722293760),
+                        white: Bitboard(2352800668),
+                    },
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(128),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 1,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(9) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+        Line {
+            parent: &BD3_LINE,
+            code: Code {
+                volume: Volume::D,
+                category: Category(RangedU8::new_static::<6>()),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: Square::D2,
+                    capture: None,
+                    to: Square::D4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D7,
+                    capture: None,
+                    to: Square::D5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::C2,
+                    capture: None,
+                    to: Square::C4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::E7,
+                    capture: None,
+                    to: Square::E6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::B1,
+                    capture: None,
+                    to: Square::C3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::G8,
+                    capture: None,
+                    to: Square::F6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::C1,
+                    capture: None,
+                    to: Square::G5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::F8,
+                    capture: None,
+                    to: Square::E7,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::E2,
+                    capture: None,
+                    to: Square::E3,
+                    promotion: None,
+                },
+                Castle {
+                    king: Square::E8,
+                    rook: Square::H8,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::G1,
+                    capture: None,
+                    to: Square::F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::B8,
+                    capture: None,
+                    to: Square::D7,
+                    promotion: None,
+                },
+                Normal {
+                    role: Rook,
+                    from: Square::A1,
+                    capture: None,
+                    to: Square::C1,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::C7,
+                    capture: None,
+                    to: Square::C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::F1,
+                    capture: None,
+                    to: Square::D3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
                     from: Square::D5,
                     capture: Some(Pawn),
                     to: Square::C4,

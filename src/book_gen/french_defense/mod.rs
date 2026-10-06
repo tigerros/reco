@@ -73,6 +73,7 @@ pub static FRENCH_DEFENSE: Variation = Variation {
         &BIRD_INVITATION,
         &CARLSON_GAMBIT,
         &CHIGORIN_VARIATION,
+        &CLASSICAL,
         &CLASSICAL_VARIATION,
         &DIEMER_DUHM_GAMBIT,
         &DIEMER_DUHM_GAMBIT_ACCEPTED,
@@ -277,6 +278,8 @@ pub mod carlson_gambit;
 pub use carlson_gambit::CARLSON_GAMBIT;
 pub mod chigorin_variation;
 pub use chigorin_variation::CHIGORIN_VARIATION;
+pub mod classical;
+pub use classical::CLASSICAL;
 pub mod classical_variation;
 pub use classical_variation::CLASSICAL_VARIATION;
 pub mod diemer_duhm_gambit;
