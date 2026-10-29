@@ -64,7 +64,11 @@ assert_eq!(ANTI_BENONI_VARIATION.original_name(), "English Opening: Symmetrical 
 pub static ANTI_BENONI_VARIATION: Variation = Variation {
     name: "Anti-Benoni Variation",
     parent: Some(&super::SYMMETRICAL_VARIATION),
-    variations: &[&GELLER_VARIATION, &SPIELMANN_DEFENSE],
+    variations: &[
+        &GELLER_VARIATION,
+        &KASPAROV_VAGANIAN_GAMBIT,
+        &SPIELMANN_DEFENSE,
+    ],
     lines: &[Line {
         parent: &ANTI_BENONI_VARIATION,
         code: Code {
@@ -156,5 +160,7 @@ pub static ANTI_BENONI_VARIATION: Variation = Variation {
 };
 pub mod geller_variation;
 pub use geller_variation::GELLER_VARIATION;
+pub mod kasparov_vaganian_gambit;
+pub use kasparov_vaganian_gambit::KASPAROV_VAGANIAN_GAMBIT;
 pub mod spielmann_defense;
 pub use spielmann_defense::SPIELMANN_DEFENSE;
