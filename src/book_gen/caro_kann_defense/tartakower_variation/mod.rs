@@ -64,7 +64,7 @@ assert_eq!(TARTAKOWER_VARIATION.original_name(), "Caro-Kann Defense: Tartakower 
 pub static TARTAKOWER_VARIATION: Variation = Variation {
     name: "Tartakower Variation",
     parent: Some(&super::CARO_KANN_DEFENSE),
-    variations: &[],
+    variations: &[&PERLIS_LINE],
     lines: &[Line {
         parent: &TARTAKOWER_VARIATION,
         code: Code {
@@ -189,3 +189,5 @@ pub static TARTAKOWER_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod perlis_line;
+pub use perlis_line::PERLIS_LINE;
