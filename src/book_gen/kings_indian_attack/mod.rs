@@ -77,6 +77,7 @@ pub static KINGS_INDIAN_ATTACK: Variation = Variation {
         &WAHLS_DEFENSE,
         &YUGOSLAV_VARIATION,
         &WITH_BF5,
+        &WITH_E6,
     ],
     lines: &[
         Line {
@@ -260,3 +261,5 @@ pub mod yugoslav_variation;
 pub use yugoslav_variation::YUGOSLAV_VARIATION;
 pub mod with_bf5;
 pub use with_bf5::WITH_BF5;
+pub mod with_e6;
+pub use with_e6::WITH_E6;

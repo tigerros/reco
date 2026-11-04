@@ -87,7 +87,6 @@ pub static RUY_LOPEZ: Variation = Variation {
         &MORPHY_DEFENSE,
         &NOAHS_ARK_TRAP,
         &NURNBERG_VARIATION,
-        &OLD_STEINITZ_DEFENSE,
         &OPEN,
         &OPEN_BERLIN_DEFENSE,
         &POLLOCK_DEFENSE,
@@ -234,8 +233,6 @@ pub mod noahs_ark_trap;
 pub use noahs_ark_trap::NOAHS_ARK_TRAP;
 pub mod nurnberg_variation;
 pub use nurnberg_variation::NURNBERG_VARIATION;
-pub mod old_steinitz_defense;
-pub use old_steinitz_defense::OLD_STEINITZ_DEFENSE;
 pub mod open;
 pub use open::OPEN;
 pub mod open_berlin_defense;

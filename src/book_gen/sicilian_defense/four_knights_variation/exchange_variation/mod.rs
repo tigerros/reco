@@ -123,9 +123,9 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
             },
             Normal {
                 role: Knight,
-                from: Square::G8,
+                from: Square::B8,
                 capture: None,
-                to: Square::F6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
@@ -137,9 +137,9 @@ pub static EXCHANGE_VARIATION: Variation = Variation {
             },
             Normal {
                 role: Knight,
-                from: Square::B8,
+                from: Square::G8,
                 capture: None,
-                to: Square::C6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {

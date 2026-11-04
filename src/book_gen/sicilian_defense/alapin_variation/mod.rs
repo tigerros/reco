@@ -65,6 +65,7 @@ pub static ALAPIN_VARIATION: Variation = Variation {
     name: "Alapin Variation",
     parent: Some(&super::SICILIAN_DEFENSE),
     variations: &[
+        &ANTI_ALAPIN_GAMBIT,
         &BARMEN_DEFENSE,
         &SHERZER_VARIATION,
         &SMITH_MORRA_DECLINED,
@@ -145,6 +146,8 @@ pub static ALAPIN_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod anti_alapin_gambit;
+pub use anti_alapin_gambit::ANTI_ALAPIN_GAMBIT;
 pub mod barmen_defense;
 pub use barmen_defense::BARMEN_DEFENSE;
 pub mod sherzer_variation;

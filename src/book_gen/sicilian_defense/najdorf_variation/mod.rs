@@ -70,18 +70,19 @@ pub static NAJDORF_VARIATION: Variation = Variation {
         &BROWNE_VARIATION,
         &DEKKER_GAMBIT,
         &ENGLISH_ATTACK,
-        &FREAK_ATTACK,
         &GOTEBORG_VARIATION,
         &IVKOV_VARIATION,
         &LIPNITSKY_ATTACK,
         &MAIN_LINE,
         &NEO_CLASSICAL_DEFENSE,
         &OPOCENSKY_VARIATION,
+        &PETRONIC_ATTACK,
         &POISONED_PAWN_ACCEPTED,
         &POISONED_PAWN_VARIATION,
         &POLUGAEVSKY_VARIATION,
         &SCHEVENINGEN_VARIATION,
         &TRADITIONAL_LINE,
+        &YATES_VARIATION,
         &ZAGREB_VARIATION,
     ],
     lines: &[
@@ -782,8 +783,6 @@ pub mod dekker_gambit;
 pub use dekker_gambit::DEKKER_GAMBIT;
 pub mod english_attack;
 pub use english_attack::ENGLISH_ATTACK;
-pub mod freak_attack;
-pub use freak_attack::FREAK_ATTACK;
 pub mod goteborg_variation;
 pub use goteborg_variation::GOTEBORG_VARIATION;
 pub mod ivkov_variation;
@@ -796,6 +795,8 @@ pub mod neo_classical_defense;
 pub use neo_classical_defense::NEO_CLASSICAL_DEFENSE;
 pub mod opocensky_variation;
 pub use opocensky_variation::OPOCENSKY_VARIATION;
+pub mod petronic_attack;
+pub use petronic_attack::PETRONIC_ATTACK;
 pub mod poisoned_pawn_accepted;
 pub use poisoned_pawn_accepted::POISONED_PAWN_ACCEPTED;
 pub mod poisoned_pawn_variation;
@@ -806,5 +807,7 @@ pub mod scheveningen_variation;
 pub use scheveningen_variation::SCHEVENINGEN_VARIATION;
 pub mod traditional_line;
 pub use traditional_line::TRADITIONAL_LINE;
+pub mod yates_variation;
+pub use yates_variation::YATES_VARIATION;
 pub mod zagreb_variation;
 pub use zagreb_variation::ZAGREB_VARIATION;

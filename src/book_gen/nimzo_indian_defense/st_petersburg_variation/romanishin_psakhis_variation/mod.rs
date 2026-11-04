@@ -58,11 +58,11 @@ use shakmaty::{ByColor, ByRole, Setup};
     feature = "alloc",
     doc = r#"```rust
 # use reco::book::nimzo_indian_defense::st_petersburg_variation::ROMANISHIN_PSAKHIS_VARIATION;
-assert_eq!(ROMANISHIN_PSAKHIS_VARIATION.original_name(), "Nimzo-Indian Defense: St. Petersburg Variation, Romanishin–Psakhis Variation");
+assert_eq!(ROMANISHIN_PSAKHIS_VARIATION.original_name(), "Nimzo-Indian Defense: St. Petersburg Variation, Romanishin-Psakhis Variation");
 ```"#
 )]
 pub static ROMANISHIN_PSAKHIS_VARIATION: Variation = Variation {
-    name: "Romanishin–Psakhis Variation",
+    name: "Romanishin-Psakhis Variation",
     parent: Some(&super::ST_PETERSBURG_VARIATION),
     variations: &[],
     lines: &[Line {

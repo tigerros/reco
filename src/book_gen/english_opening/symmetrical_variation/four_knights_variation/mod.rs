@@ -64,7 +64,7 @@ assert_eq!(FOUR_KNIGHTS_VARIATION.original_name(), "English Opening: Symmetrical
 pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
     name: "Four Knights Variation",
     parent: Some(&super::SYMMETRICAL_VARIATION),
-    variations: &[],
+    variations: &[&KERES_PARMA_SYSTEM],
     lines: &[Line {
         parent: &FOUR_KNIGHTS_VARIATION,
         code: Code {
@@ -80,10 +80,10 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Knight,
-                from: Square::G8,
+                role: Pawn,
+                from: Square::C7,
                 capture: None,
-                to: Square::F6,
+                to: Square::C5,
                 promotion: None,
             },
             Normal {
@@ -94,10 +94,10 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: Square::C7,
+                role: Knight,
+                from: Square::G8,
                 capture: None,
-                to: Square::C5,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
@@ -146,7 +146,7 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
+            halfmoves: 4,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
                 fullmoves
             } else {
@@ -161,3 +161,5 @@ pub static FOUR_KNIGHTS_VARIATION: Variation = Variation {
         },
     }],
 };
+pub mod keres_parma_system;
+pub use keres_parma_system::KERES_PARMA_SYSTEM;

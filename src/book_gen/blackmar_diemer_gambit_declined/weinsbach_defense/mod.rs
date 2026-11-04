@@ -64,7 +64,7 @@ assert_eq!(WEINSBACH_DEFENSE.original_name(), "Blackmar-Diemer Gambit Declined: 
 pub static WEINSBACH_DEFENSE: Variation = Variation {
     name: "Weinsbach Defense",
     parent: Some(&super::BLACKMAR_DIEMER_GAMBIT_DECLINED),
-    variations: &[],
+    variations: &[&PFRANG_GAMBIT],
     lines: &[Line {
         parent: &WEINSBACH_DEFENSE,
         code: Code {
@@ -175,3 +175,5 @@ pub static WEINSBACH_DEFENSE: Variation = Variation {
         },
     }],
 };
+pub mod pfrang_gambit;
+pub use pfrang_gambit::PFRANG_GAMBIT;

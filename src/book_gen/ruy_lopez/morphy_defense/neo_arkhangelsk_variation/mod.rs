@@ -133,6 +133,20 @@ pub static NEO_ARKHANGELSK_VARIATION: Variation = Variation {
                 rook: Square::H1,
             },
             Normal {
+                role: Pawn,
+                from: Square::B7,
+                capture: None,
+                to: Square::B5,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: Square::A4,
+                capture: None,
+                to: Square::B3,
+                promotion: None,
+            },
+            Normal {
                 role: Bishop,
                 from: Square::F8,
                 capture: None,
@@ -143,16 +157,16 @@ pub static NEO_ARKHANGELSK_VARIATION: Variation = Variation {
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(66992212956737280),
+                    pawn: Bitboard(66429271593250560),
                     knight: Bitboard(39582420697090),
-                    bishop: Bitboard(288230393348358148),
+                    bishop: Bitboard(288230393331712004),
                     rook: Bitboard(9295429630892703777),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606847040),
                 },
                 ByColor {
-                    black: Bitboard(11380074076241395712),
-                    white: Bitboard(287371119),
+                    black: Bitboard(11379511134877908992),
+                    white: Bitboard(270724975),
                 },
             ) {
                 board
@@ -171,8 +185,8 @@ pub static NEO_ARKHANGELSK_VARIATION: Variation = Variation {
             castling_rights: Bitboard(9295429630892703744),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 4,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(6) {
+            halfmoves: 2,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {
                 #[expect(
