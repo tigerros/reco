@@ -79,6 +79,7 @@ pub static QUEENS_PAWN_GAME: Variation = Variation {
         &LONDON_SYSTEM,
         &MASON_ATTACK,
         &MODERN_DEFENSE,
+        &ROSSOLIMO_VARIATION,
         &STONEWALL_ATTACK,
         &SYMMETRICAL_VARIATION,
         &TORRE_ATTACK,
@@ -466,6 +467,8 @@ pub mod mason_attack;
 pub use mason_attack::MASON_ATTACK;
 pub mod modern_defense;
 pub use modern_defense::MODERN_DEFENSE;
+pub mod rossolimo_variation;
+pub use rossolimo_variation::ROSSOLIMO_VARIATION;
 pub mod stonewall_attack;
 pub use stonewall_attack::STONEWALL_ATTACK;
 pub mod symmetrical_variation;

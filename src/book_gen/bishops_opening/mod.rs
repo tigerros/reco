@@ -82,6 +82,7 @@ pub static BISHOPS_OPENING: Variation = Variation {
         &LOPEZ_VARIATION,
         &MC_DONNELL_GAMBIT,
         &PACHMAN_GAMBIT,
+        &PAULSEN_DEFENSE,
         &PHILIDOR_COUNTERATTACK,
         &PHILIDOR_VARIATION,
         &PONZIANI_GAMBIT,
@@ -202,6 +203,8 @@ pub mod mc_donnell_gambit;
 pub use mc_donnell_gambit::MC_DONNELL_GAMBIT;
 pub mod pachman_gambit;
 pub use pachman_gambit::PACHMAN_GAMBIT;
+pub mod paulsen_defense;
+pub use paulsen_defense::PAULSEN_DEFENSE;
 pub mod philidor_counterattack;
 pub use philidor_counterattack::PHILIDOR_COUNTERATTACK;
 pub mod philidor_variation;
