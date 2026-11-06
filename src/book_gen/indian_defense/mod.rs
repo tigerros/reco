@@ -65,9 +65,11 @@ pub static INDIAN_DEFENSE: Variation = Variation {
     name: "Indian Defense",
     parent: None,
     variations: &[
+        &ACCELERATED_LONDON_SYSTEM,
         &ANTI_GRUNFELD,
         &ANTI_NIMZO_INDIAN,
-        &BUDAPEST_DEFENSE,
+        &BUDAPEST_GAMBIT,
+        &BUDAPEST_GAMBIT_ACCEPTED,
         &COLLE_SYSTEM,
         &CZECH_INDIAN,
         &DEVIN_GAMBIT,
@@ -255,12 +257,16 @@ pub static INDIAN_DEFENSE: Variation = Variation {
         },
     ],
 };
+pub mod accelerated_london_system;
+pub use accelerated_london_system::ACCELERATED_LONDON_SYSTEM;
 pub mod anti_grunfeld;
 pub use anti_grunfeld::ANTI_GRUNFELD;
 pub mod anti_nimzo_indian;
 pub use anti_nimzo_indian::ANTI_NIMZO_INDIAN;
-pub mod budapest_defense;
-pub use budapest_defense::BUDAPEST_DEFENSE;
+pub mod budapest_gambit;
+pub use budapest_gambit::BUDAPEST_GAMBIT;
+pub mod budapest_gambit_accepted;
+pub use budapest_gambit_accepted::BUDAPEST_GAMBIT_ACCEPTED;
 pub mod colle_system;
 pub use colle_system::COLLE_SYSTEM;
 pub mod czech_indian;

@@ -64,7 +64,7 @@ assert_eq!(NORMAL_VARIATION.original_name(), "Queen's Gambit Accepted: Normal Va
 pub static NORMAL_VARIATION: Variation = Variation {
     name: "Normal Variation",
     parent: Some(&super::QUEENS_GAMBIT_ACCEPTED),
-    variations: &[&TRADITIONAL_SYSTEM],
+    variations: &[&A6_SIDELINE, &TRADITIONAL_SYSTEM],
     lines: &[
         Line {
             parent: &NORMAL_VARIATION,
@@ -258,5 +258,7 @@ pub static NORMAL_VARIATION: Variation = Variation {
         },
     ],
 };
+pub mod a6_sideline;
+pub use a6_sideline::A6_SIDELINE;
 pub mod traditional_system;
 pub use traditional_system::TRADITIONAL_SYSTEM;

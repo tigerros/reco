@@ -78,6 +78,7 @@ pub static MORPHY_DEFENSE: Variation = Variation {
         &JAFFE_GAMBIT,
         &MACKENZIE_VARIATION,
         &MODERN_STEINITZ_DEFENSE,
+        &MOLLER_VARIATION,
         &NEO_ARKHANGELSK_VARIATION,
         &NORWEGIAN_VARIATION,
         &SCHLIEMANN_DEFENSE_DEFERRED,
@@ -458,6 +459,8 @@ pub mod mackenzie_variation;
 pub use mackenzie_variation::MACKENZIE_VARIATION;
 pub mod modern_steinitz_defense;
 pub use modern_steinitz_defense::MODERN_STEINITZ_DEFENSE;
+pub mod moller_variation;
+pub use moller_variation::MOLLER_VARIATION;
 pub mod neo_arkhangelsk_variation;
 pub use neo_arkhangelsk_variation::NEO_ARKHANGELSK_VARIATION;
 pub mod norwegian_variation;
