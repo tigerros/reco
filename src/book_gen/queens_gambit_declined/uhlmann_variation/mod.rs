@@ -69,7 +69,7 @@ pub static UHLMANN_VARIATION: Variation = Variation {
         parent: &UHLMANN_VARIATION,
         code: Code {
             volume: Volume::D,
-            category: Category(RangedU8::new_static::<3>()),
+            category: Category(RangedU8::new_static::<5>()),
         },
         moves: &[
             Normal {

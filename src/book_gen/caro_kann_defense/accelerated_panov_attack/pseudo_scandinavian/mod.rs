@@ -108,6 +108,20 @@ pub static PSEUDO_SCANDINAVIAN: Variation = Variation {
                 promotion: None,
             },
             Normal {
+                role: Pawn,
+                from: Square::C6,
+                capture: Some(Pawn),
+                to: Square::D5,
+                promotion: None,
+            },
+            Normal {
+                role: Pawn,
+                from: Square::C4,
+                capture: Some(Pawn),
+                to: Square::D5,
+                promotion: None,
+            },
+            Normal {
                 role: Queen,
                 from: Square::D8,
                 capture: Some(Pawn),
@@ -118,7 +132,7 @@ pub static PSEUDO_SCANDINAVIAN: Variation = Variation {
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(68402817454369536),
+                    pawn: Bitboard(68398419340749568),
                     knight: Bitboard(4755801206503243842),
                     bishop: Bitboard(2594073385365405732),
                     rook: Bitboard(9295429630892703873),
@@ -126,8 +140,8 @@ pub static PSEUDO_SCANDINAVIAN: Variation = Variation {
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(17866628579115139072),
-                    white: Bitboard(67169279),
+                    black: Bitboard(17866624181068627968),
+                    white: Bitboard(60415),
                 },
             ) {
                 board
@@ -147,7 +161,7 @@ pub static PSEUDO_SCANDINAVIAN: Variation = Variation {
             ep_square: None,
             remaining_checks: None,
             halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(5) {
                 fullmoves
             } else {
                 #[expect(

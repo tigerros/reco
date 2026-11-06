@@ -70,7 +70,6 @@ pub static EASTERN: Variation = Variation {
         &BENONI_PTERANODON,
         &BENONI_PTERODACTYL,
         &PTERANODON,
-        &PTERODACTYL,
         &RHAMPHORHYNCHUS,
     ],
     lines: &[],
@@ -85,7 +84,5 @@ pub mod benoni_pterodactyl;
 pub use benoni_pterodactyl::BENONI_PTERODACTYL;
 pub mod pteranodon;
 pub use pteranodon::PTERANODON;
-pub mod pterodactyl;
-pub use pterodactyl::PTERODACTYL;
 pub mod rhamphorhynchus;
 pub use rhamphorhynchus::RHAMPHORHYNCHUS;
