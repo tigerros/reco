@@ -64,104 +64,210 @@ assert_eq!(STEINITZ_DEFENSE.original_name(), "Ruy Lopez: Steinitz Defense");
 pub static STEINITZ_DEFENSE: Variation = Variation {
     name: "Steinitz Defense",
     parent: Some(&super::RUY_LOPEZ),
-    variations: &[&CENTER_GAMBIT, &NIMZOWITSCH_ATTACK],
-    lines: &[Line {
-        parent: &STEINITZ_DEFENSE,
-        code: Code {
-            volume: Volume::C,
-            category: Category(RangedU8::new_static::<6>()),
-        },
-        moves: &[
-            Normal {
-                role: Pawn,
-                from: Square::E2,
-                capture: None,
-                to: Square::E4,
-                promotion: None,
+    variations: &[&CENTER_GAMBIT, &NIMZOWITSCH_ATTACK, &SEMI_DURAS_VARIATION],
+    lines: &[
+        Line {
+            parent: &STEINITZ_DEFENSE,
+            code: Code {
+                volume: Volume::C,
+                category: Category(RangedU8::new_static::<6>()),
             },
-            Normal {
-                role: Pawn,
-                from: Square::E7,
-                capture: None,
-                to: Square::E5,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: Square::G1,
-                capture: None,
-                to: Square::F3,
-                promotion: None,
-            },
-            Normal {
-                role: Knight,
-                from: Square::B8,
-                capture: None,
-                to: Square::C6,
-                promotion: None,
-            },
-            Normal {
-                role: Bishop,
-                from: Square::F1,
-                capture: None,
-                to: Square::B5,
-                promotion: None,
-            },
-            Normal {
-                role: Pawn,
-                from: Square::D7,
-                capture: None,
-                to: Square::D6,
-                promotion: None,
-            },
-        ],
-        setup: Setup {
-            board: if let Ok(board) = Board::try_from_bitboards(
-                ByRole {
-                    pawn: Bitboard(65029584701157120),
-                    knight: Bitboard(4611690416475996162),
-                    bishop: Bitboard(2594073393955340292),
-                    rook: Bitboard(9295429630892703873),
-                    queen: Bitboard(576460752303423496),
-                    king: Bitboard(1152921504606846992),
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: Square::E2,
+                    capture: None,
+                    to: Square::E4,
+                    promotion: None,
                 },
-                ByColor {
-                    black: Bitboard(18295605274074939392),
-                    white: Bitboard(8860528543),
+                Normal {
+                    role: Pawn,
+                    from: Square::E7,
+                    capture: None,
+                    to: Square::E5,
+                    promotion: None,
                 },
-            ) {
-                board
-            } else {
-                #[expect(
-                    clippy::unreachable,
-                    reason = "intentional. It's in a const expression"
-                )]
-                {
-                    unreachable!()
-                }
-            },
-            promoted: Bitboard(0),
-            pockets: None,
-            turn: White,
-            castling_rights: Bitboard(9295429630892703873),
-            ep_square: None,
-            remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
-                fullmoves
-            } else {
-                #[expect(
-                    clippy::unreachable,
-                    reason = "intentional. It's in a const expression"
-                )]
-                {
-                    unreachable!()
-                }
+                Normal {
+                    role: Knight,
+                    from: Square::G1,
+                    capture: None,
+                    to: Square::F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::B8,
+                    capture: None,
+                    to: Square::C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::F1,
+                    capture: None,
+                    to: Square::B5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D7,
+                    capture: None,
+                    to: Square::D6,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: if let Ok(board) = Board::try_from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(65029584701157120),
+                        knight: Bitboard(4611690416475996162),
+                        bishop: Bitboard(2594073393955340292),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18295605274074939392),
+                        white: Bitboard(8860528543),
+                    },
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: White,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
             },
         },
-    }],
+        Line {
+            parent: &STEINITZ_DEFENSE,
+            code: Code {
+                volume: Volume::C,
+                category: Category(RangedU8::new_static::<6>()),
+            },
+            moves: &[
+                Normal {
+                    role: Pawn,
+                    from: Square::E2,
+                    capture: None,
+                    to: Square::E4,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::E7,
+                    capture: None,
+                    to: Square::E5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::G1,
+                    capture: None,
+                    to: Square::F3,
+                    promotion: None,
+                },
+                Normal {
+                    role: Knight,
+                    from: Square::B8,
+                    capture: None,
+                    to: Square::C6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Bishop,
+                    from: Square::F1,
+                    capture: None,
+                    to: Square::B5,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D7,
+                    capture: None,
+                    to: Square::D6,
+                    promotion: None,
+                },
+                Normal {
+                    role: Pawn,
+                    from: Square::D2,
+                    capture: None,
+                    to: Square::D4,
+                    promotion: None,
+                },
+            ],
+            setup: Setup {
+                board: if let Ok(board) = Board::try_from_bitboards(
+                    ByRole {
+                        pawn: Bitboard(65029584835372800),
+                        knight: Bitboard(4611690416475996162),
+                        bishop: Bitboard(2594073393955340292),
+                        rook: Bitboard(9295429630892703873),
+                        queen: Bitboard(576460752303423496),
+                        king: Bitboard(1152921504606846992),
+                    },
+                    ByColor {
+                        black: Bitboard(18295605274074939392),
+                        white: Bitboard(8994744223),
+                    },
+                ) {
+                    board
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+                promoted: Bitboard(0),
+                pockets: None,
+                turn: Black,
+                castling_rights: Bitboard(9295429630892703873),
+                ep_square: None,
+                remaining_checks: None,
+                halfmoves: 0,
+                fullmoves: if let Some(fullmoves) = NonZeroU32::new(4) {
+                    fullmoves
+                } else {
+                    #[expect(
+                        clippy::unreachable,
+                        reason = "intentional. It's in a const expression"
+                    )]
+                    {
+                        unreachable!()
+                    }
+                },
+            },
+        },
+    ],
 };
 pub mod center_gambit;
 pub use center_gambit::CENTER_GAMBIT;
 pub mod nimzowitsch_attack;
 pub use nimzowitsch_attack::NIMZOWITSCH_ATTACK;
+pub mod semi_duras_variation;
+pub use semi_duras_variation::SEMI_DURAS_VARIATION;

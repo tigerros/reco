@@ -68,6 +68,7 @@ pub static ADVANCE_VARIATION: Variation = Variation {
         &EUWE_VARIATION,
         &EXTENDED_BISHOP_SWAP,
         &FRENKEL_GAMBIT,
+        &KUPREICHIK_VARIATION,
         &LPUTIAN_VARIATION,
         &MAIN_LINE,
         &MILNER_BARRY_GAMBIT,
@@ -482,6 +483,8 @@ pub mod extended_bishop_swap;
 pub use extended_bishop_swap::EXTENDED_BISHOP_SWAP;
 pub mod frenkel_gambit;
 pub use frenkel_gambit::FRENKEL_GAMBIT;
+pub mod kupreichik_variation;
+pub use kupreichik_variation::KUPREICHIK_VARIATION;
 pub mod lputian_variation;
 pub use lputian_variation::LPUTIAN_VARIATION;
 pub mod main_line;

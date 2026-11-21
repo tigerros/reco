@@ -64,7 +64,7 @@ assert_eq!(ADVANCE_VARIATION.original_name(), "Réti Opening: Advance Variation"
 pub static ADVANCE_VARIATION: Variation = Variation {
     name: "Advance Variation",
     parent: Some(&super::RETI_OPENING),
-    variations: &[&MICHEL_GAMBIT],
+    variations: &[&MICHEL_GAMBIT, &NAVARA_GAMBIT],
     lines: &[Line {
         parent: &ADVANCE_VARIATION,
         code: Code {
@@ -149,3 +149,5 @@ pub static ADVANCE_VARIATION: Variation = Variation {
 };
 pub mod michel_gambit;
 pub use michel_gambit::MICHEL_GAMBIT;
+pub mod navara_gambit;
+pub use navara_gambit::NAVARA_GAMBIT;

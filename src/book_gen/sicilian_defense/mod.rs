@@ -79,6 +79,7 @@ pub static SICILIAN_DEFENSE: Variation = Variation {
         &CLASSICAL_VARIATION,
         &CLOSED,
         &COLES_SICILIAN_GAMBIT,
+        &CZERNIAK_ATTACK,
         &DELAYED_ALAPIN_VARIATION,
         &DOUBLE_DUTCH_GAMBIT,
         &DRAGON_VARIATION,
@@ -97,7 +98,6 @@ pub static SICILIAN_DEFENSE: Variation = Variation {
         &HALASZ_GAMBIT,
         &HEIDENFELD_VARIATION,
         &HYPERACCELERATED_DRAGON,
-        &HYPERACCELERATED_FIANCHETTO,
         &HYPERACCELERATED_PTERODACTYL,
         &JALALABAD_VARIATION,
         &KALASHNIKOV_VARIATION,
@@ -142,7 +142,6 @@ pub static SICILIAN_DEFENSE: Variation = Variation {
         &SMITH_MORRA_GAMBIT_ACCEPTED,
         &SMITH_MORRA_GAMBIT_DECLINED,
         &SMITH_MORRA_GAMBIT_DEFERRED,
-        &SNYDER_VARIATION,
         &SOZIN_ATTACK,
         &SPIELMANN_VARIATION,
         &STAUNTON_COCHRANE_VARIATION,
@@ -151,7 +150,6 @@ pub static SICILIAN_DEFENSE: Variation = Variation {
         &VENICE_ATTACK,
         &WING_GAMBIT,
         &WING_GAMBIT_DEFERRED,
-        &YATES_VARIATION,
     ],
     lines: &[
         Line {
@@ -508,6 +506,8 @@ pub mod closed;
 pub use closed::CLOSED;
 pub mod coles_sicilian_gambit;
 pub use coles_sicilian_gambit::COLES_SICILIAN_GAMBIT;
+pub mod czerniak_attack;
+pub use czerniak_attack::CZERNIAK_ATTACK;
 pub mod delayed_alapin_variation;
 pub use delayed_alapin_variation::DELAYED_ALAPIN_VARIATION;
 pub mod double_dutch_gambit;
@@ -544,8 +544,6 @@ pub mod heidenfeld_variation;
 pub use heidenfeld_variation::HEIDENFELD_VARIATION;
 pub mod hyperaccelerated_dragon;
 pub use hyperaccelerated_dragon::HYPERACCELERATED_DRAGON;
-pub mod hyperaccelerated_fianchetto;
-pub use hyperaccelerated_fianchetto::HYPERACCELERATED_FIANCHETTO;
 pub mod hyperaccelerated_pterodactyl;
 pub use hyperaccelerated_pterodactyl::HYPERACCELERATED_PTERODACTYL;
 pub mod jalalabad_variation;
@@ -634,8 +632,6 @@ pub mod smith_morra_gambit_declined;
 pub use smith_morra_gambit_declined::SMITH_MORRA_GAMBIT_DECLINED;
 pub mod smith_morra_gambit_deferred;
 pub use smith_morra_gambit_deferred::SMITH_MORRA_GAMBIT_DEFERRED;
-pub mod snyder_variation;
-pub use snyder_variation::SNYDER_VARIATION;
 pub mod sozin_attack;
 pub use sozin_attack::SOZIN_ATTACK;
 pub mod spielmann_variation;
@@ -652,5 +648,3 @@ pub mod wing_gambit;
 pub use wing_gambit::WING_GAMBIT;
 pub mod wing_gambit_deferred;
 pub use wing_gambit_deferred::WING_GAMBIT_DEFERRED;
-pub mod yates_variation;
-pub use yates_variation::YATES_VARIATION;

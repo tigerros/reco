@@ -76,6 +76,7 @@ pub static CLASSICAL_VARIATION: Variation = Variation {
         &LA_BOURDONNAIS_VARIATION,
         &MESTEL_VARIATION,
         &TARRASCH_VARIATION,
+        &WITH_D5,
     ],
     lines: &[
         Line {
@@ -313,3 +314,5 @@ pub mod mestel_variation;
 pub use mestel_variation::MESTEL_VARIATION;
 pub mod tarrasch_variation;
 pub use tarrasch_variation::TARRASCH_VARIATION;
+pub mod with_d5;
+pub use with_d5::WITH_D5;

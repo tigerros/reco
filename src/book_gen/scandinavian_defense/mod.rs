@@ -80,7 +80,7 @@ pub static SCANDINAVIAN_DEFENSE: Variation = Variation {
         &LASKER_VARIATION,
         &MAIN_LINE,
         &MARSHALL_VARIATION,
-        &MIESES_KOTROC_VARIATION,
+        &MIESES_KOTRC_VARIATION,
         &MODERN_VARIATION,
         &PANOV_TRANSFER,
         &PORTUGUESE_GAMBIT,
@@ -263,8 +263,8 @@ pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod marshall_variation;
 pub use marshall_variation::MARSHALL_VARIATION;
-pub mod mieses_kotroc_variation;
-pub use mieses_kotroc_variation::MIESES_KOTROC_VARIATION;
+pub mod mieses_kotrc_variation;
+pub use mieses_kotrc_variation::MIESES_KOTRC_VARIATION;
 pub mod modern_variation;
 pub use modern_variation::MODERN_VARIATION;
 pub mod panov_transfer;
