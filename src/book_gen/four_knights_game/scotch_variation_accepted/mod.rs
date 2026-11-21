@@ -64,7 +64,7 @@ assert_eq!(SCOTCH_VARIATION_ACCEPTED.original_name(), "Four Knights Game: Scotch
 pub static SCOTCH_VARIATION_ACCEPTED: Variation = Variation {
     name: "Scotch Variation Accepted",
     parent: Some(&super::FOUR_KNIGHTS_GAME),
-    variations: &[],
+    variations: &[&MAIN_LINE],
     lines: &[Line {
         parent: &SCOTCH_VARIATION_ACCEPTED,
         code: Code {
@@ -175,3 +175,5 @@ pub static SCOTCH_VARIATION_ACCEPTED: Variation = Variation {
         },
     }],
 };
+pub mod main_line;
+pub use main_line::MAIN_LINE;

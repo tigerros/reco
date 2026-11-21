@@ -69,7 +69,7 @@ pub static COBRA_VARIATION: Variation = Variation {
         parent: &COBRA_VARIATION,
         code: Code {
             volume: Volume::B,
-            category: Category(RangedU8::new_static::<3>()),
+            category: Category(RangedU8::new_static::<4>()),
         },
         moves: &[
             Normal {
@@ -94,10 +94,10 @@ pub static COBRA_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Knight,
-                from: Square::B8,
+                role: Pawn,
+                from: Square::E7,
                 capture: None,
-                to: Square::C6,
+                to: Square::E6,
                 promotion: None,
             },
             Normal {
@@ -123,9 +123,9 @@ pub static COBRA_VARIATION: Variation = Variation {
             },
             Normal {
                 role: Knight,
-                from: Square::G8,
+                from: Square::B8,
                 capture: None,
-                to: Square::F6,
+                to: Square::C6,
                 promotion: None,
             },
             Normal {
@@ -136,10 +136,10 @@ pub static COBRA_VARIATION: Variation = Variation {
                 promotion: None,
             },
             Normal {
-                role: Pawn,
-                from: Square::E7,
+                role: Knight,
+                from: Square::G8,
                 capture: None,
-                to: Square::E6,
+                to: Square::F6,
                 promotion: None,
             },
             Normal {
@@ -188,7 +188,7 @@ pub static COBRA_VARIATION: Variation = Variation {
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 2,
+            halfmoves: 5,
             fullmoves: if let Some(fullmoves) = NonZeroU32::new(7) {
                 fullmoves
             } else {

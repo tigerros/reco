@@ -79,8 +79,10 @@ pub static QUEENS_INDIAN_DEFENSE: Variation = Variation {
         &PETROSIAN_VARIATION,
         &RIUMIN_VARIATION,
         &SPASSKY_SYSTEM,
+        &SPASSKY_SYSTEM3,
         &TRADITIONAL_VARIATION,
         &YATES_VARIATION,
+        &WITH_E3,
     ],
     lines: &[Line {
         parent: &QUEENS_INDIAN_DEFENSE,
@@ -206,7 +208,11 @@ pub mod riumin_variation;
 pub use riumin_variation::RIUMIN_VARIATION;
 pub mod spassky_system;
 pub use spassky_system::SPASSKY_SYSTEM;
+pub mod spassky_system3;
+pub use spassky_system3::SPASSKY_SYSTEM3;
 pub mod traditional_variation;
 pub use traditional_variation::TRADITIONAL_VARIATION;
 pub mod yates_variation;
 pub use yates_variation::YATES_VARIATION;
+pub mod with_e3;
+pub use with_e3::WITH_E3;

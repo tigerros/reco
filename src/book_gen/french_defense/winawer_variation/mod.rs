@@ -79,6 +79,7 @@ pub static WINAWER_VARIATION: Variation = Variation {
         &MAROCZY_WALLIS_VARIATION,
         &PETROSIAN_VARIATION,
         &POISONED_PAWN_VARIATION,
+        &POISONED_PAWN_VARIATION_DECLINED,
         &PORTISCH_HOOK_VARIATION,
         &POSITIONAL_VARIATION,
         &RETREAT_VARIATION,
@@ -209,6 +210,8 @@ pub mod petrosian_variation;
 pub use petrosian_variation::PETROSIAN_VARIATION;
 pub mod poisoned_pawn_variation;
 pub use poisoned_pawn_variation::POISONED_PAWN_VARIATION;
+pub mod poisoned_pawn_variation_declined;
+pub use poisoned_pawn_variation_declined::POISONED_PAWN_VARIATION_DECLINED;
 pub mod portisch_hook_variation;
 pub use portisch_hook_variation::PORTISCH_HOOK_VARIATION;
 pub mod positional_variation;

@@ -64,7 +64,7 @@ assert_eq!(EUWE_DEFENSE.original_name(), "Blackmar-Diemer Gambit Accepted: Euwe 
 pub static EUWE_DEFENSE: Variation = Variation {
     name: "Euwe Defense",
     parent: Some(&super::BLACKMAR_DIEMER_GAMBIT_ACCEPTED),
-    variations: &[&ZILBERMINTS_GAMBIT],
+    variations: &[&DUTHILLEUL_GAMBIT, &ZILBERMINTS_GAMBIT],
     lines: &[Line {
         parent: &EUWE_DEFENSE,
         code: Code {
@@ -189,5 +189,7 @@ pub static EUWE_DEFENSE: Variation = Variation {
         },
     }],
 };
+pub mod duthilleul_gambit;
+pub use duthilleul_gambit::DUTHILLEUL_GAMBIT;
 pub mod zilbermints_gambit;
 pub use zilbermints_gambit::ZILBERMINTS_GAMBIT;

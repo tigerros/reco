@@ -93,20 +93,34 @@ pub static ZUKERTORT_SYSTEM: Variation = Variation {
                 to: Square::B4,
                 promotion: None,
             },
+            Normal {
+                role: Pawn,
+                from: Square::G7,
+                capture: None,
+                to: Square::G6,
+                promotion: None,
+            },
+            Normal {
+                role: Bishop,
+                from: Square::C1,
+                capture: None,
+                to: Square::B2,
+                promotion: None,
+            },
         ],
         setup: Setup {
             board: if let Ok(board) = Board::try_from_bitboards(
                 ByRole {
-                    pawn: Bitboard(71776119094836480),
+                    pawn: Bitboard(53832089329532160),
                     knight: Bitboard(144150372450041858),
-                    bishop: Bitboard(2594073385365405732),
+                    bishop: Bitboard(2594073385365406240),
                     rook: Bitboard(9295429630892703873),
                     queen: Bitboard(576460752303423496),
                     king: Bitboard(1152921504606846992),
                 },
                 ByColor {
-                    black: Bitboard(13834811764677541888),
-                    white: Bitboard(35716543),
+                    black: Bitboard(13816867734912237568),
+                    white: Bitboard(35717051),
                 },
             ) {
                 board
@@ -125,8 +139,8 @@ pub static ZUKERTORT_SYSTEM: Variation = Variation {
             castling_rights: Bitboard(9295429630892703873),
             ep_square: None,
             remaining_checks: None,
-            halfmoves: 0,
-            fullmoves: if let Some(fullmoves) = NonZeroU32::new(2) {
+            halfmoves: 1,
+            fullmoves: if let Some(fullmoves) = NonZeroU32::new(3) {
                 fullmoves
             } else {
                 #[expect(

@@ -73,9 +73,11 @@ pub static SEMI_SLAV_DEFENSE: Variation = Variation {
         &BOTVINNIK_VARIATION,
         &CHIGORIN_DEFENSE,
         &GUNDERAM_GAMBIT,
+        &HASTINGS_VARIATION,
         &MAIN_LINE,
         &MARSHALL_GAMBIT,
         &MERAN_VARIATION,
+        &MOSCOW_VARIATION,
         &NORMAL_VARIATION,
         &NOTEBOOM_VARIATION,
         &QUIET_VARIATION,
@@ -211,12 +213,16 @@ pub mod chigorin_defense;
 pub use chigorin_defense::CHIGORIN_DEFENSE;
 pub mod gunderam_gambit;
 pub use gunderam_gambit::GUNDERAM_GAMBIT;
+pub mod hastings_variation;
+pub use hastings_variation::HASTINGS_VARIATION;
 pub mod main_line;
 pub use main_line::MAIN_LINE;
 pub mod marshall_gambit;
 pub use marshall_gambit::MARSHALL_GAMBIT;
 pub mod meran_variation;
 pub use meran_variation::MERAN_VARIATION;
+pub mod moscow_variation;
+pub use moscow_variation::MOSCOW_VARIATION;
 pub mod normal_variation;
 pub use normal_variation::NORMAL_VARIATION;
 pub mod noteboom_variation;

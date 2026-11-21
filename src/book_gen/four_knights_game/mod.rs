@@ -69,6 +69,7 @@ pub static FOUR_KNIGHTS_GAME: Variation = Variation {
         &GUNSBERG_VARIATION,
         &HALLOWEEN_GAMBIT,
         &ITALIAN_VARIATION,
+        &NARODITSKY_VARIATION,
         &SCOTCH_VARIATION,
         &SCOTCH_VARIATION_ACCEPTED,
         &SPANISH_VARIATION,
@@ -177,6 +178,8 @@ pub mod halloween_gambit;
 pub use halloween_gambit::HALLOWEEN_GAMBIT;
 pub mod italian_variation;
 pub use italian_variation::ITALIAN_VARIATION;
+pub mod naroditsky_variation;
+pub use naroditsky_variation::NARODITSKY_VARIATION;
 pub mod scotch_variation;
 pub use scotch_variation::SCOTCH_VARIATION;
 pub mod scotch_variation_accepted;
